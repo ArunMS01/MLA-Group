@@ -25,6 +25,7 @@
 <!-- End bxslider -->
 <!-- flexslider -->
 <link type="text/css" rel='stylesheet' href="js/flexslider/flexslider.css">
+<link rel="icon" type="image/x-icon" href="img/favicon.png">
 <!-- End flexslider -->
 
 <!-- bxslider -->
@@ -87,7 +88,7 @@
 }
 
 .image-not-found{
-	width:100%;
+	width:35%;
 	display:block;
 	margin:auto;
 }
@@ -117,6 +118,89 @@
 
 
 </style>
+
+
+<style>
+	.capt1 {
+		text-transform: capitalize !important;
+	}
+
+	.btn1mla {
+		border: none;
+		background-color: #428bca;
+		padding: 14px 28px;
+		font-size: 20px;
+		font-weight: 700;
+		cursor: pointer;
+		display: inline-block;
+	}
+
+	.btn1mla:hover {
+		background: #eee;
+	}
+
+	.success {
+		color: black;
+	}
+
+
+	.b-btn.b-footer__btn_up {
+		display: none;
+	}
+
+	@media screen and (max-width: 767px) {
+		.hidemlamobile {
+			display: none;
+		}
+	}
+
+
+
+	.red-bg {
+		background: #428bca;
+		padding: 3px 8px;
+		color: #fff;
+		border-radius: 14px;
+	}
+
+	.box-main-hg {
+		text-align: center;
+	}
+
+	@media only screen and (min-width:320px) and (max-width:768px) {
+		.mobile-view-text {
+			display: block !important;
+			position: absolute;
+			top: 12px;
+			right: 64px;
+		}
+
+		.mobile-view-text a {
+			background: #4496d2;
+			color: #fff;
+			border-radius: 10px;
+			padding: 5px;
+		}
+
+		.red-bg {
+			background: none !important;
+			padding: 0;
+			border-radius: 0;
+		}
+
+		.box-main-hg {
+			background: #4496d2;
+			border-radius: 10px;
+			color: #fff;
+			padding: 3px 8px;
+		}
+
+	}
+
+	.mobile-view-text {
+		display: none;
+	}
+</style>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178404512-1"></script>
 <script>
@@ -140,57 +224,79 @@
 <div class="mask-l" style="background-color: #fff; width: 100%; height: 100%; position: fixed; top: 0; left:0; z-index: 9999999;"></div> <!--removed by integration-->
 <header>
 	<div class="container b-header__box b-relative">
-		<a href="/" class="b-left b-logo "><img class="color-theme" data-retina src="img/logo-header-default.png" alt="Logo" /></a>
+		<a href="/" class="b-left b-logo "><img class="color-theme" data-retina src="img/logo-header-default.png"
+				alt="Logo" /></a>
 		<div class="mobile-view-text ">
-			<a onclick="gtag('event', 'click', { event_category: 'Email', event_action: 'Clicked', event_label: 'HeaderSalesEmail'})" href="mailto:md@mlagroup.com"><i class="fa fa-folder-open b-menu-1level-ico"></i>Email Us<span class="b-ico-dropdown"></span></a>
-			<a onclick="gtag('event', 'click', { event_category: 'Phone Number', event_action: 'Clicked', event_label: 'HeaderPhone'})" href="tel:+915122555292"><i class="fa fa-folder-open b-menu-1level-ico"></i>Call Us<span class="b-ico-dropdown"></span></a>
+			<a onclick="gtag('event', 'click', { event_category: 'Email', event_action: 'Clicked', event_label: 'HeaderSalesEmail'})"
+				href="mailto:md@mlagroup.com"><i class="fa fa-folder-open b-menu-1level-ico"></i>Email Us<span
+					class="b-ico-dropdown"></span></a>
+			<a onclick="gtag('event', 'click', { event_category: 'Phone Number', event_action: 'Clicked', event_label: 'HeaderPhone'})"
+				href="tel:+915122555292"><i class="fa fa-folder-open b-menu-1level-ico"></i>Call Us<span
+					class="b-ico-dropdown"></span></a>
 		</div>
-		<div class="b-top-nav-show-slide f-top-nav-show-slide b-right j-top-nav-show-slide"><i class="fa fa-align-justify"></i></div>
+		<div class="b-top-nav-show-slide f-top-nav-show-slide b-right j-top-nav-show-slide"><i
+				class="fa fa-align-justify"></i></div>
 		<div class="b-header-r b-right b-header-r--icon">
 			<nav class="b-top-nav f-top-nav b-right j-top-nav">
 				<ul class="b-top-nav__1level_wrap">
 					<li class="b-top-nav__1level f-top-nav__1level is-active-top-nav__1level f-primary-b">
-						<a href="index.html"><i class="fa fa-home b-menu-1level-ico"></i>Home<span class="b-ico-dropdown"></span></a>
+						<a href="index.html"><i class="fa fa-home b-menu-1level-ico"></i>Home<span
+								class="b-ico-dropdown"></span></a>
 					</li>
 					<li class="b-top-nav__1level f-top-nav__1level f-primary-b">
-						<a href="aboutus.html"><i class="fa fa-folder-open b-menu-1level-ico"></i>About Us<span class="b-ico-dropdown"></span></a>
+						<a href="aboutus.html"><i class="fa fa-folder-open b-menu-1level-ico"></i>About Us<span
+								class="b-ico-dropdown"></span></a>
 					</li>
 					<li class="b-top-nav__1level f-top-nav__1level f-primary-b">
-						<a href="rnd.html"><i class="fa fa-folder-open b-menu-1level-ico"></i>R &amp; D<span class="b-ico-dropdown"></span></a>
+						<a href="rnd.html"><i class="fa fa-folder-open b-menu-1level-ico"></i>R &amp; D<span
+								class="b-ico-dropdown"></span></a>
 					</li>
 					<li class="b-top-nav__1level f-top-nav__1level f-primary-b">
-						<a href="qc.html"><i class="fa fa-folder-open b-menu-1level-ico"></i>Quality<span class="b-ico-dropdown"></span></a>
+						<a href="qc.html"><i class="fa fa-folder-open b-menu-1level-ico"></i>Quality<span
+								class="b-ico-dropdown"></span></a>
 					</li>
 					<li class="b-top-nav__1level f-top-nav__1level f-primary-b">
-						<a href="facilities.html"><i class="fa fa-folder-open b-menu-1level-ico"></i>Manufacturing<span class="b-ico-dropdown"></span></a>
+						<a href="facilities.html"><i
+								class="fa fa-folder-open b-menu-1level-ico"></i>Manufacturing<span
+								class="b-ico-dropdown"></span></a>
 					</li>
 					<li class="b-top-nav__1level f-top-nav__1level f-primary-b">
-						<a href="services.html"><i class="fa fa-folder-open b-menu-1level-ico"></i>Services<span class="b-ico-dropdown"></span></a>
+						<a href="services.html"><i class="fa fa-folder-open b-menu-1level-ico"></i>Services<span
+								class="b-ico-dropdown"></span></a>
 					</li>
 					<li class="b-top-nav__1level f-top-nav__1level f-primary-b">
-						<a href="products.html"><i class="fa fa-folder-open b-menu-1level-ico"></i>Products<span class="b-ico-dropdown"></span></a>
+						<a href="products.html"><i class="fa fa-folder-open b-menu-1level-ico"></i>Products<span
+								class="b-ico-dropdown"></span></a>
 					</li>
-					<!-- <li class="b-top-nav__1level f-top-nav__1level f-primary-b">
-						<a href="ourclients.html"><i class="fa fa-folder-open b-menu-1level-ico"></i>Clients<span class="b-ico-dropdown"></span></a>
-					</li> -->
+					<!-- 	<li class="b-top-nav__1level f-top-nav__1level f-primary-b">
+					<a href="ourclients.html"><i class="fa fa-folder-open b-menu-1level-ico"></i>Clients<span class="b-ico-dropdown"></span></a>
+				</li> -->
 					<li class="b-top-nav__1level f-top-nav__1level f-primary-b">
-						<a href="enquiry.php"><i class="fa fa-folder-open b-menu-1level-ico"></i>Contact<span class="b-ico-dropdown"></span></a>
+						<a href="enquiry.php"><i class="fa fa-folder-open b-menu-1level-ico"></i>Contact<span
+								class="b-ico-dropdown"></span></a>
 					</li>
 					<li class="b-top-nav__1level f-top-nav__1level is-active-top-nav__1level f-primary-b">
-						<a onclick="gtag('event', 'click', { event_category: 'Email', event_action: 'Clicked', event_label: 'HeaderSalesEmail'})" href="mailto:md@mlagroup.com"><i class="fa fa-folder-open b-menu-1level-ico"></i>Email Us<span class="b-ico-dropdown"></span></a>
+						<a onclick="gtag('event', 'click', { event_category: 'Email', event_action: 'Clicked', event_label: 'HeaderSalesEmail'})"
+							href="mailto:md@mlagroup.com"><i class="fa fa-folder-open b-menu-1level-ico"></i>Email
+							Us<span class="b-ico-dropdown"></span></a>
 					</li>
 					<span class="hidemlamobile">
-					<li class="b-top-nav__1level f-top-nav__1level f-primary-b ">
-						<a href="enquiry.php"><i class="fa fa-folder-open b-menu-1level-ico"></i><span class="b-ico-dropdown"></span></a>
-					</li>
+						<li class="b-top-nav__1level f-top-nav__1level f-primary-b ">
+							<a href="enquiry.php"><i class="fa fa-folder-open b-menu-1level-ico"></i><span
+									class="b-ico-dropdown"></span></a>
+						</li>
 					</span>
 					<li class="b-top-nav__1level f-top-nav__1level is-active-top-nav__1level f-primary-b">
-						<a onclick="gtag('event', 'click', { event_category: 'Phone Number', event_action: 'Clicked', event_label: 'HeaderPhone'})" href="tel:+915122555292"><i class="fa fa-folder-open b-menu-1level-ico"></i>Call Us<span class="b-ico-dropdown"></span></a>
+						<a onclick="gtag('event', 'click', { event_category: 'Phone Number', event_action: 'Clicked', event_label: 'HeaderPhone'})"
+							href="tel:+915122555292"><i class="fa fa-folder-open b-menu-1level-ico"></i>Call Us<span
+								class="b-ico-dropdown"></span></a>
 					</li>
-</span>
-					
+					</span>
+
 				</ul>
 			</nav>
+			<div class="box-main-hg"><strong class="red-bg">India's largest manufacturers of Metallic Stearates and
+					Zinc Oxide Active</strong></div>
 		</div>
 	</div>
 </header>
@@ -199,7 +305,7 @@
 <div class="b-inner-page-header f-inner-page-header b-bg-header-inner-page">
 	<div class="b-inner-page-header__content">
 		<div class="container">
-			<h1 class="f-primary-l c-default">About Us</h1>
+			<h1 class="f-primary-l c-default">404 Page</h1>
 		</div>
 	</div>
 </div>
@@ -209,14 +315,14 @@
 	    <div class="container">
 	        <ul>
 	            <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
-	            <li><i class="fa fa-angle-right"></i>About us</li>
+	            <li><i class="fa fa-angle-right"></i>404 Page</li>
 	        </ul>
 	    </div>
 	</div>
 	<div class="l-inner-page-container">
 		<div class="container">
             <div class="row">
-              <div class="col-md-8">
+              <div class="col-md-12">
 				  <div class="col-md-12">
 					<img class="image-not-found" src="img/404-page.jpg" alt="">
 				  </div>
@@ -226,110 +332,7 @@
 				  
 			  </div>
                 <div class="visible-xs-block visible-sm-block b-hr"></div>
-                <div class="col-md-4">
-                	<!-- right column start -->
-		            <h4 class="f-primary-b b-h4-special f-h4-special--gray f-h4-special">RANGE OF PRODUCTS</h4>
-					<div class="j-accordion b-accordion b-accordion--with-standard-icon f-accordion b-accordion--smallindent">
-						<h3 class="b-accordion__title f-accordion__title">UNISIL</h3>
-						<div class="b-accordion__content">
-								<div class="b-accordion__img b-margin-right-standard">
-									<img data-retina src="img/brands/01.jpg" alt="UNISIL"/>
-								</div>
-							<ul class="b-list-markers f-list-markers">
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="silica.html">Precipitated silica</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/unisil/Al_Sil_NK_20A_HS_06.pdf">Sodium Aluminium Silicate</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="silicate.html">Hydrated Calcium Silicate</a></li>
-							</ul>
-						</div>
-
-						<h3 class="b-accordion__title f-accordion__title">UNIFLOW</h3>
-						<div class="b-accordion__content">
-							<div class="b-accordion__img b-margin-right-standard">
-								<img data-retina src="img/brands/02.jpg" alt="UNISIL"/>
-							</div>
-							<ul class="b-list-markers f-list-markers">
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/uniflow/Zn_St_DLI_13.pdf">Zinc stearate</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/uniflow/Ca_St_DLI_petro_07.pdf">Calcium stearate</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/uniflow/Al_St_Super_05.pdf">Aluminium stearate</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/uniflow/MgSt_MS_PRM_03.pdf">Magnesium stearate</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/uniflow/sodium_stearate_UNIFLOW_MC_powder_01.pdf">Sodium stearate</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/uniflow/barium_stearate_UNIFLOW_BS_01.pdf">Barium stearate</a></li>
-							</ul>
-							<p>*  available in flakes / powder / prills </p>
-						</div>
-
-						<h3 class="b-accordion__title f-accordion__title">UNICELL</h3>
-						<div class="b-accordion__content">
-							<div class="b-accordion__img b-margin-right-standard">
-								<img data-retina src="img/brands/04.jpg" alt="UNISIL"/>
-							</div>
-							<ul class="b-list-markers f-list-markers">
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/unicell/ADC_Combined_specs.pdf">Exothermic blowing agents (AC)</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/unicell/UNICELL_NC_7500.pdf">Endothermic blowing agents (NC)</a></li>
-							</ul>
-						</div>
-
-						<h3 class="b-accordion__title f-accordion__title">Micronized Mineral fillers / extenders</h3>
-						<div class="b-accordion__content">
-							<div class="b-accordion__img b-margin-right-standard">
-								<img data-retina src="img/brands/07.jpg" alt="TULSI BRAND"/>
-							</div>
-							<ul class="b-list-markers f-list-markers">
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="clays.html">Snow white levigated clay</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/tulsi/TULSI_069_HT.pdf">Calcined clay</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="aluminium.html">Aluminium silicate</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="talc.html">Talc</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="barytes.doc">Barytes</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="dolomite.html">Calcite / dolomite</a></li>
-							</ul>
-						</div>
-
-						<h3 class="b-accordion__title f-accordion__title">UNISTAB</h3>
-						<div class="b-accordion__content">
-							<div class="b-accordion__img b-margin-right-standard">
-								<img data-retina src="img/brands/03.jpg" alt="UNISTAB"/>
-							</div>
-							<ul class="b-list-markers f-list-markers">
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/unistab/stabilizers_one_packs.pdf">Stabilizers (one packs)</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/unistab/UNISTAB_TBLS.pdf">TBLS</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/unistab/UNISTAB_DBLS.pdf">DBLS</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/unistab/UNISTAB_LEAD_STEARATE.pdf">LS</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/unistab/UNISTAB_DBLPh.pdf">DBL Phosphite</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/unistab/UNISTAB_DBLP.pdf">DBL Pthalate</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/unistab/UNISTAB_CZ_C55.pdf">Non-toxic ca-zn based stabilizers</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/unistab/UNISTAB_MM_SN_19.pdf">Tin stabilizers</a></li>
-							</ul>
-						</div>
-
-						<h3 class="b-accordion__title f-accordion__title">ZINCOSIL</h3>
-						<div class="b-accordion__content">
-							<div class="b-accordion__img b-margin-right-standard">
-								<img data-retina src="img/brands/05.jpg" alt="ZINCOSIL"/>
-							</div>
-							<ul class="b-list-markers f-list-markers">
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="zinc.html">Zinc oxide active</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="zincoxide.html">Zinc oxide transparent</a></li>
-							</ul>
-						</div>
-
-						<h3 class="b-accordion__title f-accordion__title">UNILUB</h3>
-						<div class="b-accordion__content">
-							<div class="b-accordion__img b-margin-right-standard">
-								<img data-retina src="img/brands/06.jpg" alt="One_pack_stabilizer"/>
-							</div>
-							<ul class="b-list-markers f-list-markers">
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/unilub/unilub_dosage_chart.pdf" class="various">One pack lubricants</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/unilub/UNILUB_PE_7.pdf">PE wax</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/unilub/UNILUB_PFW_1.pdf">Paraffin wax substitute</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/unilub/UNILUB_SA.pdf">Stearic acid</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/unilub/UNIFLOW_UNIMUL.pdf">GMS</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/unilub/UNILUB_WAX_E_P_200a.pdf">Amide wax</a></li>
-								<li><i class="fa fa-angle-double-right b-list-markers__ico f-list-markers__ico"></i> <a href="download/unilub/UNILUB_PS.pdf">PETS</a></li>
-							</ul>
-						</div>
-					</div>
-                	<!-- right column end -->
-                </div>
+               
 			</div>
 		</div>
 
