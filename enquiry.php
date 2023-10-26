@@ -68,7 +68,7 @@ if(isset($_POST['process']))
 <!-- bxslider -->
 <link type="text/css" rel='stylesheet' href="js/radial-progress/style.css">
 <!-- End bxslider -->
-
+<link rel="icon" type="image/x-icon" href="img/favicon.png">
 <!-- Animate css -->
 <link type="text/css" rel='stylesheet' href="css/animate.css">
 <!-- End Animate css -->
