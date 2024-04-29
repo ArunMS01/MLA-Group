@@ -597,12 +597,10 @@
 										<div class="banner-social-media">
 											<ul>
 												<li>
-													<a href="javascript:void(0);"><i
-															class="fa-brands fa-youtube" style="color: #FF0000;"></i></a>
+													<a href="javascript:void(0);"><i class="fab fa-facebook-f" style="color: #3b5998;"></i></a>
 												</li>
 												<li>
-													<a href="javascript:void(0);"><i
-															class="fa-brands fa-linkedin-in" style="color: #0077B5;"></i></a>
+													<a href="javascript:void(0);"><i class="fab fa-linkedin-in" style="color: #0077B5;"></i></a>
 												</li>
 
 											</ul>
@@ -675,12 +673,25 @@
 											background: white;
 
 										} */
+										.mb-negative {
+											margin-bottom: -2px;
+											
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+										}
 									</style>
-									<div class="contact-area1new cart-detail style-1 m-r20 m-md-r0 wow fadeInUp"
+									<div class=" style-1 m-r20 m-md-r0 wow fadeInUp"
 										data-wow-delay="0.5s" bis_skin_checked="1"
 										style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-										<p class="mb-4 quotes">Request Quote/Information <i class="fa fa-file-text"
+										<div class="row">
+											<div class="col-md-12">
+												<img style="display: block; margin: auto;" src="https://www.mlagroup.com/img/brands/01.jpg" class="mt-4 mb-4 mix-blend-mode">
+				
+				
+											</div>
+										</div>
+										<p class="mb-negative quotes">Request Quote/Information <i class="fa fa-file-text"
 												aria-hidden="true"></i> </p>
+											<div class="div contact-area1new cart-detail">
 										<form class="dz-form dzForm" method="POST"
 											action="https://mooncart.dexignzone.com/xhtml/script/contact_smtp.php">
 											<input type="hidden" class="form-control" name="dzToDo" value="Contact">
@@ -725,6 +736,7 @@
 													class="btn w-100 btn-secondary btnhover">SUBMIT</button>
 											</div>
 										</form>
+									</div>
 									</div>
 								</div>
 							</div>
@@ -887,13 +899,24 @@
 				</div>
 			</section>
 
+<style>
+.get-in-touch{
+	padding: 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 
+}
+.get-in-touch h3{
+	font-size: 19px;
+}
+</style>
 			<section class="get-in-touch wow fadeIn" data-wow-delay="0.3s"
 				style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;">
 				<div class="m-r100 m-md-r0 m-sm-r0">
 					<h3 class="dz-title mb-lg-0 mb-3">Customization available.
-						<span> Contact our product team for details.</span>
+						<span > Contact our product team for details.</span>
 					</h3>
 				</div>
 				<a href="#" class="btn btn-light">Get In Touch</a>
@@ -1035,8 +1058,8 @@
 							}
 
 							.content-inner-1 {
-								padding-top: 75px;
-								padding-bottom: 75px;
+								padding-top: 50px;
+								padding-bottom: 50px;
 							}
 
 							.shop-card {
@@ -1085,6 +1108,40 @@
 								margin: auto;
 								position: relative;
 							}
+
+							.filters {
+    display: flex;
+    gap: 2px; /* Adjust the gap between tabs */
+}
+
+.filters li {
+    border-right: 1px solid #333 !important; /* Add a border between tabs */
+}
+
+.filters li:last-child {
+    border-right: none; /* Remove the border from the last tab */
+}
+
+.filters li.active a {
+    color: #FE8F34;
+}
+
+
+.filters li a {
+    padding: 10px 20px; /* Adjust the padding */
+    display: inline-block;
+    color: #000000;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.filters li a:hover {
+    background-color: #555; /* Darker gray on hover */
+}
+.site-filters li{
+	margin-right: 0px !important; 
+}
+
 						</style>
 						<!-- <a href="shop-list.html"
 							class="product-link text-secondary font-14 d-flex align-items-center gap-1 text-nowrap">See
@@ -1102,115 +1159,50 @@
 							</div>
 						</div>
 
-						<div class="row gx-xl-4 g-3 justify-content-center">
-							<div class="col-6 col-xl-2 col-lg-4 col-md-4 col-sm-6 m-md-b15 m-b30">
-								<div class="shop-card">
-
-									<div class="dz-media">
-										<div class="FM6uVc">
-											<div class="ArOc1c">
-												<img src="https://images.jdmagicbox.com/quickquotes/images_main/precipitated-silica-386705336-vhedh.jpg"
-													alt="image">
-											</div>
-										</div>
-										<div class="shop-meta">
-											<a href="javascript:void(0);" class="btn btn-secondary btn-icon"
-												data-bs-toggle="modal" data-bs-target="#exampleModal">
-												<i class="fa-solid fa-eye d-md-none d-block"></i>
-												<span class="d-md-block d-none">View</span>
-											</a>
-
-										</div>
-									</div>
-									<div class="dz-content">
-										<h5 class="title"><a href="#">Precipitated silica </a></h5>
-
-
-									</div>
-
-								</div>
+						<div class="row gx-xl-4 g-3 ">
+							<div class="widget widget_categories style-1">
+								<ul>
+									<li class="cat-item"><a href="javascript:void(0);">Precipitated silica</a> </li>
+									<li class="cat-item"><a href="javascript:void(0);">Sodium Aluminium Silicate</a> </li>
+									<li class="cat-item"><a href="javascript:void(0);">Hydrated Calcium Silicate</a> </li>
+									<li class="cat-item"><a href="javascript:void(0);">Calcium Sulphate</a> </li>
+		
+								</ul>
 							</div>
-							<div class="col-6 col-xl-2 col-lg-4 col-md-4 col-sm-6 m-md-b15 m-b30">
-								<div class="shop-card">
-									<div class="dz-media">
-										<div class="FM6uVc">
-											<div class="ArOc1c">
-												<img src="https://media.istockphoto.com/id/535492963/photo/flour.jpg?s=612x612&w=0&k=20&c=qJZvDoCFrfn-Up0OWsh-2QwHAufplTUnwcDzFQTDevQ="
-													alt="image">
-											</div>
-										</div>
+							<style>
+								/* Add your custom CSS here */
+.product-list {
+    list-style: none; /* Remove bullet points from the list */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow list items to wrap to the next line */
+    justify-content: center;
+	flex-direction: column;
+}
 
-										<div class="shop-meta">
-											<a href="javascript:void(0);" class="btn btn-secondary btn-icon"
-												data-bs-toggle="modal" data-bs-target="#exampleModal">
-												<i class="fa-solid fa-eye d-md-none d-block"></i>
-												<span class="d-md-block d-none">View</span>
-											</a>
+.product-item {
+    flex: 0 0 calc(25% - 20px); /* Set each product item to occupy 25% width with margin */
+    margin: 10px; /* Add margin between each product item */
+}
 
-										</div>
-									</div>
-									<div class="dz-content">
-										<h5 class="title"><a href="#">Sodium Aluminium Silicate </a></h5>
+.shop-card {
+    border: 1px solid #ccc; /* Add border around each product card */
+    padding: 15px; /* Add padding to the product card */
+}
 
+.shop-card .title {
+    margin-bottom: 10px; /* Add margin below the title */
+}
 
-									</div>
+.shop-card .btn {
+    width: 100%; /* Make the button full width */
+}
 
-								</div>
-							</div>
-							<div class="col-6 col-xl-2 col-lg-4 col-md-4 col-sm-6 m-md-b15 m-b30">
-								<div class="shop-card">
-									<div class="dz-media">
-										<div class="FM6uVc">
-											<div class="ArOc1c">
-												<img src="https://images.jdmagicbox.com/quickquotes/images_main/hydarted-calcium-silicate-bp-usp-386705667-yx56i.jpeg"
-													alt="image">
-											</div>
-										</div>
-										<div class="shop-meta">
-											<a href="javascript:void(0);" class="btn btn-secondary btn-icon"
-												data-bs-toggle="modal" data-bs-target="#exampleModal">
-												<i class="fa-solid fa-eye d-md-none d-block"></i>
-												<span class="d-md-block d-none">View</span>
-											</a>
-
-										</div>
-									</div>
-									<div class="dz-content">
-										<h5 class="title"><a href="shop-list.html">Hydrated Calcium Silicate </a></h5>
-
-
-									</div>
-
-								</div>
-							</div>
-							<div class="col-6 col-xl-2 col-lg-4 col-md-4 col-sm-6 m-md-b15 m-b30">
-								<div class="shop-card">
-									<div class="dz-media">
-										<div class="FM6uVc">
-											<div class="ArOc1c">
-												<img src="https://media.istockphoto.com/id/535492963/photo/flour.jpg?s=612x612&w=0&k=20&c=qJZvDoCFrfn-Up0OWsh-2QwHAufplTUnwcDzFQTDevQ="
-													alt="image">
-											</div>
-										</div>
-										<div class="shop-meta">
-											<a href="javascript:void(0);" class="btn btn-secondary btn-icon"
-												data-bs-toggle="modal" data-bs-target="#exampleModal">
-												<i class="fa-solid fa-eye d-md-none d-block"></i>
-												<span class="d-md-block d-none">View</span>
-											</a>
-
-										</div>
-									</div>
-									<div class="dz-content">
-										<h5 class="title"><a href="#">Calcium Sulphate </a></h5>
-
-
-									</div>
-
-								</div>
-							</div>
-
+							</style>
 						</div>
+						
+						
 
 					</div>
 				</div>
