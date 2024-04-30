@@ -227,10 +227,10 @@
 							</ul>
 							<div class="dz-social-icon">
 								<ul>
-									<li><a class="fab fa-facebook-f" target="_blank" href="javascript:void(0);"></a>
+									<li class="facebook"><a class="fab fa-facebook-f" target="_blank" href="javascript:void(0);"></a>
 									</li>
 									<li><a class="fab fa-twitter" target="_blank" href="javascript:void(0);"></a></li>
-									<li><a class="fab fa-linkedin-in" target="_blank"
+									<li class="linkdin"><a class="fab fa-linkedin-in" target="_blank"
 											href="https://www.linkedin.com/showcase/3686700/admin/"></a></li>
 									<li><a class="fab fa-instagram" target="_blank" href="javascript:void(0);"></a></li>
 								</ul>
@@ -596,11 +596,11 @@
 										</div>
 										<div class="banner-social-media">
 											<ul>
-												<li>
-													<a href="javascript:void(0);"><i class="fab fa-facebook-f" style="color: #3b5998;"></i></a>
+												<li class="facebook1">
+													<a href="javascript:void(0);"><i class="fab fa-facebook-f" style="color: #ffffff;"></i></a>
 												</li>
-												<li>
-													<a href="javascript:void(0);"><i class="fab fa-linkedin-in" style="color: #0077B5;"></i></a>
+												<li class="linkdin1">
+													<a href="javascript:void(0);"><i class="fab fa-linkedin-in" style="color: #ffffff;"></i></a>
 												</li>
 
 											</ul>
@@ -634,6 +634,22 @@
     height: 47px;
     align-items: center;
     justify-content: center;
+										}
+										.banner-social-media  ul li  {
+											background: #2883ad;
+    /* padding: 20px 0; */
+    width: 47px;
+    display: flex;
+    /* writing-mode: tb-rl; */
+    height: 47px;
+    align-items: center;
+    justify-content: center;
+										}
+										.facebook1{
+											background: #0965fe !important;
+										}
+										.linkdin1{
+											background: #0966c4!important;
 										}
 
 										.contact-area1new {
@@ -678,13 +694,16 @@
 											
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 										}
+										.margin-top{
+											margin-top: -31px !important;
+										}
 									</style>
 									<div class=" style-1 m-r20 m-md-r0 wow fadeInUp"
 										data-wow-delay="0.5s" bis_skin_checked="1"
 										style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
 										<div class="row">
 											<div class="col-md-12">
-												<img style="display: block; margin: auto;" src="https://www.mlagroup.com/img/brands/01.jpg" class="mt-4 mb-4 mix-blend-mode">
+												<img style="display: block; margin: auto;" src="./images//UNISIL6_logo.png" class="mt-4 mb-4 margin-top mix-blend-mode">
 				
 				
 											</div>
@@ -915,9 +934,9 @@
 			<section class="get-in-touch wow fadeIn" data-wow-delay="0.3s"
 				style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;">
 				<div class="m-r100 m-md-r0 m-sm-r0">
-					<h3 class="dz-title mb-lg-0 mb-3">Customization available.
-						<span > Contact our product team for details.</span>
-					</h3>
+					<p class="dz-title mb-lg-0 mb-3">Customization available.
+					 Contact our product team for details.
+					</p>
 				</div>
 				<a href="#" class="btn btn-light">Get In Touch</a>
 			</section>
@@ -1115,7 +1134,7 @@
 }
 
 .filters li {
-    border-right: 1px solid #333 !important; /* Add a border between tabs */
+    border-right: 2px solid #787474 !important; /* Add a border between tabs */
 }
 
 .filters li:last-child {
@@ -1135,9 +1154,7 @@
     transition: background-color 0.3s;
 }
 
-.filters li a:hover {
-    background-color: #555; /* Darker gray on hover */
-}
+
 .site-filters li{
 	margin-right: 0px !important; 
 }
@@ -1152,8 +1169,8 @@
 					<div class="clearfix">
 						<div class="row">
 							<div class="col-md-12">
-								<img style="display: block; margin: auto; width: 80px; height: 70px;"
-									src="./images/UNISIL6_curve1.jpg" class="mt-4 mb-4 mix-blend-mode">
+								<img style="display: block; margin: auto; "
+									src="./images/UNISIL6_logo.png" class="mt-4 mb-4 mix-blend-mode">
 
 
 							</div>
@@ -1261,6 +1278,17 @@
 				.related-swiper .btn-next {
 					right: 34%;
 				}
+				.filters {
+					flex-direction: column !important;
+                    }
+					.filters li {
+  
+    border-right: none !important;
+}
+.get-in-touch{
+padding: 10px 0px !important;
+}
+
 			}
 		</style>
 
@@ -1345,7 +1373,7 @@
 					<div class="col-xl-3 col-md-3 col-sm-6">
 						<div class="widget widget_about me-2">
 							<div class="footer-logo logo-white">
-								<a href="#"><img src="https://www.mlagroup.com/img/logo-header-default.png" alt="/"></a>
+								<a href="#"><img src="./images/UNISIL6_logo.png" alt="/"></a>
 							</div>
 							<ul class="widget-address">
 								<li>
