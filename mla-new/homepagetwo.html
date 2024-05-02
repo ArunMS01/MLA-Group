@@ -92,7 +92,7 @@
                     <div class="container-fluid clearfix">
                         <!-- Website Logo -->
                         <div class="logo-header logo-dark me-md-5">
-                            <a href="#"><img src="https://www.mlagroup.com/img/logo-header-default.png" alt="logo"></a>
+                            <a href="#"><img src="images/logo-MLA.png" alt="logo"></a>
                         </div>
 
                         <!-- Nav Toggle Button -->
@@ -109,7 +109,7 @@
                         <!-- Main Nav -->
                         <div class="header-nav navbar-collapse collapse justify-content-end" id="navbarNavDropdown">
                             <div class="logo-header">
-                                <a href="#"><img src="https://www.mlagroup.com/img/logo-header-default.png" alt="/"></a>
+                                <a href="#"><img src="images/logo-MLA.png" alt="/"></a>
                             </div>
                             <ul class="nav navbar-nav dark-nav">
                                 <li class="has-mega-menu ">
@@ -395,8 +395,24 @@
                 }
 
                 @media only screen and (max-width:768px) {
+                    .abtsec {
+                        padding: 36px 0 22px 0 !important;
+                    }
+
+                    .missionv h3 {
+                        font-size: 1.2rem;
+                    }
+
+                    .contentindustry p {
+                        font-size: 1.74rem !important;
+                    }
+
+                    .application-tab h3 {
+                        font-size: 1.75rem !important;
+                    }
+
                     .abyyt {
-                        padding: 0 0 60px 0 !important;
+                        padding: 0 0 0px 0 !important;
                     }
 
                     #newvideocontainer {
@@ -420,6 +436,10 @@
                         font-size: 1rem;
                     }
 
+                    .about-banner {
+                        display: none;
+                    }
+
                 }
             </style>
 
@@ -432,7 +452,7 @@
                             type="video/mp4">
                     </video>
                     <div class="text-overlay">
-                        <div class="innertext">
+                        <!-- <div class="innertext">
                             <h2>
                                 Chemical Manufacturing Plant Situated in Kanpur, India
                             </h2>
@@ -442,11 +462,11 @@
                                 ratione ullam illum in doloribus.
                             </p>
                             <a class="btn btn-outline-light" href="#">Who we are</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
-                <div id="newvideocontainer">
+                <!-- <div id="newvideocontainer">
                     <div class="containermob">
                         <h2>
                             Chemical Manufacturing Plant Situated in Kanpur, India
@@ -462,8 +482,40 @@
                             <i class="fa-solid fa-play"></i>
                         </a>
                     </div>
-                </div>
+                </div> -->
             </section>
+
+            <style>
+                .containervidoes {
+                    position: relative;
+                    width: 100%;
+                    overflow: hidden;
+                    padding-top: 56.25%;
+                    /* 16:9 Aspect Ratio */
+                }
+
+                .responsive-iframevids {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                }
+
+                .containervidoes {
+                    display: none;
+                }
+            </style>
+
+
+            <div class="containervidoes">
+                <iframe class="responsive-iframevids"
+                    src="https://www.youtube.com/embed/PISiZKQtq_E?autoplay=1&mute=1&controls=0" allow="autoplay"
+                    allowfullscreen></iframe>
+            </div>
 
 
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -504,7 +556,7 @@
                 }
 
                 .abyyt {
-                    padding: 0 0 100px 0;
+                    padding: 0 0 0px 0;
                 }
 
                 .abtsec .about-content {
@@ -523,9 +575,11 @@
                 }
 
                 .missionv {
+                    position: relative;
                     border-top: 1px solid #cacaca;
                     padding-top: 30px;
                     margin-top: 30px;
+                    z-index: 1;
                 }
 
                 .missionv .contents i {
@@ -554,6 +608,10 @@
                 }
 
                 @media only screen and (max-width:768px) {
+                    .containervidoes {
+                        display: block !important;
+                    }
+
                     .abtsec .about-content {
                         height: 9rem;
                     }
@@ -568,9 +626,14 @@
                     }
                 }
 
-                .mr-right-content{
+                .mr-right-content {
                     margin-right: 55px;
                 }
+
+                .site-header{
+											border-bottom: 1px solid #fe8f34 !important;
+                                            padding-bottom: 10px;
+										}
             </style>
 
             <section class="abtsec">
@@ -589,14 +652,14 @@
                                         </div>
                                         <div class="col-lg-3 col-md-3 col-6">
                                             <div class="about-content">
-                                                <h2 class="title">1975</h2>
-                                                <p class="text">Since We are in </p>
+                                                <h2 class="title">110</h2>
+                                                <p class="text">Products manufactured</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-3 col-md-3 col-6">
                                             <div class="about-content">
-                                                <h2 class="title"><span class="counter">43</span>+</h2>
-                                                <p class="text">Exports to over countries</p>
+                                                <h2 class="title"><span class="counter">55</span>+</h2>
+                                                <p class="text">Teams</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-3 col-md-3 col-6">
@@ -653,7 +716,8 @@
                                     <h3 class="title">Mission</h3>
                                 </div>
 
-                                <p class="mr-right-content mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel officia voluptate
+                                <p class="mr-right-content mt-3">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Vel officia voluptate
                                     doloremque amet enim repudiandae recusandae, corrupti, magnam facere voluptates,
                                     eius dolores quas ipsum repellat iusto corporis possimus totam odit?</p>
                             </div>
@@ -664,7 +728,8 @@
                                     </div>
                                     <h3 class="title">Vision</h3>
                                 </div>
-                                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel officia voluptate
+                                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel officia
+                                    voluptate
                                     doloremque amet enim repudiandae recusandae, corrupti, magnam facere voluptates,
                                     eius dolores quas ipsum repellat iusto corporis possimus totam odit?</p>
                             </div>
@@ -694,11 +759,36 @@
 
                 .industryimg {
                     height: 28rem;
+                    padding-right: 44px;
                     object-fit: cover;
                     width: 100%;
                 }
-            </style>
 
+                .outside-box-right-25 {
+                    margin-right: -11vw;
+                }
+
+                .application-tab {
+                    position: relative;
+                    /* overflow: hidden; */
+                }
+
+                .list-style-three {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                }
+
+                .list-style-three .list-info {
+                    border-bottom: 2px solid #e0823d;
+                    padding: 1rem;
+                    text-align: center;
+                    width: 30%;
+                    color: #e0823d;
+                    background: #e0e0e0;
+                }
+            </style>
+            <!-- 
             <div class="swiper-container-sliding">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -719,9 +809,9 @@
                     <div class="swiper-slide">
                         <p>We Serve</p>
                     </div>
-                    <!-- Add more slides as needed -->
+                 
                 </div>
-            </div>
+            </div> -->
 
             <section class="content-inner-1 overlay-white-middle about-products2">
                 <img src="images/bg-triangle3.png" class="bg-img" alt="">
@@ -746,7 +836,7 @@
 
                             </div>
 
-                            <ul class="specification-list wow fadeInUp" data-wow-delay="0.4s">
+                            <ul class="wow fadeInUp list-style-three" data-wow-delay="0.4s">
                                 <li class="list-info">Chemical</li>
                                 <li class="list-info">Automation</li>
                                 <li class="list-info">Plastic</li>
@@ -757,6 +847,176 @@
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <style>
+                .application-tab .about-content p {
+                    /* color: #fff; */
+                    color:#000;
+                }
+
+                .application-tab h3 {
+                    color: #000;
+                    font-size: 2.25rem;
+                    font-weight: 600;
+                    line-height: 1.2;
+                }
+
+                .appslider .dz-media {
+                    height: 28rem;
+                }
+
+                .appslider img {
+                    /* height: 30rem; */
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                }
+
+                .contentindustry p {
+                    color: #fff;
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+
+                .contentindustry {
+                    color: #fff;
+                }
+
+                .contentindustry {
+                    position: absolute;
+                    color: #fff;
+                    align-items: end;
+                    display: flex;
+                    bottom: 0;
+                    border-radius: 10px;
+                    height: 21%;
+                    /* border-radius: inherit; */
+                    width: 100%;
+                    background: linear-gradient(358deg, #000000c2, transparent);
+                    z-index: 10;
+                    padding: 10px 50px 10px 40px;
+                }
+
+                .content-inner-1 {
+                    padding-top: 50px;
+                    padding-bottom: 50px;
+                }
+
+                .mbuiti-6 {
+                    margin-top: 40px;
+                }
+
+                .application-tab:before {
+                    opacity: 0.2;
+                }
+            </style>
+            <section class="content-inner application-tab overlay-black-light"
+                style="background-image: linear-gradient(45deg, #e1e1e1cc, #f4f4f4e0), url(https://images.unsplash.com/photo-1546185058-592ead754d27?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); background-repeat: no-repeat; background-size: cover;">
+                <div class="container">
+                    <div class="row about-style2 align-items-xl-center align-items-start">
+                        <div class="col-lg-3 ">
+                            <h3 class="title">Applications</h3>
+                        </div>
+                        <div class="col-lg-7 ">
+                            <div class="about-content">
+                                <div class="style-1">
+
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority
+                                        have suffered alteration in some form, by injected humour, or randomised words
+                                        which don't look even slightly believable. </p>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <div class="pagination-align justify-content-end">
+                                <div class="tranding-button-prev btn-prev">
+                                    <i class="flaticon flaticon-left-chevron"></i>
+                                </div>
+                                <div class="tranding-button-next btn-next">
+                                    <i class="flaticon flaticon-chevron"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 mbuiti-6" style="overflow: hidden;">
+
+                            <div class="outside-box-right-25">
+                                <div class="swiper-btn-center-lr appslider">
+                                    <div class="swiper swiper-four">
+                                        <div class="swiper-wrapper">
+
+                                            <div class="swiper-slide">
+                                                <div class=" wow fadeInUp" data-wow-delay="0.4s">
+                                                    <div class="dz-media">
+                                                        <img src="https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?cs=srgb&dl=pexels-pixabay-459728.jpg&fm=jpg"
+                                                            alt="image">
+                                                        <div class="contentindustry">
+                                                            <p>Petrochemicals</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <div class=" wow fadeInUp" data-wow-delay="0.4s">
+                                                    <div class="dz-media">
+                                                        <img src="https://static.vecteezy.com/system/resources/previews/039/316/249/non_2x/ai-generated-production-line-various-medicinal-tablets-and-capsules-photo.jpg"
+                                                            alt="image">
+                                                        <div class="contentindustry">
+                                                            <p>Pharmaceutical</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <div class=" wow fadeInUp" data-wow-delay="0.4s">
+                                                    <div class="dz-media">
+                                                        <img src="https://img.freepik.com/free-photo/flat-lay-colorful-paint-cans-arrangement_23-2149601074.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1713139200&semt=ais"
+                                                            alt="image">
+                                                        <div class="contentindustry">
+                                                            <p>Paints</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+                                            <div class="swiper-slide">
+                                                <div class=" wow fadeInUp" data-wow-delay="0.4s">
+                                                    <div class="dz-media">
+                                                        <img src="https://t4.ftcdn.net/jpg/02/28/64/73/360_F_228647361_d4UdgsUUb0AZoGebmPpGt6HL1QPbCpzf.jpg"
+                                                            alt="image">
+                                                        <div class="contentindustry">
+                                                            <p>Ceramics</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </section>
 
 
@@ -1107,9 +1367,27 @@
             }
 
             @media only screen and (max-width:768px) {
-                .industryimg{
-                    height: auto;
+                .list-style-three .list-info {
+                    width: 47%;
                 }
+
+                .mbuiti-6 {
+                    margin-top: 0 !important;
+                }
+
+                .application-tab .pagination-align {
+                    margin-bottom: 30px;
+                }
+
+                .outside-box-right-25 {
+                    margin-right: 0 !important;
+                }
+
+                .industryimg {
+                    height: auto;
+                    padding-right: 0 !important;
+                }
+
                 #video-container {
                     display: none;
                 }
@@ -1119,7 +1397,7 @@
                 }
 
                 .about-banner {
-                    height: 54vh;
+                    height: auto;
                 }
 
                 .about-banner .innertext {
@@ -1146,8 +1424,7 @@
                         <div class="col-xl-3 col-md-3 col-sm-6">
                             <div class="widget widget_about me-2">
                                 <div class="footer-logo logo-white">
-                                    <a href="#"><img src="https://www.mlagroup.com/img/logo-header-default.png"
-                                            alt="/"></a>
+                                    <a href="#"><img src="images/logo-MLA.png" alt="/"></a>
                                 </div>
                                 <ul class="widget-address">
                                     <li>
