@@ -113,41 +113,43 @@ var MoonCartCarousel = function(){
 	}
 	
 	// Swiper Four ==
-	var handleSwiperFour = function() {	
+	var handleSwiperFour = function() {    
 		if(jQuery('.swiper-four').length > 0){
-			var swiper = new Swiper( '.swiper-four', {
-				slidesPerView: 4,
+			var swiper = new Swiper('.swiper-four', {
+				slidesPerView: 1,
 				spaceBetween: 30,
 				loop: true,
 				autoplay: {
-					delay: 2500,
+					delay: 4000,
+					disableOnInteraction: false
 				},
 				navigation: {
 					nextEl: ".tranding-button-next",
 					prevEl: ".tranding-button-prev",
-				},	
+				}, 
+				keyboard: {
+					enabled: true,
+					onlyInViewport: true
+				},
 				breakpoints: {
 					1200: {
-						slidesPerView: 4,
+						slidesPerView: 4
 					},
-					1024: {
-						slidesPerView: 4,
+					992: {
+						slidesPerView: 3
 					},
-					991: {
-						slidesPerView: 3,
+					768: {
+						slidesPerView: 2
 					},
-					591: {
-						slidesPerView: 2,
-						spaceBetween: 20,
-					},
-					340: {
-						slidesPerView: 2,
-						spaceBetween: 15,
-					},
-				}
+					320: {
+						slidesPerView: 1
+					}
+				},
+				effect: "slide"
 			});
 		}
 	}
+	
 	
 	//  Swiper Five ==
 	var handleSwiperFive = function() {	
