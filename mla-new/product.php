@@ -1,5 +1,63 @@
 <?php include('header.php');?>
 
+<?php
+// Assuming you have a database connection established already
+include('database.php');
+
+// Function to query product data from the database based on product ID
+function query_product_data($product_id, $conn) {
+    // SQL query to retrieve product data based on product_id
+    $sql = "SELECT * FROM products WHERE id = $product_id";
+    $result = mysqli_query($conn, $sql);
+    return mysqli_fetch_assoc($result);
+}
+
+// Function to query gallery images from the database based on product ID
+function query_gallery_images($product_id, $conn) {
+    // SQL query to retrieve gallery images based on product_id
+    $sql = "SELECT * FROM gallery_images WHERE product_id = $product_id";
+    $result = mysqli_query($conn, $sql);
+    $gallery_images = array();
+    while ($row = mysqli_fetch_assoc($result)) {
+        $gallery_images[] = $row['image_url'];
+    }
+    return $gallery_images;
+}
+
+// Check if the "url" parameter exists in the URL
+if(isset($_GET['url'])) {
+    // Get the URL parameter named "url"
+    $product_url = $_GET['url'];
+
+    // Query the database to get the product ID using the URL
+    $product_id_query = "SELECT id FROM products WHERE url = '$product_url'";
+    $result_product_id = mysqli_query($conn, $product_id_query);
+
+    // Check if the query executed successfully
+    if($result_product_id) {
+        // Check if the product ID exists in the database
+        if(mysqli_num_rows($result_product_id) > 0) {
+            // Product ID exists, proceed to fetch product data and gallery images
+            $product_id_row = mysqli_fetch_assoc($result_product_id);
+            $product_id = $product_id_row['id'];
+            $product_data = query_product_data($product_id, $conn);
+            $gallery_images = query_gallery_images($product_id, $conn);
+        } else {
+            // Product ID doesn't exist, handle the error (e.g., redirect to an error page)
+            header("Location: error.php");
+            exit();
+        }
+    } else {
+        // Query execution failed, handle the error (e.g., display an error message)
+        echo "Error: " . mysqli_error($conn);
+    }
+} else {
+
+    exit();
+}
+
+// Use the retrieved product data and gallery images as needed
+?>
 
 	<!-- Header End -->
 
@@ -51,49 +109,54 @@
 <section class="content-inner py-0">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xl-4 col-md-4">
-                <div class="dz-product-detail sticky-top">
-                    <div class="swiper-btn-center-lr">
-                        <div class="swiper product-gallery-swiper2">
-                            <div class="swiper-wrapper" id="lightgallery">
-                                <div class="swiper-slide">
-                                    <div class="dz-media DZoomImage">
-                                        <a class="mfp-link lg-item"
-                                            href="https://5.imimg.com/data5/SELLER/Default/2024/2/384578956/ZU/MF/JH/2084846/hydarted-calcium-silicate-bp-usp.png"
-                                            data-src="https://5.imimg.com/data5/SELLER/Default/2024/2/384578956/ZU/MF/JH/2084846/hydarted-calcium-silicate-bp-usp.png">
-                                            <i class="feather icon-maximize dz-maximize top-left"></i>
-                                        </a>
-                                        <img src="https://5.imimg.com/data5/SELLER/Default/2024/2/384578956/ZU/MF/JH/2084846/hydarted-calcium-silicate-bp-usp.png"
-                                            alt="image">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="dz-media DZoomImage">
-                                        <a class="mfp-link lg-item" href="images/tyre-b-mlagroup.jpg"
-                                            data-src="images/tyre-b-mlagroup.jpg">
-                                            <i class="feather icon-maximize dz-maximize top-left"></i>
-                                        </a>
-                                        <img src="images/tyre-b-mlagroup.jpg" alt="image">
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="swiper product-gallery-swiper thumb-swiper-lg">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img src="https://5.imimg.com/data5/SELLER/Default/2024/2/384578956/ZU/MF/JH/2084846/hydarted-calcium-silicate-bp-usp.png"
-                                        alt="image">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="images/tyre-b-mlagroup.jpg" alt="image">
-                                </div>
-
-                            </div>
+        <div class="col-xl-4 col-md-4">
+    <div class="dz-product-detail sticky-top">
+        <div class="swiper-btn-center-lr">
+            <div class="swiper product-gallery-swiper2">
+                <div class="swiper-wrapper" id="lightgallery">
+                    <!-- Display main image -->
+                    <div class="swiper-slide">
+                        <div class="dz-media DZoomImage">
+                            <a class="mfp-link lg-item" href="<?php echo $product_data['main_image']; ?>"
+                                data-src="<?php echo $product_data['main_image']; ?>">
+                                <i class="feather icon-maximize dz-maximize top-left"></i>
+                            </a>
+                            <img src="<?php echo $product_data['main_image']; ?>" alt="Main Image">
                         </div>
                     </div>
+                    <!-- Display gallery images -->
+                    <?php foreach ($gallery_images as $image_url): ?>
+                        <div class="swiper-slide">
+                            <div class="dz-media DZoomImage">
+                                <a class="mfp-link lg-item" href="<?php echo $image_url; ?>"
+                                    data-src="<?php echo $image_url; ?>">
+                                    <i class="feather icon-maximize dz-maximize top-left"></i>
+                                </a>
+                                <img src="<?php echo $image_url; ?>" alt="Gallery Image">
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
+            <div class="swiper product-gallery-swiper thumb-swiper-lg">
+                <div class="swiper-wrapper">
+                    <!-- Display main image in thumbnail slider -->
+                    <div class="swiper-slide">
+                        <img src="<?php echo $product_data['main_image']; ?>" alt="Main Image">
+                    </div>
+                    <!-- Display gallery images in thumbnail slider -->
+                    <?php foreach ($gallery_images as $image_url): ?>
+                        <div class="swiper-slide">
+                            <img src="<?php echo $image_url; ?>" alt="Gallery Image">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
             <div class="col-xl-8 col-md-8">
                 <div class="row">
                     <div class="col-xl-7">
