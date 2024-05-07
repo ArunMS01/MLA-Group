@@ -938,7 +938,7 @@ include('inc/header.php');
                     formData.append('brandId', document.getElementById('brandSelect').value);
                     formData.append('status', document.getElementById('exampleFormControlSelect2').value);
                     formData.append('longDescription', CKEDITOR.instances['editor1'].getData());
-                    formData.append('applications', CKEDITOR.instances['editor1'].getData());
+                    formData.append('applications', CKEDITOR.instances['editor2'].getData());
                     // Event listener for the checkboxes to update selected values
                     // Collect selected product values
                     var selectedValues = [];
