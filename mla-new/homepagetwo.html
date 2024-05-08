@@ -473,11 +473,15 @@
                     .gallery .content {
                         position: absolute;
                         z-index: 50;
+                        height: 100%;
+                        /* right: 20%; */
                         width: 100%;
+                        align-items: center;
+                        display: flex;
                         padding: 50px 30px;
-                        background-color: #0000007a;
+                        background-color: #00000030;
                         bottom: 0;
-                        text-align: center;
+                        /* text-align: center; */
                         text-transform: uppercase;
                         color: #fff;
                         letter-spacing: 0.175rem;
@@ -649,14 +653,36 @@
                     }
 
                     #typing-text {
-                        overflow: hidden;
+                        /* overflow: hidden; */
                         /* Ensures the text is hidden initially */
                         /* border-right: .15em solid orange; */
                         /* Creates the typing cursor effect */
-                        white-space: nowrap;
+                        /* white-space: nowrap; */
+                        width: 50%;
+                        margin-left: 100px;
                         /* Prevents the text from wrapping */
-                        animation: typing 3s steps(40, end), fadein 2s 3s forwards;
+                        /* animation: typing 3s steps(40, end), fadein 2s 3s forwards; */
                         /* Animation for typing and fade in */
+                        opacity: 0;
+                        /* Initially hide the element */
+                        transform: translateY(50px);
+                        /* Move the element down by 50px */
+                        animation: fadeInUpFromBottom 1s ease-out forwards;
+                        /* Apply animation */
+                    }
+
+                    @keyframes fadeInUpFromBottom {
+                        from {
+                            opacity: 0;
+                            transform: translateY(50px);
+                            /* Start from 50px below */
+                        }
+
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                            /* Move to original position */
+                        }
                     }
 
                     @keyframes typing {
@@ -678,64 +704,69 @@
                             opacity: 1
                         }
                     }
+
+                    .bannejr {
+                        /* background-image: url('images/abstract-mla.png');
+                        background-repeat: no-repeat; */
+                    }
+
+
+                    .line {
+                        content: "";
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        position: absolute;
+                        border: 4px solid #fff;
+                        -webkit-clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+                        clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+                    }
+
+                    #typing-text {
+                        position: relative;
+                        padding: 50px;
+                        background: #eb823399;
+                    }
                 </style>
 
                 <section>
                     <div class="gallery">
-                        <div class="content">
+                        <div class="content bannejr">
 
                             <!-- <h1 class="wow fadeInUp">Chemical Manufacturing Complex Situated In Kanpur</h1> -->
-                            <h1 id="typing-text">Chemical Manufacturing Complex Situated In Kanpur</h1>
+                            <h1 id="typing-text">
+                                <div class="line"></div> Chemical Manufacturing Complex Situated In Kanpur
+                            </h1>
 
                             <hr>
                         </div>
 
                         <div class="swiper-container gallery-slider">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="images/mlagroup.webp"
+                                <div class="swiper-slide"><img src="images/p6.jpeg"
                                         alt="Man sitting on a stone on the lake"></div>
                                 <!-- <div class="swiper-slide"><img
-                                        src="https://images.unsplash.com/photo-1676557059846-2dad064ae6e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                        alt="Lake"></div>
-                                <div class="swiper-slide"><img
-                                        src="https://images.unsplash.com/photo-1676557060416-1418aefb165d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                        alt="Fishermen"></div>
-                                <div class="swiper-slide"><img
-                                        src="https://images.unsplash.com/photo-1675685468877-8cda3a02c49f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                        alt="Surfer"></div>
-                                <div class="swiper-slide"><img
-                                        src="https://images.unsplash.com/photo-1677108581323-7050fbfd528f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                        alt="Two dogs playing"></div>
-                                <div class="swiper-slide"><img
-                                        src="https://images.unsplash.com/photo-1442328166075-47fe7153c128?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                        alt="Standing man"></div> -->
+                                        src="images/p1.jpeg"
+                                        alt="Lake"></div> -->
+
                             </div>
 
                         </div>
 
-                        <div class="swiper-container gallery-thumbs">
+                        <!-- <div class="swiper-container gallery-thumbs">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="images/mlagroup.webp"
+                                <div class="swiper-slide"><img src="images/p1.jpeg"
                                         alt="Man sitting on a stone on the lake"></div>
-                                <!-- <div class="swiper-slide"><img
-                                        src="https://images.unsplash.com/photo-1676557059846-2dad064ae6e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                                <div class="swiper-slide"><img
+                                        src="images/p6.jpeg"
                                         alt="Lake"></div>
-                                <div class="swiper-slide"><img
-                                        src="https://images.unsplash.com/photo-1676557060416-1418aefb165d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                        alt="Fishermen"></div>
-                                <div class="swiper-slide"><img
-                                        src="https://images.unsplash.com/photo-1675685468877-8cda3a02c49f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                        alt="Surfer"></div>
-                                <div class="swiper-slide"><img
-                                        src="https://images.unsplash.com/photo-1677108581323-7050fbfd528f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                        alt="Two dogs playing"></div>
-                                <div class="swiper-slide"><img
-                                        src="https://images.unsplash.com/photo-1442328166075-47fe7153c128?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                        alt="Standing man"></div> -->
+                              
                             </div>
                             <div class="swiper-pagination"></div>
                             <a href="#" class="more">see more</a>
-                        </div>
+                        </div> -->
                     </div>
 
 
@@ -876,6 +907,17 @@
                 }
 
                 @media only screen and (max-width:768px) {
+                    .gallery .content h1 {
+                        font-size: 1.5rem;
+
+                    }
+
+                    #typing-text {
+                        width: 100%;
+                        padding: 24px;
+                        margin-left: 0;
+                    }
+
                     .containervidoes {
                         display: block !important;
                     }
@@ -1065,14 +1107,34 @@ overflow: hidden;
                     }
 
                     .gap-50 {
-                        gap: 50px;
+                        gap: 9px;
+                    }
+
+                    .counyersection .col-md-3 {
+                        width: 48%;
+                        padding: 0;
+                        margin: auto;
+                    }
+
+                    .v20_82 {
+                        width: 90%;
+                        margin: auto;
+                        overflow: auto;
+                    }
+
+                    .gallery{
+                        height: 70vh;
+                    }
+
+                    .counyersection {
+                        padding: 0 10px;
                     }
                 }
             </style>
 
             <section class="section pt-50 ">
                 <div class="container">
-                    <div class="row gap-50">
+                    <div class="row gap-50 counyersection">
                         <div class="col-md-3">
                             <div class="big-box wow fadeInUp" data-wow-delay="0.1s">
 
@@ -1264,11 +1326,13 @@ overflow: hidden;
                         .v423_8 {
                             width: 110px;
                             height: 110px;
+                            margin: auto;
                             background: rgba(247, 134, 49, 1);
                             opacity: 1;
                             position: absolute;
                             top: -59px;
-                            left: 33%;
+                            left: 0;
+                            right: 0;
                             border-radius: 50%;
                         }
 
@@ -1281,14 +1345,25 @@ overflow: hidden;
                         }
 
                         @media screen and (max-width:768px) {
+                            .imageiconbox img {
+                                height: 45px;
+                                width: 45px;
+                            }
+
                             .rowgap {
                                 gap: 98px;
                             }
 
-                            .v423_8 {
+                            .border-box .content {
+                                padding: 24px;
+                            }
 
-                                left: 33% !important;
+                            .big-box p {
+                                font-size: 1rem;
+                            }
 
+                            .big-box {
+                                min-height: 250px !important;
                             }
 
                             .v423_5 {
@@ -1300,12 +1375,16 @@ overflow: hidden;
 
                             }
                         }
+
+                        .vbg-2 {
+                            margin-bottom: 20px;
+                        }
                     </style>
                     <div class="section pt-100">
                         <div class="container">
                             <div class="row rowgap">
 
-                                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="col-md-4 wow fadeInUp vbg-2" data-wow-delay="0.2s">
 
 
                                     <div class="border-box">
@@ -1324,7 +1403,7 @@ overflow: hidden;
                                         outline-offset: 20px;
                                         z-index: -1;
                                     "></div>
-                                        <h2 class="title">values</h2>
+                                        <h2 class="title">Vision</h2>
                                         <div class="content">orem
                                             ipsum dolor sit
                                             amet consectetur adipisicing elit. Vel officia voluptate doloremque amet
@@ -1336,7 +1415,7 @@ overflow: hidden;
                                     </div>
 
                                 </div>
-                                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s"">
+                                <div class="col-md-4 wow fadeInUp vbg-2" data-wow-delay="0.2s"">
 
 
                                     <div class=" border-box">
@@ -1355,7 +1434,7 @@ overflow: hidden;
                                         outline-offset: 20px;
                                         z-index: -1;
                                     "></div>
-                                    <h2 class="title">values</h2>
+                                    <h2 class="title">Mission</h2>
                                     <div class="content">orem
                                         ipsum dolor sit
                                         amet consectetur adipisicing elit. Vel officia voluptate doloremque amet
@@ -1386,7 +1465,7 @@ overflow: hidden;
                                         outline-offset: 20px;
                                         z-index: -1;
                                     "></div>
-                                <h2 class="title">values</h2>
+                                <h2 class="title">Values</h2>
                                 <div class="content">orem
                                     ipsum dolor sit
                                     amet consectetur adipisicing elit. Vel officia voluptate doloremque amet
@@ -2025,11 +2104,11 @@ overflow: hidden;
     <script>
 
 
-        document.addEventListener("DOMContentLoaded", function (event) {
-            setTimeout(function () {
-                document.getElementById('typing-text').style.animationPlayState = 'running';
-            }, 1000); // Delaying animation start by 1 second
-        });
+        // document.addEventListener("DOMContentLoaded", function (event) {
+        //     setTimeout(function () {
+        //         document.getElementById('typing-text').style.animationPlayState = 'running';
+        //     }, 1000); // Delaying animation start by 1 second
+        // });
 
 
         function showYouTubeVideo() {
