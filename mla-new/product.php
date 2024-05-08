@@ -1,11 +1,5 @@
 <?php include('header.php');?>
 
-
-	<!-- Header End -->
-
-    <div class="page-content">
-
-
 <style>
     .py-new {
         padding-top: 1rem !important;
@@ -37,126 +31,7 @@
         font-family: var(--font-family-title);
     }
 </style>
-
-<div class="d-sm-flex justify-content-between container-fluid py-new">
-    <nav aria-label="breadcrumb" class="breadcrumb-row">
-        <ul class="breadcrumb mb-0">
-            <li class="breadcrumb-item col-or"> Home</li>
-            <li class="breadcrumb-item col-or">Products</li>
-            <li class="breadcrumb-item ">Hydrated Calcium Silicate</li>
-        </ul>
-    </nav>
-</div>
-
-<section class="content-inner py-0">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xl-4 col-md-4">
-                <div class="dz-product-detail sticky-top">
-                    <div class="swiper-btn-center-lr">
-                        <div class="swiper product-gallery-swiper2">
-                            <div class="swiper-wrapper" id="lightgallery">
-                                <div class="swiper-slide">
-                                    <div class="dz-media DZoomImage">
-                                        <a class="mfp-link lg-item"
-                                            href="https://5.imimg.com/data5/SELLER/Default/2024/2/384578956/ZU/MF/JH/2084846/hydarted-calcium-silicate-bp-usp.png"
-                                            data-src="https://5.imimg.com/data5/SELLER/Default/2024/2/384578956/ZU/MF/JH/2084846/hydarted-calcium-silicate-bp-usp.png">
-                                            <i class="feather icon-maximize dz-maximize top-left"></i>
-                                        </a>
-                                        <img src="https://5.imimg.com/data5/SELLER/Default/2024/2/384578956/ZU/MF/JH/2084846/hydarted-calcium-silicate-bp-usp.png"
-                                            alt="image">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="dz-media DZoomImage">
-                                        <a class="mfp-link lg-item" href="images/tyre-b-mlagroup.jpg"
-                                            data-src="images/tyre-b-mlagroup.jpg">
-                                            <i class="feather icon-maximize dz-maximize top-left"></i>
-                                        </a>
-                                        <img src="images/tyre-b-mlagroup.jpg" alt="image">
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="swiper product-gallery-swiper thumb-swiper-lg">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img src="https://5.imimg.com/data5/SELLER/Default/2024/2/384578956/ZU/MF/JH/2084846/hydarted-calcium-silicate-bp-usp.png"
-                                        alt="image">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="images/tyre-b-mlagroup.jpg" alt="image">
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-8 col-md-8">
-                <div class="row">
-                    <div class="col-xl-7">
-                        <div class="dz-product-detail style-2  ps-0">
-                            <div class="dz-content">
-                                <div class="dz-content-footer">
-                                    <div class="dz-content-start">
-                                        <!-- <span class="badge bg-purple mb-2">SALE 20% Off</span> -->
-                                        <h4 class="title " style="line-height: 1;">Hydrated Calcium Silicate
-                                        </h4>
-                                        <!-- <div class="review-num">
-                                            <ul class="dz-rating me-2">
-                                                <li>
-                                                    <svg width="14" height="13" viewBox="0 0 14 13"
-                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M6.74805 0.234375L8.72301 4.51608L13.4054 5.07126L9.9436 8.27267L10.8625 12.8975L6.74805 10.5944L2.63355 12.8975L3.5525 8.27267L0.090651 5.07126L4.77309 4.51608L6.74805 0.234375Z"
-                                                            fill="#FF8A00"></path>
-                                                    </svg>
-                                                </li>
-                                                <li>
-                                                    <svg width="14" height="13" viewBox="0 0 14 13"
-                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M6.74805 0.234375L8.72301 4.51608L13.4054 5.07126L9.9436 8.27267L10.8625 12.8975L6.74805 10.5944L2.63355 12.8975L3.5525 8.27267L0.090651 5.07126L4.77309 4.51608L6.74805 0.234375Z"
-                                                            fill="#FF8A00"></path>
-                                                    </svg>
-                                                </li>
-                                                <li>
-                                                    <svg width="14" height="13" viewBox="0 0 14 13"
-                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M6.74805 0.234375L8.72301 4.51608L13.4054 5.07126L9.9436 8.27267L10.8625 12.8975L6.74805 10.5944L2.63355 12.8975L3.5525 8.27267L0.090651 5.07126L4.77309 4.51608L6.74805 0.234375Z"
-                                                            fill="#FF8A00"></path>
-                                                    </svg>
-                                                </li>
-                                                <li>
-                                                    <svg width="14" height="13" viewBox="0 0 14 13"
-                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path opacity="0.2"
-                                                            d="M6.74805 0.234375L8.72301 4.51608L13.4054 5.07126L9.9436 8.27267L10.8625 12.8975L6.74805 10.5944L2.63355 12.8975L3.5525 8.27267L0.090651 5.07126L4.77309 4.51608L6.74805 0.234375Z"
-                                                            fill="#5E626F"></path>
-                                                    </svg>
-
-                                                </li>
-                                                <li>
-                                                    <svg width="14" height="13" viewBox="0 0 14 13"
-                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path opacity="0.2"
-                                                            d="M6.74805 0.234375L8.72301 4.51608L13.4054 5.07126L9.9436 8.27267L10.8625 12.8975L6.74805 10.5944L2.63355 12.8975L3.5525 8.27267L0.090651 5.07126L4.77309 4.51608L6.74805 0.234375Z"
-                                                            fill="#5E626F"></path>
-                                                    </svg>
-                                                </li>
-                                            </ul>
-                                            <span class="text-secondary me-2">4.7 Rating</span>
-                                            <a href="javascript:void(0);">(5 customer reviews)</a>
-                                        </div> -->
-                                    </div>
-                                </div>
-                                <h5>Applications</h5>
-                                <p class="para-text">
-
-                                    <style>
+<style>
                                         .dz-tabs .nav-tabs .nav-link.active {
                                             border-color: #FE8F34 !important;
                                             color: var(--secondary);
@@ -203,143 +78,187 @@
                                             padding-right: 0px !important;
                                         }
                                     </style>
-                                <div class="detail-bx bx-new">
+
+<?php
+// Assuming you have a database connection established already
+include('database.php');
+
+// Function to query product data from the database based on product ID
+function query_product_data($product_id, $conn) {
+    // SQL query to retrieve product data based on product_id
+    $sql = "SELECT * FROM products WHERE id = $product_id";
+    $result = mysqli_query($conn, $sql);
+    return mysqli_fetch_assoc($result);
+}
+
+// Function to query gallery images from the database based on product ID
+function query_gallery_images($product_id, $conn) {
+    // SQL query to retrieve gallery images based on product_id
+    $sql = "SELECT * FROM gallery_images WHERE product_id = $product_id";
+    $result = mysqli_query($conn, $sql);
+    $gallery_images = array();
+    while ($row = mysqli_fetch_assoc($result)) {
+        $gallery_images[] = $row['image_url'];
+    }
+    return $gallery_images;
+}
+
+// Check if the "url" parameter exists in the URL
+if(isset($_GET['url'])) {
+    // Get the URL parameter named "url"
+    $product_url = $_GET['url'];
+
+    // Query the database to get the product ID using the URL
+    $product_id_query = "SELECT id FROM products WHERE url = '$product_url'";
+    $result_product_id = mysqli_query($conn, $product_id_query);
+
+    // Check if the query executed successfully
+    if($result_product_id) {
+        // Check if the product ID exists in the database
+        if(mysqli_num_rows($result_product_id) > 0) {
+            // Product ID exists, proceed to fetch product data and gallery images
+            $product_id_row = mysqli_fetch_assoc($result_product_id);
+            $product_id = $product_id_row['id'];
+            $product_data = query_product_data($product_id, $conn);
+            $gallery_images = query_gallery_images($product_id, $conn);
+        } else {
+            // Product ID doesn't exist, handle the error (e.g., redirect to an error page)
+         
+            exit();
+        }
+    } else {
+        // Query execution failed, handle the error (e.g., display an error message)
+        echo "Error: " . mysqli_error($conn);
+    }
+} else {
+
+    exit();
+}
+
+// Use the retrieved product data and gallery images as needed
+?>
+
+	<!-- Header End -->
+
+    <div class="page-content">
 
 
-                                    <ul class=" feature-detail">
 
-                                        <li> <i class="icon feather icon-check"></i> As an anti-caking and
-                                            free flow agents in chemicals, Insecticides/Pesticides and
-                                            similar powdered materials due to its excellent water/oil
-                                            absorption.</li>
-                                        <li> <i class="icon feather icon-check"></i> As a reinforcing agent
-                                            in rubber.</li>
-                                        <li> <i class="icon feather icon-check"></i> As a functional
-                                            extender in emulsion paints - ensures film smoothness and acts
-                                            as a buffer against acidity of the paint system.</li>
-                                        <li> <i class="icon feather icon-check"></i> As a carrying agents in
-                                            animal feedstuff, insecticides / pesticides, chemicals due to
-                                            its very high water absorption capacity, fine particle size and
-                                            low bulk density.</li>
-                                        <li> <i class="icon feather icon-check"></i> To control rheological
-                                            properties in a variety of application.</li>
-                                    </ul>
-                                </div>
-                                </p>
+<div class="d-sm-flex justify-content-between container-fluid py-new">
+    <nav aria-label="breadcrumb" class="breadcrumb-row">
+        <ul class="breadcrumb mb-0">
+            <li class="breadcrumb-item col-or"> Home</li>
+            <li class="breadcrumb-item col-or">Products</li>
+            <li class="breadcrumb-item ">Hydrated Calcium Silicate</li>
+        </ul>
+    </nav>
+</div>
 
-
-
-
-                                <!-- <div class="meta-content m-b20 d-flex align-items-end">
-                                    <div class="me-3">
-                                        <span class="price-name">Price</span>
-                                        <span class="price-num">$125.75 <del>$132.17</del></span>
-                                    </div>
-                                    <div
-                                        class="btn-quantity quantity-sm light d-xl-none d-blcok d-sm-block">
-                                        <label class="form-label">Quantity</label>
-                                        <input type="text" value="1" name="demo_vertical2">
-                                    </div>
-                                </div> -->
-                                <!-- <div class="product-num">
-                                    <div class="btn-quantity light d-xl-block d-sm-none d-none">
-                                        <label class="form-label">Quantity</label>
-                                        <input type="text" value="1" name="demo_vertical2">
-                                    </div>
-                                    <div class="d-block">
-                                        <label class="form-label">Size</label>
-                                        <div class="btn-group product-size mb-0">
-                                            <input type="radio" class="btn-check" name="btnradio1"
-                                                id="btnradio11" checked="">
-                                            <label class="btn btn-light" for="btnradio11">S</label>
-
-                                            <input type="radio" class="btn-check" name="btnradio1"
-                                                id="btnradio21">
-                                            <label class="btn btn-light" for="btnradio21">M</label>
-
-                                            <input type="radio" class="btn-check" name="btnradio1"
-                                                id="btnradio31">
-                                            <label class="btn btn-light" for="btnradio31">L</label>
-                                        </div>
-                                    </div>
-                                    <div class="meta-content">
-                                        <label class="form-label">Color</label>
-                                        <div class="d-flex align-items-center color-filter">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio"
-                                                    name="radioNoLabel" id="radioNoLabel1" value="#24262B"
-                                                    aria-label="..." checked>
-                                                <span></span>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio"
-                                                    name="radioNoLabel" id="radioNoLabel2" value="#8CB2D1"
-                                                    aria-label="...">
-                                                <span></span>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio"
-                                                    name="radioNoLabel" id="radioNoLabel3" value="#0D775E"
-                                                    aria-label="...">
-                                                <span></span>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio"
-                                                    name="radioNoLabel" id="radioNoLabel4" value="#C7D1CF"
-                                                    aria-label="...">
-                                                <span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- <div class="dz-info">
-                                    <ul>
-                                        <li>
-                                            <strong>SKU:</strong>
-                                            <span>PRT584E63A</span>
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            <span>Bottles,</span>
-                                            <span>Accessories,</span>
-                                            <span>Mats,</span>
-                                            <span>Bottles,</span>
-                                            <span>Trackers</span>
-                                        </li>
-                                        <li>
-                                            <strong>Tags:</strong>
-                                            <span>Trackers,</span>
-                                            <span>Bags,</span>
-                                            <span>Cup,</span>
-                                            <span>Toothbrushes</span>
-                                        </li>
-                                        <li>
-                                            <strong>Share:</strong>
-                                            <span>
-                                                <a href="javascript:void(0);" target="_blank">
-                                                    <i class="fa-brands fa-facebook-f"></i>
-                                                </a>
-                                            </span>
-                                            <span>
-                                                <a href="https://www.linkedin.com/showcase/3686700/admin/"
-                                                    target="_blank">
-                                                    <i class="fa-brands fa-linkedin-in"></i>
-                                                </a>
-                                            </span>
-                                            <span>
-                                                <a href="javascript:void(0);" target="_blank">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </a>
-                                            </span>
-                                            <span>
-                                                <a href="javascript:void(0);" target="_blank">
-                                                    <i class="fa-brands fa-twitter"></i>
-                                                </a>
-                                            </span>
-                                        </li>
-                                    </ul>
-                                </div> -->
+<section class="content-inner py-0">
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-xl-4 col-md-4">
+    <div class="dz-product-detail sticky-top">
+        <div class="swiper-btn-center-lr">
+            <div class="swiper product-gallery-swiper2">
+                <div class="swiper-wrapper" id="lightgallery">
+                    <!-- Display main image -->
+                    <div class="swiper-slide">
+                        <div class="dz-media DZoomImage">
+                            <a class="mfp-link lg-item" href="./admin/codes/<?php echo $product_data['main_image']; ?>"
+                                data-src="./admin/codes/<?php echo $product_data['main_image']; ?>">
+                                <i class="feather icon-maximize dz-maximize top-left"></i>
+                            </a>
+                            <img src="./admin/codes/<?php echo $product_data['main_image']; ?>" alt="Main Image">
+                        </div>
+                    </div>
+                    <!-- Display gallery images -->
+                    <?php foreach ($gallery_images as $image_url): ?>
+                        <div class="swiper-slide">
+                            <div class="dz-media DZoomImage">
+                                <a class="mfp-link lg-item" href="./admin/codes/<?php echo $image_url; ?>"
+                                    data-src="<?php echo $image_url; ?>">
+                                    <i class="feather icon-maximize dz-maximize top-left"></i>
+                                </a>
+                                <img src="./admin/codes/<?php echo $image_url; ?>" alt="Gallery Image">
                             </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <div class="swiper product-gallery-swiper thumb-swiper-lg">
+                <div class="swiper-wrapper">
+                    <!-- Display main image in thumbnail slider -->
+                    <div class="swiper-slide">
+                        <img src="./admin/codes/<?php echo $product_data['main_image']; ?>" alt="Main Image">
+                    </div>
+                    <!-- Display gallery images in thumbnail slider -->
+                    <?php foreach ($gallery_images as $image_url): ?>
+                        <div class="swiper-slide">
+                            <img src="./admin/codes/<?php echo $image_url; ?>" alt="Gallery Image">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            <div class="col-xl-8 col-md-8">
+                <div class="row">
+                    <div class="col-xl-7">
+                        <div class="dz-product-detail style-2  ps-0">
+                        <div class="dz-content">
+    <div class="dz-content-footer">
+        <div class="dz-content-start">
+            <!-- <span class="badge bg-purple mb-2">SALE 20% Off</span> -->
+            <h4 class="title" style="line-height: 1;"><?php echo $product_data['title']; ?></h4>
+        </div>
+    </div>
+  
+    <h5>Applications</h5>
+    <p class="para-text">
+        <div class="detail-bx bx-new">
+        <?php
+// Extracted from the database
+$application_data = $product_data['applications'];
+
+// Create a DOMDocument object
+$doc = new DOMDocument();
+// Load the HTML content
+$doc->loadHTML($application_data);
+
+// Get all <p> elements
+$paragraphs = $doc->getElementsByTagName('p');
+
+// Output the <p> elements as they are
+foreach ($paragraphs as $paragraph) {
+    echo '<p>' . $doc->saveHTML($paragraph) . '</p>';
+}
+
+// Get all <li> elements
+$listItems = $doc->getElementsByTagName('li');
+
+// Output the list items with icon prepended
+echo '<ul class="feature-detail">';
+foreach ($listItems as $item) {
+    // Check if the <li> element has non-empty text content
+    if (trim($item->textContent) !== '') {
+        // Get the text content of the <li> element
+        $textContent = trim($item->textContent);
+        // Output <li> element with icon prepended to text content
+        echo '<li><i class="icon feather icon-check"></i> ' . $textContent . '</li>';
+    }
+}
+echo '</ul>';
+?>
+
+
+        </div>
+    </p>
+</div>
+
                             <div class="banner-social-media">
                                 <ul>
                                     <li class="linkdin1">
@@ -575,73 +494,10 @@
                     <div class="tab-pane fade desc-new show active" id="profile-tab-pane" role="tabpanel"
                         aria-labelledby="profile-tab" tabindex="0">
                         <div class="detail-bx mt-40">
-                            <h5>About the product</h5>
-                            <p class="para-text">
-
-                                This is a hydrated amorphous synthetic Calcium Silicate. Due to its
-                                amorphous nature it is safer to use than natural crystalline forms. It
-                                also has an entirely different range of properties compared to natural
-                                forms, i.e, higher surface area, oil absorption and lower particle size
-                                and bulk density.
-                            </p>
+                    <?php echo $product_data['long_description'];?>
                         </div>
 
-                        <div class="detail-bx mt-40">
-                            <h5 class="title">Production process</h5>
-                            <p class="para-text mt-40">
-                                Sodium Silicate and Calcium Sulphate are reacted together under
-                                precisely controlled conditions to give a slurry of Calcium Silicate and
-                                Sodium Sulphate in solution. By stringent control of parameters such as
-                                temperature, pH, electrolyte concentration, agitation and reaction time,
-                                Silicate of required structure and surface characteristics is produced.
-
-                                The slurry is then filtered and washed with water to remove sodium
-                                sulphate. The filter cake is subsequently dried and then milled to the
-                                required particle size distribution. Finally the silicate is collected,
-                                deaerated, and packed at a controlled bulk density.
-                            </p>
-
-                        </div>
-
-                        <div class="detail-bx ">
-                            <h5 class="title">Special features of our product</h5>
-                            <p class="">
-                                Optimum particle size and surface characterstics obtained through rigrous
-                                control of the precipitation parameters, which have been determined by
-                                intense research, giving in turn an excellent oil absorption, much higher
-                                than most commercially available grades.
-
-
-                            <p>Processed on a fully automated plant and thus has high purity and is
-                                free
-                                from any contaminants.</p>
-                            <p>Excellent optical whiteness.</p>
-                            <p>Excellent anti-caking and reinforcement potential.</p>
-
-                            </p>
-                        </div>
-
-                        <div class="detail-bx ">
-                            <h5 class="title">Other suggestive applications</h5>
-                            <p class="para-text mt-40">
-                                Adhesives, battery seprators, brake linings, paint primers, paper,
-                                plasticized PVC, plastisols, polishes, printing inks, sealants and mastics,
-                                tabletting and pelletising, textiles and thermal insulation.
-                            </p>
-
-                        </div>
-
-
-                        <div class="detail-bx ">
-
-                            <h5 class="para-text mt-40">
-                                All specifications given here are only indicative, there are several
-                                application
-                                specific grades under each category, please write to us for exact
-                                specifications.
-                            </h5>
-
-                        </div>
+                       
 
 
 
@@ -655,7 +511,27 @@
         </div>
     </div>
 </section>
+<?php
+// Step 1: Retrieve related product IDs
+$related_product_ids = explode(',', $product_data['related_products']);
 
+// Step 2: Initialize an array to store related product details
+$related_products = array();
+
+// Step 3: Query the product table for each related product
+foreach ($related_product_ids as $product_id) {
+    $query = "SELECT id, title, url FROM products WHERE id = $product_id";
+    $result = mysqli_query($conn, $query);
+
+    // Check if the query was successful and fetch the product details
+    if ($result && mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        // Add the product details to the array
+        $related_products[] = $row;
+    }
+}
+
+?>
 
 <section class="content-inner-1 overlay-white-middle overflow-hidden padding-top-0">
     <div class="container">
@@ -663,21 +539,42 @@
             <div class="">
                 <h2 class="title mb-4">Related products</h2>
             </div>
-            <!-- <a href="shop-list.html" class="text-secondary font-14 d-flex align-items-center gap-1">See all products
-                <i class="icon feather icon-chevron-right font-18"></i>
-            </a>			 -->
         </div>
         <div class="widget widget_categories style-1">
-            <ul>
-                <li class="cat-item"><a href="javascript:void(0);">Precipitated silica</a> </li>
-                <li class="cat-item"><a href="javascript:void(0);">Sodium Aluminium Silicate</a> </li>
-                <li class="cat-item"><a href="javascript:void(0);">Hydrated Calcium Silicate</a> </li>
-                <li class="cat-item"><a href="javascript:void(0);">Calcium Sulphate</a> </li>
-
+            <ul class="row">
+                <?php
+                $column_count = 0;
+                foreach ($related_products as $product):
+                    if ($column_count % 6 == 0) {
+                        // Start a new column
+                        echo '<div class="col-md-4"><ul class="cat-list">';
+                    }
+                    ?>
+                    <li class="cat-item">
+                      
+                        <a href="<?php echo $product['url'] ?>" title="<?php echo $product['title'] ?>">
+                            <?php echo $product['title'] ?>
+                        </a>
+                    </li>
+                    <?php
+                    $column_count++;
+                    if ($column_count % 6 == 0) {
+                        // Close the column
+                        echo '</ul></div>';
+                    }
+                endforeach;
+                // Close the column if not already closed
+                if ($column_count % 6 != 0) {
+                    echo '</ul></div>';
+                }
+                ?>
             </ul>
         </div>
     </div>
 </section>
+
+
+
 
 <style>
     .get-in-touch {
