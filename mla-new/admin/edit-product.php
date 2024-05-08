@@ -1,8 +1,8 @@
-<?php
+<?php 
 session_start();
 
 // Check if session variables exist
-if (isset($_SESSION['user_id']) && isset($_SESSION['email'])) {
+if(isset($_SESSION['user_id']) && isset($_SESSION['email'])) {
     // Session variables exist, user is logged in
     $user_id = $_SESSION['user_id'];
     $email = $_SESSION['email'];
@@ -14,28 +14,20 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['email'])) {
     header("Location: login.php");
     exit; // Ensure script execution stops after redirection
 }
-include('inc/header.php');
-?>
+include('inc/header.php') ?>
+
 
 
 
 <div class="container-scroller">
-    <style>
-        select.form-control,
-        select.asColorPicker-input,
-        .dataTables_wrapper select,
-        .jsgrid .jsgrid-table .jsgrid-filter-row select,
-        .select2-container--default select.select2-selection--single,
-        .select2-container--default .select2-selection--single select.select2-search__field,
-        select.typeahead,
-        select.tt-query,
-        select.tt-hint {
-            padding: .4375rem .75rem;
-            border: 0;
-            outline: 1px solid #CED4DA;
-            color: #1b0000;
-        }
-    </style>
+<style>
+    select.form-control, select.asColorPicker-input, .dataTables_wrapper select, .jsgrid .jsgrid-table .jsgrid-filter-row select, .select2-container--default select.select2-selection--single, .select2-container--default .select2-selection--single select.select2-search__field, select.typeahead, select.tt-query, select.tt-hint {
+    padding: .4375rem .75rem;
+    border: 0;
+    outline: 1px solid #CED4DA;
+    color: #1b0000;
+}
+</style>
     <?php include('inc/nav.php') ?>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
@@ -296,11 +288,12 @@ include('inc/header.php');
                 $additionalCode = $row['additional_code'];
                 $mainImage = $row['main_image'];
                 $relatedProducts = $row['related_products'];
+                echo     $relatedProducts = $row['related_products'];
                 $selectedBrandId = $row['brand'];
-              $status = $row['status'];
+                $status = $row['status'];
                 $longDescription = $row['long_description'];
                 $applications = $row['applications'];
-                  ?>
+        ?>
                 <!-- partial -->
                 <div class="main-panel">
                     <div class="content-wrapper">
@@ -495,45 +488,45 @@ include('inc/header.php');
 
 
 
-                                        <?php
-                                        include('./codes/db.php');
+<?php
+include('./codes/db.php');
 
-                                        // Assuming $selectedBrandId is fetched from the database or from any other source
+// Assuming $selectedBrandId is fetched from the database or from any other source
 
 
-                                        // Fetch brand data from the database
-                                        $sql = "SELECT id, name FROM brand"; // Adjust table name if necessary
-                                        $result = $db->query($sql);
+// Fetch brand data from the database
+$sql = "SELECT id, name FROM brand"; // Adjust table name if necessary
+$result = $db->query($sql);
 
-                                        // Initialize an empty array to store brand data
-                                        $brands = array();
+// Initialize an empty array to store brand data
+$brands = array();
 
-                                        // Check if there are any results
-                                        if ($result->num_rows > 0) {
-                                            // Loop through each row and store brand data in the $brands array
-                                            while ($row = $result->fetch_assoc()) {
-                                                $brands[] = $row;
-                                            }
-                                        }
-                                        ?>
+// Check if there are any results
+if ($result->num_rows > 0) {
+    // Loop through each row and store brand data in the $brands array
+    while ($row = $result->fetch_assoc()) {
+        $brands[] = $row;
+    }
+}
+?>
 
-                                        <!-- Select Brand -->
-                                        <!-- Error div for Select Brand -->
-                                        <div class="form-group">
-                                            <label for="brandSelect">Select Brand</label>
-                                            <select class="form-control form-control-lg" id="brandSelect" name="brand_id">
-                                                <option value="">Select Brand</option>
-                                                <?php
-                                                // Assuming $brands is an array containing brand data fetched from the database
-                                                foreach ($brands as $brand) {
-                                                    // Check if the current brand ID matches the selected brand ID
-                                                    $isSelected = ($brand['id'] == $selectedBrandId) ? 'selected' : '';
-                                                    echo "<option value='{$brand['id']}' $isSelected>{$brand['name']}</option>";
-                                                }
-                                                ?>
-                                            </select>
-                                            <div id="brandError" class="error-message"></div> <!-- Error div -->
-                                        </div>
+<!-- Select Brand -->
+<!-- Error div for Select Brand -->
+<div class="form-group">
+    <label for="brandSelect">Select Brand</label>
+    <select class="form-control form-control-lg" id="brandSelect" name="brand_id">
+        <option value="">Select Brand</option>
+        <?php
+        // Assuming $brands is an array containing brand data fetched from the database
+        foreach ($brands as $brand) {
+            // Check if the current brand ID matches the selected brand ID
+            $isSelected = ($brand['id'] == $selectedBrandId) ? 'selected' : '';
+            echo "<option value='{$brand['id']}' $isSelected>{$brand['name']}</option>";
+        }
+        ?>
+    </select>
+    <div id="brandError" class="error-message"></div> <!-- Error div -->
+</div>
 
                                         <script>
                                             document.addEventListener('DOMContentLoaded', function() {
@@ -607,12 +600,7 @@ include('inc/header.php');
                                                 $products[] = $row;
                                             }
                                         }
-                                        ?>
-
-
-
-
-                                        <?php
+                                       
                                         // Check if $relatedProducts is set before proceeding
                                         if (isset($relatedProducts)) {
                                             // Convert the comma-separated string of product IDs to an array
@@ -642,38 +630,38 @@ include('inc/header.php');
                                             }
 
                                             // Convert the array to a comma-separated string
-                                            echo $selectedProductsString = implode(', ', $selectedProducts);
+                                            $selectedProductsString = implode(', ', $selectedProducts);
                                         } else {
                                             // If $relatedProducts is not set, initialize an empty string for $selectedProductsString
                                             $selectedProductsString = '';
                                         }
-
-                                        $relatedProductsArray = [];
-
-                                        if (isset($relatedProducts)) {
-                                            // Convert the comma-separated string of product IDs to an array
-                                            $relatedProductsArray = explode(',', $relatedProducts);
-                                            echo $selectedProductsString = implode(', ', $relatedProductsArray);
-                                        }
-
                                         ?>
 
 
 
-                                        <div class="form-group">
-                                            <label for="productSelect">Select Product</label>
-                                            <select id="productSelect" class="ui fluid search dropdown" multiple>
-                                                <?php
-                                                foreach ($products as $product) {
-                                                    // Check if the current product ID exists in the related products array
-                                                    $isSelected = in_array($product['id'], $relatedProductsArray) ? 'selected' : '';
-                                                    echo "<option value='{$product['id']}' $isSelected>{$product['title']}</option>";
-                                                }
-                                                ?>
-                                            </select>
+<div class="form-group">
+    <label for="productSelect">Select Product</label>
+    <select id="productSelect" class="ui fluid search dropdown" multiple>
+        <?php
+        // Assuming $products is an array containing product data fetched from the database
+        foreach ($products as $product) {
+             echo $product['id'];
+            // Check if the current product ID is equal to any of the IDs in $relatedProductsArray
+            $isSelected = '';
+            foreach ($relatedProductsArray as $relatedProductId) {
+                echo $product['id'];
+                if ($product['id'] == $relatedProductId) {
+                    $isSelected = 'selected';
+                    break; // Exit the loop once a match is found
+                }
+            }
+            echo "<option value='{$product['id']}' $isSelected>{$product['title']}</option>";
+        }
+        ?>
+    </select>
+    <div id="productError" class="error-message"></div> <!-- Error div -->
+</div>
 
-                                            <div id="productError" class="error-message"></div> <!-- Error div -->
-                                        </div>
 
 
 
@@ -700,14 +688,12 @@ include('inc/header.php');
                                         <!-- Error div for Status -->
                                         <div class="form-group">
                                             <label for="exampleFormControlSelect2">Status</label>
-                                            <select class="form-control form-control-lg" id="exampleFormControlSelect2" name="status">
-                                                <?php $row['status'] ?>
-                                                <option <?php if ($status === 'Unpublished') echo 'selected'; ?>>Unpublished</option>
-                                                <option <?php if ($status === 'Published') echo 'selected'; ?>>Published</option>
+                                            <select class="form-control form-control-lg" id="exampleFormControlSelect2">
+                                                <option>Unpublished</option>
+                                                <option>Published</option>
                                             </select>
                                             <div id="statusError" class="error-message"></div> <!-- Error div -->
                                         </div>
-
                                     </div>
                                 </div>
                             </div>

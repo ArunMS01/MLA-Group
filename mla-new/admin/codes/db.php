@@ -6,10 +6,10 @@ if (!isset($db) || !($db instanceof mysqli)) {
     ini_set('display_errors', '1');
 
     // Database configuration
-    define('DB_HOST', 'localhost'); // Replace with your database host
-    define('DB_USERNAME', 'root'); // Replace with your database username
-    define('DB_PASSWORD', ''); // Replace with your database password
-    define('DB_NAME', 'mla'); // Replace with your database name
+    define('DB_HOST', '103.212.120.31'); // Replace with your database host
+    define('DB_USERNAME', 'ictdzfbe_mlagroup'); // Replace with your database username
+    define('DB_PASSWORD', 'w@tAkKxCGFcH'); // Replace with your database password
+    define('DB_NAME', 'ictdzfbe_mlagroup'); // Replace with your database name
 
     // Establish database connection
     $db = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
@@ -21,6 +21,6 @@ if (!isset($db) || !($db instanceof mysqli)) {
 }
 
 if (!defined('Base_url')) {
-    define('Base_url', 'http://localhost/mla-new/');
+    define('Base_url', 'https://maidenstride.in/mla-new/admin/');
 }
 ?>
