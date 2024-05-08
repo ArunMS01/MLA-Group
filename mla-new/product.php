@@ -685,49 +685,7 @@ foreach ($related_product_ids as $product_id) {
         border-right: 2px solid #c4c4c4 !important;
     }
 </style>
-
-<!--Recommend Section Start-->
-<section class="content-inner-1 bg-light">
-    <div class="container">
-        <h3 class="title text-center mb-4">RANGE OF PRODUCTS</h3>
-        <div class="site-filters clearfix d-flex align-items-center wow fadeInUp justify-content-center"
-            data-wow-delay="0.1s">
-            <ul class="filters" data-bs-toggle="buttons">
-                <li class="btn active btth">
-                    <input type="radio">
-                    <a href="javascript:void(0);">UNISIL </a>
-                </li>
-                <li class="btn btth">
-                    <input type="radio">
-                    <a href="javascript:void(0);">UNIFLOW </a>
-                </li>
-                <li class="btn btth">
-                    <input type="radio">
-                    <a href="javascript:void(0);">UNICELL </a>
-                </li>
-                <li class="btn btth">
-                    <input type="radio">
-                    <a href="javascript:void(0);">Micronized Mineral fillers /
-                        extenders</a>
-                </li>
-
-                <li class="btn btth">
-                    <input type="radio">
-                    <a href="javascript:void(0);">UNISTAB </a>
-                </li>
-                <li class="btn btth">
-                    <input type="radio">
-                    <a href="javascript:void(0);">ZINCOSIL</a>
-                </li>
-                <li class="btn">
-                    <input type="radio">
-                    <a href="javascript:void(0);">UNILUB</a>
-                </li>
-
-
-            </ul>
-
-            <style>
+<style>
                 .site-filters li.active a {
                     color: #FE8F34;
                 }
@@ -838,115 +796,137 @@ foreach ($related_product_ids as $product_id) {
                     padding-top: 40px;
                 }
             </style>
-            <!-- <a href="shop-list.html"
-                class="product-link text-secondary font-14 d-flex align-items-center gap-1 text-nowrap">See
-                all products
-                <i class="icon feather icon-chevron-right font-18"></i>
-            </a> -->
+
+<?php
+// Fetch brands from the database
+echo $query = "SELECT id, name FROM brand";
+$result = mysqli_query($conn, $query);
+
+// Initialize an array to store the brands
+$brands = [];
+
+// Check if the query was successful and fetch the brand details
+if ($result && mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        // Add the brand details to the array
+        $brands[$row['id']] = $row;
+    }
+}
+
+// Fetch products for each brand
+foreach ($brands as $brandId => $brand) {
+   echo $query = "SELECT id, title,url FROM products WHERE brand_id = $brandId";
+    $result = mysqli_query($conn, $query);
+
+    // Initialize an array to store products for this brand
+    $products = [];
+
+    // Check if the query was successful and fetch the product details
+    if ($result && mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            // Add the product details to the array
+            $products[] = $row;
+        }
+    }
+
+    // Assign the products to the corresponding brand in the $brands array
+    $brands[$brandId]['products'] = $products;
+}
+
+// Close the database connection
+mysqli_close($conn);
+
+// Now $brands array contains all brands with their associated products
+?>
+           
+<!--Recommend Section Start-->
+<section class="content-inner-1 bg-light">
+    <div class="container">
+        <h3 class="title text-center mb-4">RANGE OF PRODUCTS</h3>
+        <div class="site-filters clearfix d-flex align-items-center wow fadeInUp justify-content-center"
+            data-wow-delay="0.1s">
+            <!-- Brand list will be dynamically generated here -->
+            <ul class="filters" data-bs-toggle="buttons" id="brand-list">
+                <!-- Brands will be populated dynamically -->
+            </ul>
         </div>
-        <div class="clearfix">
-            <!-- <div class="row">
-                <div class="col-md-12">
-                    <img style="display: block; margin: auto; " src="./images/UNISIL6_logo.png"
-                        class="mt-4 mb-4 mix-blend-mode">
+
+        <!-- Product list will be dynamically generated here -->
+        <div id="product-list">
+            <!-- Products will be populated dynamically -->
+        </div>
+    </div>
+</section>
+<script>
+    // PHP-generated data containing brands and associated products
+    var brands = <?php echo json_encode($brands); ?>;
+
+    // Function to populate the brand list
+    function populateBrandList() {
+        var brandList = document.getElementById("brand-list");
+        for (var brandId in brands) {
+            var brand = brands[brandId];
+            var li = document.createElement("li");
+            li.classList.add("btn", "btth");
+            var a = document.createElement("a");
+            a.href = "javascript:void(0);";
+            a.innerText = brand.name;
+            // Add click event listener to show products for the selected brand
+            a.addEventListener("click", (function (id) {
+                return function () {
+                    showProducts(id);
+                };
+            })(brandId));
+            li.appendChild(a);
+            brandList.appendChild(li);
+        }
+    }
+
+    // Function to show products for the selected brand
+    function showProducts(brandId) {
+        var products = brands[brandId].products;
+        var productListDiv = document.getElementById("product-list");
+        productListDiv.innerHTML = ""; // Clear previous products
+        // Create a new row for each product
+        products.forEach(function (product) {
+            var row = document.createElement("div");
+            row.classList.add("row", "align-items-center");
+            // Create columns for product details
+            var col1 = document.createElement("div");
+            col1.classList.add("col-md-3");
+            var img = document.createElement("img");
+            img.setAttribute("src", product.logo);
+            img.classList.add("mt-4", "mb-4", "mix-blend-mode");
+            col1.appendChild(img);
+            row.appendChild(col1);
+            var col2 = document.createElement("div");
+            col2.classList.add("col-md-9");
+            var widget = document.createElement("div");
+            widget.classList.add("widget", "widget_categories", "style-1");
+            var ul = document.createElement("ul");
+            var li = document.createElement("li");
+            li.classList.add("cat-item");
+            var a = document.createElement("a");
+            a.setAttribute("href", product.url);
+            a.innerText = product.name;
+            li.appendChild(a);
+            ul.appendChild(li);
+            widget.appendChild(ul);
+            col2.appendChild(widget);
+            row.appendChild(col2);
+            productListDiv.appendChild(row);
+        });
+    }
+
+    // Call the function to populate the brand list on page load
+    window.onload = function () {
+        populateBrandList();
+    };
+</script>
 
 
-                </div>
-            </div> -->
 
-            <div class="row align-items-center">
-                <div class="col-md-3">
-                    <img style="display: block; margin: auto; " src="./images/UNISIL6_logo.png"
-                    class="mt-4 mb-4 mix-blend-mode">
-                </div>
-
-                <div class="col-md-9">
-                    <div class="row gx-xl-4 g-3">
-                        <div class="col-md-3">
-                            <div class="widget widget_categories style-1">
-                                <ul>
-                                    <li class="cat-item"><a href="javascript:void(0);">Precipitated silica</a> </li>
-
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="widget widget_categories style-1">
-                                <ul>
-                                    <li class="cat-item"><a href="javascript:void(0);">Calcium Sulphate</a> </li>
-
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="widget widget_categories style-1">
-                                <ul>
-                                    <li class="cat-item"><a href="javascript:void(0);">Hydrated Calcium Silicate</a>
-                                    </li>
-
-
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="widget widget_categories style-1">
-                                <ul>
-                                    <li class="cat-item"><a href="javascript:void(0);">Sodium Aluminium Silicate</a>
-                                    </li>
-
-
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="widget widget_categories style-1">
-                                <ul>
-                                    <li class="cat-item"><a href="javascript:void(0);">Sodium Aluminium Silicate</a>
-                                    </li>
-
-
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="widget widget_categories style-1">
-                                <ul>
-                                    <li class="cat-item"><a href="javascript:void(0);">Sodium Aluminium Silicate</a>
-                                    </li>
-
-
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="widget widget_categories style-1">
-                                <ul>
-                                    <li class="cat-item"><a href="javascript:void(0);">Sodium Aluminium Silicate</a>
-                                    </li>
-
-
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="widget widget_categories style-1">
-                                <ul>
-                                    <li class="cat-item"><a href="javascript:void(0);">Sodium Aluminium Silicate</a>
-                                    </li>
-
-
-                                </ul>
-                            </div>
-                        </div>
-
-                        <style>
+<style>
                             /* Add your custom CSS here */
                             .product-list {
                                 list-style: none;
@@ -984,18 +964,6 @@ foreach ($related_product_ids as $product_id) {
                                 /* Make the button full width */
                             }
                         </style>
-                    </div>
-                </div>
-            </div>
-
-        
-
-
-
-        </div>
-    </div>
-</div>
-</section>
 <!--Recommend Section End-->
 
 <style>
