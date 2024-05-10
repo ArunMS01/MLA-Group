@@ -292,6 +292,11 @@
             </div>
         </div>
         <div class="row">
+            <!-- Add a div for the custom loading animation -->
+<div id="loadingOverlay" class="loading-overlay">
+    <div class="loading-spinner"></div>
+</div>
+
             <div class="col-md-8">
                 <div class="contact-page-form" method="post">
                     <h2>Get in Touch</h2>
@@ -299,13 +304,13 @@
     <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="single-input-field">
-                <input type="text" placeholder="Your Name" name="name" id="name"  />
+                <input type="text" placeholder="Your Name" name="name" id="name" required />
                 <div class="invalid-feedback" id="nameError">Please enter your name.</div>
             </div>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="single-input-field">
-                <input type="email" placeholder="E-mail" name="email" id="email"  />
+                <input type="email" placeholder="E-mail" name="email" id="email" required />
                 <div class="invalid-feedback" id="emailError">Please enter a valid email address.</div>
             </div>
         </div>
@@ -317,7 +322,7 @@
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="single-input-field">
-                <input type="text" placeholder="Subject" name="subject" id="subject" />
+                <input type="text" placeholder="Company Name" name="subject" id="subject" />
                 <div class="invalid-feedback" id="subjectError">Please enter a subject.</div>
             </div>
         </div>
@@ -343,13 +348,63 @@
         </div>
     </div>
 </section>
-<body>
-    <!-- Your HTML content -->
-    
-    <!-- SweetAlert script -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</body>
+<style>
+    /* CSS for the loading overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 9999;
+    display: none; /* Initially hidden */
+}
 
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 3px solid #3498db;
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 1s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
+}
+
+/* Spin animation */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+</style>
+<style>
+        /* CSS for the success message */
+        .success-message {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+        }
+    </style>
 <script>
     // Function to validate email address
 function isValidEmail(email) {
@@ -410,6 +465,15 @@ function submitForm(event) {
         return;
     }
 
+    // Disable the submit button
+    var submitButton = document.querySelector("input[type='submit']");
+    submitButton.value = "Submitting...";
+    submitButton.disabled = true;
+
+    // Show the loading overlay
+    var loadingOverlay = document.getElementById("loadingOverlay");
+    loadingOverlay.style.display = "block";
+
     var formData = new FormData(document.getElementById("contactForm"));
 
     var xhr = new XMLHttpRequest();
@@ -420,40 +484,44 @@ function submitForm(event) {
                 var response = JSON.parse(xhr.responseText);
                 if (response.success) {
                     // Form submitted successfully
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Success',
-                        text: 'Form submitted successfully.'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            document.getElementById("contactForm").reset();
-                        }
-                    });
+                    showSuccessMessage(); // Call function to show success message
+                    document.getElementById("contactForm").reset();
                 } else {
                     // Error submitting form
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: 'Error submitting the form.'
-                    });
+                    alert("Error submitting the form.");
                 }
             } else {
                 // Error in AJAX request
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Error',
-                    text: 'Error in AJAX request.'
-                });
+                alert("Error in AJAX request.");
             }
+
+            // Re-enable the submit button
+            submitButton.value = "Send Now";
+            submitButton.disabled = false;
+
+            // Hide the loading overlay
+            loadingOverlay.style.display = "none";
         }
     };
     xhr.send(formData);
 }
 
+// Function to show success message
+function showSuccessMessage() {
+    var successMessage = document.createElement("div");
+    successMessage.classList.add("success-message");
+    successMessage.textContent = "Form submitted successfully!";
+    document.body.appendChild(successMessage);
+
+    // Automatically remove the success message after 5 seconds
+    setTimeout(function() {
+        successMessage.parentNode.removeChild(successMessage);
+    }, 5000);
+}
+
+
 // Add event listener for form submission
 document.getElementById("contactForm").addEventListener("submit", submitForm);
-
-
 
 </script>
 <?php include('footer.php') ?>

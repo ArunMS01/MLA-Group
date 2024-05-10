@@ -389,52 +389,52 @@ echo '</ul>';
                             <p class="mb-negative quotes">Request Quote/Information <i
                                     class="fa fa-file-text" aria-hidden="true"></i> </p>
                             <div class="div contact-area1new cart-detail">
-                                <form class="dz-form dzForm" method="POST"
-                                    action="https://mooncart.dexignzone.com/xhtml/script/contact_smtp.php">
-                                    <input type="hidden" class="form-control" name="dzToDo" value="Contact">
-                                    <input type="hidden" class="form-control" name="reCaptchaEnable"
-                                        value="0">
-                                    <div class="dzFormMsg" bis_skin_checked="1"></div>
-                                    <label class="form-label">Your Name</label>
-                                    <div class="input-group" bis_skin_checked="1">
-                                        <input required="" type="text" class="form-control" name="dzName">
-                                    </div>
-                                    <label class="form-label">Email Address</label>
-                                    <div class="input-group" bis_skin_checked="1">
-                                        <input required="" type="text" class="form-control" name="dzEmail">
-                                    </div>
-                                    <label class="form-label">Phone Number</label>
+                            <form class="dz-form dzForm">
+    <input type="hidden" class="form-control" name="dzToDo" value="Contact">
+    <input type="hidden" class="form-control" name="reCaptchaEnable" value="0">
+    <div class="dzFormMsg"></div>
+    
+    <label class="form-label">Your Name</label>
+    <div class="input-group">
+        <input required type="text" class="form-control" name="dzName">
+        <div class="error-msg" id="name-error"></div>
+    </div>
 
+    <label class="form-label">Email Address</label>
+    <div class="input-group">
+        <input required type="email" class="form-control" name="dzEmail">
+        <div class="error-msg" id="email-error"></div>
+    </div>
 
-                                    <div class="input-group" style="margin-right: 5px;"
-                                        bis_skin_checked="1">
-                                        <div class="input-group-prepend">
-                                            <select class="form-select inputuiriir">
-                                                <option value="+1">+91 (IND)</option>
-                                                <option value="+1">+1 (USA)</option>
-                                                <option value="+44">+44 (UK)</option>
-                                                <!-- Add more options for other countries as needed -->
-                                            </select>
-                                        </div>
-                                        <input style="margin-left: 5px;" required="" type="text"
-                                            class="form-control" name="dzPhoneNumber">
-                                    </div>
+    <label class="form-label">Phone Number</label>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <select class="form-select inputuiriir">
+                <option value="+91">+91 (IND)</option>
+                <option value="+1">+1 (USA)</option>
+                <option value="+44">+44 (UK)</option>
+                <!-- Add more options for other countries as needed -->
+            </select>
+        </div>
+        <input required type="text" class="form-control" name="dzPhoneNumber">
+        <div class="error-msg" id="phone-error"></div>
+    </div>
 
-                                    <label class="form-label">Company Name</label>
-                                    <div class="input-group" bis_skin_checked="1">
-                                        <input required="" type="text" class="form-control"
-                                            name="dzPhoneNumber">
-                                    </div>
-                                    <label class="form-label">Message</label>
-                                    <div class="input-group m-b30" bis_skin_checked="1">
-                                        <textarea name="dzMessage" rows="4" required=""
-                                            class="form-control m-b10"></textarea>
-                                    </div>
-                                    <div bis_skin_checked="1">
-                                        <button name="submit" type="submit" value="submit"
-                                            class="btn w-100 btn-secondary btnhover">SUBMIT</button>
-                                    </div>
-                                </form>
+    <label class="form-label">Company Name</label>
+    <div class="input-group">
+        <input required type="text" class="form-control" name="dzCompanyName">
+        <div class="error-msg" id="company-error"></div>
+    </div>
+
+    <label class="form-label">Message</label>
+    <div class="input-group m-b30">
+        <textarea name="dzMessage" rows="4" required class="form-control m-b10"></textarea>
+        <div class="error-msg" id="message-error"></div>
+    </div>
+
+    <button name="submit" type="submit" value="submit" class="btn w-100 btn-secondary btnhover">SUBMIT</button>
+</form>
+
                             </div>
                         </div>
                     </div>
@@ -1108,6 +1108,93 @@ border-top: 1px solid #FE8F34;
 
 @media only screen and (max-width:768px) {}
 </style>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Function to validate form fields
+        function validateForm() {
+            var isValid = true;
 
+            // Reset error messages
+            document.querySelectorAll('.error-msg').forEach(function(errorMsg) {
+                errorMsg.textContent = '';
+            });
+
+            // Validate Name
+            var nameInput = document.querySelector("input[name='dzName']");
+            if (nameInput.value.trim() === '') {
+                document.getElementById('name-error').textContent = 'Name is required.';
+                isValid = false;
+            }
+
+            // Validate Email
+            var emailInput = document.querySelector("input[name='dzEmail']");
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailInput.value.trim())) {
+                document.getElementById('email-error').textContent = 'Invalid email format.';
+                isValid = false;
+            }
+
+            // Validate Phone Number
+            var phoneInput = document.querySelector("input[name='dzPhoneNumber']");
+            var phonePattern = /^\+?\d{10,}$/;
+            if (!phonePattern.test(phoneInput.value.trim())) {
+                document.getElementById('phone-error').textContent = 'Invalid phone number format.';
+                isValid = false;
+            }
+
+            // Validate Company Name
+            var companyInput = document.querySelector("input[name='dzCompanyName']");
+            if (companyInput.value.trim() === '') {
+                document.getElementById('company-error').textContent = 'Company name is required.';
+                isValid = false;
+            }
+
+            // Validate Message
+            var messageInput = document.querySelector("textarea[name='dzMessage']");
+            if (messageInput.value.trim() === '') {
+                document.getElementById('message-error').textContent = 'Message is required.';
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        // Function to handle form submission
+        function submitForm(event) {
+            event.preventDefault();
+
+            if (!validateForm()) {
+                return;
+            }
+
+            var formData = new FormData(document.querySelector(".dzForm"));
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "submit_form.php", true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        if (response.success) {
+                            // Form submitted successfully
+                            alert("Form submitted successfully.");
+                            document.querySelector(".dzForm").reset();
+                        } else {
+                            // Error submitting form
+                            alert("Error submitting the form.");
+                        }
+                    } else {
+                        // Error in AJAX request
+                        alert("Error in AJAX request.");
+                    }
+                }
+            };
+            xhr.send(formData);
+        }
+
+        // Add event listener for form submission
+        document.querySelector(".dzForm").addEventListener("submit", submitForm);
+    });
+</script>
 
 <?php include('footer.php');?>
