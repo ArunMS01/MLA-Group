@@ -601,8 +601,108 @@ overflow: hidden;
 
 
 
+<style>
+    /* Custom styling */
+    .qa-section,
+    .rd-section {
+      background-color: #f8f9fa; /* Light gray background */
+      padding: 100px 0;
+    }
+    .qa-section h2,
+    .rd-section h2 {
+      margin-bottom: 30px;
+    }
+    .qa-section img,
+    .rd-section img {
+      max-width: 100%;
+      height: auto;
+    }
+    .img-box1234{
+      height: 30rem;
+    }
+    .img-box1234 img{
+      width: 100%;
+      height: 100%;
+      border-radius:2%;
+    }
+  </style>
+</head>
+<body>
+
+<section class="qa-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+      <div class="img-box123">
+        <!-- Image side -->
+        <img src="./images/aboutus/research-and-devlop1ment.jpeg" alt="QA Image"> <!-- Replace with your QA image path -->
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Text side -->
+        <h2>Quality Assurance</h2>
+        <p>Quality of our products is defined as it is perceived by our customers. The major factor behind our success is our market driven approach and our uncompromising attitude with respect to quality. We have well-defined and stringent Quality Assurance Systems wherein all employees of MLA Group are responsible for quality, both of the product and the services.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rd-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <!-- Text side -->
+        <h2>Research & Development</h2>
+        <p>To further exploit our core competencies and compete in the global market, we have laid great emphasis on Research, Improvement and Innovation. Our R & D Division equipped with the most sophisticated labs and testing equipments, carries out intensive research on subjects like precipitation, surface treatment and activation and has developed some of the most advanced technologies world over.</p>
+      </div>
+      <div class="col-md-6">
+        <!-- Image side -->
+        <div class="img-box1234">
+        <img src="./images/aboutus/research-and-devlopment.jpeg" alt="R&D Image"> <!-- Replace with your R&D image path -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
+
+
+<style>
+    /* Custom styling */
+    .quotation-section {
+      background-color: #f8f9fa; /* Light gray background */
+      padding: 100px 0;
+    }
+    .quotation-box {
+      border: 4px double #000; /* Double thick border */
+      padding: 20px;
+      text-align: center;
+      font-style: italic;
+    }
+    .quotation-text {
+      font-size: 24px;
+      color: #333; /* Dark text color */
+    }
+    .container234{
+      width: 98%;
+      margin: auto;
+    }
+  </style>
+
+
+<section class="quotation-section">
+  <div class="container234">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Quotation box -->
+        <div class="quotation-box">
+          <p class="quotation-text">"The greatest glory in living lies not in never falling, but in rising every time we fall." - Nelson Mandela</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
