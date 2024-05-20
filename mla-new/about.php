@@ -70,6 +70,59 @@
 </section>
 
 
+<style>
+    /* Night sky background */
+    .night-sky {
+      background-color: #f0f0f0; /* Light gray background */
+      position: relative;
+      overflow: hidden;
+    }
+    .night-sky:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(white 5%, transparent 5%);
+      background-size: 20px 20px;
+      z-index: 1;
+    }
+    /* Content styling */
+    .night-sky .container {
+      position: relative;
+      z-index: 2;
+    }
+    .night-sky img {
+      max-width: 100%;
+      height: auto;
+    }
+    .img-box123{
+  height: 30rem;
+    }
+    .img-box123 img{
+      width: 100%;
+      height: 100%;
+      border-radius: 2%;
+    }
+  </style>
+<section class="night-sky">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <!-- Image side -->
+        <div class="img-box123">
+        <img src="./images/aboutus/product range.jpeg" alt="Image">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Text side -->
+        <h2>Our Product Range</h2>
+        <p>Our product range consists of various precipitated chemicals and functional fillers, both synthetic and naturally occurring processed minerals including Precipitated Silica, Hydrated Calcium Silicate, Aluminium Silicate, Zinc Stearate , Calcium Stearate , Calcium Sulphate, Zinc-oxide active/transparent, Levigated / Surface treated China Clays, Micronized Calcite, Dolomite, Talc etc. which find a variety of applications in industries such as rubber / other polymers, paints & coatings, insecticides / pesticides, pharmaceuticals, cosmetics, feedstuff and numerous other industries.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -323,204 +376,7 @@ overflow: hidden;
      
     </div>
 </section>
-<style>
-    .pt-100 {
-        padding-top: 100px;
-    }
 
-    .pb-70 {
-        padding-bottom: 70px;
-    }
-
-
-    .what-we-do-title-inner {
-        margin-bottom: 70px
-    }
-
-    .what-we-do-subtitle {
-        color: #f55b14;
-        font-size: 14px;
-        font-weight: 600
-    }
-
-    .what-we-do-title h1 {
-        font-size: 28px;
-        margin-bottom: 10px;
-        line-height: 1.5
-    }
-
-    .what-we-do-short-description:before {
-        position: absolute;
-        content: "";
-        background: #909090;
-        width: 1px;
-        height: 100%;
-        left: -30px;
-        top: 0px
-    }
-
-    .what-we-do-short-description p {
-        margin-bottom: 0
-    }
-
-    .what-we-do-inner-icon {
-        color: #f55b14;
-        font-size: 50px;
-        margin-bottom: 30px
-    }
-
-    .what-we-do-button {
-        color: #f55b14;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 14px
-    }
-
-    .what-we-do-button i {
-        margin-left: 10px;
-        font-size: 24px;
-        font-weight: 600;
-        position: relative;
-        top: 3px
-    }
-
-    .what-we-do-single-inner {
-        border: 1px solid #ddd;
-        padding: 30px;
-        margin-bottom: 30px;
-        position: relative;
-        z-index: 2;
-        background: #f55b14;
-        transition: all .4s ease
-    }
-
-    .what-we-do-single-inner:before {
-        position: absolute;
-        z-index: -1;
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: #fff;
-        top: 0;
-        left: 0;
-        transition: all .4s ease
-    }
-
-    .what-we-do-single-inner:hover:before {
-        width: 0%
-    }
-
-    .what-we-do-single-inner:hover {
-        border-color: #f55b14;
-        color: #fff
-    }
-
-    .what-we-do-single-inner:hover .what-we-do-inner-icon,
-    .what-we-do-single-inner:hover .what-we-do-inner-desc h2 span,
-    .what-we-do-single-inner:hover .what-we-do-inner-desc a.what-we-do-button {
-        color: #fff
-    }
-
-    .what-we-do-single-inner:hover .what-we-do-inner-desc h2 span:before {
-        background: #0f1934
-    }
-
-    .what-we-do-single-inner:hover .what-we-do-button {
-        color: #0f1934
-    }
-
-    .what-we-do-inner-desc h2 a {
-        font-size: 20px;
-        text-transform: capitalize
-    }
-
-    .what-we-do-inner-desc h2 span {
-        color: #f55b14;
-        position: relative
-    }
-
-    .what-we-do-inner-desc h2 span:before {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 1px;
-        background: #f55b14;
-        bottom: -2px;
-        left: 0
-    }
-</style>
-<section class="what-we-do-crousel-sec  pb-70">
-    <div class="container">
-        <div class="row what-we-do-title-inner">
-            <div class="col-md-6">
-                <div class="what-we-do-title"><span class="what-we-do-subtitle">What We Do In here</span>
-                    <h1>We provide world best industries &amp; factorial Business Solution</h1>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="what-we-do-short-description">
-                    <p>Nibh wisi utamur no vim, ex usu posidonium temporibus. Cu cum fierent vivendum, stet accusam ad qui, mei dicta fuisset salutandi ex. Cetero mandamus eos te. Ad his eripuit ullamcorper, ei fugit mentitum definitiones ius, dolorem dissentiunt sit id. Doctus diceret pro ad, labores adipisci cum ne.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6">
-                <div class="what-we-do-single-inner">
-                    <div class="what-we-do-inner-icon"><i class="icofont-architecture-alt"></i></div>
-                    <div class="what-we-do-inner-desc">
-                        <h2><a href="/service-details"><span>Mechanical</span> Industry</a></h2>
-                        <p>Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.</p><a class="what-we-do-button" href="/service-details">Learn More <i class="icofont-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="what-we-do-single-inner">
-                    <div class="what-we-do-inner-icon"><i class="icofont-laboratory"></i></div>
-                    <div class="what-we-do-inner-desc">
-                        <h2><a href="/service-details"><span>Chemical</span> Research</a></h2>
-                        <p>Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.</p><a class="what-we-do-button" href="/service-details">Learn More <i class="icofont-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="what-we-do-single-inner">
-                    <div class="what-we-do-inner-icon"><i class="icofont-trolley"></i></div>
-                    <div class="what-we-do-inner-desc">
-                        <h2><a href="/service-details"><span>Agricultural</span> Process</a></h2>
-                        <p>Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.</p><a class="what-we-do-button" href="/service-details">Learn More <i class="icofont-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="what-we-do-single-inner">
-                    <div class="what-we-do-inner-icon"><i class="icofont-engineer"></i></div>
-                    <div class="what-we-do-inner-desc">
-                        <h2><a href="/service-details"><span>Civil</span> Engineering</a></h2>
-                        <p>Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.</p><a class="what-we-do-button" href="/service-details">Learn More <i class="icofont-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="what-we-do-single-inner">
-                    <div class="what-we-do-inner-icon"><i class="icofont-energy-oil"></i></div>
-                    <div class="what-we-do-inner-desc">
-                        <h2><a href="/service-details"><span>Oil &amp;</span> Gas Power</a></h2>
-                        <p>Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.</p><a class="what-we-do-button" href="/service-details">Learn More <i class="icofont-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="what-we-do-single-inner">
-                    <div class="what-we-do-inner-icon"><i class="icofont-light-bulb"></i></div>
-                    <div class="what-we-do-inner-desc">
-                        <h2><a href="/service-details"><span>Power &amp;</span> Energy</a></h2>
-                        <p>Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.</p><a class="what-we-do-button" href="/service-details">Learn More <i class="icofont-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <style>
     /* Achievement Section 
@@ -695,6 +551,60 @@ overflow: hidden;
             </div>
         </div>
 </section>
+
+
+
+
+<style>
+    /* Custom styling */
+    .organization-section {
+      background-image: url('./images/aboutus/map-text-background.png'); /* Replace with your background image path */
+      background-size: cover;
+      background-position: center;
+      padding: 100px 0;
+    }
+    .organization-section .container {
+      position: relative;
+      z-index: 1;
+    }
+    .organization-section h2,
+    .organization-section p {
+      color: black;
+    }
+    .organization-section img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+
+
+
+
+<section class="organization-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <!-- Image side -->
+        <img src="./images/aboutus/map-mla.png" alt="Image"> <!-- Replace with your image path -->
+      </div>
+      <div class="col-md-6">
+        <!-- Text side -->
+        <h2>Our Footprint</h2>
+        <p>We have an extensive marketing network with branch offices at Delhi and Calcutta and marketing associates in almost all industrial cities in India. Our sales and technical services personnel visit customers regularly to provide before and after sales services. The exports have been increasing sharply, mainly to neighbouring countries including Sri Lanka, Nepal, Bangladesh, and also to Middle East, South East Asia and Europe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
 
 
 <style>
