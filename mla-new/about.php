@@ -4,7 +4,7 @@
     /* Hero section styles */
     .hero {
         position: relative;
-        background-image: url('http://localhost/MLA-Group/mla-new/images/background/bg7.jpg');
+        background-image: url('./images/aboutus/banner-about-mla.png');
         /* Replace 'your-image.jpg' with your image URL */
         background-size: cover;
         background-position: center;
@@ -12,7 +12,7 @@
         display: flex;
 
         align-items: center;
-        color: white;
+        
 
     }
 
@@ -23,9 +23,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgb(0, 0, 0);
-        background: linear-gradient(20deg, rgba(0, 0, 0, 1) 0%, rgba(255, 146, 37, 0.5327380952380952) 35%, rgba(255, 255, 255, 0) 100%);
-        /* Adjust the opacity as needed */
+       
     }
 
     /* Heading style */
@@ -33,7 +31,7 @@
         font-size: 3rem;
         /* Adjust the font size as needed */
         margin-bottom: 20px;
-        color: white;
+        
     }
 
     /* Paragraph style */
@@ -67,7 +65,7 @@
     <!-- Content -->
     <div class="content" style="z-index: 1;">
         <h1>About Us</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>From modest beginnings in 1975 when our first unit for the manufacturing of Aluminium Silicate was set up, MLA Group has grown from strength to strength over the years. We have been expanding and diversifying rapidly and today the group comprises four manufacturing units for various chemicals. We are the largest manufacturers of Aluminium/Calcium Silicates in India having complete vertical integration and unique product properties.</p>
     </div>
 </section>
 
@@ -1221,11 +1219,13 @@ overflow: hidden;
 }
 
 .main-timeline .content {
-  color: #909090;
-  width: 50%;
-  padding: 20px;
-  display: inline-block;
-  float: right;
+
+ margin-left: 1000px;
+    color: #909090;
+    width: 50%;
+    padding: 21px;
+    display: inline-block;
+    float: inline-end;
 }
 
 .main-timeline .title {
@@ -1256,27 +1256,12 @@ overflow: hidden;
   border: 15px solid green;
   border-left: none;
 }
-
-.main-timeline .timeline:nth-child(even) .content {
-  float: left;
-}
-
-.main-timeline .timeline:nth-child(even) .timeline-year {
-    left: auto;
-    right: 10%;
-}
-
-.main-timeline .timeline:nth-child(even) .timeline-icon {
-  left: auto;
-  right: 32%;
-}
-
 .main-timeline .timeline:nth-child(5n+1)::before {
-  border-color: #46b2bc;
+  border-color: #f68b3a;
 }
 
 .main-timeline .timeline:nth-child(5n+1)::after {
-  border-color: #65c7d0;
+  border-color: #343434;
 }
 
 .main-timeline .timeline:nth-child(5n+1) .timeline-icon {
@@ -1292,11 +1277,11 @@ overflow: hidden;
 }
 
 .main-timeline .timeline:nth-child(5n+2)::before {
-  border-color: #ea3c14;
+  border-color: #f68b3a;
 }
 
 .main-timeline .timeline:nth-child(5n+2)::after {
-  border-color: #EF5720;
+  border-color: #343434;
 }
 
 .main-timeline .timeline:nth-child(5n+2) .timeline-icon {
@@ -1312,11 +1297,12 @@ overflow: hidden;
 }
 
 .main-timeline .timeline:nth-child(5n+3)::before {
-  border-color: #8CC63E;
+   border-color: #f68b3a;
 }
 
 .main-timeline .timeline:nth-child(5n+3)::after {
-  border-color: #6CAF29;
+
+  border-color: #343434;
 }
 
 .main-timeline .timeline:nth-child(5n+3) .timeline-icon
@@ -1333,11 +1319,11 @@ overflow: hidden;
 }
 
 .main-timeline .timeline:nth-child(5n+4)::before {
-  border-color: #F99324;
+  border-color: #f68b3a;
 }
 
 .main-timeline .timeline:nth-child(5n+4)::after {
-  border-color: #FBB03B;
+  border-color: #343434;
 }
 
 .main-timeline .timeline:nth-child(5n+4) .timeline-icon {
@@ -1353,11 +1339,11 @@ overflow: hidden;
 }
 
 .main-timeline .timeline:nth-child(5n+5)::before {
-  border-color: #0071BD;
+  border-color: #f68b3a;
 }
 
 .main-timeline .timeline:nth-child(5n+5)::after {
-  border-color: #0050A3;
+  border-color: #343434;
 }
 
 .main-timeline .timeline:nth-child(5n+5) .timeline-icon {
@@ -1371,6 +1357,7 @@ overflow: hidden;
 .main-timeline .timeline:nth-child(5n+5) .title {
   color: #0071BD;
 }
+
 
 @media screen and (max-width:1200px){
     .main-timeline .timeline:after{ border-radius: 88px 0 0 88px; }
@@ -1420,7 +1407,8 @@ overflow: hidden;
     }
     .main-timeline .content{
         width: 68%;
-        padding: 10px;
+        
+        margin-left: 10px;
     }
     .main-timeline .title{ font-size: 18px; }
     .main-timeline .timeline:nth-child(even) .timeline-icon{
@@ -1453,65 +1441,66 @@ overflow: hidden;
               <i class="fa fa-rocket" aria-hidden="true"></i>
             </div>
             <div class="content">
-              <h3 class="title">Web Development</h3>
+             
               <p class="description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+              First unit established for manufacturing of  White china clay by CMD, Mr ML Agarwal 
+
               </p>
             </div>
           </a>
         </div>
         <div class="timeline">
           <a href="#" class="timeline-content">
-            <span class="timeline-year">2017</span>
+            <span class="timeline-year">1978</span>
             <div class="timeline-icon">
               <i class="fa fa-users" aria-hidden="true"></i>
             </div>
             <div class="content">
-              <h3 class="title">JavaScript</h3>
+     
               <p class="description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+              2nd unit established for manufacturing of White clay and Aluminium Silicate 
               </p>
             </div>
           </a>
         </div>
         <div class="timeline">
           <a href="#" class="timeline-content">
-            <span class="timeline-year">2017</span>
+            <span class="timeline-year">1985</span>
             <div class="timeline-icon">
               <i class="fa fa-cog" aria-hidden="true"></i>
             </div>
             <div class="content">
-              <h3 class="title">Mongo DB</h3>
+             
               <p class="description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+              3rd unit started for manufacturing of Precipitated Silica
               </p>
             </div>
           </a>
         </div>
         <div class="timeline">
           <a href="#" class="timeline-content">
-            <span class="timeline-year">2017</span>
+            <span class="timeline-year">1992</span>
             <div class="timeline-icon">
               <i class="fa fa-heart" aria-hidden="true"></i>
             </div>
             <div class="content">
-              <h3 class="title">BlackPearl</h3>
+            
               <p class="description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+              4th unit started for manufacturing of Zinc Oxide and Metallic stearates 
               </p>
             </div>
           </a>
         </div>
         <div class="timeline">
           <a href="#" class="timeline-content">
-            <span class="timeline-year">2017</span>
+            <span class="timeline-year">1997</span>
             <div class="timeline-icon">
               <i class="fa fa-globe" aria-hidden="true"></i>
             </div>
             <div class="content">
-              <h3 class="title">Angular</h3>
+             
               <p class="description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+              In house fabrication unit established for rapid expansion
               </p>
             </div>
           </a>
@@ -1523,24 +1512,165 @@ overflow: hidden;
               <i class="fa fa-apple" aria-hidden="true"></i>
             </div>
             <div class="content">
-              <h3 class="title">Laravel</h3>
+              <h3 class="title">1998</h3>
               <p class="description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-              </p>
+              Mr Sumit Agarwal, MTech- IIT Kanpur joins business full time, Zinc oxide Active and PVC stabilizers manufacturing started in unit 4              </p>
             </div>
           </a>
         </div>
         <div class="timeline">
           <a href="#" class="timeline-content">
-            <span class="timeline-year">2017</span>
+            <span class="timeline-year">2002</span>
             <div class="timeline-icon">
               <i class="fa fa-edit" aria-hidden="true"></i>
             </div>
             <div class="content">
-              <h3 class="title">Creapure</h3>
+            
               <p class="description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-              </p>
+              All units are ISO 9001 certified               </p>
+            </div>
+          </a>
+        </div>
+        <div class="timeline">
+          <a href="#" class="timeline-content">
+            <span class="timeline-year">2004</span>
+            <div class="timeline-icon">
+              <i class="fa fa-edit" aria-hidden="true"></i>
+            </div>
+            <div class="content">
+            
+              <p class="description">
+              All units brought under the Group name of MLA Group of Industries                </p>
+            </div>
+          </a>
+        </div>
+        <div class="timeline">
+          <a href="#" class="timeline-content">
+            <span class="timeline-year">2006</span>
+            <div class="timeline-icon">
+              <i class="fa fa-edit" aria-hidden="true"></i>
+            </div>
+            <div class="content">
+            
+              <p class="description">
+              ADC foaming agents unit established               </p>
+            </div>
+          </a>
+        </div>
+        <div class="timeline">
+          <a href="#" class="timeline-content">
+            <span class="timeline-year">2008</span>
+            <div class="timeline-icon">
+              <i class="fa fa-edit" aria-hidden="true"></i>
+            </div>
+            <div class="content">
+            
+              <p class="description">
+              Unilever endorses and patronizes UNISIL NK-7, world's highest absorption silica              </p>
+            </div>
+          </a>
+        </div>
+        <div class="timeline">
+          <a href="#" class="timeline-content">
+            <span class="timeline-year">2009</span>
+            <div class="timeline-icon">
+              <i class="fa fa-edit" aria-hidden="true"></i>
+            </div>
+            <div class="content">
+            
+              <p class="description">
+              Manufacturing of Zinc Oxide American process and Arc furnace process started            </p>
+            </div>
+          </a>
+        </div>
+        <div class="timeline">
+          <a href="#" class="timeline-content">
+            <span class="timeline-year">2009</span>
+            <div class="timeline-icon">
+              <i class="fa fa-edit" aria-hidden="true"></i>
+            </div>
+            <div class="content">
+            
+              <p class="description">
+              Manufacturing of Zinc Oxide American process and Arc furnace process started            </p>
+            </div>
+          </a>
+        </div>
+        <div class="timeline">
+          <a href="#" class="timeline-content">
+            <span class="timeline-year">2014</span>
+            <div class="timeline-icon">
+              <i class="fa fa-edit" aria-hidden="true"></i>
+            </div>
+            <div class="content">
+            
+              <p class="description">
+              New unit for manufacturing of Active Zinc Oxide and Metallic stearates with 5 times capacity started        </p>
+            </div>
+          </a>
+        </div>
+        <div class="timeline">
+          <a href="#" class="timeline-content">
+            <span class="timeline-year">2016</span>
+            <div class="timeline-icon">
+              <i class="fa fa-edit" aria-hidden="true"></i>
+            </div>
+            <div class="content">
+            
+              <p class="description">
+              Wax and ester unit established        </p>
+            </div>
+          </a>
+        </div>
+        <div class="timeline">
+          <a href="#" class="timeline-content">
+            <span class="timeline-year">2018</span>
+            <div class="timeline-icon">
+              <i class="fa fa-edit" aria-hidden="true"></i>
+            </div>
+            <div class="content">
+            
+              <p class="description">
+              Pharma excipients unit established     </p>
+            </div>
+          </a>
+        </div>
+        <div class="timeline">
+          <a href="#" class="timeline-content">
+            <span class="timeline-year">2020</span>
+            <div class="timeline-icon">
+              <i class="fa fa-edit" aria-hidden="true"></i>
+            </div>
+            <div class="content">
+            
+              <p class="description">
+              Mr Abhishek Kanodia, B Tech, IIT Kanpur ( ex Unilever) joins the family business as Factory Director    </p>
+            </div>
+          </a>
+        </div>
+        <div class="timeline">
+          <a href="#" class="timeline-content">
+            <span class="timeline-year">2022</span>
+            <div class="timeline-icon">
+              <i class="fa fa-edit" aria-hidden="true"></i>
+            </div>
+            <div class="content">
+            
+              <p class="description">
+              All non mineral units brought under MLA Industries Pvt Ltd     </p>
+            </div>
+          </a>
+        </div>
+        <div class="timeline">
+          <a href="#" class="timeline-content">
+            <span class="timeline-year">2023</span>
+            <div class="timeline-icon">
+              <i class="fa fa-edit" aria-hidden="true"></i>
+            </div>
+            <div class="content">
+            
+              <p class="description">
+              Company moves to Product Owner based model for all its eight product verticals     </p>
             </div>
           </a>
         </div>
