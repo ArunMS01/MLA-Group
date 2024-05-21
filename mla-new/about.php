@@ -70,59 +70,256 @@
 </section>
 
 
+
+
+
+
+
+
+
 <style>
-    /* Night sky background */
-    .night-sky {
-      background-color: #f0f0f0; /* Light gray background */
-      position: relative;
-      overflow: hidden;
-    }
-    .night-sky:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: radial-gradient(white 5%, transparent 5%);
-      background-size: 20px 20px;
-      z-index: 1;
-    }
-    /* Content styling */
-    .night-sky .container {
-      position: relative;
-      z-index: 2;
-    }
-    .night-sky img {
-      max-width: 100%;
-      height: auto;
-    }
-    .img-box123{
-  height: 30rem;
-    }
-    .img-box123 img{
-      width: 100%;
-      height: 100%;
-      border-radius: 2%;
-    }
-  </style>
-<section class="night-sky">
-  <div class="container py-5">
-    <div class="row align-items-center">
-      <div class="col-md-6">
-        <!-- Image side -->
-        <div class="img-box123">
-        <img src="./images/aboutus/product range.jpeg" alt="Image">
-        </div>
-      </div>
-      <div class="col-md-6">
-        <!-- Text side -->
-        <h2>Our Product Range</h2>
-        <p>Our product range consists of various precipitated chemicals and functional fillers, both synthetic and naturally occurring processed minerals including Precipitated Silica, Hydrated Calcium Silicate, Aluminium Silicate, Zinc Stearate , Calcium Stearate , Calcium Sulphate, Zinc-oxide active/transparent, Levigated / Surface treated China Clays, Micronized Calcite, Dolomite, Talc etc. which find a variety of applications in industries such as rubber / other polymers, paints & coatings, insecticides / pesticides, pharmaceuticals, cosmetics, feedstuff and numerous other industries.</p>
-      </div>
-    </div>
-  </div>
-</section>
+       
+
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+       
+       
+       
+       ul {
+           list-style: none;
+       }
+       
+       .tabs {
+         justify-content: space-around;
+         gap: 10px;
+           width: 80%;
+           height: 100px;
+           margin: auto;
+           margin-top: 50px;
+           display: flex;
+           align-items: center;
+           box-shadow: 10px 10px 19px #ffffff, -10px -10px 19px #ffffff;
+           overflow: hidden;
+           border-radius: 10px;
+           -webkit-border-radius: 10px;
+           -moz-border-radius: 10px;
+           -ms-border-radius: 10px;
+           -o-border-radius: 10px;
+       }
+       
+       .tabs li {
+         border-radius: 10px;
+         font-size: 24px;
+         background-color: #e6e6e6;
+           width: 25%;
+           height: 100%;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           color: #000;
+           
+           transition: .5s;
+           -webkit-transition: .5s;
+           -moz-transition: .5s;
+           -ms-transition: .5s;
+           -o-transition: .5s;
+           cursor: pointer;
+       }
+       
+       .tabs li:hover {
+         background: linear-gradient(145deg, #f58a3a, #f58a3a);
+           box-shadow: 10px 10px 19px #ffffff, -10px -10px 19px #ffffff;
+           color: #ffffff;
+           position: relative;
+           z-index: 1;
+           border-radius: 10px;
+       }
+       
+       .active {
+         background: linear-gradient(145deg, #f68531, #f28c40);
+           box-shadow: 10px 10px 19px #ffffff, -10px -10px 19px #ffffff;
+           color: #ffffff !important;
+           position: relative;
+           z-index: 1;
+           border-radius: 10px;
+       }
+       
+       .contents {
+           width: 80%;
+           margin: auto;
+           margin-top: 50px;
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: space-between;
+           gap: 30px;
+       }
+       
+       .box {
+         gap: 20px;
+           background: linear-gradient(145deg, #e3e3e3, #e3e3e3);
+           box-shadow: 10px 10px 19px #ffffff, -10px -10px 19px #ffffff;
+           border-radius: 10px;
+           -webkit-border-radius: 10px;
+           -moz-border-radius: 10px;
+           -ms-border-radius: 10px;
+           -o-border-radius: 10px;
+           padding: 20px;
+           width: 100%;
+           animation: moving 1s ease;
+           -webkit-animation: moving 1s ease;
+       
+       }
+       
+       .box img {
+           width: 50%;
+           border-radius: 10px;
+           -webkit-border-radius: 10px;
+           -moz-border-radius: 10px;
+           -ms-border-radius: 10px;
+           -o-border-radius: 10px;
+       }
+       
+       .box h3 {
+           color: #000;
+           
+           font-size: 2rem;
+           margin-bottom: 20px;
+       }
+       
+       .box p {
+           color: #000;
+           opacity: .5;
+           
+           font-size: 1rem;
+       }
+       
+       .show {
+       
+      align-items: center;
+           display: flex;
+       }
+       
+       .hide {
+           display: none;
+       }
+       
+       @keyframes moving {
+           from {
+               transform: translateX(-50px);
+               -webkit-transform: translateX(-50px);
+               -moz-transform: translateX(-50px);
+               -ms-transform: translateX(-50px);
+               -o-transform: translateX(-50px);
+               opacity: 0;
+           }
+       
+           to {
+               transform: translateX(0px);
+               -webkit-transform: translateX(0px);
+               -moz-transform: translateX(0px);
+               -ms-transform: translateX(0px);
+               -o-transform: translateX(0px);
+               opacity: 1;
+           }
+       }
+       @media only screen and (max-width: 768px) {
+        .show{
+          flex-wrap: wrap !important;
+        }
+        .tabs li {
+   padding:10px !important;
+   width: 30%;
+   
+  }
+  .tabs{
+width: 100% !important;
+       }
+       .box img {
+    width: 100%;}
+      }
+      
+               </style>
+               <ul class="tabs">
+               <li class="active" data-id="0">Product Range</li>
+              
+               <li data-id="1">Quality Control</li>
+               <li data-id="2">R & D</li>
+           </ul>
+       
+           <div class="contents">
+       
+               <div class="box show" data-content="0">
+                   <img src="https://images.pexels.com/photos/5088009/pexels-photo-5088009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                   <div>
+                       <h3>Our Product Range</h3>
+                       <p>
+                       Our product range consists of various precipitated chemicals and functional fillers, both synthetic and naturally occurring processed minerals including Precipitated Silica, Hydrated Calcium Silicate, Aluminium Silicate, Zinc Stearate , Calcium Stearate , Calcium Sulphate, Zinc-oxide active/transparent, Levigated / Surface treated China Clays, Micronized Calcite, Dolomite, Talc etc. which find a variety of applications in industries such as rubber / other polymers, paints & coatings, insecticides / pesticides, pharmaceuticals, cosmetics, feedstuff and numerous other industries.
+                       </p>
+                   </div>
+               </div>
+       
+             
+       
+               <div class="box hide" data-content="1">
+                   <img src="https://images.pexels.com/photos/3761308/pexels-photo-3761308.jpeg?auto=compress&cs=tinysrgb&w=800" alt="">
+                   <div>
+                       <h3>Quality Control</h3>
+                       <p>
+                       Quality of our products is defined as it is perceived by our customers. The major factor behind our success is our market driven approach and our uncompromising attitude with respect to quality. We have well-defined and stringent Quality Assurance Systems wherein all employees of MLA Group are responsible for quality, both of the product and the services.
+                       </p>
+                   </div>
+               </div>
+       
+               <div class="box hide" data-content="2">
+                   <img src="https://images.pexels.com/photos/5336951/pexels-photo-5336951.jpeg?auto=compress&cs=tinysrgb&w=800" alt="">
+                   <div>
+                       <h3>Research And devlopment</h3>
+                       <p>
+                       To further exploit our core competencies and compete in the global market, we have laid great emphasis on Research, Improvement and Innovation. Our R & D Division equipped with the most sophisticated labs and testing equipments, carries out intensive research on subjects like precipitation, surface treatment and activation and has developed some of the most advanced technologies world over.
+                       </p>
+                   </div>
+               </div>
+       
+           </div>
+           <script>
+       
+       
+       'use strict';
+       const tabs = document.querySelectorAll('[data-id]');
+       const contents = document.querySelectorAll('[data-content]');
+       let id = 0;
+       
+       tabs.forEach(function (tab) {
+           tab.addEventListener('click', function () {
+               tabs[id].classList.remove('active');
+               tab.classList.add('active');
+               id = tab.getAttribute('data-id');
+               contents.forEach(function (box) {
+                   box.classList.add('hide');
+                   if (box.getAttribute('data-content') == id){
+                       box.classList.remove('hide');
+                       box.classList.add('show');
+                   }
+               });
+           });
+       });
+           </script>
+               </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -372,10 +569,139 @@ overflow: hidden;
                     bottom: -20px;
                 }
             }
+            .pb-100{
+              padding-bottom: 100px;
+            }
         </style>
      
     </div>
 </section>
+
+
+
+
+<section>
+<div class="section pt-100 pb-100">
+            <div class="container">
+                <div class="row rowgap">
+                    <div class="col-md-4">
+                        <div class="border-box">
+                            <div class="v423_8" style="z-index: 1; outline-offset: 20px">
+                                <div class="icon-image-box">
+                                    <img src="./images/values-mla.png" alt="" srcset="" />
+                                </div>
+                            </div>
+                            <div class="v423_8" style="
+                          outline: 2px solid #f78631;
+                          outline-offset: 20px;
+                          z-index: -1;
+                        "></div>
+                            <h2 class="title">values</h2>
+                            <div class="content">
+                                orem ipsum dolor sit amet consectetur adipisicing elit.
+                                Vel officia voluptate doloremque amet enim repudiandae
+                                recusandae, corrupti, magnam facere voluptates, eius
+                                dolores quas ipsum repellat iusto corporis possimus
+                                totam odit?
+                            </div>
+                            <div class="v423_5"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="border-box">
+                            <div class="v423_8" style="z-index: 1; outline-offset: 20px">
+                                <div class="icon-image-box">
+                                    <img src="./images/vision-mla.png" alt="" srcset="" />
+                                </div>
+                            </div>
+                            <div class="v423_8" style="
+                          outline: 2px solid #f78631;
+                          outline-offset: 20px;
+                          z-index: -1;
+                        "></div>
+                            <h2 class="title">values</h2>
+                            <div class="content">
+                                orem ipsum dolor sit amet consectetur adipisicing elit.
+                                Vel officia voluptate doloremque amet enim repudiandae
+                                recusandae, corrupti, magnam facere voluptates, eius
+                                dolores quas ipsum repellat iusto corporis possimus
+                                totam odit?
+                            </div>
+                            <div class="v423_5"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="border-box">
+                            <div class="v423_8" style="z-index: 1; outline-offset: 20px">
+                                <div class="icon-image-box">
+                                    <img src="./images/mission-mla.png" alt="" srcset="" />
+                                </div>
+                            </div>
+                            <div class="v423_8" style="
+                          outline: 2px solid #f78631;
+                          outline-offset: 20px;
+                          z-index: -1;
+                        "></div>
+                            <h2 class="title">values</h2>
+                            <div class="content">
+                                orem ipsum dolor sit amet consectetur adipisicing elit.
+                                Vel officia voluptate doloremque amet enim repudiandae
+                                recusandae, corrupti, magnam facere voluptates, eius
+                                dolores quas ipsum repellat iusto corporis possimus
+                                totam odit?
+                            </div>
+                            <div class="v423_5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+
+
+<style>
+    /* Custom styling */
+    .organization-section {
+      background-image: url('./images/aboutus/map-text-background-new.png'); /* Replace with your background image path */
+      background-size: cover;
+      background-position: center;
+      padding: 100px 0;
+    }
+    .organization-section .container {
+      position: relative;
+      z-index: 1;
+    }
+    .organization-section h2,
+    .organization-section p {
+      color: black;
+    }
+    .organization-section img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+
+
+
+
+<section class="organization-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <!-- Image side -->
+        <img src="./images/aboutus/map-mla.png" alt="Image"> <!-- Replace with your image path -->
+      </div>
+      <div class="col-md-6">
+        <!-- Text side -->
+        <h2>Our Footprint</h2>
+        <p>We have an extensive marketing network with branch offices at Delhi and Calcutta and marketing associates in almost all industrial cities in India. Our sales and technical services personnel visit customers regularly to provide before and after sales services. The exports have been increasing sharply, mainly to neighbouring countries including Sri Lanka, Nepal, Bangladesh, and also to Middle East, South East Asia and Europe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 <style>
@@ -474,676 +800,9 @@ overflow: hidden;
 </section>
 
 
-<section>
-<div class="section pt-100 pb-70">
-            <div class="container">
-                <div class="row rowgap">
-                    <div class="col-md-4">
-                        <div class="border-box">
-                            <div class="v423_8" style="z-index: 1; outline-offset: 20px">
-                                <div class="icon-image-box">
-                                    <img src="./images/values-mla.png" alt="" srcset="" />
-                                </div>
-                            </div>
-                            <div class="v423_8" style="
-                          outline: 2px solid #f78631;
-                          outline-offset: 20px;
-                          z-index: -1;
-                        "></div>
-                            <h2 class="title">values</h2>
-                            <div class="content">
-                                orem ipsum dolor sit amet consectetur adipisicing elit.
-                                Vel officia voluptate doloremque amet enim repudiandae
-                                recusandae, corrupti, magnam facere voluptates, eius
-                                dolores quas ipsum repellat iusto corporis possimus
-                                totam odit?
-                            </div>
-                            <div class="v423_5"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="border-box">
-                            <div class="v423_8" style="z-index: 1; outline-offset: 20px">
-                                <div class="icon-image-box">
-                                    <img src="./images/vision-mla.png" alt="" srcset="" />
-                                </div>
-                            </div>
-                            <div class="v423_8" style="
-                          outline: 2px solid #f78631;
-                          outline-offset: 20px;
-                          z-index: -1;
-                        "></div>
-                            <h2 class="title">values</h2>
-                            <div class="content">
-                                orem ipsum dolor sit amet consectetur adipisicing elit.
-                                Vel officia voluptate doloremque amet enim repudiandae
-                                recusandae, corrupti, magnam facere voluptates, eius
-                                dolores quas ipsum repellat iusto corporis possimus
-                                totam odit?
-                            </div>
-                            <div class="v423_5"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="border-box">
-                            <div class="v423_8" style="z-index: 1; outline-offset: 20px">
-                                <div class="icon-image-box">
-                                    <img src="./images/mission-mla.png" alt="" srcset="" />
-                                </div>
-                            </div>
-                            <div class="v423_8" style="
-                          outline: 2px solid #f78631;
-                          outline-offset: 20px;
-                          z-index: -1;
-                        "></div>
-                            <h2 class="title">values</h2>
-                            <div class="content">
-                                orem ipsum dolor sit amet consectetur adipisicing elit.
-                                Vel officia voluptate doloremque amet enim repudiandae
-                                recusandae, corrupti, magnam facere voluptates, eius
-                                dolores quas ipsum repellat iusto corporis possimus
-                                totam odit?
-                            </div>
-                            <div class="v423_5"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-</section>
 
 
-
-
-<style>
-    /* Custom styling */
-    .organization-section {
-      background-image: url('./images/aboutus/map-text-background.png'); /* Replace with your background image path */
-      background-size: cover;
-      background-position: center;
-      padding: 100px 0;
-    }
-    .organization-section .container {
-      position: relative;
-      z-index: 1;
-    }
-    .organization-section h2,
-    .organization-section p {
-      color: black;
-    }
-    .organization-section img {
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
-
-
-
-
-<section class="organization-section">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-6">
-        <!-- Image side -->
-        <img src="./images/aboutus/map-mla.png" alt="Image"> <!-- Replace with your image path -->
-      </div>
-      <div class="col-md-6">
-        <!-- Text side -->
-        <h2>Our Footprint</h2>
-        <p>We have an extensive marketing network with branch offices at Delhi and Calcutta and marketing associates in almost all industrial cities in India. Our sales and technical services personnel visit customers regularly to provide before and after sales services. The exports have been increasing sharply, mainly to neighbouring countries including Sri Lanka, Nepal, Bangladesh, and also to Middle East, South East Asia and Europe.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-<style>
-    /* Custom styling */
-    .qa-section,
-    .rd-section {
-      background-color: #f8f9fa; /* Light gray background */
-      padding: 100px 0;
-    }
-    .qa-section h2,
-    .rd-section h2 {
-      margin-bottom: 30px;
-    }
-    .qa-section img,
-    .rd-section img {
-      max-width: 100%;
-      height: auto;
-    }
-    .img-box1234{
-      height: 30rem;
-    }
-    .img-box1234 img{
-      width: 100%;
-      height: 100%;
-      border-radius:2%;
-    }
-  </style>
-</head>
-<body>
-
-<section class="qa-section">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-6">
-      <div class="img-box123">
-        <!-- Image side -->
-        <img src="./images/aboutus/research-and-devlop1ment.jpeg" alt="QA Image"> <!-- Replace with your QA image path -->
-        </div>
-      </div>
-      <div class="col-md-6">
-        <!-- Text side -->
-        <h2>Quality Assurance</h2>
-        <p>Quality of our products is defined as it is perceived by our customers. The major factor behind our success is our market driven approach and our uncompromising attitude with respect to quality. We have well-defined and stringent Quality Assurance Systems wherein all employees of MLA Group are responsible for quality, both of the product and the services.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="rd-section">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-6">
-        <!-- Text side -->
-        <h2>Research & Development</h2>
-        <p>To further exploit our core competencies and compete in the global market, we have laid great emphasis on Research, Improvement and Innovation. Our R & D Division equipped with the most sophisticated labs and testing equipments, carries out intensive research on subjects like precipitation, surface treatment and activation and has developed some of the most advanced technologies world over.</p>
-      </div>
-      <div class="col-md-6">
-        <!-- Image side -->
-        <div class="img-box1234">
-        <img src="./images/aboutus/research-and-devlopment.jpeg" alt="R&D Image"> <!-- Replace with your R&D image path -->
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<style>
-    /* Custom styling */
-    .quotation-section {
-      background-color: #f8f9fa; /* Light gray background */
-      padding: 100px 0;
-    }
-    .quotation-box {
-      border: 4px double #000; /* Double thick border */
-      padding: 20px;
-      text-align: center;
-      font-style: italic;
-    }
-    .quotation-text {
-      font-size: 24px;
-      color: #333; /* Dark text color */
-    }
-    .container234{
-      width: 98%;
-      margin: auto;
-    }
-  </style>
-
-
-<section class="quotation-section">
-  <div class="container234">
-    <div class="row">
-      <div class="col-md-12">
-        <!-- Quotation box -->
-        <div class="quotation-box">
-          <p class="quotation-text">"The greatest glory in living lies not in never falling, but in rising every time we fall." - Nelson Mandela</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<style>
-    .team-sec-image {
-        background: #0f1934 none repeat scroll 0 0;
-        padding: 110px 0;
-        background-image: url(/img/background/why-us-bg.jpg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        position: relative
-    }
-
-    .team-sec-image:before {
-        position: absolute;
-        content: "";
-        background-color: #0f1934f2;
-        top: 0;
-        width: 100%;
-        height: 100%
-    }
-
-    .team-sec {
-        position: relative;
-        z-index: 99;
-        margin-top: -110px
-    }
-
-    .team-member {
-        background: #0f1934 none repeat scroll 0 0;
-        margin-bottom: 30px;
-        position: relative;
-        overflow: hidden;
-        transition: all .4s ease-in-out;
-        z-index: 2;
-        text-align: center;
-        padding: 30px 20px;
-        border-bottom: 2px solid #f55b14;
-        border-left: 1px solid #f2f2f2;
-        border-right: 1px solid #f2f2f2;
-        border-top: 1px solid #f2f2f2
-    }
-
-    .team-member:before {
-        position: absolute;
-        content: "";
-        height: 100%;
-        width: 100%;
-        top: 0;
-        z-index: -1;
-        left: 0;
-        background: #fff;
-        transition: all .4s ease-in-out 0s
-    }
-
-    .team-member:hover:before {
-        height: 0px
-    }
-
-    .team-member:hover,
-    .team-member:hover.team-member h2,
-    .team-member:hover.team-member h3,
-    .team-member:hover .team-social-profile li a {
-        color: #fff
-    }
-
-    .team-member-thumb {
-        width: 150px;
-        height: 150px;
-        border-radius: 100%;
-        margin: 0 auto
-    }
-
-    .team-social-profile li {
-        display: inline-block;
-        margin: 0 6px
-    }
-
-    .team-header-sec .sec-title {
-        text-align: center;
-        margin: 0 150px 50px;
-        color: #ddd;
-        position: relative
-    }
-
-    .team-header-sec .sec-title h1 {
-        color: #fff
-    }
-
-    .team-header-sec .border-shape:before {
-        background: #f55b14
-    }
-
-    .team-header-sec .sec-title .border-shape {
-        background: #fff
-    }
-
-    .team-member-thumb {
-        position: relative;
-        overflow: hidden;
-        transition: all .4s ease-in-out 0s
-    }
-
-    .team-member:hover .team-overlay ul {
-        visibility: visible;
-        bottom: 0px
-    }
-
-    .team-overlay ul {
-        position: absolute;
-        width: 100%;
-        bottom: -50%;
-        background: #0f1934;
-        text-align: left;
-        padding-left: 10px;
-        visibility: hidden;
-        transition: all .4s ease-in-out 0s
-    }
-
-    .team-member img {
-        width: 100%
-    }
-
-    .team-member h2 {
-        font-size: 18px;
-        font-weight: 700;
-        margin-top: 15px;
-        text-transform: uppercase;
-        transition: all .4s ease-in-out 0s;
-        color: #0f1934
-    }
-
-    .team-member h3 {
-        font-size: 14px;
-        text-transform: capitalize;
-        transition: all .4s ease-in-out 0s;
-        color: #f55b14
-    }
-
-    .team-overlay li a {
-        display: inline-block;
-        color: #0f1934;
-        text-align: left;
-        line-height: 30px;
-        margin-right: 14px
-    }
-
-    .team-overlay li {
-        display: inline-block;
-        text-align: left;
-        padding: 5px 0
-    }
-
-    .team-social li a {
-        display: inline-block;
-        text-align: left;
-        line-height: 30px;
-        margin-right: 2px;
-        width: 30px;
-        height: 30px;
-        background: transparent;
-        border-radius: 100%;
-        text-align: center;
-        border: 1px solid #0f1934
-    }
-
-    .team-social li {
-        display: inline-block
-    }
-
-    .team-social li i {
-        color: #0f1934
-    }
-
-    .team-social li a:hover {
-        background: #0f1934
-    }
-
-    .team-social li a:hover i {
-        color: #fff
-    }
-
-    .all-team .team-member {
-        text-align: center;
-        background: #0f1934;
-        padding-bottom: 30px
-    }
-
-    .team-support-inner {
-        margin-top: 200px
-    }
-
-    .team-support-inner span {
-        text-transform: capitalize;
-        font-size: 20px;
-        font-weight: 600;
-        margin-bottom: 10px;
-        display: inline-block;
-        position: relative;
-        color: #f55b14;
-        padding-left: 70px
-    }
-
-    .team-support-inner span:before {
-        position: absolute;
-        content: "";
-        background: #f55b14;
-        width: 60px;
-        height: 1px;
-        top: 14px;
-        left: 0
-    }
-
-    .team-support-inner h1 {
-        font-size: 36px;
-        text-transform: capitalize;
-        font-weight: 700;
-        line-height: 55px
-    }
-
-    .team-support-inner ul li {
-        display: inline-block;
-        margin-right: 5px
-    }
-
-    .team-support-inner ul li a {
-        background: #f55b14;
-        color: #fff;
-        display: inline-block;
-        padding: 10px 18px;
-        text-transform: capitalize;
-        position: relative;
-        z-index: 5;
-        font-weight: 600;
-        position: related;
-        transition: all .4s ease
-    }
-
-    .team-support-inner ul li a i {
-        margin-left: 10px;
-        margin-right: 10px;
-        color: #fff;
-        font-size: 20px;
-        font-weight: 700
-    }
-
-    .team-support-inner ul li:last-child a {
-        background: #0f1934
-    }
-</style>
-
-
-
-<section class="team-header-sec">
-    <div class="team-sec-image">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="sec-title">
-                        <h1>Expert Stuff</h1>
-                        <p>Lorem ipsum dolor sit amet, lorem nibh lectus urna arcu, lorem erat semper, auctor suspendisse quisque molestie ut. Elit massa dui, leo enim magna. Cursus maecenas cubilia, ac nonummy, egestas mauris .</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="team-sec pb-70">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="team-member">
-                    <div class="team-member-thumb"><img src="./images/girl.png" alt="teamMember"></div>
-                    <h2>Sweety</h2>
-                    <h3>Virtual Assistant</h3>
-                    <div class="team-social-profile">
-                        <ul>
-                            <li><a href="https://www.facebook.com/" target="_blank" class="facebook" rel="noreferrer"><i class="icofont-facebook"></i></a></li>
-                            <li><a href="https://www.twitter.com/" target="_blank" class="twitter" rel="noreferrer"><i class="icofont-twitter"></i></a></li>
-                            <li><a href="https://www.linkedin.com/" target="_blank" class="linkedin" rel="noreferrer"><i class="icofont-linkedin"></i></a></li>
-                            <li><a href="https://www.skype.com/" target="_blank" class="skype" rel="noreferrer"><i class="icofont-skype"></i></a></li>
-                            <li><a href="https://www.pinterest.com/" target="_blank" class="pinterest" rel="noreferrer"><i class="icofont-pinterest"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="team-member">
-                    <div class="team-member-thumb"><img src="./images/men.png" alt="teamMember"></div>
-                    <h2>Shiddik</h2>
-                    <h3>Repair Technology</h3>
-                    <div class="team-social-profile">
-                        <ul>
-                            <li><a href="https://www.facebook.com/" target="_blank" class="facebook" rel="noreferrer"><i class="icofont-facebook"></i></a></li>
-                            <li><a href="https://www.twitter.com/" target="_blank" class="twitter" rel="noreferrer"><i class="icofont-twitter"></i></a></li>
-                            <li><a href="https://www.linkedin.com/" target="_blank" class="linkedin" rel="noreferrer"><i class="icofont-linkedin"></i></a></li>
-                            <li><a href="https://www.skype.com/" target="_blank" class="skype" rel="noreferrer"><i class="icofont-skype"></i></a></li>
-                            <li><a href="https://www.pinterest.com/" target="_blank" class="pinterest" rel="noreferrer"><i class="icofont-pinterest"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="team-member">
-                    <div class="team-member-thumb"><img src="./images/girl.png" alt="teamMember"></div>
-                    <h2>Istiak</h2>
-                    <h3>Mechanical Engineer</h3>
-                    <div class="team-social-profile">
-                        <ul>
-                            <li><a href="https://www.facebook.com/" target="_blank" class="facebook" rel="noreferrer"><i class="icofont-facebook"></i></a></li>
-                            <li><a href="https://www.twitter.com/" target="_blank" class="twitter" rel="noreferrer"><i class="icofont-twitter"></i></a></li>
-                            <li><a href="https://www.linkedin.com/" target="_blank" class="linkedin" rel="noreferrer"><i class="icofont-linkedin"></i></a></li>
-                            <li><a href="https://www.skype.com/" target="_blank" class="skype" rel="noreferrer"><i class="icofont-skype"></i></a></li>
-                            <li><a href="https://www.pinterest.com/" target="_blank" class="pinterest" rel="noreferrer"><i class="icofont-pinterest"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="team-member">
-                    <div class="team-member-thumb"><img src="./images/men.png" alt="teamMember"></div>
-                    <h2>Michael</h2>
-                    <h3>Refinery Petroleum</h3>
-                    <div class="team-social-profile">
-                        <ul>
-                            <li><a href="https://www.facebook.com/" target="_blank" class="facebook" rel="noreferrer"><i class="icofont-facebook"></i></a></li>
-                            <li><a href="https://www.twitter.com/" target="_blank" class="twitter" rel="noreferrer"><i class="icofont-twitter"></i></a></li>
-                            <li><a href="https://www.linkedin.com/" target="_blank" class="linkedin" rel="noreferrer"><i class="icofont-linkedin"></i></a></li>
-                            <li><a href="https://www.skype.com/" target="_blank" class="skype" rel="noreferrer"><i class="icofont-skype"></i></a></li>
-                            <li><a href="https://www.pinterest.com/" target="_blank" class="pinterest" rel="noreferrer"><i class="icofont-pinterest"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-    .companies-media img{
-        height: 99%;
-    width: 45%;
-     
-    }
-    @media only screen and (max-width: 768px) {
-        .team-header-sec .sec-title {
-  
-    margin: 0 0px 50px !important;
- 
-}
-.achievement-area {
-    
-    height: 646px !important;
-   
-}
-.hero .content {
-    padding-left: 18px;
-}
-
-
-    }
-        
-    
-</style>
-<section class="content-inner-1 logo-back overlay-white-middle companies border-top">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="p-lg-b0 p-md-b30 wow fadeInUp text-center mb-lg-20" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                  <div class="section-head style-1">
-                    <h2 class="title">Certifications</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="section-inner">
-              <div class="row gx-3 companies-inner">
-                <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                  <a href="javascript:void(0);" class="companies-wrapper">
-                    <div class="companies-media">
-                      <img src="https://www.mlagroup.com/img/certifications/dnv.png" alt="">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                  <a href="javascript:void(0);" class="companies-wrapper">
-                    <div class="companies-media">
-                      <img src="https://www.mlagroup.com/img/certifications/02.jpg" alt="">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                  <a href="javascript:void(0);" class="companies-wrapper">
-                    <div class="companies-media">
-                      <img src="https://www.mlagroup.com/img/certifications/03.jpg" alt="">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-                  <a href="javascript:void(0);" class="companies-wrapper">
-                    <div class="companies-media">
-                      <img src="https://www.mlagroup.com/img/certifications/04.jpg" alt="">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                  <a href="javascript:void(0);" class="companies-wrapper">
-                    <div class="companies-media">
-                      <img src="https://www.mlagroup.com/img/certifications/05.jpg" alt="">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
-                  <a href="javascript:void(0);" class="companies-wrapper">
-                    <div class="companies-media">
-                      <img src="https://www.mlagroup.com/img/certifications/06.jpg" alt="">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                  <a href="javascript:void(0);" class="companies-wrapper">
-                    <div class="companies-media">
-                      <img src="https://www.mlagroup.com/img/certifications/07.jpg" alt="">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
-                  <a href="javascript:void(0);" class="companies-wrapper">
-                    <div class="companies-media">
-                      <img src="https://www.mlagroup.com/img/certifications/08.jpg" alt="">
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-<style>
+        <style>
     .main-timeline {
   font-family: tahoma;
   padding: 20px 0;
@@ -1224,7 +883,7 @@ overflow: hidden;
     display: inline-block;
     transform: translateY(-50%);
     position: absolute;
-    left: 34%;
+    left: 47%;
     top: 50%;
 }
 
@@ -1275,11 +934,11 @@ overflow: hidden;
 }
 
 .main-timeline .timeline:nth-child(5n+1) .timeline-icon {
-  color: #65c7d0;
+  color: #f68b3a;
 }
 
 .main-timeline .timeline:nth-child(5n+1) .timeline-year {
-  color: #65c7d0;
+  color: #f68b3a;
 }
 
 .main-timeline .timeline:nth-child(5n+1) .title {
@@ -1295,11 +954,11 @@ overflow: hidden;
 }
 
 .main-timeline .timeline:nth-child(5n+2) .timeline-icon {
-  color: #EA3C14;
+  color: #f68b3a;
 }
 
 .main-timeline .timeline:nth-child(5n+2) .timeline-year {
-  color: #EA3C14;
+  color: #f68b3a;
 }
 
 .main-timeline .timeline:nth-child(5n+2) .title {
@@ -1317,11 +976,11 @@ overflow: hidden;
 
 .main-timeline .timeline:nth-child(5n+3) .timeline-icon
 {
-  color: #8CC63E;
+  color: #f68b3a;
 }
 
 .main-timeline .timeline:nth-child(5n+3) .timeline-year {
-  color: #8CC63E;
+  color: #f68b3a;
 }
 
 .main-timeline .timeline:nth-child(5n+3) .title {
@@ -1337,11 +996,11 @@ overflow: hidden;
 }
 
 .main-timeline .timeline:nth-child(5n+4) .timeline-icon {
-  color: #F99324;
+  color: #f68b3a;
 }
 
 .main-timeline .timeline:nth-child(5n+4) .timeline-year {
-  color: #F99324;
+  color: #f68b3a;
 }
 
 .main-timeline .timeline:nth-child(5n+4) .title {
@@ -1357,11 +1016,11 @@ overflow: hidden;
 }
 
 .main-timeline .timeline:nth-child(5n+5) .timeline-icon {
-  color: #0071BD;
+  color: #f68b3a;
 }
 
 .main-timeline .timeline:nth-child(5n+5) .timeline-year {
-  color: #0071BD;
+  color: #f68b3a;
 }
 
 .main-timeline .timeline:nth-child(5n+5) .title {
@@ -1428,9 +1087,13 @@ overflow: hidden;
         right: 9%;
     }
 }
+.fa-arrow-down:before {
+    content: "\f063";
+   
+}
 </style>
 
-        <section>
+        <section class="pt-100 pb-100">
         <div class="container">
         <div class="row">
               <div class="col-lg-12">
@@ -1446,9 +1109,9 @@ overflow: hidden;
       <div class="main-timeline">
         <div class="timeline">
           <a href="#" class="timeline-content">
-            <span class="timeline-year">2018</span>
+            <span class="timeline-year">1975</span>
             <div class="timeline-icon">
-              <i class="fa fa-rocket" aria-hidden="true"></i>
+              <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <div class="content">
              
@@ -1463,7 +1126,7 @@ overflow: hidden;
           <a href="#" class="timeline-content">
             <span class="timeline-year">1978</span>
             <div class="timeline-icon">
-              <i class="fa fa-users" aria-hidden="true"></i>
+              <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <div class="content">
      
@@ -1477,7 +1140,7 @@ overflow: hidden;
           <a href="#" class="timeline-content">
             <span class="timeline-year">1985</span>
             <div class="timeline-icon">
-              <i class="fa fa-cog" aria-hidden="true"></i>
+               <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <div class="content">
              
@@ -1491,7 +1154,7 @@ overflow: hidden;
           <a href="#" class="timeline-content">
             <span class="timeline-year">1992</span>
             <div class="timeline-icon">
-              <i class="fa fa-heart" aria-hidden="true"></i>
+               <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <div class="content">
             
@@ -1505,7 +1168,7 @@ overflow: hidden;
           <a href="#" class="timeline-content">
             <span class="timeline-year">1997</span>
             <div class="timeline-icon">
-              <i class="fa fa-globe" aria-hidden="true"></i>
+              <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <div class="content">
              
@@ -1519,10 +1182,10 @@ overflow: hidden;
           <a href="#" class="timeline-content">
             <span class="timeline-year">2017</span>
             <div class="timeline-icon">
-              <i class="fa fa-apple" aria-hidden="true"></i>
+              <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <div class="content">
-              <h3 class="title">1998</h3>
+              <h3 class="title"></h3>
               <p class="description">
               Mr Sumit Agarwal, MTech- IIT Kanpur joins business full time, Zinc oxide Active and PVC stabilizers manufacturing started in unit 4              </p>
             </div>
@@ -1532,7 +1195,7 @@ overflow: hidden;
           <a href="#" class="timeline-content">
             <span class="timeline-year">2002</span>
             <div class="timeline-icon">
-              <i class="fa fa-edit" aria-hidden="true"></i>
+               <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <div class="content">
             
@@ -1545,7 +1208,7 @@ overflow: hidden;
           <a href="#" class="timeline-content">
             <span class="timeline-year">2004</span>
             <div class="timeline-icon">
-              <i class="fa fa-edit" aria-hidden="true"></i>
+               <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <div class="content">
             
@@ -1558,7 +1221,7 @@ overflow: hidden;
           <a href="#" class="timeline-content">
             <span class="timeline-year">2006</span>
             <div class="timeline-icon">
-              <i class="fa fa-edit" aria-hidden="true"></i>
+               <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <div class="content">
             
@@ -1571,7 +1234,7 @@ overflow: hidden;
           <a href="#" class="timeline-content">
             <span class="timeline-year">2008</span>
             <div class="timeline-icon">
-              <i class="fa fa-edit" aria-hidden="true"></i>
+               <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <div class="content">
             
@@ -1584,7 +1247,7 @@ overflow: hidden;
           <a href="#" class="timeline-content">
             <span class="timeline-year">2009</span>
             <div class="timeline-icon">
-              <i class="fa fa-edit" aria-hidden="true"></i>
+               <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <div class="content">
             
@@ -1597,7 +1260,7 @@ overflow: hidden;
           <a href="#" class="timeline-content">
             <span class="timeline-year">2009</span>
             <div class="timeline-icon">
-              <i class="fa fa-edit" aria-hidden="true"></i>
+               <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <div class="content">
             
@@ -1610,7 +1273,7 @@ overflow: hidden;
           <a href="#" class="timeline-content">
             <span class="timeline-year">2014</span>
             <div class="timeline-icon">
-              <i class="fa fa-edit" aria-hidden="true"></i>
+               <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <div class="content">
             
@@ -1623,7 +1286,7 @@ overflow: hidden;
           <a href="#" class="timeline-content">
             <span class="timeline-year">2016</span>
             <div class="timeline-icon">
-              <i class="fa fa-edit" aria-hidden="true"></i>
+               <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <div class="content">
             
@@ -1636,7 +1299,7 @@ overflow: hidden;
           <a href="#" class="timeline-content">
             <span class="timeline-year">2018</span>
             <div class="timeline-icon">
-              <i class="fa fa-edit" aria-hidden="true"></i>
+               <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <div class="content">
             
@@ -1649,7 +1312,7 @@ overflow: hidden;
           <a href="#" class="timeline-content">
             <span class="timeline-year">2020</span>
             <div class="timeline-icon">
-              <i class="fa fa-edit" aria-hidden="true"></i>
+               <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <div class="content">
             
@@ -1662,7 +1325,7 @@ overflow: hidden;
           <a href="#" class="timeline-content">
             <span class="timeline-year">2022</span>
             <div class="timeline-icon">
-              <i class="fa fa-edit" aria-hidden="true"></i>
+               <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <div class="content">
             
@@ -1675,7 +1338,7 @@ overflow: hidden;
           <a href="#" class="timeline-content">
             <span class="timeline-year">2023</span>
             <div class="timeline-icon">
-              <i class="fa fa-edit" aria-hidden="true"></i>
+               <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
             <div class="content">
             
@@ -1692,209 +1355,377 @@ overflow: hidden;
 
 
 
-        <section class="content-inner">
-			<div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="p-lg-b0 p-md-b30 wow fadeInUp text-center mb-lg-20" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                  <div class="section-head style-1">
-                    <h2 class="title">Community Involvement</h2>
+
+        <style>
+    /* Custom styling */
+    .quotation-section {
+      background-color: #f8f9fa; /* Light gray background */
+      padding: 100px 0;
+    }
+    .quotation-box {
+      border: 4px double #000; /* Double thick border */
+      padding: 20px;
+      text-align: center;
+      font-style: italic;
+    }
+    .quotation-text {
+      font-size: 24px;
+      color: #333; /* Dark text color */
+    }
+    .container234{
+      width: 98%;
+      margin: auto;
+    }
+  </style>
+
+
+<section class="quotation-section">
+  <div class="container234">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Quotation box -->
+        <div class="quotation-box">
+          <p class="quotation-text">"The comparative advantage is now human-made. Anybody having brain power can compete in the future market" - Mr. Lester Thurow</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        
+<style>
+    .companies-media img{
+        height: 99%;
+    width: 45%;
+     
+    }
+    @media only screen and (max-width: 768px) {
+        .team-header-sec .sec-title {
+  
+    margin: 0 0px 50px !important;
+ 
+}
+.achievement-area {
+    
+    height: 646px !important;
+   
+}
+.hero .content {
+    padding-left: 18px;
+}
+
+
+    }
+        
+    
+</style>
+
+        
+<style>
+  
+     
+          .application-tab .about-content p {
+            /* color: #fff; */
+            color: #000;
+          }
+
+          .application-tab h3 {
+            color: #000;
+            font-size: 2.25rem;
+            font-weight: 600;
+            line-height: 1.2;
+          }
+
+          .appslider .dz-media {
+            height: 28rem;
+          }
+
+          .appslider img {
+            /* height: 30rem; */
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+          }
+
+          .contentindustry p {
+            color: #fff;
+            font-size: 2rem;
+            font-weight: 600;
+          }
+
+          .contentindustry {
+            color: #fff;
+          }
+
+          .contentindustry {
+            position: absolute;
+            color: #fff;
+            align-items: end;
+            display: flex;
+            bottom: 0;
+            border-radius: 10px;
+            height: 21%;
+            /* border-radius: inherit; */
+            width: 100%;
+            background: linear-gradient(358deg, #000000c2, transparent);
+            z-index: 10;
+            padding: 10px 50px 10px 40px;
+          }
+
+          .content-inner-1 {
+            padding-top: 50px;
+            padding-bottom: 50px;
+          }
+
+          .mbuiti-6 {
+            margin-top: 40px;
+          }
+
+          .application-tab:before {
+            opacity: 0.2;
+          }
+        </style>
+
+
+
+        <section class="content-inner application-tab overlay-black-light pbt-100" style="
+            background-image: linear-gradient(45deg, #e1e1e1cc, #f4f4f4e0),
+              url(https://images.unsplash.com/photo-1546185058-592ead754d27?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-repeat: no-repeat;
+            background-size: cover;
+          ">
+          <div class="container">
+            <div class="row about-style2 align-items-xl-center align-items-start">
+              <div class="col-lg-3">
+                <h3 class="title">Community Envolvement</h3>
+              </div>
+              <div class="col-lg-7">
+                <div class="about-content">
+                  <div class="style-1">
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority have suffered alteration in
+                      some form, by injected humour, or randomised words which
+                      don't look even slightly believable.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-2">
+                <div class="pagination-align justify-content-end">
+                  <div class="tranding-button-prev btn-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-db9f453e2d159535">
+                    <i class="flaticon flaticon-left-chevron"></i>
+                  </div>
+                  <div class="tranding-button-next btn-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-db9f453e2d159535">
+                    <i class="flaticon flaticon-chevron"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-12 mbuiti-6" style="overflow: hidden">
+                <div class="outside-box-right-25">
+                  <div class="swiper-btn-center-lr appslider">
+                    <div class="swiper swiper-four swiper-initialized swiper-horizontal swiper-pointer-events">
+                      <div class="swiper-wrapper" id="swiper-wrapper-db9f453e2d159535" aria-live="off" style="transform: translate3d(-2708px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" role="group" aria-label="1 / 4" style="width: 308.5px; margin-right: 30px;">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                            <div class="dz-media">
+                              <img src="https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?cs=srgb&amp;dl=pexels-pixabay-459728.jpg&amp;fm=jpg" alt="image">
+                              <div class="contentindustry">
+                                <p>Petrochemicals</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1" role="group" aria-label="2 / 4" style="width: 308.5px; margin-right: 30px;">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                            <div class="dz-media">
+                              <img src="https://static.vecteezy.com/system/resources/previews/039/316/249/non_2x/ai-generated-production-line-various-medicinal-tablets-and-capsules-photo.jpg" alt="image">
+                              <div class="contentindustry">
+                                <p>Pharmaceutical</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="3 / 4" style="width: 308.5px; margin-right: 30px;">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                            <div class="dz-media">
+                              <img src="https://img.freepik.com/free-photo/flat-lay-colorful-paint-cans-arrangement_23-2149601074.jpg?size=626&amp;ext=jpg&amp;ga=GA1.1.1700460183.1713139200&amp;semt=ais" alt="image">
+                              <div class="contentindustry">
+                                <p>Paints</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="3" role="group" aria-label="4 / 4" style="width: 308.5px; margin-right: 30px;">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                            <div class="dz-media">
+                              <img src="https://t4.ftcdn.net/jpg/02/28/64/73/360_F_228647361_d4UdgsUUb0AZoGebmPpGt6HL1QPbCpzf.jpg" alt="image">
+                              <div class="contentindustry">
+                                <p>Ceramics</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="1 / 4" style="width: 308.5px; margin-right: 30px;">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                            <div class="dz-media">
+                              <img src="https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?cs=srgb&amp;dl=pexels-pixabay-459728.jpg&amp;fm=jpg" alt="image">
+                              <div class="contentindustry">
+                                <p>Petrochemicals</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="2 / 4" style="width: 308.5px; margin-right: 30px;">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                            <div class="dz-media">
+                              <img src="https://static.vecteezy.com/system/resources/previews/039/316/249/non_2x/ai-generated-production-line-various-medicinal-tablets-and-capsules-photo.jpg" alt="image">
+                              <div class="contentindustry">
+                                <p>Pharmaceutical</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="3 / 4" style="width: 308.5px; margin-right: 30px;">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                            <div class="dz-media">
+                              <img src="https://img.freepik.com/free-photo/flat-lay-colorful-paint-cans-arrangement_23-2149601074.jpg?size=626&amp;ext=jpg&amp;ga=GA1.1.1700460183.1713139200&amp;semt=ais" alt="image">
+                              <div class="contentindustry">
+                                <p>Paints</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="3" role="group" aria-label="4 / 4" style="width: 308.5px; margin-right: 30px;">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                            <div class="dz-media">
+                              <img src="https://t4.ftcdn.net/jpg/02/28/64/73/360_F_228647361_d4UdgsUUb0AZoGebmPpGt6HL1QPbCpzf.jpg" alt="image">
+                              <div class="contentindustry">
+                                <p>Ceramics</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="1 / 4" style="width: 308.5px; margin-right: 30px;">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                            <div class="dz-media">
+                              <img src="https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?cs=srgb&amp;dl=pexels-pixabay-459728.jpg&amp;fm=jpg" alt="image">
+                              <div class="contentindustry">
+                                <p>Petrochemicals</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="2 / 4" style="width: 308.5px; margin-right: 30px;">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                            <div class="dz-media">
+                              <img src="https://static.vecteezy.com/system/resources/previews/039/316/249/non_2x/ai-generated-production-line-various-medicinal-tablets-and-capsules-photo.jpg" alt="image">
+                              <div class="contentindustry">
+                                <p>Pharmaceutical</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="3 / 4" style="width: 308.5px; margin-right: 30px;">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                            <div class="dz-media">
+                              <img src="https://img.freepik.com/free-photo/flat-lay-colorful-paint-cans-arrangement_23-2149601074.jpg?size=626&amp;ext=jpg&amp;ga=GA1.1.1700460183.1713139200&amp;semt=ais" alt="image">
+                              <div class="contentindustry">
+                                <p>Paints</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="3" role="group" aria-label="4 / 4" style="width: 308.5px; margin-right: 30px;">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                            <div class="dz-media">
+                              <img src="https://t4.ftcdn.net/jpg/02/28/64/73/360_F_228647361_d4UdgsUUb0AZoGebmPpGt6HL1QPbCpzf.jpg" alt="image">
+                              <div class="contentindustry">
+                                <p>Ceramics</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div></div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
                   </div>
                 </div>
               </div>
             </div>
-				<div class="row g-3 g-xl-4">
-					
-					<div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-6 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-						<div class="dz-team style-1 m-md-b0 m-sm-b0 m-b30">
-							<div class="dz-media">
-								<a href="javascript:void(0);"><img src="images/team/pic2.jpg" alt=""></a>
-							</div>
-							<div class="dz-content">
-								<h5 class="title"><a href="our-team.html">Ivan Mathews</a></h5>
-								<span>iOS Developer</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-6 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-						<div class="dz-team style-1 m-md-b0 m-sm-b0 m-b30">
-							<div class="dz-media">
-								<a href="javascript:void(0);"><img src="images/team/pic3.jpg" alt=""></a>
-							</div>
-							<div class="dz-content">
-								<h5 class="title"><a href="our-team.html">Macauley Herring </a></h5>
-								<span>Customer Success</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-						<div class="dz-team style-1 m-md-b0 m-sm-b0 m-b30">
-							<div class="dz-media">
-								<a href="javascript:void(0);"><img src="images/team/pic4.jpg" alt=""></a>
-							</div>
-							<div class="dz-content">
-								<h5 class="title"><a href="our-team.html">Alya Levine</a></h5>
-								<span>CTO </span>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-6 wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
-						<div class="dz-team style-1 m-md-b0 m-sm-b0 m-b30">
-							<div class="dz-media">
-								<a href="javascript:void(0);"><img src="images/team/pic5.jpg" alt=""></a>
-							</div>
-							<div class="dz-content">
-								<h5 class="title"><a href="our-team.html">Rose Hernandez </a></h5>
-								<span>Backend Developer</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-6 wow fadeInUp" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
-						<div class="dz-team style-1 m-md-b0 m-sm-b0 m-b30">
-							<div class="dz-media">
-								<a href="javascript:void(0);"><img src="images/team/pic6.jpg" alt=""></a>
-							</div>
-							<div class="dz-content">
-								<h5 class="title"><a href="our-team.html">Elen Benitez </a></h5>
-								<span>Designer</span>
-							</div>
-						</div>
-					</div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-6 wow fadeInUp" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
-						<div class="dz-team style-1 m-md-b0 m-sm-b0 m-b30">
-							<div class="dz-media">
-								<a href="javascript:void(0);"><img src="images/team/pic6.jpg" alt=""></a>
-							</div>
-							<div class="dz-content">
-								<h5 class="title"><a href="our-team.html">Elen Benitez </a></h5>
-								<span>Designer</span>
-							</div>
-						</div>
-					</div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-6 wow fadeInUp" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
-						<div class="dz-team style-1 m-md-b0 m-sm-b0 m-b30">
-							<div class="dz-media">
-								<a href="javascript:void(0);"><img src="images/team/pic6.jpg" alt=""></a>
-							</div>
-							<div class="dz-content">
-								<h5 class="title"><a href="our-team.html">Elen Benitez </a></h5>
-								<span>Designer</span>
-							</div>
-						</div>
-					</div>
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-6 wow fadeInUp" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
-						<div class="dz-team style-1 m-md-b0 m-sm-b0 m-b30">
-							<div class="dz-media">
-								<a href="javascript:void(0);"><img src="images/team/pic6.jpg" alt=""></a>
-							</div>
-							<div class="dz-content">
-								<h5 class="title"><a href="our-team.html">Elen Benitez </a></h5>
-								<span>Designer</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+          </div>
+        </section>
+<section class="content-inner-1 logo-back overlay-white-middle companies border-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="p-lg-b0 p-md-b30 wow fadeInUp text-center mb-lg-20" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                  <div class="section-head style-1">
+                    <h2 class="title">Certifications</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section-inner">
+              <div class="row gx-3 companies-inner">
+                <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                  <a href="javascript:void(0);" class="companies-wrapper">
+                    <div class="companies-media">
+                      <img src="https://www.mlagroup.com/img/certifications/dnv.png" alt="">
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                  <a href="javascript:void(0);" class="companies-wrapper">
+                    <div class="companies-media">
+                      <img src="https://www.mlagroup.com/img/certifications/02.jpg" alt="">
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                  <a href="javascript:void(0);" class="companies-wrapper">
+                    <div class="companies-media">
+                      <img src="https://www.mlagroup.com/img/certifications/03.jpg" alt="">
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                  <a href="javascript:void(0);" class="companies-wrapper">
+                    <div class="companies-media">
+                      <img src="https://www.mlagroup.com/img/certifications/04.jpg" alt="">
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                  <a href="javascript:void(0);" class="companies-wrapper">
+                    <div class="companies-media">
+                      <img src="https://www.mlagroup.com/img/certifications/05.jpg" alt="">
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                  <a href="javascript:void(0);" class="companies-wrapper">
+                    <div class="companies-media">
+                      <img src="https://www.mlagroup.com/img/certifications/06.jpg" alt="">
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                  <a href="javascript:void(0);" class="companies-wrapper">
+                    <div class="companies-media">
+                      <img src="https://www.mlagroup.com/img/certifications/07.jpg" alt="">
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                  <a href="javascript:void(0);" class="companies-wrapper">
+                    <div class="companies-media">
+                      <img src="https://www.mlagroup.com/img/certifications/08.jpg" alt="">
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <section class="content-inner overlay-white-dark overflow-hidden" style="background-image: url('images/background/bg1.jpg'); background-repeat: no-repeat; background-size: cover;">
-			<div class="container">
-				<div class="row about-style1 align-items-center">
-					<div class="col-lg-6 m-b30">
-						<div class="position-relative">
-							<div class="about-thumb wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-								<img src="images/girl.png" alt="">
-							</div>
-							<div class="our-customer wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-								<h6>Our Satisfied User</h6>
-								<ul>
-									<li class="customer-image">
-										<img src="images/testimonial/pic1.png" alt="">
-									</li>
-									<li class="customer-image">
-										<img src="images/testimonial/pic2.png" alt="">
-									</li>
-									<li class="total-customer">
-										<span class="font-14">+12K</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6 m-b30 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-						<div class="px-lg-4">
-							<div class="section-head">
-								<h2 class="title">What our clients say <br> about us</h2>
-							</div>
-							<div class="swiper swiper-five swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
-								<div class="swiper-wrapper" id="swiper-wrapper-5410c06e1957510d23" aria-live="off" style="transform: translate3d(-1806px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="1" role="group" aria-label="2 / 2" style="width: 582px; margin-right: 20px;">
-										<div class="about-content">
-											<p class="para-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-											<div class="about-bx-detail">
-												<div class="about-bx-pic radius">
-													<img src="images/testimonial/testimonial4.jpg" alt="">
-												</div>
-												<div>
-													<h6 class="name">Joe Do</h6> 
-													<span class="position">Undergraduate Student</span> 
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="1 / 2" style="width: 582px; margin-right: 20px;">
-										<div class="about-content">
-											<p class="para-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-											<div class="about-bx-detail">
-												<div class="about-bx-pic radius">
-													<img src="images/testimonial/testimonial4.jpg" alt="">
-												</div>
-												<div>
-													<h6 class="name">Kenneth Fong</h6> 
-													<span class="position">Postgraduate Student</span> 
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="2 / 2" style="width: 582px; margin-right: 20px;">
-										<div class="about-content">
-											<p class="para-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-											<div class="about-bx-detail">
-												<div class="about-bx-pic radius">
-													<img src="images/testimonial/testimonial4.jpg" alt="">
-												</div>
-												<div>
-													<h6 class="name">Joe Do</h6> 
-													<span class="position">Undergraduate Student</span> 
-												</div>
-											</div>
-										</div>
-									</div>
-								<div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="1 / 2" style="width: 582px; margin-right: 20px;">
-										<div class="about-content">
-											<p class="para-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-											<div class="about-bx-detail">
-												<div class="about-bx-pic radius">
-													<img src="images/testimonial/testimonial4.jpg" alt="">
-												</div>
-												<div>
-													<h6 class="name">Kenneth Fong</h6> 
-													<span class="position">Postgraduate Student</span> 
-												</div>
-											</div>
-										</div>
-									</div></div>
-								<div class="pagination-align">
-									<div class="about-button-prev btn-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-5410c06e1957510d23">
-										<i class="flaticon flaticon-left-chevron"></i>
-									</div>
-									<div class="about-button-next btn-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-5410c06e1957510d23">
-										<i class="flaticon flaticon-chevron"></i>
-									</div>
-								</div>
-							<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+
 <?php include('footer.php'); ?>
