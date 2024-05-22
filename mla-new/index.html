@@ -1043,7 +1043,117 @@
 					border-right: 2px solid #c4c4c4 !important;
 				}
 			</style>
+	<style>
+		.site-filters li.active a {
+			color: #FE8F34;
+		}
 
+		a:hover {
+
+			color: #FE8F34 !important;
+
+		}
+
+		.dz-tabs .tab-content {
+			padding-top: 0;
+		}
+
+		.content-inner-1 {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+
+		.shop-card {
+			padding-bottom: 8px;
+			/* position: relative;
+			overflow: hidden;
+			background-color: #ffffff;
+			height: 4rem;
+			min-height: 4rem;
+			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+		}
+
+		.mix-blend-mode {
+			mix-blend-mode: multiply;
+		}
+
+
+		.shop-card .dz-content {
+			text-align: center;
+			background-color: #fff;
+			padding: 15px 15px 15px 15px;
+			display: ruby-text;
+
+
+		}
+
+		.ArOc1c {
+			background-color: #fff;
+			bottom: 0;
+			left: 0;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			top: 0;
+		}
+
+		.ArOc1c img {
+			max-height: 100%;
+			max-width: 100%;
+			vertical-align: middle;
+		}
+
+		.FM6uVc {
+			max-width: 302px;
+			padding-bottom: 100%;
+			margin: auto;
+			position: relative;
+		}
+
+		.filters {
+			display: flex;
+			gap: 2px;
+			/* Adjust the gap between tabs */
+		}
+
+		.filters li {
+		
+			/* Add a border between tabs */
+		}
+
+		.filters li:last-child {
+			border-right: none;
+			/* Remove the border from the last tab */
+		}
+
+		.filters li.active a {
+			color: #FE8F34;
+		}
+
+
+		.filters li a {
+			padding: 10px 20px;
+			/* Adjust the padding */
+			display: inline-block;
+			color: #000000;
+			text-decoration: none;
+			transition: background-color 0.3s;
+		}
+
+
+		.site-filters li {
+			margin-right: 0px !important;
+		}
+
+		.wlist-80 {
+			width: 80%;
+			margin: auto;
+		}
+
+		.content-inner-3 {
+			padding-top: 40px;
+		}
+	</style>
 			<!--Recommend Section Start-->
 			<section class="content-inner-1 bg-light">
 				<div class="container">
@@ -1085,117 +1195,7 @@
 
 						</ul>
 
-						<style>
-							.site-filters li.active a {
-								color: #FE8F34;
-							}
-
-							a:hover {
-
-								color: #FE8F34 !important;
-
-							}
-
-							.dz-tabs .tab-content {
-								padding-top: 0;
-							}
-
-							.content-inner-1 {
-								padding-top: 50px;
-								padding-bottom: 50px;
-							}
-
-							.shop-card {
-								padding-bottom: 8px;
-								/* position: relative;
-								overflow: hidden;
-								background-color: #ffffff;
-								height: 4rem;
-								min-height: 4rem;
-								box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-							}
-
-							.mix-blend-mode {
-								mix-blend-mode: multiply;
-							}
-
-
-							.shop-card .dz-content {
-								text-align: center;
-								background-color: #fff;
-								padding: 15px 15px 15px 15px;
-								display: ruby-text;
-
-
-							}
-
-							.ArOc1c {
-								background-color: #fff;
-								bottom: 0;
-								left: 0;
-								position: absolute;
-								right: 0;
-								text-align: center;
-								top: 0;
-							}
-
-							.ArOc1c img {
-								max-height: 100%;
-								max-width: 100%;
-								vertical-align: middle;
-							}
-
-							.FM6uVc {
-								max-width: 302px;
-								padding-bottom: 100%;
-								margin: auto;
-								position: relative;
-							}
-
-							.filters {
-								display: flex;
-								gap: 2px;
-								/* Adjust the gap between tabs */
-							}
-
-							.filters li {
-							
-								/* Add a border between tabs */
-							}
-
-							.filters li:last-child {
-								border-right: none;
-								/* Remove the border from the last tab */
-							}
-
-							.filters li.active a {
-								color: #FE8F34;
-							}
-
-
-							.filters li a {
-								padding: 10px 20px;
-								/* Adjust the padding */
-								display: inline-block;
-								color: #000000;
-								text-decoration: none;
-								transition: background-color 0.3s;
-							}
-
-
-							.site-filters li {
-								margin-right: 0px !important;
-							}
-
-							.wlist-80 {
-								width: 80%;
-								margin: auto;
-							}
-
-							.content-inner-3 {
-								padding-top: 40px;
-							}
-						</style>
+					
 						<!-- <a href="shop-list.html"
 							class="product-link text-secondary font-14 d-flex align-items-center gap-1 text-nowrap">See
 							all products
@@ -1355,6 +1355,153 @@
 		</div>
 		</section>
 		<!--Recommend Section End-->
+
+		<style>
+			.product-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+	
+			.product-item {
+				flex: 0 0 calc(25% - 20px);
+				margin: 10px;
+			}
+	
+			.shop-card {
+				border: 1px solid #ccc;
+				padding: 15px;
+			}
+	
+			.shop-card .title {
+				margin-bottom: 10px;
+			}
+	
+			.shop-card .btn {
+				width: 100%;
+			}
+	
+			.tab-content {
+				display: none;
+			}
+	
+			.tab-content.active {
+				display: block;
+			}
+		</style>
+	
+		<div class="container">
+			<h3 class="title text-center mb-4">RANGE OF PRODUCTS</h3>
+			<div class="site-filters clearfix d-flex align-items-center justify-content-center">
+				<ul class="filters" data-bs-toggle="buttons">
+					<li class="btn active btth" data-brand="unisil">
+						<input type="radio" name="brand">
+						<a href="javascript:void(0);">UNISIL</a>
+					</li>
+					<li class="btn btth" data-brand="uniflow">
+						<input type="radio" name="brand">
+						<a href="javascript:void(0);">UNIFLOW</a>
+					</li>
+					<li class="btn btth" data-brand="unicell">
+						<input type="radio" name="brand">
+						<a href="javascript:void(0);">UNICELL</a>
+					</li>
+					<li class="btn btth" data-brand="micronized">
+						<input type="radio" name="brand">
+						<a href="javascript:void(0);">Micronized Mineral fillers / extenders</a>
+					</li>
+					<li class="btn btth" data-brand="unistab">
+						<input type="radio" name="brand">
+						<a href="javascript:void(0);">UNISTAB</a>
+					</li>
+					<li class="btn btth" data-brand="zincosil">
+						<input type="radio" name="brand">
+						<a href="javascript:void(0);">ZINCOSIL</a>
+					</li>
+					<li class="btn btth" data-brand="unilub">
+						<input type="radio" name="brand">
+						<a href="javascript:void(0);">UNILUB</a>
+					</li>
+				</ul>
+			</div>
+	
+			<div class="tab-content" id="unisil">
+				<div class="row align-items-center">
+					<div class="col-md-3">
+						<img style="display: block; margin: auto;" src="./images/UNISIL6_logo.png" class="mt-4 mb-4">
+					</div>
+					<div class="col-md-9">
+						<div class="row gx-xl-4 g-3">
+							<div class="col-md-3">
+								<div class="widget widget_categories style-1">
+									<ul>
+										<li class="cat-item"><a href="javascript:void(0);">Precipitated silica</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- Add more product items here for UNISIL -->
+						</div>
+					</div>
+				</div>
+			</div>
+	
+			<div class="tab-content" id="uniflow">
+				<div class="row align-items-center">
+					<div class="col-md-3">
+						<img style="display: block; margin: auto;" src="./images/UNIFLOW_logo.png" class="mt-4 mb-4">
+					</div>
+					<div class="col-md-9">
+						<div class="row gx-xl-4 g-3">
+							<div class="col-md-3">
+								<div class="widget widget_categories style-1">
+									<ul>
+										<li class="cat-item"><a href="javascript:void(0);">Uniflow product 1</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- Add more product items here for UNIFLOW -->
+						</div>
+					</div>
+				</div>
+			</div>
+	
+			<!-- Add more tab-content sections for other brands here -->
+	
+		</div>
+	
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const tabs = document.querySelectorAll('.filters .btn');
+				const contents = document.querySelectorAll('.tab-content');
+	
+				tabs.forEach(tab => {
+					tab.addEventListener('click', function() {
+						tabs.forEach(item => item.classList.remove('active'));
+						this.classList.add('active');
+	
+						const brand = this.getAttribute('data-brand');
+						contents.forEach(content => {
+							if (content.id === brand) {
+								content.classList.add('active');
+							} else {
+								content.classList.remove('active');
+							}
+						});
+					});
+				});
+	
+				// Initialize the first tab as active
+				document.querySelector('.filters .btn.active').click();
+			});
+		</script>
+
+
+
+
+
 
 		<style>
 			.logo-back img {
