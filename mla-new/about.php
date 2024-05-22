@@ -1385,7 +1385,7 @@ overflow: hidden;
   }
 
   .quotation-box {
-    border: 4px double #000;
+    border: 4px double #f48a3a;
     /* Double thick border */
     padding: 20px;
     text-align: center;
@@ -1504,31 +1504,14 @@ overflow: hidden;
     color: #e0823d;
     background: #e0e0e0;
   }
+
+  @media only screen and (max-width: 768px) {
+    .outside-box-right-25 {
+      margin-right: 1vw !important;
+    }
+  }
 </style>
-<!-- 
-            <div class="swiper-container-sliding">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <p class="indyru">Industries</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <p>We Serve</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <p class="indyru">Industries</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <p>We Serve</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <p class="indyru">Industries</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <p>We Serve</p>
-                    </div>
-                 
-                </div>
-            </div> -->
+
 
 <style>
   .application-tab .about-content p {
@@ -1617,7 +1600,8 @@ overflow: hidden;
   .application-tab:before {
     opacity: 0.2;
   }
-  .contentindustry span{
+
+  .contentindustry span {
     font-size: 13px;
   }
 </style>
@@ -1636,7 +1620,7 @@ overflow: hidden;
         <div class="about-content">
           <div class="style-1">
             <p>
-            The MLA Group itself is a well-established industrial entity with a significant economic footprint, boasting a turnover of INR 400 crores and operating several ISO-certified manufacturing facilities. Their broad CSR strategy reflects their holistic approach to business, which integrates economic success with social and environmental responsibility.
+              The MLA Group itself is a well-established industrial entity with a significant economic footprint, boasting a turnover of INR 400 crores and operating several ISO-certified manufacturing facilities. Their broad CSR strategy reflects their holistic approach to business, which integrates economic success with social and environmental responsibility.
             </p>
           </div>
         </div>
@@ -1664,7 +1648,7 @@ overflow: hidden;
                       <img src="./images/aboutus/mla-green.jpg" alt="image" />
                       <div class="contentindustry">
                         <p>The MLA Green Kanpur initiative, launched by the MLA Group, is a significant environmental project aimed at enhancing urban greenery in Kanpur. This initiative focuses on planting trees along roadsides, providing much-needed shade for pedestrians, and contributing to the reduction of air pollution in the city. By increasing the green cover, the project not only beautifies urban areas but also plays a crucial role in improving air quality and combating the urban heat island effect.</p>
-                        
+
                       </div>
                     </div>
                   </div>
@@ -1692,16 +1676,7 @@ overflow: hidden;
                   </div>
                 </div>
 
-                <div class="swiper-slide">
-                  <div class="wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="dz-media gradient-overlay1">
-                      <img src="https://t4.ftcdn.net/jpg/02/28/64/73/360_F_228647361_d4UdgsUUb0AZoGebmPpGt6HL1QPbCpzf.jpg" alt="image" />
-                      <div class="contentindustry">
-                        <p>Ceramics</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              
               </div>
             </div>
           </div>
