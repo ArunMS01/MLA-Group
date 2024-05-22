@@ -129,6 +129,7 @@
     }
 
     .contact-info-item {
+        height: 289px;
         background: #071c34;
         padding: 30px 0px;
     }
@@ -248,44 +249,88 @@
 <section class="contact-page-sec">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-2">
                 <div class="contact-info">
                     <div class="contact-info-item">
                         <div class="contact-info-icon">
                             <i class="fas fa-map-marked"></i>
                         </div>
                         <div class="contact-info-text">
-                            <h2>address</h2>
-                            <span>1215 Lorem Ipsum, Ch 176080 </span>
-                            <span>Chandigarh , INDIA</span>
+                            <h2>MLA GROUP OF INDUSTRIES</h2>
+                        
+                            <span>111/230, Harsh Nagar</span>
+                            <span>Kanpur-208012 (INDIA) </span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-2">
                 <div class="contact-info">
                     <div class="contact-info-item">
                         <div class="contact-info-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="contact-info-text">
-                            <h2>E-mail</h2>
-                            <span>info@LoremIpsum.com</span>
-                            <span>yourmail@gmail.com</span>
+                            <h2>DIRECTOR (MARKETING)</h2>
+                            <span>Mr. Sumit Agarwal   </span>
+                            <span> +91-512-2555292</span><span> +91-9336116592</span><span> md@mlagroup.com</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-2">
                 <div class="contact-info">
                     <div class="contact-info-item">
                         <div class="contact-info-icon">
-                            <i class="fas fa-clock"></i>
+                        <i class="fas fa-envelope"></i>
                         </div>
                         <div class="contact-info-text">
-                            <h2>office time</h2>
-                            <span>Mon - Thu 9:00 am - 4.00 pm</span>
-                            <span>Thu - Mon 10.00 pm - 5.00 pm</span>
+                            <h2>DIRECTOR (FACTORY)
+ </h2>
+                            <span>Mr. Abhishek Kanodia -</span>
+                            <span>+91-7985284355 </span><span> ceo@mlagroup.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                        <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <h2>GENERAL ADMINISTRATION</h2>
+                            <span>Director (Admin) </span><span> Mr Saurabh Agarwal </span>
+                            <span> +91-9336849137 </span><span> saurabh@mlagroup.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                        <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <h2>PURCHASE</h2>
+                            <span>Mr Suraj Agarwal</span>
+                            <span>+91-9335091069 </span><span> purchase@mlagroup.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                        <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <h2>RECRUITMENTS</h2>
+                            <span>mayur@mlagroup.com</span>
+                           
                         </div>
                     </div>
                 </div>
@@ -342,8 +387,7 @@
             </div>
             <div class="col-md-4">
                 <div class="contact-page-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109741.02912911311!2d76.69348873658222!3d30.73506264436677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed0be66ec96b%3A0xa5ff67f9527319fe!2sChandigarh!5e0!3m2!1sen!2sin!4v1553497921355" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.4163711398887!2d80.32400779999999!3d26.474535499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c388727bd6145%3A0x41ce7b980d8d7102!2s111%2F230%2C%20Brahm%20Nagar%2C%20Harsh%20Nagar%2C%20Kanpur%2C%20Uttar%20Pradesh%20208012!5e0!3m2!1sen!2sin!4v1716287526134!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
             </div>
         </div>
     </div>
