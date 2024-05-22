@@ -91,11 +91,11 @@
   }
 
   .tabs {
-    justify-content: space-around;
+    justify-content: end;
     gap: 10px;
     width: 80%;
     height: 100px;
-    margin: auto;
+    /* margin: auto; */
     margin-top: 50px;
     display: flex;
     align-items: center;
@@ -172,6 +172,7 @@
   }
 
   .box img {
+    height: 23rem;
     width: 50%;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -195,7 +196,7 @@
   }
 
   .show {
-
+    
     align-items: center;
     display: flex;
   }
@@ -702,7 +703,7 @@ overflow: hidden;
 ============== */
 
   .achievement-area {
-    background-image: url(./images/achievement.jpg);
+    background-image: url(./images/aboutus/counter-image.jpeg);
     height: 300px;
     background-size: cover;
     background-position: center;
@@ -762,29 +763,30 @@ overflow: hidden;
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="single-counter-box">
             <div class="fact-icon"><i class="flaticon-engineer"></i></div>
-            <p class="counter-number"><span class="counter">1037</span></p>
-            <h6>Project Completed</h6>
+            <p class="counter-number"><span class="counter">55</span><span>+</span></p>
+            <h6>Countries Catered</h6>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="single-counter-box">
             <div class="fact-icon"><i class="flaticon-plumber"></i></div>
-            <p class="counter-number"><span class="counter">156</span></p>
-            <h6>Qualified Contractor</h6>
+            <p class="counter-number"><span class="counter">10000
+</span><span>+</span></p>
+            <h6>Manufacturing Capacity in MT</h6>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="single-counter-box">
             <div class="fact-icon"><i class="flaticon-tow-truck"></i></div>
-            <p class="counter-number"><span class="counter">750</span></p>
-            <h6>Work Order</h6>
+            <p class="counter-number"><span class="counter">3000</span><span>+</span></p>
+            <h6>Total Customer</h6>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="single-counter-box">
             <div class="fact-icon"><i class="flaticon-factory"></i></div>
-            <p class="counter-number"><span class="counter">30</span></p>
-            <h6>Worldwide Branches</h6>
+            <p class="counter-number"><span class="counter">100</span><span>+</span></p>
+            <h6>Products Manufactured</h6>
           </div>
         </div>
       </div>
@@ -860,6 +862,7 @@ overflow: hidden;
   }
 
   .main-timeline .timeline-year {
+    margin-left: 57px;
     color: #65c7d0;
     font-size: 50px;
     font-weight: 600;
@@ -884,7 +887,7 @@ overflow: hidden;
 
     margin-left: 1000px;
     color: #909090;
-    width: 50%;
+    width: 42%;
     padding: 21px;
     display: inline-block;
     float: inline-end;
@@ -1385,7 +1388,7 @@ overflow: hidden;
   }
 
   .quotation-box {
-    border: 4px double #000;
+    border: 4px double #f48a3a;
     /* Double thick border */
     padding: 20px;
     text-align: center;
@@ -1504,31 +1507,14 @@ overflow: hidden;
     color: #e0823d;
     background: #e0e0e0;
   }
+
+  @media only screen and (max-width: 768px) {
+    .outside-box-right-25 {
+      margin-right: 1vw !important;
+    }
+  }
 </style>
-<!-- 
-            <div class="swiper-container-sliding">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <p class="indyru">Industries</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <p>We Serve</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <p class="indyru">Industries</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <p>We Serve</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <p class="indyru">Industries</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <p>We Serve</p>
-                    </div>
-                 
-                </div>
-            </div> -->
+
 
 <style>
   .application-tab .about-content p {
@@ -1617,7 +1603,8 @@ overflow: hidden;
   .application-tab:before {
     opacity: 0.2;
   }
-  .contentindustry span{
+
+  .contentindustry span {
     font-size: 13px;
   }
 </style>
@@ -1636,7 +1623,7 @@ overflow: hidden;
         <div class="about-content">
           <div class="style-1">
             <p>
-            The MLA Group itself is a well-established industrial entity with a significant economic footprint, boasting a turnover of INR 400 crores and operating several ISO-certified manufacturing facilities. Their broad CSR strategy reflects their holistic approach to business, which integrates economic success with social and environmental responsibility.
+              The MLA Group itself is a well-established industrial entity with a significant economic footprint, boasting a turnover of INR 400 crores and operating several ISO-certified manufacturing facilities. Their broad CSR strategy reflects their holistic approach to business, which integrates economic success with social and environmental responsibility.
             </p>
           </div>
         </div>
@@ -1664,7 +1651,7 @@ overflow: hidden;
                       <img src="./images/aboutus/mla-green.jpg" alt="image" />
                       <div class="contentindustry">
                         <p>The MLA Green Kanpur initiative, launched by the MLA Group, is a significant environmental project aimed at enhancing urban greenery in Kanpur. This initiative focuses on planting trees along roadsides, providing much-needed shade for pedestrians, and contributing to the reduction of air pollution in the city. By increasing the green cover, the project not only beautifies urban areas but also plays a crucial role in improving air quality and combating the urban heat island effect.</p>
-                        
+
                       </div>
                     </div>
                   </div>
@@ -1692,16 +1679,7 @@ overflow: hidden;
                   </div>
                 </div>
 
-                <div class="swiper-slide">
-                  <div class="wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="dz-media gradient-overlay1">
-                      <img src="https://t4.ftcdn.net/jpg/02/28/64/73/360_F_228647361_d4UdgsUUb0AZoGebmPpGt6HL1QPbCpzf.jpg" alt="image" />
-                      <div class="contentindustry">
-                        <p>Ceramics</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              
               </div>
             </div>
           </div>
@@ -1785,6 +1763,36 @@ overflow: hidden;
     </div>
   </div>
 </section>
-
-
+<style>
+        .team-section {
+            background-color: #f8f9fa; /* Light grey background */
+            padding: 50px 0;
+        }
+        .team-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .team-image-box {
+            width: 80%;
+            margin: 0 auto;
+            padding-bottom: 20px; /* Space below the image */
+        }
+        .team-image {
+            width: 100%;
+            display: block;
+            border-radius: 10px; /* Optional: rounded corners */
+        }
+    </style>
+<section class="team-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="team-heading">Meet Our Team</h2>
+                <div class="team-image-box">
+                    <img src="./images/aboutus/our-team.png" alt="Team Image" class="team-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <?php include('footer.php'); ?>

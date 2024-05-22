@@ -142,7 +142,25 @@
     <script src="vendor/countdown/jquery.countdown.js"></script><!-- COUNTDOWN FUCTIONS  -->
     <script src="vendor/wnumb/wNumb.js"></script><!-- WNUMB -->
     <script src="vendor/nouislider/nouislider.min.js"></script><!-- NOUSLIDER MIN JS-->
-    <script src="js/dz.carousel.js"></script><!-- DZ CAROUSEL JS -->
+    <script src="js/dz.carousel.js"></script>
+    <script>
+  var swiper = new Swiper('.swiper-four', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+  });
+</script><!-- DZ CAROUSEL JS -->
     <script src="vendor/lightgallery/dist/lightgallery.min.js"></script>
     <script src="vendor/lightgallery/dist/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <script src="vendor/lightgallery/dist/plugins/zoom/lg-zoom.min.js"></script>
@@ -154,7 +172,12 @@
         integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipuiaD5ymEo9520lyoVOo9jCQOCA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+     
     <script>
+
+
+
+
         function showYouTubeVideo() {
             // Get the YouTube URL from the data attribute
             var youtubeUrl = document.getElementById('ytbplay').getAttribute('data-url');
