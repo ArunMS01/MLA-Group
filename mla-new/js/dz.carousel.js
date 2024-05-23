@@ -148,12 +148,14 @@ var MoonCartCarousel = function(){
 			});
 		}
 	}
+	// Swiper Four ==
+	
 	
 	//  Swiper Five ==
 	var handleSwiperFive = function() {	
 		if(jQuery('.swiper-five').length > 0){
 			var swiper = new Swiper( '.swiper-five', {
-				slidesPerView: 1,
+				slidesPerView: 3,
 				spaceBetween: 20,
 				loop: true,
 				autoplay: {

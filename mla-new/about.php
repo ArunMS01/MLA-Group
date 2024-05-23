@@ -1643,7 +1643,7 @@ overflow: hidden;
       <div class="col-lg-12 mbuiti-6" style="overflow: hidden">
         <div class="outside-box-right-25">
           <div class="swiper-btn-center-lr appslider">
-            <div class="swiper swiper-four">
+            <div class="swiper swiper-blog-post">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="wow fadeInUp" data-wow-delay="0.4s">
