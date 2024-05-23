@@ -795,11 +795,17 @@ foreach ($related_product_ids as $product_id) {
                 .content-inner-3 {
                     padding-top: 40px;
                 }
+                .detail-bx .feature-detail{
+                    flex-wrap: wrap;
+                    align-items: normal !important;
+                    flex-direction: column;
+                }
             </style>
 
 <?php
 // Fetch brands from the database
-echo $query = "SELECT id, name FROM brand";
+
+ $query = "SELECT id, name, logo FROM brand";
 $result = mysqli_query($conn, $query);
 
 // Initialize an array to store the brands
@@ -815,7 +821,7 @@ if ($result && mysqli_num_rows($result) > 0) {
 
 // Fetch products for each brand
 foreach ($brands as $brandId => $brand) {
-   echo $query = "SELECT id, title,url FROM products WHERE brand_id = $brandId";
+$query = "SELECT id, title, url FROM products WHERE brand = $brandId";
     $result = mysqli_query($conn, $query);
 
     // Initialize an array to store products for this brand
@@ -833,7 +839,7 @@ foreach ($brands as $brandId => $brand) {
     $brands[$brandId]['products'] = $products;
 }
 
-// Close the database connection
+// Close the database connectio
 mysqli_close($conn);
 
 // Now $brands array contains all brands with their associated products
@@ -841,89 +847,82 @@ mysqli_close($conn);
            
 <!--Recommend Section Start-->
 <section class="content-inner-1 bg-light">
-    <div class="container">
+<div class="container">
         <h3 class="title text-center mb-4">RANGE OF PRODUCTS</h3>
-        <div class="site-filters clearfix d-flex align-items-center wow fadeInUp justify-content-center"
-            data-wow-delay="0.1s">
-            <!-- Brand list will be dynamically generated here -->
-            <ul class="filters" data-bs-toggle="buttons" id="brand-list">
-                <!-- Brands will be populated dynamically -->
+        <div class="site-filters clearfix d-flex align-items-center justify-content-center">
+            <ul class="filters" data-bs-toggle="buttons">
+                <?php foreach ($brands as $brand): ?>
+                    <li class="btn btth" data-brand="brand-<?php echo $brand['id']; ?>">
+                        <input type="radio" name="brand">
+                        <a href="javascript:void(0);"><?php echo htmlspecialchars($brand['name']); ?></a>
+                    </li>
+                <?php endforeach; ?>
             </ul>
         </div>
 
-        <!-- Product list will be dynamically generated here -->
-        <div id="product-list">
-            <!-- Products will be populated dynamically -->
-        </div>
+        <?php foreach ($brands as $brand): ?>
+            <div class="tab-content" id="brand-<?php echo $brand['id']; ?>">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <img style="display: block; margin: auto;" src="<?php echo htmlspecialchars($brand['logo']); ?>" class="mt-4 mb-4">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row gx-xl-4 g-3">
+                            <?php foreach ($brand['products'] as $product): ?>
+                                <div class="col-md-3">
+                                    <div class="widget widget_categories style-1">
+                                        <ul>
+                                            <li class="cat-item"><a href="<?php echo htmlspecialchars($product['url']); ?>"><?php echo htmlspecialchars($product['title']); ?></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+
     </div>
-</section>
-<script>
-    // PHP-generated data containing brands and associated products
-    var brands = <?php echo json_encode($brands); ?>;
 
-    // Function to populate the brand list
-    function populateBrandList() {
-        var brandList = document.getElementById("brand-list");
-        for (var brandId in brands) {
-            var brand = brands[brandId];
-            var li = document.createElement("li");
-            li.classList.add("btn", "btth");
-            var a = document.createElement("a");
-            a.href = "javascript:void(0);";
-            a.innerText = brand.name;
-            // Add click event listener to show products for the selected brand
-            a.addEventListener("click", (function (id) {
-                return function () {
-                    showProducts(id);
-                };
-            })(brandId));
-            li.appendChild(a);
-            brandList.appendChild(li);
+  
+    </section>
+    <style>
+        .product-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-    }
 
-    // Function to show products for the selected brand
-    function showProducts(brandId) {
-        var products = brands[brandId].products;
-        var productListDiv = document.getElementById("product-list");
-        productListDiv.innerHTML = ""; // Clear previous products
-        // Create a new row for each product
-        products.forEach(function (product) {
-            var row = document.createElement("div");
-            row.classList.add("row", "align-items-center");
-            // Create columns for product details
-            var col1 = document.createElement("div");
-            col1.classList.add("col-md-3");
-            var img = document.createElement("img");
-            img.setAttribute("src", product.logo);
-            img.classList.add("mt-4", "mb-4", "mix-blend-mode");
-            col1.appendChild(img);
-            row.appendChild(col1);
-            var col2 = document.createElement("div");
-            col2.classList.add("col-md-9");
-            var widget = document.createElement("div");
-            widget.classList.add("widget", "widget_categories", "style-1");
-            var ul = document.createElement("ul");
-            var li = document.createElement("li");
-            li.classList.add("cat-item");
-            var a = document.createElement("a");
-            a.setAttribute("href", product.url);
-            a.innerText = product.name;
-            li.appendChild(a);
-            ul.appendChild(li);
-            widget.appendChild(ul);
-            col2.appendChild(widget);
-            row.appendChild(col2);
-            productListDiv.appendChild(row);
-        });
-    }
+        .product-item {
+            flex: 0 0 calc(25% - 20px);
+            margin: 10px;
+        }
 
-    // Call the function to populate the brand list on page load
-    window.onload = function () {
-        populateBrandList();
-    };
-</script>
+        .shop-card {
+            border: 1px solid #ccc;
+            padding: 15px;
+        }
 
+        .shop-card .title {
+            margin-bottom: 10px;
+        }
+
+        .shop-card .btn {
+            width: 100%;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
 
 
 <style>
@@ -1198,3 +1197,31 @@ border-top: 1px solid #FE8F34;
 </script>
 
 <?php include('footer.php');?>
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.filters .btn');
+            const contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    tabs.forEach(item => item.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const brand = this.getAttribute('data-brand');
+                    contents.forEach(content => {
+                        if (content.id === brand) {
+                            content.classList.add('active');
+                        } else {
+                            content.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            // Initialize the first tab as active
+            if (tabs.length > 0) {
+                tabs[0].click();
+            }
+        });
+    </script>
