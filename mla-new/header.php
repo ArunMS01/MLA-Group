@@ -113,27 +113,27 @@
 							</div>
 							<ul class="nav navbar-nav dark-nav">
 								<li class="has-mega-menu ">
-									<a href="javascript:void(0);"><span>Home</span></a>
+									<a href="./"><span>Home</span></a>
 
 								</li>
 
 								<li class="has-mega-menu ">
-									<a href="javascript:void(0);"><span>About Us</span></a>
+									<a href="about.php"><span>About Us</span></a>
 
 								</li>
 
 								<li class="has-mega-menu ">
-									<a href="javascript:void(0);"><span>R & D</span></a>
+									<a href="r&d.php"><span>R & D</span></a>
 
 								</li>
 
 								<li class="has-mega-menu ">
-									<a href="javascript:void(0);"><span>quality</span></a>
+									<a href="qc.php"><span>quality</span></a>
 
 								</li>
 
 								<li class="has-mega-menu ">
-									<a href="javascript:void(0);"><span>Manufacturing</span></a>
+									<a href="manufacturing.php"><span>Manufacturing</span></a>
 
 								</li>
 
@@ -223,7 +223,7 @@
 
 								</li>
 
-								<li><a href="#">Contact Us</a></li>
+								<li><a href="contactus.php">Contact Us</a></li>
 							</ul>
 							<div class="dz-social-icon">
 								<ul>

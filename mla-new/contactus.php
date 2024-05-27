@@ -248,114 +248,27 @@
 </style>
 <section class="contact-page-sec">
     <div class="container">
-        <div class="row">
-            <div class="col-md-2">
-                <div class="contact-info">
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                            <i class="fas fa-map-marked"></i>
-                        </div>
-                        <div class="contact-info-text">
-                            <h2>MLA GROUP OF INDUSTRIES</h2>
-                        
-                            <span>111/230, Harsh Nagar</span>
-                            <span>Kanpur-208012 (INDIA) </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="contact-info">
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-info-text">
-                            <h2>DIRECTOR (MARKETING)</h2>
-                            <span>Mr. Sumit Agarwal   </span>
-                            <span> +91-512-2555292</span><span> +91-9336116592</span><span> md@mlagroup.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="contact-info">
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                        <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-info-text">
-                            <h2>DIRECTOR (FACTORY)
- </h2>
-                            <span>Mr. Abhishek Kanodia -</span>
-                            <span>+91-7985284355 </span><span> ceo@mlagroup.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="contact-info">
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                        <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-info-text">
-                            <h2>GENERAL ADMINISTRATION</h2>
-                            <span>Director (Admin) </span><span> Mr Saurabh Agarwal </span>
-                            <span> +91-9336849137 </span><span> saurabh@mlagroup.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="contact-info">
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                        <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-info-text">
-                            <h2>PURCHASE</h2>
-                            <span>Mr Suraj Agarwal</span>
-                            <span>+91-9335091069 </span><span> purchase@mlagroup.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="contact-info">
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                        <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-info-text">
-                            <h2>RECRUITMENTS</h2>
-                            <span>mayur@mlagroup.com</span>
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      
         <div class="row">
             <!-- Add a div for the custom loading animation -->
 <div id="loadingOverlay" class="loading-overlay">
     <div class="loading-spinner"></div>
 </div>
 
-            <div class="col-md-8">
-                <div class="contact-page-form" method="post">
+            <div class="col-md-6 ">
+                <div class="contact-page-form" style="position: sticky; top:6vw" method="post">
                     <h2>Get in Touch</h2>
                     <form id="contactForm" action="contact-mail.php" method="post">
     <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="single-input-field">
-                <input type="text" placeholder="Your Name" name="name" id="name" required />
+                <input type="text" placeholder="Your Name" name="name" id="name" maxlength="30" required />
                 <div class="invalid-feedback" id="nameError">Please enter your name.</div>
             </div>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="single-input-field">
-                <input type="email" placeholder="E-mail" name="email" id="email" required />
+                <input type="email" placeholder="E-mail" name="email" id="email" maxlength="100" required />
                 <div class="invalid-feedback" id="emailError">Please enter a valid email address.</div>
             </div>
         </div>
@@ -367,8 +280,32 @@
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="single-input-field">
-                <input type="text" placeholder="Company Name" name="subject" id="subject" />
-                <div class="invalid-feedback" id="subjectError">Please enter a subject.</div>
+                <input type="text" placeholder="Company Name" name="company" id="company" />
+                <div class="invalid-feedback" id="companyError">Please enter your company name.</div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="single-input-field">
+                <input type="text" placeholder="Mailing Address" name="address" id="address" />
+                <div class="invalid-feedback" id="addressError">Please enter your mailing address.</div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="single-input-field">
+                <input type="text" placeholder="City" name="city" id="city" maxlength="30" />
+                <div class="invalid-feedback" id="cityError">Please enter your city.</div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="single-input-field">
+                <input type="text" placeholder="Zip or Postal Code" name="zip" id="zip" maxlength="100" />
+                <div class="invalid-feedback" id="zipError">Please enter your zip or postal code.</div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="single-input-field">
+                <input type="text" placeholder="Country" name="country" id="country" />
+                <div class="invalid-feedback" id="countryError">Please enter your country.</div>
             </div>
         </div>
         <div class="col-md-12 message-input">
@@ -383,15 +320,95 @@
 </form>
 
 
+
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
+    <div class="contact-card">
+        <div class="contact-page-map">
+            <div class="company-details">
+                <h3>MLA GROUP OF INDUSTRIES</h3>
+                <p>111/230, Harsh Nagar, Kanpur-208012 (INDIA)</p>
+                <p><strong>OFFICIAL WEBSITE:</strong> <a href="http://www.mlagroup.com">www.mlagroup.com</a></p>
+                
+                <div class="contact-section">
+                    <h4>DIRECTOR (MARKETING)</h4>
+                    <p>Mr. Sumit Agarwal - +91-512-2555292, +91-9336116592, <a href="mailto:md@mlagroup.com">md@mlagroup.com</a></p>
+                </div>
+                
+                <div class="contact-section">
+                    <h4>DIRECTOR (FACTORY)</h4>
+                    <p>Mr. Abhishek Kanodia - +91-7985284355, <a href="mailto:ceo@mlagroup.com">ceo@mlagroup.com</a></p>
+                </div>
+                
+                <div class="contact-section">
+                    <h4>GENERAL ADMINISTRATION</h4>
+                    <p>Director (Admin): Mr Saurabh Agarwal - +91-9336849137, <a href="mailto:saurabh@mlagroup.com">saurabh@mlagroup.com</a></p>
+                </div>
+                
+                <div class="contact-section">
+                    <h4>PURCHASE</h4>
+                    <p>Mr Suraj Agarwal - +91-9335091069, <a href="mailto:purchase@mlagroup.com">purchase@mlagroup.com</a></p>
+                </div>
+                
+                <div class="contact-section">
+                    <h4>RECRUITMENTS</h4>
+                    <p><a href="mailto:mayur@mlagroup.com">mayur@mlagroup.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</section>
+<style>
+    .contact-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f3ae7a4d;
+    margin-bottom: 20px;
+}
+
+.contact-section {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+
+.contact-section h4 {
+    margin-top: 0;
+}
+
+.contact-section p {
+    margin: 0;
+}
+
+.contact-section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+</style>
+<section>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-12">
                 <div class="contact-page-map">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.4163711398887!2d80.32400779999999!3d26.474535499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c388727bd6145%3A0x41ce7b980d8d7102!2s111%2F230%2C%20Brahm%20Nagar%2C%20Harsh%20Nagar%2C%20Kanpur%2C%20Uttar%20Pradesh%20208012!5e0!3m2!1sen!2sin!4v1716287526134!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
             </div>
         </div>
     </div>
 </section>
+
+
 <style>
     /* CSS for the loading overlay */
 .loading-overlay {
@@ -450,7 +467,7 @@
         }
     </style>
 <script>
-    // Function to validate email address
+// Function to validate email address
 function isValidEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
 }
@@ -465,7 +482,12 @@ function validateForm() {
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
-    var subject = document.getElementById("subject").value;
+    var company = document.getElementById("company").value;
+    var address = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var zip = document.getElementById("zip").value;
+    var country = document.getElementById("country").value;
+    var message = document.getElementById("message").value;
 
     var isValid = true;
 
@@ -490,17 +512,51 @@ function validateForm() {
         document.getElementById("phoneError").style.display = "none";
     }
 
-    if (subject.trim() === "") {
-        document.getElementById("subjectError").style.display = "block";
+    if (company.trim() === "") {
+        document.getElementById("companyError").style.display = "block";
         isValid = false;
     } else {
-        document.getElementById("subjectError").style.display = "none";
+        document.getElementById("companyError").style.display = "none";
+    }
+
+    if (address.trim() === "") {
+        document.getElementById("addressError").style.display = "block";
+        isValid = false;
+    } else {
+        document.getElementById("addressError").style.display = "none";
+    }
+
+    if (city.trim() === "") {
+        document.getElementById("cityError").style.display = "block";
+        isValid = false;
+    } else {
+        document.getElementById("cityError").style.display = "none";
+    }
+
+    if (zip.trim() === "") {
+        document.getElementById("zipError").style.display = "block";
+        isValid = false;
+    } else {
+        document.getElementById("zipError").style.display = "none";
+    }
+
+    if (country.trim() === "") {
+        document.getElementById("countryError").style.display = "block";
+        isValid = false;
+    } else {
+        document.getElementById("countryError").style.display = "none";
+    }
+
+    if (message.trim() === "") {
+        document.getElementById("messageError").style.display = "block";
+        isValid = false;
+    } else {
+        document.getElementById("messageError").style.display = "none";
     }
 
     return isValid;
 }
 
-// Function to handle form submission
 // Function to handle form submission
 function submitForm(event) {
     event.preventDefault();
@@ -514,14 +570,16 @@ function submitForm(event) {
     submitButton.value = "Submitting...";
     submitButton.disabled = true;
 
-    // Show the loading overlay
+    // Show the loading overlay (if exists)
     var loadingOverlay = document.getElementById("loadingOverlay");
-    loadingOverlay.style.display = "block";
+    if (loadingOverlay) {
+        loadingOverlay.style.display = "block";
+    }
 
     var formData = new FormData(document.getElementById("contactForm"));
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "submit_form.php", true);
+    xhr.open("POST", "contact-mail.php", true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
@@ -544,12 +602,18 @@ function submitForm(event) {
             submitButton.disabled = false;
 
             // Hide the loading overlay
-            loadingOverlay.style.display = "none";
+            if (loadingOverlay) {
+                loadingOverlay.style.display = "none";
+            }
         }
     };
     xhr.send(formData);
 }
 
+document.getElementById("contactForm").addEventListener("submit", submitForm);
+</script>
+
+<script>
 // Function to show success message
 function showSuccessMessage() {
     var successMessage = document.createElement("div");

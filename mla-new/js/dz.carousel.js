@@ -155,7 +155,7 @@ var MoonCartCarousel = function(){
 	var handleSwiperFive = function() {	
 		if(jQuery('.swiper-five').length > 0){
 			var swiper = new Swiper( '.swiper-five', {
-				slidesPerView: 3,
+				slidesPerView: 1,
 				spaceBetween: 20,
 				loop: true,
 				autoplay: {
