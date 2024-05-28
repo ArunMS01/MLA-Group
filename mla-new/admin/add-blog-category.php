@@ -300,6 +300,9 @@ include('inc/header.php') ?>
             .validation-error{
                 color: red;
             }
+            #messages{
+                color: red;
+            }
         </style>
         <!-- partial -->
         <div class="main-panel">
@@ -309,6 +312,7 @@ include('inc/header.php') ?>
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">  Add Category </h4>
+                                <p id="messages"></p>
                                 <p class="card-description">
                                     <!-- Basic form layout -->
                                 </p>
