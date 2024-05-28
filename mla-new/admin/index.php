@@ -186,6 +186,24 @@ include('inc/header.php') ?>
             </div>
           </li>
           <li class="nav-item">
+    <a class="nav-link" data-toggle="collapse" href="#blog-elements" aria-expanded="false"
+      aria-controls="blog-elements">
+      <i class="icon-columns menu-icon"></i>
+      <span class="menu-title">Blog</span>
+      <i class="menu-arrow"></i>
+    </a>
+    <div class="collapse" id="blog-elements">
+      <ul class="nav flex-column sub-menu">
+        <li class="nav-item"><a class="nav-link" href="add-blog-category.php">Add a Category</a></li>
+        <li class="nav-item"><a class="nav-link" href="all-blog-category-list.php"> Manage  Category</a></li>
+        <li class="nav-item"><a class="nav-link" href="add-single-blog-post.php"> Add New Post</a></li>
+        <li class="nav-item"><a class="nav-link" href="all-blog-post.php"> Manage Posts</a></li>
+      </ul>
+    </div>
+</li>
+
+
+          <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
               <i class="icon-bar-graph menu-icon"></i>
               <span class="menu-title">Enqueries</span>
