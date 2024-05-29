@@ -119,27 +119,27 @@
                             </div>
                             <ul class="nav navbar-nav dark-nav">
                                 <li class="has-mega-menu ">
-                                    <a href="javascript:void(0);"><span>Home</span></a>
+                                    <a  href="javascript:void(0);"><span class="bleft">Home</span></a>
 
                                 </li>
 
                                 <li class="has-mega-menu ">
-                                    <a href="javascript:void(0);"><span>About Us</span></a>
+                                    <a  href="javascript:void(0);"><span class="bleft">About Us</span></a>
 
                                 </li>
 
                                 <li class="has-mega-menu ">
-                                    <a href="javascript:void(0);"><span>R & D</span></a>
+                                    <a  href="javascript:void(0);"><span class="bleft">R & D</span></a>
 
                                 </li>
 
                                 <li class="has-mega-menu ">
-                                    <a href="javascript:void(0);"><span>quality</span></a>
+                                    <a  href="javascript:void(0);"><span class="bleft">quality</span></a>
 
                                 </li>
 
                                 <li class="has-mega-menu ">
-                                    <a href="javascript:void(0);"><span>Manufacturing</span></a>
+                                    <a  href="javascript:void(0);"><span  class="bleft">Manufacturing</span></a>
 
                                 </li>
 
@@ -148,7 +148,7 @@
 
 
                                 <li class="has-mega-menu sub-menu-down">
-                                    <a href="javascript:void(0);"><span>Our Services</span></a>
+                                    <a  href="javascript:void(0);"><span class="bleft">Our Services</span></a>
                                     <!--<div class="mega-menu shop-menu">-->
                                     <!--	<div class="row">-->
                                     <!--		<div class="col-lg-12 col-md-12 col-sm-12">-->
@@ -225,11 +225,11 @@
                                     <!--	</div>-->
                                     <!--</div>-->
                                 </li>
-                                <li class="has-mega-menu"><a href="javascript:void(0);"><span>Products</span></a>
+                                <li class="has-mega-menu"><a  href="javascript:void(0);"><span class="bleft">Products</span></a>
 
                                 </li>
 
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a  href="#">Contact Us</a></li>
                             </ul>
                             <div class="dz-social-icon">
                                 <ul>
@@ -401,6 +401,9 @@
                 }
 
                 @media only screen and (max-width:768px) {
+                     .bleft::after{
+			        display:none;
+			    }
                     .abtsec {
                         padding: 36px 0 22px 0 !important;
                     }
@@ -479,7 +482,7 @@
                         align-items: center;
                         display: flex;
                         padding: 50px 30px;
-                        background-color: #00000030;
+                        /*background-color: #00000030;*/
                         bottom: 0;
                         /* text-align: center; */
                         text-transform: uppercase;
@@ -487,18 +490,13 @@
                         letter-spacing: 0.175rem;
                     }
 
-                    .gallery .content span {
-                        font-size: clamp(1.85rem, 1.7053rem + 0.5447vw, 2.25rem);
-                        font-weight: 300;
-                        display: block;
-                        margin-bottom: -0.625rem;
-                    }
+                   
 
                     .gallery .content h1 {
                         font-size: 2.5rem;
                         font-weight: 600;
                         margin-inline: -0.313rem;
-                        color: #fff;
+                        color: #000;
                     }
 
                     .gallery .content p {
@@ -659,7 +657,7 @@
                         /* Creates the typing cursor effect */
                         /* white-space: nowrap; */
                         width: 50%;
-                        margin-left: 100px;
+                        margin-left: 37px;
                         /* Prevents the text from wrapping */
                         /* animation: typing 3s steps(40, end), fadein 2s 3s forwards; */
                         /* Animation for typing and fade in */
@@ -719,7 +717,7 @@
                         left: 0;
                         top: 0;
                         position: absolute;
-                        border: 4px solid #fff;
+                        border: 4px solid #e97f2f;
                         -webkit-clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
                         clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
                     }
@@ -727,7 +725,7 @@
                     #typing-text {
                         position: relative;
                         padding: 50px;
-                        background: #eb823399;
+                        /*background: #eb823399;*/
                     }
                 </style>
 
@@ -737,15 +735,14 @@
 
                             <!-- <h1 class="wow fadeInUp">Chemical Manufacturing Complex Situated In Kanpur</h1> -->
                             <h1 id="typing-text">
-                                <div class="line"></div> Chemical Manufacturing Complex Situated In Kanpur
+                                <div class="line"></div> Chemical <span style="color:#e97f2f">Manufacturing</span>  Complex Situated In Kanpur
                             </h1>
 
-                            <hr>
                         </div>
 
                         <div class="swiper-container gallery-slider">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="images/p6.jpeg"
+                                <div class="swiper-slide"><img src="images/bdhjdj.jpg"
                                         alt="Man sitting on a stone on the lake"></div>
                                 <!-- <div class="swiper-slide"><img
                                         src="images/p1.jpeg"
@@ -907,14 +904,17 @@
                 }
 
                 @media only screen and (max-width:768px) {
+                    .gallery .content{
+                            padding: 50px 9px;
+                    }
                     .gallery .content h1 {
-                        font-size: 1.5rem;
+                        font-size: 1.2rem;
 
                     }
 
                     #typing-text {
                         width: 100%;
-                        padding: 24px;
+                        padding: 15px;
                         margin-left: 0;
                     }
 
@@ -1629,11 +1629,11 @@ overflow: hidden;
         }
 
         .application-tab:before {
-            opacity: 0.2;
+            opacity: 0.1;
         }
     </style>
     <section class="content-inner application-tab overlay-black-light pbt-100"
-        style="background-image: linear-gradient(45deg, #e1e1e1cc, #f4f4f4e0), url(https://images.unsplash.com/photo-1546185058-592ead754d27?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); background-repeat: no-repeat; background-size: cover;">
+        style="background-image:url(images/appit.jpg); background-repeat: no-repeat; background-size: cover;background-position: bottom;">
         <div class="container">
             <div class="row about-style2 align-items-xl-center align-items-start wow fadeInUp" data-wow-delay="0.2s">
                 <div class="col-lg-3 ">
@@ -1944,6 +1944,16 @@ overflow: hidden;
                 white-space: pre-wrap;
             }
         }
+       .bleft{
+           position:relative;
+       } 
+       .bleft::after {
+               position: absolute;
+    content: "";
+    height: 23px;
+    border-right: 1px solid #f2aa75;
+    right: -22px;
+    }
     </style>
     <!-- Footer -->
     <footer class="site-footer style-1 bg-light b-1">
@@ -1977,12 +1987,12 @@ overflow: hidden;
                         <div class="widget widget_services">
                             <h5 class="footer-title">Quick Links</h5>
                             <ul>
-                                <li><a href="javascript:void(0);">Home</a></li>
-                                <li><a href="javascript:void(0);">About Us</a></li>
-                                <li><a href="javascript:void(0);">R & D</a></li>
-                                <li><a href="javascript:void(0);">quality</a></li>
-                                <li><a href="javascript:void(0);">Manufacturing</a></li>
-                                <li><a href="javascript:void(0);">Contact Us</a></li>
+                                <li><a class="bleft" href="javascript:void(0);">Home</a></li>
+                                <li><a class="bleft" href="javascript:void(0);">About Us</a></li>
+                                <li><a class="bleft" href="javascript:void(0);">R & D</a></li>
+                                <li><a class="bleft" href="javascript:void(0);">quality</a></li>
+                                <li><a class="bleft" href="javascript:void(0);">Manufacturing</a></li>
+                                <li><a  href="javascript:void(0);">Contact Us</a></li>
 
                             </ul>
                         </div>

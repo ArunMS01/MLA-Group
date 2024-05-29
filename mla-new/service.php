@@ -1,4 +1,18 @@
-<?php include('header.php'); ?>
+<?php
+include('head.php');
+?>
+<title>MLA</title>
+<meta name="description" content="">
+</head>
+
+<body>
+    <?php
+    include('gtm.php')
+    ?>
+    <div class="page-wraper">
+    <?php
+        include('nav.php');
+        ?>
 <style>
     .left-banner .content {
         height: 11.2rem;
@@ -262,7 +276,7 @@
         </div>
     </div>
 </section>
-
+    </div>
 
 
 

@@ -1,6 +1,26 @@
-<?php include('header.php'); ?>
+<?php
+include('head.php');
+?>
+<title>MLA</title>
+<meta name="description" content="">
+</head>
 
+<body>
+    <?php
+    include('gtm.php')
+    ?>
+    <div class="page-wraper">
+        <!-- <div id="loading-area" class="preloader-wrapper-1">
+		<div>
+			<span class="loader-2"></span>
+			<img src="images/logo.png" alt="/">
+			<span class="loader"></span>
+		</div>
+	</div> -->
 
+        <?php
+        include('nav.php');
+        ?>
 
 <style>
     .radius img {
@@ -520,5 +540,7 @@
     </div>
   </div>
 </section>
+
+    </div>
 
 <?php include('footer.php'); ?>'
