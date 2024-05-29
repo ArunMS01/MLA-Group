@@ -1,4 +1,28 @@
-<?php include('header.php')?>
+<?php
+include('head.php');
+?>
+<title>MLA</title>
+<meta name="description" content="">
+</head>
+
+<body>
+    <?php
+    include('gtm.php')
+    ?>
+    <div class="page-wraper">
+        <!-- <div id="loading-area" class="preloader-wrapper-1">
+		<div>
+			<span class="loader-2"></span>
+			<img src="images/logo.png" alt="/">
+			<span class="loader"></span>
+		</div>
+	</div> -->
+
+        <?php
+        include('nav.php');
+        ?>
+
+		
 
 
 
@@ -7,7 +31,7 @@
   .organization-section {
     background-image: url('./images/aboutus/map-text-background-new.png');
     /* Replace with your background image path */
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     padding: 100px 0;
   }
@@ -87,8 +111,12 @@
 	}
 	@media only screen and (max-width: 768px) {
 		.mobile-gap{
-			gap: 118px;
+			gap: 137px;
 		}
+
+		/* .mobile-gap .col-md-3{
+			width: 50%;
+		} */
 		
 	}
 </style>
@@ -169,7 +197,7 @@
 	</div>
 	<div class="service-page-sec pt-150 ">
 		<div class="container">
-			<div class="row">			
+			<div class="row mobile-gap">			
 				<!-- Service Item Block Start -->		
 				<div class="col-md-3 col-sm-6">
 					<div class="inner service-v2">
@@ -237,7 +265,7 @@
 
 	<div class="service-page-sec pt-150 ">
 		<div class="container">
-			<div class="row">			
+			<div class="row mobile-gap">			
 				<!-- Service Item Block Start -->		
 				<div class="col-md-3 col-sm-6">
 					<div class="inner service-v2">
@@ -305,7 +333,7 @@
 
 	<div class="service-page-sec pt-150 pb-150">
 		<div class="container">
-			<div class="row">			
+			<div class="row mobile-gap">			
 			
 			
 				<div class="col-md-3 col-sm-6">
@@ -341,7 +369,7 @@
 			</div>
 		</div>		
 	</div>
-
+	</div>
 
 
 

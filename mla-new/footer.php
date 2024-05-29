@@ -1,129 +1,121 @@
-        <!-- Footer -->
-        <footer class="site-footer style-1 bg-light b-1">
-            <!-- Footer Top -->
-            <div class="footer-top">
-                <div class="container">
-                    <div class="row ">
-                        <div class="col-xl-3 col-md-3 col-sm-6">
-                            <div class="widget widget_about me-2">
-                                <div class="footer-logo logo-white">
-                                    <a href="#"><img src="images/logo-MLA.png" alt="/"></a>
-                                </div>
-                                <ul class="widget-address">
-                                    <li>
-                                        <p><span>Address</span> : 111/230, Harsh Nagar, Kanpur-208012 (INDIA) </p>
-                                    </li>
-                                    <li>
-                                        <p><span>E-mail</span> :<a href="mailto:md@mlagroup.com"> md@mlagroup.com</a>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p><span>Phone</span> : <a href="+91-9336116592">+91-9336116592 </a>,<a
-                                                href="+91-512-2555292"> +91-512-2555292</a></p>
-                                    </li>
-                                </ul>
-
+<footer class="site-footer style-1 bg-light b-1">
+        <!-- Footer Top -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-xl-3 col-md-3 col-sm-6">
+                        <div class="widget widget_about me-2">
+                            <div class="footer-logo logo-white">
+                                <a href="/"><img src="images/logo-MLA.png" alt="/"></a>
                             </div>
+                            <ul class="widget-address">
+                                <li>
+                                    <p><span>Address</span> : 111/230, Harsh Nagar, Kanpur-208012 (INDIA) </p>
+                                </li>
+                                <li>
+                                    <p><span>E-mail</span> :<a href="mailto:md@mlagroup.com"> md@mlagroup.com</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><span>Phone</span> : <a href="tel:+91-9336116592">+91-9336116592 </a>,<a href="tel:+91-512-2555292"> +91-512-2555292</a></p>
+                                </li>
+                            </ul>
+
                         </div>
+                    </div>
 
-                        <div class="col-xl-3 col-md-3 col-sm-4 col-6">
-                            <div class="widget widget_services">
-                                <h5 class="footer-title">Quick Links</h5>
-                                <ul>
-                                    <li><a href="javascript:void(0);">Home</a></li>
-                                    <li><a href="javascript:void(0);">About Us</a></li>
-                                    <li><a href="javascript:void(0);">R & D</a></li>
-                                    <li><a href="javascript:void(0);">quality</a></li>
-                                    <li><a href="javascript:void(0);">Manufacturing</a></li>
-                                    <li><a href="javascript:void(0);">Contact Us</a></li>
+                    <div class="col-xl-3 col-md-3 col-sm-4 col-6">
+                        <div class="widget widget_services">
+                            <h5 class="footer-title">Quick Links</h5>
+                            <ul>
+                                <li><a class="bleft" href="/">Home</a></li>
+                                <li><a class="bleft" href="about.php">About Us</a></li>
+                                <li><a class="bleft" href="r&d.php">R & D</a></li>
+                                <li><a class="bleft" href="qc.php">quality</a></li>
+                                <li><a class="bleft" href="manufacturing.php">Manufacturing</a></li>
+                                <li><a href="contactus.php">Contact Us</a></li>
 
-                                </ul>
-                            </div>
+                            </ul>
                         </div>
-                        <div class="col-xl-6 col-md-6 col-sm-4 col-6">
-                            <div class="widget widget_services">
-                                <h5 class="footer-title">We exhibit at</h5>
-                                <div class="section-inner">
+                    </div>
+                    <div class="col-xl-6 col-md-6 col-sm-4 col-6">
+                        <div class="widget widget_services">
+                            <h5 class="footer-title">We exhibit at</h5>
+                            <div class="section-inner">
 
-                                    <div class="row gx-3 companies-inner ">
-                                        <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp "
-                                            data-wow-delay="0.1s">
-                                            <a href="javascript:void(0);" class="companies-wrapper">
-                                                <div class="companies-media">
-                                                    <img src="images/01.jpg" alt="" class="logo-foot">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp"
-                                            data-wow-delay="0.2s">
-                                            <a href="javascript:void(0);" class="companies-wrapper">
-                                                <div class="companies-media">
-                                                    <img src="images/02.jpg" alt="" class="logo-foot">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp"
-                                            data-wow-delay="0.3s">
-                                            <a href="javascript:void(0);" class="companies-wrapper">
-                                                <div class="companies-media">
-                                                    <img src="images/03.jpg" alt="" class="logo-foot">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp"
-                                            data-wow-delay="0.4s">
-                                            <a href="javascript:void(0);" class="companies-wrapper">
-                                                <div class="companies-media">
-                                                    <img src="images/04.jpg" alt="" class="logo-foot">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp"
-                                            data-wow-delay="0.5s">
-                                            <a href="javascript:void(0);" class="companies-wrapper">
-                                                <div class="companies-media">
-                                                    <img src="images/05.jpg" alt="" class="logo-foot">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp"
-                                            data-wow-delay="0.6s">
-                                            <a href="javascript:void(0);" class="companies-wrapper">
-                                                <div class="companies-media">
-                                                    <img src="images/06.jpg" alt="" class="logo-foot">
-                                                </div>
-                                            </a>
-                                        </div>
-
+                                <div class="row gx-3 companies-inner ">
+                                    <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp " data-wow-delay="0.1s">
+                                        <a href="javascript:void(0);" class="companies-wrapper">
+                                            <div class="companies-media">
+                                                <img src="images/01.jpg" alt="" class="logo-foot">
+                                            </div>
+                                        </a>
                                     </div>
+                                    <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.2s">
+                                        <a href="javascript:void(0);" class="companies-wrapper">
+                                            <div class="companies-media">
+                                                <img src="images/02.jpg" alt="" class="logo-foot">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.3s">
+                                        <a href="javascript:void(0);" class="companies-wrapper">
+                                            <div class="companies-media">
+                                                <img src="images/03.jpg" alt="" class="logo-foot">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.4s">
+                                        <a href="javascript:void(0);" class="companies-wrapper">
+                                            <div class="companies-media">
+                                                <img src="images/04.jpg" alt="" class="logo-foot">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.5s">
+                                        <a href="javascript:void(0);" class="companies-wrapper">
+                                            <div class="companies-media">
+                                                <img src="images/05.jpg" alt="" class="logo-foot">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
+                                        <a href="javascript:void(0);" class="companies-wrapper">
+                                            <div class="companies-media">
+                                                <img src="images/06.jpg" alt="" class="logo-foot">
+                                            </div>
+                                        </a>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
-
                     </div>
+
                 </div>
             </div>
-            <!-- Footer Top End -->
+        </div>
+        <!-- Footer Top End -->
 
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="row fb-inner">
-                        <div class="col-lg-12 col-md-12 text-start">
-                            <p class="copyright-text">Copyright © MLA Group of Industries 2024 </p>
-                        </div>
-
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row fb-inner">
+                    <div class="col-lg-12 col-md-12 text-start">
+                        <p class="copyright-text">Copyright © MLA Group of Industries 2024 </p>
                     </div>
+
                 </div>
             </div>
-            <!-- Footer Bottom End -->
+        </div>
+        <!-- Footer Bottom End -->
 
-        </footer>
-        <!-- Footer End -->
+    </footer>
+    <!-- Footer End -->
 
-        <button class="scroltop" type="button"><i class="fas fa-arrow-up"></i></button>
+    <button class="scroltop" type="button"><i class="fas fa-arrow-up"></i></button>
 
-    
+
     </div>
 
     <!-- JAVASCRIPT FILES ========================================= -->
@@ -142,25 +134,7 @@
     <script src="vendor/countdown/jquery.countdown.js"></script><!-- COUNTDOWN FUCTIONS  -->
     <script src="vendor/wnumb/wNumb.js"></script><!-- WNUMB -->
     <script src="vendor/nouislider/nouislider.min.js"></script><!-- NOUSLIDER MIN JS-->
-    <script src="js/dz.carousel.js"></script>
-    <script>
-  var swiper = new Swiper('.swiper-four', {
-    slidesPerView: 2,
-    spaceBetween: 30,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-  });
-</script><!-- DZ CAROUSEL JS -->
+    <script src="js/dz.carousel.js"></script><!-- DZ CAROUSEL JS -->
     <script src="vendor/lightgallery/dist/lightgallery.min.js"></script>
     <script src="vendor/lightgallery/dist/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <script src="vendor/lightgallery/dist/plugins/zoom/lg-zoom.min.js"></script>
@@ -168,14 +142,14 @@
     <script src="js/custom.js"></script><!-- CUSTOM JS -->
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css"
-        integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipuiaD5ymEo9520lyoVOo9jCQOCA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css" integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipuiaD5ymEo9520lyoVOo9jCQOCA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-     
     <script>
-
-
+        // document.addEventListener("DOMContentLoaded", function (event) {
+        //     setTimeout(function () {
+        //         document.getElementById('typing-text').style.animationPlayState = 'running';
+        //     }, 1000); // Delaying animation start by 1 second
+        // });
 
 
         function showYouTubeVideo() {
@@ -220,36 +194,35 @@
     </script>
 
 
-<script>
-    var slider = new Swiper(".gallery-slider", {
-      slidesPerView: 1,
-      loop: true,
-      loopedSlides: 6,
-      noSwiping: true,
-      keyboard: {
-        enabled: true
-      },
-    
-      noSwipingClass: "swiper-slide",
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-      }
-    });
-    
-    var thumbs = new Swiper(".gallery-thumbs", {
-      slidesPerView: "auto",
-      spaceBetween: 10,
-      centeredSlides: false,
-      loop: true,
-      slideToClickedSlide: true
-    });
-    
-    slider.controller.control = thumbs;
-    thumbs.controller.control = slider;
-    
+    <script>
+        var slider = new Swiper(".gallery-slider", {
+            slidesPerView: 1,
+            loop: true,
+            loopedSlides: 6,
+            noSwiping: true,
+            keyboard: {
+                enabled: true
+            },
+
+            noSwipingClass: "swiper-slide",
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            }
+        });
+
+        var thumbs = new Swiper(".gallery-thumbs", {
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            centeredSlides: false,
+            loop: true,
+            slideToClickedSlide: true
+        });
+
+        slider.controller.control = thumbs;
+        thumbs.controller.control = slider;
     </script>
-    
+
 
 
 </body>
