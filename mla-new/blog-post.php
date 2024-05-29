@@ -110,51 +110,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="dz-related-post">
-							<h4 class="widget-title">Related Blogs</h4>
-							<div class="row">
-								<div class="col-lg-6 col-md-6 m-b30">
-									<div class="dz-card style-5 light">
-										<div class="dz-media">
-											<img src="images/blog/blogpost-5/pic1.jpg" alt="/">
-										</div>
-										<div class="dz-info">
-											<div class="dz-meta">
-												<ul>
-													<li class="post-date">20 Apr 2023</li>
-												</ul>
-											</div>
-											<h4 class="dz-title">
-												<a href="post-standard.html">Sink into Comfort with our Luxurious Couch Collection</a>
-											</h4>
-											<a href="post-standard.html" class="font-14 read-btn">Read More 
-												<i class="icon feather icon-chevron-right"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 m-b30">
-									<div class="dz-card style-5 light">
-										<div class="dz-media">
-											<img src="images/blog/blogpost-5/pic2.jpg" alt="/">
-										</div>
-										<div class="dz-info">
-											<div class="dz-meta">
-												<ul>
-													<li class="post-date">10 June 2023</li>
-												</ul>
-											</div>
-											<h4 class="dz-title">
-												<a href="post-standard.html">Embrace Luxury Living with our Elegant Couches</a>
-											</h4>
-											<a href="post-standard.html" class="font-14 read-btn">Read More 
-												<i class="icon feather icon-chevron-right"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						
 									
 					
 						
