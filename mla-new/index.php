@@ -645,6 +645,8 @@ include('head.php');
 
                 @media only screen and (max-width:768px) {
                     .gallery .content {
+                        background-size: cover;
+                        background-image:url(https://maidenstride.in/mla-new/images/bdhjdj.jpg);
                         padding: 50px 9px;
                     }
 

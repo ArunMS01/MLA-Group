@@ -75,22 +75,22 @@
                                 </li>
 
                                 <li class="has-mega-menu ">
-                                    <a  href="about.php"><span class="bleft borderlfyfyr">About Us</span></a>
+                                    <a  href="#"><span class="bleft borderlfyfyr">About Us</span></a>
 
                                 </li>
 
                                 <li class="has-mega-menu ">
-                                    <a  href="r&d.php"><span class="bleft borderlfyfyr">R & D</span></a>
+                                    <a  href="#"><span class="bleft borderlfyfyr">R & D</span></a>
 
                                 </li>
 
                                 <li class="has-mega-menu ">
-                                    <a  href="qc.php"><span class="bleft borderlfyfyr">quality</span></a>
+                                    <a  href="#"><span class="bleft borderlfyfyr">quality</span></a>
 
                                 </li>
 
                                 <li class="has-mega-menu ">
-                                    <a  href="manufacturing.php"><span  class="bleft borderlfyfyr">Manufacturing</span></a>
+                                    <a  href="#"><span  class="bleft borderlfyfyr">Manufacturing</span></a>
 
                                 </li>
 
@@ -98,8 +98,8 @@
 
 
 
-                                <li class="has-mega-menu sub-menu-down">
-                                    <a  href="service.php"><span class="bleft borderlfyfyr">Our Services</span></a>
+                                <li class="has-mega-menu">
+                                    <a  href="#"><span class="bleft borderlfyfyr">Our Services</span></a>
                                     <!--<div class="mega-menu shop-menu">-->
                                     <!--	<div class="row">-->
                                     <!--		<div class="col-lg-12 col-md-12 col-sm-12">-->
