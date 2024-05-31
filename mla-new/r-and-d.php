@@ -66,43 +66,44 @@ include('head.php');
                     </div>
                     <div class="col-lg-6 m-b30 aos-item wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="sliderrev">
-                            <div class="px-lg-4">
+                            <img class="w-100" src="images/reaerch.jpeg">
+                            <!--<div class="px-lg-4">-->
 
-                                <div class="swiper swiper-five swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
-                                    <div class="swiper-wrapper" id="swiper-wrapper-f6f20a1c51d9b355" aria-live="off" style="transform: translate3d(-1204px, 0px, 0px); transition-duration: 300ms;">
-                                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="1" role="group" aria-label="2 / 2" style="width: 582px; margin-right: 20px;">
-                                            <div class="about-content">
-                                                <div class="about-bx-pic radius">
-                                                    <img src="images/aboutus/product range.jpeg" alt="">
-                                                </div>
-                                                <div class="about-bx-detail">
+                            <!--    <div class="swiper swiper-five swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">-->
+                            <!--        <div class="swiper-wrapper" id="swiper-wrapper-f6f20a1c51d9b355" aria-live="off" style="transform: translate3d(-1204px, 0px, 0px); transition-duration: 300ms;">-->
+                            <!--            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="1" role="group" aria-label="2 / 2" style="width: 582px; margin-right: 20px;">-->
+                            <!--                <div class="about-content">-->
+                            <!--                    <div class="about-bx-pic radius">-->
+                            <!--                        <img src="images/aboutus/product range.jpeg" alt="">-->
+                            <!--                    </div>-->
+                            <!--                    <div class="about-bx-detail">-->
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="0" role="group" aria-label="1 / 2" style="width: 582px; margin-right: 20px;">
-                                            <div class="about-content">
-                                                <div class="about-bx-pic radius">
-                                                    <img src="images/aboutus/product-range.jpeg" alt="">
-                                                </div>
-                                                <div class="about-bx-detail">
+                            <!--                    </div>-->
+                            <!--                </div>-->
+                            <!--            </div>-->
+                            <!--            <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="0" role="group" aria-label="1 / 2" style="width: 582px; margin-right: 20px;">-->
+                            <!--                <div class="about-content">-->
+                            <!--                    <div class="about-bx-pic radius">-->
+                            <!--                        <img src="images/aboutus/product-range.jpeg" alt="">-->
+                            <!--                    </div>-->
+                            <!--                    <div class="about-bx-detail">-->
 
-                                                </div>
-                                            </div>
-                                        </div>
+                            <!--                    </div>-->
+                            <!--                </div>-->
+                            <!--            </div>-->
                                         <!-- Add more swiper-slide items for additional images -->
-                                    </div>
-                                    <div class="pagination-align">
-                                        <div class="about-button-prev btn-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-f6f20a1c51d9b355">
-                                            <i class="flaticon flaticon-left-chevron"></i>
-                                        </div>
-                                        <div class="about-button-next btn-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-f6f20a1c51d9b355">
-                                            <i class="flaticon flaticon-chevron"></i>
-                                        </div>
-                                    </div>
-                                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-                                </div>
-                            </div>
+                            <!--        </div>-->
+                            <!--        <div class="pagination-align">-->
+                            <!--            <div class="about-button-prev btn-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-f6f20a1c51d9b355">-->
+                            <!--                <i class="flaticon flaticon-left-chevron"></i>-->
+                            <!--            </div>-->
+                            <!--            <div class="about-button-next btn-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-f6f20a1c51d9b355">-->
+                            <!--                <i class="flaticon flaticon-chevron"></i>-->
+                            <!--            </div>-->
+                            <!--        </div>-->
+                            <!--        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>-->
+                            <!--    </div>-->
+                            <!--</div>-->
 
                         </div>
                     </div>

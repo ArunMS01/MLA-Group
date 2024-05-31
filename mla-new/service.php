@@ -76,10 +76,13 @@ include('head.php');
 .ml-4{
     margin-left: 10px;
 }
+.ptb-40{
+    padding:40px 0;
+}
 
    
 </style>
-<section class="pt-100 pb-100" >
+<section class="ptb-40" >
     <div class="container">
         <div class="row mobile-gap">
             <div class="col-md-6">
@@ -201,7 +204,7 @@ include('head.php');
             </div>
 
 
-            <div class="row">
+        
 
                 <div class="col-md-4">
                     <div class="image-card">
@@ -241,8 +244,8 @@ include('head.php');
                     </div>
 
                 </div>
-            </div>
-            <div class="row">
+
+         
                 <div class="col-md-4">
                     <div class="image-card">
                         <div class="image-box">
@@ -270,11 +273,10 @@ include('head.php');
 
                 </div>
 
-
             </div>
+         </div>
 
-        </div>
-    </div>
+        
 </section>
     </div>
 
