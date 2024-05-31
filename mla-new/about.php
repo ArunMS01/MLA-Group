@@ -24,10 +24,8 @@ include('head.php');
 
     <div class="page-content">
       <style>
-
-        body{
-          overflow-x: hidden;
-        }
+        
+       
         /* Hero section styles */
         .hero {
           position: relative;
@@ -109,6 +107,7 @@ include('head.php');
           margin: 0;
           padding: 0;
           box-sizing: border-box;
+          /*overflow-x:hidden;*/
         }
 
 
@@ -118,11 +117,11 @@ include('head.php');
         }
 
         .tabs {
-          justify-content: end;
+          justify-content: center;
           gap: 10px;
           width: 80%;
           height: 100px;
-          /* margin: auto; */
+           margin: auto; 
           margin-top: 50px;
           display: flex;
           align-items: center;
@@ -253,6 +252,12 @@ include('head.php');
         }
 
         @media only screen and (max-width: 768px) {
+            :root{
+               overflow-x:hidden;  
+            }
+            body{
+                overflow-x:hidden;
+            }
           .show {
             flex-wrap: wrap !important;
           }
@@ -1160,13 +1165,13 @@ overflow: hidden;
             font-size: 25px;
             margin-left: 0;
             transform: translateY(0);
-            top: 52px;
+            top: 32px;
             left: 9%;
           }
 
           .main-timeline .content {
-            width: 68%;
-
+            width: 90%;
+    padding: 34px 20px 34px 0;
             margin-left: 10px;
           }
 

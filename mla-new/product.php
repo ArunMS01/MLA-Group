@@ -520,7 +520,7 @@ $related_products = array();
 
 // Step 3: Query the product table for each related product
 foreach ($related_product_ids as $product_id) {
-    $query = "SELECT id, title, url FROM products WHERE id = $product_id";
+    $query = "SELECT id, title, url FROM products WHERE id = '$product_id'";
     $result = mysqli_query($conn, $query);
 
     // Check if the query was successful and fetch the product details
@@ -864,7 +864,7 @@ mysqli_close($conn);
             <div class="tab-content" id="brand-<?php echo $brand['id']; ?>">
                 <div class="row align-items-center">
                     <div class="col-md-3">
-                        <img style="display: block; margin: auto;" src="<?php echo htmlspecialchars($brand['logo']); ?>" class="mt-4 mb-4">
+                        <img style="display: block; margin: auto;" src="admin/codes/<?php echo htmlspecialchars($brand['logo']); ?>" class="mt-4 mb-4">
                     </div>
                     <div class="col-md-9">
                         <div class="row gx-xl-4 g-3">
