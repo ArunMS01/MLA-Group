@@ -114,13 +114,23 @@ include('head.php');
             .abytu .col-lg-6 {
                 padding: 0;
             }
+            .imgbox123{
+                height: 20rem;
+            }
+            .imgbox123 img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
         </style>
 
         <section class=" abytu overflow-hidden ">
             <div class="container-fluidss">
                 <div class="row about-style1 align-items-center ">
                     <div class="col-lg-6">
+                        <div class="imgbox123">
                         <img class="img-fluid" src="images/chemlab.jpeg" alt="">
+                        </div>
                     </div>
 
                     <div class="col-lg-6">
@@ -142,7 +152,24 @@ include('head.php');
                     </div>
 
                     <div class="col-lg-6">
+                    <div class="imgbox123">
                         <img class="img-fluid" src="images/surfacemodeifcation.avif" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row about-style1 align-items-center ">
+                    <div class="col-lg-6">
+                        <div class="imgbox123">
+                        <img class="img-fluid" src="images/chemlab.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="contant-sliders">
+                            <h2>Precipitation Technology</h2>
+                            <p>How by a rigourous control of the reaction parameters such as concentration of reactants, temperature, stiring rpm, pH of reaction etc. the particle structure and morphology can be modified to give the optimum combination of properties like bulk density (lightness), absorption capacity, surface area, particle size etc. for a particular application. We have developed precipitated silicas and silicates having absorption capacities as high as 600 % and bulk density 0.04 gm/cc which are unmatched worldwide.</p>
+                        </div>
                     </div>
 
                 </div>
@@ -224,6 +251,14 @@ include('head.php');
             .ytcounter.blue {
                 --main-color: #009CB5;
             }
+            .about-style1 .section-head .title {
+    font-size: 41px !important;
+ 
+    }
+    .about-style1 .about-thumb{
+        margin-left: 0px !important;
+        text-align: justify !important;
+    }
 
             @media screen and (max-width:990px) {
                 .ytcounter {

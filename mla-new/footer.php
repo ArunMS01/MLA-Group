@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-xl-6 col-md-6 col-sm-4 col-6">
                         <div class="widget widget_services">
-                            <h5 class="footer-title">We exhibit at</h5>
+                            <h5 class="footer-title text-center">We exhibit at</h5>
                             <div class="section-inner">
 
                                 <div class="row gx-3 companies-inner ">
@@ -76,6 +76,20 @@
                                         <a href="javascript:void(0);" class="companies-wrapper">
                                             <div class="companies-media">
                                                 <img src="images/05.jpg" alt="" class="logo-foot">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
+                                        <a href="javascript:void(0);" class="companies-wrapper">
+                                            <div class="companies-media">
+                                                <img src="images/06.jpg" alt="" class="logo-foot">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
+                                        <a href="javascript:void(0);" class="companies-wrapper">
+                                            <div class="companies-media">
+                                                <img src="images/06.jpg" alt="" class="logo-foot">
                                             </div>
                                         </a>
                                     </div>

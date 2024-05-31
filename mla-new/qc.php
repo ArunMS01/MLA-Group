@@ -201,7 +201,7 @@ include('head.php');
     }
 
     ul.infoGraphic li .content {
-        margin: 8em 3em 1em 7em;
+        margin: 10em 1em 1em 7em;
         position: relative;
     }
 
@@ -392,31 +392,34 @@ include('head.php');
         }
         
     }
+    .pt-100{
+        padding-top: 100px;
+    }
 </style>
 
 
 
-
-<main>
+<main style="
+    background: #f5f8f7;
+" class="pt-100">
+    <h1 class="text-center" >Three Tier Quality Check System</h1> <!-- Adding the heading here -->
     <ul class="infoGraphic">
-
-
         <li>
             <div class="numberWrap">
-                <div class="number  fontColor3">1</div>
+                <div class="number fontColor3">1</div>
                 <div class="coverWrap">
                     <div class="numberCover"></div>
                 </div>
             </div>
             <div class="content">
                 <div class="icon iconAirplane"></div>
-                <h2> Preliminary Inspection</h2>
+                <h2>Factory Shop Floor Level</h2> <!-- Updated heading here -->
                 <p>Preliminary inspection / testing of Raw Material / PIP / FP by production people at Shop floor level.</p>
             </div>
         </li>
         <li>
             <div class="numberWrap">
-                <div class="number  fontColor4">2</div>
+                <div class="number fontColor4">2</div>
                 <div class="coverWrap">
                     <div class="numberCover"></div>
                 </div>
@@ -429,7 +432,7 @@ include('head.php');
         </li>
         <li>
             <div class="numberWrap">
-                <div class="number  fontColor5">3</div>
+                <div class="number fontColor5">3</div>
                 <div class="coverWrap">
                     <div class="numberCover"></div>
                 </div>
@@ -440,22 +443,9 @@ include('head.php');
                 <p>The central quality control department (CQC dept.) to undertake the conformity, investigative and developmental testing.</p>
             </div>
         </li>
-        <!--     <li>
-      <div class="numberWrap">
-      <div class="number  fontColor6">6</div>
-      <div class="coverWrap">
-        <div class="numberCover"></div>
-      </div>
-        </div>
-      <div class="content">
-        <div class="icon iconPeace"></div>
-        <h2>Succeed</h2>
-        <p>Sagittis, audantium sem eveniet lacus pede porttitor aenean.</p>
-      </div>
-    </li> -->
     </ul>
-
 </main>
+
 
 <style>
     .companies-media img {
@@ -463,7 +453,10 @@ include('head.php');
     width: 45%;
 }
 .about-style1 .about-thumb{
-    text-align: left !important;
+    text-align: justify !important;
+}
+.about-style1 .section-head .title{
+    font-size: 41px !important;
 }
 </style>
 
