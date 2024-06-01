@@ -1025,11 +1025,12 @@ overflow: hidden;
             <section class="content-inner abyyt pbt-100">
                 <div class="container">
                     <div class="row about-style2 align-items-xl-center align-items-start">
-                        <div class="col-lg-6 col-lg-5 col-sm-5 m-b30 wow fadeInLeft" data-wow-delay="0.4s">
-                            <div class="about-thumb">
-                                <img src="images/mlagroup.webp" alt="">
-                            </div>
-                        </div>
+                    <div class="col-lg-6 col-lg-5 col-sm-5 m-b30 wow fadeInLeft" data-wow-delay="0.4s">
+  <div class="about-thumb">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PISiZKQtq_E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
                         <div class="col-lg-6 col-md-7 col-sm-7">
                             <div class="about-content">
                                 <div class="section-head style-1 wow fadeInUp" data-wow-delay="0.1s">
@@ -1063,8 +1064,8 @@ overflow: hidden;
                         }
 
                         .border-box .content {
-                            padding: 40px;
-                            text-align: center;
+                            padding:8px 44px 40px 40px;
+                            text-align: justify;
                         }
 
                         .border-box {
@@ -1230,6 +1231,7 @@ overflow: hidden;
                                     .lisvalues {
                                         color: #e0823d;
                                         font-weight: 600;
+                                        text-align: center;
                                     }
                                 </style>
                                 <h2 class="title">Values</h2>
@@ -1404,6 +1406,24 @@ overflow: hidden;
             opacity: 0.1;
         }
     </style>
+    <style>
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
     <section class="content-inner application-tab overlay-black-light pbt-100" style="background-image:url(images/appit.jpg); background-repeat: no-repeat; background-size: cover;background-position: bottom;">
         <div class="container">
             <div class="row about-style2 align-items-xl-center align-items-start wow fadeInUp" data-wow-delay="0.2s">
