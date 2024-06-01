@@ -477,7 +477,7 @@ include('head.php');
 
                             <!-- <h1 class="wow fadeInUp">Chemical Manufacturing Complex Situated In Kanpur</h1> -->
                             <h1 id="typing-text">
-                                <div class="line"></div> Welcome to MLA Group of Industries <span style="color:#e97f2f">Leading Innovators</span> in Chemical Manufacturing Since 1975
+                                <div class="line"></div> Welcome to MLA Group of Industries: <span style="color:#e97f2f">Leading Innovators</span> in Chemical Manufacturing Since 1975
                             </h1>
 
                         </div>
@@ -875,118 +875,151 @@ overflow: hidden;
                 }
             </style>
 
-            <section class="section pt-50 ">
-                <div class="container">
-                    <div class="row gap-50 counyersection">
-                        <div class="col-md-3">
-                            <div class="big-box wow fadeInUp" data-wow-delay="0.1s">
-
-                                <div class="small-box">
-                                    <div class="imageiconbox">
-                                        <img src="./images/countries-catered-mla.png" alt="">
-                                    </div>
-                                    <div class="v20_82">
-                                        <div class="d-flex justify-content-center">
-                                            <h2 class="counter">55</h2>
-                                            <h2>+</h2>
-                                        </div>
-
-                                        <div class="v2344"></div>
-                                        <p>
-                                            Countries Catered</p>
-                                        <div class="v20_85"></div>
-                                        <div class="name"></div>
-                                    </div>
-
-
-                                </div>
-                                <div class="v20_69"></div>
-
-                            </div>
-
+<section id="counter-section" class="section pt-50 counter-section">
+    <div class="container">
+        <div class="row gap-50 counyersection">
+            <div class="col-md-3">
+                <div id="counter-box-1" class="big-box wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="small-box">
+                        <div class="imageiconbox">
+                            <img src="./images/countries-catered-mla.png" alt="">
                         </div>
-                        <div class="col-md-3">
-                            <div class="big-box wow fadeInUp" data-wow-delay="0.1s">
-
-                                <div class="small-box">
-                                    <div class="imageiconbox">
-                                        <img src="./images/total-customer-mla.png" alt="">
-                                    </div>
-                                    <div class="v20_82">
-                                        <div class="d-flex justify-content-center">
-                                            <h2 class="counter">3000</h2>
-                                            <h2>+</h2>
-                                        </div>
-                                        <div class="v2344"></div>
-                                        <p>
-                                            Total Customer</p>
-                                        <div class="v20_85"></div>
-                                        <div class="name"></div>
-                                    </div>
-
-
-                                </div>
-                                <div class="v20_69"></div>
-
+                        <div class="v20_82">
+                            <div class="d-flex justify-content-center">
+                                <h2 id="counter-1" class="counter" data-target="55">0</h2>
+                                <h2>+</h2>
                             </div>
-
-                        </div>
-                        <div class="col-md-3">
-                            <div class="big-box wow fadeInUp" data-wow-delay="0.1s">
-
-                                <div class="small-box">
-                                    <div class="imageiconbox">
-                                        <img src="./images/products-manufactured-mla.png" alt="">
-                                    </div>
-                                    <div class="v20_82">
-                                        <div class="d-flex justify-content-center">
-                                            <h2 class="counter">10000</h2>
-                                            <h2>+</h2>
-                                        </div>
-                                        <div class="v2344"></div>
-                                        <p>
-                                            Manufacturing Capacity in MT</p>
-                                        <div class="v20_85"></div>
-                                        <div class="name"></div>
-                                    </div>
-
-
-                                </div>
-                                <div class="v20_69"></div>
-
-                            </div>
-
-                        </div>
-                        <div class="col-md-3">
-                            <div class="big-box wow fadeInUp" data-wow-delay="0.1s">
-
-                                <div class="small-box">
-                                    <div class="imageiconbox">
-                                        <img src="./images/manufacturing-capacity-mla.png" alt="">
-                                    </div>
-                                    <div class="v20_82">
-                                        <div class="d-flex justify-content-center">
-                                            <h2 class="counter">100</h2>
-                                            <h2>+</h2>
-                                        </div>
-                                        <div class="v2344"></div>
-                                        <p>
-                                            Products Manufactured</p>
-                                        <div class="v20_85"></div>
-                                        <div class="name"></div>
-                                    </div>
-
-
-                                </div>
-                                <div class="v20_69"></div>
-
-                            </div>
-
+                            <div class="v2344"></div>
+                            <p>Countries Catered</p>
+                            <div class="v20_85"></div>
+                            <div class="name"></div>
                         </div>
                     </div>
+                    <div class="v20_69"></div>
                 </div>
+            </div>
+            <div class="col-md-3">
+                <div id="counter-box-2" class="big-box wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="small-box">
+                        <div class="imageiconbox">
+                            <img src="./images/total-customer-mla.png" alt="">
+                        </div>
+                        <div class="v20_82">
+                            <div class="d-flex justify-content-center">
+                                <h2 id="counter-2" class="counter" data-target="3000">0</h2>
+                                <h2>+</h2>
+                            </div>
+                            <div class="v2344"></div>
+                            <p>Total Customer</p>
+                            <div class="v20_85"></div>
+                            <div class="name"></div>
+                        </div>
+                    </div>
+                    <div class="v20_69"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="counter-box-3" class="big-box wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="small-box">
+                        <div class="imageiconbox">
+                            <img src="./images/products-manufactured-mla.png" alt="">
+                        </div>
+                        <div class="v20_82">
+                            <div class="d-flex justify-content-center">
+                                <h2 id="counter-3" class="counter" data-target="10000">0</h2>
+                                <h2>+</h2>
+                            </div>
+                            <div class="v2344"></div>
+                            <p>Manufacturing Capacity in MT</p>
+                            <div class="v20_85"></div>
+                            <div class="name"></div>
+                        </div>
+                    </div>
+                    <div class="v20_69"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="counter-box-4" class="big-box wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="small-box">
+                        <div class="imageiconbox">
+                            <img src="./images/manufacturing-capacity-mla.png" alt="">
+                        </div>
+                        <div class="v20_82">
+                            <div class="d-flex justify-content-center">
+                                <h2 id="counter-4" class="counter" data-target="100">0</h2>
+                                <h2>+</h2>
+                            </div>
+                            <div class="v2344"></div>
+                            <p>Products Manufactured</p>
+                            <div class="v20_85"></div>
+                            <div class="name"></div>
+                        </div>
+                    </div>
+                    <div class="v20_69"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-            </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        function animateCounters(counterElements) {
+            counterElements.forEach(counter => {
+                console.log(`Animating counter with ID: ${counter.id}`);
+                const target = +counter.getAttribute('data-target');
+                const updateCount = () => {
+                    const count = +counter.innerText;
+                    const increment = target / 200; // Change the increment for slower speed
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCount, 20); // Adjust the timing for smoother animation
+                    } else {
+                        counter.innerText = target;
+                        console.log(`Counter with ID: ${counter.id} has reached its target of ${target}`);
+                    }
+                };
+
+                updateCount();
+            });
+        }
+
+        function resetCounters(counterElements) {
+            counterElements.forEach(counter => {
+                counter.innerText = '0';
+                console.log(`Resetting counter with ID: ${counter.id}`);
+            });
+        }
+
+        let options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        let observer = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    console.log('Counter section is in view.');
+                    const counters = entry.target.querySelectorAll('.counter');
+                    resetCounters(counters);
+                    animateCounters(counters);
+                } else {
+                    console.log('Counter section is out of view.');
+                    const counters = entry.target.querySelectorAll('.counter');
+                    resetCounters(counters);
+                }
+            });
+        }, options);
+
+        let counterSection = document.querySelector('#counter-section');
+        observer.observe(counterSection);
+        console.log('Started observing the counter section.');
+    });
+</script>
+
 
 
             <section class="content-inner abyyt pbt-100">
