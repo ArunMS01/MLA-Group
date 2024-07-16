@@ -3,6 +3,7 @@ include('head.php');
 ?>
 <title>MLA</title>
 <meta name="description" content="">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 
 <body>
@@ -24,8 +25,23 @@ include('head.php');
 
     <div class="page-content">
       <style>
-        
-       
+      
+            @media only screen and (min-width:768px) and (max-width:1180px){
+                .main-timeline .timeline-icon{
+                    display:none !important;
+                }
+                .tabs li{
+                    width:35% !important;
+                }
+                .main-timeline .content {
+    margin-left: 34vw !important;
+    color: #909090;
+    width: 42vw !important;
+                }
+               .counternew .col-md-3{
+                   width:50% !important;
+               }
+            }
         /* Hero section styles */
         .hero {
           position: relative;
@@ -33,7 +49,7 @@ include('head.php');
           /* Replace 'your-image.jpg' with your image URL */
           background-size: cover;
           background-position: center;
-          height: 100vh;
+          height: 72vh;
           display: flex;
 
           align-items: center;
@@ -61,7 +77,8 @@ include('head.php');
 
         /* Paragraph style */
         .hero p {
-          font-size: 1.2rem;
+          /*color:#000;*/
+          /*font-size: 1.2rem;*/
           /* Adjust the font size as needed */
           max-width: 600px;
           /* Adjust the maximum width as needed */
@@ -76,6 +93,24 @@ include('head.php');
           padding-top: 100px;
           padding-bottom: 100px;
         }
+
+        @keyframes zoomInUp {
+				0% {
+					transform: translateY(100%);
+					opacity: 0;
+				}
+
+				
+
+				100% {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
+
+			.zoom-in-up {
+                animation: zoomInUp 2s ease forwards;
+            }
       </style>
 
 
@@ -88,9 +123,11 @@ include('head.php');
         <div class="gradient-overlay"></div>
 
         <!-- Content -->
-        <div class="content" style="z-index: 1;">
+        <div class="content zoom-in-up" style="z-index: 1;">
           <h1>About Us</h1>
-          <p>From modest beginnings in 1975 when our first unit for the manufacturing of Aluminium Silicate was set up, MLA Group has grown from strength to strength over the years. We have been expanding and diversifying rapidly and today the group comprises four manufacturing units for various chemicals. We are the largest manufacturers of Aluminium/Calcium Silicates in India having complete vertical integration and unique product properties.</p>
+          <p>
+            Since its humble beginnings in 1975, when our first unit was established to manufacture aluminium silicate, MLA Group has continued to expand and thrive. Due to our steady growth and diversification, the business now includes four production facilities producing a wide range of additives. We are today India's largest manufacturers of Zinc Oxide Active and Metallic Stearates and amongst the top 3 in all our eight product verticals.
+          </p>
         </div>
       </section>
 
@@ -121,7 +158,7 @@ include('head.php');
           gap: 10px;
           width: 80%;
           height: 100px;
-           margin: auto; 
+          margin: auto;
           margin-top: 50px;
           display: flex;
           align-items: center;
@@ -199,7 +236,7 @@ include('head.php');
 
         .box img {
           height: 23rem;
-          width: 50%;
+          /* width: 50%; */
           border-radius: 10px;
           -webkit-border-radius: 10px;
           -moz-border-radius: 10px;
@@ -216,13 +253,13 @@ include('head.php');
 
         .box p {
           color: #000;
-          opacity: .5;
+          opacity: 1;
 
           font-size: 1rem;
         }
 
-        .show {
-
+        .showboxes {
+            justify-content:center;
           align-items: center;
           display: flex;
         }
@@ -252,20 +289,24 @@ include('head.php');
         }
 
         @media only screen and (max-width: 768px) {
-            :root{
-               overflow-x:hidden;  
-            }
-            body{
-                overflow-x:hidden;
-            }
-          .show {
+          :root {
+            overflow-x: hidden;
+          }
+
+          body {
+            overflow-x: hidden;
+          }
+
+          .showboxes {
             flex-wrap: wrap !important;
           }
 
           .tabs li {
             padding: 10px !important;
             width: 30%;
+                    min-height: 62px;
             font-size: 13px;
+            text-align:center;
 
           }
 
@@ -284,45 +325,658 @@ include('head.php');
             height: auto;
           }
         }
+
+
+        .counter-product {
+          color: #EC721F;
+          background: #EC721F;
+          font-family: 'Poppins', sans-serif;
+          text-align: center;
+          width: 200px;
+          height: 200px;
+          padding: 70px 12px 40px;
+          margin: 0 auto;
+          border-radius: 50% 0;
+          position: relative;
+          z-index: 1;
+        }
+
+        .counter-product:before {
+          content: "";
+          background: #fff;
+          width: calc(100% - 10px);
+          height: calc(100% - 10px);
+          border-radius: 50% 50%;
+          transform: translateX(-50%) translateY(-50%);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: -1;
+        }
+
+        .counter-product .counter-value {
+          font-size: 30px;
+          font-weight: 600;
+        }
+
+        .counter-product .counter-icon {
+          content: "";
+          color: #fff;
+          background: #EC721F;
+          font-size: 25px;
+          font-weight: 600;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+          border-radius: 0 0 30px 30px;
+          position: absolute;
+          top: -10px;
+          right: 8px;
+        }
+
+        .counter-product .counter-icon:before {
+          content: "";
+          background: linear-gradient(to top left, #cccaca 49%, transparent 50%);
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          top: 0;
+          left: -10px;
+        }
+
+        .counter-product h3 {
+          font-size: 13px;
+          font-weight: 600;
+          text-transform: uppercase;
+          margin: 0 0 10px;
+        }
+
+        .counter-product.green {
+          background: #048006;
+          color: #048006;
+        }
+
+        .counter-product.purple {
+          background: #BE2EDD;
+          color: #BE2EDD;
+        }
+
+        @media screen and (max-width: 990px) {
+          .counter-product {
+            margin-bottom: 50px;
+          }
+        }
+
+        .pluasymbolcounter{
+          font-size: 2rem;
+        }
       </style>
       <ul class="tabs">
-        <li class="active" data-id="0">Product Range</li>
+        <li class="active" data-id="0">Company Overview</li>
 
-        <li data-id="1">Quality Control</li>
-        <li data-id="2">R & D</li>
+        <li data-id="1">Leadership</li>
+        <li data-id="2">History</li>
       </ul>
 
       <div class="contents">
 
-        <div class="box show" data-content="0">
-          <img src="./images/aboutus/p2.jpeg" alt="">
+        <div class="box showboxes" data-content="0">
           <div>
-            <h3>Our Product Range</h3>
-            <p>
-              Our product range consists of various precipitated chemicals and functional fillers, both synthetic and naturally occurring processed minerals including Precipitated Silica, Hydrated Calcium Silicate, Aluminium Silicate, Zinc Stearate , Calcium Stearate , Calcium Sulphate, Zinc-oxide active/transparent, Levigated / Surface treated China Clays, Micronized Calcite, Dolomite, Talc etc. which find a variety of applications in industries such as rubber / other polymers, paints & coatings, insecticides / pesticides, pharmaceuticals, cosmetics, feedstuff and numerous other industries.
-            </p>
+
+            <div>
+
+              <p>
+              <p>
+              Our product line includes Metallic Stearates , PVC Heat Stabilizers , Precipitated Silica , Aluminium Silicates , ADC ( Blowing Agents ) , Ester Lubricants , Active Zinc Oxide , Snow white China Clay , PE waxes, One pack Lubricants and Pharmaceutical Excipients. These products are used in a wide range of industries, including plastic ,paints, rubber, detergents, pharma etc
+              </p>
+
+              <p>
+              Our products' quality is defined by our customers' perception. Our success stems from a customer-centric approach and an uncompromising commitment to quality. Every MLA Group employee is responsible for ensuring product and service quality through our stringent Quality Assurance Systems , both of the product and services. 
+              </p>
+
+              <p>To emerge as global leaders and innovators, we prioritise Research, Improvement, and Invention. Our R&D Division, with advanced application labs and testing equipment, conducts intensive research on precipitation, surface treatment and activation and application testing, developing cutting-edge technologies.</p>
+
+
+
+            </div>
+
+            <div>
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <!-- Image side -->
+                  <img src="./images/aboutus/map-mla.png" alt="Image"> <!-- Replace with your image path -->
+                </div>
+                <div class="col-md-6 wow fadeInRight" data-wow-delay="0.6s">
+                  <!-- Text side -->
+                  <div class="section-head style-1 ">
+                    <h2>Our Footprint</h2>
+                  </div>
+                 <p>
+                 We have an extensive marketing network with head office at Kanpur and marketing associates in almost all industrial cities/hubs in India. Our sales and technical services personnel visit customers regularly to provide excellent before and after sales services. The exports have been increasing sharply and we now cater to 55+ countries including Sri Lanka, Nepal, Bangladesh, and also to Africa, Middle East, South East Asia ,USA and Europe.
+                 </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="overlay-2"></div>
+              <div class="container counternew">
+                <div class="row">
+                  <div class="col-md-3 col-sm-6">
+                    <div class="counter-product wow fadeInRight" data-wow-delay="0.6s">
+                   <span><span class="counter-value">55 </span> <span class="pluasymbolcounter">+</span> </span>    
+                      <h3>Countries Catered</h3>
+                      <div class="counter-icon"><i class="fa fa-check"></i></div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6">
+                    <div class="counter-product wow fadeInRight" data-wow-delay="0.6s">
+                    <span> <span class="counter-value">3000 </span> <span class="pluasymbolcounter">+</span> </span>
+                      <h3>Total Customer</h3>
+                      <div class="counter-icon"><i class="fa fa-check"></i></div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6">
+                    <div class="counter-product wow fadeInRight" data-wow-delay="0.6s">
+                    <span> <span class="counter-value">10000 </span> <span class="pluasymbolcounter">+</span> </span>
+                      <h3>Manufacturing Capacity in MT</h3>
+                      <div class="counter-icon"><i class="fa fa-check"></i></div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6">
+                    <div class="counter-product wow fadeInRight" data-wow-delay="0.6s">
+                    <span><span class="counter-value">100 </span>  <span class="pluasymbolcounter">+</span> </span>
+                      <h3>Products Manufactured</h3>
+                      <div class="counter-icon"><i class="fa fa-check"></i></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
+
         </div>
 
 
 
         <div class="box hide" data-content="1">
-          <img src="./images/aboutus/quality-check.jpeg" alt="">
+
           <div>
-            <h3>Quality Control</h3>
-            <p>
-              Quality of our products is defined as it is perceived by our customers. The major factor behind our success is our market driven approach and our uncompromising attitude with respect to quality. We have well-defined and stringent Quality Assurance Systems wherein all employees of MLA Group are responsible for quality, both of the product and the services.
-            </p>
+            <style>
+              .teamWrapper {
+                margin-top: 50px;
+              }
+
+              .teamGrid {
+                display: grid;
+    grid-template-columns: 42% 42%;
+    column-gap: 1.5%;
+    justify-content: space-around;
+    margin-top: 100px;
+              }
+
+              .avatar {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -80px;
+                text-align: center;
+              }
+
+           
+
+              .avatar>img {
+                width: 150px;
+                margin: auto;
+                height: 150px;
+                object-fit:contain;
+                border-radius: 50%;
+                border: 1px solid rgb(170 170 173/ 1);
+                box-shadow: 0px 3px 10px 3px rgb(170 170 173 / 0.5);
+              }
+
+              .teamcolinner {
+                position: relative;
+                border: 1px dashed #ddd;
+                min-height: 100px;
+                background: #fff;
+                z-index: 9;
+                min-height:30rem;
+              }
+
+              .teamcol {
+                padding: 15px;
+                background: #fff;
+                border-radius: 10px;
+                position: relative;
+                transition: transform 1s ease-in-out;
+              }
+
+              .teamcol:hover {
+                transform: translateY(-30px);
+                box-shadow: 0px 3px 10px 3px rgb(170 170 173 / 0.5);
+                transition: transform 1s ease-in-out;
+              }
+
+              .teamcol:before {
+                content: "";
+                width: 50%;
+                height: 50%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                background: linear-gradient(145deg, #f58a3a, #f58a3a);
+                border-top-right-radius: 10px;
+                transition: width 1s ease-in-out;
+              }
+
+              .teamcol:after {
+                content: "";
+                width: 50%;
+                height: 50%;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: -webkit-linear-gradient(#343434, #424242);
+                border-bottom-left-radius: 10px;
+                transition: width 1s ease-in-out;
+              }
+
+              .teamcol:hover::before,
+              .teamcol:hover::after {
+                width: 100%;
+                transition: width 1s ease-in-out;
+              }
+
+              .member-name {
+                margin-top: 80px;
+              }
+
+              .member-info {
+                padding: 10px 20px;
+              }
+
+              .social-listing {
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                list-style: none;
+                padding: 0;
+              }
+
+              .social-listing>li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                background: #f4f5f7;
+                border-radius: 50%;
+                margin: 5px;
+              }
+              
+              .hideerm{
+                  display:none;
+              }
+              
+              #showmore{
+                  text-align: center;
+    display: inline-block;
+    color: #fff;
+    background: rgba(247, 134, 49, 1);
+    padding: 10px;
+    border-radius: 5px;
+    cursor:pointer;
+              }
+              
+              .mt-2222{
+                  margin-top:120px;
+              }
+            </style>
+            <div class="teamWrapper">
+              <div class="containerssss">
+              
+                <div class="teamGrid">
+                
+                  <div class="colmun mbcolteam">
+                    <div class="teamcol">
+                      <div class="teamcolinner">
+                        <div class="avatar"><img src="images/Mr_Murari_Lal_Agarwal_-removebg-preview.png" alt="Member"></div>
+                        <div class="member-name">
+                          <h2 align="center">Mr. Murari Lal Agarwal
+                          </h2>
+                        </div>
+                        <div class="member-info">
+                          <p align="center">Mr. Murari Lal Agarwal, the visionary behind M.L.A. Group of Industries, established a global enterprise in 1975, MLA Group , which is currently exporting to 55+ countries. A chemistry graduate, he expanded his business through innovation, dedication, and hard work. Known for his cheerful personality and philanthropy, He holds key positions in organizations such as PIA, FITA, and the Kanpur Merchants Association. He is a patron of various community organizations, actively supporting social initiatives and contributing to numerous charitable causes, making a significant impact on both industry and society.</p>
+                        </div>
+                        <!--<div class="member-mail">-->
+                        <!--  <p align="center"> <a href="mailto:@gmail.com">mailto:@gmail.com</a> </p>-->
+                        <!--</div>-->
+                        <div class="member-social">
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="colmun">
+                    <div class="teamcol">
+                      <div class="teamcolinner">
+                        <div class="avatar"><img src="images/Mr._Sumit_Agarwal-removebg-preview.png" alt="Member"></div>
+                        <div class="member-name">
+                          <h2 align="center">Mr. Sumit Agarwal
+                          </h2>
+                        </div>
+                        <div class="member-info">
+                          <p align="center">Mr. Sumit Agarwal, the Managing Director of MLA Group, with Masters in Chemistry from IIT Kanpur , brings extensive expertise in leading strategic initiatives and fostering innovation and R&D. With a proven track record in business development and operational excellence, he spearheads the company's growth across diverse sectors, ensuring a commitment to quality and customer satisfaction. His visionary leadership and dedication drive MLA Group towards sustained success and global prominence.</p>
+                        </div>
+                        <!--<div class="member-mail">-->
+                        <!--  <p align="center"> <a href="mailto:@gmail.com">mailto:@gmail.com</a> </p>-->
+                        <!--</div>-->
+                        <div class="member-social">
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                       <div class="colmun mt-2222">
+                    <div class="teamcol">
+                      <div class="teamcolinner">
+                        <div class="avatar"><img src="images/Mr_Saurabh_Agarwal_-removebg-preview.png" alt="Member"></div>
+                        <div class="member-name">
+                          <h2 align="center">Mr. Saurabh Agarwal
+                          </h2>
+                        </div>
+                        <div class="member-info">
+                          <p align="center">Mr. Saurabh Agarwal, Director – Admin at MLA Industries Pvt Ltd, boasts over 34 years of extensive experience in chemical industry. His expertise spans operations management, process optimization, and safety compliance.Mr. Saurabh currently spearheads logistics, ensuring seamless operations at MLA Industries Pvt Ltd. His profound knowledge of industry regulations and unwavering dedication to operational excellence uphold the company's high standards of quality and reliability in product delivery.</p>
+                        </div>
+                        <!--<div class="member-mail">-->
+                        <!--  <p align="center"> <a href="mailto:@gmail.com">mailto:@gmail.com</a> </p>-->
+                        <!--</div>-->
+                        <div class="member-social">
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                       <div class="colmun mt-2222">
+                    <div class="teamcol">
+                      <div class="teamcolinner">
+                        <div class="avatar"><img src="images/Mr_Abhishek_Kanodia-removebg-preview.png" alt="Member"></div>
+                        <div class="member-name">
+                          <h2 align="center">Mr. Abhishek Kanodia
+                          </h2>
+                        </div>
+                        <div class="member-info">
+                          <p align="center">Mr. Abhishek Kanodia, Director at MLA Group of Industries, brings over 13 years of expertise in Supply Chain Management and advanced manufacturing standards. With a B.Tech in Chemical Engineering from IIT Kanpur, his career highlights include pivotal roles at Hindustan Unilever Limited, where he excelled as Factory Manager and Senior Innovation & Technology Manager. Mr. Abhishek integrates cutting-edge manufacturing practices into MLA Group, ensuring operational excellence across various sectors. His strategic leadership drives innovation and efficiency in manufacturing , setting benchmarks in quality and reliability.</p>
+                        </div>
+                        <!--<div class="member-mail">-->
+                        <!--  <p align="center"> <a href="mailto:@gmail.com">mailto:@gmail.com</a> </p>-->
+                        <!--</div>-->
+                        <div class="member-social">
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="box hide" data-content="2">
-          <img src="./images/aboutus/research-nd-d.jpeg" alt="">
+
           <div>
-            <h3>Research And devlopment</h3>
-            <p>
-              To further exploit our core competencies and compete in the global market, we have laid great emphasis on Research, Improvement and Innovation. Our R & D Division equipped with the most sophisticated labs and testing equipments, carries out intensive research on subjects like precipitation, surface treatment and activation and has developed some of the most advanced technologies world over.
-            </p>
+            <div class="row">
+              <div class="col">
+                <div class="main-timeline">
+                  <div class="timeline">
+                    <a href="#" class="timeline-content">
+                      <span class="timeline-year">1975</span>
+                      <div class="timeline-icon">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </div>
+                      <div class="content">
+
+                        <p class="description">
+                          First unit established for manufacturing of White china clay by CMD, Mr ML Agarwal
+
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="timeline">
+                    <a href="#" class="timeline-content">
+                      <span class="timeline-year">1978</span>
+                      <div class="timeline-icon">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </div>
+                      <div class="content">
+
+                        <p class="description">
+                          2nd unit established for manufacturing of White clay and Aluminium Silicate
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="timeline">
+                    <a href="#" class="timeline-content">
+                      <span class="timeline-year">1985</span>
+                      <div class="timeline-icon">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </div>
+                      <div class="content">
+
+                        <p class="description">
+                          3rd unit started for manufacturing of Precipitated Silica
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="timeline">
+                    <a href="#" class="timeline-content">
+                      <span class="timeline-year">1992</span>
+                      <div class="timeline-icon">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </div>
+                      <div class="content">
+
+                        <p class="description">
+                          4th unit started for manufacturing of Zinc Oxide and Metallic stearates
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                
+                  <div class="timeline hideerm">
+                    <a href="#" class="timeline-content">
+                      <span class="timeline-year">1997</span>
+                      <div class="timeline-icon">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </div>
+                      <div class="content">
+
+                        <p class="description">
+                          In house fabrication unit established for rapid expansion
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="timeline hideerm">
+                    <a href="#" class="timeline-content">
+                      <span class="timeline-year">2017</span>
+                      <div class="timeline-icon">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </div>
+                      <div class="content">
+                        <h3 class="title"></h3>
+                        <p class="description">
+                          Mr Sumit Agarwal, MTech- IIT Kanpur joins business full time, Zinc oxide Active and PVC stabilizers manufacturing started in unit 4 </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="timeline hideerm">
+                    <a href="#" class="timeline-content">
+                      <span class="timeline-year">2002</span>
+                      <div class="timeline-icon">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </div>
+                      <div class="content">
+
+                        <p class="description">
+                          All units are ISO 9001 certified </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="timeline hideerm">
+                    <a href="#" class="timeline-content">
+                      <span class="timeline-year">2004</span>
+                      <div class="timeline-icon">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </div>
+                      <div class="content">
+
+                        <p class="description">
+                          All units brought under the Group name of MLA Group of Industries </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="timeline hideerm">
+                    <a href="#" class="timeline-content">
+                      <span class="timeline-year">2006</span>
+                      <div class="timeline-icon">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </div>
+                      <div class="content">
+
+                        <p class="description">
+                          ADC foaming agents unit established </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="timeline hideerm">
+                    <a href="#" class="timeline-content">
+                      <span class="timeline-year">2008</span>
+                      <div class="timeline-icon">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </div>
+                      <div class="content">
+
+                        <p class="description">
+                          Unilever endorses and patronizes UNISIL NK-7, world's highest absorption silica </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="timeline hideerm">
+                    <a href="#" class="timeline-content">
+                      <span class="timeline-year">2009</span>
+                      <div class="timeline-icon">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </div>
+                      <div class="content">
+
+                        <p class="description">
+                          Manufacturing of Zinc Oxide American process and Arc furnace process started </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="timeline hideerm">
+                    <a href="#" class="timeline-content">
+                      <span class="timeline-year">2009</span>
+                      <div class="timeline-icon">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </div>
+                      <div class="content">
+
+                        <p class="description">
+                          Manufacturing of Zinc Oxide American process and Arc furnace process started </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="timeline hideerm">
+                    <a href="#" class="timeline-content">
+                      <span class="timeline-year">2014</span>
+                      <div class="timeline-icon">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </div>
+                      <div class="content">
+
+                        <p class="description">
+                          New unit for manufacturing of Active Zinc Oxide and Metallic stearates with 5 times capacity started </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="timeline hideerm">
+                    <a href="#" class="timeline-content">
+                      <span class="timeline-year">2016</span>
+                      <div class="timeline-icon">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </div>
+                      <div class="content">
+
+                        <p class="description">
+                          Wax and ester unit established </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="timeline hideerm">
+                    <a href="#" class="timeline-content">
+                      <span class="timeline-year">2018</span>
+                      <div class="timeline-icon">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </div>
+                      <div class="content">
+
+                        <p class="description">
+                          Pharma excipients unit established </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="timeline hideerm">
+                    <a href="#" class="timeline-content">
+                      <span class="timeline-year">2020</span>
+                      <div class="timeline-icon">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </div>
+                      <div class="content">
+
+                        <p class="description">
+                          Mr Abhishek Kanodia, B Tech, IIT Kanpur ( ex Unilever) joins the family business as Factory Director </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="timeline hideerm">
+                    <a href="#" class="timeline-content">
+                      <span class="timeline-year">2022</span>
+                      <div class="timeline-icon">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </div>
+                      <div class="content">
+
+                        <p class="description">
+                          All non mineral units brought under MLA Industries Pvt Ltd </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="timeline hideerm">
+                    <a href="#" class="timeline-content">
+                      <span class="timeline-year">2023</span>
+                      <div class="timeline-icon">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                      </div>
+                      <div class="content">
+
+                        <p class="description">
+                          Company moves to Product Owner based model for all its eight product verticals </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+               <div class="col-md-12 text-center"> <a id="showmore">Show More</a></div>
+            </div>
           </div>
         </div>
 
@@ -342,24 +996,22 @@ include('head.php');
               box.classList.add('hide');
               if (box.getAttribute('data-content') == id) {
                 box.classList.remove('hide');
-                box.classList.add('show');
+                box.classList.add('showboxes');
               }
             });
           });
         });
+        
+        document.getElementById('showmore').addEventListener('click', function() {
+    var elements = document.querySelectorAll('.hideerm');
+    elements.forEach(function(element) {
+        element.style.display = (element.style.display === 'none' || element.style.display === '') ? 'block' : 'none';
+    });
+    this.textContent = (this.textContent === 'Show More') ? 'Show Less' : 'Show More';
+});
+
       </script>
       </section>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -496,6 +1148,19 @@ overflow: hidden;
         }
 
         @media only screen and (max-width: 768px) {
+            .mt-2222 {
+    margin-top: 85px !important;
+}
+          .hero h1{
+            font-size: 2rem;
+          }
+          .mbcolteam{
+            margin-bottom: 5rem;
+          }
+          .teamGrid{
+            grid-template-columns: auto !important;
+
+          }
           .big-box {
             min-height: 369px !important;
           }
@@ -523,204 +1188,102 @@ overflow: hidden;
       </style>
 
 
-<style>
-            .border-box {
-              margin: auto;
-              background: rgba(255, 255, 255, 1);
-              border: 2px solid rgba(247, 134, 49, 1);
-              border-top-left-radius: 21px;
-              border-top-right-radius: 21px;
-              border-bottom-left-radius: 21px;
-              border-bottom-right-radius: 21px;
-            }
+      <style>
+        .border-box {
+          margin: auto;
+          background: rgba(255, 255, 255, 1);
+          border: 2px solid rgba(247, 134, 49, 1);
+          border-top-left-radius: 21px;
+          border-top-right-radius: 21px;
+          border-bottom-left-radius: 21px;
+          border-bottom-right-radius: 21px;
+        }
 
-            .border-box h2 {
-              font-size: 24px;
-              margin-top: 60px;
-              margin-bottom: 0px;
-              text-align: center;
-            }
+        .border-box h2 {
+          font-size: 24px;
+          margin-top: 60px;
+          margin-bottom: 0px;
+          text-align: center;
+        }
 
-            .border-box .content {
-              padding: 40px;
-              text-align: center;
-            }
+        .border-box .content {
+          padding: 40px;
+          text-align: center;
+        }
 
-            .border-box {
-              position: relative;
-              width: 83%;
-              /* Adjust width as needed */
-              height: 30rem;
-              /* Adjust height as needed */
-            }
+        .border-box {
+          position: relative;
+          width: 83%;
+          /* Adjust width as needed */
+          height: 30rem;
+          /* Adjust height as needed */
+        }
 
-            .v423_5 {
-              z-index: -1;
-              width: 111%;
-              max-width: 365px;
-              height: 160px;
-              background: rgba(217, 217, 217, 1);
-              opacity: 1;
-              position: absolute;
-              bottom: -12px;
-              left: 50%;
-              transform: translateX(-50%);
-              border-radius: 21px;
-              overflow: hidden;
-            }
+        .v423_5 {
+          z-index: -1;
+          width: 111%;
+          max-width: 365px;
+          height: 160px;
+          background: rgba(217, 217, 217, 1);
+          opacity: 1;
+          position: absolute;
+          bottom: -12px;
+          left: 50%;
+          transform: translateX(-50%);
+          border-radius: 21px;
+          overflow: hidden;
+        }
 
-            .pbt-100 {
-              padding: 50px 0px;
-            }
+        .pbt-100 {
+          padding: 50px 0px;
+        }
 
-            .v423_8 {
-              width: 110px;
-              height: 110px;
-              background: rgba(247, 134, 49, 1);
-              opacity: 1;
-              position: absolute;
-              top: -59px;
-              left: 33%;
-              border-radius: 50%;
-            }
+        .v423_8 {
+          width: 110px;
+          height: 110px;
+          background: rgba(247, 134, 49, 1);
+          opacity: 1;
+          position: absolute;
+          top: -59px;
+          left: 33%;
+          border-radius: 50%;
+        }
 
-            .icon-image-box {
-              left: 27px;
-              position: absolute;
-              width: 57px;
-              height: 36px;
-              top: 24px;
-            }
+        .icon-image-box {
+          left: 27px;
+          position: absolute;
+          width: 57px;
+          height: 36px;
+          top: 24px;
+        }
 
-            @media screen and (max-width: 768px) {
+        @media screen and (max-width: 768px) {
 
-              .border-box{
-                height: auto;
-              }
-        
-              .rowgap {
-                gap: 122px;
-              }
+          .border-box {
+            height: auto;
+          }
 
-              .v423_8 {
-                left: 33% !important;
-              }
+          .rowgap {
+            gap: 122px;
+          }
 
-              .v423_5 {
-                width: 111%;
-                max-width: 456px;
-                bottom: -20px;
-              }
-            }
+          .v423_8 {
+            left: 33% !important;
+          }
 
-            .pb-100 {
-              padding-bottom: 100px;
-            }
-          </style>
+          .v423_5 {
+            width: 111%;
+            max-width: 456px;
+            bottom: -20px;
+          }
+        }
 
-
+        .pb-100 {
+          padding-bottom: 100px;
+        }
+      </style>
 
 
-      <section>
-        <div class="section pt-100 pb-100">
-          <div class="container">
-            <div class="row rowgap">
-
-              <div class="col-md-4 wow fadeInUp vbg-2" data-wow-delay="0.2s">
-
-
-                <div class="border-box">
-                  <div class="v423_8" style="
-                                        z-index: 1;
-                                        outline-offset: 20px;
-                                        
-                                    ">
-
-                    <div class="icon-image-box">
-                      <img src="./images/values-mla.png" alt="" srcset="">
-                    </div>
-                  </div>
-                  <div class="v423_8 " style="
-                                        outline: 2px solid #f78631;
-                                        outline-offset: 20px;
-                                        z-index: -1;
-                                    "></div>
-                  <h2 class="title">Vision</h2>
-                  <div class="content">Our vision is to be globally acclaimed and renowned across all our 8 product verticals and to expand by building solutions that are sustainable as well as enhance the performance, safety, and environmental compatibility of products across diverse industries.</div>
-                  <div class="v423_5"></div>
-                </div>
-
-              </div>
-              <div class="col-md-4 wow fadeInUp vbg-2" data-wow-delay="0.2s"">
-
-
-                                    <div class=" border-box">
-                <div class="v423_8" style="
-                                        z-index: 1;
-                                        outline-offset: 20px;
-                                        
-                                    ">
-
-                  <div class="icon-image-box">
-                    <img src="./images/vision-mla.png" alt="" srcset="">
-                  </div>
-                </div>
-                <div class="v423_8 " style="
-                                        outline: 2px solid #f78631;
-                                        outline-offset: 20px;
-                                        z-index: -1;
-                                    "></div>
-                <h2 class="title">Mission</h2>
-                <div class="content">We are driven to conduct cutting edge research and development, so that we can build more innovative and high-quality additives. Our goal is to exceed the expectations of our customers by providing them with the best customer service and diverse solutions which are sustainable and improves the product performance. </div>
-                <div class="v423_5"></div>
-              </div>
-
-            </div>
-            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s"">
-
-
-                                    <div class=" border-box">
-              <div class="v423_8" style="
-                                        z-index: 1;
-                                        outline-offset: 20px;
-                                        
-                                    ">
-
-                <div class="icon-image-box">
-                  <img src="./images/mission-mla.png" alt="" srcset="">
-                </div>
-              </div>
-              <div class="v423_8 " style="
-                                        outline: 2px solid #f78631;
-                                        outline-offset: 20px;
-                                        z-index: -1;
-                                    "></div>
-
-              <style>
-                .lisvalues {
-                  color: #e0823d;
-                  font-weight: 600;
-                }
-              </style>
-              <h2 class="title">Values</h2>
-              <div class="content">In our organisation, we have certain core values which work as a guiding light for us. The 5 pillars of our value system include:
-                <ul class="lisvalues">
-                  <li>Integrity </li>
-                  <li>Collaboration</li>
-                  <li>Business ethics</li>
-                  <li>Innovation</li>
-                  <li>Excellence</li>
-
-                </ul>
-
-
-              </div>
-              <div class="v423_5"></div>
-            </div>
-
-          </div>
-        </div>
-      </section>
 
 
 
@@ -754,23 +1317,6 @@ overflow: hidden;
 
 
 
-      <section class="organization-section">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-6">
-              <!-- Image side -->
-              <img src="./images/aboutus/map-mla.png" alt="Image"> <!-- Replace with your image path -->
-            </div>
-            <div class="col-md-6">
-              <!-- Text side -->
-              <div class="section-head style-1">
-              <h2>Our Footprint</h2>
-              </div>
-              <p>We have an extensive marketing network with branch offices at Delhi and Calcutta and marketing associates in almost all industrial cities in India. Our sales and technical services personnel visit customers regularly to provide before and after sales services. The exports have been increasing sharply, mainly to neighbouring countries including Sri Lanka, Nepal, Bangladesh, and also to Middle East, South East Asia and Europe.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
 
@@ -831,44 +1377,7 @@ overflow: hidden;
           font-weight: 500;
         }
       </style>
-      <section>
-        <div class="achievement-area">
-          <div class="overlay-2"></div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-counter-box">
-                  <div class="fact-icon"><i class="flaticon-engineer"></i></div>
-                  <p class="counter-number"><span class="counter">55</span><span>+</span></p>
-                  <h6>Countries Catered</h6>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-counter-box">
-                  <div class="fact-icon"><i class="flaticon-plumber"></i></div>
-                  <p class="counter-number"><span class="counter">10000
-                    </span><span>+</span></p>
-                  <h6>Manufacturing Capacity in MT</h6>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-counter-box">
-                  <div class="fact-icon"><i class="flaticon-tow-truck"></i></div>
-                  <p class="counter-number"><span class="counter">3000</span><span>+</span></p>
-                  <h6>Total Customer</h6>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-counter-box">
-                  <div class="fact-icon"><i class="flaticon-factory"></i></div>
-                  <p class="counter-number"><span class="counter">100</span><span>+</span></p>
-                  <h6>Products Manufactured</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
 
 
@@ -940,7 +1449,7 @@ overflow: hidden;
         .main-timeline .timeline-year {
           margin-left: 57px;
           color: #65c7d0;
-          font-size: 50px;
+          font-size: 32px;
           font-weight: 600;
           display: inline-block;
           transform: translatey(-50%);
@@ -951,19 +1460,19 @@ overflow: hidden;
 
         .main-timeline .timeline-icon {
           color: #65c7d0;
-          font-size: 70px;
+          font-size: 49px;
           display: inline-block;
           transform: translateY(-50%);
           position: absolute;
-          left: 47%;
+          left: 49%;
           top: 50%;
         }
 
         .main-timeline .content {
 
-          margin-left: 1000px;
+          margin-left: 45vw;
           color: #909090;
-          width: 42%;
+          width: 33vw;
           padding: 21px;
           display: inline-block;
           float: inline-end;
@@ -1171,7 +1680,7 @@ overflow: hidden;
 
           .main-timeline .content {
             width: 90%;
-    padding: 34px 20px 34px 0;
+            padding: 34px 20px 34px 0;
             margin-left: 10px;
           }
 
@@ -1194,267 +1703,6 @@ overflow: hidden;
         }
       </style>
 
-      <section class="pt-100 pb-100">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="p-lg-b0 p-md-b30 wow fadeInUp text-center mb-lg-20" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                <div class="section-head style-1">
-                  <h2 class="title">Our Timeline</h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="main-timeline">
-                <div class="timeline">
-                  <a href="#" class="timeline-content">
-                    <span class="timeline-year">1975</span>
-                    <div class="timeline-icon">
-                      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-
-                      <p class="description">
-                        First unit established for manufacturing of White china clay by CMD, Mr ML Agarwal
-
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="timeline">
-                  <a href="#" class="timeline-content">
-                    <span class="timeline-year">1978</span>
-                    <div class="timeline-icon">
-                      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-
-                      <p class="description">
-                        2nd unit established for manufacturing of White clay and Aluminium Silicate
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="timeline">
-                  <a href="#" class="timeline-content">
-                    <span class="timeline-year">1985</span>
-                    <div class="timeline-icon">
-                      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-
-                      <p class="description">
-                        3rd unit started for manufacturing of Precipitated Silica
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="timeline">
-                  <a href="#" class="timeline-content">
-                    <span class="timeline-year">1992</span>
-                    <div class="timeline-icon">
-                      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-
-                      <p class="description">
-                        4th unit started for manufacturing of Zinc Oxide and Metallic stearates
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="timeline">
-                  <a href="#" class="timeline-content">
-                    <span class="timeline-year">1997</span>
-                    <div class="timeline-icon">
-                      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-
-                      <p class="description">
-                        In house fabrication unit established for rapid expansion
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="timeline">
-                  <a href="#" class="timeline-content">
-                    <span class="timeline-year">2017</span>
-                    <div class="timeline-icon">
-                      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-                      <h3 class="title"></h3>
-                      <p class="description">
-                        Mr Sumit Agarwal, MTech- IIT Kanpur joins business full time, Zinc oxide Active and PVC stabilizers manufacturing started in unit 4 </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="timeline">
-                  <a href="#" class="timeline-content">
-                    <span class="timeline-year">2002</span>
-                    <div class="timeline-icon">
-                      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-
-                      <p class="description">
-                        All units are ISO 9001 certified </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="timeline">
-                  <a href="#" class="timeline-content">
-                    <span class="timeline-year">2004</span>
-                    <div class="timeline-icon">
-                      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-
-                      <p class="description">
-                        All units brought under the Group name of MLA Group of Industries </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="timeline">
-                  <a href="#" class="timeline-content">
-                    <span class="timeline-year">2006</span>
-                    <div class="timeline-icon">
-                      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-
-                      <p class="description">
-                        ADC foaming agents unit established </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="timeline">
-                  <a href="#" class="timeline-content">
-                    <span class="timeline-year">2008</span>
-                    <div class="timeline-icon">
-                      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-
-                      <p class="description">
-                        Unilever endorses and patronizes UNISIL NK-7, world's highest absorption silica </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="timeline">
-                  <a href="#" class="timeline-content">
-                    <span class="timeline-year">2009</span>
-                    <div class="timeline-icon">
-                      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-
-                      <p class="description">
-                        Manufacturing of Zinc Oxide American process and Arc furnace process started </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="timeline">
-                  <a href="#" class="timeline-content">
-                    <span class="timeline-year">2009</span>
-                    <div class="timeline-icon">
-                      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-
-                      <p class="description">
-                        Manufacturing of Zinc Oxide American process and Arc furnace process started </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="timeline">
-                  <a href="#" class="timeline-content">
-                    <span class="timeline-year">2014</span>
-                    <div class="timeline-icon">
-                      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-
-                      <p class="description">
-                        New unit for manufacturing of Active Zinc Oxide and Metallic stearates with 5 times capacity started </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="timeline">
-                  <a href="#" class="timeline-content">
-                    <span class="timeline-year">2016</span>
-                    <div class="timeline-icon">
-                      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-
-                      <p class="description">
-                        Wax and ester unit established </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="timeline">
-                  <a href="#" class="timeline-content">
-                    <span class="timeline-year">2018</span>
-                    <div class="timeline-icon">
-                      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-
-                      <p class="description">
-                        Pharma excipients unit established </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="timeline">
-                  <a href="#" class="timeline-content">
-                    <span class="timeline-year">2020</span>
-                    <div class="timeline-icon">
-                      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-
-                      <p class="description">
-                        Mr Abhishek Kanodia, B Tech, IIT Kanpur ( ex Unilever) joins the family business as Factory Director </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="timeline">
-                  <a href="#" class="timeline-content">
-                    <span class="timeline-year">2022</span>
-                    <div class="timeline-icon">
-                      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-
-                      <p class="description">
-                        All non mineral units brought under MLA Industries Pvt Ltd </p>
-                    </div>
-                  </a>
-                </div>
-                <div class="timeline">
-                  <a href="#" class="timeline-content">
-                    <span class="timeline-year">2023</span>
-                    <div class="timeline-icon">
-                      <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="content">
-
-                      <p class="description">
-                        Company moves to Product Owner based model for all its eight product verticals </p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
 
 
       <style>
@@ -1463,6 +1711,7 @@ overflow: hidden;
           background-color: #f8f9fa;
           /* Light gray background */
           padding: 0px 0px 40px;
+          margin-top: 40px;
         }
 
         .quotation-box {
@@ -1730,7 +1979,7 @@ overflow: hidden;
                             <div class="contentindustry">
                               <div>
                                 <h4 class="text-whote">MLA Green Kanpur</h4>
-                                <p>The MLA Green Kanpur initiative, launched by the MLA Group, is a significant environmental project aimed at enhancing urban greenery in Kanpur. This initiative focuses on planting trees along roadsides, providing much-needed shade for pedestrians, and contributing to the reduction of air pollution in the city. By increasing the green cover, the project not only beautifies urban areas but also plays a crucial role in improving air quality and combating the urban heat island effect.</p>
+                                <p>We have 2 dedicated vehicles with a target to carry out 30-40 subsidized plantations everyday along roadsides outside people’s homes and they are entrusted the responsbility to take care of these plants, hence ensuring community involvement</p>
                               </div>
                             </div>
                           </div>
@@ -1744,7 +1993,7 @@ overflow: hidden;
                             <div class="contentindustry">
                               <div>
                                 <h4 class="text-whote">Satvik Roti Rolls</h4>
-                                <p>Satvik Roti Rolls program provides nutritious and affordable food to those in need, demonstrating their commitment to addressing food insecurity.​.</p>
+                                <p> We have one e rickshaw and 7 e bikes with a target to distribute 3000-4000 roti rolls / burgers / kadi chawal bowls to the poor every day, at a subsidized price </p>
                               </div>
                             </div>
                           </div>
@@ -1754,11 +2003,75 @@ overflow: hidden;
                       <div class="swiper-slide">
                         <div class="wow fadeInUp" data-wow-delay="0.4s">
                           <div class="dz-media gradient-overlay1">
+                            <img src="./images/scholarship.jpg" alt="image" />
+                            <div class="contentindustry">
+                              <div>
+                                <h4 class="text-whote">Scholarships</h4>
+                                <p>Scholarship programme for meritorious staff wards </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+                      <div class="swiper-slide">
+                        <div class="wow fadeInUp" data-wow-delay="0.4s">
+                          <div class="dz-media gradient-overlay1">
                             <img src="./images/aboutus/sumit-agarwal-altruist.webp" alt="image" />
                             <div class="contentindustry">
                               <div>
-                                <h4 class="text-whote">PRERNA NGO</h4>
-                                <p>The group supports educational advancements through the PRERNA NGO, which works to improve the quality of education in government schools across the region. These efforts include infrastructural improvements, teacher training, and student support programs, aimed at creating a more conducive learning environment</p>
+                                <h4 class="text-whote">Food parcels distribution</h4>
+                                <p>Food parcels distribution to 20 old aged helpless people everyday totally free of cost </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+
+                      <div class="swiper-slide">
+                        <div class="wow fadeInUp" data-wow-delay="0.4s">
+                          <div class="dz-media gradient-overlay1">
+                            <img src="./images/reconstructionimages.jpg" alt="image" />
+                            <div class="contentindustry">
+                              <div>
+                                <h4 class="text-whote">Reconsruction of temples</h4>
+                                <p>Reconsruction of temples in kanpur and nearby areas </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="wow fadeInUp" data-wow-delay="0.4s">
+                          <div class="dz-media gradient-overlay1">
+                            <img src="./images/cultural.jpg" alt="image" />
+                            <div class="contentindustry">
+                              <div>
+                                <h4 class="text-whote">Programmes</h4>
+                                <p>Organization of religious and cultural programmes on a regular basis </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="swiper-slide">
+                        <div class="wow fadeInUp" data-wow-delay="0.4s">
+                          <div class="dz-media gradient-overlay1">
+                            <img src="./images/blanket.webp" alt="image" />
+                            <div class="contentindustry">
+                              <div>
+                                <h4 class="text-whote">Distribution Programmes</h4>
+                                <p>Distributor of blankets, food and sweets to the poor totally free of cost from time to time in co-ordination with various ngos and administration. </p>
                               </div>
                             </div>
                           </div>
@@ -1875,7 +2188,7 @@ overflow: hidden;
           /* Optional: rounded corners */
         }
       </style>
-      <section class="team-section">
+      <!-- <section class="team-section">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -1888,6 +2201,8 @@ overflow: hidden;
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
     </div>
+    
+    
     <?php include('footer.php'); ?>

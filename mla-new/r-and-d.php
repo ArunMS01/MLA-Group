@@ -46,7 +46,7 @@ include('head.php');
         <section class="content-inner overflow-hidden bg-light">
             <div class="container">
                 <div class="row about-style1  align-items-center about-style1s">
-                    <div class="col-lg-6 m-b30">
+                    <div class="col-lg-6 m-b30 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="position-relative">
                             <div class="about-thumb abtsyle-2">
 
@@ -54,11 +54,9 @@ include('head.php');
                                     <h2 class="title">Research & Development </h2>
                                 </div>
                                 <div class="content">
-                                    <p>The R&D Department of MLA Group has to its credit the development of some of the most advanced technologies for the Production of Precipitated Chemicals and Processed Minerals, worldover. Intensive research is carried on for continuous process improvement, upgradation, new products and technologies are developed to meet the customer-specific requirements. We work with our clients on their problems, developing new and unique tailor-made solutions.</p>
-
-                                    <p>
-                                        Our R&D Deptt. is headed by Mr.N.N. Kapoor (B.Tech., M.S., University of Minnesotta, USA). It is equipped with full chemical and physical testing facilities and application test equipments. We also get the best technical consultation and state-of-art- infrastructural support from the premier research institutes of the country, Indian Institute of Technology (IIT-Kanpur), Harcourt Butler Technical (HBTI-Kanpur), CSIR (Lucknow) and DMSRDE (Kanpur).
-                                    </p>
+                                   <p>
+                                   For R&D : At MLA Group , we pride ourselves on our comprehensive and innovative Research & Development (R&D) capabilities. Our R&D efforts are not just theoretical; they are deeply rooted in practical, application-based research. This approach allows us to develop innovative, high-performance solutions tailored to meet the specific needs of various industries, ensuring superior quality, consistency, and reliability in our products. We have end user application machines like PVC Pipe Extruder , Masterbatch Extruder, Blow Air Film Extruder on which we continuously work to improve performance of our additives. We also have some of the finest lab equipments like Torque Rheometer , Oscillating Rheometer , Atomic Absorption Spectrometer , Two Roll Mill etc which helps us to test and compare performance of our products.
+                                   </p>
                                 </div>
                             </div>
 
@@ -116,7 +114,7 @@ include('head.php');
                 padding: 0;
             }
             .imgbox123{
-                height: 20rem;
+                height: 23rem;
             }
             .imgbox123 img {
                 height: 100%;
@@ -128,13 +126,13 @@ include('head.php');
         <section class=" abytu overflow-hidden ">
             <div class="container-fluidss">
                 <div class="row about-style1 align-items-center ">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
                         <div class="imgbox123">
                         <img class="img-fluid" src="images/chemlab.jpeg" alt="">
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-6  wow fadeInRight" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInRight;">
                         <div class="contant-sliders">
                             <h2>Precipitation Technology</h2>
                             <p>How by a rigourous control of the reaction parameters such as concentration of reactants, temperature, stiring rpm, pH of reaction etc. the particle structure and morphology can be modified to give the optimum combination of properties like bulk density (lightness), absorption capacity, surface area, particle size etc. for a particular application. We have developed precipitated silicas and silicates having absorption capacities as high as 600 % and bulk density 0.04 gm/cc which are unmatched worldwide.</p>
@@ -145,21 +143,21 @@ include('head.php');
                 <div class="row about-style1 align-items-center clreverse">
 
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-6  wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
                         <div class="contant-sliders">
                             <h2>Surface Modification / Activation</h2>
                             <p>How by a rigourous control of the reaction parameters such as concentration of reactants, temperature, stiring rpm, pH of reaction etc. the particle structure and morphology can be modified to give the optimum combination of properties like bulk density (lightness), absorption capacity, surface area, particle size etc. for a particular application. We have developed precipitated silicas and silicates having absorption capacities as high as 600 % and bulk density 0.04 gm/cc which are unmatched worldwide.</p>
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-6  wow fadeInRight" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInRight;">
                     <div class="imgbox123">
                         <img class="img-fluid" src="images/surfacemodeifcation.avif" alt="">
                         </div>
                     </div>
 
                 </div>
-                <div class="row about-style1 align-items-center ">
+                <!-- <div class="row about-style1 align-items-center ">
                     <div class="col-lg-6">
                         <div class="imgbox123">
                         <img class="img-fluid" src="images/chemlab.jpeg" alt="">
@@ -173,7 +171,7 @@ include('head.php');
                         </div>
                     </div>
 
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -253,24 +251,35 @@ include('head.php');
                 --main-color: #009CB5;
             }
             .about-style1 .section-head .title {
-    font-size: 41px !important;
+    /*font-size: 41px !important;*/
  
     }
     .about-style1 .about-thumb{
         margin-left: 0px !important;
         text-align: justify !important;
     }
-
+         @media only screen and (max-width:1299px){
+             .about-style1 .section-head .title{
+                 /*font-size:35px !important;*/
+             }
+         }
+            
             @media screen and (max-width:990px) {
                 .ytcounter {
                     margin-bottom: 40px;
                 }
             }
-
+                
+                
+                @media only screen and (min-width:768px) and (max-width:1184px){
+                    .achivementrows .col-md-3{
+                        width:50% !important;
+                    }
+                }
 
             @media only screen and (max-width:768px) {
                 .countersss-t{
-                    padding: 0 0 100px 0 !important;
+                    padding: 0 0 40px 0 !important;
                 }
                 .about-style1s {
                     flex-direction: column-reverse;
@@ -311,9 +320,9 @@ include('head.php');
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row achivementrows">
 
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                             <div class="ytcounter yellow mbhgj">
                                 <div class="ytcounter-icon">
                                     <span><i class="fa fa-check"></i></span>
@@ -323,7 +332,7 @@ include('head.php');
                             </div>
                         </div>
 
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                             <div class="ytcounter yellow mbhgj">
                                 <div class="ytcounter-icon">
                                     <span><i class="fa fa-check"></i></span>
@@ -333,7 +342,7 @@ include('head.php');
                             </div>
                         </div>
 
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                             <div class="ytcounter yellow mbhgj">
                                 <div class="ytcounter-icon">
                                     <span><i class="fa fa-check"></i></span>
@@ -343,7 +352,7 @@ include('head.php');
                             </div>
                         </div>
 
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                             <div class="ytcounter yellow mbhgj">
                                 <div class="ytcounter-icon">
                                     <span><i class="fa fa-check"></i></span>
@@ -353,7 +362,7 @@ include('head.php');
                             </div>
                         </div>
 
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                             <div class="ytcounter yellow mbhgj">
                                 <div class="ytcounter-icon">
                                     <span><i class="fa fa-check"></i></span>
@@ -363,7 +372,7 @@ include('head.php');
                             </div>
                         </div>
 
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                             <div class="ytcounter yellow mbhgj">
                                 <div class="ytcounter-icon">
                                     <span><i class="fa fa-check"></i></span>
@@ -373,7 +382,7 @@ include('head.php');
                             </div>
                         </div>
 
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                             <div class="ytcounter yellow mbhgj">
                                 <div class="ytcounter-icon">
                                     <span><i class="fa fa-check"></i></span>
@@ -383,7 +392,7 @@ include('head.php');
                             </div>
                         </div>
 
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                             <div class="ytcounter yellow">
                                 <div class="ytcounter-icon">
                                     <span><i class="fa fa-check"></i></span>

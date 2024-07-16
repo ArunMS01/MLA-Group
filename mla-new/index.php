@@ -26,6 +26,18 @@ include('head.php');
 
 
             <style>
+            
+            /*Ipad */
+            
+            @media only screen and (min-width:768px) and (max-width:1180px){
+                footer .footer-logo img{
+                    max-width: 156px;
+                }
+            }
+            
+                html{
+                    overflow-x: hidden;
+                }
                 .py-new {
                     padding-top: 1rem !important;
                     padding-bottom: 2rem !important;
@@ -54,6 +66,28 @@ include('head.php');
                     background: transparent;
                     border-color: #D7D7D7;
                     font-family: var(--font-family-title);
+                }
+
+                .reveal-box ul li {
+                    font-size: 15px;
+                }
+
+                @media only screen and (max-width:1299px) {
+
+                    /* html{
+                    font-size: 72%;
+                } */
+                    .border-box {
+                        min-height: 32rem !important;
+                    }
+
+                    .reveal-box ul li {
+                        font-size: 14px;
+                    }
+
+                    .contentindustry p {
+                        font-size: 1.2rem !important;
+                    }
                 }
             </style>
 
@@ -142,6 +176,10 @@ include('head.php');
                 }
 
                 @media only screen and (max-width:768px) {
+                    .border-box {
+                        min-height: auto !important;
+                    }
+
                     .bleft::after {
                         display: none;
                     }
@@ -532,26 +570,6 @@ include('head.php');
                 </div> -->
             </section>
 
-            <style>
-                .containervidoes {
-                    position: relative;
-                    width: 100%;
-                    overflow: hidden;
-                    padding-top: 56.25%;
-                    /* 16:9 Aspect Ratio */
-                }
-
-                .responsive-iframevids {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    bottom: 0;
-                    right: 0;
-                    width: 100%;
-                    height: 100%;
-                    border: none;
-                }
-            </style>
 
 
 
@@ -646,7 +664,7 @@ include('head.php');
                 @media only screen and (max-width:768px) {
                     .gallery .content {
                         background-size: cover;
-                        background-image:url(https://maidenstride.in/mla-new/images/bdhjdj.jpg);
+                        background-image: url(https://maidenstride.in/mla-new/images/bdhjdj.jpg);
                         padding: 50px 9px;
                     }
 
@@ -875,169 +893,175 @@ overflow: hidden;
                 }
             </style>
 
-<section id="counter-section" class="section pt-50 counter-section">
-    <div class="container">
-        <div class="row gap-50 counyersection">
-            <div class="col-md-3">
-                <div id="counter-box-1" class="big-box wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="small-box">
-                        <div class="imageiconbox">
-                            <img src="./images/countries-catered-mla.png" alt="">
-                        </div>
-                        <div class="v20_82">
-                            <div class="d-flex justify-content-center">
-                                <h2 id="counter-1" class="counter" data-target="55">0</h2>
-                                <h2>+</h2>
+            <section id="counter-section" class="section pt-50 counter-section">
+                <div class="container">
+                    <div class="row gap-50 counyersection">
+                        <div class="col-md-3">
+                            <div id="counter-box-1" class="big-box wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="small-box">
+                                    <div class="imageiconbox">
+                                        <img src="./images/countries-catered-mla.png" alt="">
+                                    </div>
+                                    <div class="v20_82">
+                                        <div class="d-flex justify-content-center">
+                                            <h2 id="counter-1" class="counter" data-target="55">0</h2>
+                                            <h2>+</h2>
+                                        </div>
+                                        <div class="v2344"></div>
+                                        <p>Countries Catered</p>
+                                        <div class="v20_85"></div>
+                                        <div class="name"></div>
+                                    </div>
+                                </div>
+                                <div class="v20_69"></div>
                             </div>
-                            <div class="v2344"></div>
-                            <p>Countries Catered</p>
-                            <div class="v20_85"></div>
-                            <div class="name"></div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="counter-box-2" class="big-box wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="small-box">
+                                    <div class="imageiconbox">
+                                        <img src="./images/total-customer-mla.png" alt="">
+                                    </div>
+                                    <div class="v20_82">
+                                        <div class="d-flex justify-content-center">
+                                            <h2 id="counter-2" class="counter" data-target="3000">0</h2>
+                                            <h2>+</h2>
+                                        </div>
+                                        <div class="v2344"></div>
+                                        <p>Total Customer</p>
+                                        <div class="v20_85"></div>
+                                        <div class="name"></div>
+                                    </div>
+                                </div>
+                                <div class="v20_69"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="counter-box-3" class="big-box wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="small-box">
+                                    <div class="imageiconbox">
+                                        <img src="./images/products-manufactured-mla.png" alt="">
+                                    </div>
+                                    <div class="v20_82">
+                                        <div class="d-flex justify-content-center">
+                                            <h2 id="counter-3" class="counter" data-target="10000">0</h2>
+                                            <h2>+</h2>
+                                        </div>
+                                        <div class="v2344"></div>
+                                        <p>Manufacturing Capacity in MT</p>
+                                        <div class="v20_85"></div>
+                                        <div class="name"></div>
+                                    </div>
+                                </div>
+                                <div class="v20_69"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="counter-box-4" class="big-box wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="small-box">
+                                    <div class="imageiconbox">
+                                        <img src="./images/manufacturing-capacity-mla.png" alt="">
+                                    </div>
+                                    <div class="v20_82">
+                                        <div class="d-flex justify-content-center">
+                                            <h2 id="counter-4" class="counter" data-target="100">0</h2>
+                                            <h2>+</h2>
+                                        </div>
+                                        <div class="v2344"></div>
+                                        <p>Products Manufactured</p>
+                                        <div class="v20_85"></div>
+                                        <div class="name"></div>
+                                    </div>
+                                </div>
+                                <div class="v20_69"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="v20_69"></div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div id="counter-box-2" class="big-box wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="small-box">
-                        <div class="imageiconbox">
-                            <img src="./images/total-customer-mla.png" alt="">
-                        </div>
-                        <div class="v20_82">
-                            <div class="d-flex justify-content-center">
-                                <h2 id="counter-2" class="counter" data-target="3000">0</h2>
-                                <h2>+</h2>
-                            </div>
-                            <div class="v2344"></div>
-                            <p>Total Customer</p>
-                            <div class="v20_85"></div>
-                            <div class="name"></div>
-                        </div>
-                    </div>
-                    <div class="v20_69"></div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div id="counter-box-3" class="big-box wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="small-box">
-                        <div class="imageiconbox">
-                            <img src="./images/products-manufactured-mla.png" alt="">
-                        </div>
-                        <div class="v20_82">
-                            <div class="d-flex justify-content-center">
-                                <h2 id="counter-3" class="counter" data-target="10000">0</h2>
-                                <h2>+</h2>
-                            </div>
-                            <div class="v2344"></div>
-                            <p>Manufacturing Capacity in MT</p>
-                            <div class="v20_85"></div>
-                            <div class="name"></div>
-                        </div>
-                    </div>
-                    <div class="v20_69"></div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div id="counter-box-4" class="big-box wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="small-box">
-                        <div class="imageiconbox">
-                            <img src="./images/manufacturing-capacity-mla.png" alt="">
-                        </div>
-                        <div class="v20_82">
-                            <div class="d-flex justify-content-center">
-                                <h2 id="counter-4" class="counter" data-target="100">0</h2>
-                                <h2>+</h2>
-                            </div>
-                            <div class="v2344"></div>
-                            <p>Products Manufactured</p>
-                            <div class="v20_85"></div>
-                            <div class="name"></div>
-                        </div>
-                    </div>
-                    <div class="v20_69"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+            </section>
 
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        function animateCounters(counterElements) {
-            counterElements.forEach(counter => {
-                console.log(`Animating counter with ID: ${counter.id}`);
-                const target = +counter.getAttribute('data-target');
-                const updateCount = () => {
-                    const count = +counter.innerText;
-                    const increment = target / 200; // Change the increment for slower speed
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    function animateCounters(counterElements) {
+                        const totalDuration = 2000; // Total duration for all counters in milliseconds
 
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + increment);
-                        setTimeout(updateCount, 20); // Adjust the timing for smoother animation
-                    } else {
-                        counter.innerText = target;
-                        console.log(`Counter with ID: ${counter.id} has reached its target of ${target}`);
+                        counterElements.forEach(counter => {
+                            console.log(`Animating counter with ID: ${counter.id}`);
+                            const target = +counter.getAttribute('data-target');
+                            const interval = 20; // Interval for updating the counters in milliseconds
+                            const steps = totalDuration / interval; // Total steps for the animation
+                            const increment = target / steps; // Increment based on the common steps
+
+                            let currentCount = 0; // Start from 0
+
+                            const updateCount = () => {
+                                currentCount += increment;
+                                if (currentCount < target) {
+                                    counter.innerText = Math.ceil(currentCount);
+                                    setTimeout(updateCount, interval); // Update at regular intervals
+                                } else {
+                                    counter.innerText = target;
+                                    console.log(`Counter with ID: ${counter.id} has reached its target of ${target}`);
+                                }
+                            };
+
+                            updateCount();
+                        });
                     }
-                };
 
-                updateCount();
-            });
-        }
+                    function resetCounters(counterElements) {
+                        counterElements.forEach(counter => {
+                            counter.innerText = '0';
+                            console.log(`Resetting counter with ID: ${counter.id}`);
+                        });
+                    }
 
-        function resetCounters(counterElements) {
-            counterElements.forEach(counter => {
-                counter.innerText = '0';
-                console.log(`Resetting counter with ID: ${counter.id}`);
-            });
-        }
+                    let options = {
+                        root: null,
+                        rootMargin: '0px',
+                        threshold: 0.5
+                    };
 
-        let options = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.5
-        };
+                    let observer = new IntersectionObserver(function(entries, observer) {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                console.log('Counter section is in view.');
+                                const counters = entry.target.querySelectorAll('.counter');
+                                resetCounters(counters);
+                                animateCounters(counters);
+                            } else {
+                                console.log('Counter section is out of view.');
+                                const counters = entry.target.querySelectorAll('.counter');
+                                resetCounters(counters);
+                            }
+                        });
+                    }, options);
 
-        let observer = new IntersectionObserver(function (entries, observer) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    console.log('Counter section is in view.');
-                    const counters = entry.target.querySelectorAll('.counter');
-                    resetCounters(counters);
-                    animateCounters(counters);
-                } else {
-                    console.log('Counter section is out of view.');
-                    const counters = entry.target.querySelectorAll('.counter');
-                    resetCounters(counters);
-                }
-            });
-        }, options);
-
-        let counterSection = document.querySelector('#counter-section');
-        observer.observe(counterSection);
-        console.log('Started observing the counter section.');
-    });
-</script>
+                    let counterSection = document.querySelector('#counter-section');
+                    observer.observe(counterSection);
+                    console.log('Started observing the counter section.');
+                });
+            </script>
 
 
 
             <section class="content-inner abyyt pbt-100">
                 <div class="container">
                     <div class="row about-style2 align-items-xl-center align-items-start">
-                    <div class="col-lg-6 col-lg-5 col-sm-5 m-b30 wow fadeInLeft" data-wow-delay="0.4s">
-  <div class="about-thumb">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/PISiZKQtq_E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</div>
+                        <div class="col-lg-6 col-lg-5 col-sm-5 m-b30 wow fadeInLeft" data-wow-delay="0.8s">
+                            <div class="containervidoes">
+                                <iframe class="responsive-iframevids" src="https://www.youtube.com/embed/PISiZKQtq_E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
 
                         <div class="col-lg-6 col-md-7 col-sm-7">
                             <div class="about-content">
-                                <div class="section-head style-1 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="section-head style-1 wow fadeInUp" data-wow-delay="0.5s">
                                     <h3 class="title">About MLA Group</h3>
                                     <p>Since its humble beginnings in 1975, when our first unit was established to manufacture aluminium silicate, MLA Group has continued to expand and thrive. Due to our steady growth and diversification, the business now includes four production facilities producing a wide range of additives. We are today India's largest manufacturers of Zinc Oxide Active and Metallic Stearates and amongst the top 3 in all our eight product verticals.</p>
 
-                                    <a class="btn btn-secondary " href="#">Know More</a>
+                                    <a class="btn btn-secondary " href="about.php">Know More</a>
 
                                 </div>
 
@@ -1045,6 +1069,25 @@ overflow: hidden;
                         </div>
                     </div>
                     <style>
+                        .containervidoes {
+                            position: relative;
+                            width: 100%;
+                            overflow: hidden;
+                            padding-top: 56.25%;
+                            /* 16:9 Aspect Ratio */
+                        }
+
+                        .responsive-iframevids {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                        }
+
                         .border-box {
                             min-height: 29rem;
                             margin: auto;
@@ -1064,7 +1107,7 @@ overflow: hidden;
                         }
 
                         .border-box .content {
-                            padding:8px 44px 40px 40px;
+                            padding: 8px 44px 40px 40px;
                             text-align: justify;
                         }
 
@@ -1152,10 +1195,130 @@ overflow: hidden;
                         .vbg-2 {
                             margin-bottom: 20px;
                         }
+
+                        @media only screen and (max-width:768px) {
+                            .compnayrows {
+                                display: none;
+                            }
+
+                            .swipermobvals {
+                                display: block !important;
+                            }
+
+                            .mttop-20{
+                                margin-top: 65px;
+                            }
+                        }
+
+                        @media only screen and (min-width:768px) and (max-width:1184px) {
+                            .counyersection .col-md-3 {
+                                width: 50% !important;
+                                margin-bottom: 20px;
+                            }
+
+                            #typing-text {
+                                width: 80% !important;
+                            }
+
+                            .border-box {
+                                min-height: auto !important;
+                            }
+
+                            .compnayrows .col-md-4 {
+                                width: 100% !important;
+                            }
+
+
+                        }
+
+                        .swipermobvals {
+                            display: none;
+                        }
                     </style>
                     <div class="section pt-100">
                         <div class="container">
-                            <div class="row rowgap">
+
+                            <div class="swipermobvals swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="border-box">
+                                            <div class="v423_8" style="z-index: 1;outline-offset: 20px;">
+
+                                                <div class="icon-image-box">
+                                                    <img src="./images/vision-mla.png" alt="" srcset="">
+
+                                                </div>
+                                            </div>
+                                            <div class="v423_8 " style="outline: 2px solid #f78631;outline-offset: 20px;z-index: -1;"></div>
+                                            <h2 class="title">Vision</h2>
+                                            <div class="content">Our vision is to be globally acclaimed and renowned across all our 8 product verticals and to expand by building solutions that are sustainable as well as enhance the performance, safety, and environmental compatibility of products across diverse industries.</div>
+                                            <div class="v423_5"></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class=" border-box">
+                                            <div class="v423_8" style="z-index: 1;outline-offset: 20px;">
+
+                                                <div class="icon-image-box">
+                                                    <img src="./images/mission-mla.png" alt="" srcset="">
+
+                                                </div>
+                                            </div>
+                                            <div class="v423_8 " style="outline: 2px solid #f78631;outline-offset: 20px;z-index: -1;"></div>
+                                            <h2 class="title">Mission</h2>
+                                            <div class="content">We are driven to conduct cutting edge research and development, so that we can build more innovative and high-quality additives. Our goal is to exceed the expectations of our customers by providing them with the best customer service and diverse solutions which are sustainable and improves the product performance. </div>
+                                            <div class="v423_5"></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class=" border-box">
+                                            <div class="v423_8" style="z-index: 1;outline-offset: 20px;">
+
+                                                <div class="icon-image-box">
+                                                    <img src="./images/values-mla.png" alt="" srcset="">
+                                                </div>
+                                            </div>
+                                            <div class="v423_8 " style="outline: 2px solid #f78631;outline-offset: 20px;z-index: -1;"></div>
+
+                                            <style>
+                                                .lisvalues {
+                                                    color: #e0823d;
+                                                    margin-top: 10px;
+                                                    font-weight: 600;
+                                                    text-align: center;
+                                                }
+                                            </style>
+                                            <h2 class="title">Values</h2>
+                                            <div class="content">In our organisation, we have certain core values which work as a guiding light for us. The 5 pillars of our value system include:
+                                                <ul class="lisvalues">
+                                                    <li>Integrity </li>
+                                                    <li>Collaboration</li>
+                                                    <li>Business ethics</li>
+                                                    <li>Innovation</li>
+                                                    <li>Excellence</li>
+
+                                                </ul>
+
+
+                                            </div>
+                                            <div class="v423_5"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row swipermobvals">
+                                <div class="col-lg-12 mttop-20">
+                                    <div class="pagination-align justify-content-center">
+                                        <div class="tranding-button-prev1 btn-prev">
+                                            <i class="flaticon flaticon-left-chevron"></i>
+                                        </div>
+                                        <div class="tranding-button-next1 btn-next">
+                                            <i class="flaticon flaticon-chevron"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row rowgap compnayrows">
 
                                 <div class="col-md-4 wow fadeInUp vbg-2" data-wow-delay="0.2s">
 
@@ -1168,7 +1331,8 @@ overflow: hidden;
                                     ">
 
                                             <div class="icon-image-box">
-                                                <img src="./images/values-mla.png" alt="" srcset="">
+                                                <img src="./images/vision-mla.png" alt="" srcset="">
+
                                             </div>
                                         </div>
                                         <div class="v423_8 " style="
@@ -1193,7 +1357,8 @@ overflow: hidden;
                                     ">
 
                                         <div class="icon-image-box">
-                                            <img src="./images/vision-mla.png" alt="" srcset="">
+                                            <img src="./images/mission-mla.png" alt="" srcset="">
+
                                         </div>
                                     </div>
                                     <div class="v423_8 " style="
@@ -1218,7 +1383,7 @@ overflow: hidden;
                                     ">
 
                                     <div class="icon-image-box">
-                                        <img src="./images/mission-mla.png" alt="" srcset="">
+                                        <img src="./images/values-mla.png" alt="" srcset="">
                                     </div>
                                 </div>
                                 <div class="v423_8 " style="
@@ -1230,6 +1395,7 @@ overflow: hidden;
                                 <style>
                                     .lisvalues {
                                         color: #e0823d;
+                                        margin-top: 10px;
                                         font-weight: 600;
                                         text-align: center;
                                     }
@@ -1407,23 +1573,24 @@ overflow: hidden;
         }
     </style>
     <style>
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  background: #000;
-}
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+        }
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-</style>
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
     <section class="content-inner application-tab overlay-black-light pbt-100" style="background-image:url(images/appit.jpg); background-repeat: no-repeat; background-size: cover;background-position: bottom;">
         <div class="container">
             <div class="row about-style2 align-items-xl-center align-items-start wow fadeInUp" data-wow-delay="0.2s">
@@ -1441,6 +1608,93 @@ overflow: hidden;
 
                     </div>
                 </div>
+
+
+                <style>
+                    .reveal-box {
+                        position: absolute;
+                        bottom: -100%;
+                        /* Start from below the container */
+                        left: 0;
+                        right: 0;
+                        border-radius: 10px;
+                        background: rgba(255, 255, 255, 0.9);
+                        /* White background with some transparency */
+                        color: #000;
+                        padding: 20px;
+                        box-sizing: border-box;
+                        transition: bottom 0.5s ease-in-out;
+                        overflow-y: auto;
+                        /* Optional if content is large */
+
+                    }
+
+                    .dz-media:hover .reveal-box {
+                        bottom: 0;
+                        /* Move to the top on hover */
+                    }
+
+                    .dz-media:hover .contentindustry {
+                        opacity: 0;
+                        /* Hide contentindustry on hover */
+                        display: none;
+                    }
+
+                    .reveal-box ul {
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                    }
+
+                    .reveal-box ul li {
+                        margin-bottom: 10px;
+                    }
+
+                    .reveal-box ul li i {
+                        color: #e0823d;
+                        margin-right: 6px;
+                    }
+
+                    .reveal-box ul li {
+                        display: flex;
+                        align-items: baseline;
+                    }
+
+                    .reveal-box p {
+                        font-size: 1.5rem;
+                    }
+
+                    /* Mobile view styles */
+                    @media (max-width: 767px) {
+
+
+                        .reveal-box {
+                            top: 0;
+                            background: rgba(0, 0, 0, 0.48);
+                            /* Dark background for text visibility */
+                            color: #fff;
+                            display: flex;
+                            align-items: center;
+
+                            height: 100%;
+                            padding: 10px;
+                        }
+
+                        .reveal-box ul {
+                            list-style: none;
+                            padding: 0;
+                        }
+
+                        .reveal-box ul li {
+                            margin-bottom: 10px;
+                        }
+
+                        .contentindustry {
+                            display: none;
+                            /* Hide contentindustry by default */
+                        }
+                    }
+                </style>
 
                 <div class="col-lg-2">
                     <div class="pagination-align justify-content-end">
@@ -1460,82 +1714,536 @@ overflow: hidden;
                             <div class="swiper swiper-four">
                                 <div class="swiper-wrapper">
 
-                                    <div class="swiper-slide">
-                                        <div class=" wow fadeInUp" data-wow-delay="0.4s">
-                                            <div class="dz-media">
-                                                <img src="images/petrochemical.jpg" alt="image">
-                                                <div class="contentindustry">
-                                                    <p>Petrochemicals</p>
-                                                </div>
-                                            </div>
 
-                                        </div>
-                                    </div>
+
 
                                     <div class="swiper-slide">
-                                        <div class=" wow fadeInUp" data-wow-delay="0.4s">
+                                        <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/pharma.jpg" alt="image">
+                                                <img src="images/plasticimg1.jpg" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>Pharmaceutical</p>
+                                                    <p>PVC Pipe Industries</p>
                                                 </div>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class=" wow fadeInUp" data-wow-delay="0.4s">
-                                            <div class="dz-media">
-                                                <img src="images/pipes.jpg" alt="image">
-                                                <div class="contentindustry">
-                                                    <p>PVC Pipes and fittings</p>
+                                                <div class="reveal-box">
+                                                    <div>
+                                                        <p>PVC Pipe Industries</p>
+                                                        <ul>
+                                                            <li><i class="fa fa-check"></i> Unismart Packs</li>
+                                                            <li><i class="fa fa-check"></i> Calcium Zinc Stabilizers</li>
+                                                            <li><i class="fa fa-check"></i> Lead Based Stabilizers: One-pack / Hybrid Low-Lead / Singles</li>
+                                                            <li><i class="fa fa-check"></i> Calcium Stearate</li>
+                                                            <li><i class="fa fa-check"></i> PE Wax, MLA 60, Stearic Acid, Paraffin Flakes, GMS -40</li>
+                                                            <!-- <li><i class="fa fa-check"></i> ADC Blowing Agents (AC & NC Both)</li> -->
+                                                            <li><i class="fa fa-check"></i> Titanium Dioxide: Rutile & Anatase</li>
+                                                            <li><i class="fa fa-check"></i> Onepack lubricants</li>
+                                                            <!-- <li><i class="fa fa-check"></i> Calcined Clay</li> -->
+                                                        </ul>
+                                                    </div>
                                                 </div>
-
                                             </div>
-
                                         </div>
+
+
                                     </div>
 
 
+
                                     <div class="swiper-slide">
-                                        <div class=" wow fadeInUp" data-wow-delay="0.4s">
+                                        <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
                                                 <img src="images/rubber-transformed.jpeg" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>Rubber</p>
+                                                    <p>Rubber Industries</p>
                                                 </div>
+                                                <div class="reveal-box">
+                                                    <div>
+                                                        <p>Rubber Industries</p>
+                                                        <ul>
+                                                            <li><i class="fa fa-check"></i> Ppt silica</li>
+                                                            <li><i class="fa fa-check"></i> Zinc oxide active</li>
 
+                                                            <li><i class="fa fa-check"></i> China clay</li>
+                                                            <li><i class="fa fa-check"></i> Aluminium silicate</li>
+                                                            <li><i class="fa fa-check"></i> Zinc stearate</li>
+                                                            <li><i class="fa fa-check"></i> Stearic acid</li>
+                                                            <li><i class="fa fa-check"></i> PE wax</li>
+                                                            <li><i class="fa fa-check"></i> Paraffin wax</li>
+                                                            <li><i class="fa fa-check"></i> Titanium dioxide</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
-
                                         </div>
+
+
                                     </div>
 
                                     <div class="swiper-slide">
-                                        <div class=" wow fadeInUp" data-wow-delay="0.4s">
+                                        <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                            <div class="dz-media">
+                                                <img src="images/paint-mlagroup.jpg" alt="image">
+                                                <div class="contentindustry">
+                                                    <p>Paints Industries</p>
+                                                </div>
+                                                <div class="reveal-box">
+                                                    <div>
+                                                        <p>Paints Industries</p>
+                                                        <ul>
+                                                            <li><i class="fa fa-check"></i> Levigated china clay / kaolin</li>
+                                                            <li><i class="fa fa-check"></i> Talc / Barytes / Calcite / Dolomite / Whiting</li>
+                                                            <li><i class="fa fa-check"></i> Calcined clay</li>
+                                                            <li><i class="fa fa-check"></i> Aluminium Silicate / sodium aluminium silicate</li>
+                                                            <li><i class="fa fa-check"></i> Zinc stearate</li>
+                                                            <li><i class="fa fa-check"></i> Aluminium Stearate</li>
+                                                            <li><i class="fa fa-check"></i> Calcium Stearate</li>
+                                                            <li><i class="fa fa-check"></i> Precipitated Silica</li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                            <div class="dz-media">
+                                                <img src="images/masterbatch.jpg" alt="image">
+                                                <div class="contentindustry">
+                                                    <p>Plastics Industries</p>
+                                                </div>
+                                                <div class="reveal-box">
+                                                    <div>
+                                                        <p>Plastics Industries</p>
+                                                        <ul>
+                                                            <li><i class="fa fa-check"></i> Zinc stearate</li>
+                                                            <li><i class="fa fa-check"></i> Calcium stearate</li>
+                                                            <li><i class="fa fa-check"></i> Talc / Calcite / dolomite / clay</li>
+                                                            <li><i class="fa fa-check"></i> Precipitated silica</li>
+                                                            <li><i class="fa fa-check"></i> EBS / amide wax</li>
+                                                            <li><i class="fa fa-check"></i> Aluminium stearate</li>
+                                                            <li><i class="fa fa-check"></i> Magnesium stearate</li>
+                                                            <li><i class="fa fa-check"></i> Barium Stearate</li>
+                                                            <li><i class="fa fa-check"></i> PE wax</li>
+                                                            <li><i class="fa fa-check"></i> One pack lubricant against Plastaid-T of fine organics</li>
+                                                        </ul>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                            <div class="dz-media">
+                                                <img src="images/Cable.jpg" alt="image">
+                                                <div class="contentindustry">
+                                                    <p>Cable compounding</p>
+                                                </div>
+                                                <div class="reveal-box">
+                                                    <div>
+                                                        <p>Cable compounding</p>
+                                                        <ul>
+                                                            <li><i class="fa fa-check"></i> TBLS,
+                                                                DBLS,
+                                                                LS,
+                                                                DBLpthalate</li>
+                                                            <li><i class="fa fa-check"></i> One packs stabilizers (lead based)</li>
+                                                            <li><i class="fa fa-check"></i> PE wax</li>
+                                                            <li><i class="fa fa-check"></i> Calcium stearate</li>
+                                                            <li><i class="fa fa-check"></i> Stearic acid</li>
+                                                            <li><i class="fa fa-check"></i> One pack lubricants</li>
+                                                            <li><i class="fa fa-check"></i> Paraffin wax in flakes form</li>
+                                                            <li><i class="fa fa-check"></i> Calcined clay</li>
+                                                            <li><i class="fa fa-check"></i> Titanium dioxide</li>
+                                                        </ul>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <div class="swiper-slide">
+                                        <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                            <div class="dz-media">
+                                                <img src="images/formboard.jpeg" alt="image">
+                                                <div class="contentindustry">
+                                                    <p>Foamboard /
+                                                        WPC</p>
+                                                </div>
+                                                <div class="reveal-box">
+                                                    <div>
+                                                        <p>Foamboard /
+                                                            WPC</p>
+                                                        <ul>
+                                                            <li><i class="fa fa-check"></i> Foaming
+                                                                agents</li>
+                                                            <li><i class="fa fa-check"></i> Stabilizers</li>
+                                                            <li><i class="fa fa-check"></i> PE wax
+                                                                Calcium
+                                                                sterate</li>
+
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <div class="swiper-slide">
+                                        <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                            <div class="dz-media">
+                                                <img src="images/SPCflooring.webp" alt="image">
+                                                <div class="contentindustry">
+                                                    <p>SPC flooring</p>
+                                                </div>
+                                                <div class="reveal-box">
+                                                    <div>
+                                                        <p>SPC flooring</p>
+                                                        <ul>
+                                                            <li><i class="fa fa-check"></i>CZ stabilizer</li>
+                                                            <li><i class="fa fa-check"></i> Lubricant</li>
+                                                            <li><i class="fa fa-check"></i> PE wax</li>
+
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+
+                                    <div class="swiper-slide">
+                                        <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                            <div class="dz-media">
+                                                <img src="images/Wall-panels.webp" alt="image">
+                                                <div class="contentindustry">
+                                                    <p>Wall panels /
+                                                        Roofing
+                                                        sheet/
+                                                        Laminate /
+                                                        Edge banks</p>
+                                                </div>
+                                                <div class="reveal-box">
+                                                    <div>
+                                                        <p>Wall panels /
+                                                            Roofing
+                                                            sheet/
+                                                            Laminate /
+                                                            Edge banks</p>
+                                                        <ul>
+                                                            <li><i class="fa fa-check"></i>Stabilizers
+                                                                and
+                                                                lubricants</li>
+
+
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                            <div class="dz-media">
+                                                <img src="images/cosmetics.jfif" alt="image">
+                                                <div class="contentindustry">
+                                                    <p>Cosmetics/
+                                                        Toothpaste</p>
+                                                </div>
+                                                <div class="reveal-box">
+                                                    <div>
+                                                        <p>Cosmetics/
+                                                            Toothpaste</p>
+                                                        <ul>
+                                                            <li><i class="fa fa-check"></i> Levigated clay / kaolin / talc</li>
+                                                            <li><i class="fa fa-check"></i> Zinc stearate</li>
+                                                            <li><i class="fa fa-check"></i> Precipitated silica</li>
+                                                            <li><i class="fa fa-check"></i> Sodium stearate</li>
+                                                            <li><i class="fa fa-check"></i> GMS</li>
+                                                            <li><i class="fa fa-check"></i> EGMS / EGDS</li>
+                                                            <li><i class="fa fa-check"></i> Zinc carbonate</li>
+                                                            <li><i class="fa fa-check"></i> Zinc stearate</li>
+                                                        </ul>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <div class="swiper-slide">
+                                        <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                            <div class="dz-media">
+                                                <img src="images/detpowder.jpg" alt="image">
+                                                <div class="contentindustry">
+                                                    <p>Detergents</p>
+                                                </div>
+                                                <div class="reveal-box">
+                                                    <div>
+                                                        <p>Detergents</p>
+                                                        <ul>
+                                                            <li><i class="fa fa-check"></i> Precipitated
+                                                                Silica</li>
+                                                            <li><i class="fa fa-check"></i> Levigated
+                                                                clay / talcum
+                                                                / calcite /
+                                                                dolomite</li>
+
+                                                        </ul>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                            <div class="dz-media">
+                                                <img src="images/Pharmaceuticals-and-food.jfif" alt="image">
+                                                <div class="contentindustry">
+                                                    <p>Pharmaceuticals and food
+                                                        products</p>
+                                                </div>
+                                                <div class="reveal-box">
+                                                    <div>
+                                                        <p>Pharmaceuticals and food
+                                                            products</p>
+                                                        <ul>
+                                                            <li><i class="fa fa-check"></i> Levigated clay / kaolin</li>
+                                                            <li><i class="fa fa-check"></i> Magnesium stearate</li>
+                                                            <li><i class="fa fa-check"></i> Talc Powder</li>
+                                                            <li><i class="fa fa-check"></i> Zinc Oxide</li>
+                                                            <li><i class="fa fa-check"></i> Other pharma excipients</li>
+                                                            <li><i class="fa fa-check"></i> Silicon dioxide or ppt silica</li>
+                                                            <li><i class="fa fa-check"></i> SMS / STS</li>
+                                                            <li><i class="fa fa-check"></i> GMS -40</li>
+                                                        </ul>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+
+                                    <div class="swiper-slide">
+                                        <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                            <div class="dz-media">
+                                                <img src="images/Pesticides.jfif" alt="image">
+                                                <div class="contentindustry">
+                                                    <p>Pesticides and
+                                                        micronutrients
+                                                    </p>
+                                                </div>
+                                                <div class="reveal-box">
+                                                    <div>
+                                                        <p>Pesticides and
+                                                            micronutrients
+                                                        </p>
+                                                        <ul>
+                                                            <li><i class="fa fa-check"></i> Precipitated
+                                                                silica</li>
+                                                            <li><i class="fa fa-check"></i> Hydrated
+                                                                calcium
+                                                                silicate</li>
+                                                            <li><i class="fa fa-check"></i>Levigated
+                                                                clay / kaolin</li>
+                                                            <li><i class="fa fa-check"></i> Zinc Oxide</li>
+
+                                                        </ul>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <div class="swiper-slide">
+                                        <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                            <div class="dz-media">
+                                                <img src="images/petrochemical.jpg" alt="image">
+                                                <div class="contentindustry">
+                                                    <p>Chemicals</p>
+                                                </div>
+                                                <div class="reveal-box">
+                                                    <div>
+                                                        <p>Chemicals</p>
+                                                        <ul>
+                                                            <li><i class="fa fa-check"></i> Precipitated
+                                                                silica</li>
+                                                            <li><i class="fa fa-check"></i> China clay /
+                                                                talc etc</li>
+
+
+                                                        </ul>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                            <div class="dz-media">
+                                                <img src="images/chemcials.jpg" alt="image">
+                                                <div class="contentindustry">
+                                                    <p>Construction
+                                                        chemicals</p>
+                                                </div>
+                                                <div class="reveal-box">
+                                                    <div>
+                                                        <p>Construction
+                                                            chemicals</p>
+                                                        <ul>
+                                                            <li><i class="fa fa-check"></i> Zinc stearate,
+                                                                calcium
+                                                                stearate,
+                                                                aluminium
+                                                                stearate ,
+                                                                other stearates</li>
+
+
+
+                                                        </ul>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                            <div class="dz-media">
+                                                <img src="images/tablesalt.jpg" alt="image">
+                                                <div class="contentindustry">
+                                                    <p>Table salt</p>
+                                                </div>
+                                                <div class="reveal-box">
+                                                    <div>
+                                                        <p>Table salt</p>
+                                                        <ul>
+                                                            <li><i class="fa fa-check"></i> Precipitated
+                                                                silica</li>
+
+
+
+                                                        </ul>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
                                                 <img src="images/ceramics.jpg" alt="image">
                                                 <div class="contentindustry">
                                                     <p>Ceramics</p>
                                                 </div>
+                                                <div class="reveal-box">
+                                                    <div>
+                                                        <p>Ceramics</p>
+                                                        <ul>
+                                                            <li><i class="fa fa-check"></i> Zinc oxide</li>
+                                                            <li><i class="fa fa-check"></i> White china
+                                                                clay</li>
 
+
+                                                        </ul>
+                                                    </div>
+
+
+
+                                                </div>
                                             </div>
-
                                         </div>
+
+
                                     </div>
 
                                     <div class="swiper-slide">
-                                        <div class=" wow fadeInUp" data-wow-delay="0.4s">
+                                        <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/detpowder.jpg" alt="image">
+                                                <img src="images/animalfeed.jpg" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>Detergent Powder</p>
+                                                    <p>Animal feed</p>
                                                 </div>
+                                                <div class="reveal-box">
+                                                    <div>
+                                                        <p>Animal feed</p>
+                                                        <ul>
+                                                            <li><i class="fa fa-check"></i> Zinc oxide</li>
+                                                            <li><i class="fa fa-check"></i> Kaolin</li>
+                                                            <li><i class="fa fa-check"></i>PPt silica</li>
 
+                                                        </ul>
+                                                    </div>
+
+
+
+                                                </div>
                                             </div>
-
                                         </div>
+
+
                                     </div>
 
                                 </div>
@@ -1559,7 +2267,7 @@ overflow: hidden;
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="p-lg-b0 p-md-b30 wow fadeInUp text-center mb-lg-20" data-wow-delay="0.1s">
+                    <div class="p-lg-b0 p-md-b30 wow fadeInUp text-center mb-lg-20" data-wow-delay="0.5s">
                         <div class="section-head style-1">
                             <h2 class="title">
                                 Certifications</h2>
@@ -1571,7 +2279,7 @@ overflow: hidden;
             <div class="section-inner">
 
                 <div class="row gx-3 companies-inner">
-                    <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.5s">
                         <a href="javascript:void(0);" class="companies-wrapper">
                             <div class="companies-media">
                                 <img src="https://www.mlagroup.com/img/certifications/dnv.png" alt="">
@@ -1592,7 +2300,7 @@ overflow: hidden;
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.8s">
                         <a href="javascript:void(0);" class="companies-wrapper">
                             <div class="companies-media">
                                 <img src="https://www.mlagroup.com/img/certifications/04.jpg" alt="">
@@ -1707,7 +2415,7 @@ overflow: hidden;
 
         @media only screen and (max-width:768px) {
             .border-box {
-                min-height: auto;
+                min-height: 23rem !important;
             }
 
             .list-style-three .list-info {

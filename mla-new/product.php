@@ -81,21 +81,38 @@
 
 <?php
 // Assuming you have a database connection established already
-include('database.php');
+include('admin/codes/db.php');
 
 // Function to query product data from the database based on product ID
-function query_product_data($product_id, $conn) {
+function query_product_data($product_id, $db) {
     // SQL query to retrieve product data based on product_id
     $sql = "SELECT * FROM products WHERE id = $product_id";
-    $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($db, $sql);
     return mysqli_fetch_assoc($result);
+
+   
+}
+
+function query_product_brand($product_id, $db){
+
+      // SQL query to retrieve product data based on product_id
+      $sql = "SELECT * FROM products WHERE id = $product_id LIMIT 1";
+      $result = mysqli_query($db, $sql);
+      $data = mysqli_fetch_assoc($result);
+     
+      $bid = $data['brand'];
+      if($bid){
+    $getbrand = "SELECT * FROM `brand` WHERE id = $bid";
+    $result = mysqli_query($db, $getbrand);
+    return mysqli_fetch_assoc($result);
+      }
 }
 
 // Function to query gallery images from the database based on product ID
-function query_gallery_images($product_id, $conn) {
+function query_gallery_images($product_id, $db) {
     // SQL query to retrieve gallery images based on product_id
     $sql = "SELECT * FROM gallery_images WHERE product_id = $product_id";
-    $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($db, $sql);
     $gallery_images = array();
     while ($row = mysqli_fetch_assoc($result)) {
         $gallery_images[] = $row['image_url'];
@@ -110,7 +127,7 @@ if(isset($_GET['url'])) {
 
     // Query the database to get the product ID using the URL
     $product_id_query = "SELECT id FROM products WHERE url = '$product_url'";
-    $result_product_id = mysqli_query($conn, $product_id_query);
+    $result_product_id = mysqli_query($db, $product_id_query);
 
     // Check if the query executed successfully
     if($result_product_id) {
@@ -119,8 +136,9 @@ if(isset($_GET['url'])) {
             // Product ID exists, proceed to fetch product data and gallery images
             $product_id_row = mysqli_fetch_assoc($result_product_id);
             $product_id = $product_id_row['id'];
-            $product_data = query_product_data($product_id, $conn);
-            $gallery_images = query_gallery_images($product_id, $conn);
+            $product_data = query_product_data($product_id, $db);
+            $getbrand = query_product_brand($product_id, $db);
+            $gallery_images = query_gallery_images($product_id, $db);
         } else {
             // Product ID doesn't exist, handle the error (e.g., redirect to an error page)
          
@@ -128,7 +146,7 @@ if(isset($_GET['url'])) {
         }
     } else {
         // Query execution failed, handle the error (e.g., display an error message)
-        echo "Error: " . mysqli_error($conn);
+        echo "Error: " . mysqli_error($db);
     }
 } else {
 
@@ -262,11 +280,11 @@ echo '</ul>';
                             <div class="banner-social-media">
                                 <ul>
                                     <li class="linkdin1">
-                                        <a href="javascript:void(0);"><i class="fab fa-linkedin-in"
+                                        <a target="_blank" href="https://in.linkedin.com/company/mlagroup"><i class="fab fa-linkedin-in"
                                                 style="color: #ffffff;"></i></a>
                                     </li>
                                     <li class="tube1">
-                                        <a href="javascript:void(0);"><i class="fab fa-youtube"
+                                        <a target="_blank" href="https://www.youtube.com/channel/UCAO4wS5FTGrqijRJbe6D_yQ"><i class="fab fa-youtube"
                                                 style="color: #ffffff;"></i></a>
                                     </li>
 
@@ -281,7 +299,7 @@ echo '</ul>';
                             }
                             .site-header{
                                 border-bottom: 1px solid #fe8f34 !important;
-                                padding-bottom: 10px;
+                                /* padding-bottom: 10px; */
                             }
                             .tube1 i{
                                 color: red;
@@ -373,19 +391,30 @@ echo '</ul>';
                             .margin-top {
                                 margin-top: -11px !important;
                             }
+
+                            .brimg{
+                                height: 5rem;
+                                object-fit: contain;
+                            }
                         </style>
                         <div class=" style-1 m-r20 m-md-r0 wow fadeInUp" data-wow-delay="0.5s"
                             bis_skin_checked="1"
                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <?php
+                            if(isset($getbrand['logo'])){
+                            ?>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <img style="display: block; margin: auto;"
-                                        src="./images//UNISIL6_logo.png"
+                                    <img class="brimg" style="display: block; margin: auto;"
+                                        src="admin/codes/<?php echo $getbrand['logo']?>"
                                         class="mt-4 mb-4 margin-top mix-blend-mode">
 
 
                                 </div>
                             </div>
+                            <?php
+                            }
+                            ?>
                             <p class="mb-negative quotes">Request Quote/Information <i
                                     class="fa fa-file-text" aria-hidden="true"></i> </p>
                             <div class="div contact-area1new cart-detail">
@@ -521,7 +550,7 @@ $related_products = array();
 // Step 3: Query the product table for each related product
 foreach ($related_product_ids as $product_id) {
     $query = "SELECT id, title, url FROM products WHERE id = '$product_id'";
-    $result = mysqli_query($conn, $query);
+    $result = mysqli_query($db, $query);
 
     // Check if the query was successful and fetch the product details
     if ($result && mysqli_num_rows($result) > 0) {
@@ -806,7 +835,7 @@ foreach ($related_product_ids as $product_id) {
 // Fetch brands from the database
 
  $query = "SELECT id, name, logo FROM brand";
-$result = mysqli_query($conn, $query);
+$result = mysqli_query($db, $query);
 
 // Initialize an array to store the brands
 $brands = [];
@@ -822,7 +851,7 @@ if ($result && mysqli_num_rows($result) > 0) {
 // Fetch products for each brand
 foreach ($brands as $brandId => $brand) {
 $query = "SELECT id, title, url FROM products WHERE brand = $brandId";
-    $result = mysqli_query($conn, $query);
+    $result = mysqli_query($db, $query);
 
     // Initialize an array to store products for this brand
     $products = [];
@@ -840,7 +869,7 @@ $query = "SELECT id, title, url FROM products WHERE brand = $brandId";
 }
 
 // Close the database connectio
-mysqli_close($conn);
+mysqli_close($db);
 
 // Now $brands array contains all brands with their associated products
 ?>
@@ -861,10 +890,10 @@ mysqli_close($conn);
         </div>
 
         <?php foreach ($brands as $brand): ?>
-            <div class="tab-content" id="brand-<?php echo $brand['id']; ?>">
+            <div class="tab-content tabcontentntew" id="brand-<?php echo $brand['id']; ?>">
                 <div class="row align-items-center">
                     <div class="col-md-3">
-                        <img style="display: block; margin: auto;" src="admin/codes/<?php echo htmlspecialchars($brand['logo']); ?>" class="mt-4 mb-4">
+                        <img class="brandimg" style="display: block; margin: auto;" src="admin/codes/<?php echo htmlspecialchars($brand['logo']); ?>" class="mt-4 mb-4">
                     </div>
                     <div class="col-md-9">
                         <div class="row gx-xl-4 g-3">
@@ -888,6 +917,11 @@ mysqli_close($conn);
   
     </section>
     <style>
+        .brandimg{
+        mix-blend-mode: multiply;
+        height: 6rem;
+        object-fit: contain;
+        }
         .product-list {
             list-style: none;
             padding: 0;
@@ -915,7 +949,7 @@ mysqli_close($conn);
             width: 100%;
         }
 
-        .tab-content {
+        .tabcontentntew {
             display: none;
         }
 
