@@ -44,6 +44,14 @@
 
 
     <style>
+    	@media only screen and (max-width:768px){
+    	    .dz-social-icon{
+    	        display:none !important;
+    	    }
+		    .borderlfyfyr::after{
+		        display:none !important;
+		    }
+		}
         /* .inquiry-modal  {
 			display: none !important;
 		} */

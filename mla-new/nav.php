@@ -75,22 +75,22 @@
                                 </li>
 
                                 <li class="has-mega-menu ">
-                                    <a  href="#"><span class="bleft borderlfyfyr">About Us</span></a>
+                                    <a  href="about.php"><span class="bleft borderlfyfyr">About Us</span></a>
 
                                 </li>
 
                                 <li class="has-mega-menu ">
-                                    <a  href="#"><span class="bleft borderlfyfyr">R & D</span></a>
+                                    <a  href="r-and-d.php"><span class="bleft borderlfyfyr">R & D</span></a>
 
                                 </li>
 
                                 <li class="has-mega-menu ">
-                                    <a  href="#"><span class="bleft borderlfyfyr">quality</span></a>
+                                    <a  href="qc.php"><span class="bleft borderlfyfyr">quality</span></a>
 
                                 </li>
 
                                 <li class="has-mega-menu ">
-                                    <a  href="#"><span  class="bleft borderlfyfyr">Manufacturing</span></a>
+                                    <a  href="manufacturing.php"><span  class="bleft borderlfyfyr">Manufacturing</span></a>
 
                                 </li>
 
@@ -99,7 +99,7 @@
 
 
                                 <li class="has-mega-menu">
-                                    <a  href="#"><span class="bleft borderlfyfyr">Our Services</span></a>
+                                    <!-- <a  href="#"><span class="bleft borderlfyfyr">Our Services</span></a> -->
                                     <!--<div class="mega-menu shop-menu">-->
                                     <!--	<div class="row">-->
                                     <!--		<div class="col-lg-12 col-md-12 col-sm-12">-->
@@ -176,7 +176,25 @@
                                     <!--	</div>-->
                                     <!--</div>-->
                                 </li>
-                                <li class="has-mega-menu"><a  href="javascript:void(0);"><span class="bleft borderlfyfyr">Products</span></a>
+                                <li class="sub-menu sub-menu-down"><a href="javascript:void(0);"><span class="bleft borderlfyfyr">Brands</span></a>
+								<ul class="sub-menu">
+                                    <?php
+                                    require('admin/codes/db.php');
+                                    $sql = "SELECT * FROM `brand`";
+                                    $resutl = mysqli_query($db, $sql);
+                                    if($resutl){
+                                        while($row = mysqli_fetch_assoc($resutl)){
+                                    ?>
+									<li><a href="brands.php?url=<?php echo $row['url']?>"><?php echo $row['name']?></a></li>
+
+                                    <?php
+                                        }
+                                    }
+                                    ?>
+									
+								</ul>
+							</li>
+                                <li class="has-mega-menu"><a  href="our-products.php"><span class="bleft borderlfyfyr">Products</span></a>
 
                                 </li>
 
