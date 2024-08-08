@@ -93,11 +93,16 @@
     .breadcrumb-list li:last-child:before {
         display: none
     }
+    
+    .content-innerbanner {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
 </style>
 
 
 
-<section class="content-inner overflow-hidden bg-light" style="background: url('./images/aboutus/banner-about-mla.png');">
+<section class="content-innerbanner overflow-hidden " style="background-color:rgb(251 231 215);">
     <div class="container">
         <div class="row about-style1 align-items-center zoom-in-up visible">
             <div class="col-lg-12 text-center">
@@ -349,7 +354,7 @@
 
                             <div class="contact-section">
                                 <h4>DIRECTOR (MARKETING)</h4>
-                                <p>Mr. Sumit Agarwal - <a href="tel:+915122555292">+91-512-2555292</a>, <a href="tel:+919336116592">+91-9336116592</a>, <a href="mailto:md@mlagroup.com">md@mlagroup.com</a></p>
+                                <p>Mr. Sumit Agarwal - <a href="tel:+919336116592">+91-9336116592</a>, <a href="mailto:md@mlagroup.com">md@mlagroup.com</a></p>
                             </div>
 
                             <div class="contact-section">
@@ -370,7 +375,7 @@
 
                             <div class="contact-section">
                                 <h4>RECRUITMENTS</h4>
-                                <p><a href="mailto:mayur@mlagroup.com">mayur@mlagroup.com</a></p>
+                                <p>Mr Mayur Makhija - <a href="tel:+919140908101">+91-9140908101</a>, <a href="mailto:mayur@mlagroup.com">mayur@mlagroup.com</a></p>
                             </div>
                         </div>
                     </div>

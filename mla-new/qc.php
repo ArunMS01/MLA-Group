@@ -443,6 +443,9 @@ include('head.php');
             }
 
             @media only screen and (max-width: 768px) {
+                .radius img{
+                    margin-right:auto !important;
+                }
                 .about-style1 .section-head .title {
                     font-size: 29px !important;
                 }

@@ -516,7 +516,7 @@ include('head.php');
 
 					<div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
 						<div class="manubox">
-							<img src="images/pcsite.png" alt="">
+							<img src="images/flasydrying.webp" alt="">
 						</div>
 						<p>PACKING SITE
 
