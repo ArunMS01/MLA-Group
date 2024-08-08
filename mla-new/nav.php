@@ -176,7 +176,7 @@
                                     <!--	</div>-->
                                     <!--</div>-->
                                 </li>
-                                <li class="sub-menu sub-menu-down"><a href="javascript:void(0);"><span class="bleft borderlfyfyr">Brands</span></a>
+                                <li class="sub-menu sub-menu-down"><a href="our-products.php"><span class="bleft borderlfyfyr">Products</span></a>
 								<ul class="sub-menu">
                                     <?php
                                     require('admin/codes/db.php');
@@ -194,9 +194,9 @@
 									
 								</ul>
 							</li>
-                                <li class="has-mega-menu"><a  href="our-products.php"><span class="bleft borderlfyfyr">Products</span></a>
+                                <!--<li class="has-mega-menu"><a  href="our-products.php"><span class="bleft borderlfyfyr">Products</span></a>-->
 
-                                </li>
+                                <!--</li>-->
 
                                 <li><a  href="contactus.php">Contact Us</a></li>
                             </ul>

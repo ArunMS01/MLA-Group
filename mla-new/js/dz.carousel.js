@@ -78,6 +78,44 @@ var MoonCartCarousel = function () {
 			});
 		}
 	}
+	
+	var Aboutteamslider = function(){
+	    if (jQuery('.swiper-blog-post-sliderss').length > 0) {
+			var swiperTestimonial = new Swiper('.swiper-blog-post-sliderss', {
+					slidesPerView: 1,
+				spaceBetween: 30,
+				loop: true,
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+					pauseOnMouseEnter: true,
+				},
+				navigation: {
+					nextEl: ".tranding-button-next",
+					prevEl: ".tranding-button-prev",
+				},
+				breakpoints: {
+					1200: {
+						slidesPerView: 1,
+					},
+					1024: {
+						slidesPerView: 1,
+					},
+					991: {
+						slidesPerView: 1,
+					},
+					591: {
+						slidesPerView: 1,
+						spaceBetween: 20,
+					},
+					340: {
+						slidesPerView: 1,
+						spaceBetween: 15,
+					},
+				}
+			});
+		}
+	}
 
 	// Project Carousel Swiper ==
 	var handleProjectCarousel = function () {
@@ -622,6 +660,7 @@ var MoonCartCarousel = function () {
 			handleMainSwiper();
 			handlekanbernSwiper();
 			BlogSlideshowSwiper();
+			Aboutteamslider();
 			handleProjectCarousel();
 			handleSwiperFour();
 			swipermobvals();

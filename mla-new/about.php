@@ -25,7 +25,9 @@ include('head.php');
 
     <div class="page-content">
       <style>
-      
+      .counternew{
+          margin-top:40px;
+      }
             @media only screen and (min-width:768px) and (max-width:1180px){
                 .main-timeline .timeline-icon{
                     display:none !important;
@@ -172,7 +174,8 @@ include('head.php');
         }
 
         .tabs li {
-          border-radius: 10px;
+          /*border-radius: 10px;*/
+          transform: skew(-9deg);
           font-size: 24px;
           background-color: #e6e6e6;
           width: 25%;
@@ -181,7 +184,7 @@ include('head.php');
           align-items: center;
           justify-content: center;
           color: #000;
-
+border: 1px solid #fff;
           transition: .5s;
           -webkit-transition: .5s;
           -moz-transition: .5s;
@@ -190,13 +193,47 @@ include('head.php');
           cursor: pointer;
         }
 
-        .tabs li:hover {
-          background: linear-gradient(145deg, #f58a3a, #f58a3a);
-          box-shadow: 10px 10px 19px #ffffff, -10px -10px 19px #ffffff;
-          color: #ffffff;
-          position: relative;
-          z-index: 1;
-          border-radius: 10px;
+        .tabs li::before,
+        .tabs li::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            background: none;
+        }
+
+        .tabs li::before {
+            top: 0;
+            left: 0;
+            border-top: 2px solid black;
+            border-left: 2px solid black;
+        }
+
+        .tabs li::after {
+            bottom: 0;
+            right: 0;
+            border-bottom: 2px solid black;
+            border-right: 2px solid black;
+        }
+
+        .tabs li:hover::before,
+        .tabs li:hover::after {
+            animation: borderAnimation 0.5s forwards;
+        }
+
+        @keyframes borderAnimation {
+            0% {
+                width: 0;
+                height: 0;
+            }
+            50% {
+                width: 100%;
+                height: 0;
+            }
+            100% {
+                width: 100%;
+                height: 100%;
+            }
         }
 
         .active {
@@ -205,7 +242,7 @@ include('head.php');
           color: #ffffff !important;
           position: relative;
           z-index: 1;
-          border-radius: 10px;
+          /*border-radius: 10px;*/
         }
 
         .contents {
@@ -233,9 +270,22 @@ include('head.php');
           -webkit-animation: moving 1s ease;
 
         }
+        
+        @media only screen and (max-width:768px){
+               .mt-involement {
+    margin-top: 10px !important;
+}
+        }
+        
+        @media only screen and (max-width:1300px){
+         
+            .teamcolinner{
+                min-height:37rem !important;
+            }
+        }
 
         .box img {
-          height: 23rem;
+          /*height: 20rem;*/
           /* width: 50%; */
           border-radius: 10px;
           -webkit-border-radius: 10px;
@@ -250,18 +300,20 @@ include('head.php');
           font-size: 2rem;
           margin-bottom: 20px;
         }
-
+.teamGrid p{
+    text-align:justify;
+}
         .box p {
           color: #000;
           opacity: 1;
-
+            /*text-align:justify;*/
           font-size: 1rem;
         }
 
         .showboxes {
             justify-content:center;
           align-items: center;
-          display: flex;
+          /*display: flex;*/
         }
 
         .hide {
@@ -411,6 +463,22 @@ include('head.php');
         .pluasymbolcounter{
           font-size: 2rem;
         }
+        
+        .mt-involement{
+            margin-top:100px;
+        }
+        
+        .styleonew{
+            margin-bottom:15px;
+        }
+         .mapmy {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .mapmy svg{
+            
+        }
       </style>
       <ul class="tabs">
         <li class="active" data-id="0">Company Overview</li>
@@ -443,13 +511,14 @@ include('head.php');
 
             <div>
               <div class="row align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-6 map-container">
+                      <div class="mapmy"></div>
                   <!-- Image side -->
-                  <img src="./images/aboutus/map-mla.png" alt="Image"> <!-- Replace with your image path -->
+                  <!--<img src="./images/aboutus/map-mla.png" alt="Image"> <!-- Replace with your image path -->
                 </div>
                 <div class="col-md-6 wow fadeInRight" data-wow-delay="0.6s">
                   <!-- Text side -->
-                  <div class="section-head style-1 ">
+                  <div class="section-head styleonew style-1 ">
                     <h2>Our Footprint</h2>
                   </div>
                  <p>
@@ -495,6 +564,149 @@ include('head.php');
 
               </div>
             </div>
+             <div class="row about-style2 align-items-xl-center mt-involement align-items-start">
+            <div class="col-lg-3">
+              <h2 class="title">Community Involvement</h2>
+            </div>
+            <div class="col-lg-7">
+              <div class="about-content">
+                <div class="style-1">
+                  <p>
+                    The MLA Group itself is a well-established industrial entity with a significant economic footprint, boasting a turnover of INR 400 crores and operating several ISO-certified manufacturing facilities. Their broad CSR strategy reflects their holistic approach to business, which integrates economic success with social and environmental responsibility.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2">
+              <div class="pagination-align justify-content-end">
+                <div class="tranding-button-prev btn-prev">
+                  <i class="flaticon flaticon-left-chevron"></i>
+                </div>
+                <div class="tranding-button-next btn-next">
+                  <i class="flaticon flaticon-chevron"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-12 mbuiti-6" style="overflow: hidden">
+              <div class="outside-box-right-25">
+                <div class="swiper-btn-center-lr appslider">
+                  <div class="swiper swiper-blog-post">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="wow fadeInUp" data-wow-delay="0.4s">
+                          <div class="dz-media gradient-overlay1">
+                            <img src="./images/aboutus/mla-green.jpg" alt="image" />
+                            <div class="contentindustry">
+                              <div>
+                                <h4 class="text-whote">MLA Green Kanpur</h4>
+                                <p>We have 2 dedicated vehicles with a target to carry out 30-40 subsidized plantations everyday along roadsides outside people’s homes and they are entrusted the responsbility to take care of these plants, hence ensuring community involvement</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="wow fadeInUp" data-wow-delay="0.4s">
+                          <div class="dz-media gradient-overlay1">
+                            <img src="./images/aboutus/satvik-roti.jpg" alt="image" />
+                            <div class="contentindustry">
+                              <div>
+                                <h4 class="text-whote">Satvik Roti Rolls</h4>
+                                <p> We have one e rickshaw and 7 e bikes with a target to distribute 3000-4000 roti rolls / burgers / kadi chawal bowls to the poor every day, at a subsidized price </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="wow fadeInUp" data-wow-delay="0.4s">
+                          <div class="dz-media gradient-overlay1">
+                            <img src="./images/scholarship.jpg" alt="image" />
+                            <div class="contentindustry">
+                              <div>
+                                <h4 class="text-whote">Scholarships</h4>
+                                <p>Scholarship programme for meritorious staff wards </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+                      <div class="swiper-slide">
+                        <div class="wow fadeInUp" data-wow-delay="0.4s">
+                          <div class="dz-media gradient-overlay1">
+                            <img src="./images/food.webp" alt="image" />
+                            <div class="contentindustry">
+                              <div>
+                                <h4 class="text-whote">Food parcels distribution</h4>
+                                <p>Food parcels distribution to 20 old aged helpless people everyday totally free of cost </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+
+                      <div class="swiper-slide">
+                        <div class="wow fadeInUp" data-wow-delay="0.4s">
+                          <div class="dz-media gradient-overlay1">
+                            <img src="./images/reconstructionimages.jpg" alt="image" />
+                            <div class="contentindustry">
+                              <div>
+                                <h4 class="text-whote">Reconsruction of temples</h4>
+                                <p>Reconsruction of temples in kanpur and nearby areas </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="wow fadeInUp" data-wow-delay="0.4s">
+                          <div class="dz-media gradient-overlay1">
+                            <img src="./images/cultural.jpg" alt="image" />
+                            <div class="contentindustry">
+                              <div>
+                                <h4 class="text-whote">Programmes</h4>
+                                <p>Organization of religious and cultural programmes on a regular basis </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="swiper-slide">
+                        <div class="wow fadeInUp" data-wow-delay="0.4s">
+                          <div class="dz-media gradient-overlay1">
+                            <img src="./images/blanket.webp" alt="image" />
+                            <div class="contentindustry">
+                              <div>
+                                <h4 class="text-whote">Distribution Programmes</h4>
+                                <p>Distributor of blankets, food and sweets to the poor totally free of cost from time to time in co-ordination with various ngos and administration. </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           </div>
 
         </div>
@@ -635,6 +847,7 @@ include('head.php');
                   margin-top:120px;
               }
             </style>
+            <div>
             <div class="teamWrapper">
               <div class="containerssss">
               
@@ -723,7 +936,146 @@ include('head.php');
                 </div>
               </div>
             </div>
+            </div>
+          
+            <style>
+                .ytupper{
+                    margin-top:50px;
+                }
+                .ytupper .dz-yte{
+                    text-align:center;
+                }
+                 .ytupper .dz-yte img{
+                     margin:auto;
+                 }
+                 
+                 .mainshow{
+                     display:none;
+                 }
+                 
+                 @media only screen and (max-width:768px){
+                     .mbbhide{
+                         display:none;
+                     }
+                      .mainshow{
+                         display:block !important;
+                     }
+                 }
+                 .ytupper .btn-next,
+                 .ytupper .btn-prev{
+                     background:#FF9800;
+                 }
+                 
+                 .frame {
+  background-color: #ddc;
+  border: solid 20px #333;
+  border-bottom-color: #333;
+  border-left-color: #333;
+  border-radius: 2px;
+  border-right-color: #333;
+  border-top-color: #333;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
+  box-sizing: border-box;
+  display: inline-block;
+  /*margin: 100px 100px;*/
+  /*height: 600px;*/
+  padding: 12px;
+  position: relative;
+  text-align: center;
+}
+
+.frame:before {
+  border-radius: 2px;
+  bottom: -8px;
+  box-shadow: 0 2px 5px 0 #FF9800 inset;
+  content: "";
+  left: -8px;
+  position: absolute;
+  right: -8px;
+  top: -8px;
+}
+
+.frame:after {
+  border-radius: 2px;
+  bottom: -10px;
+  box-shadow: 0 2px 5px 0 #FF9800;
+  content: "";
+  left: -10px;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+}
+
+                 
+            </style>
+            <div class="ytupper">
+                <div class="section-head styleonew style-1 text-center">
+                    <h2>Meet Our Team</h2>
+                  </div>
+                  <div class="row align-items-center">
+                      <div class="col-md-3 mbbhide">
+                          <div class="pagination-align justify-content-end">
+                <div class="tranding-button-prev btn-prev">
+                  <i class="flaticon flaticon-left-chevron"></i>
+                </div>
+            
+              </div>
+                      </div>
+                      <div class="col-md-6">
+                            <div class="swiper-btn-center-lr">
+                  <div class="swiper swiper-blog-post-sliderss">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div>
+                          <div class="dz-yte frame">
+                            <img src="images/ourteam3.jpg">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div>
+                          <div class="dz-yte frame">
+                             <img src="images/ourteams.webp">
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                  </div>
+                      </div>
+                      <div class="col-md-3 mbbhide">
+                           <div class="pagination-align justify-content-start">
+
+                <div class="tranding-button-next btn-next">
+                  <i class="flaticon flaticon-chevron"></i>
+                </div>
+              </div>
+                      </div>
+                  </div>
+                  
+          
+                 
+                </div>
+                <div class="row mt-3 mainshow">
+            <div class="col-lg-12">
+              <div class="pagination-align justify-content-center">
+                <div class="tranding-button-prev btn-prev">
+                  <i class="flaticon flaticon-left-chevron"></i>
+                </div>
+                <div class="tranding-button-next btn-next">
+                  <i class="flaticon flaticon-chevron"></i>
+                </div>
+              </div>
+            </div>
+            </div>
           </div>
+          
+          
+          
+          
         </div>
 
         <div class="box hide" data-content="2">
@@ -806,7 +1158,7 @@ include('head.php');
                   </div>
                   <div class="timeline hideerm">
                     <a href="#" class="timeline-content">
-                      <span class="timeline-year">2017</span>
+                      <span class="timeline-year">1998</span>
                       <div class="timeline-icon">
                         <i class="fa fa-arrow-down" aria-hidden="true"></i>
                       </div>
@@ -1470,7 +1822,7 @@ overflow: hidden;
 
         .main-timeline .content {
 
-          margin-left: 45vw;
+          margin-left: 42vw;
           color: #909090;
           width: 33vw;
           padding: 21px;
@@ -1735,18 +2087,18 @@ overflow: hidden;
       </style>
 
 
-      <section class="quotation-section">
-        <div class="container234">
-          <div class="row">
-            <div class="col-md-12">
+      <!--<section class="quotation-section">-->
+      <!--  <div class="container234">-->
+      <!--    <div class="row">-->
+      <!--      <div class="col-md-12">-->
               <!-- Quotation box -->
-              <div class="quotation-box">
-                <p class="quotation-text">"Our group's philosophy regarding human-resource can be summarized in Mr. Lester Thurow's words - "The comparative advantage is now human-made. Anybody having brain power can compete in the future market." We have a flexible and adaptive culture and impart continuous on-the-job learning-by-doing trainings and organizing seminars, workshops and lectures by experts."</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <!--        <div class="quotation-box">-->
+      <!--          <p class="quotation-text">"Our group's philosophy regarding human-resource can be summarized in Mr. Lester Thurow's words - "The comparative advantage is now human-made. Anybody having brain power can compete in the future market." We have a flexible and adaptive culture and impart continuous on-the-job learning-by-doing trainings and organizing seminars, workshops and lectures by experts."</p>-->
+      <!--        </div>-->
+      <!--      </div>-->
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--</section>-->
 
 
 
@@ -1940,153 +2292,153 @@ overflow: hidden;
           color: #fff;
         }
       </style>
-      <section class="content-inner application-tab overlay-black-light pbt-100" style="background-image:url(images/appit.jpg); background-repeat: no-repeat; background-size: cover;background-position: bottom;">
-        <div class="container">
-          <div class="row about-style2 align-items-xl-center align-items-start">
-            <div class="col-lg-3">
-              <h3 class="title">Community Involvement</h3>
-            </div>
-            <div class="col-lg-7">
-              <div class="about-content">
-                <div class="style-1">
-                  <p>
-                    The MLA Group itself is a well-established industrial entity with a significant economic footprint, boasting a turnover of INR 400 crores and operating several ISO-certified manufacturing facilities. Their broad CSR strategy reflects their holistic approach to business, which integrates economic success with social and environmental responsibility.
-                  </p>
-                </div>
-              </div>
-            </div>
+      <!--<section class="content-inner application-tab overlay-black-light pbt-100" style="background-image:url(images/appit.jpg); background-repeat: no-repeat; background-size: cover;background-position: bottom;">-->
+      <!--  <div class="container">-->
+      <!--    <div class="row about-style2 align-items-xl-center align-items-start">-->
+      <!--      <div class="col-lg-3">-->
+      <!--        <h3 class="title">Community Involvement</h3>-->
+      <!--      </div>-->
+      <!--      <div class="col-lg-7">-->
+      <!--        <div class="about-content">-->
+      <!--          <div class="style-1">-->
+      <!--            <p>-->
+      <!--              The MLA Group itself is a well-established industrial entity with a significant economic footprint, boasting a turnover of INR 400 crores and operating several ISO-certified manufacturing facilities. Their broad CSR strategy reflects their holistic approach to business, which integrates economic success with social and environmental responsibility.-->
+      <!--            </p>-->
+      <!--          </div>-->
+      <!--        </div>-->
+      <!--      </div>-->
 
-            <div class="col-lg-2">
-              <div class="pagination-align justify-content-end">
-                <div class="tranding-button-prev btn-prev">
-                  <i class="flaticon flaticon-left-chevron"></i>
-                </div>
-                <div class="tranding-button-next btn-next">
-                  <i class="flaticon flaticon-chevron"></i>
-                </div>
-              </div>
-            </div>
+      <!--      <div class="col-lg-2">-->
+      <!--        <div class="pagination-align justify-content-end">-->
+      <!--          <div class="tranding-button-prev btn-prev">-->
+      <!--            <i class="flaticon flaticon-left-chevron"></i>-->
+      <!--          </div>-->
+      <!--          <div class="tranding-button-next btn-next">-->
+      <!--            <i class="flaticon flaticon-chevron"></i>-->
+      <!--          </div>-->
+      <!--        </div>-->
+      <!--      </div>-->
 
-            <div class="col-lg-12 mbuiti-6" style="overflow: hidden">
-              <div class="outside-box-right-25">
-                <div class="swiper-btn-center-lr appslider">
-                  <div class="swiper swiper-blog-post">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <div class="wow fadeInUp" data-wow-delay="0.4s">
-                          <div class="dz-media gradient-overlay1">
-                            <img src="./images/aboutus/mla-green.jpg" alt="image" />
-                            <div class="contentindustry">
-                              <div>
-                                <h4 class="text-whote">MLA Green Kanpur</h4>
-                                <p>We have 2 dedicated vehicles with a target to carry out 30-40 subsidized plantations everyday along roadsides outside people’s homes and they are entrusted the responsbility to take care of these plants, hence ensuring community involvement</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+      <!--      <div class="col-lg-12 mbuiti-6" style="overflow: hidden">-->
+      <!--        <div class="outside-box-right-25">-->
+      <!--          <div class="swiper-btn-center-lr appslider">-->
+      <!--            <div class="swiper swiper-blog-post">-->
+      <!--              <div class="swiper-wrapper">-->
+      <!--                <div class="swiper-slide">-->
+      <!--                  <div class="wow fadeInUp" data-wow-delay="0.4s">-->
+      <!--                    <div class="dz-media gradient-overlay1">-->
+      <!--                      <img src="./images/aboutus/mla-green.jpg" alt="image" />-->
+      <!--                      <div class="contentindustry">-->
+      <!--                        <div>-->
+      <!--                          <h4 class="text-whote">MLA Green Kanpur</h4>-->
+      <!--                          <p>We have 2 dedicated vehicles with a target to carry out 30-40 subsidized plantations everyday along roadsides outside people’s homes and they are entrusted the responsbility to take care of these plants, hence ensuring community involvement</p>-->
+      <!--                        </div>-->
+      <!--                      </div>-->
+      <!--                    </div>-->
+      <!--                  </div>-->
+      <!--                </div>-->
 
-                      <div class="swiper-slide">
-                        <div class="wow fadeInUp" data-wow-delay="0.4s">
-                          <div class="dz-media gradient-overlay1">
-                            <img src="./images/aboutus/satvik-roti.jpg" alt="image" />
-                            <div class="contentindustry">
-                              <div>
-                                <h4 class="text-whote">Satvik Roti Rolls</h4>
-                                <p> We have one e rickshaw and 7 e bikes with a target to distribute 3000-4000 roti rolls / burgers / kadi chawal bowls to the poor every day, at a subsidized price </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+      <!--                <div class="swiper-slide">-->
+      <!--                  <div class="wow fadeInUp" data-wow-delay="0.4s">-->
+      <!--                    <div class="dz-media gradient-overlay1">-->
+      <!--                      <img src="./images/aboutus/satvik-roti.jpg" alt="image" />-->
+      <!--                      <div class="contentindustry">-->
+      <!--                        <div>-->
+      <!--                          <h4 class="text-whote">Satvik Roti Rolls</h4>-->
+      <!--                          <p> We have one e rickshaw and 7 e bikes with a target to distribute 3000-4000 roti rolls / burgers / kadi chawal bowls to the poor every day, at a subsidized price </p>-->
+      <!--                        </div>-->
+      <!--                      </div>-->
+      <!--                    </div>-->
+      <!--                  </div>-->
+      <!--                </div>-->
 
-                      <div class="swiper-slide">
-                        <div class="wow fadeInUp" data-wow-delay="0.4s">
-                          <div class="dz-media gradient-overlay1">
-                            <img src="./images/scholarship.jpg" alt="image" />
-                            <div class="contentindustry">
-                              <div>
-                                <h4 class="text-whote">Scholarships</h4>
-                                <p>Scholarship programme for meritorious staff wards </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-
-
-
-                      <div class="swiper-slide">
-                        <div class="wow fadeInUp" data-wow-delay="0.4s">
-                          <div class="dz-media gradient-overlay1">
-                            <img src="./images/aboutus/sumit-agarwal-altruist.webp" alt="image" />
-                            <div class="contentindustry">
-                              <div>
-                                <h4 class="text-whote">Food parcels distribution</h4>
-                                <p>Food parcels distribution to 20 old aged helpless people everyday totally free of cost </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+      <!--                <div class="swiper-slide">-->
+      <!--                  <div class="wow fadeInUp" data-wow-delay="0.4s">-->
+      <!--                    <div class="dz-media gradient-overlay1">-->
+      <!--                      <img src="./images/scholarship.jpg" alt="image" />-->
+      <!--                      <div class="contentindustry">-->
+      <!--                        <div>-->
+      <!--                          <h4 class="text-whote">Scholarships</h4>-->
+      <!--                          <p>Scholarship programme for meritorious staff wards </p>-->
+      <!--                        </div>-->
+      <!--                      </div>-->
+      <!--                    </div>-->
+      <!--                  </div>-->
+      <!--                </div>-->
 
 
 
 
-
-                      <div class="swiper-slide">
-                        <div class="wow fadeInUp" data-wow-delay="0.4s">
-                          <div class="dz-media gradient-overlay1">
-                            <img src="./images/reconstructionimages.jpg" alt="image" />
-                            <div class="contentindustry">
-                              <div>
-                                <h4 class="text-whote">Reconsruction of temples</h4>
-                                <p>Reconsruction of temples in kanpur and nearby areas </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="wow fadeInUp" data-wow-delay="0.4s">
-                          <div class="dz-media gradient-overlay1">
-                            <img src="./images/cultural.jpg" alt="image" />
-                            <div class="contentindustry">
-                              <div>
-                                <h4 class="text-whote">Programmes</h4>
-                                <p>Organization of religious and cultural programmes on a regular basis </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+      <!--                <div class="swiper-slide">-->
+      <!--                  <div class="wow fadeInUp" data-wow-delay="0.4s">-->
+      <!--                    <div class="dz-media gradient-overlay1">-->
+      <!--                      <img src="./images/aboutus/sumit-agarwal-altruist.webp" alt="image" />-->
+      <!--                      <div class="contentindustry">-->
+      <!--                        <div>-->
+      <!--                          <h4 class="text-whote">Food parcels distribution</h4>-->
+      <!--                          <p>Food parcels distribution to 20 old aged helpless people everyday totally free of cost </p>-->
+      <!--                        </div>-->
+      <!--                      </div>-->
+      <!--                    </div>-->
+      <!--                  </div>-->
+      <!--                </div>-->
 
 
-                      <div class="swiper-slide">
-                        <div class="wow fadeInUp" data-wow-delay="0.4s">
-                          <div class="dz-media gradient-overlay1">
-                            <img src="./images/blanket.webp" alt="image" />
-                            <div class="contentindustry">
-                              <div>
-                                <h4 class="text-whote">Distribution Programmes</h4>
-                                <p>Distributor of blankets, food and sweets to the poor totally free of cost from time to time in co-ordination with various ngos and administration. </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
 
 
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      <!--                <div class="swiper-slide">-->
+      <!--                  <div class="wow fadeInUp" data-wow-delay="0.4s">-->
+      <!--                    <div class="dz-media gradient-overlay1">-->
+      <!--                      <img src="./images/reconstructionimages.jpg" alt="image" />-->
+      <!--                      <div class="contentindustry">-->
+      <!--                        <div>-->
+      <!--                          <h4 class="text-whote">Reconsruction of temples</h4>-->
+      <!--                          <p>Reconsruction of temples in kanpur and nearby areas </p>-->
+      <!--                        </div>-->
+      <!--                      </div>-->
+      <!--                    </div>-->
+      <!--                  </div>-->
+      <!--                </div>-->
+
+      <!--                <div class="swiper-slide">-->
+      <!--                  <div class="wow fadeInUp" data-wow-delay="0.4s">-->
+      <!--                    <div class="dz-media gradient-overlay1">-->
+      <!--                      <img src="./images/cultural.jpg" alt="image" />-->
+      <!--                      <div class="contentindustry">-->
+      <!--                        <div>-->
+      <!--                          <h4 class="text-whote">Programmes</h4>-->
+      <!--                          <p>Organization of religious and cultural programmes on a regular basis </p>-->
+      <!--                        </div>-->
+      <!--                      </div>-->
+      <!--                    </div>-->
+      <!--                  </div>-->
+      <!--                </div>-->
+
+
+      <!--                <div class="swiper-slide">-->
+      <!--                  <div class="wow fadeInUp" data-wow-delay="0.4s">-->
+      <!--                    <div class="dz-media gradient-overlay1">-->
+      <!--                      <img src="./images/blanket.webp" alt="image" />-->
+      <!--                      <div class="contentindustry">-->
+      <!--                        <div>-->
+      <!--                          <h4 class="text-whote">Distribution Programmes</h4>-->
+      <!--                          <p>Distributor of blankets, food and sweets to the poor totally free of cost from time to time in co-ordination with various ngos and administration. </p>-->
+      <!--                        </div>-->
+      <!--                      </div>-->
+      <!--                    </div>-->
+      <!--                  </div>-->
+      <!--                </div>-->
+
+
+      <!--              </div>-->
+      <!--            </div>-->
+      <!--          </div>-->
+      <!--        </div>-->
+      <!--      </div>-->
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--</section>-->
 
 
       <section class="content-inner-1 logo-back overlay-white-middle companies border-top">
@@ -2204,5 +2556,103 @@ overflow: hidden;
       </section> -->
     </div>
     
+     <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <script>
+       const container = d3.select(".map-container");
+
+// Set dimensions based on the container size
+const width = container.node().getBoundingClientRect().width;
+const height = width / 2; // Adjust the height proportionally
+const svg = d3.select(".mapmy")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+const projection = d3.geoNaturalEarth1()
+    .scale(width / 6.5)
+    .translate([width / 2, height / 2]);
+
+const path = d3.geoPath().projection(projection);
+
+const indiaCoords = [78.9629, 20.5937];
+
+const destinations = [
+    [-0.1278, 51.5074], // London, UK
+    [-74.0060, 40.7128], // New York, USA
+    [139.6917, 35.6895], // Tokyo, Japan
+    [37.6173, 55.7558], // Moscow, Russia
+    [2.3522, 48.8566], // Paris, France
+    [18.4241, -33.9249], // Cape Town, South Africa
+    [-43.1729, -22.9068], // Rio de Janeiro, Brazil
+    [-99.1332, 19.4326], // Mexico City, Mexico
+    [-58.3816, -34.6037], // Buenos Aires, Argentina
+    [31.2357, 30.0444] // Cairo, Egypt
+];
+
+d3.json("https://d3js.org/world-110m.v1.json").then(world => {
+    svg.append("path")
+        .datum(topojson.feature(world, world.objects.land))
+        .attr("class", "land")
+        .attr("d", path);
+
+    svg.append("path")
+        .datum(topojson.mesh(world, world.objects.countries, (a, b) => a !== b))
+        .attr("class", "boundary")
+        .attr("d", path);
+
+    // Start the animation sequence
+    animateArcs();
+});
+
+function animateArcs() {
+    // Draw all arcs at once
+    destinations.forEach(destination => {
+        const coordinates = [indiaCoords, destination];
+        drawArc(coordinates);
+    });
+
+    // Restart animation after a delay
+    setTimeout(() => {
+        animateArcs();
+    }, 4000); // Adjust the delay as needed
+}
+
+function drawArc(coords) {
+    const source = projection(coords[0]);
+    const target = projection(coords[1]);
+    const midPoint = [(source[0] + target[0]) / 2, (source[1] + target[1]) / 2 - 100];
+
+    const lineData = [source, midPoint, target];
+
+    const lineFunction = d3.line()
+        .curve(d3.curveBasis)
+        .x(d => d[0])
+        .y(d => d[1]);
+
+    const path = svg.append("path")
+        .datum(lineData)
+        .attr("class", "arc")
+        .attr("d", lineFunction)
+        .style("fill", "none")
+        .style("stroke", "red")
+        .style("stroke-width", 3)
+        .style("stroke-dasharray", function() {
+            const length = this.getTotalLength();
+            return length + " " + length;
+        })
+        .style("stroke-dashoffset", function() {
+            return this.getTotalLength();
+        })
+        .transition()
+        .duration(3000)
+        .ease(d3.easeLinear)
+        .style("stroke-dashoffset", 0)
+        .on("end", function() {
+            d3.select(this).remove();
+        });
+}
+
+    </script>
     
     <?php include('footer.php'); ?>

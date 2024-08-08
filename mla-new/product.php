@@ -165,9 +165,9 @@ if(isset($_GET['url'])) {
 <div class="d-sm-flex justify-content-between container-fluid py-new">
     <nav aria-label="breadcrumb" class="breadcrumb-row">
         <ul class="breadcrumb mb-0">
-            <li class="breadcrumb-item col-or"> Home</li>
-            <li class="breadcrumb-item col-or">Products</li>
-            <li class="breadcrumb-item ">Hydrated Calcium Silicate</li>
+            <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="/mla-new">Home</a> </li>
+            <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="our-products.php">Products</a> </li>
+            <li class="breadcrumb-item "><?php echo $product_data['title']; ?></li>
         </ul>
     </nav>
 </div>
@@ -1229,9 +1229,6 @@ border-top: 1px solid #FE8F34;
         document.querySelector(".dzForm").addEventListener("submit", submitForm);
     });
 </script>
-
-<?php include('footer.php');?>
-
 <script>
         document.addEventListener('DOMContentLoaded', function() {
             const tabs = document.querySelectorAll('.filters .btn');
@@ -1259,3 +1256,6 @@ border-top: 1px solid #FE8F34;
             }
         });
     </script>
+
+<?php include('footer.php');?>
+

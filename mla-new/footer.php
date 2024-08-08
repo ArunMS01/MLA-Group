@@ -12,7 +12,7 @@
     <div class="footer-top">
         <div class="container">
             <div class="row ">
-                <div class="col-xl-3 col-md-3 col-sm-6 textmbcenters">
+                <div class="col-xl-5 col-md-3 col-sm-6 textmbcenters">
                     <div class="widget widget_about me-2">
                         <div class="footer-logo logo-white">
                             <a href="/"><img src="images/logo-MLA.png" alt="/"></a>
@@ -47,7 +47,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-xl-6 col-md-6 col-sm-4 col-6">
+                <div class="col-xl-4 col-md-6 col-sm-4 col-6">
                     <div class="widget widget_services">
                         <h5 class="footer-title text-center" style="text-transform: uppercase;">We exhibit at</h5>
                         <div class="section-inner">
