@@ -125,14 +125,14 @@ include('head.php');
 
         <section class=" abytu overflow-hidden ">
             <div class="container-fluidss">
-                <div class="row">
-                    <div class="col-lg-12 mt-4">
+                <!--<div class="row">-->
+                <!--    <div class="col-lg-12 mt-4">-->
                       
-                        <div class="section-head style-1 wow fadeInUp text-center" style="visibility: visible; animation-name: fadeInUp;">
-                                <h2>Application Based R&D</h2>
-                            </div>
-                    </div>
-                </div>
+                <!--        <div class="section-head style-1 wow fadeInUp text-center" style="visibility: visible; animation-name: fadeInUp;">-->
+                <!--                <h2>Application Based R&D</h2>-->
+                <!--            </div>-->
+                <!--    </div>-->
+                <!--</div>-->
                 <div class="row about-style1 align-items-center ">
                     <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
                         <div class="imgbox123">
@@ -174,7 +174,7 @@ include('head.php');
 
                     <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInRight;">
                         <div class="contant-sliders">
-                            <!--<h2>Precipitation Technology</h2>-->
+                            <h2>Application Based R&D</h2>
                             <p>At MLA Group, our state-of-the-art facilities include an in-house PVC pipe extruder, rheometer, two roll mill, masterbatch extruder, blown air film extruder, rubber sheet compounding, and surface area analyzer. These enable us to thoroughly analyze end products and design precise grades for industrial applications. Additionally, our advanced Atomic Absorption Spectroscopy (AAS) machine, a rare asset in the industry, allows for the accurate detection of heavy metals. These capabilities support our rigorous application-based R&D, ensuring our products meet stringent quality and performance standards.</p>
                         </div>
                     </div>
