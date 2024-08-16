@@ -353,7 +353,7 @@
                             </style>
 
                             <div class="contact-section">
-                                <h4>DIRECTOR (MARKETING)</h4>
+                                <h4>MANAGING DIRECTOR  </h4>
                                 <p>Mr. Sumit Agarwal - <a href="tel:+919336116592">+91-9336116592</a>, <a href="mailto:md@mlagroup.com">md@mlagroup.com</a></p>
                             </div>
 
@@ -363,19 +363,19 @@
                             </div>
 
                             <div class="contact-section">
-                                <h4>GENERAL ADMINISTRATION</h4>
-                                <p>Director (Admin): Mr Saurabh Agarwal - <a href="tel:+919336849137">+91-9336849137</a>, <a href="mailto:saurabh@mlagroup.com">saurabh@mlagroup.com</a></p>
+                                <h4>DIRECTOR (ADMIN) </h4>
+                                <p>Mr. Saurabh Agarwal - <a href="tel:+919336849137">+91-9336849137</a>, <a href="mailto:saurabh@mlagroup.com">saurabh@mlagroup.com</a></p>
                             </div>
 
                             <div class="contact-section">
                                 <h4>PURCHASE</h4>
-                                <p>Mr Suraj Agarwal - <a href="tel:+919335091069">+91-9335091069</a>, <a href="mailto:purchase@mlagroup.com">purchase@mlagroup.com</a></p>
+                                <p>Mr. Suraj Agarwal - <a href="tel:+919335091069">+91-9335091069</a>, <a href="mailto:purchase@mlagroup.com">purchase@mlagroup.com</a></p>
                             </div>
 
 
                             <div class="contact-section">
                                 <h4>RECRUITMENTS</h4>
-                                <p>Mr Mayur Makhija - <a href="tel:+919140908101">+91-9140908101</a>, <a href="mailto:mayur@mlagroup.com">mayur@mlagroup.com</a></p>
+                                <p>Mr. Mayyur Makhija - <a href="tel:+919140908101">+91-9140908101</a>, <a href="mailto:mayur@mlagroup.com">mayur@mlagroup.com</a></p>
                             </div>
                         </div>
                     </div>
