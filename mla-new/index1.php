@@ -981,69 +981,6 @@ overflow: hidden;
             </section>
 
 
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    function animateCounters(counterElements) {
-                        const totalDuration = 2000; // Total duration for all counters in milliseconds
-
-                        counterElements.forEach(counter => {
-                            console.log(`Animating counter with ID: ${counter.id}`);
-                            const target = +counter.getAttribute('data-target');
-                            const interval = 20; // Interval for updating the counters in milliseconds
-                            const steps = totalDuration / interval; // Total steps for the animation
-                            const increment = target / steps; // Increment based on the common steps
-
-                            let currentCount = 0; // Start from 0
-
-                            const updateCount = () => {
-                                currentCount += increment;
-                                if (currentCount < target) {
-                                    counter.innerText = Math.ceil(currentCount);
-                                    setTimeout(updateCount, interval); // Update at regular intervals
-                                } else {
-                                    counter.innerText = target;
-                                    console.log(`Counter with ID: ${counter.id} has reached its target of ${target}`);
-                                }
-                            };
-
-                            updateCount();
-                        });
-                    }
-
-                    function resetCounters(counterElements) {
-                        counterElements.forEach(counter => {
-                            counter.innerText = '0';
-                            console.log(`Resetting counter with ID: ${counter.id}`);
-                        });
-                    }
-
-                    let options = {
-                        root: null,
-                        rootMargin: '0px',
-                        threshold: 0.5
-                    };
-
-                    let observer = new IntersectionObserver(function(entries, observer) {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                console.log('Counter section is in view.');
-                                const counters = entry.target.querySelectorAll('.counter');
-                                resetCounters(counters);
-                                animateCounters(counters);
-                            } else {
-                                console.log('Counter section is out of view.');
-                                const counters = entry.target.querySelectorAll('.counter');
-                                resetCounters(counters);
-                            }
-                        });
-                    }, options);
-
-                    let counterSection = document.querySelector('#counter-section');
-                    observer.observe(counterSection);
-                    console.log('Started observing the counter section.');
-                });
-            </script>
-
 
 
             <section class="content-inner abyyt pbt-100">

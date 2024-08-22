@@ -306,6 +306,67 @@ function isElementInViewport(el) {
     thumbs.controller.control = slider;
 </script>
 
+            <script>
+            window.addEventListener('load', function() {
+    function animateCounters(counterElements) {
+        const totalDuration = 2000; // Total duration for all counters in milliseconds
+
+        counterElements.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const startTime = performance.now();
+
+            function updateCount(currentTime) {
+                const elapsedTime = currentTime - startTime;
+                const progress = Math.min(elapsedTime / totalDuration, 1); // Progress ranges from 0 to 1
+                const currentCount = Math.ceil(progress * target);
+
+                counter.innerText = currentCount;
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateCount); // Continue the animation
+                } else {
+                    counter.innerText = target; // Ensure the counter reaches the target exactly
+                }
+            }
+
+            requestAnimationFrame(updateCount);
+        });
+    }
+
+    function resetCounters(counterElements) {
+        counterElements.forEach(counter => {
+            counter.innerText = '0';
+        });
+    }
+
+    let options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+    };
+
+    let observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    const counters = entry.target.querySelectorAll('.counter');
+                    resetCounters(counters);
+                    animateCounters(counters);
+                }, 500); // Adjust this to match your wow.js delay
+            } else {
+                const counters = entry.target.querySelectorAll('.counter');
+                resetCounters(counters);
+            }
+        });
+    }, options);
+
+    let counterSection = document.querySelector('#counter-section');
+    observer.observe(counterSection);
+});
+
+
+            </script>
+
 
 
 </body>
