@@ -1,0 +1,4 @@
+RewriteEngine On
+
+# Rewrite rule to convert /mla-new/dynamic-value.html to /mla-new/product.php?url=dynamic-value
+RewriteRule ^([^/]+)\.html$ product.php?url=$1 [L,QSA]

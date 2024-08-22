@@ -2,11 +2,14 @@
 /**
 Core script to handle the entire theme and core functions
 **/
-var MoonCartCarousel = function(){
-	
+
+
+
+var MoonCartCarousel = function () {
+
 	// Main Swiper1====
-	var handleMainSwiper = function() {
-		if(jQuery('.main-swiper').length > 0){
+	var handleMainSwiper = function () {
+		if (jQuery('.main-swiper').length > 0) {
 			var swiper = new Swiper(".main-swiper-thumb", {
 				loop: true,
 				spaceBetween: 10,
@@ -14,7 +17,7 @@ var MoonCartCarousel = function(){
 				freeMode: true,
 				watchSlidesProgress: true,
 				autoplay: {
-				   delay: 1500,
+					delay: 1500,
 				},
 			});
 			var swiper2 = new Swiper(".main-swiper", {
@@ -23,7 +26,7 @@ var MoonCartCarousel = function(){
 				speed: 1000,
 				parallax: true,
 				autoplay: {
-				   delay: 1500,
+					delay: 1500,
 				},
 				pagination: {
 					el: ".swiper-pagination-five",
@@ -39,10 +42,10 @@ var MoonCartCarousel = function(){
 			});
 		}
 	}
-	
+
 	// kanbern Swiper ==
-	var handlekanbernSwiper = function() {	
-		if(jQuery('.kanbern-bnr').length > 0){
+	var handlekanbernSwiper = function () {
+		if (jQuery('.kanbern-bnr').length > 0) {
 			var swiperTestimonial = new Swiper('.kanbern-bnr', {
 				loop: true,
 				spaceBetween: 10,
@@ -51,38 +54,76 @@ var MoonCartCarousel = function(){
 				parallax: true,
 				speed: 1500,
 				autoplay: {
-				   delay: 2000,
+					delay: 2000,
 				},
 			});
 		}
 	}
-	
+
 	// Blog slideshow Swiper ==
-	var BlogSlideshowSwiper = function() {	
-		if(jQuery('.blog-slideshow').length > 0){
+	var BlogSlideshowSwiper = function () {
+		if (jQuery('.blog-slideshow').length > 0) {
 			var swiperTestimonial = new Swiper('.blog-slideshow', {
 				loop: true,
 				spaceBetween: 0,
 				slidesPerView: "auto",
 				speed: 1500,
 				autoplay: {
-				   delay: 2000,
+					delay: 2000,
 				},
 				pagination: {
-				  el: ".swiper-pagination-two",
-				  clickable: true,
+					el: ".swiper-pagination-two",
+					clickable: true,
 				},
 			});
 		}
 	}
 	
+	var Aboutteamslider = function(){
+	    if (jQuery('.swiper-blog-post-sliderss').length > 0) {
+			var swiperTestimonial = new Swiper('.swiper-blog-post-sliderss', {
+					slidesPerView: 1,
+				spaceBetween: 30,
+				loop: true,
+				autoplay: {
+					delay: 1500,
+					disableOnInteraction: false,
+					pauseOnMouseEnter: true,
+				},
+				navigation: {
+					nextEl: ".tranding-button-next",
+					prevEl: ".tranding-button-prev",
+				},
+				breakpoints: {
+					1200: {
+						slidesPerView: 1,
+					},
+					1024: {
+						slidesPerView: 1,
+					},
+					991: {
+						slidesPerView: 1,
+					},
+					591: {
+						slidesPerView: 1,
+						spaceBetween: 20,
+					},
+					340: {
+						slidesPerView: 1,
+						spaceBetween: 15,
+					},
+				}
+			});
+		}
+	}
+
 	// Project Carousel Swiper ==
-	var handleProjectCarousel = function() {	
-		if(jQuery('.project-carousel').length > 0){
+	var handleProjectCarousel = function () {
+		if (jQuery('.project-carousel').length > 0) {
 			var swiperBook = new Swiper('.project-carousel', {
-				loop:true,
+				loop: true,
 				centeredSlides: true,
-				spaceBetween:30,
+				spaceBetween: 30,
 				slidesPerView: 1.5,
 				autoplay: {
 					delay: 4000,
@@ -105,27 +146,29 @@ var MoonCartCarousel = function(){
 						slidesPerView: 1.5,
 					},
 					1600: {
-						slidesPerView:1.5,
+						slidesPerView: 1.5,
 					},
 				}
 			});
-		}	
+		}
 	}
-	
+
 	// Swiper Four ==
-	var handleSwiperFour = function() {	
-		if(jQuery('.swiper-four').length > 0){
-			var swiper = new Swiper( '.swiper-four', {
+	var handleSwiperFour = function () {
+		if (jQuery('.swiper-four').length > 0) {
+			var swiper = new Swiper('.swiper-four', {
 				slidesPerView: 4,
 				spaceBetween: 30,
 				loop: true,
 				autoplay: {
 					delay: 2500,
+					disableOnInteraction: false,
+					pauseOnMouseEnter: true,
 				},
 				navigation: {
 					nextEl: ".tranding-button-next",
 					prevEl: ".tranding-button-prev",
-				},	
+				},
 				breakpoints: {
 					1200: {
 						slidesPerView: 4,
@@ -149,12 +192,63 @@ var MoonCartCarousel = function(){
 		}
 	}
 	// Swiper Four ==
-	
-	
+
+	var swipermobvals = function () {
+		if (jQuery('.swipermobvals').length > 0) {
+			var swiper = new Swiper('.swipermobvals', {
+				slidesPerView: 1,
+				spaceBetween: 20,
+				loop: true,
+
+
+				navigation: {
+					nextEl: ".tranding-button-next1",
+					prevEl: ".tranding-button-prev1",
+				},
+				breakpoints: {
+					1600: {
+						slidesPerView: 1,
+					},
+				}
+			});
+		}
+	}
+
+
+	var mySwiperproductpage = function () {
+
+		if (jQuery('.mySwiperproductpage').length > 0) {
+			var swiper = new Swiper('.mySwiperproductpage', {
+				effect: "coverflow",
+				grabCursor: true,
+				centeredSlides: true,
+				slidesPerView: 2,
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+					pauseOnMouseEnter: true,
+				},
+				navigation: {
+					nextEl: ".tranding-button-next",
+					prevEl: ".tranding-button-prev",
+				},
+				coverflowEffect: {
+					rotate: 50,
+					stretch: 0,
+					depth: 50,
+					modifier: 1,
+					slideShadows: false,
+				},
+				
+			});
+		}
+
+	};
+
 	//  Swiper Five ==
-	var handleSwiperFive = function() {	
-		if(jQuery('.swiper-five').length > 0){
-			var swiper = new Swiper( '.swiper-five', {
+	var handleSwiperFive = function () {
+		if (jQuery('.swiper-five').length > 0) {
+			var swiper = new Swiper('.swiper-five', {
 				slidesPerView: 1,
 				spaceBetween: 20,
 				loop: true,
@@ -162,26 +256,33 @@ var MoonCartCarousel = function(){
 					delay: 2500,
 				},
 				pagination: {
-				  el: ".swiper-pagination-two",
-				  clickable: true,
+					el: ".swiper-pagination-two",
+					clickable: true,
 				},
 				navigation: {
-				  nextEl: ".about-button-next",
-				  prevEl: ".about-button-prev",
+					nextEl: ".about-button-next",
+					prevEl: ".about-button-prev",
 				},
 				breakpoints: {
-					1600: {
+					991: {
 						slidesPerView: 1,
 					},
+					591: {
+						slidesPerView: 1,
+					},
+					320: {
+						slidesPerView: 1,
+						spaceBetween: 15,
+					},
 				}
-			} );
+			});
 		}
 	}
 
 	//  Swiper Blog Post ==
-	var handleSwiperBlogPost = function() {	
-		if(jQuery('.swiper-blog-post').length > 0){
-			var swiper = new Swiper( '.swiper-blog-post', {
+	var handleSwiperBlogPost = function () {
+		if (jQuery('.swiper-blog-post').length > 0) {
+			var swiper = new Swiper('.swiper-blog-post', {
 				slidesPerView: 3,
 				spaceBetween: 30,
 				loop: true,
@@ -189,7 +290,13 @@ var MoonCartCarousel = function(){
 					el: ".swiper-pagination-trading",
 				},
 				autoplay: {
-					delay: 2000,
+					delay: 2500,
+					disableOnInteraction: false,
+					pauseOnMouseEnter: true,
+				},
+				navigation: {
+					nextEl: ".tranding-button-next",
+					prevEl: ".tranding-button-prev",
 				},
 				breakpoints: {
 					1200: {
@@ -215,30 +322,30 @@ var MoonCartCarousel = function(){
 						slidesPerView: 1.2,
 						spaceBetween: 15,
 					},
-					
+
 				}
 			});
 		}
 	}
-	
+
 	//  handle Category Swiper ==
-	var handleCategorySwiper = function() {	
-		if(jQuery('.category-swiper').length > 0){
-			var swiper = new Swiper( '.category-swiper', {
+	var handleCategorySwiper = function () {
+		if (jQuery('.category-swiper').length > 0) {
+			var swiper = new Swiper('.category-swiper', {
 				slidesPerView: 7,
 				centeredSlides: false,
 				spaceBetween: 20,
 				loop: true,
-					pagination: {
+				pagination: {
 					el: ".swiper-pagination-two",
 				},
 				autoplay: {
 					delay: 3000,
 				},
 				navigation: {
-					nextEl: ".tranding-button-next", 
+					nextEl: ".tranding-button-next",
 					prevEl: ".tranding-button-prev",
-				},	
+				},
 				breakpoints: {
 					1600: {
 						slidesPerView: 7,
@@ -250,7 +357,7 @@ var MoonCartCarousel = function(){
 						slidesPerView: 4,
 					},
 					591: {
-						slidesPerView: 3, 	
+						slidesPerView: 3,
 					},
 					320: {
 						slidesPerView: 2,
@@ -260,11 +367,11 @@ var MoonCartCarousel = function(){
 			});
 		}
 	}
-	
+
 	//  handle Category Swiper2 ==
-	var handleCategorySwiper2 = function() {	
-		if(jQuery('.category-swiper2').length > 0){
-			var swiper = new Swiper( '.category-swiper2', {
+	var handleCategorySwiper2 = function () {
+		if (jQuery('.category-swiper2').length > 0) {
+			var swiper = new Swiper('.category-swiper2', {
 				slidesPerView: 6,
 				centeredSlides: false,
 				spaceBetween: 20,
@@ -276,9 +383,9 @@ var MoonCartCarousel = function(){
 					delay: 3000,
 				},
 				navigation: {
-					nextEl: ".tranding-button-next", 
+					nextEl: ".tranding-button-next",
 					prevEl: ".tranding-button-prev",
-				},	
+				},
 				breakpoints: {
 					1600: {
 						slidesPerView: 6,
@@ -293,7 +400,7 @@ var MoonCartCarousel = function(){
 						spaceBetween: 20,
 					},
 					575: {
-						slidesPerView: 3, 	
+						slidesPerView: 3,
 						spaceBetween: 15,
 					},
 					320: {
@@ -304,11 +411,11 @@ var MoonCartCarousel = function(){
 			});
 		}
 	}
-	
+
 	//  Product Swiper ==
-	var handleSwiperProduct = function() {	
-		if(jQuery('.swiper-product').length > 0){
-			var swiper = new Swiper( '.swiper-product', {
+	var handleSwiperProduct = function () {
+		if (jQuery('.swiper-product').length > 0) {
+			var swiper = new Swiper('.swiper-product', {
 				slidesPerView: 4,
 				spaceBetween: 15,
 				loop: true,
@@ -339,10 +446,10 @@ var MoonCartCarousel = function(){
 			});
 		}
 	}
-	
+
 	//  Product Gallery Swiper1 ==
-	var ProductGallerySwiper1 = function() {	
-		if(jQuery('.product-gallery-swiper').length > 0){
+	var ProductGallerySwiper1 = function () {
+		if (jQuery('.product-gallery-swiper').length > 0) {
 			var swiper = new Swiper(".product-gallery-swiper", {
 				spaceBetween: 15,
 				slidesPerView: 4,
@@ -357,7 +464,7 @@ var MoonCartCarousel = function(){
 				updateOnWindowResize: true,
 				autoplay: {
 					delay: 1500,
-				},			  
+				},
 				navigation: {
 					nextEl: ".gallery-button-next",
 					prevEl: ".gallery-button-prev",
@@ -368,19 +475,19 @@ var MoonCartCarousel = function(){
 			});
 		}
 	}
-	
+
 	//  Quick View Modal Swiper ==
-	var handleQuickModal = function() {	
-		if(jQuery('.quick-modal-swiper').length > 0){
+	var handleQuickModal = function () {
+		if (jQuery('.quick-modal-swiper').length > 0) {
 			var swiper = new Swiper(".quick-modal-swiper", {
-			  spaceBetween: 15,
-			  slidesPerView: 4,
-			  freeMode: true,
-			  watchSlidesProgress: true,
+				spaceBetween: 15,
+				slidesPerView: 4,
+				freeMode: true,
+				watchSlidesProgress: true,
 			});
 			var swiper2 = new Swiper(".quick-modal-swiper2", {
 				spaceBetween: 0,
-				updateOnWindowResize: true,	
+				updateOnWindowResize: true,
 				navigation: {
 					nextEl: ".gallery-button-next",
 					prevEl: ".gallery-button-prev",
@@ -391,10 +498,10 @@ var MoonCartCarousel = function(){
 			});
 		}
 	}
-	
+
 	//  Product Gallery Swiper ==
-	var handleProductGallery = function() {	
-		if(jQuery('.product-gallery').length > 0){
+	var handleProductGallery = function () {
+		if (jQuery('.product-gallery').length > 0) {
 			var swiper = new Swiper(".product-thumb", {
 				slidesPerView: "2",
 				spaceBetween: 0,
@@ -408,11 +515,11 @@ var MoonCartCarousel = function(){
 					el: ".product-swiper-pagination",
 					clickable: true,
 					renderBullet: function (index, className) {
-					  return '<span class="' + className + '">0' + (index + 1) + "</span>";
+						return '<span class="' + className + '">0' + (index + 1) + "</span>";
 					},
 				},
 				breakpoints: {
-					
+
 					576: {
 						slidesPerView: 2,
 					},
@@ -423,39 +530,39 @@ var MoonCartCarousel = function(){
 			});
 			var swiper2 = new Swiper(".product-gallery", {
 				slidesPerView: "1",
-				
+
 				thumbs: {
-				  swiper: swiper,
+					swiper: swiper,
 				},
 			});
 		}
 	}
-	
+
 	//  Portfolio Gallery Swiper1 ==
-	var handlePortfolioGallery = function() {	
-		if(jQuery('.portfolio-gallery').length > 0){
+	var handlePortfolioGallery = function () {
+		if (jQuery('.portfolio-gallery').length > 0) {
 			var swiper = new Swiper(".portfolio-thumb", {
 				slidesPerView: "auto",
 				spaceBetween: 0,
-				
+
 			});
 			var swiper2 = new Swiper(".portfolio-gallery", {
 				slidesPerView: "1",
-				
+
 				thumbs: {
-				  swiper: swiper,
+					swiper: swiper,
 				},
 			});
 		}
 	}
-	
+
 	//  Portfolio Gallery Swiper2 ==
-	var handlePortfolioGallery2 = function() {	
-		if(jQuery('.portfolio-gallery2').length > 0){
-			var swiper = new Swiper( '.portfolio-gallery2', {
+	var handlePortfolioGallery2 = function () {
+		if (jQuery('.portfolio-gallery2').length > 0) {
+			var swiper = new Swiper('.portfolio-gallery2', {
 				slidesPerView: "auto",
 				spaceBetween: 30,
-				
+
 				loop: true,
 				autoplay: {
 					delay: 2500,
@@ -478,14 +585,14 @@ var MoonCartCarousel = function(){
 						slidesPerView: 1,
 					},
 				}
-			} ); 
+			});
 		}
 	}
-	
+
 	//  Portfolio Gallery Swiper3 ==
-	var handlePortfolioGallery3 = function() {	
-		if(jQuery('.portfolio-gallery3').length > 0){
-			var swiper = new Swiper( '.portfolio-gallery3', {
+	var handlePortfolioGallery3 = function () {
+		if (jQuery('.portfolio-gallery3').length > 0) {
+			var swiper = new Swiper('.portfolio-gallery3', {
 				slidesPerView: 3,
 				spaceBetween: 30,
 				loop: true,
@@ -515,13 +622,13 @@ var MoonCartCarousel = function(){
 						spaceBetween: 15,
 					},
 				}
-			} ); 
+			});
 		}
 	}
-	
+
 	// Split Swiper ==
-	var handleSplitSwiper = function() {	
-		if(jQuery('.spilt-swiper-slider').length > 0){
+	var handleSplitSwiper = function () {
+		if (jQuery('.spilt-swiper-slider').length > 0) {
 			var spiltSwiper = new Swiper('.spilt-swiper-slider', {
 				direction: "vertical",
 				loop: true,
@@ -542,19 +649,22 @@ var MoonCartCarousel = function(){
 			});
 		}
 	}
-	
+
 	/* Function ============ */
 	return {
-	
-		init:function(){
+
+		init: function () {
 		},
 
-		load:function(){
+		load: function () {
 			handleMainSwiper();
 			handlekanbernSwiper();
 			BlogSlideshowSwiper();
+			Aboutteamslider();
 			handleProjectCarousel();
 			handleSwiperFour();
+			swipermobvals();
+			mySwiperproductpage();
 			handleSwiperFive();
 			handleSwiperBlogPost();
 			handleCategorySwiper();
@@ -568,37 +678,37 @@ var MoonCartCarousel = function(){
 			handleSplitSwiper();
 			handleQuickModal();
 		},
-		
-		resize:function(){
+
+		resize: function () {
 			ProductGallerySwiper1();
 		}
 	}
-	
+
 }();
 
 
-/* Document.ready Start */	
-jQuery(document).ready(function() {
-    'use strict';
-	
+/* Document.ready Start */
+jQuery(document).ready(function () {
+	'use strict';
+
 	MoonCartCarousel.init();
-	
-	
+
+
 });
 /* Document.ready END */
 
 /* Window Load START */
-jQuery(window).on('load',function () {
-	'use strict'; 
+jQuery(window).on('load', function () {
+	'use strict';
 	MoonCartCarousel.load();
 
-	
+
 });
 /*  Window Load END */
 
 /* Window Resize START */
-jQuery(window).on('resize',function () {
-	'use strict'; 
+jQuery(window).on('resize', function () {
+	'use strict';
 	MoonCartCarousel.resize();
 });
 /*  Window Resize END */

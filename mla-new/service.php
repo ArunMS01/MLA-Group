@@ -1,4 +1,18 @@
-<?php include('header.php'); ?>
+<?php
+include('head.php');
+?>
+<title>MLA</title>
+<meta name="description" content="">
+</head>
+
+<body>
+    <?php
+    include('gtm.php')
+    ?>
+    <div class="page-wraper">
+    <?php
+        include('nav.php');
+        ?>
 <style>
     .left-banner .content {
         height: 11.2rem;
@@ -62,10 +76,13 @@
 .ml-4{
     margin-left: 10px;
 }
+.ptb-40{
+    padding:40px 0;
+}
 
    
 </style>
-<section class="pt-100 pb-100" >
+<section class="ptb-40" >
     <div class="container">
         <div class="row mobile-gap">
             <div class="col-md-6">
@@ -187,7 +204,7 @@
             </div>
 
 
-            <div class="row">
+        
 
                 <div class="col-md-4">
                     <div class="image-card">
@@ -227,8 +244,8 @@
                     </div>
 
                 </div>
-            </div>
-            <div class="row">
+
+         
                 <div class="col-md-4">
                     <div class="image-card">
                         <div class="image-box">
@@ -256,13 +273,12 @@
 
                 </div>
 
-
             </div>
+         </div>
 
-        </div>
-    </div>
+        
 </section>
-
+    </div>
 
 
 
