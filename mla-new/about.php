@@ -801,6 +801,44 @@ border: 1px solid #fff;
                 width: 100%;
                 transition: width 1s ease-in-out;
               }
+              
+              
+              
+               .teamcolss {
+                padding: 15px;
+                background: #fff;
+                border-radius: 10px;
+                position: relative;
+                transition: transform 1s ease-in-out;
+              }
+
+              
+
+              .teamcolss:before {
+                content: "";
+                width: 50%;
+                height: 50%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                background: linear-gradient(145deg, #f58a3a, #f58a3a);
+                border-top-right-radius: 10px;
+                transition: width 1s ease-in-out;
+              }
+
+              .teamcolss:after {
+                content: "";
+                width: 50%;
+                height: 50%;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: -webkit-linear-gradient(#343434, #424242);
+                border-bottom-left-radius: 10px;
+                transition: width 1s ease-in-out;
+              }
+
+             
 
               .member-name {
                 margin-top: 80px;
@@ -943,7 +981,9 @@ border: 1px solid #fff;
                     margin-top:50px;
                 }
                 .ytupper .dz-yte{
+                    z-index:10;
                     text-align:center;
+                    position:relative;
                 }
                  .ytupper .dz-yte img{
                      margin:auto;
@@ -961,9 +1001,26 @@ border: 1px solid #fff;
                          display:block !important;
                      }
                  }
+                 .ytupper .btn-prev:hover i{
+                     color:#000;
+                 }
+                  .ytupper .btn-next:hover i{
+                     color:#000;
+                 }
+                  .ytupper .btn-next{
+                      right: 58px;
+                  }
+                   .ytupper .btn-prev{
+                       left: 58px;
+                   }
+                   
                  .ytupper .btn-next,
                  .ytupper .btn-prev{
-                     background:#FF9800;
+                     background:#ffffff;
+                     width:40px;
+                     height:40px;
+                     z-index:10;
+                     font-size:10px
                  }
                  
                  .frame {
@@ -1013,7 +1070,7 @@ border: 1px solid #fff;
                     <h2>Meet Our Team</h2>
                   </div>
                   <div class="row align-items-center">
-                      <div class="col-md-3 mbbhide">
+                      <div class="col-md-2 mbbhide">
                           <div class="pagination-align justify-content-end">
                 <div class="tranding-button-prev btn-prev">
                   <i class="flaticon flaticon-left-chevron"></i>
@@ -1021,22 +1078,22 @@ border: 1px solid #fff;
             
               </div>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-md-8">
                             <div class="swiper-btn-center-lr">
                   <div class="swiper swiper-blog-post-sliderss">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                        <div>
-                          <div class="dz-yte frame">
-                            <img src="images/ourteam3.jpg">
+                        <div class="teamcolss">
+                          <div class="dz-yte ">
+                            <img src="images/team23.webp">
                           </div>
                         </div>
                       </div>
 
                       <div class="swiper-slide">
-                        <div>
-                          <div class="dz-yte frame">
-                             <img src="images/ourteams.webp">
+                        <div class="teamcolss">
+                          <div class="dz-yte ">
+                             <img src="images/ourteam3 (1).webp">
                           </div>
                         </div>
                       </div>
@@ -1046,7 +1103,7 @@ border: 1px solid #fff;
                   </div>
                   </div>
                       </div>
-                      <div class="col-md-3 mbbhide">
+                      <div class="col-md-2 mbbhide">
                            <div class="pagination-align justify-content-start">
 
                 <div class="tranding-button-next btn-next">
@@ -2559,7 +2616,7 @@ overflow: hidden;
      <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://d3js.org/topojson.v3.min.js"></script>
     <script>
-       const container = d3.select(".map-container");
+    const container = d3.select(".map-container");
 
 // Set dimensions based on the container size
 const width = container.node().getBoundingClientRect().width;
@@ -2621,7 +2678,8 @@ function animateArcs() {
 function drawArc(coords) {
     const source = projection(coords[0]);
     const target = projection(coords[1]);
-    const midPoint = [(source[0] + target[0]) / 2, (source[1] + target[1]) / 2 - 100];
+    const midPointHeightOffset = width < 768 ? -50 : -100; // Adjust midpoint height offset based on screen width
+    const midPoint = [(source[0] + target[0]) / 2, (source[1] + target[1]) / 2 + midPointHeightOffset];
 
     const lineData = [source, midPoint, target];
 

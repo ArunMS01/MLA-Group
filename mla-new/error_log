@@ -11,3 +11,129 @@ Stack trace:
   thrown in /home/ictdzfbe/maidenstride.in/mla-new/product.php on line 524
 [24-Jul-2024 08:19:10 UTC] PHP Warning:  Undefined variable $brandurl in /home/ictdzfbe/maidenstride.in/mla-new/brands.php on line 59
 [25-Jul-2024 05:13:00 UTC] PHP Warning:  Undefined array key "url" in /home/ictdzfbe/maidenstride.in/mla-new/brands.php on line 59
+[08-Aug-2024 07:24:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ictdzfbe_mlagroup'@'eternal.herosite.pro' (using password: YES) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php:16
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php(16): mysqli->__construct('103.212.120.31', 'ictdzfbe_mlagro...', 'w@tAkKxCGFcH', 'ictdzfbe_mlagro...')
+#1 /home/ictdzfbe/maidenstride.in/mla-new/nav.php(182): require('/home/ictdzfbe/...')
+#2 /home/ictdzfbe/maidenstride.in/mla-new/index1.php(22): include('/home/ictdzfbe/...')
+#3 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php on line 16
+[08-Aug-2024 07:24:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ictdzfbe_mlagroup'@'eternal.herosite.pro' (using password: YES) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php:16
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php(16): mysqli->__construct('103.212.120.31', 'ictdzfbe_mlagro...', 'w@tAkKxCGFcH', 'ictdzfbe_mlagro...')
+#1 /home/ictdzfbe/maidenstride.in/mla-new/nav.php(182): require('/home/ictdzfbe/...')
+#2 /home/ictdzfbe/maidenstride.in/mla-new/index1.php(22): include('/home/ictdzfbe/...')
+#3 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php on line 16
+[08-Aug-2024 07:24:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ictdzfbe_mlagroup'@'eternal.herosite.pro' (using password: YES) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php:16
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php(16): mysqli->__construct('103.212.120.31', 'ictdzfbe_mlagro...', 'w@tAkKxCGFcH', 'ictdzfbe_mlagro...')
+#1 /home/ictdzfbe/maidenstride.in/mla-new/nav.php(182): require('/home/ictdzfbe/...')
+#2 /home/ictdzfbe/maidenstride.in/mla-new/index1.php(22): include('/home/ictdzfbe/...')
+#3 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php on line 16
+[08-Aug-2024 07:24:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ictdzfbe_mlagroup'@'eternal.herosite.pro' (using password: YES) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php:16
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php(16): mysqli->__construct('103.212.120.31', 'ictdzfbe_mlagro...', 'w@tAkKxCGFcH', 'ictdzfbe_mlagro...')
+#1 /home/ictdzfbe/maidenstride.in/mla-new/nav.php(182): require('/home/ictdzfbe/...')
+#2 /home/ictdzfbe/maidenstride.in/mla-new/index1.php(22): include('/home/ictdzfbe/...')
+#3 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php on line 16
+[08-Aug-2024 07:24:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ictdzfbe_mlagroup'@'eternal.herosite.pro' (using password: YES) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php:16
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php(16): mysqli->__construct('103.212.120.31', 'ictdzfbe_mlagro...', 'w@tAkKxCGFcH', 'ictdzfbe_mlagro...')
+#1 /home/ictdzfbe/maidenstride.in/mla-new/nav.php(182): require('/home/ictdzfbe/...')
+#2 /home/ictdzfbe/maidenstride.in/mla-new/index1.php(22): include('/home/ictdzfbe/...')
+#3 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php on line 16
+[08-Aug-2024 07:24:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ictdzfbe_mlagroup'@'eternal.herosite.pro' (using password: YES) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php:16
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php(16): mysqli->__construct('103.212.120.31', 'ictdzfbe_mlagro...', 'w@tAkKxCGFcH', 'ictdzfbe_mlagro...')
+#1 /home/ictdzfbe/maidenstride.in/mla-new/nav.php(182): require('/home/ictdzfbe/...')
+#2 /home/ictdzfbe/maidenstride.in/mla-new/index1.php(22): include('/home/ictdzfbe/...')
+#3 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php on line 16
+[08-Aug-2024 07:24:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ictdzfbe_mlagroup'@'eternal.herosite.pro' (using password: YES) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php:16
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php(16): mysqli->__construct('103.212.120.31', 'ictdzfbe_mlagro...', 'w@tAkKxCGFcH', 'ictdzfbe_mlagro...')
+#1 /home/ictdzfbe/maidenstride.in/mla-new/nav.php(182): require('/home/ictdzfbe/...')
+#2 /home/ictdzfbe/maidenstride.in/mla-new/index1.php(22): include('/home/ictdzfbe/...')
+#3 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php on line 16
+[08-Aug-2024 07:24:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ictdzfbe_mlagroup'@'eternal.herosite.pro' (using password: YES) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php:16
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php(16): mysqli->__construct('103.212.120.31', 'ictdzfbe_mlagro...', 'w@tAkKxCGFcH', 'ictdzfbe_mlagro...')
+#1 /home/ictdzfbe/maidenstride.in/mla-new/nav.php(182): require('/home/ictdzfbe/...')
+#2 /home/ictdzfbe/maidenstride.in/mla-new/index1.php(22): include('/home/ictdzfbe/...')
+#3 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php on line 16
+[08-Aug-2024 07:24:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ictdzfbe_mlagroup'@'eternal.herosite.pro' (using password: YES) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php:16
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php(16): mysqli->__construct('103.212.120.31', 'ictdzfbe_mlagro...', 'w@tAkKxCGFcH', 'ictdzfbe_mlagro...')
+#1 /home/ictdzfbe/maidenstride.in/mla-new/nav.php(182): require('/home/ictdzfbe/...')
+#2 /home/ictdzfbe/maidenstride.in/mla-new/index1.php(22): include('/home/ictdzfbe/...')
+#3 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php on line 16
+[08-Aug-2024 07:24:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ictdzfbe_mlagroup'@'eternal.herosite.pro' (using password: YES) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php:16
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php(16): mysqli->__construct('103.212.120.31', 'ictdzfbe_mlagro...', 'w@tAkKxCGFcH', 'ictdzfbe_mlagro...')
+#1 /home/ictdzfbe/maidenstride.in/mla-new/nav.php(182): require('/home/ictdzfbe/...')
+#2 /home/ictdzfbe/maidenstride.in/mla-new/index1.php(22): include('/home/ictdzfbe/...')
+#3 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php on line 16
+[08-Aug-2024 07:24:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ictdzfbe_mlagroup'@'eternal.herosite.pro' (using password: YES) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php:16
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php(16): mysqli->__construct('103.212.120.31', 'ictdzfbe_mlagro...', 'w@tAkKxCGFcH', 'ictdzfbe_mlagro...')
+#1 /home/ictdzfbe/maidenstride.in/mla-new/nav.php(182): require('/home/ictdzfbe/...')
+#2 /home/ictdzfbe/maidenstride.in/mla-new/index1.php(22): include('/home/ictdzfbe/...')
+#3 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php on line 16
+[08-Aug-2024 07:24:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ictdzfbe_mlagroup'@'eternal.herosite.pro' (using password: YES) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php:16
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php(16): mysqli->__construct('103.212.120.31', 'ictdzfbe_mlagro...', 'w@tAkKxCGFcH', 'ictdzfbe_mlagro...')
+#1 /home/ictdzfbe/maidenstride.in/mla-new/nav.php(182): require('/home/ictdzfbe/...')
+#2 /home/ictdzfbe/maidenstride.in/mla-new/index1.php(22): include('/home/ictdzfbe/...')
+#3 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php on line 16
+[08-Aug-2024 07:24:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ictdzfbe_mlagroup'@'eternal.herosite.pro' (using password: YES) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php:16
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php(16): mysqli->__construct('103.212.120.31', 'ictdzfbe_mlagro...', 'w@tAkKxCGFcH', 'ictdzfbe_mlagro...')
+#1 /home/ictdzfbe/maidenstride.in/mla-new/nav.php(182): require('/home/ictdzfbe/...')
+#2 /home/ictdzfbe/maidenstride.in/mla-new/index1.php(22): include('/home/ictdzfbe/...')
+#3 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php on line 16
+[08-Aug-2024 07:24:31 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ictdzfbe_mlagroup'@'eternal.herosite.pro' (using password: YES) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php:16
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php(16): mysqli->__construct('103.212.120.31', 'ictdzfbe_mlagro...', 'w@tAkKxCGFcH', 'ictdzfbe_mlagro...')
+#1 /home/ictdzfbe/maidenstride.in/mla-new/nav.php(182): require('/home/ictdzfbe/...')
+#2 /home/ictdzfbe/maidenstride.in/mla-new/about.php(23): include('/home/ictdzfbe/...')
+#3 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php on line 16
+[08-Aug-2024 07:24:32 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ictdzfbe_mlagroup'@'eternal.herosite.pro' (using password: YES) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php:16
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php(16): mysqli->__construct('103.212.120.31', 'ictdzfbe_mlagro...', 'w@tAkKxCGFcH', 'ictdzfbe_mlagro...')
+#1 /home/ictdzfbe/maidenstride.in/mla-new/nav.php(182): require('/home/ictdzfbe/...')
+#2 /home/ictdzfbe/maidenstride.in/mla-new/about.php(23): include('/home/ictdzfbe/...')
+#3 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php on line 16
+[08-Aug-2024 07:24:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ictdzfbe_mlagroup'@'eternal.herosite.pro' (using password: YES) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php:16
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php(16): mysqli->__construct('103.212.120.31', 'ictdzfbe_mlagro...', 'w@tAkKxCGFcH', 'ictdzfbe_mlagro...')
+#1 /home/ictdzfbe/maidenstride.in/mla-new/nav.php(182): require('/home/ictdzfbe/...')
+#2 /home/ictdzfbe/maidenstride.in/mla-new/about.php(23): include('/home/ictdzfbe/...')
+#3 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php on line 16
+[08-Aug-2024 07:24:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ictdzfbe_mlagroup'@'eternal.herosite.pro' (using password: YES) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php:16
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php(16): mysqli->__construct('103.212.120.31', 'ictdzfbe_mlagro...', 'w@tAkKxCGFcH', 'ictdzfbe_mlagro...')
+#1 /home/ictdzfbe/maidenstride.in/mla-new/nav.php(182): require('/home/ictdzfbe/...')
+#2 /home/ictdzfbe/maidenstride.in/mla-new/about.php(23): include('/home/ictdzfbe/...')
+#3 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php on line 16
+[08-Aug-2024 07:24:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ictdzfbe_mlagroup'@'eternal.herosite.pro' (using password: YES) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php:16
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php(16): mysqli->__construct('103.212.120.31', 'ictdzfbe_mlagro...', 'w@tAkKxCGFcH', 'ictdzfbe_mlagro...')
+#1 /home/ictdzfbe/maidenstride.in/mla-new/nav.php(182): require('/home/ictdzfbe/...')
+#2 /home/ictdzfbe/maidenstride.in/mla-new/about.php(23): include('/home/ictdzfbe/...')
+#3 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/db.php on line 16
