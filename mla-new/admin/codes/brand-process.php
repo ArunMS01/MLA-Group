@@ -3,10 +3,7 @@
 include('db.php');
 
 // Function to handle file upload
-function uploadFile($file) {
-    // Specify the directory where the file will be uploaded
-    $uploadDirectory = 'uploads/'; // Change this to your desired upload directory
-    
+function uploadFile($file, $uploadDirectory = 'uploads/') {
     // Check if the file was uploaded without errors
     if ($file['error'] == UPLOAD_ERR_OK) {
         // Generate a unique filename to avoid overwriting existing files
@@ -15,8 +12,8 @@ function uploadFile($file) {
 
         // Move the uploaded file to the specified directory
         if (move_uploaded_file($file['tmp_name'], $targetFilePath)) {
-            // File upload successful, return the path to the uploaded file
-            return $targetFilePath;
+            // File upload successful, return the filename
+            return $fileName; // Return only the filename, not the full path
         } else {
             // File upload failed, return false
             return false;
@@ -34,8 +31,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $url = $_POST['url'];
     $description = $_POST['description'];
     $status = $_POST['status']; // Retrieve status from the form
+    $longDescription = $_POST['longDescription']; // Long description from the form
 
-    // Handle file upload
+    // Handle file uploads
+    $logoPath = '';
+    $featuredImagePath = '';
+    $descriptionImagePath = '';
+
     if (!empty($_FILES['logo'])) {
         $logoPath = uploadFile($_FILES['logo']);
         if ($logoPath === false) {
@@ -48,12 +50,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo json_encode($response);
             exit; // Stop further execution
         }
-    } else {
-        // Logo file was not uploaded
-        $logoPath = ''; // Set empty path
     }
-        // Check if a product with the same URL already exists
-     
+
+    if (!empty($_FILES['featuredImage'])) {
+        $featuredImagePath = uploadFile($_FILES['featuredImage']);
+        if ($featuredImagePath === false) {
+            // File upload failed
+            $response = array(
+                'success' => false,
+                'message' => 'Error uploading featured image file.'
+            );
+            header('Content-Type: application/json');
+            echo json_encode($response);
+            exit; // Stop further execution
+        }
+    }
+
+    if (!empty($_FILES['descriptionImage'])) {
+        $descriptionImagePath = uploadFile($_FILES['descriptionImage']);
+        if ($descriptionImagePath === false) {
+            // File upload failed
+            $response = array(
+                'success' => false,
+                'message' => 'Error uploading description image file.'
+            );
+            header('Content-Type: application/json');
+            echo json_encode($response);
+            exit; // Stop further execution
+        }
+    }
 
     // Check if a brand with the same name or URL already exists
     $checkSql = "SELECT COUNT(*) AS total FROM brand WHERE name = '$title' OR url = '$url'";
@@ -65,16 +90,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'success' => false,
             'message' => 'Brand with the same name or URL already exists.'
         );
-
-        // Send JSON response
         header('Content-Type: application/json');
         echo json_encode($response);
         exit; // Stop further execution
     }
 
-
     // Prepare and execute the SQL statement to insert data into the brand table
-    $sql = "INSERT INTO brand (name, url, description, logo, status, created_at, updated_at) VALUES ('$title', '$url', '$description', '$logoPath', '$status', NOW(), NOW())";
+    $sql = "INSERT INTO brand (name, url, description, logo, status, longDescription, 	featuredImage, descriptionImage, created_at, updated_at) 
+            VALUES ('$title', '$url', '$description', '$logoPath', '$status', '$longDescription', '$featuredImagePath', '$descriptionImagePath', NOW(), NOW())";
 
     if ($db->query($sql) === TRUE) {
         // If insertion is successful, return success message

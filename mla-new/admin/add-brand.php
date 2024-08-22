@@ -277,22 +277,33 @@ include('inc/header.php') ?>
                 width: 100px;
             }
 
-            .close-btn {
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                font-size: 20px;
-                font-weight: bold;
-                color: #fff;
-                background-color: #dc3545;
-                border-radius: 50%;
-                width: 24px;
-                height: 24px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-            }
+           
+            .preview-container {
+    position: relative;
+    display: inline-block;
+}
+
+.preview-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.preview-container .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
         </style>
         <!-- partial -->
         <div class="main-panel">
@@ -306,17 +317,18 @@ include('inc/header.php') ?>
                                     <!-- Basic form layout -->
                                 </p>
                                 <form id="brandForm" class="forms-sample">
-                                    <div class="form-group">
-                                        <label for="exampleInputTitle">Title</label>
-                                        <input type="text" class="form-control" id="exampleInputTitle" oninput="generateUrlAndMetaTitle()" placeholder="Title" required>
-                                        <div id="titleError" class="error-message"></div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputURL">URL</label>
-                                        <input type="text" class="form-control" onchange="convertTourl()" id="exampleInputURL" placeholder="URL" required>
-                                        <div id="urlError" class="error-message"></div>
-                                    </div>
-                                    <div class="form-group">
+    <!-- Existing fields -->
+    <div class="form-group">
+        <label for="exampleInputTitle">Title</label>
+        <input type="text" class="form-control" id="exampleInputTitle" oninput="generateUrlAndMetaTitle()" placeholder="Title" required>
+        <div id="titleError" class="error-message"></div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputURL">URL</label>
+        <input type="text" class="form-control" onchange="convertTourl()" id="exampleInputURL" placeholder="URL" required>
+        <div id="urlError" class="error-message"></div>
+    </div>
+    <div class="form-group">
         <label for="exampleInputStatus">Status</label>
         <select class="form-control" id="exampleInputStatus" required>
             <option value="">Select Status</option>
@@ -326,32 +338,62 @@ include('inc/header.php') ?>
         </select>
         <div id="statusError" class="error-message"></div>
     </div>
+    <div class="form-group">
+        <label for="exampleInputLongDescription">Description</label>
+        <textarea class="form-control" id="editor1" placeholder="Description" required></textarea>
+        <div id="descriptionError" class="error-message"></div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputLongDescription">Long Description</label>
+        <textarea class="form-control" id="editor2" placeholder="Long Description"></textarea>
+        <div id="longDescriptionError" class="error-message"></div>
+    </div>
+       <!-- Brand Logo Upload -->
+       <div class="form-group">
+        <label for="logo">Brand Logo Upload</label>
+        <input type="file" name="logo" id="logo" class="file-upload-default" accept=".png, .jpg, .jpeg, .webp">
+        <div class="input-group col-xs-12">
+            <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Logo">
+            <span class="input-group-append">
+                <button class="file-upload-browse btn btn-primary" type="button" id="logoUpload">Upload</button>
+            </span>
+        </div>
+        <div id="logoPreview" class="mt-2"></div>
+    </div>
+
+    <!-- Featured Image Upload -->
+    <div class="form-group">
+        <label for="featuredImage">Featured Image Upload</label>
+        <input type="file" name="featuredImage" id="featuredImage" class="file-upload-default" accept=".png, .jpg, .jpeg, .webp">
+        <div class="input-group col-xs-12">
+            <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Featured Image">
+            <span class="input-group-append">
+                <button class="file-upload-browse btn btn-primary" type="button" id="featuredImageUpload">Upload</button>
+            </span>
+        </div>
+        <div id="featuredImagePreview" class="mt-2"></div>
+    </div>
+
+    <!-- Description Image Upload -->
+    <div class="form-group">
+        <label for="descriptionImage">Description Image Upload</label>
+        <input type="file" name="descriptionImage" id="descriptionImage" class="file-upload-default" accept=".png, .jpg, .jpeg, .webp">
+        <div class="input-group col-xs-12">
+            <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Description Image">
+            <span class="input-group-append">
+                <button class="file-upload-browse btn btn-primary" type="button" id="descriptionImageUpload">Upload</button>
+            </span>
+        </div>
+        <div id="descriptionImagePreview" class="mt-2"></div>
+    </div>
 
 
-                                    <div class="form-group">
-                                        <label for="exampleInputLongDescription">Description</label>
-                                        <textarea class="form-control" id="editor1" placeholder="Description" required></textarea>
-                                        <div id="descriptionError" class="error-message"></div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="logo">Brand Logo Upload</label>
-                                        <input type="file" name="logo" id="logo" class="file-upload-default" accept=".png, .jpg, .jpeg, .webp">
-                                        <div class="input-group col-xs-12">
-                                            <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
-                                            <span class="input-group-append">
-                                                <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                                            </span>
-                                        </div>
-                                        <div id="image-preview" class="mt-2"></div>
-                                    </div>
+    <div>
+        <button type="submit" class="btn btn-primary mr-2 mb-4">Submit</button>
+        <button type="button" class="btn btn-light mb-4" id="cancelButton">Cancel</button>
+    </div>
+</form>
 
-
-
-                                    <div>
-                                        <button type="submit" class="btn btn-primary mr-2 mb-4">Submit</button>
-                                        <button type="button" class="btn btn-light mb-4" id="cancelButton">Cancel</button>
-                                    </div>
-                                </form>
 
 
                             </div>
@@ -365,6 +407,8 @@ include('inc/header.php') ?>
             </div>
 
             <script>
+                 
+                     CKEDITOR.replace('editor2');
                 function generateUrlAndMetaTitle() {
                     // Get the course name input field and its value
                     const courseNameInput = document.getElementById("exampleInputTitle");
@@ -406,157 +450,177 @@ include('inc/header.php') ?>
                     slugElement.value = sanitizedValue;
                 }
             </script>
-
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    var brandForm = document.getElementById('brandForm');
-                    var titleInput = document.getElementById('exampleInputTitle');
-                    var urlInput = document.getElementById('exampleInputURL');
-                    var descriptionInput = document.getElementById('editor1');
-                    var cancelButton = document.getElementById('cancelButton');
-                    var titleError = document.getElementById('titleError');
-                    var urlError = document.getElementById('urlError');
-                    var descriptionError = document.getElementById('descriptionError');
-                    var fileInput = document.querySelector('input[type="file"]');
-                    var fileUploadButton = document.querySelector('.file-upload-browse');
-                    // Get the value of the status input field
-                           
-                                 
-                                  
-                    var status;
-
-document.getElementById('exampleInputStatus').addEventListener('change', function() {
-    // Get the selected value from the select element
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+    var brandForm = document.getElementById('brandForm');
+    var titleInput = document.getElementById('exampleInputTitle');
+    var urlInput = document.getElementById('exampleInputURL');
+    var descriptionInput = document.getElementById('editor1');
+    var longDescriptionInput = document.getElementById('editor2');
+    var cancelButton = document.getElementById('cancelButton');
+    var titleError = document.getElementById('titleError');
+    var urlError = document.getElementById('urlError');
+    var descriptionError = document.getElementById('descriptionError');
+    var longDescriptionError = document.getElementById('longDescriptionError');
     var statusInput = document.getElementById('exampleInputStatus');
-    status = statusInput.value;
-    console.log('Status:', status);
-    // Append the status value to the form data
+    var logoInput = document.getElementById('logo');
+    var featuredImageInput = document.getElementById('featuredImage');
+    var descriptionImageInput = document.getElementById('descriptionImage');
+    var logoPreviewContainer = document.getElementById('logoPreview');
+    var featuredImagePreviewContainer = document.getElementById('featuredImagePreview');
+    var descriptionImagePreviewContainer = document.getElementById('descriptionImagePreview');
+
+    // Handle status input change
+    statusInput.addEventListener('change', function() {
+        var status = statusInput.value;
+        console.log('Status:', status);
+    });
+
+    // Handle file upload button clicks
+    document.getElementById('logoUpload').addEventListener('click', function() {
+        logoInput.click(); // Trigger click event on logo file input
+    });
+
+    document.getElementById('featuredImageUpload').addEventListener('click', function() {
+        featuredImageInput.click(); // Trigger click event on featured image file input
+    });
+
+    document.getElementById('descriptionImageUpload').addEventListener('click', function() {
+        descriptionImageInput.click(); // Trigger click event on description image file input
+    });
+
+    // Handle form submission
+    brandForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Clear previous error messages
+        titleError.textContent = '';
+        urlError.textContent = '';
+        descriptionError.textContent = '';
+        longDescriptionError.textContent = '';
+
+        // Validate form fields
+        if (!titleInput.value.trim()) {
+            titleError.textContent = 'Title is required';
+            return;
+        }
+
+        if (!urlInput.value.trim()) {
+            urlError.textContent = 'URL is required';
+            return;
+        }
+
+        if (!descriptionInput.value.trim()) {
+            descriptionError.textContent = 'Description is required';
+            return;
+        }
+
+        if (!longDescriptionInput.value.trim()) {
+            longDescriptionError.textContent = 'Long Description is required';
+            return;
+        }
+
+        // Create a new FormData object
+        var formData = new FormData();
+        formData.append('title', titleInput.value);
+       
+        formData.append('url', urlInput.value);
+        formData.append('description', descriptionInput.value);
+        formData.append('status', statusInput.value);
+        formData.append('longDescription', CKEDITOR.instances['editor2'].getData());
+
+        // Append the files
+        formData.append('logo', logoInput.files[0] || null);
+        formData.append('featuredImage', featuredImageInput.files[0] || null);
+        formData.append('descriptionImage', descriptionImageInput.files[0] || null);
+
+        // Create an XMLHttpRequest object
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', './codes/brand-process.php');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                if (response.success) {
+                    Swal.fire({
+                        text: response.message,
+                        icon: 'success',
+                        confirmButtonText: 'Ok, got it!'
+                    }).then(function() {
+                        window.location.href = 'index.php';
+                    });
+                } else {
+                    Swal.fire({
+                        text: response.message,
+                        icon: 'error',
+                        confirmButtonText: 'Ok, got it!'
+                    });
+                }
+            } else {
+                Swal.fire({
+                    text: 'Error: ' + xhr.statusText,
+                    icon: 'error',
+                    confirmButtonText: 'Ok, got it!'
+                });
+            }
+        };
+        xhr.onerror = function() {
+            Swal.fire({
+                text: 'Request failed',
+                icon: 'error',
+                confirmButtonText: 'Ok, got it!'
+            });
+        };
+        xhr.send(formData);
+    });
+
+    // Handle cancel button click
+    cancelButton.addEventListener('click', function() {
+        window.location.href = 'index.php'; // Example redirect
+    });
+
+    // Preview for logo upload
+    logoInput.addEventListener('change', function() {
+        previewImage(this, logoPreviewContainer);
+    });
+
+    // Preview for featured image upload
+    featuredImageInput.addEventListener('change', function() {
+        previewImage(this, featuredImagePreviewContainer);
+    });
+
+    // Preview for description image upload
+    descriptionImageInput.addEventListener('change', function() {
+        previewImage(this, descriptionImagePreviewContainer);
+    });
+
+    // Function to handle image preview
+    function previewImage(input, previewContainer) {
+        const file = input.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const img = document.createElement('img');
+                img.src = reader.result;
+                img.className = 'img-fluid';
+                const closeBtn = document.createElement('span');
+                closeBtn.className = 'close-btn';
+                closeBtn.innerHTML = '&times;';
+                closeBtn.addEventListener('click', function() {
+                    previewContainer.innerHTML = '';
+                    input.value = '';
+                });
+                previewContainer.innerHTML = '';
+                previewContainer.appendChild(img);
+                previewContainer.appendChild(closeBtn);
+            }
+            reader.readAsDataURL(file);
+        } else {
+            previewContainer.innerHTML = '';
+        }
+    }
 });
-                    // Add event listener to the file upload button
-                    fileUploadButton.addEventListener('click', function() {
-                        fileInput.click(); // Trigger click event on file input field
-                    });
 
-                    brandForm.addEventListener('submit', function(event) {
-                        event.preventDefault(); // Prevent default form submission
-
-                        // Clear previous error messages
-                        titleError.textContent = '';
-                        urlError.textContent = '';
-                        descriptionError.textContent = '';
-
-                        // Validate form fields
-                        if (!titleInput.value.trim()) {
-                            titleError.textContent = 'Title is required';
-                            return;
-                        }
-
-                        if (!urlInput.value.trim()) {
-                            urlError.textContent = 'URL is required';
-                            return;
-                        }
-
-                        if (!descriptionInput.value.trim()) {
-                            descriptionError.textContent = 'Description is required';
-                            return;
-                        }
-
-                        // Create a new FormData object
-                        var formData = new FormData();
-                        
-                        // Append form fields to the FormData object
-                        formData.append('title', titleInput.value);
-                        formData.append('url', urlInput.value);
-                        formData.append('description', descriptionInput.value);
-                        formData.append('status', status);
-                        formData.append('logo', fileInput.files[0]); // Append the file input
-                        var xhr = new XMLHttpRequest();
-                        xhr.open('POST', './codes/brand-process.php');
-                        xhr.onload = function() {
-                            if (xhr.status === 200) {
-                                // Handle successful response
-                                var response = JSON.parse(xhr.responseText);
-                                if (response.success) {
-                                    // Show success message using SweetAlert
-                                    Swal.fire({
-                                        text: response.message,
-                                        icon: 'success',
-                                        confirmButtonText: 'Ok, got it!'
-                                    }).then(function() {
-                                        // Redirect or perform other actions as needed
-                                        // window.location.href = 'index.php';
-                                    });
-                                } else {
-                                    // Show error message using SweetAlert
-                                    Swal.fire({
-                                        text: response.message,
-                                        icon: 'error',
-                                        confirmButtonText: 'Ok, got it!'
-                                    });
-                                }
-                            } else {
-                                // Show error message using SweetAlert
-                                Swal.fire({
-                                    text: 'Error: ' + xhr.statusText,
-                                    icon: 'error',
-                                    confirmButtonText: 'Ok, got it!'
-                                });
-                            }
-                        };
-                        xhr.onerror = function() {
-                            // Show error message using SweetAlert
-                            Swal.fire({
-                                text: 'Request failed',
-                                icon: 'error',
-                                confirmButtonText: 'Ok, got it!'
-                            });
-                        };
-                        xhr.send(formData);
-                    });
-
-                    // Cancel button click event listener
-                    cancelButton.addEventListener('click', function() {
-                        // Redirect to a different page or perform other actions as needed
-                    });
-                });
-
-                const fileInput = document.getElementById('logo');
-                const previewContainer = document.getElementById('image-preview');
-
-                fileInput.addEventListener('change', function() {
-                    const file = this.files[0];
-
-                    // Check if a file is selected
-                    if (file) {
-                        const reader = new FileReader();
-
-                        reader.onload = function() {
-                            // Create a new image element
-                            const img = document.createElement('img');
-                            img.src = reader.result;
-                            img.className = 'img-fluid';
-
-                            // Create a close button
-                            const closeBtn = document.createElement('span');
-                            closeBtn.className = 'close-btn';
-                            closeBtn.innerHTML = '&times;';
-                            closeBtn.addEventListener('click', function() {
-                                previewContainer.innerHTML = '';
-                                fileInput.value = '';
-                            });
-
-                            // Append the image and close button to the preview container
-                            previewContainer.innerHTML = '';
-                            previewContainer.appendChild(img);
-                            previewContainer.appendChild(closeBtn);
-                        }
-
-                        reader.readAsDataURL(file);
-                    } else {
-                        previewContainer.innerHTML = '';
-                    }
-                });
-            </script>
+</script>
 
             <?php include('inc/footer.php') ?>
 
