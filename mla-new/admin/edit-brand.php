@@ -261,22 +261,37 @@ include('inc/header.php') ?>
                 position: relative;
             }
 
-            .close-btn {
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                font-size: 20px;
-                font-weight: bold;
-                color: #fff;
-                background-color: #dc3545;
-                border-radius: 50%;
-                width: 24px;
-                height: 24px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-            }
+           
+
+            .image-preview {
+    position: relative;
+    display: inline-block;
+}
+
+.preview-image {
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.close-btn {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 18px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
         </style>
         <!-- partial -->
         <div class="main-panel">
@@ -356,58 +371,57 @@ include('inc/header.php') ?>
     </div>
 
     <div class="form-group">
-        <label for="logo">Brand Logo Upload</label>
-        <input type="file" name="logo" id="logo" class="file-upload-default" accept=".png, .jpg, .jpeg, .webp">
-        <div class="input-group col-xs-12">
-            <input type="text" class="form-control file-upload-info" value="<?php echo isset($brandData['logo']) ? $brandData['logo'] : ''; ?>" disabled placeholder="Upload Image">
-            <span class="input-group-append">
-                <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-            </span>
-        </div>
-        <div id="image-preview" class="mt-2">
-            <?php
-            if (isset($brandData['logo'])) {
-                echo '<img src="./codes/' . $brandData['logo'] . '" alt="Brand Logo">';
-            }
-            ?>
-        </div>
+    <label for="logo">Brand Logo Upload</label>
+    <input type="file" name="logo" id="logo" class="file-upload-default" accept=".png, .jpg, .jpeg, .webp">
+    <div class="input-group col-xs-12">
+        <input type="text" class="form-control file-upload-info" value="<?php echo isset($brandData['logo']) ? $brandData['logo'] : ''; ?>" disabled placeholder="Upload Image">
+        <span class="input-group-append">
+            <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+        </span>
     </div>
+    <div id="image-preview" class="image-preview mt-2">
+        <?php if (isset($brandData['logo'])): ?>
+            <img src="./codes/<?php echo $brandData['logo']; ?>" alt="Brand Logo" class="img-fluid preview-image">
+            <span class="close-btn">&times;</span>
+        <?php endif; ?>
+    </div>
+</div>
 
-    <div class="form-group">
-        <label for="featuredImage">Featured Image Upload</label>
-        <input type="file" name="featuredImage" id="featuredImage" class="file-upload-default" accept=".png, .jpg, .jpeg, .webp">
-        <div class="input-group col-xs-12">
-            <input type="text" class="form-control file-upload-info"  value="<?php echo isset($brandData['featuredImage']) ? $brandData['featuredImage'] : ''; ?>" disabled placeholder="Upload Featured Image">
-            <span class="input-group-append">
-                <button class="file-upload-browse btn btn-primary" type="button" id="featuredImageUpload">Upload</button>
-            </span>
-        </div>
-        <div id="featured-image-preview" class="mt-2">
-            <?php
-            if (isset($brandData['featuredImage'])) {
-                echo '<img src="./codes/' . $brandData['featuredImage'] . '" alt="Featured Image">';
-            }
-            ?>
-        </div>
+<div class="form-group">
+    <label for="featuredImage">Featured Image Upload</label>
+    <input type="file" name="featuredImage" id="featuredImage" class="file-upload-default" accept=".png, .jpg, .jpeg, .webp">
+    <div class="input-group col-xs-12">
+        <input type="text" class="form-control file-upload-info" value="<?php echo isset($brandData['featuredImage']) ? $brandData['featuredImage'] : ''; ?>" disabled placeholder="Upload Featured Image">
+        <span class="input-group-append">
+            <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+        </span>
     </div>
+    <div id="featured-image-preview" class="image-preview mt-2">
+        <?php if (isset($brandData['featuredImage'])): ?>
+            <img src="./codes/<?php echo $brandData['featuredImage']; ?>" alt="Featured Image" class="img-fluid preview-image">
+            <span class="close-btn">&times;</span>
+        <?php endif; ?>
+    </div>
+</div>
 
-    <div class="form-group">
-        <label for="descriptionImage">Description Image Upload</label>
-        <input type="file" name="descriptionImage" id="descriptionImage" class="file-upload-default" accept=".png, .jpg, .jpeg, .webp">
-        <div class="input-group col-xs-12">
-            <input type="text" class="form-control file-upload-info"  value="<?php echo isset($brandData['descriptionImage']) ? $brandData['descriptionImage'] : ''; ?>" disabled placeholder="Upload Description Image">
-            <span class="input-group-append">
-                <button class="file-upload-browse btn btn-primary" type="button" id="descriptionImageUpload">Upload</button>
-            </span>
-        </div>
-        <div id="description-image-preview" class="mt-2">
-            <?php
-            if (isset($brandData['descriptionImage'])) {
-                echo '<img src="./codes/' . $brandData['descriptionImage'] . '" alt="Description Image">';
-            }
-            ?>
-        </div>
+<div class="form-group">
+    <label for="descriptionImage">Description Image Upload</label>
+    <input type="file" name="descriptionImage" id="descriptionImage" class="file-upload-default" accept=".png, .jpg, .jpeg, .webp">
+    <div class="input-group col-xs-12">
+        <input type="text" class="form-control file-upload-info" value="<?php echo isset($brandData['descriptionImage']) ? $brandData['descriptionImage'] : ''; ?>" disabled placeholder="Upload Description Image">
+        <span class="input-group-append">
+            <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+        </span>
     </div>
+    <div id="description-image-preview" class="image-preview mt-2">
+        <?php if (isset($brandData['descriptionImage'])): ?>
+            <img src="./codes/<?php echo $brandData['descriptionImage']; ?>" alt="Description Image" class="img-fluid preview-image">
+            <span class="close-btn">&times;</span>
+        <?php endif; ?>
+    </div>
+</div>
+
+
 
     <div>
         <button type="submit" class="btn btn-primary mr-2 mb-4">Submit</button>
@@ -429,6 +443,39 @@ include('inc/header.php') ?>
             </div>
 
             <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all close buttons
+    var closeButtons = document.querySelectorAll('.close-btn');
+
+    // Loop through each close button and add an event listener
+    closeButtons.forEach(function(closeButton) {
+        closeButton.addEventListener('click', function() {
+            // Find the corresponding image preview container
+            var imagePreview = this.parentNode;
+            
+            // Remove the image from the preview
+            var img = imagePreview.querySelector('img');
+            if (img) {
+                img.remove();
+            }
+            
+            // Clear the corresponding file input field
+            var fileInput = imagePreview.previousElementSibling.querySelector('input[type="file"]');
+            if (fileInput) {
+                fileInput.value = ''; // Clear the file input
+            }
+            
+            // Clear the text input that shows the file name
+            var textInput = imagePreview.previousElementSibling.querySelector('input.file-upload-info');
+            if (textInput) {
+                textInput.value = ''; // Clear the text input
+            }
+        });
+    });
+});
+
+
                  CKEDITOR.replace('editor2');
 
                 function generateUrlAndMetaTitle() {

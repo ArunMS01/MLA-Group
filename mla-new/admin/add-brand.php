@@ -290,19 +290,29 @@ include('inc/header.php') ?>
 }
 
 .preview-container .close-btn {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    background-color: #ff0000;
+    color: #ffffff;
     border-radius: 50%;
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     text-align: center;
-    line-height: 24px;
+    line-height: 18px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
 }
+.close-btn{
+    background-color: #ff0000;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 18px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
 
         </style>
         <!-- partial -->
