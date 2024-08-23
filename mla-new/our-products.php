@@ -149,7 +149,7 @@ include('head.php');
 include('admin/codes/db.php');
 // Fetch brands from the database
 
- $query = "SELECT id, name, logo FROM brand";
+ $query = "SELECT id, name, logo,description,url FROM brand";
 $result = mysqli_query($db, $query);
 
 // Initialize an array to store the brands
@@ -188,51 +188,259 @@ mysqli_close($db);
 
 // Now $brands array contains all brands with their associated products
 ?>
+
+
+<?php
+function truncateText($text, $charLimit = 180) {
+    // Check if the text exceeds the character limit
+    if (strlen($text) > $charLimit) {
+        // Return the truncated text with ellipsis
+        return substr($text, 0, $charLimit) . '...';
+    } else {
+        // Return the original text if it's within the character limit
+        return $text;
+    }
+}
+?>
            
 <!--Recommend Section Start-->
-<section class="content-inner-1 ">
-<div class="container">
-        <!--<h3 class="title text-center mb-4">RANGE OF PRODUCTS</h3>-->
-        <div class="site-filters clearfix d-flex align-items-center justify-content-center">
-            <ul class="filters" data-bs-toggle="buttons">
-                <?php foreach ($brands as $brand): ?>
-                    <li class="btn btth" data-brand="brand-<?php echo $brand['id']; ?>">
-                        <input type="radio" name="brand">
-                        <a href="javascript:void(0);"><?php echo htmlspecialchars($brand['name']); ?></a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        </div>
 
-        <?php foreach ($brands as $brand): ?>
-            <div class="tab-content tabcontentntew" id="brand-<?php echo $brand['id']; ?>">
-                <div class="row align-items-center">
-                    <div class="col-md-3">
-                        <img class="brandimg" style="display: block; margin: auto;" src="admin/codes/<?php echo htmlspecialchars($brand['logo']); ?>" class="mt-4 mb-4">
-                    </div>
-                    <div class="col-md-9">
-                        <div class="row gx-xl-4 g-3">
-                            <?php foreach ($brand['products'] as $product): ?>
-                                <div class="col-md-3">
-                                    <div class="widget widget_categories style-1">
-                                        <ul>
-                                            <li class="cat-item"><a href="<?php echo htmlspecialchars($product['url']).".html"; ?>"><?php echo htmlspecialchars($product['title']); ?></a></li>
-                                        </ul>
-                                    </div>
+
+    <style>
+              .teamWrapper {
+                margin-top: 50px;
+              }
+
+              .teamGrid {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 1.5%;
+    justify-content: space-around;
+  
+}
+
+              .avatar {
+                margin-top: 25px;
+    
+                text-align: center;
+              }
+
+           
+
+              .avatar>img {
+                width: 150px;
+    margin: auto;
+    height: 84px;
+    object-fit: contain;
+    /* border-radius: 50%; */
+    border: 1px solid rgb(170 170 173 / 1);
+    box-shadow: 0px 3px 10px 3px rgb(170 170 173 / 0.5);
+}
+              
+
+              .teamcolinner {
+                position: relative;
+                border: 1px dashed #ddd;
+                min-height: 100px;
+                background: #fff;
+                z-index: 9;
+                padding: 30px;
+                min-height:23rem;
+              }
+
+              .teamcol {
+                padding: 15px;
+                background: #f4f4f4;
+                border-radius: 10px;
+                position: relative;
+                transition: transform 1s ease-in-out;
+              }
+
+              .teamcol:hover {
+                transform: translateY(-30px);
+                box-shadow: 0px 3px 10px 3px rgb(170 170 173 / 0.5);
+                transition: transform 1s ease-in-out;
+              }
+
+              .teamcol:before {
+                content: "";
+                width: 50%;
+                height: 50%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                background: linear-gradient(145deg, #f58a3a, #f58a3a);
+                border-top-right-radius: 10px;
+                transition: width 1s ease-in-out;
+              }
+
+              .teamcol:after {
+                content: "";
+                width: 50%;
+                height: 50%;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: -webkit-linear-gradient(#343434, #424242);
+                border-bottom-left-radius: 10px;
+                transition: width 1s ease-in-out;
+              }
+
+              .teamcol:hover::before,
+              .teamcol:hover::after {
+                width: 100%;
+                transition: width 1s ease-in-out;
+              }
+              
+              
+              
+               .teamcolss {
+                padding: 15px;
+                background: #fff;
+                border-radius: 10px;
+                position: relative;
+                transition: transform 1s ease-in-out;
+              }
+
+              
+
+              .teamcolss:before {
+                content: "";
+                width: 50%;
+                height: 50%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                background: linear-gradient(145deg, #f58a3a, #f58a3a);
+                border-top-right-radius: 10px;
+                transition: width 1s ease-in-out;
+              }
+
+              .teamcolss:after {
+                content: "";
+                width: 50%;
+                height: 50%;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: -webkit-linear-gradient(#343434, #424242);
+                border-bottom-left-radius: 10px;
+                transition: width 1s ease-in-out;
+              }
+
+             
+
+              .member-name {
+                margin-top: 20px;
+              }
+
+              .member-info {
+               
+              }
+
+              .social-listing {
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                list-style: none;
+                padding: 0;
+              }
+
+              .social-listing>li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                background: #f4f5f7;
+                border-radius: 50%;
+                margin: 5px;
+              }
+              
+              .hideerm{
+                  display:none;
+              }
+              
+              #showmore{
+                  text-align: center;
+                display: inline-block;
+                color: #fff;
+                background: rgba(247, 134, 49, 1);
+                padding: 10px;
+                border-radius: 5px;
+                cursor:pointer;
+                        }
+              
+              .mt-2222{
+                  margin-top:120px;
+              }
+              .pb-100{
+              padding-bottom: 100px;
+              }
+              .btn-primary{
+                background: #f58a3a;
+                border-radius: 10px;
+              }
+              .btn.btn-primary:hover{
+                background: #000;
+              }
+
+              /* Responsive Layout */
+@media (max-width: 1024px) {
+    .teamGrid {
+        grid-template-columns: 45% 45%;
+        column-gap: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .teamGrid {
+        grid-template-columns: 100%;
+    }
+    .mt-2222 {
+    margin-top: 75px;
+}
+}
+            </style>
+<section>
+<div class="container pb-100">
+
+
+<div class="teamWrapper">
+        <div class="containerssss">
+            <div class="teamGrid">
+                <?php foreach ($brands as $brand): ?>
+                    <div class="colmun mbcolteam mt-2222">
+                        <div class="teamcol">
+                            <div class="teamcolinner">
+                                <div class="avatar">
+                                    <img src="admin/codes/<?php echo $brand['logo']; ?>" alt="<?php echo $brand['name']; ?>">
                                 </div>
-                            <?php endforeach; ?>
+                                <div class="member-name">
+                                    <h2 ><?php echo $brand['name']; ?></h2>
+                                </div>
+                                <div class="member-info">
+                                    <p >
+                                    <?php echo truncateText($brand['description'], 90); ?>
+                                    </p>
+                                </div>
+                                <div class="member-social">
+                                    <p >
+                                        <a href="brands.php?url=<?php echo $brand['url']; ?>" class="badge  badge-primary  read-more-btn">
+                                            Read More
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php endforeach; ?>
             </div>
-        <?php endforeach; ?>
-
+        </div>
     </div>
 
-  
-    </section>
-
-
+            </div>
+</section>
         <style>
             .mySwiperproductpage .f-list-markers {
                 border-radius: 13px;
