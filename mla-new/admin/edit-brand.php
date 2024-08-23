@@ -351,7 +351,7 @@ include('inc/header.php') ?>
 
     <div class="form-group">
         <label for="exampleInputLongDescription">Long Description</label>
-        <textarea class="form-control" id="editor2" placeholder="Long Description"><?php echo isset($brandData['long_description']) ? $brandData['long_description'] : ''; ?></textarea>
+        <textarea class="form-control" id="editor2" placeholder="Long Description"><?php echo isset($brandData['longDescription']) ? $brandData['longDescription'] : ''; ?></textarea>
         <div id="longDescriptionError" class="error-message"></div>
     </div>
 
@@ -377,15 +377,15 @@ include('inc/header.php') ?>
         <label for="featuredImage">Featured Image Upload</label>
         <input type="file" name="featuredImage" id="featuredImage" class="file-upload-default" accept=".png, .jpg, .jpeg, .webp">
         <div class="input-group col-xs-12">
-            <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Featured Image">
+            <input type="text" class="form-control file-upload-info"  value="<?php echo isset($brandData['featuredImage']) ? $brandData['featuredImage'] : ''; ?>" disabled placeholder="Upload Featured Image">
             <span class="input-group-append">
                 <button class="file-upload-browse btn btn-primary" type="button" id="featuredImageUpload">Upload</button>
             </span>
         </div>
         <div id="featured-image-preview" class="mt-2">
             <?php
-            if (isset($brandData['featured_image'])) {
-                echo '<img src="./codes/' . $brandData['featured_image'] . '" alt="Featured Image">';
+            if (isset($brandData['featuredImage'])) {
+                echo '<img src="./codes/' . $brandData['featuredImage'] . '" alt="Featured Image">';
             }
             ?>
         </div>
@@ -395,15 +395,15 @@ include('inc/header.php') ?>
         <label for="descriptionImage">Description Image Upload</label>
         <input type="file" name="descriptionImage" id="descriptionImage" class="file-upload-default" accept=".png, .jpg, .jpeg, .webp">
         <div class="input-group col-xs-12">
-            <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Description Image">
+            <input type="text" class="form-control file-upload-info"  value="<?php echo isset($brandData['descriptionImage']) ? $brandData['descriptionImage'] : ''; ?>" disabled placeholder="Upload Description Image">
             <span class="input-group-append">
                 <button class="file-upload-browse btn btn-primary" type="button" id="descriptionImageUpload">Upload</button>
             </span>
         </div>
         <div id="description-image-preview" class="mt-2">
             <?php
-            if (isset($brandData['description_image'])) {
-                echo '<img src="./codes/' . $brandData['description_image'] . '" alt="Description Image">';
+            if (isset($brandData['descriptionImage'])) {
+                echo '<img src="./codes/' . $brandData['descriptionImage'] . '" alt="Description Image">';
             }
             ?>
         </div>
