@@ -59,6 +59,10 @@ include('head.php');
             }
 
             @media screen and (max-width:768px) {
+                .brandimg{
+                   width: 164px;
+        margin-bottom: 20px !important;
+                }
                 .shop-card-one ul li {
                     width: 100%;
                 }
@@ -111,9 +115,16 @@ include('head.php');
             .zoom-in-up {
                 animation: zoomInUp 2s ease forwards;
             }
+            
+            .ct2{
+                    background: linear-gradient(45deg, #ffefbd, #ffffff00), url(https://t3.ftcdn.net/jpg/05/08/74/70/360_F_508747099_jWfjbngzFHhBP9L4AvkFExcmnx0L0eFU.jpg);
+    /* background: url(./images/aboutus/banner-about-mla.png); */
+    background-position: left !important;
+    background-repeat: no-repeat !important;
+            }
         </style>
 
-        <section class="content-inner overflow-hidden bg-light" style="background: url('./images/aboutus/banner-about-mla.png');">
+        <section class="content-inner ct2 overflow-hidden bg-light">
             <div class="container">
                 <div class="row about-style1 align-items-center zoom-in-up visible">
                     <div class="col-lg-12 text-center">
@@ -179,7 +190,7 @@ mysqli_close($db);
 ?>
            
 <!--Recommend Section Start-->
-<section class="content-inner-1 bg-light">
+<section class="content-inner-1 ">
 <div class="container">
         <!--<h3 class="title text-center mb-4">RANGE OF PRODUCTS</h3>-->
         <div class="site-filters clearfix d-flex align-items-center justify-content-center">
