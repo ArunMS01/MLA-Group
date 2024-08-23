@@ -156,24 +156,30 @@ include('head.php');
         }
         .postion-and{
             position: absolute;
-    right: 10%;
-    top: 48%;
+    right: 4%;
+    top: 9%;
     z-index: 1;
-    height: 21rem;
+    height: 20rem;
     border-radius: 8px;
         }
+        .postion-block{
+            position: relative;
+        }
 
-        @media (min-width: 768px) {
+        @media (max-width: 768px) {
             .content img {
                 max-width: 50%;
             }
 
+            .postion-and {
+                position: static;
+            }
             .text-content {
-                max-width: 50%;
+                max-width: 100%;
             }
         }
     </style>
-<div class="my-5" style="background-color:#000; padding:60px 0">
+<div class="my-5 postion-block" style="background-color:#000; padding:60px 0">
 <img   class="postion-and" src="admin/codes/<?php echo htmlspecialchars($imageUrl, ENT_QUOTES, 'UTF-8'); ?>" alt="Image">
     <div class="ribbon-box" >
         <!-- Image ribbon -->
