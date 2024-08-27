@@ -7,7 +7,7 @@ include('head.php');
 
 <body>
     <?php
-    include('gtm.php')
+    include('gtm.php');
     ?>
     <div class="page-wraper">
         <!-- <div id="loading-area" class="preloader-wrapper-1">
