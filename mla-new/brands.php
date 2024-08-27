@@ -80,25 +80,7 @@ include('head.php');
       
       ?>
       
-      <section class="content-inner overflow-hidden bg-light bannernew"
-          style="background: linear-gradient(97deg, black, transparent), url('admin/codes/<?php echo htmlspecialchars($imageUrl, ENT_QUOTES, 'UTF-8'); ?>'); background-repeat:no-repeat; background-size:cover; background-position: center;">
-          <div class="container">
-              <div class="row about-style1 align-items-center zoom-in-up visible">
-                  <div class="col-lg-6">
-                      <div class="position-relative">
-                          <div class="about-thumb-1">
-                              <div class="section-head">
-                                  <h2 class="title">
-                                      <?php echo isset($_GET['url']) ? strtoupper(htmlspecialchars($_GET['url'], ENT_QUOTES, 'UTF-8')) : ""; ?>
-                                  </h2>
-                                  <p><?php echo isset($description) ? htmlspecialchars($description, ENT_QUOTES, 'UTF-8') : ""; ?></p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
+    
 
 
     <style>
@@ -179,7 +161,7 @@ include('head.php');
             }
         }
     </style>
-<div class="my-5 postion-block" style="background-color:#000; padding:60px 0">
+<div class=" postion-block" style="background-color:#f3ebeb;;padding:60px 0">
 <img   class="postion-and" src="admin/codes/<?php echo htmlspecialchars($imageUrl, ENT_QUOTES, 'UTF-8'); ?>" alt="Image">
     <div class="ribbon-box" >
         <!-- Image ribbon -->
@@ -189,7 +171,9 @@ include('head.php');
         <div class="row content">
            
             <div class="col-md-6 text-content p-0">
-                <h2>
+                <h2 class="title">
+               
+                                               
                     <?php echo isset($_GET['url']) ? strtoupper(htmlspecialchars($_GET['url'], ENT_QUOTES, 'UTF-8')) : "Heading Text"; ?>
                 </h2>
                 <p>
@@ -239,12 +223,18 @@ if ($brandurl) {
 ?>
 <style>
     .pt-100{
-        padding-top:100px;
-        padding-bottom:100px;
+        padding-top:50px;
+        
+    }
+    .pb-100{
+        padding-bottom:50px;
     }
     .align-center{
        
         align-items: center;
+    }
+    .border-radius{
+        border-radius: 20px;
     }
 </style>
 <section class="pt-100 pb-100">
@@ -256,7 +246,7 @@ if ($brandurl) {
             </div>
             <div class="col-md-6">
                 <!-- Output image URL with a fallback for safety -->
-                <img src="admin/codes/<?php echo isset($descriptionImage) ? htmlspecialchars($descriptionImage, ENT_QUOTES, 'UTF-8') : ""; ?>" alt="Description Image">
+                <img class="border-radius" src="admin/codes/<?php echo isset($descriptionImage) ? htmlspecialchars($descriptionImage, ENT_QUOTES, 'UTF-8') : ""; ?>" alt="Description Image">
             </div>
         </div>
     </div>
@@ -325,59 +315,59 @@ if ($brandurl) {
         </style>
 
 
-        <section class="content-inner-1">
-            <div class="container">
-                <div class="row gx-xl-4 g-3 mb-xl-0 mb-md-0 mb-3">
-
-                    <?php
-                 
-                    // print_r($result);
-                     $sqls = "SELECT p.title, p.url, p.main_image, b.description
-                                    FROM products AS p
-                                    INNER JOIN brand AS b ON b.id = p.brand
-                                    WHERE b.url = '$brandurl'";
-                        $results = mysqli_query($db, $sqls);
-                        if ($results) {
-                            while ($rown = mysqli_fetch_assoc($results)) {
-                    ?>
-                                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 m-sm-b0 ">
-                                    <div class="shop-card">
-                                        <div class="dz-media">
-                                            <div class="FM6uVc">
-                                                <div class="ArOc1c">
-                                                    <img src="admin/codes/<?php echo $rown['main_image'] ?>" alt="image">
-                                                </div>
-                                            </div>
-
-                                            <div class="shop-meta">
-                                                <a href="<?php echo htmlspecialchars($rown['url']) ?>.html" class="btn btn-secondary btn-icon">
-                                                    <i class="fa-solid fa-eye d-md-none d-block"></i>
-                                                    <span class="d-md-block d-none"> View</span>
-                                                </a>
-
-                                            </div>
-                                        </div>
-                                        <div class="dz-content">
-                                            <h5 class="title">
-                                                <a href="<?php echo htmlspecialchars($rown['url']) ?>.html">
-                                                    <?php echo htmlspecialchars($rown['title']) ?>
-                                                </a>
-                                            </h5>
-
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                    <?php
-                            }
-                        }
-                    
-                    ?>
-                </div>
+<section class="content-inner-1">
+    <div class="container">
+        <!-- Big Heading -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 text-center">
+                <h2 class="display-4 fw-bold">Our Products</h2>
             </div>
-        </section>
+        </div>
+
+        <div class="row gx-xl-4 g-3 mb-xl-0 mb-md-0 mb-3">
+            <?php
+                // Fetch products from the database
+                $sqls = "SELECT p.title, p.url, p.main_image, b.description
+                         FROM products AS p
+                         INNER JOIN brand AS b ON b.id = p.brand
+                         WHERE b.url = '$brandurl'";
+                $results = mysqli_query($db, $sqls);
+                if ($results) {
+                    while ($rown = mysqli_fetch_assoc($results)) {
+            ?>
+                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 m-sm-b0 ">
+                    <div class="shop-card">
+                        <div class="dz-media">
+                            <div class="FM6uVc">
+                                <div class="ArOc1c">
+                                    <img src="admin/codes/<?php echo $rown['main_image'] ?>" alt="image">
+                                </div>
+                            </div>
+
+                            <div class="shop-meta">
+                                <a href="<?php echo htmlspecialchars($rown['url']) ?>.html" class="btn btn-secondary btn-icon">
+                                    <i class="fa-solid fa-eye d-md-none d-block"></i>
+                                    <span class="d-md-block d-none"> View</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dz-content">
+                            <h5 class="title">
+                                <a href="<?php echo htmlspecialchars($rown['url']) ?>.html">
+                                    <?php echo htmlspecialchars($rown['title']) ?>
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            <?php
+                    }
+                }
+            ?>
+        </div>
+    </div>
+</section>
+
 
 <?php
 }

@@ -132,7 +132,7 @@ include('head.php');
                             <div class="about-thumb-1 ">
 
                                 <div class="section-head">
-                                    <h2 class="title">Our Products </h2>
+                                    <h2 class="title">MLA GROUP </h2>
                                 </div>
 
                             </div>
@@ -372,7 +372,7 @@ function truncateText($text, $charLimit = 180) {
                         }
               
               .mt-2222{
-                  margin-top:120px;
+                  margin-top:50px;
               }
               .pb-100{
               padding-bottom: 100px;
@@ -383,6 +383,9 @@ function truncateText($text, $charLimit = 180) {
               }
               .btn.btn-primary:hover{
                 background: #000;
+              }
+              .containerssss{
+                padding: 20px;
               }
 
               /* Responsive Layout */
@@ -398,12 +401,16 @@ function truncateText($text, $charLimit = 180) {
         grid-template-columns: 100%;
     }
     .mt-2222 {
-    margin-top: 75px;
+    margin-top: 30px;
+}
+.containerssss{
+padding: 1px;
 }
 }
+
             </style>
 <section>
-<div class="container pb-100">
+<div class=" pb-100">
 
 
 <div class="teamWrapper">
