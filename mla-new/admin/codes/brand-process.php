@@ -33,10 +33,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = $_POST['title'];
     $url = $_POST['url'];
     $description = $_POST['description'];
-    $status = $_POST['status']; // Retrieve status from the form
+    $longDescription = $_POST['longDescription'];
+    $status = $_POST['status'];
 
-    // Handle file upload
-    if (!empty($_FILES['logo'])) {
+    // Handle file uploads
+    $logoPath = '';
+    $featuredImagePath = '';
+    $descriptionImagePath = '';
+
+    // Upload logo if provided
+    if (!empty($_FILES['logo']['name'])) {
         $logoPath = uploadFile($_FILES['logo']);
         if ($logoPath === false) {
             // File upload failed
@@ -48,12 +54,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo json_encode($response);
             exit; // Stop further execution
         }
-    } else {
-        // Logo file was not uploaded
-        $logoPath = ''; // Set empty path
     }
-        // Check if a product with the same URL already exists
-     
+
+    // Upload featured image if provided
+    if (!empty($_FILES['featuredImage']['name'])) {
+        $featuredImagePath = uploadFile($_FILES['featuredImage']);
+        if ($featuredImagePath === false) {
+            // File upload failed
+            $response = array(
+                'success' => false,
+                'message' => 'Error uploading featured image file.'
+            );
+            header('Content-Type: application/json');
+            echo json_encode($response);
+            exit; // Stop further execution
+        }
+    }
+
+    // Upload description image if provided
+    if (!empty($_FILES['descriptionImage']['name'])) {
+        $descriptionImagePath = uploadFile($_FILES['descriptionImage']);
+        if ($descriptionImagePath === false) {
+            // File upload failed
+            $response = array(
+                'success' => false,
+                'message' => 'Error uploading description image file.'
+            );
+            header('Content-Type: application/json');
+            echo json_encode($response);
+            exit; // Stop further execution
+        }
+    }
 
     // Check if a brand with the same name or URL already exists
     $checkSql = "SELECT COUNT(*) AS total FROM brand WHERE name = '$title' OR url = '$url'";
@@ -72,9 +103,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit; // Stop further execution
     }
 
-
     // Prepare and execute the SQL statement to insert data into the brand table
-    $sql = "INSERT INTO brand (name, url, description, logo, status, created_at, updated_at) VALUES ('$title', '$url', '$description', '$logoPath', '$status', NOW(), NOW())";
+    echo $sql = "INSERT INTO brand (name, url, description, longDescription, logo, featuredImage, descriptionImage, status, created_at, updated_at) 
+            VALUES ('$title', '$url', '$description', '$longDescription', '$logoPath', '$featuredImagePath', '$descriptionImagePath', '$status', NOW(), NOW())";
 
     if ($db->query($sql) === TRUE) {
         // If insertion is successful, return success message
