@@ -62,15 +62,12 @@ include('head.php');
       
       if ($brandurl) {
           // Query to get the image URL and description based on the brand URL
-          $sql = "SELECT p.title, p.url, b.featuredImage, b.description
-                  FROM products AS p
-                  INNER JOIN brand AS b ON b.id = p.brand
-                  WHERE b.url = '$brandurl'";
+          $sql = "SELECT * FROM brand WHERE url = '$brandurl'";
           $result = mysqli_query($db, $sql);
       
           $description = '';
-          $imageUrl = 'https://cdn.pixabay.com/photo/2023/06/03/17/15/ai-generated-8038116_1280.jpg'; // Default image
-      
+        //   $imageUrl = 'https://cdn.pixabay.com/photo/2023/06/03/17/15/ai-generated-8038116_1280.jpg'; // Default image
+      $imageUrl = '';
           if ($result) {
               if ($row = mysqli_fetch_assoc($result)) {
                   $description = $row['description'];
@@ -85,73 +82,81 @@ include('head.php');
 
     <style>
         .ribbon-box {
-            position: relative;
-            background: #eb8233;
+                background-size: contain;
+            background-image: linear-gradient(45deg, #ffb882, transparent), url(<?php echo $imageUrl?>);
+    position: relative;
             
-            padding: 40px;
+            /*padding: 40px;*/
             
             overflow: hidden;
         }
 
-        .ribbon-background {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            background-color:#eb8233;
-            width: 83%;
-            height: 100px;
-            z-index: 1;
-            border-radius: 10px;
-        }
+   
 
-        /* Additional ribbon background for the text section */
-        .ribbon-background.text-ribbon {
-            width: 120%; /* Extend the ribbon width on the text side */
-            right: 0;
-            left: auto;
-            transform: translateX(-10%) translateY(-50%); /* Offset to adjust position */
-        }
+      
 
-        .content {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .content img {
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            border-radius: 8px;
-            padding: 10px;
-            background: #ffffff;
-        }
+       .postion-and::before{
+         content: '';
+    position: absolute;
+    width: 15px;
+    border-radius: 0;
+    top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /*left: -44px;*/
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    /*transform: rotate(9deg);*/
+    height: 100%;
+    z-index: 10000;
+    background: #fd8428;
+       }
 
         .text-content {
-            color: white;
+            margin: auto;
+    width: 87%;
+            color: #000;
             padding: 20px;
             position: relative;
-            background: #eb8233;
+            /*background: #eb8233;*/
         }
+           .postion-and img{
+               width:100%;
+               position:relative;
+               max-height:100vh;
+           }
+           .postion-and::after{
+                content: '';
+    position: absolute;
+    /*width: 97px;*/
+    border-radius: 0;
+    bottom:0;
+    
+    left: 0;
+    right:0;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    /*transform: rotate(9deg);*/
+    width:100%;
+    height:15px;
+    z-index: 10000;
+    background: #fd8428;
+           }
         .postion-and{
-            position: absolute;
-    right: 4%;
-    top: 9%;
+            max-height:100%;
+            /*overflow:hidden;*/
+    /*border: 6px solid #fff;*/
     z-index: 1;
-    height: 20rem;
-    border-radius: 8px;
+    position:relative;
+ 
         }
         .postion-block{
             position: relative;
         }
 
         @media (max-width: 768px) {
-            .content img {
-                max-width: 50%;
-            }
+          .postion-and::before,
+          .postion-and::after
+          {
+              display:none;
+          }
 
             .postion-and {
                 position: static;
@@ -160,28 +165,42 @@ include('head.php');
                 max-width: 100%;
             }
         }
+        
+        .Descriptionnew ul li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #fc8328;
+    margin-right: 8px;
+}
     </style>
-<div class=" postion-block" style="background-color:#f3ebeb;;padding:60px 0">
-<img   class="postion-and" src="admin/codes/<?php echo htmlspecialchars($imageUrl, ENT_QUOTES, 'UTF-8'); ?>" alt="Image">
+<div class=" postion-block" style="background-color:#f3ebeb;">
+   
+
     <div class="ribbon-box" >
         <!-- Image ribbon -->
-        <div class="container">
+        <div class="containersr">
         <!-- Text ribbon with extended width -->
        
-        <div class="row content">
+        <div class="row content align-items-center">
            
-            <div class="col-md-6 text-content p-0">
-                <h2 class="title">
+            <div class="col-md-6  p-0 zoom-in-up">
+                <div class="text-content">
+                <h1>
                
                                                
                     <?php echo isset($_GET['url']) ? strtoupper(htmlspecialchars($_GET['url'], ENT_QUOTES, 'UTF-8')) : "Heading Text"; ?>
-                </h2>
-                <p>
-                    <?php echo isset($description) ? htmlspecialchars($description, ENT_QUOTES, 'UTF-8') : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."; ?>
-                </p>
+                </h1>
+                <div class="Descriptionnew">
+                    <?php echo isset($description) ? $description : ""; ?>
+                
+                </div>
             </div>
-            <div class="col-md-6 p-0 ">
-               
+             </div>
+            <div class="col-md-6 p-0">
+                <div class="postion-and ">
+        <img src="admin/codes/<?php echo htmlspecialchars($imageUrl, ENT_QUOTES, 'UTF-8'); ?>" alt="Image">
+    </div>
             </div>
         </div>
     </div>
@@ -236,17 +255,55 @@ if ($brandurl) {
     .border-radius{
         border-radius: 20px;
     }
+    
+     @keyframes zoomInUp {
+				0% {
+					transform: translateY(100%);
+					opacity: 0;
+				}
+
+				
+
+				100% {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
+
+			.zoom-in-up {
+                animation: zoomInUp 2s ease forwards;
+            }
+            
+            .border-radiust{
+               box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+               border-radius:15px;
+            }
+            .Description ul li{
+                display:flex;
+            }
+            .Description ul li::before{
+                 content: '\f00c'; /* Unicode for the Font Awesome check icon */
+    font-family: 'Font Awesome 5 Free'; /* Ensure you're using the correct Font Awesome family */
+    font-weight: 900; /* Font weight required for Font Awesome icons */
+    color: #fc8328; /* Optional: Change the color to green or any other color */
+    margin-right: 8px; /* Optional: Add some space between the icon and the text */
+            }
+            .Description ul{
+                   margin-left: 2px;
+            }
 </style>
-<section class="pt-100 pb-100">
+<section class="pt-100">
     <div class="container">
         <div class="row align-center">
-            <div class="col-md-6">
+           
+            <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <!-- Output image URL with a fallback for safety -->
+                <img class="border-radiust" src="admin/codes/<?php echo isset($descriptionImage) ? htmlspecialchars($descriptionImage, ENT_QUOTES, 'UTF-8') : ""; ?>" alt="Description Image">
+            </div>
+             <div class="col-md-6 wow fadeInUp Description" data-wow-delay="0.1s">
                 <!-- Output HTML content directly -->
                 <p><?php echo isset($longDescription) ? $longDescription : ""; ?></p>
-            </div>
-            <div class="col-md-6">
-                <!-- Output image URL with a fallback for safety -->
-                <img class="border-radius" src="admin/codes/<?php echo isset($descriptionImage) ? htmlspecialchars($descriptionImage, ENT_QUOTES, 'UTF-8') : ""; ?>" alt="Description Image">
+                <a class="btn btn-secondary mt-2" href="contactus.php">Know More</a>
             </div>
         </div>
     </div>
@@ -263,13 +320,18 @@ if ($brandurl) {
     border: 1px solid #FF9800;
   
 }
+@media only screen and (max-width:1300px){
+    .text-content{
+        width:91%;
+    }
+}
 .shop-card .dz-media{
     background:#e0e0e0;
 }
             .FM6uVc {
                 margin: auto;
                 position: relative;
-                max-width: 256px;
+                max-width: 100%;
                 padding-bottom: 100%;
             }
 
@@ -318,9 +380,11 @@ if ($brandurl) {
 <section class="content-inner-1">
     <div class="container">
         <!-- Big Heading -->
-        <div class="row justify-content-center mb-5">
+        <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <h2 class="display-4 fw-bold">Our Products</h2>
+                <div class="section-head style-1">
+                <h2 class="title">Our Products</h2>
+                </div>
             </div>
         </div>
 

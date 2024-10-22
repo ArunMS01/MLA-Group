@@ -45,7 +45,7 @@ if(isset($_POST['process']))
 
 	//echo  $message;
 	
-	mail( "sales@mlagroup.com", "Inquiry Through The Website www.mlagroup.com",	$message,$headers);
+	mail( "md@mlagroup.com", "Inquiry Through The Website www.mlagroup.com",	$message,$headers);
 	header( "Location: thanks.html" );
 	}
 }
@@ -486,7 +486,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						            <div class="b-google-map__info-window-address-title f-google-map__info-window-address-title">
 									Recruitments
 						            </div>
-						            <div class="desc"> <a onclick="gtag('event', 'click', { event_category: 'Phone Number', event_action: 'Clicked', event_label: 'ContactusPagePhone2'})" href="mailto:hr@mlagroup.com"><span style="color:#D34231">hr@mlagroup.com</span></a></div>
+						            <div class="desc"> <a onclick="gtag('event', 'click', { event_category: 'Phone Number', event_action: 'Clicked', event_label: 'ContactusPagePhone2'})" href="mailto:mayur@mlagroup.com"><span style="color:#D34231">mayur@mlagroup.com</span></a></div>
 						        </div>
 						    </li>
 						    <!-- <li class="col-xs-12">

@@ -1,83 +1,3 @@
-<?php include('header.php');?>
-
-<style>
-    .py-new {
-        padding-top: 1rem !important;
-        padding-bottom: 2rem !important;
-    }
-
-    .col-or {
-        color: #FE8F34 !important;
-    }
-
-    /* .breadcrumb-row ul li {
-        padding: 0;
-        margin-right: 3px;
-        display: inline-block;
-        font-size: 16px;
-        font-weight: 400;
-        text-transform: capitalize;
-        color: !important;
-    } */
-
-
-    .form-label {
-        font-size: 16px;
-        font-weight: 700;
-        color: var(--title);
-        margin-bottom: 0px !important;
-        background: transparent;
-        border-color: #D7D7D7;
-        font-family: var(--font-family-title);
-    }
-</style>
-<style>
-                                        .dz-tabs .nav-tabs .nav-link.active {
-                                            border-color: #FE8F34 !important;
-                                            color: var(--secondary);
-                                        }
-
-
-
-
-                                        .check-tbl tbody tr td {
-                                            padding: 0px !important;
-                                            font-weight: 500;
-                                            font-size: 19px;
-                                            color: var(--secondary);
-                                            border: none;
-                                            font-family: var(--font-family-title);
-                                        }
-
-                                        .bx-new .feature-detail li i {
-
-
-                                            border: 1px solid #FE8F34 !important;
-
-                                            color: #FE8F34 !important;
-                                        }
-
-
-                                        .bx-new .feature-detail li i {
-                                            font-size: 20px;
-                                            height: 32px;
-                                            display: flex;
-                                            align-items: center;
-                                            justify-content: center;
-                                            border: 1px solid var(--primary);
-                                            border-radius: 50%;
-                                            width: 32px;
-                                            min-width: 32px;
-                                            margin-right: 10px;
-                                            color: var(--primary);
-                                        }
-
-                                        .bx-new {
-                                            padding-left: 0px !important;
-
-                                            padding-right: 0px !important;
-                                        }
-                                    </style>
 
 <?php
 // Assuming you have a database connection established already
@@ -155,6 +75,109 @@ if(isset($_GET['url'])) {
 
 // Use the retrieved product data and gallery images as needed
 ?>
+<?php
+$title = $product_data['meta_title'];
+$desc = $product_data['meta_description'];
+$markup = $product_data['additional_code'];
+$urllink = $product_data['url'];
+include('header.php');
+?>
+
+<style>
+
+    .py-new {
+        padding-top: 1rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .col-or {
+        color: #FE8F34 !important;
+    }
+
+    /* .breadcrumb-row ul li {
+        padding: 0;
+        margin-right: 3px;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: !important;
+    } */
+
+
+    .form-label {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--title);
+        margin-bottom: 0px !important;
+        background: transparent;
+        border-color: #D7D7D7;
+        font-family: var(--font-family-title);
+    }
+    .breadcrumb-item + .breadcrumb-item{
+        padding-left:0;
+    }
+    
+</style>
+<style>
+                                        .dz-tabs .nav-tabs .nav-link.active {
+                                            border-color: #FE8F34 !important;
+                                            color: var(--secondary);
+                                        }
+
+
+
+
+                                        .check-tbl tbody tr td {
+                                            padding: 0px !important;
+                                            font-weight: 500;
+                                            font-size: 19px;
+                                            color: var(--secondary);
+                                            border: none;
+                                            font-family: var(--font-family-title);
+                                        }
+
+                                        .bx-new .feature-detail li i {
+
+
+                                            border: 1px solid #FE8F34 !important;
+
+                                            color: #FE8F34 !important;
+                                        }
+
+
+                                        .bx-new .feature-detail li i {
+                                            font-size: 20px;
+                                            height: 32px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            border: 1px solid var(--primary);
+                                            border-radius: 50%;
+                                            width: 32px;
+                                            min-width: 32px;
+                                            margin-right: 10px;
+                                            color: var(--primary);
+                                        }
+
+                                        .bx-new {
+                                            padding-left: 0px !important;
+
+                                            padding-right: 0px !important;
+                                        }
+                                        
+                                        .mygalleryslider{
+                                               position: relative !important;
+                                                bottom: 0 !important;
+                                                display:none;
+                                        }
+                                        
+                                      .mygalleryslider .swiper-wrapper{
+                                          justify-content:center;
+                                      }
+                                     
+                                    </style>
+
 
 	<!-- Header End -->
 
@@ -167,6 +190,13 @@ if(isset($_GET['url'])) {
         <ul class="breadcrumb mb-0">
             <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="/mla-new">Home</a> </li>
             <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="our-products.php">Products</a> </li>
+            <?php
+            if(isset($getbrand['name'])){
+            ?>
+             <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="brands.php?url=<?php echo $getbrand['url']?>"><?php echo $getbrand['name'] ? $getbrand['name'] : ''; ?></a> </li>
+             <?php
+            }
+             ?>
             <li class="breadcrumb-item "><?php echo $product_data['title']; ?></li>
         </ul>
     </nav>
@@ -204,7 +234,7 @@ if(isset($_GET['url'])) {
                     <?php endforeach; ?>
                 </div>
             </div>
-            <div class="swiper product-gallery-swiper thumb-swiper-lg">
+            <div class="swiper product-gallery-swiper thumb-swiper-lg mygalleryslider">
                 <div class="swiper-wrapper">
                     <!-- Display main image in thumbnail slider -->
                     <div class="swiper-slide">
@@ -231,45 +261,41 @@ if(isset($_GET['url'])) {
     <div class="dz-content-footer">
         <div class="dz-content-start">
             <!-- <span class="badge bg-purple mb-2">SALE 20% Off</span> -->
-            <h4 class="title" style="line-height: 1;"><?php echo $product_data['title']; ?></h4>
+            <h1 class="title" style="line-height: 1;"><?php echo $product_data['title']; ?></h1>
         </div>
     </div>
+    
+    <style>
+    .bvngt li{
+        display:flex;
+        padding:4px 0;
+    }
+        .bvngt ul li::before{
+           content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #fc8328;
+    width: 20px;
+    border: 1px solid;
+    margin-right: 8px;
+    height: 20px;
+    justify-content: center;
+    display: inline-flex;
+    /* display: flex; */
+    align-items: center;
+    border-radius: 50%;
+    padding: 14px;
+    margin-bottom: 11px;
+        }
+    </style>
   
-    <h5>Applications</h5>
     <p class="para-text">
-        <div class="detail-bx bx-new">
+        <div class="detail-bx bx-new bvngt">
         <?php
 // Extracted from the database
 $application_data = $product_data['applications'];
 
-// Create a DOMDocument object
-$doc = new DOMDocument();
-// Load the HTML content
-$doc->loadHTML($application_data);
-
-// Get all <p> elements
-$paragraphs = $doc->getElementsByTagName('p');
-
-// Output the <p> elements as they are
-foreach ($paragraphs as $paragraph) {
-    echo '<p>' . $doc->saveHTML($paragraph) . '</p>';
-}
-
-// Get all <li> elements
-$listItems = $doc->getElementsByTagName('li');
-
-// Output the list items with icon prepended
-echo '<ul class="feature-detail">';
-foreach ($listItems as $item) {
-    // Check if the <li> element has non-empty text content
-    if (trim($item->textContent) !== '') {
-        // Get the text content of the <li> element
-        $textContent = trim($item->textContent);
-        // Output <li> element with icon prepended to text content
-        echo '<li><i class="icon feather icon-check"></i> ' . $textContent . '</li>';
-    }
-}
-echo '</ul>';
+echo $application_data;
 ?>
 
 
@@ -393,7 +419,9 @@ echo '</ul>';
                             }
 
                             .brimg{
-                                height: 5rem;
+                                /*height: 5rem;*/
+                                margin:auto auto 4px auto;
+                                /*margin-bottom:4px;*/
                                 object-fit: contain;
                             }
                         </style>
@@ -405,7 +433,7 @@ echo '</ul>';
                             ?>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <img class="brimg" style="display: block; margin: auto;"
+                                    <img class="brimg" style="display: block;"
                                         src="admin/codes/<?php echo $getbrand['logo']?>"
                                         class="mt-4 mb-4 margin-top mix-blend-mode">
 
@@ -492,17 +520,24 @@ echo '</ul>';
     <div class="container">
         <div class="product-description">
             <div class="dz-tabs">
-                <!-- <ul class="nav nav-tabs center" id="myTab1" role="tablist">
+               <ul class="nav nav-tabs center" id="myTab1" role="tablist">
                     
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="profile-tab" data-bs-toggle="tab"
                             data-bs-target="#profile-tab-pane" type="button" role="tab"
                             aria-controls="profile-tab-pane" aria-selected="false">Description</button>
                     </li>
-                </ul> -->
+                    
+                      
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tabs" data-bs-toggle="tab"
+                            data-bs-target="#profile-tab-panes" type="button" role="tab"
+                            aria-controls="profile-tab-panes" aria-selected="false">Specifications</button>
+                    </li>
+                </ul> 
                 <div class="tab-content" id="myTabContent">
 
-                    <h3 class="title mb-4 descheading">Description</h3>
+                    <!--<h3 class="title mb-4 descheading">Description</h3>-->
 
 
                     <style>
@@ -518,9 +553,31 @@ echo '</ul>';
                         .desc-new .para-text {
                             margin-bottom: 0px;
                         }
+                         .desc-newul ul li{
+                             display:flex;
+                             margin-bottom:3px;
+                         }
+                        .desc-newul ul li::before{
+                                content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #fc8328;
+    margin-right: 8px;
+                        }
+                        
+                        .desc-newul a{
+                            color:blue;
+                        }
+                        
+                      .desc-newul td,
+                      .desc-newul td {
+                          padding:5px 10px;
+    border: 1px solid #000; /* Adjust the border color and width as needed */
+}
+
                     </style>
 
-                    <div class="tab-pane fade desc-new show active" id="profile-tab-pane" role="tabpanel"
+                    <div class="tab-pane fade desc-new mt-4 desc-newul show active" id="profile-tab-pane" role="tabpanel"
                         aria-labelledby="profile-tab" tabindex="0">
                         <div class="detail-bx mt-40">
                     <?php echo $product_data['long_description'];?>
@@ -535,6 +592,23 @@ echo '</ul>';
 
 
                     </div>
+                    
+                     <div class="tab-pane fade desc-new desc-newul mt-4" id="profile-tab-panes" role="tabpanel"
+                        aria-labelledby="profile-tabs" tabindex="0">
+                        <div class="detail-bx mt-40">
+                    <?php echo $product_data['specs'];?>
+                        </div>
+
+                       
+
+
+
+
+
+
+
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -561,13 +635,17 @@ foreach ($related_product_ids as $product_id) {
 }
 
 ?>
-
+ <?php
+            if(!empty($related_products)){
+            ?>
 <section class="content-inner-1 overlay-white-middle overflow-hidden padding-top-0">
     <div class="container">
         <div class="">
+           
             <div class="">
                 <h2 class="title mb-4">Related products</h2>
             </div>
+           
         </div>
         <div class="widget widget_categories style-1">
             <ul class="row">
@@ -603,7 +681,9 @@ foreach ($related_product_ids as $product_id) {
 </section>
 
 
-
+ <?php
+            }
+            ?>
 
 <style>
     .get-in-touch {
@@ -875,17 +955,21 @@ mysqli_close($db);
 ?>
            
 <!--Recommend Section Start-->
-<section class="content-inner-1 bg-light">
+<section class="content-inner-1 bg-light" style="display:none">
 <div class="container">
         <h3 class="title text-center mb-4">RANGE OF PRODUCTS</h3>
         <div class="site-filters clearfix d-flex align-items-center justify-content-center">
             <ul class="filters" data-bs-toggle="buttons">
-                <?php foreach ($brands as $brand): ?>
+                <?php
+                $i=1;
+                foreach ($brands as $brand): ?>
                     <li class="btn btth" data-brand="brand-<?php echo $brand['id']; ?>">
                         <input type="radio" name="brand">
-                        <a href="javascript:void(0);"><?php echo htmlspecialchars($brand['name']); ?></a>
+                        <a href="#brand-<?php echo $brand['id']; ?>"><?php echo htmlspecialchars($brand['name']); ?></a>
                     </li>
-                <?php endforeach; ?>
+                <?php
+                $i++;
+                endforeach; ?>
             </ul>
         </div>
 
@@ -1027,11 +1111,21 @@ mysqli_close($db);
 
 
 <style>
+/*html,body{*/
+/*    overflow-x:hidden;*/
+/*}*/
 .padding-top-0 {
     padding-top: 0;
 }
 
 @media only screen and (max-width: 575px) {
+     .get-in-touch .dz-title{
+         text-align:center;
+                                         
+                                      }
+    .brimg{
+        display:none !important;
+    }
     .wlist-80 {
         width: 95%;
         margin: auto;
@@ -1058,9 +1152,15 @@ mysqli_close($db);
 
     .filters {
         flex-wrap: wrap;
+        justify-content:center;
     }
 
-    .filters li {}
+    .filters li {
+        width: 45%;
+    }
+    .btth{
+        border-right:0px !important;
+    }
 
     .get-in-touch {
         padding: 20px 0px !important;

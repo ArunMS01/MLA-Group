@@ -41,6 +41,54 @@
             border-right: 1px solid #f2aa75;
             right: -22px;
         }
+ .sub-menu li {
+    position: relative;
+    overflow: hidden; /* Ensure the pseudo-element is contained within the list item */
+}
+
+.sub-menu li a.cpappp {
+    display: block;
+    padding:15px !important;
+    position: relative;
+    border-bottom:1px solid #f58a3a;
+    background-color: white;
+    color: black; /* Default text color */
+    transition: color 0.4 ease;
+    z-index: 1;
+}
+
+.sub-menu li a.cpappp:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #f58a3a;
+    transition: bottom  0.4 ease;
+    z-index: 0;
+}
+
+.sub-menu li:hover a.cpappp:before {
+    bottom: 0;
+}
+
+.sub-menu li:hover a.cpappp {
+    color: white; /* Change text color on hover */
+}
+
+.sub-menu li a.cpappp span {
+    position: relative;
+    z-index: 2; /* Ensure the span text is above the background */
+    color: inherit; /* Inherit color from the parent */
+}
+
+.sub-menu li:hover a.cpappp span {
+    color: white; /* Ensure span text remains white on hover */
+}
+
+
+
             </style>
         <header class="site-header mo-left header border-bottom">
             <!-- Main Header -->
@@ -180,12 +228,47 @@
 								<ul class="sub-menu">
                                     <?php
                                     require('admin/codes/db.php');
-                                    $sql = "SELECT * FROM `brand`";
+                                    $sql = "SELECT id, name, logo,description,url FROM brand ORDER BY seq ASC";
                                     $resutl = mysqli_query($db, $sql);
                                     if($resutl){
                                         while($row = mysqli_fetch_assoc($resutl)){
                                     ?>
-									<li><a href="brands.php?url=<?php echo $row['url']?>"><?php echo $row['name']?></a></li>
+									<li><a class="cpappp" href="brands.php?url=<?php echo $row['url']?>">
+									    
+				<?php
+			
+if ($row['name'] == 'Uniflow: Metallic Stearates') {
+   
+    echo "<span style='text-transform: uppercase;'>UNIFLOW: METALLIC STEARATES</span>";
+}
+if ($row['name'] == 'Unicell: Foaming Agents') {
+    echo "<span style='text-transform: uppercase;'>UNICELL: FOAMING AGENTS</span>";
+}
+if ($row['name'] == 'Unistab: PVC Heat Stabilizers') {
+    echo "<span style='text-transform: uppercase;'>UNISTAB: PVC HEAT STABILIZERS</span>";
+}
+if ($row['name'] == 'Zincosil:  Active Zinc Oxide') {
+    echo "<span style='text-transform: uppercase;'>ZINCOSIL: ACTIVE ZINC OXIDE</span>";
+}
+if ($row['name'] == 'Tulsi: Micronized Mineral Fillers / Extenders') {
+    echo "<span style='text-transform: uppercase;'>TULSI: MICRONIZED MINERAL FILLERS / EXTENDERS</span>";
+}
+if ($row['name'] == 'Unilub: Plastic Lubricants') {
+    echo "<span style='text-transform: uppercase;'>UNILUB: PLASTIC LUBRICANTS</span>";
+}
+if ($row['name'] == 'Unisil: PPT Silica and Silicates') {
+    echo "<span style='text-transform: uppercase;'>UNISIL: PPT SILICA AND SILICATES</span>";
+}
+if ($row['name'] == 'Pharma-Excipients') {
+    echo "<span style='text-transform: uppercase;'>PHARMA-EXCIPIENTS</span>";
+}
+?>
+
+
+
+
+									    
+									</a></li>
 
                                     <?php
                                         }

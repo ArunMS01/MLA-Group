@@ -548,7 +548,7 @@ border: 1px solid #fff;
                   </div>
                   <div class="col-md-3 col-sm-6">
                     <div class="counter-product wow fadeInRight" data-wow-delay="0.6s">
-                    <span> <span class="counter-value">10000 </span> <span class="pluasymbolcounter">+</span> </span>
+                    <span> <span class="counter-value">120000 </span> <span class="pluasymbolcounter">+</span> </span>
                       <h3>Manufacturing Capacity in MT</h3>
                       <div class="counter-icon"><i class="fa fa-check"></i></div>
                     </div>
@@ -1278,19 +1278,19 @@ border: 1px solid #fff;
                       </div>
                     </a>
                   </div>
-                  <div class="timeline hideerm">
-                    <a href="#" class="timeline-content">
-                      <span class="timeline-year">2009</span>
-                      <div class="timeline-icon">
-                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                      </div>
-                      <div class="content">
+                  <!--<div class="timeline hideerm">-->
+                  <!--  <a href="#" class="timeline-content">-->
+                  <!--    <span class="timeline-year">2009</span>-->
+                  <!--    <div class="timeline-icon">-->
+                  <!--      <i class="fa fa-arrow-down" aria-hidden="true"></i>-->
+                  <!--    </div>-->
+                  <!--    <div class="content">-->
 
-                        <p class="description">
-                          Manufacturing of Zinc Oxide American process and Arc furnace process started </p>
-                      </div>
-                    </a>
-                  </div>
+                  <!--      <p class="description">-->
+                  <!--        Manufacturing of Zinc Oxide American process and Arc furnace process started </p>-->
+                  <!--    </div>-->
+                  <!--  </a>-->
+                  <!--</div>-->
                   <div class="timeline hideerm">
                     <a href="#" class="timeline-content">
                       <span class="timeline-year">2009</span>
