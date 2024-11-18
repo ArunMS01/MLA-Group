@@ -18,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $status = $_POST['status'];
     $longDescription = $_POST['longDescription'];
     $applications = $_POST['applications'];
+    $specs = $_POST['specs'];
 
     // Prepare JSON data for related products
     // Check if 'related_products' field is set and not empty
@@ -88,17 +89,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Prepare SQL statement for updating product details
     $updateProductSql = "UPDATE products SET 
-                            title = '$title',
-                            url = '$url',
-                            meta_title = '$metaTitle',
-                            meta_description = '$metaDescription',
-                            additional_code = '$additionalCode',
-                            brand = '$selectBrand',
-                            status = '$status',
-                            long_description = '$longDescription',
-                            applications = '$applications',
-                            related_products = '$relatedProducts'
-                        WHERE id = '$productId'";
+                        title = '$title',
+                        url = '$url',
+                        meta_title = '$metaTitle',
+                        meta_description = '$metaDescription',
+                        additional_code = '$additionalCode',
+                        brand = '$selectBrand',
+                        status = '$status',
+                        long_description = '$longDescription',
+                        applications = '$applications',
+                        related_products = '$relatedProducts',
+                        specs = '$specs'
+                    WHERE id = '$productId'";
+
 
      // Execute the SQL query to update product details
      // Execute the SQL query to update product details

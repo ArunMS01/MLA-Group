@@ -6,6 +6,6 @@ if(isset($_POST['deletepost'])){
     $status=mysqli_query($conn,$sql);
     session_start();
     $_SESSION['status'] = "Deleted Successfully";
-    header('Location: all-blog-post.php');
+    header('Location: all-posts.php');
   }
 ?>

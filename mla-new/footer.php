@@ -109,6 +109,14 @@
                                         </div>
                                     </a>
                                 </div>
+                                
+                                  <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
+                                    <a href="javascript:void(0);" class="companies-wrapper">
+                                        <div class="companies-media">
+                                            <img src="images/cphlindia.jpeg" alt="" class="logo-foot">
+                                        </div>
+                                    </a>
+                                </div>
 
                             </div>
                         </div>

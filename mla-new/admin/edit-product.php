@@ -305,11 +305,12 @@ include('inc/header.php') ?>
                 $additionalCode = $row['additional_code'];
                 $mainImage = $row['main_image'];
                 $relatedProducts = $row['related_products'];
-                echo     $relatedProducts = $row['related_products'];
+            $relatedProducts = $row['related_products'];
                 $selectedBrandId = $row['brand'];
                 $status = $row['status'];
                 $longDescription = $row['long_description'];
                 $applications = $row['applications'];
+                $specs = $row['specs']
         ?>
                 <!-- partial -->
                 <div class="main-panel">
@@ -715,6 +716,21 @@ if ($result->num_rows > 0) {
                                 </div>
                             </div>
 
+
+ <div class="col-md-12 grid-margin stretch-card">
+                                <!-- Long Description and Applications -->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputLongDescription">Specifications</label>
+                                            <textarea class="form-control" id="editor1specs" placeholder="Specifications"><?php echo isset($specs) ? $specs : ''; ?></textarea>
+                                            <div id="longDescriptionErrorspecs" class="error-message"></div> <!-- Error div -->
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+
+                            </div>
                             <!-- Bottom column -->
                             <div class="col-md-12 grid-margin stretch-card">
                                 <!-- Long Description and Applications -->
@@ -755,6 +771,8 @@ if ($result->num_rows > 0) {
                 //   ClassicEditor.create(document.querySelector('#editor1'));
                 CKEDITOR.replace('editor1');
                 CKEDITOR.replace('editor2');
+                CKEDITOR.replace('editor1specs');
+                
                 // ClassicEditor.create(document.querySelector('#editor2'));
                 function generateUrlAndMetaTitle() {
                     // Get the course name input field and its value
@@ -942,6 +960,8 @@ if ($result->num_rows > 0) {
                     formData.append('status', document.getElementById('exampleFormControlSelect2').value);
                     formData.append('longDescription', CKEDITOR.instances['editor1'].getData());
                     formData.append('applications', CKEDITOR.instances['editor2'].getData());
+                    formData.append('specs', CKEDITOR.instances['editor1specs'].getData());
+                    
                     // Event listener for the checkboxes to update selected values
                     // Collect selected product values
                     var selectedValues = [];

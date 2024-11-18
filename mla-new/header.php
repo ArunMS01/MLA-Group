@@ -18,8 +18,16 @@
 	 <link rel="icon" type="image/x-icon" href="https://maidenstride.in/mla-new/images/logo-MLA.png"> 
 
 	<!-- PAGE TITLE HERE -->
-	<title>MLA</title>
-
+	<title><?php echo $title? $title: "MLA Group";?></title>
+	<meta name="description" content="<?php echo $desc? $desc: "MLA Group";?>"/>
+    <?php
+    if(isset($urllink)){
+    ?>
+    <link rel="canonical" href="https://www.mlagroup.com/<?php echo $urllink.".html"?>" />
+    
+    <?php
+    }
+    ?>
 	<!-- MOBILE SPECIFIC -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -60,6 +68,10 @@
 
 
 	<style>
+	  .header-nav .nav > li .mega-menu, .header-nav .nav > li .sub-menu{
+	    width:272px !important;
+	    padding:15px !important;
+	}
 		/* .inquiry-modal  {
 			display: none !important;
 		} */
@@ -73,9 +85,44 @@
 		    }
 		}
 	</style>
+	
+	    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178404512-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-178404512-1');
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EPE0XJ0VB4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EPE0XJ0VB4');
+</script>
+    
+    	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NWVPLHV');</script>
+	<!-- End Google Tag Manager -->
+<?php
+if(isset($markup) && $markup != 'test' && $markup != 'code'){
+    echo $markup;
+}
+?>
 </head>
 
 <body>
+    	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWVPLHV"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<div class="page-wraper">
 		<!-- <div id="loading-area" class="preloader-wrapper-1">
 		<div>

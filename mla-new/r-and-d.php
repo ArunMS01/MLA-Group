@@ -64,7 +64,7 @@ include('head.php');
                     </div>
                     <div class="col-lg-6 m-b30 aos-item wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="sliderrev">
-                            <img class="w-100" src="images/reaerch.jpeg">
+                            <img class="w-100" src="images/randd.jpeg">
                             <!--<div class="px-lg-4">-->
 
                             <!--    <div class="swiper swiper-five swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">-->
@@ -266,9 +266,9 @@ include('head.php');
         margin-left: 0px !important;
         text-align: justify !important;
     }
-         @media only screen and (max-width:1299px){
+         @media only screen and (max-width:1500px){
              .about-style1 .section-head .title{
-                 /*font-size:35px !important;*/
+                 font-size:35px !important;
              }
          }
             

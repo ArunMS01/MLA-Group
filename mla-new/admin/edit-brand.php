@@ -475,6 +475,7 @@ include('inc/header.php') ?>
 
 
                 CKEDITOR.replace('editor2');
+                  CKEDITOR.replace('editor1');
 
                 function generateUrlAndMetaTitle() {
                     // Get the course name input field and its value
@@ -596,7 +597,7 @@ include('inc/header.php') ?>
                         formData.append('title', titleInput.value);
                         formData.append('brand_id', document.getElementById('brand_id').value);
                         formData.append('url', urlInput.value);
-                        formData.append('description', descriptionInput.value);
+                        formData.append('description', CKEDITOR.instances['editor1'].getData());
                         formData.append('status', statusInput.value);
                         formData.append('longDescription', CKEDITOR.instances['editor2'].getData());
 

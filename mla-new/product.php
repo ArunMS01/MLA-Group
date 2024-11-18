@@ -1,84 +1,3 @@
-<?php include('header.php');?>
-
-<style>
-    .py-new {
-        padding-top: 1rem !important;
-        padding-bottom: 2rem !important;
-    }
-
-    .col-or {
-        color: #FE8F34 !important;
-    }
-
-    /* .breadcrumb-row ul li {
-        padding: 0;
-        margin-right: 3px;
-        display: inline-block;
-        font-size: 16px;
-        font-weight: 400;
-        text-transform: capitalize;
-        color: !important;
-    } */
-
-
-    .form-label {
-        font-size: 16px;
-        font-weight: 700;
-        color: var(--title);
-        margin-bottom: 0px !important;
-        background: transparent;
-        border-color: #D7D7D7;
-        font-family: var(--font-family-title);
-    }
-</style>
-<style>
-                                        .dz-tabs .nav-tabs .nav-link.active {
-                                            border-color: #FE8F34 !important;
-                                            color: var(--secondary);
-                                        }
-
-
-
-
-                                        .check-tbl tbody tr td {
-                                            padding: 0px !important;
-                                            font-weight: 500;
-                                            font-size: 19px;
-                                            color: var(--secondary);
-                                            border: none;
-                                            font-family: var(--font-family-title);
-                                        }
-
-                                        .bx-new .feature-detail li i {
-
-
-                                            border: 1px solid #FE8F34 !important;
-
-                                            color: #FE8F34 !important;
-                                        }
-
-
-                                        .bx-new .feature-detail li i {
-                                            font-size: 20px;
-                                            height: 32px;
-                                            display: flex;
-                                            align-items: center;
-                                            justify-content: center;
-                                            border: 1px solid var(--primary);
-                                            border-radius: 50%;
-                                            width: 32px;
-                                            min-width: 32px;
-                                            margin-right: 10px;
-                                            color: var(--primary);
-                                        }
-
-                                        .bx-new {
-                                            padding-left: 0px !important;
-
-                                            padding-right: 0px !important;
-                                        }
-                                    </style>
-
 <?php
 // Assuming you have a database connection established already
 include('admin/codes/db.php');
@@ -140,8 +59,9 @@ if(isset($_GET['url'])) {
             $getbrand = query_product_brand($product_id, $db);
             $gallery_images = query_gallery_images($product_id, $db);
         } else {
-            // Product ID doesn't exist, handle the error (e.g., redirect to an error page)
-         
+         header('Location: /404');
+exit; // Always include exit after header to stop further script execution
+
             exit();
         }
     } else {
@@ -155,6 +75,109 @@ if(isset($_GET['url'])) {
 
 // Use the retrieved product data and gallery images as needed
 ?>
+<?php
+$title = $product_data['meta_title'];
+$desc = $product_data['meta_description'];
+$markup = $product_data['additional_code'];
+$urllink = $product_data['url'];
+include('header.php');
+?>
+
+<style>
+
+    .py-new {
+        padding-top: 1rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .col-or {
+        color: #FE8F34 !important;
+    }
+
+    /* .breadcrumb-row ul li {
+        padding: 0;
+        margin-right: 3px;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: !important;
+    } */
+
+
+    .form-label {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--title);
+        margin-bottom: 0px !important;
+        background: transparent;
+        border-color: #D7D7D7;
+        font-family: var(--font-family-title);
+    }
+    .breadcrumb-item + .breadcrumb-item{
+        padding-left:0;
+    }
+    
+</style>
+<style>
+                                        .dz-tabs .nav-tabs .nav-link.active {
+                                            border-color: #FE8F34 !important;
+                                            color: var(--secondary);
+                                        }
+
+
+
+
+                                        .check-tbl tbody tr td {
+                                            padding: 0px !important;
+                                            font-weight: 500;
+                                            font-size: 19px;
+                                            color: var(--secondary);
+                                            border: none;
+                                            font-family: var(--font-family-title);
+                                        }
+
+                                        .bx-new .feature-detail li i {
+
+
+                                            border: 1px solid #FE8F34 !important;
+
+                                            color: #FE8F34 !important;
+                                        }
+
+
+                                        .bx-new .feature-detail li i {
+                                            font-size: 20px;
+                                            height: 32px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            border: 1px solid var(--primary);
+                                            border-radius: 50%;
+                                            width: 32px;
+                                            min-width: 32px;
+                                            margin-right: 10px;
+                                            color: var(--primary);
+                                        }
+
+                                        .bx-new {
+                                            padding-left: 0px !important;
+
+                                            padding-right: 0px !important;
+                                        }
+                                        
+                                        .mygalleryslider{
+                                               position: relative !important;
+                                                bottom: 0 !important;
+                                                display:none;
+                                        }
+                                        
+                                      .mygalleryslider .swiper-wrapper{
+                                          justify-content:center;
+                                      }
+                                     
+                                    </style>
+
 
 	<!-- Header End -->
 
@@ -167,6 +190,13 @@ if(isset($_GET['url'])) {
         <ul class="breadcrumb mb-0">
             <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="/mla-new">Home</a> </li>
             <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="our-products.php">Products</a> </li>
+            <?php
+            if(isset($getbrand['name'])){
+            ?>
+             <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="brands.php?url=<?php echo $getbrand['url']?>"><?php echo $getbrand['name'] ? $getbrand['name'] : ''; ?></a> </li>
+             <?php
+            }
+             ?>
             <li class="breadcrumb-item "><?php echo $product_data['title']; ?></li>
         </ul>
     </nav>
@@ -187,7 +217,7 @@ if(isset($_GET['url'])) {
                                 data-src="./admin/codes/<?php echo $product_data['main_image']; ?>">
                                 <i class="feather icon-maximize dz-maximize top-left"></i>
                             </a>
-                            <img src="./admin/codes/<?php echo $product_data['main_image']; ?>" alt="Main Image">
+                            <img width="400px" height="400px" src="./admin/codes/<?php echo $product_data['main_image']; ?>" alt="Main Image">
                         </div>
                     </div>
                     <!-- Display gallery images -->
@@ -204,7 +234,7 @@ if(isset($_GET['url'])) {
                     <?php endforeach; ?>
                 </div>
             </div>
-            <div class="swiper product-gallery-swiper thumb-swiper-lg">
+            <div class="swiper product-gallery-swiper thumb-swiper-lg mygalleryslider">
                 <div class="swiper-wrapper">
                     <!-- Display main image in thumbnail slider -->
                     <div class="swiper-slide">
@@ -231,45 +261,41 @@ if(isset($_GET['url'])) {
     <div class="dz-content-footer">
         <div class="dz-content-start">
             <!-- <span class="badge bg-purple mb-2">SALE 20% Off</span> -->
-            <h4 class="title" style="line-height: 1;"><?php echo $product_data['title']; ?></h4>
+            <h1 class="title" style="line-height: 1;"><?php echo $product_data['title']; ?></h1>
         </div>
     </div>
+    
+    <style>
+    .bvngt li{
+        display:flex;
+        padding:4px 0;
+    }
+        .bvngt ul li::before{
+           content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #fc8328;
+    width: 20px;
+    border: 1px solid;
+    margin-right: 8px;
+    height: 20px;
+    justify-content: center;
+    display: inline-flex;
+    /* display: flex; */
+    align-items: center;
+    border-radius: 50%;
+    padding: 14px;
+    margin-bottom: 11px;
+        }
+    </style>
   
-    <h5>Applications</h5>
     <p class="para-text">
-        <div class="detail-bx bx-new">
+        <div class="detail-bx bx-new bvngt">
         <?php
 // Extracted from the database
 $application_data = $product_data['applications'];
 
-// Create a DOMDocument object
-$doc = new DOMDocument();
-// Load the HTML content
-$doc->loadHTML($application_data);
-
-// Get all <p> elements
-$paragraphs = $doc->getElementsByTagName('p');
-
-// Output the <p> elements as they are
-foreach ($paragraphs as $paragraph) {
-    echo '<p>' . $doc->saveHTML($paragraph) . '</p>';
-}
-
-// Get all <li> elements
-$listItems = $doc->getElementsByTagName('li');
-
-// Output the list items with icon prepended
-echo '<ul class="feature-detail">';
-foreach ($listItems as $item) {
-    // Check if the <li> element has non-empty text content
-    if (trim($item->textContent) !== '') {
-        // Get the text content of the <li> element
-        $textContent = trim($item->textContent);
-        // Output <li> element with icon prepended to text content
-        echo '<li><i class="icon feather icon-check"></i> ' . $textContent . '</li>';
-    }
-}
-echo '</ul>';
+echo $application_data;
 ?>
 
 
@@ -376,6 +402,10 @@ echo '</ul>';
                                 font-size: 15px;
                                 margin-right: 3px;
                             }
+                            
+                            .error-msg{
+                                color:red;
+                            }
 
 
                             /* .cart-detail .form-control {
@@ -393,7 +423,9 @@ echo '</ul>';
                             }
 
                             .brimg{
-                                height: 5rem;
+                                /*height: 5rem;*/
+                                margin:auto auto 4px auto;
+                                /*margin-bottom:4px;*/
                                 object-fit: contain;
                             }
                         </style>
@@ -405,7 +437,7 @@ echo '</ul>';
                             ?>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <img class="brimg" style="display: block; margin: auto;"
+                                    <img class="brimg" style="display: block;"
                                         src="admin/codes/<?php echo $getbrand['logo']?>"
                                         class="mt-4 mb-4 margin-top mix-blend-mode">
 
@@ -415,54 +447,56 @@ echo '</ul>';
                             <?php
                             }
                             ?>
-                            <p class="mb-negative quotes">Request Quote/Information <i
+                            <p id="productformheading" class="mb-negative quotes">Request Quote/Information <i
                                     class="fa fa-file-text" aria-hidden="true"></i> </p>
                             <div class="div contact-area1new cart-detail">
-                            <form class="dz-form dzForm">
+                        <form class="" id="productform">
     <input type="hidden" class="form-control" name="dzToDo" value="Contact">
     <input type="hidden" class="form-control" name="reCaptchaEnable" value="0">
     <div class="dzFormMsg"></div>
     
-    <label class="form-label">Your Name</label>
+    <label class="form-label">Your Name*</label>
     <div class="input-group">
         <input required type="text" class="form-control" name="dzName">
         <div class="error-msg" id="name-error"></div>
     </div>
+<input type="hidden" name="pageurl" value="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
 
-    <label class="form-label">Email Address</label>
-    <div class="input-group">
+    <label class="form-label">Email Address*</label>
+    <div class="input-groups">
         <input required type="email" class="form-control" name="dzEmail">
         <div class="error-msg" id="email-error"></div>
     </div>
 
-    <label class="form-label">Phone Number</label>
+    <label class="form-label">Phone Number*</label>
     <div class="input-group">
         <div class="input-group-prepend">
             <select class="form-select inputuiriir">
                 <option value="+91">+91 (IND)</option>
                 <option value="+1">+1 (USA)</option>
                 <option value="+44">+44 (UK)</option>
-                <!-- Add more options for other countries as needed -->
+                <option value="Others">Others</option>
             </select>
         </div>
         <input required type="text" class="form-control" name="dzPhoneNumber">
         <div class="error-msg" id="phone-error"></div>
     </div>
 
-    <label class="form-label">Company Name</label>
-    <div class="input-group">
-        <input required type="text" class="form-control" name="dzCompanyName">
+    <label class="form-label">Company Name (Optional)</label>
+    <div class="input-groups">
+        <input type="text" class="form-control" name="dzCompanyName">
         <div class="error-msg" id="company-error"></div>
     </div>
 
-    <label class="form-label">Message</label>
-    <div class="input-group m-b30">
-        <textarea name="dzMessage" rows="4" required class="form-control m-b10"></textarea>
+    <label class="form-label">Message (Optional)</label>
+    <div class="input-groups m-b30">
+        <textarea name="dzMessage" rows="4" class="form-control m-b10"></textarea>
         <div class="error-msg" id="message-error"></div>
     </div>
 
-    <button name="submit" type="submit" value="submit" class="btn w-100 btn-secondary btnhover">SUBMIT</button>
+    <button name="submit" type="submit" value="submit" class="btn w-100 btn-secondary btnhover " style="margin-top:20px">SUBMIT</button>
 </form>
+
 
                             </div>
                         </div>
@@ -492,17 +526,24 @@ echo '</ul>';
     <div class="container">
         <div class="product-description">
             <div class="dz-tabs">
-                <!-- <ul class="nav nav-tabs center" id="myTab1" role="tablist">
+               <ul class="nav nav-tabs center" id="myTab1" role="tablist">
                     
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="profile-tab" data-bs-toggle="tab"
                             data-bs-target="#profile-tab-pane" type="button" role="tab"
                             aria-controls="profile-tab-pane" aria-selected="false">Description</button>
                     </li>
-                </ul> -->
+                    
+                      
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tabs" data-bs-toggle="tab"
+                            data-bs-target="#profile-tab-panes" type="button" role="tab"
+                            aria-controls="profile-tab-panes" aria-selected="false">Specifications</button>
+                    </li>
+                </ul> 
                 <div class="tab-content" id="myTabContent">
 
-                    <h3 class="title mb-4 descheading">Description</h3>
+                    <!--<h3 class="title mb-4 descheading">Description</h3>-->
 
 
                     <style>
@@ -518,9 +559,31 @@ echo '</ul>';
                         .desc-new .para-text {
                             margin-bottom: 0px;
                         }
+                         .desc-newul ul li{
+                             display:flex;
+                             margin-bottom:3px;
+                         }
+                        .desc-newul ul li::before{
+                                content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #fc8328;
+    margin-right: 8px;
+                        }
+                        
+                        .desc-newul a{
+                            color:blue;
+                        }
+                        
+                      .desc-newul td,
+                      .desc-newul td {
+                          padding:5px 10px;
+    border: 1px solid #000; /* Adjust the border color and width as needed */
+}
+
                     </style>
 
-                    <div class="tab-pane fade desc-new show active" id="profile-tab-pane" role="tabpanel"
+                    <div class="tab-pane fade desc-new mt-4 desc-newul show active" id="profile-tab-pane" role="tabpanel"
                         aria-labelledby="profile-tab" tabindex="0">
                         <div class="detail-bx mt-40">
                     <?php echo $product_data['long_description'];?>
@@ -535,6 +598,23 @@ echo '</ul>';
 
 
                     </div>
+                    
+                     <div class="tab-pane fade desc-new desc-newul mt-4" id="profile-tab-panes" role="tabpanel"
+                        aria-labelledby="profile-tabs" tabindex="0">
+                        <div class="detail-bx mt-40">
+                    <?php echo $product_data['specs'];?>
+                        </div>
+
+                       
+
+
+
+
+
+
+
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -561,13 +641,17 @@ foreach ($related_product_ids as $product_id) {
 }
 
 ?>
-
+ <?php
+            if(!empty($related_products)){
+            ?>
 <section class="content-inner-1 overlay-white-middle overflow-hidden padding-top-0">
     <div class="container">
         <div class="">
+           
             <div class="">
                 <h2 class="title mb-4">Related products</h2>
             </div>
+           
         </div>
         <div class="widget widget_categories style-1">
             <ul class="row">
@@ -603,7 +687,9 @@ foreach ($related_product_ids as $product_id) {
 </section>
 
 
-
+ <?php
+            }
+            ?>
 
 <style>
     .get-in-touch {
@@ -622,11 +708,11 @@ foreach ($related_product_ids as $product_id) {
 <section class="get-in-touch wow fadeIn" data-wow-delay="0.3s"
     style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;">
     <div class="m-r100 m-md-r0 m-sm-r0">
-        <p class="dz-title mb-lg-0 mb-3">Customization available.
+        <p class="dz-title mb-lg-0 mb-3 mt-3">Customization available.
             Contact our product team for details.
         </p>
     </div>
-    <a href="#" class="btn btn-light">Get In Touch</a>
+    <a href="#productformheading" class="btn btn-light">Get In Touch</a>
 </section>
 
 <!-- Companies -->
@@ -647,56 +733,56 @@ foreach ($related_product_ids as $product_id) {
                 <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.1s">
                     <a href="javascript:void(0);" class="companies-wrapper">
                         <div class="companies-media">
-                            <img src="https://www.mlagroup.com/img/certifications/dnv.png" alt="">
+                            <img width="118px" height="118px" src="https://www.mlagroup.com/img/certifications/dnv.webp" alt="">
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.2s">
                     <a href="javascript:void(0);" class="companies-wrapper">
                         <div class="companies-media">
-                            <img src="https://www.mlagroup.com/img/certifications/02.jpg" alt="">
+                            <img width="118px" height="118px" src="https://www.mlagroup.com/img/certifications/02.webp" alt="">
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.3s">
                     <a href="javascript:void(0);" class="companies-wrapper">
                         <div class="companies-media">
-                            <img src="https://www.mlagroup.com/img/certifications/03.jpg" alt="">
+                            <img src="https://www.mlagroup.com/img/certifications/03.webp" alt="">
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.4s">
                     <a href="javascript:void(0);" class="companies-wrapper">
                         <div class="companies-media">
-                            <img src="https://www.mlagroup.com/img/certifications/04.jpg" alt="">
+                            <img width="118px" height="118px" src="https://www.mlagroup.com/img/certifications/04.webp" alt="">
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.5s">
                     <a href="javascript:void(0);" class="companies-wrapper">
                         <div class="companies-media">
-                            <img src="https://www.mlagroup.com/img/certifications/05.jpg" alt="">
+                            <img src="https://www.mlagroup.com/img/certifications/05.webp" alt="">
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
                     <a href="javascript:void(0);" class="companies-wrapper">
                         <div class="companies-media">
-                            <img src="https://www.mlagroup.com/img/certifications/06.jpg" alt="">
+                            <img width="118px" height="118px" src="https://www.mlagroup.com/img/certifications/06.webp" alt="">
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.5s">
                     <a href="javascript:void(0);" class="companies-wrapper">
                         <div class="companies-media">
-                            <img src="https://www.mlagroup.com/img/certifications/07.jpg" alt="">
+                            <img width="118px" height="118px" src="https://www.mlagroup.com/img/certifications/07.webp" alt="">
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
                     <a href="javascript:void(0);" class="companies-wrapper">
                         <div class="companies-media">
-                            <img src="https://www.mlagroup.com/img/certifications/08.jpg" alt="">
+                            <img width="118px" height="118px" src="https://www.mlagroup.com/img/certifications/08.webp" alt="">
                         </div>
                     </a>
                 </div>
@@ -875,17 +961,21 @@ mysqli_close($db);
 ?>
            
 <!--Recommend Section Start-->
-<section class="content-inner-1 bg-light">
+<section class="content-inner-1 bg-light" style="display:none">
 <div class="container">
         <h3 class="title text-center mb-4">RANGE OF PRODUCTS</h3>
         <div class="site-filters clearfix d-flex align-items-center justify-content-center">
             <ul class="filters" data-bs-toggle="buttons">
-                <?php foreach ($brands as $brand): ?>
+                <?php
+                $i=1;
+                foreach ($brands as $brand): ?>
                     <li class="btn btth" data-brand="brand-<?php echo $brand['id']; ?>">
                         <input type="radio" name="brand">
-                        <a href="javascript:void(0);"><?php echo htmlspecialchars($brand['name']); ?></a>
+                        <a href="#brand-<?php echo $brand['id']; ?>"><?php echo htmlspecialchars($brand['name']); ?></a>
                     </li>
-                <?php endforeach; ?>
+                <?php
+                $i++;
+                endforeach; ?>
             </ul>
         </div>
 
@@ -1027,11 +1117,21 @@ mysqli_close($db);
 
 
 <style>
+/*html,body{*/
+/*    overflow-x:hidden;*/
+/*}*/
 .padding-top-0 {
     padding-top: 0;
 }
 
 @media only screen and (max-width: 575px) {
+     .get-in-touch .dz-title{
+         text-align:center;
+                                         
+                                      }
+    .brimg{
+        display:none !important;
+    }
     .wlist-80 {
         width: 95%;
         margin: auto;
@@ -1058,9 +1158,15 @@ mysqli_close($db);
 
     .filters {
         flex-wrap: wrap;
+        justify-content:center;
     }
 
-    .filters li {}
+    .filters li {
+        width: 45%;
+    }
+    .btth{
+        border-right:0px !important;
+    }
 
     .get-in-touch {
         padding: 20px 0px !important;
@@ -1070,67 +1176,6 @@ mysqli_close($db);
 </style>
 
 
-
-<!-- Companies End -->
-
-
-
-<!-- Icon Box Start -->
-<!-- <section class="content-inner py-0">
-<div class="container-fluid px-0">
-    <div class="row gx-0">
-        <div class="col-xl-3 col-lg-3 col-sm-6">
-            <div class="icon-bx-wraper style-2 bg-light">
-                <div class="icon-bx">
-                    <img src="images/svg/icon-bx/password-check.svg" alt="/">
-                </div>
-                <div class="icon-content">
-                    <h5 class="dz-title m-b10">Filter & Discover</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                </div>
-                <div class="data-text">01</div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-lg-3 col-sm-6">
-            <div class="icon-bx-wraper style-2">
-                <div class="icon-bx">
-                    <img src="images/svg/icon-bx/cart.svg" alt="/">
-                </div>
-                <div class="icon-content">
-                    <h5 class="dz-title m-b10">Add to cart</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                </div>
-                <div class="data-text">02</div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-lg-3 col-sm-6">
-            <div class="icon-bx-wraper style-2 bg-light">
-                <div class="icon-bx">
-                    <img src="images/svg/icon-bx/discovery.svg" alt="/">
-                </div>
-                <div class="icon-content">
-                    <h5 class="dz-title m-b10">Fast Shipping</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                </div>
-                <div class="data-text">03</div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-lg-3 col-sm-6">
-            <div class="icon-bx-wraper style-2">
-                <div class="icon-bx">
-                    <img src="images/svg/icon-bx/box-tick.svg" alt="/">
-                </div>
-                <div class="icon-content">
-                    <h5 class="dz-title m-b10">Enjoy The Product</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                </div>
-                <div class="data-text">04</div>
-            </div>
-        </div>
-    </div>
-</div>
-</section> -->
-<!-- Icon Box End -->
 </div>
 
 
@@ -1142,92 +1187,98 @@ border-top: 1px solid #FE8F34;
 @media only screen and (max-width:768px) {}
 </style>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Function to validate form fields
-        function validateForm() {
-            var isValid = true;
+   document.addEventListener("DOMContentLoaded", function() {
+    // Function to validate form fields
+    function validateForm() {
+        var isValid = true;
 
-            // Reset error messages
-            document.querySelectorAll('.error-msg').forEach(function(errorMsg) {
-                errorMsg.textContent = '';
-            });
+        // Reset error messages
+        document.querySelectorAll('.error-msg').forEach(function(errorMsg) {
+            errorMsg.textContent = '';
+        });
 
-            // Validate Name
-            var nameInput = document.querySelector("input[name='dzName']");
-            if (nameInput.value.trim() === '') {
-                document.getElementById('name-error').textContent = 'Name is required.';
-                isValid = false;
-            }
+        // Validate Name
+        var nameInput = document.querySelector("input[name='dzName']");
+var nameError = document.getElementById('name-error');
+var nameRegex = /^[A-Za-z\s]+$/;
 
-            // Validate Email
-            var emailInput = document.querySelector("input[name='dzEmail']");
-            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(emailInput.value.trim())) {
-                document.getElementById('email-error').textContent = 'Invalid email format.';
-                isValid = false;
-            }
+if (nameInput.value.trim() === '') {
+    nameError.textContent = 'Name is required.';
+    isValid = false;
+} else if (!nameRegex.test(nameInput.value.trim())) {
+    nameError.textContent = 'Name can only contain letters and spaces.';
+    isValid = false;
+} else {
+    nameError.textContent = ''; // Clear the error if validation passes
+}
 
-            // Validate Phone Number
-            var phoneInput = document.querySelector("input[name='dzPhoneNumber']");
-            var phonePattern = /^\+?\d{10,}$/;
-            if (!phonePattern.test(phoneInput.value.trim())) {
-                document.getElementById('phone-error').textContent = 'Invalid phone number format.';
-                isValid = false;
-            }
 
-            // Validate Company Name
-            var companyInput = document.querySelector("input[name='dzCompanyName']");
-            if (companyInput.value.trim() === '') {
-                document.getElementById('company-error').textContent = 'Company name is required.';
-                isValid = false;
-            }
-
-            // Validate Message
-            var messageInput = document.querySelector("textarea[name='dzMessage']");
-            if (messageInput.value.trim() === '') {
-                document.getElementById('message-error').textContent = 'Message is required.';
-                isValid = false;
-            }
-
-            return isValid;
+        // Validate Email
+        var emailInput = document.querySelector("input[name='dzEmail']");
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(emailInput.value.trim())) {
+            document.getElementById('email-error').textContent = 'Invalid email format.';
+            isValid = false;
         }
 
-        // Function to handle form submission
-        function submitForm(event) {
-            event.preventDefault();
+        // Validate Phone Number
+        var phoneInput = document.querySelector("input[name='dzPhoneNumber']");
+        var phonePattern = /^\+?\d{7,15}$/; // At least 6 digits, only numbers
+        if (!phonePattern.test(phoneInput.value.trim())) {
+            document.getElementById('phone-error').textContent = 'Phone number must be greater than 6 digits.';
+            isValid = false;
+        }
 
-            if (!validateForm()) {
-                return;
-            }
+        return isValid;
+    }
 
-            var formData = new FormData(document.querySelector(".dzForm"));
+    // Function to handle form submission
+    function submitForm(event) {
+        event.preventDefault();
 
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "submit_form.php", true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        var response = JSON.parse(xhr.responseText);
-                        if (response.success) {
-                            // Form submitted successfully
-                            alert("Form submitted successfully.");
-                            document.querySelector(".dzForm").reset();
-                        } else {
-                            // Error submitting form
-                            alert("Error submitting the form.");
-                        }
+        if (!validateForm()) {
+            return;
+        }
+
+        // Change submit button to "Please wait..."
+        var submitBtn = document.querySelector("button[type='submit']");
+        submitBtn.textContent = 'Please wait...';
+        submitBtn.disabled = true;
+
+        var formData = new FormData(document.querySelector("#productform"));
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://www.mlagroup.com/submit_form", true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    if (response.success) {
+                        // Form submitted successfully
+                        // alert("Form submitted successfully.");
+                        location.href="thank-you.php";
+                        document.querySelector("#productform").reset();
                     } else {
-                        // Error in AJAX request
-                        alert("Error in AJAX request.");
+                        // Error submitting form
+                        alert("Error submitting the form.");
                     }
+                } else {
+                    // Error in AJAX request
+                    alert("Error in AJAX request.");
                 }
-            };
-            xhr.send(formData);
-        }
 
-        // Add event listener for form submission
-        document.querySelector(".dzForm").addEventListener("submit", submitForm);
-    });
+                // Reset button text after submission
+                submitBtn.textContent = 'SUBMIT';
+                submitBtn.disabled = false;
+            }
+        };
+        xhr.send(formData);
+    }
+
+    // Add event listener for form submission
+    document.querySelector("#productform").addEventListener("submit", submitForm);
+});
+
 </script>
 <script>
         document.addEventListener('DOMContentLoaded', function() {

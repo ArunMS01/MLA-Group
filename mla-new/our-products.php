@@ -117,10 +117,17 @@ include('head.php');
             }
             
             .ct2{
-                    background: linear-gradient(45deg, #ffefbd, #ffffff00), url(https://t3.ftcdn.net/jpg/05/08/74/70/360_F_508747099_jWfjbngzFHhBP9L4AvkFExcmnx0L0eFU.jpg);
+                    background: linear-gradient(45deg, #ffb882, #ffffff00), url(https://t3.ftcdn.net/jpg/05/08/74/70/360_F_508747099_jWfjbngzFHhBP9L4AvkFExcmnx0L0eFU.jpg);
     /* background: url(./images/aboutus/banner-about-mla.png); */
     background-position: left !important;
     background-repeat: no-repeat !important;
+            }
+            
+            .breadcrumb-row li a{
+                font-size:20px;
+            }
+            .breadcrumb-row ul .breadcrumb-item + .breadcrumb-item::before{
+                font-size:20px;
             }
         </style>
 
@@ -132,7 +139,17 @@ include('head.php');
                             <div class="about-thumb-1 ">
 
                                 <div class="section-head">
-                                    <h2 class="title">MLA GROUP </h2>
+                                    <h2 class="title">Our Products </h2>
+                                    <!--<p>Mla</p>-->
+                                    <div class="d-sm-flex justify-content-center container-fluid py-new">
+    <nav aria-label="breadcrumb" class="breadcrumb-row">
+        <ul class="breadcrumb mb-0">
+            <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="/mla-new">Home</a> </li>
+            <li class="breadcrumb-item col-or"> <a style="color:#000" href="#">Our Products </a> </li>
+           
+        </ul>
+    </nav>
+</div>
                                 </div>
 
                             </div>
@@ -149,7 +166,7 @@ include('head.php');
 include('admin/codes/db.php');
 // Fetch brands from the database
 
- $query = "SELECT id, name, logo,description,url FROM brand";
+ $query = "SELECT id, name, logo,description,url FROM brand ORDER BY seq ASC";
 $result = mysqli_query($db, $query);
 
 // Initialize an array to store the brands
@@ -208,7 +225,7 @@ function truncateText($text, $charLimit = 180) {
 
     <style>
               .teamWrapper {
-                margin-top: 50px;
+                /*margin-top: 50px;*/
               }
 
               .teamGrid {
@@ -228,10 +245,10 @@ function truncateText($text, $charLimit = 180) {
            
 
               .avatar>img {
-                width: 150px;
+               width: 200px;
     margin: auto;
-    height: 84px;
-    object-fit: contain;
+    height: 99px;
+    object-fit: contain !important;
     /* border-radius: 50%; */
     border: 1px solid rgb(170 170 173 / 1);
     box-shadow: 0px 3px 10px 3px rgb(170 170 173 / 0.5);
@@ -245,7 +262,7 @@ function truncateText($text, $charLimit = 180) {
                 background: #fff;
                 z-index: 9;
                 padding: 30px;
-                min-height:23rem;
+                min-height:28rem;
               }
 
               .teamcol {
@@ -257,7 +274,7 @@ function truncateText($text, $charLimit = 180) {
               }
 
               .teamcol:hover {
-                transform: translateY(-30px);
+                transform: translateY(-10px);
                 box-shadow: 0px 3px 10px 3px rgb(170 170 173 / 0.5);
                 transition: transform 1s ease-in-out;
               }
@@ -331,11 +348,20 @@ function truncateText($text, $charLimit = 180) {
              
 
               .member-name {
+                  text-align:center;
                 margin-top: 20px;
+              }
+              .member-name h2:nth-of-type(1) {
+    text-transform: uppercase;
+}
+              .member-name h2{
+                  margin-bottom:0;
+                  font-size:22px;
               }
 
               .member-info {
-               
+                   text-align: center;
+    margin-top: 10px;
               }
 
               .social-listing {
@@ -375,7 +401,7 @@ function truncateText($text, $charLimit = 180) {
                   margin-top:50px;
               }
               .pb-100{
-              padding-bottom: 100px;
+              padding-bottom: 50px;
               }
               .btn-primary{
                 background: #f58a3a;
@@ -408,32 +434,75 @@ padding: 1px;
 }
 }
 
+
+
             </style>
 <section>
-<div class=" pb-100">
+<div class=" pb-100 container">
 
 
 <div class="teamWrapper">
         <div class="containerssss">
             <div class="teamGrid">
                 <?php foreach ($brands as $brand): ?>
-                    <div class="colmun mbcolteam mt-2222">
+                    <div class="colmun mbcolteam mt-2222 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="teamcol">
                             <div class="teamcolinner">
                                 <div class="avatar">
                                     <img src="admin/codes/<?php echo $brand['logo']; ?>" alt="<?php echo $brand['name']; ?>">
                                 </div>
                                 <div class="member-name">
-                                    <h2 ><?php echo $brand['name']; ?></h2>
+                                    <!--<h2 ><?php echo $brand['name']; ?></h2>-->
+                                    <?php
+                                    if($brand['name'] == 'Uniflow: Metallic Stearates'){
+                                        echo "<h2>Uniflow</h2><h2>Metallic Stearates</h2>";
+                                    }
+                                    if($brand['name'] == 'Unicell: Foaming Agents'){
+                                        echo "<h2>Unicell</h2><h2>Foaming Agents</h2>";
+                                    }
+                                    if($brand['name'] == 'Unistab: PVC Heat Stabilizers'){
+                                        echo "<h2>Unistab </h2><h2>PVC Heat Stabilizers</h2>";
+                                    }
+                                    if($brand['name'] == 'Zincosil:  Active Zinc Oxide'){
+                                        echo "<h2>Zincosil</h2><h2>Active Zinc Oxide</h2>";
+                                    }
+                                    if($brand['name'] == 'Tulsi: Micronized Mineral Fillers / Extenders'){
+                                        echo "<h2>Tulsi</h2><h2>Micronized Mineral Fillers / Extenders</h2>";
+                                    }
+                                    if($brand['name'] == 'Unilub: Plastic Lubricants'){
+                                        echo "<h2>Unilub</h2><h2>Plastic Lubricants</h2>";
+                                    }
+                                    if($brand['name'] == 'Unisil: PPT Silica and Silicates'){
+                                        echo "<h2>Unisil</h2><h2>PPT Silica and Silicates</h2>";
+                                    }
+                                    if($brand['name'] == 'Pharma-Excipients'){
+                                        echo "<h2>Pharma</h2><h2>Excipients</h2>";
+                                    }
+                                    ?>
                                 </div>
                                 <div class="member-info">
+                                    <?php
+                                     if($brand['name'] == 'Tulsi: Micronized Mineral Fillers / Extenders'){
+                                         
+                                     
+                                    ?>
                                     <p >
                                     <?php echo truncateText($brand['description'], 90); ?>
                                     </p>
+                                    <?php
+                                    }
+                                    else{
+                                    ?>
+                                     <p >
+                                     <?php echo truncateText($brand['description'], 120); ?>
+                                      </p>
+                                    <?php
+                                    }
+                                    ?>
                                 </div>
                                 <div class="member-social">
-                                    <p >
-                                        <a href="brands.php?url=<?php echo $brand['url']; ?>" class="badge  badge-primary  read-more-btn">
+                                    <p class="text-center" style="margin-bottom:0">
+                                        <a href="brands.php?url=<?php echo $brand['url']; ?>" class="badge  badge-primary  read-more-btn text-center">
                                             Read More
                                         </a>
                                     </p>

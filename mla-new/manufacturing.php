@@ -154,7 +154,7 @@ include('head.php');
 					</div>
 					<div class="col-md-6 image-section">
 						<div class="hexagon">
-							<img src="images/mlagroup.webp" alt="Chemical Image" class="hexagon-image">
+							<img src="images/manufacturing.jpeg" alt="Chemical Image" class="hexagon-image">
 						</div>
 					</div>
 				</div>
@@ -219,7 +219,7 @@ include('head.php');
 				}
 
 				.hexagon {
-					height: auto !important;
+					height: 24rem !important;
 					width: auto !important;
 				}
 
@@ -472,7 +472,7 @@ include('head.php');
 						<div class="manubox">
 							<img src="images/flashdrying1.png" alt="">
 						</div>
-						<p>Flash drying system
+						<p>SIEVING
 
 						</p>
 					</div>
