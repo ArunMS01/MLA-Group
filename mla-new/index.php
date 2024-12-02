@@ -80,6 +80,10 @@ include('head.php');
             
             /*Ipad */
             
+            .companies-inner .col-md-3{
+                margin-bottom:10px;
+            }
+            
             @media only screen and (min-width:768px) and (max-width:1180px){
                 footer .footer-logo img{
                     max-width: 156px;
@@ -571,7 +575,7 @@ include('head.php');
 
                         </div>
 
-                        <div class="swiper-container gallery-slider">
+                        <div class="s gallery-slider">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide"><img src="images/bdhjdj.jpg" alt="Man sitting on a stone on the lake"></div>
                                 <!-- <div class="swiper-slide"><img
@@ -1298,10 +1302,10 @@ overflow: hidden;
                                 <div class="col-lg-12 mttop-20">
                                     <div class="pagination-align justify-content-center">
                                         <div class="tranding-button-prev1 btn-prev">
-                                            <i class="flaticon flaticon-left-chevron"></i>
+                                        <img src="icons/left-chevron.png" alt="">
                                         </div>
                                         <div class="tranding-button-next1 btn-next">
-                                            <i class="flaticon flaticon-chevron"></i>
+                                            <img src="icons/chevron.png" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -1682,15 +1686,23 @@ overflow: hidden;
                             /* Hide contentindustry by default */
                         }
                     }
+                    
+                  .btn-next img {
+    height: 25px;
+}
+                    
+                  .btn-prev img {
+    height: 25px;
+}
                 </style>
 
                 <div class="col-lg-2">
                     <div class="pagination-align justify-content-end">
                         <div class="tranding-button-prev btn-prev">
-                            <i class="flaticon flaticon-left-chevron"></i>
+                         <img src="icons/left-chevron.png" alt="">
                         </div>
                         <div class="tranding-button-next btn-next">
-                            <i class="flaticon flaticon-chevron"></i>
+                           <img src="icons/chevron.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -2270,56 +2282,56 @@ overflow: hidden;
                     <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.5s">
                         <a href="javascript:void(0);" class="companies-wrapper">
                             <div class="companies-media">
-                                <img src="https://www.mlagroup.com/img/certifications/dnv.png" alt="">
+                                <img src="https://www.mlagroup.com/img/certifications/dnv.webp" alt="">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.2s">
                         <a href="javascript:void(0);" class="companies-wrapper">
                             <div class="companies-media">
-                                <img src="https://www.mlagroup.com/img/certifications/02.jpg" alt="">
+                                <img src="https://www.mlagroup.com/img/certifications/02.webp" alt="">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.3s">
                         <a href="javascript:void(0);" class="companies-wrapper">
                             <div class="companies-media">
-                                <img src="https://www.mlagroup.com/img/certifications/03.jpg" alt="">
+                                <img src="https://www.mlagroup.com/img/certifications/03.webp" alt="">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.8s">
                         <a href="javascript:void(0);" class="companies-wrapper">
                             <div class="companies-media">
-                                <img src="https://www.mlagroup.com/img/certifications/04.jpg" alt="">
+                                <img src="https://www.mlagroup.com/img/certifications/04.webp" alt="">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.5s">
                         <a href="javascript:void(0);" class="companies-wrapper">
                             <div class="companies-media">
-                                <img src="https://www.mlagroup.com/img/certifications/05.jpg" alt="">
+                                <img src="https://www.mlagroup.com/img/certifications/05.webp" alt="">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
                         <a href="javascript:void(0);" class="companies-wrapper">
                             <div class="companies-media">
-                                <img src="https://www.mlagroup.com/img/certifications/06.jpg" alt="">
+                                <img src="https://www.mlagroup.com/img/certifications/06.webp" alt="">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.5s">
                         <a href="javascript:void(0);" class="companies-wrapper">
                             <div class="companies-media">
-                                <img src="https://www.mlagroup.com/img/certifications/07.jpg" alt="">
+                                <img src="https://www.mlagroup.com/img/certifications/07.webp" alt="">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
                         <a href="javascript:void(0);" class="companies-wrapper">
                             <div class="companies-media">
-                                <img src="https://www.mlagroup.com/img/certifications/08.jpg" alt="">
+                                <img src="https://www.mlagroup.com/img/certifications/08.webp" alt="">
                             </div>
                         </a>
                     </div>

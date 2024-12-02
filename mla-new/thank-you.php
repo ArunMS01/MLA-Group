@@ -3,7 +3,7 @@
 
 <style>
     .page-heading-sec {
-        background-image: url();
+        background-image: url(https://finixpa-react.netlify.app/img/background/page_hd.jpg);
         background-position: center center;
         background-repeat: no-repeat;
         padding-top: 130px;

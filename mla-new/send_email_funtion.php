@@ -3,7 +3,7 @@ require 'vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 function sendEmail($recipient,$subject,$body){
     $mail=new PHPMailer();
-    $mail->isSMTP();
+    // $mail->isSMTP();
     $mail->Host='smtp.gmail.com';
     $mail->Port=587;
     $mail->SMTPAuth=true;
@@ -12,7 +12,7 @@ function sendEmail($recipient,$subject,$body){
     $mail->SMTPSecure='tls';
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
-    $mail->setFrom('bornwithcode@gmail.com', 'Your Name');
+    $mail->setFrom('mlagroup@mlagroup.com', 'MLA GROUP');
     $mail->addAddress($recipient);
 
     $mail->Subject = $subject;

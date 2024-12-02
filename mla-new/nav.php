@@ -97,7 +97,7 @@
                     <div class="container-fluid clearfix">
                         <!-- Website Logo -->
                         <div class="logo-header logo-dark me-md-5">
-                            <a href="/"><img src="images/logo-MLA.png" alt="logo"></a>
+                            <a href="/"><img width="105px" height="64px" src="images/logo-MLA.png" alt="logo"></a>
                         </div>
 
                         <!-- Nav Toggle Button -->
@@ -123,22 +123,22 @@
                                 </li>
 
                                 <li class="has-mega-menu ">
-                                    <a  href="about.php"><span class="bleft borderlfyfyr">About Us</span></a>
+                                    <a  href="about"><span class="bleft borderlfyfyr">About Us</span></a>
 
                                 </li>
 
                                 <li class="has-mega-menu ">
-                                    <a  href="r-and-d.php"><span class="bleft borderlfyfyr">R & D</span></a>
+                                    <a  href="r-and-d"><span class="bleft borderlfyfyr">R & D</span></a>
 
                                 </li>
 
                                 <li class="has-mega-menu ">
-                                    <a  href="qc.php"><span class="bleft borderlfyfyr">quality</span></a>
+                                    <a  href="qc"><span class="bleft borderlfyfyr">quality</span></a>
 
                                 </li>
 
                                 <li class="has-mega-menu ">
-                                    <a  href="manufacturing.php"><span  class="bleft borderlfyfyr">Manufacturing</span></a>
+                                    <a  href="manufacturing"><span  class="bleft borderlfyfyr">Manufacturing</span></a>
 
                                 </li>
 
@@ -224,7 +224,7 @@
                                     <!--	</div>-->
                                     <!--</div>-->
                                 </li>
-                                <li class="sub-menu sub-menu-down"><a href="our-products.php"><span class="bleft borderlfyfyr">Products</span></a>
+                                <li class="sub-menu sub-menu-down"><a href="our-products"><span class="bleft borderlfyfyr">Products</span></a>
 								<ul class="sub-menu">
                                     <?php
                                     require('admin/codes/db.php');
@@ -281,7 +281,7 @@ if ($row['name'] == 'Pharma-Excipients') {
 
                                 <!--</li>-->
 
-                                <li><a  href="contactus.php">Contact Us</a></li>
+                                <li><a  href="contactus">Contact Us</a></li>
                             </ul>
                             <div class="dz-social-icon">
                                 <ul>

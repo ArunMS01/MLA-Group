@@ -185,37 +185,37 @@ include('inc/header.php') ?>
               </ul>
             </div>
           </li>
-          <li class="nav-item">
-    <a class="nav-link" data-toggle="collapse" href="#blog-elements" aria-expanded="false"
-      aria-controls="blog-elements">
-      <i class="icon-columns menu-icon"></i>
-      <span class="menu-title">Blog</span>
-      <i class="menu-arrow"></i>
-    </a>
-    <div class="collapse" id="blog-elements">
-      <ul class="nav flex-column sub-menu">
-        <li class="nav-item"><a class="nav-link" href="add-blog-category.php">Add a Category</a></li>
-        <li class="nav-item"><a class="nav-link" href="all-blog-category-list.php"> Manage  Category</a></li>
-        <li class="nav-item"><a class="nav-link" href="add-single-blog-post.php"> Add New Post</a></li>
-        <li class="nav-item"><a class="nav-link" href="all-blog-post.php"> Manage Posts</a></li>
-      </ul>
-    </div>
-</li>
+<!--          <li class="nav-item">-->
+<!--    <a class="nav-link" data-toggle="collapse" href="#blog-elements" aria-expanded="false"-->
+<!--      aria-controls="blog-elements">-->
+<!--      <i class="icon-columns menu-icon"></i>-->
+<!--      <span class="menu-title">Blog</span>-->
+<!--      <i class="menu-arrow"></i>-->
+<!--    </a>-->
+<!--    <div class="collapse" id="blog-elements">-->
+<!--      <ul class="nav flex-column sub-menu">-->
+<!--        <li class="nav-item"><a class="nav-link" href="add-blog-category.php">Add a Category</a></li>-->
+<!--        <li class="nav-item"><a class="nav-link" href="all-blog-category-list.php"> Manage  Category</a></li>-->
+<!--        <li class="nav-item"><a class="nav-link" href="add-single-blog-post.php"> Add New Post</a></li>-->
+<!--        <li class="nav-item"><a class="nav-link" href="all-blog-post.php"> Manage Posts</a></li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--</li>-->
 
 
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-              <i class="icon-bar-graph menu-icon"></i>
-              <span class="menu-title">Enqueries</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="charts">
-              <ul class="nav flex-column sub-menu">
+          <!--<li class="nav-item">-->
+          <!--  <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">-->
+          <!--    <i class="icon-bar-graph menu-icon"></i>-->
+          <!--    <span class="menu-title">Enqueries</span>-->
+          <!--    <i class="menu-arrow"></i>-->
+          <!--  </a>-->
+          <!--  <div class="collapse" id="charts">-->
+          <!--    <ul class="nav flex-column sub-menu">-->
 
-              <li class="nav-item"> <a class="nav-link" href="enqueries.php">Manage Enqueries</a></li>
-              </ul>
-            </div>
-          </li>
+          <!--    <li class="nav-item"> <a class="nav-link" href="enqueries.php">Manage Enqueries</a></li>-->
+          <!--    </ul>-->
+          <!--  </div>-->
+          <!--</li>-->
 
         </ul>
       </nav>
@@ -228,8 +228,9 @@ include('inc/header.php') ?>
               <div class="row">
                 <div class="col-12 col-xl-8 mb-4 mb-xl-0">
                   <h3 class="font-weight-bold">Welcome Admin</h3>
-                  <h6 class="font-weight-normal mb-0">Product listing and enquiry management. <span
-                      class="text-primary">3 new enqueries!</span></h6>
+                  <h6 class="font-weight-normal mb-0">Product listing and enquiry management. 
+                  <!--<span class="text-primary">3 new enqueries!</span>-->
+                      </h6>
                 </div>
                 <!-- <div class="col-12 col-xl-4">
                  <div class="justify-content-end d-flex">
@@ -265,62 +266,62 @@ include('inc/header.php') ?>
 
             <div class="col-md-12 grid-margin transparent transparents">
 
-              <div class="row">
-                <div class="col-md-2 mb-4 mb-lg-0 stretch-card transparent">
-                  <div class="card card-light-blue">
-                    <div class="card-body d-flex">
-                      <p class="">New </p>
-                      <p class="fs-30 ">10</p>
+              <!--<div class="row">-->
+              <!--  <div class="col-md-2 mb-4 mb-lg-0 stretch-card transparent">-->
+              <!--    <div class="card card-light-blue">-->
+              <!--      <div class="card-body d-flex">-->
+              <!--        <p class="">New </p>-->
+              <!--        <p class="fs-30 ">10</p>-->
 
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2 stretch-card transparent">
-                  <div class="card card-light-danger">
-                    <div class="card-body d-flex">
-                      <p class="">Contacted </p>
-                      <p class="fs-30 ">100</p>
+              <!--      </div>-->
+              <!--    </div>-->
+              <!--  </div>-->
+              <!--  <div class="col-md-2 stretch-card transparent">-->
+              <!--    <div class="card card-light-danger">-->
+              <!--      <div class="card-body d-flex">-->
+              <!--        <p class="">Contacted </p>-->
+              <!--        <p class="fs-30 ">100</p>-->
 
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2 stretch-card transparent">
-                  <div class="card card card-tale">
-                    <div class="card-body d-flex">
-                      <p class="">Converted </p>
-                      <p class="fs-30 ">100</p>
+              <!--      </div>-->
+              <!--    </div>-->
+              <!--  </div>-->
+              <!--  <div class="col-md-2 stretch-card transparent">-->
+              <!--    <div class="card card card-tale">-->
+              <!--      <div class="card-body d-flex">-->
+              <!--        <p class="">Converted </p>-->
+              <!--        <p class="fs-30 ">100</p>-->
 
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2 stretch-card transparent">
-                  <div class="card" style="background: #9359f4; color:#fff;">
-                    <div class="card-body d-flex">
-                      <p class="">Interested </p>
-                      <p class="fs-30 ">100</p>
+              <!--      </div>-->
+              <!--    </div>-->
+              <!--  </div>-->
+              <!--  <div class="col-md-2 stretch-card transparent">-->
+              <!--    <div class="card" style="background: #9359f4; color:#fff;">-->
+              <!--      <div class="card-body d-flex">-->
+              <!--        <p class="">Interested </p>-->
+              <!--        <p class="fs-30 ">100</p>-->
 
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2 stretch-card transparent">
-                  <div class="card card-light-blue">
-                    <div class="card-body d-flex">
-                      <p class="">Not interested </p>
-                      <p class="fs-30 ">100</p>
+              <!--      </div>-->
+              <!--    </div>-->
+              <!--  </div>-->
+              <!--  <div class="col-md-2 stretch-card transparent">-->
+              <!--    <div class="card card-light-blue">-->
+              <!--      <div class="card-body d-flex">-->
+              <!--        <p class="">Not interested </p>-->
+              <!--        <p class="fs-30 ">100</p>-->
 
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2 stretch-card transparent">
-                  <div class="card card-light-danger" style="background: #48edb6;">
-                    <div class="card-body d-flex">
-                      <p class="">Lost </p>
-                      <p class="fs-30 ">100</p>
+              <!--      </div>-->
+              <!--    </div>-->
+              <!--  </div>-->
+              <!--  <div class="col-md-2 stretch-card transparent">-->
+              <!--    <div class="card card-light-danger" style="background: #48edb6;">-->
+              <!--      <div class="card-body d-flex">-->
+              <!--        <p class="">Lost </p>-->
+              <!--        <p class="fs-30 ">100</p>-->
 
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <!--      </div>-->
+              <!--    </div>-->
+              <!--  </div>-->
+              <!--</div>-->
             </div>
           </div>
 
@@ -375,11 +376,11 @@ include('inc/header.php') ?>
                 <div class="card-body">
                   <div class="d-flex justify-content-between">
                     <h4 class="card-title">Manage Inqueries</h4>
-                    <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"
-                      class="btn btn-primary btn-icon-text">
-                      <i class="mdi mdi-library-plus"></i>
-                      Add Inquery
-                    </button>
+                    <!--<button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"-->
+                    <!--  class="btn btn-primary btn-icon-text">-->
+                    <!--  <i class="mdi mdi-library-plus"></i>-->
+                    <!--  Add Inquery-->
+                    <!--</button>-->
                   </div>
 
 
@@ -387,93 +388,64 @@ include('inc/header.php') ?>
                     <!-- Add class <code>.table-striped</code> -->
                   </p>
                   <div class="table-responsive">
-                    <table class="table table-striped table-borderless">
-                      <thead>
-                        <tr>
-                          <th>Name</th>
-                          <th>Source</th>
-                          <th>Phone</th>
-                          <th>Email</th>
-                          <th>Action</th>
-                          <th>Product Name</th>
-                          <th>Status</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>John D</td>
-                          <td>Website</td>
-                          <td class="font-weight-bold">+8484848994</td>
-                          <td>info@comapny.com</td>
-                          <td>
-                            <div class="form-group w-100">
-                              <div class="input-group">
-                                <select name="" class="form-control" id="">
-                                  <option value="Contacted">Contacted</option>
-                                </select>
-                                <!-- <div class="input-group-append">
-                                  <button class="btn btn-sm btn-primary" type="button">Save</button>
-                                </div> -->
-                              </div>
-                            </div>
-                          </td>
-                          <td><a href="">Silicate</a></td>
-                          <td class="font-weight-medium">
-                            <div class="badge badge-success">Contacted</div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>John D</td>
-                          <td>Other</td>
-                          <td class="font-weight-bold">+8484848994</td>
-                          <td>info@comapny.com</td>
-                          <td>
-                            <div class="form-group w-100">
-                              <div class="input-group">
-                                <select name="" class="form-control" id="">
-                                  <option value="Contacted">Contacted</option>
-                                </select>
-                                <!-- <div class="input-group-append">
-                                  <button class="btn btn-sm btn-primary" type="button">Save</button>
-                                </div> -->
-                              </div>
-                            </div>
-                          </td>
-                          <td><a href="">Silicate</a></td>
-                          <td class="font-weight-medium">
-                            <div class="badge badge-danger">Not interested</div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Other</td>
-                          <td>John D</td>
-                          <td class="font-weight-bold">+8484848994</td>
-                          <td>info@comapny.com</td>
-                          <td>
-                            <div class="form-group w-100">
-                              <div class="input-group">
-                                <select name="" class="form-control" id="">
-                                  <option value="Contacted">Contacted</option>
-                                </select>
-                                <!-- <div class="input-group-append">
-                                  <button class="btn btn-sm btn-primary" type="button">Save</button>
-                                </div> -->
-                              </div>
-                            </div>
-                          </td>
-                          <td><a href="">Silicate</a></td>
-                          <td class="font-weight-medium">
-                            <div class="badge badge-primary">Converted</div>
-                          </td>
-                        </tr>
-                        <!-- <tr>
-                        <td>John D</td>
-                        <td class="font-weight-bold">+8484848994</td>
-                        <td>info@comapny.com</td>
-                        <td class="font-weight-medium"><div class="badge badge-success">Contacted</div></td>
-                      </tr> -->
-                      </tbody>
-                    </table>
+                     <table class="enquirytable table table-striped table-borderless" id="kt_table_users">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Name</th>
+                                                    <th>Phone</th>
+                                                    <th>Email</th>
+
+
+                                                    <th>Status</th>
+                                                    <th></th>
+                                                    <th>Product URL</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="fw-semibold text-gray-600">
+                                                <?php
+                                                include('./codes/db.php');
+                                                // Perform a query to fetch data from the property_requests table
+                                                $query = "SELECT id, name, email, phone_number,status,page_url, created_at FROM enqueries ORDER BY id DESC";
+                                                $result = $db->query($query);
+                                                if ($result->num_rows > 0) {
+                                                    while ($row = $result->fetch_assoc()) {
+                                                ?>
+                                                        <tr class="even">
+
+                                                            <!-- Display data in table cells -->
+                                                            <td><?= date('d M Y', strtotime($row['created_at'])) ?></td>
+                                                            <td><?= $row['name'] ?></td>
+                                                            <td><?= $row['phone_number'] ?></td>
+                                                            <td><?= $row['email'] ?></td>
+
+                                                            <td>
+                                                                <select class="form-select form-control enqueries-status-select" name="enqueries_status" data-enqueries-id="<?php echo $row['id']; ?>">
+                                                                    <option value="New" <?php echo ($row['status'] == 'New') ? 'selected' : ''; ?>>New</option>
+                                                                    <option value="Qualified" <?php echo ($row['status'] == 'Qualified') ? 'selected' : ''; ?>>Qualified</option>
+                                                                    <option value="Contacted" <?php echo ($row['status'] == 'Contacted') ? 'selected' : ''; ?>>Contacted</option>
+                                                                    <option value="Converted" <?php echo ($row['status'] == 'Converted') ? 'selected' : ''; ?>>Converted</option>
+                                                                    <option value="FollowUp" <?php echo ($row['status'] == 'FollowUp') ? 'selected' : ''; ?>>Follow Up</option>
+                                                                </select>
+                                                            </td>
+                                                            <td></td>
+                                                            <td><?= $row['page_url'] ?></td>
+
+                                                        </tr>
+                                                <?php
+                                                    }
+                                                    // Free result set
+                                                    $result->free();
+                                                } else {
+                                                    // Handle the case where no data is found
+                                                    echo "<tr><td colspan='5'>No data found</td></tr>";
+                                                }
+
+                                                // Close the database connection
+                                                $db->close();
+                                                ?>
+                                            </tbody>
+                                        </table>
                   </div>
                 </div>
               </div>
@@ -488,6 +460,92 @@ include('inc/header.php') ?>
         <!-- partial -->
      
     <!-- page-body-wrapper ends -->
+    
+    <script>
+                var datatable;
+                // Assuming you have a table element with an ID 'kt_ecommerce_enrolled_students_table'
+                var table = document.getElementById('kt_table_users');
+
+                var handleChangeStatus = () => {
+                    // Select all status dropdowns
+                    const statusDropdowns = table.querySelectorAll('[name="enqueries_status"]');
+
+                    statusDropdowns.forEach(statusDropdown => {
+                        // Status dropdown on change
+                        statusDropdown.addEventListener('change', function() {
+                            const studentId = $(this).closest('tr').find('[name="enqueries_status"]').data('enqueries-id');
+
+                            const newUserStatus = this.value;
+
+                            // SweetAlert2 pop up
+                            Swal.fire({
+                                text: `Are you sure you want to change the status to ${newUserStatus}?`,
+                                icon: "warning",
+                                showCancelButton: true,
+                                buttonsStyling: false,
+                                confirmButtonText: "Yes, change it!",
+                                cancelButtonText: "No, cancel",
+                                customClass: {
+                                    confirmButton: "btn fw-bold btn-success",
+                                    cancelButton: "btn fw-bold btn-active-light-primary"
+                                }
+                            }).then(function(result) {
+                                if (result.value) {
+                                    // Make an Ajax request to update the status
+                                    $.ajax({
+                                        url: './codes/enquiery.php', // Update with the correct PHP file
+                                        method: 'POST',
+                                        data: {
+                                            enqueries_id: studentId,
+                                            newUserStatus: newUserStatus
+                                        },
+                                        success: function(response) {
+                                            if (response.success) {
+                                                Swal.fire({
+                                                    text: `Status changed to ${newUserStatus} successfully!`,
+                                                    icon: "success",
+                                                    buttonsStyling: false,
+                                                    confirmButtonText: "Ok, got it!",
+                                                    customClass: {
+                                                        confirmButton: "btn fw-bold btn-primary",
+                                                    }
+                                                });
+                                            } else {
+                                                Swal.fire({
+                                                    text: `Failed to change status to ${newUserStatus}.`,
+                                                    icon: "error",
+                                                    buttonsStyling: false,
+                                                    confirmButtonText: "Ok, got it!",
+                                                    customClass: {
+                                                        confirmButton: "btn fw-bold btn-primary",
+                                                    }
+                                                });
+                                            }
+                                        },
+                                        error: function() {
+                                            Swal.fire({
+                                                text: `An error occurred while changing the status to ${newUserStatus}.`,
+                                                icon: "error",
+                                                buttonsStyling: false,
+                                                confirmButtonText: "Ok, got it!",
+                                                customClass: {
+                                                    confirmButton: "btn fw-bold btn-primary",
+                                                }
+                                            });
+                                        }
+                                    });
+                                } else {
+                                    // Reset the dropdown to the previous status if the user cancels
+                                    statusDropdown.value = statusDropdown.getAttribute('data-previous-value');
+                                }
+                            });
+                        });
+                    });
+                }
+
+                // Call the function to initialize the status change functionality
+                handleChangeStatus();
+            </script>
 
 
 
