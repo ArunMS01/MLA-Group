@@ -5,11 +5,13 @@ require 'send_email_funtion.php'; // Include the file containing sendEmail funct
 // Check if the form data is submitted via POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve form data
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
+    $name = $_POST['dzName'];
+    $email = $_POST['dzEmail'];
+    $phone = $_POST['dzPhoneNumber'];
     $subject = $_POST['subject'];
-    $message = $_POST['message'];
+    $company = $_POST['dzCompanyName'];
+    $message = $_POST['dzMessage'];
+    $pageurl = $_POST['pageurl'];
 
     // Validate form data
     $errors = array();
@@ -41,16 +43,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Establish a database connection
     include('./admin/codes/db.php'); // Include your database connection file
 
-    // Insert the form data into the database using prepared statements to prevent SQL injection
-    $query = "INSERT INTO contact_form_data (name, email, phone, subject, message) 
-              VALUES (?, ?, ?, ?, ?)";
-    
-    // Prepare the SQL query
-    $stmt = $db->prepare($query);
+ $query = "INSERT INTO enqueries (name, email, phone_number, company, description, page_url) 
+          VALUES (?, ?, ?, ?, ?, ?)";
 
-    // Bind parameters and execute the query
-    $stmt->bind_param('sssss', $name, $email, $phone, $subject, $message);
-    $stmt->execute();
+// Prepare the SQL query
+$stmt = $db->prepare($query);
+
+// Bind parameters and execute the query
+$stmt->bind_param('ssssss', $name, $email, $phone, $company, $message, $pageurl);
+$stmt->execute();
 
     // Check if the query was successful
     if ($stmt->affected_rows > 0) {
@@ -60,11 +61,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'message' => 'Form submitted successfully.',
             'redirect' => 'thank-you.php' // New page URL
         );
-
+//  $recipient = 'shivam@maidenstride.com';
         // Send email notification
-        $recipient = 'rahul@maidenstride.com'; // Change this to the email address where you want to receive notifications
-        $subject = 'New Contact Form Submission';
-        $body = "Name: $name\nEmail: $email\nPhone: $phone\nSubject: $subject\nMessage: $message";
+        $recipient = 'md@mlagroup.com'; // Change this to the email address where you want to receive notifications
+        $subject = 'New Inquery From The Website';
+       $body = "
+Hello Admin,
+
+You have received a new inquiry. Please reach out to the contact person with the details below:
+
+---------------------------------------
+Name: $name
+Email: $email
+Phone: $phone
+PageURL:  $pageurl
+Message: $message
+Company: $company
+---------------------------------------
+
+Kindly connect with them at your earliest convenience.
+
+Best regards,
+MLA Group
+";
         $emailSent = sendEmail($recipient, $subject, $body);
 
         if (!$emailSent) {
@@ -74,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         // Form submission failed
         $response = array(
-            'success' => false,
+            'success' => true,
             'message' => 'Error submitting the form.'
         );
     }

@@ -479,6 +479,12 @@ border: 1px solid #fff;
         .mapmy svg{
             
         }
+        
+        .btn-next img,
+         .btn-prev img
+        {
+            height:25px;
+        }
       </style>
       <ul class="tabs">
         <li class="active" data-id="0">Company Overview</li>
@@ -581,10 +587,10 @@ border: 1px solid #fff;
             <div class="col-lg-2">
               <div class="pagination-align justify-content-end">
                 <div class="tranding-button-prev btn-prev">
-                  <i class="flaticon flaticon-left-chevron"></i>
+               <img src="icons/left-chevron.png" alt="">
                 </div>
                 <div class="tranding-button-next btn-next">
-                  <i class="flaticon flaticon-chevron"></i>
+                  <img src="icons/chevron.png" alt="">
                 </div>
               </div>
             </div>

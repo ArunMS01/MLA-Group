@@ -256,3 +256,7 @@ Stack trace:
   thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
 [03-Oct-2024 08:07:36 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:91) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 133
 [03-Oct-2024 08:07:42 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:91) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 133
+[02-Dec-2024 11:04:26 UTC] PHP Warning:  Undefined array key "galleryImages" in /home3/mlagroup/public_html/admin/codes/add-product.php on line 61
+[02-Dec-2024 11:04:26 UTC] PHP Warning:  Trying to access array offset on value of type null in /home3/mlagroup/public_html/admin/codes/add-product.php on line 61
+[02-Dec-2024 11:04:26 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home3/mlagroup/public_html/admin/codes/add-product.php on line 61
+[02-Dec-2024 11:04:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/mlagroup/public_html/admin/codes/add-product.php:61) in /home3/mlagroup/public_html/admin/codes/add-product.php on line 119
