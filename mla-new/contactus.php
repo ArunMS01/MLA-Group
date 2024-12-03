@@ -2,6 +2,10 @@
 
 
 <style>
+.invalid-feedback{
+    display:none;
+    color:red;
+}
     .page-heading-sec {
         background-image: url(https://finixpa-react.netlify.app/img/background/page_hd.jpg);
         background-position: center center;
@@ -273,7 +277,7 @@
             <div class="col-md-6 ">
                 <div class="contact-page-form" style="position: sticky; top:6vw" method="post">
                     <h2>Get in Touch</h2>
-                    <form id="contactForm" action="contact-mail.php" method="post">
+                    <form id="contactForm" action="contact-mail" method="post">
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="single-input-field">
@@ -290,7 +294,7 @@
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="single-input-field">
                                     <input type="text" placeholder="Phone Number" name="phone" id="phone" />
-                                    <div class="invalid-feedback" id="phoneError">Please enter a valid phone number.</div>
+                                <div class="invalid-feedback" id="phoneError">Please enter a valid phone number.</div>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -507,11 +511,16 @@
     function isValidEmail(email) {
         return /\S+@\S+\.\S+/.test(email);
     }
+    
+    function isvalidname(name){
+        return /^[A-Za-z\s]+$/.test(name);
+    }
 
     // Function to validate phone number
-    function isValidPhoneNumber(phone) {
-        return /^\+?\d+$/.test(phone);
-    }
+   function isValidPhoneNumber(phone) {
+    // Adjust pattern to allow international numbers with optional "+" and minimum digits
+    return /^\+?\d{7,15}$/.test(phone);
+}
 
     // Function to validate form fields
     function validateForm() {
@@ -527,7 +536,7 @@
 
         var isValid = true;
 
-        if (name.trim() === "") {
+        if (name.trim() === "" || !isvalidname(name)) {
             document.getElementById("nameError").style.display = "block";
             isValid = false;
         } else {
@@ -541,7 +550,7 @@
             document.getElementById("emailError").style.display = "none";
         }
 
-        if (phone.trim() !== "" && !isValidPhoneNumber(phone)) {
+        if (phone.trim() == "" || !isValidPhoneNumber(phone)) {
             document.getElementById("phoneError").style.display = "block";
             isValid = false;
         } else {
@@ -583,68 +592,75 @@
             document.getElementById("countryError").style.display = "none";
         }
 
-        if (message.trim() === "") {
-            document.getElementById("messageError").style.display = "block";
-            isValid = false;
-        } else {
-            document.getElementById("messageError").style.display = "none";
-        }
 
         return isValid;
     }
 
     // Function to handle form submission
     function submitForm(event) {
-        event.preventDefault();
+    event.preventDefault();
 
-        if (!validateForm()) {
-            return;
-        }
+    // Form validation (make sure this function is defined elsewhere)
+    if (!validateForm()) {
+        return;
+    }
 
-        // Disable the submit button
-        var submitButton = document.querySelector("input[type='submit']");
-        submitButton.value = "Submitting...";
-        submitButton.disabled = true;
+    // Disable the submit button and change the text
+    var submitButton = document.querySelector("input[type='submit']");
+    submitButton.value = "Submitting...";
+    submitButton.disabled = true;
 
-        // Show the loading overlay (if exists)
-        var loadingOverlay = document.getElementById("loadingOverlay");
-        if (loadingOverlay) {
-            loadingOverlay.style.display = "block";
-        }
+    // Show the loading overlay (if it exists)
+    var loadingOverlay = document.getElementById("loadingOverlay");
+    if (loadingOverlay) {
+        loadingOverlay.style.display = "block";
+    }
 
-        var formData = new FormData(document.getElementById("contactForm"));
+    // Collect the form data
+    var formData = new FormData(document.getElementById("contactForm"));
 
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "contact-mail.php", true);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-                if (xhr.status === 200) {
+    // Create a new AJAX request
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "contact-mail", true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                try {
                     var response = JSON.parse(xhr.responseText);
+
                     if (response.success) {
-                        // Form submitted successfully
-                        showSuccessMessage(); // Call function to show success message
+                        // Success: show success message and reset form
+                        // showSuccessMessage(); // Define this function to show a success message
+                        location.href="thank-you.php";
                         document.getElementById("contactForm").reset();
                     } else {
-                        // Error submitting form
-                        alert("Error submitting the form.");
+                        // Error returned from the server
+                        alert(response.error || "Error submitting the form.");
                     }
-                } else {
-                    // Error in AJAX request
-                    alert("Error in AJAX request.");
+                } catch (e) {
+                    // Handle non-JSON responses (like HTML)
+                    alert(e);
                 }
-
-                // Re-enable the submit button
-                submitButton.value = "Send Now";
-                submitButton.disabled = false;
-
-                // Hide the loading overlay
-                if (loadingOverlay) {
-                    loadingOverlay.style.display = "none";
-                }
+            } else {
+                // Handle server errors (status codes other than 200)
+                alert("Error in AJAX request. Status: " + xhr.status);
             }
-        };
-        xhr.send(formData);
-    }
+
+            // Re-enable the submit button
+            submitButton.value = "Send Now";
+            submitButton.disabled = false;
+
+            // Hide the loading overlay
+            if (loadingOverlay) {
+                loadingOverlay.style.display = "none";
+            }
+        }
+    };
+
+    // Send the form data
+    xhr.send(formData);
+}
+
 
     document.getElementById("contactForm").addEventListener("submit", submitForm);
 </script>
@@ -664,7 +680,6 @@
     }
 
 
-    // Add event listener for form submission
-    document.getElementById("contactForm").addEventListener("submit", submitForm);
+
 </script>
 <?php include('footer.php') ?>
