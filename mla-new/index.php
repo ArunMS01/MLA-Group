@@ -3,56 +3,56 @@ include('head.php');
 ?>
 <title>MLA Group Of Industries </title>
 <link rel="canonical" href="https://www.mlagroup.com/" />
-	<meta name="description"
-		content="Our product range consists of various precipitated chemicals and functional fillers, both synthetic and naturally occurring processed minerals including Precipitated Silica, Hydrated Calcium Silicate, Aluminium Silicate, Zinc Stearate, Calcium Stearate, Calcium Sulphate, Zinc-oxide active/transparent, Levigated / Surface treated China Clays, Micronized Calcite, Dolomite, Talc etc.">
-	
+<meta name="description"
+    content="Our product range consists of various precipitated chemicals and functional fillers, both synthetic and naturally occurring processed minerals including Precipitated Silica, Hydrated Calcium Silicate, Aluminium Silicate, Zinc Stearate, Calcium Stearate, Calcium Sulphate, Zinc-oxide active/transparent, Levigated / Surface treated China Clays, Micronized Calcite, Dolomite, Talc etc.">
 
-	<script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "WebSite",
-  "name": "MLA Group",
-  "url": "https://www.mlagroup.com/"
-   
-}
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "WebSite",
+        "name": "MLA Group",
+        "url": "https://www.mlagroup.com/"
+
+    }
 </script>
-	<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "MLA Group",
-  "image": "https://www.mlagroup.com/img/mlagroup11.jpeg",
-  "@id": "",
-  "url": "https://www.mlagroup.com/",
-  "telephone": "+915122555292",
-  "priceRange": "Best Price",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "111/230, Harsh Nagar",
-    "addressLocality": "Kanpur",
-    "postalCode": "208012",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 26.472690,
-    "longitude": 80.319900
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
-    ],
-    "opens": "00:00",
-    "closes": "23:59"
-  } 
-}
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "MLA Group",
+        "image": "https://www.mlagroup.com/img/mlagroup11.jpeg",
+        "@id": "",
+        "url": "https://www.mlagroup.com/",
+        "telephone": "+915122555292",
+        "priceRange": "Best Price",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "111/230, Harsh Nagar",
+            "addressLocality": "Kanpur",
+            "postalCode": "208012",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 26.472690,
+            "longitude": 80.319900
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
+        }
+    }
 </script>
 </head>
 
@@ -77,22 +77,22 @@ include('head.php');
 
 
             <style>
-            
-            /*Ipad */
-            
-            .companies-inner .col-md-3{
-                margin-bottom:10px;
-            }
-            
-            @media only screen and (min-width:768px) and (max-width:1180px){
-                footer .footer-logo img{
-                    max-width: 156px;
+                /*Ipad */
+
+                .companies-inner .col-md-3 {
+                    margin-bottom: 10px;
                 }
-            }
-            
-                html{
+
+                @media only screen and (min-width:768px) and (max-width:1180px) {
+                    footer .footer-logo img {
+                        max-width: 156px;
+                    }
+                }
+
+                html {
                     overflow-x: hidden;
                 }
+
                 .py-new {
                     padding-top: 1rem !important;
                     padding-bottom: 2rem !important;
@@ -1197,7 +1197,7 @@ overflow: hidden;
                                 display: block !important;
                             }
 
-                            .mttop-20{
+                            .mttop-20 {
                                 margin-top: 65px;
                             }
                         }
@@ -1302,7 +1302,7 @@ overflow: hidden;
                                 <div class="col-lg-12 mttop-20">
                                     <div class="pagination-align justify-content-center">
                                         <div class="tranding-button-prev1 btn-prev">
-                                        <img src="icons/left-chevron.png" alt="">
+                                            <img src="icons/left-chevron.png" alt="">
                                         </div>
                                         <div class="tranding-button-next1 btn-next">
                                             <img src="icons/chevron.png" alt="">
@@ -1686,23 +1686,23 @@ overflow: hidden;
                             /* Hide contentindustry by default */
                         }
                     }
-                    
-                  .btn-next img {
-    height: 25px;
-}
-                    
-                  .btn-prev img {
-    height: 25px;
-}
+
+                    .btn-next img {
+                        height: 25px;
+                    }
+
+                    .btn-prev img {
+                        height: 25px;
+                    }
                 </style>
 
                 <div class="col-lg-2">
                     <div class="pagination-align justify-content-end">
                         <div class="tranding-button-prev btn-prev">
-                         <img src="icons/left-chevron.png" alt="">
+                            <img src="icons/left-chevron.png" alt="">
                         </div>
                         <div class="tranding-button-next btn-next">
-                           <img src="icons/chevron.png" alt="">
+                            <img src="icons/chevron.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -2282,56 +2282,60 @@ overflow: hidden;
                     <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.5s">
                         <a href="javascript:void(0);" class="companies-wrapper">
                             <div class="companies-media">
-                                <img src="https://www.mlagroup.com/img/certifications/dnv.webp" alt="">
+                                <img src="./img/certifications/dnv.webp" alt="DNV Certification">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.2s">
                         <a href="javascript:void(0);" class="companies-wrapper">
                             <div class="companies-media">
-                                <img src="https://www.mlagroup.com/img/certifications/02.webp" alt="">
+                                <img src="./img/certifications/rohs-compliant.webp" alt="RoHS Compliant
+">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.3s">
                         <a href="javascript:void(0);" class="companies-wrapper">
                             <div class="companies-media">
-                                <img src="https://www.mlagroup.com/img/certifications/03.webp" alt="">
+                                <img src="./img/certifications/reach-compliance.webp" alt="Reach Compliance">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.8s">
                         <a href="javascript:void(0);" class="companies-wrapper">
                             <div class="companies-media">
-                                <img src="https://www.mlagroup.com/img/certifications/04.webp" alt="">
+                                <img src="./img/certifications/gmp-logo.webp" alt="Good Manufacturing Practice
+">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.5s">
                         <a href="javascript:void(0);" class="companies-wrapper">
                             <div class="companies-media">
-                                <img src="https://www.mlagroup.com/img/certifications/05.webp" alt="">
+                                <img src="./img/certifications/fda-certified.webp" alt="FDA Certified">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
                         <a href="javascript:void(0);" class="companies-wrapper">
                             <div class="companies-media">
-                                <img src="https://www.mlagroup.com/img/certifications/06.webp" alt="">
+                                <img src="./img/certifications/eu-certified.webp" alt="EU Certified
+">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.5s">
                         <a href="javascript:void(0);" class="companies-wrapper">
                             <div class="companies-media">
-                                <img src="https://www.mlagroup.com/img/certifications/07.webp" alt="">
+                                <img src="./img/certifications/en-seven-one.webp" alt="EN71">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
                         <a href="javascript:void(0);" class="companies-wrapper">
                             <div class="companies-media">
-                                <img src="https://www.mlagroup.com/img/certifications/08.webp" alt="">
+                                <img src="./img/certifications/sedex-certified.webp" alt="Sedex Certified 
+">
                             </div>
                         </a>
                     </div>
@@ -2412,11 +2416,13 @@ overflow: hidden;
         .b-1 {
             border-top: 1px solid #FE8F34;
         }
-@media only screen and (max-width:1500px) {
-    .gallery .content h1{
-        font-size:1.5rem;
-    }
-}
+
+        @media only screen and (max-width:1500px) {
+            .gallery .content h1 {
+                font-size: 1.5rem;
+            }
+        }
+
         @media only screen and (max-width:768px) {
             .border-box {
                 min-height: 23rem !important;

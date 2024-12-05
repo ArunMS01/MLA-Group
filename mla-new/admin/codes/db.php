@@ -7,9 +7,9 @@ if (!isset($db) || !($db instanceof mysqli)) {
 
        // Database configuration
     define('DB_HOST', 'localhost'); // Replace with your database host
-    define('DB_USERNAME', 'mlagroup_mlagroup'); // Replace with your database username
-    define('DB_PASSWORD', '3^c!p3dY(Z6k'); // Replace with your database password
-    define('DB_NAME', 'mlagroup_mlagroup'); // Replace with your database name
+    define('DB_USERNAME', 'root'); // Replace with your database username
+    define('DB_PASSWORD', ''); // Replace with your database password
+    define('DB_NAME', 'mla'); // Replace with your database name
 
 
     // Establish database connection
