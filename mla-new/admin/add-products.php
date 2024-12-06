@@ -493,10 +493,37 @@ include('inc/header.php') ?>
     width: 100px !important;
   }
 </style>
+
+<script>
+          // CKEditor initialization
+          CKEDITOR.replace('editor1', {
+            height: 300,
+            filebrowserUploadUrl: './upload-ck.php'
+          });
+
+           // CKEditor initialization
+           CKEDITOR.replace('editor2', {
+            height: 300,
+            filebrowserUploadUrl: './upload-ck.php'
+          });
+
+
+
+          // File upload functionality
+          document.querySelector('.file-upload-browse').addEventListener('click', function() {
+            document.querySelector('.file-upload-default').click();
+          });
+
+          document.querySelector('.file-upload-default').addEventListener('change', function() {
+            const filename = document.querySelector('.file-upload-default').value;
+            document.querySelector('.file-upload-info').value = filename.split('\\').pop();
+          });
+        </script>
+
+
+
       <script>
-        //   ClassicEditor.create(document.querySelector('#editor1'));
-        CKEDITOR.replace('editor1');
-        CKEDITOR.replace('editor2');
+      
 
         function generateUrlAndMetaTitle() {
           // Get the course name input field and its value
