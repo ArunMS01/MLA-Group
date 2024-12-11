@@ -34,8 +34,8 @@ $stmt->bind_param('ssssss', $name, $email, $phone, $company, $message, $pageurl)
 $stmt->execute();
 
     // Construct email content
-    //  $recipient = 'anubhav@maidenstride.com';
-    $recipient = 'md@mlagroup.com'; // Replace with your email address
+    //   $recipient = 'sv708128@gmail.com';
+     $recipient = 'md@mlagroup.com'; // Replace with your email address
     $subject   = 'New Inquery Form Website Contact Page';
 
     $emailContent = "

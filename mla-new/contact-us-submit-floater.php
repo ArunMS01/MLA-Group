@@ -13,6 +13,8 @@ if(isset($_POST['action'])){
         $phonenumber = $_POST['phone'];
         $contactmethod = $_POST['contactmethod'];
         $pageurl = $_POST['pageUrl'];
+         $countrynamev = $_POST['countrynamev'];
+          $companynamev = $_POST['companynamev'];
     //     $check_customerexist = "SELECT * FROM customer_queries WHERE mobile_no = '$phonenumber'";
     //   $check_existance = mysqli_query($conn, $check_customerexist);
     //   if(mysqli_num_rows($check_existance) > 0){
@@ -29,6 +31,8 @@ You have received a new inquiry from website Floater. Please reach out to the co
 
 Phone: $phonenumber
 PageURL:  $pageurl
+Country : $countrynamev
+Company : $companynamev
 
 ---------------------------------------
 
@@ -37,10 +41,10 @@ Kindly connect with them at your earliest convenience.
 Best regards,
 MLA Group
 ";
-    //  $recipient = 'shivam@maidenstride.com';
-     $recipient = 'mayur@mlagroup.com'; // Change this to the email address where you want to receive notifications
+    //  $recipient = 'sv708128@gmail.com';
+    $recipient = 'mayur@mlagroup.com'; // Change this to the email address where you want to receive notifications
         $subject = 'New Inquery From The Website Floater';
-        $sql = "INSERT INTO enqueries (name,email,phone_number, page_url) VALUES ('Inquery website floater', 'Inquery website floater', '$phonenumber', '$pageurl')";
+        $sql = "INSERT INTO enqueries (name, email, phone_number, company, country, page_url) VALUES ('Inquery website floater', 'Inquery website floater', '$phonenumber','$companynamev', '$countrynamev', '$pageurl')";
         $result = mysqli_query($db, $sql);
         
          $emailSent = sendEmail($recipient, $subject, $body);
