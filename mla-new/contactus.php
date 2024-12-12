@@ -281,55 +281,55 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="single-input-field">
-                                    <input type="text" placeholder="Your Name" name="name" id="name" maxlength="30" required />
+                                    <input type="text" placeholder="Your Name*" name="name" id="name" maxlength="30" required />
                                     <div class="invalid-feedback" id="nameError">Please enter your name.</div>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="single-input-field">
-                                    <input type="email" placeholder="E-mail" name="email" id="email" maxlength="100" required />
+                                    <input type="email" placeholder="E-mail*" name="email" id="email" maxlength="100" required />
                                     <div class="invalid-feedback" id="emailError">Please enter a valid email address.</div>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="single-input-field">
-                                    <input type="text" placeholder="Phone Number" name="phone" id="phone" />
+                                    <input type="text" placeholder="Phone Number*" name="phone" id="phone" />
                                 <div class="invalid-feedback" id="phoneError">Please enter a valid phone number.</div>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="single-input-field">
-                                    <input type="text" placeholder="Company Name" name="company" id="company" />
+                                    <input type="text" placeholder="Company Name*" name="company" id="company" />
                                     <div class="invalid-feedback" id="companyError">Please enter your company name.</div>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="single-input-field">
-                                    <input type="text" placeholder="Mailing Address" name="address" id="address" />
+                                    <input type="text" placeholder="Mailing Address*" name="address" id="address" />
                                     <div class="invalid-feedback" id="addressError">Please enter your mailing address.</div>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="single-input-field">
-                                    <input type="text" placeholder="City" name="city" id="city" maxlength="30" />
+                                    <input type="text" placeholder="City*" name="city" id="city" maxlength="30" />
                                     <div class="invalid-feedback" id="cityError">Please enter your city.</div>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="single-input-field">
-                                    <input type="text" placeholder="Zip or Postal Code" name="zip" id="zip" maxlength="100" />
+                                    <input type="text" placeholder="Zip or Postal Code*" name="zip" id="zip" maxlength="100" />
                                     <div class="invalid-feedback" id="zipError">Please enter your zip or postal code.</div>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="single-input-field">
-                                    <input type="text" placeholder="Country" name="country" id="country" />
+                                    <input type="text" placeholder="Country*" name="country" id="country" />
                                     <div class="invalid-feedback" id="countryError">Please enter your country.</div>
                                 </div>
                             </div>
                             <div class="col-md-12 message-input">
                                 <div class="single-input-field">
-                                    <textarea placeholder="Write Your Message" name="message" id="message"></textarea>
+                                    <textarea placeholder="Write Your Message*" name="message" id="message"></textarea>
                                 </div>
                             </div>
                             <div class="single-input-fieldsbtn">

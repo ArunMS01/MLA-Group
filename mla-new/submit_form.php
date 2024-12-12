@@ -12,12 +12,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $company = $_POST['dzCompanyName'];
     $message = $_POST['dzMessage'];
     $pageurl = $_POST['pageurl'];
+    $dzcountry = $_POST['dzcountry'];
 
     // Validate form data
     $errors = array();
 
     if (empty($name)) {
         $errors[] = 'Name is required.';
+    }
+    
+     if (empty($company)) {
+        $errors[] = 'Company is required.';
+    }
+    
+     if (empty($dzcountry)) {
+        $errors[] = 'Country is required.';
     }
 
     if (empty($email)) {
@@ -43,14 +52,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Establish a database connection
     include('./admin/codes/db.php'); // Include your database connection file
 
- $query = "INSERT INTO enqueries (name, email, phone_number, company, description, page_url) 
-          VALUES (?, ?, ?, ?, ?, ?)";
+ $query = "INSERT INTO enqueries (name, email, phone_number, company, description, country, page_url) 
+          VALUES (?, ?, ?, ?, ?, ?, ?)";
 
 // Prepare the SQL query
 $stmt = $db->prepare($query);
 
 // Bind parameters and execute the query
-$stmt->bind_param('ssssss', $name, $email, $phone, $company, $message, $pageurl);
+$stmt->bind_param('sssssss', $name, $email, $phone, $company, $message, $dzcountry, $pageurl);
 $stmt->execute();
 
     // Check if the query was successful
@@ -77,6 +86,7 @@ Phone: $phone
 PageURL:  $pageurl
 Message: $message
 Company: $company
+Country: $dzcountry
 ---------------------------------------
 
 Kindly connect with them at your earliest convenience.

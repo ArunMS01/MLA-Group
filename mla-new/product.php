@@ -436,14 +436,33 @@ include('header.php');
                             <div class=" style-1 m-r20 m-md-r0 wow fadeInUp" data-wow-delay="0.5s"
                                 bis_skin_checked="1"
                                 style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                               <?php
+function alttag($filename) {
+    // Step 1: Remove everything before and including the first underscore
+    $cleaned = preg_replace('/^[^_]*_/', '', $filename);
+    
+    // Step 2: Remove the file extension if present
+    $cleaned = pathinfo($cleaned, PATHINFO_FILENAME);
+    
+    // Step 3: Replace any hyphens or underscores with spaces
+    $cleaned = str_replace(['_', '-'], ' ', $cleaned);
+    
+    // Step 4: Capitalize the first letter of each word
+    return ucwords(trim($cleaned));
+}
+?>
+
+
                                 <?php
                                 if (isset($getbrand['logo'])) {
                                 ?>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <img class="brimg" style="display: block;"
-                                                src="admin/codes/<?php echo $getbrand['logo'] ?>"
-                                                class="mt-4 mb-4 margin-top mix-blend-mode">
+                                           <img class="brimg" 
+     style="display: block;"
+     src="admin/codes/<?php echo $getbrand['logo']; ?>"
+     class="mt-4 mb-4 margin-top mix-blend-mode" 
+     alt="<?php echo alttag($getbrand['logo']); ?>">
 
 
                                         </div>
@@ -486,10 +505,16 @@ include('header.php');
                                             <div class="error-msg" id="phone-error"></div>
                                         </div>
 
-                                        <label class="form-label">Company Name (Optional)</label>
+                                        <label class="form-label">Company Name*</label>
                                         <div class="input-groups">
-                                            <input type="text" class="form-control" name="dzCompanyName">
+                                            <input type="text" required class="form-control" name="dzCompanyName" id="company">
                                             <div class="error-msg" id="company-error"></div>
+                                        </div>
+                                        
+                                         <label class="form-label">Country*</label>
+                                        <div class="input-groups">
+                                            <input required type="text" class="form-control" name="dzcountry" id="country">
+                                            <div class="error-msg" id="country-error"></div>
                                         </div>
 
                                         <label class="form-label">Message (Optional)</label>
@@ -1210,6 +1235,10 @@ include('header.php');
             });
 
             // Validate Name
+            var country = document.querySelector("#country");
+            var company = document.querySelector("#company");
+             var countryerr = document.querySelector("#country-error");
+            var companyerr = document.querySelector("#company-error");
             var nameInput = document.querySelector("input[name='dzName']");
             var nameError = document.getElementById('name-error');
             var nameRegex = /^[A-Za-z\s]+$/;
@@ -1222,6 +1251,26 @@ include('header.php');
                 isValid = false;
             } else {
                 nameError.textContent = ''; // Clear the error if validation passes
+            }
+            
+             if (country.value.trim() === '') {
+                countryerr.textContent = 'Country is required.';
+                isValid = false;
+            } else if (!nameRegex.test(country.value.trim())) {
+                countryerr.textContent = 'Country name can only contain letters and spaces.';
+                isValid = false;
+            } else {
+               countryerr.textContent = ''; // Clear the error if validation passes
+            }
+            
+             if (company.value.trim() === '') {
+                companyerr.textContent = 'Company is required.';
+                isValid = false;
+            } else if (!nameRegex.test(company.value.trim())) {
+                companyerr.textContent = 'Company name can only contain letters and spaces.';
+                isValid = false;
+            } else {
+               companyerr.textContent = ''; // Clear the error if validation passes
             }
 
 

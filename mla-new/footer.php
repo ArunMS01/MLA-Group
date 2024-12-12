@@ -153,8 +153,11 @@
       padding: 20px;
       text-align: center;
     }
-
-    input#chat-input {
+.form-controls{
+    margin-top:15px !important;
+}
+    input#chat-input,
+    .form-controls{
       width: 100%;
       display: block;
       margin: auto;
@@ -520,7 +523,7 @@
       display: none;
       color: red;
       text-align: center;
-      font-size: 17px;
+      /*font-size: 17px;*/
     }
   </style>
 
@@ -560,6 +563,10 @@
       <div class='blanter-msg'>
         <input id='chat-input' placeholder="Submit Your Number" maxlength='120' row='1'>
         <small id="invalidno">Please fill correct number</small>
+        <input class="form-controls" id="companynamev" placeholder="Company Name">
+        <small style="color:red" id="companynameerr"></small>
+          <input class="form-controls" id="countrynamev" placeholder="Country Name">
+            <small style="color:red" id="countrynameerr"></small>
         <input type="hidden" value="" id="contact-method">
         <button id="submit-whatsapp" class="btn-whatsapp">Connect On Whatsapp</button>
         <div>
@@ -796,17 +803,54 @@
 
 
   $('#submit-whatsapp').on('click', function() {
+        var isValid = true;
     const pageUrl = window.location.href;
-
-
-    var phone = document.getElementById("chat-input").value;
-    var regx = /^(\+?\d{1,3})?[6-9]\d{6,14}$/;
-    if (regx.test(phone)) {
+     var nameRegex = /^[A-Za-z\s]+$/;
+       var phone = document.getElementById("chat-input").value;
+              var regx = /^(\+?\d{1,3})?[6-9]\d{6,14}$/;
+     var companynamev = document.querySelector("#companynamev");
+     var companynameerr = document.querySelector("#companynameerr");
+     var countrynamev = document.querySelector("#countrynamev");
+     var countrynameerr = document.querySelector("#countrynameerr");
+     
+      if (!regx.test(phone)) {
+            $("#invalidno").show();
+      }
+      else{
+         $("#invalidno").hide(); 
+      }
+      
+        if (companynamev.value.trim() === '') {
+                companynameerr.textContent = 'Please enter company name';
+                isValid = false;
+            } else if (!nameRegex.test(companynamev.value.trim())) {
+                companynameerr.textContent = 'Please enter company name';
+                isValid = false;
+            } else {
+               companynameerr.textContent = ''; // Clear the error if validation passes
+            }
+     
+      if (countrynamev.value.trim() === '') {
+                countrynameerr.textContent = 'Please enter country name';
+                isValid = false;
+            } else if (!nameRegex.test(countrynamev.value.trim())) {
+                countrynameerr.textContent = 'Please enter country name';
+                isValid = false;
+            } else {
+               countrynameerr.textContent = ''; // Clear the error if validation passes
+            }
+            
+           
+    
+ 
+  
+    if (regx.test(phone) && isValid) {
       $("#invalidno").hide();
       var contactmethod = $('#contact-method').val();
 
       // Ensure a product is selected
-
+    var ctname = countrynamev.value;
+     var cpname = companynamev.value;
 
       //   alert(phone);
       $.ajax({
@@ -816,6 +860,9 @@
           phone: phone,
           contactmethod: contactmethod,
           pageUrl: pageUrl,
+          companynamev:cpname,
+          countrynamev:ctname,
+          
           action: 'phone-number-submit'
         },
         beforeSend: function() {
@@ -854,9 +901,7 @@
         }
 
       });
-    } else {
-      $("#invalidno").css("display", "block");
-    }
+    } 
   });
 
 
