@@ -994,51 +994,7 @@ function alttag($filename) {
     ?>
 
     <!--Recommend Section Start-->
-    <section class="content-inner-1 bg-light" style="display:none">
-        <div class="container">
-            <h3 class="title text-center mb-4">RANGE OF PRODUCTS</h3>
-            <div class="site-filters clearfix d-flex align-items-center justify-content-center">
-                <ul class="filters" data-bs-toggle="buttons">
-                    <?php
-                    $i = 1;
-                    foreach ($brands as $brand): ?>
-                        <li class="btn btth" data-brand="brand-<?php echo $brand['id']; ?>">
-                            <input type="radio" name="brand">
-                            <a href="#brand-<?php echo $brand['id']; ?>"><?php echo htmlspecialchars($brand['name']); ?></a>
-                        </li>
-                    <?php
-                        $i++;
-                    endforeach; ?>
-                </ul>
-            </div>
-
-            <?php foreach ($brands as $brand): ?>
-                <div class="tab-content tabcontentntew" id="brand-<?php echo $brand['id']; ?>">
-                    <div class="row align-items-center">
-                        <div class="col-md-3">
-                            <img class="brandimg" style="display: block; margin: auto;" src="admin/codes/<?php echo htmlspecialchars($brand['logo']); ?>" class="mt-4 mb-4">
-                        </div>
-                        <div class="col-md-9">
-                            <div class="row gx-xl-4 g-3">
-                                <?php foreach ($brand['products'] as $product): ?>
-                                    <div class="col-md-3">
-                                        <div class="widget widget_categories style-1">
-                                            <ul>
-                                                <li class="cat-item"><a href="<?php echo htmlspecialchars($product['url']); ?>"><?php echo htmlspecialchars($product['title']); ?></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                <?php endforeach; ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-
-        </div>
-
-
-    </section>
+    
     <style>
         .brandimg {
             mix-blend-mode: multiply;
