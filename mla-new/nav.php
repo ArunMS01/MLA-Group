@@ -233,7 +233,7 @@
                                     if($resutl){
                                         while($row = mysqli_fetch_assoc($resutl)){
                                     ?>
-									<li><a class="cpappp" href="brands.php?url=<?php echo $row['url']?>">
+									<li><a class="cpappp" href="brands?url=<?php echo $row['url']?>">
 									    
 				<?php
 			
