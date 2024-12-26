@@ -626,7 +626,7 @@
               <li><a class="bleft" href="/">Home</a></li>
               <li><a class="bleft" href="about">About Us</a></li>
               <li><a class="bleft" href="r-and-d">R & D</a></li>
-              <li><a class="bleft" href="qc">quality</a></li>
+              <li><a class="bleft" href="qc">Quality</a></li>
               <li><a class="bleft" href="manufacturing">Manufacturing</a></li>
               <li><a href="contactus">Contact Us</a></li>
 
