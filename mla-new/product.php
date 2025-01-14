@@ -563,12 +563,17 @@ function alttag($filename) {
                                 aria-controls="profile-tab-pane" aria-selected="false">Description</button>
                         </li>
 
-
+                        <?php
+                        if(!empty($product_data['specs'])){
+                        ?>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="profile-tabs" data-bs-toggle="tab"
                                 data-bs-target="#profile-tab-panes" type="button" role="tab"
                                 aria-controls="profile-tab-panes" aria-selected="false">Specifications</button>
                         </li>
+                        <?php
+                        }
+                        ?>
                     </ul>
                     <div class="tab-content" id="myTabContent">
 
