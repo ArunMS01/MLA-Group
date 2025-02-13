@@ -658,6 +658,7 @@ function alttag($filename) {
     </section>
     <?php
     // Step 1: Retrieve related product IDs
+    if(isset($product_data['related_products'])){
     $related_product_ids = explode(',', $product_data['related_products']);
 
     // Step 2: Initialize an array to store related product details
@@ -674,6 +675,7 @@ function alttag($filename) {
             // Add the product details to the array
             $related_products[] = $row;
         }
+    }
     }
 
     ?>
