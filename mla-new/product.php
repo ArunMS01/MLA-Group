@@ -216,7 +216,17 @@ include('header.php');
                                                 data-src="./admin/codes/<?php echo $product_data['main_image']; ?>">
                                                 <i class="feather icon-maximize dz-maximize top-left"></i>
                                             </a>
-                                            <img width="400px" height="400px" src="./admin/codes/<?php echo $product_data['main_image']; ?>" alt="Main Image">
+                                        
+                                            <?php
+                                            $image_alt ='Product image';
+                                            if(isset($product_data['main_image'])){
+$image_path = $product_data['main_image']; // Example: product-image/ethylene-glycol-di-sterate.webp
+$image_name = pathinfo($image_path, PATHINFO_FILENAME); // Removes extension
+$image_alt = ucwords(str_replace('-', ' ', $image_name)); // Replaces hyphens and capitalizes words
+}
+?>
+                                        
+                                            <img width="400px" height="400px" src="./admin/codes/<?php echo $product_data['main_image']; ?>" alt="<?php echo $image_alt; ?>">
                                         </div>
                                     </div>
                                     <!-- Display gallery images -->
@@ -227,7 +237,8 @@ include('header.php');
                                                     data-src="<?php echo $image_url; ?>">
                                                     <i class="feather icon-maximize dz-maximize top-left"></i>
                                                 </a>
-                                                <img src="./admin/codes/<?php echo $image_url; ?>" alt="Gallery Image">
+                                            <img src="./admin/codes/<?php echo $image_url; ?>" alt="<?php echo isset($image_url) ? ucwords(str_replace('-', ' ', pathinfo($image_url, PATHINFO_FILENAME))) : 'Gallery Image'; ?>">
+
                                             </div>
                                         </div>
                                     <?php endforeach; ?>
