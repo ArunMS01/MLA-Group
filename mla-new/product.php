@@ -248,12 +248,12 @@ $image_alt = ucwords(str_replace('-', ' ', $image_name)); // Replaces hyphens an
                                 <div class="swiper-wrapper">
                                     <!-- Display main image in thumbnail slider -->
                                     <div class="swiper-slide">
-                                        <img src="./admin/codes/<?php echo $product_data['main_image']; ?>" alt="Main Image">
+                                        <img src="./admin/codes/<?php echo $product_data['main_image']; ?>" alt="<?php echo isset($product_data['main_image']) ? ucwords(str_replace('-', ' ', pathinfo($product_data['main_image'], PATHINFO_FILENAME))) : 'Gallery Image'; ?>">
                                     </div>
                                     <!-- Display gallery images in thumbnail slider -->
                                     <?php foreach ($gallery_images as $image_url): ?>
                                         <div class="swiper-slide">
-                                            <img src="./admin/codes/<?php echo $image_url; ?>" alt="Gallery Image">
+                                            <img src="./admin/codes/<?php echo $image_url; ?>" alt="<?php echo isset($image_url) ? ucwords(str_replace('-', ' ', pathinfo($image_url, PATHINFO_FILENAME))) : 'Gallery Image'; ?>">
                                         </div>
                                     <?php endforeach; ?>
                                 </div>
