@@ -13,6 +13,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $country  = filter_var(trim($_POST["country"]), FILTER_SANITIZE_STRING);
     $message  = filter_var(trim($_POST["message"]), FILTER_SANITIZE_STRING);
     $pageurl = 'https://www.mlagroup.com/contactus';
+    
+    
+    $expected_token = hash_hmac('sha256', 'send_mail', $_SERVER['REMOTE_ADDR'] . 'MLAGROUPMM123');
+if ($_POST['csrf_token'] !== $expected_token) {
+    die('Invalid request');
+}
+    
     // Validation - ensuring mandatory fields are not empty
     if (empty($name) || empty($email) || empty($message)) {
          $response = array(
