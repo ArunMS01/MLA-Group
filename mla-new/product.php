@@ -487,6 +487,7 @@ function alttag($filename) {
                                     <form class="" id="productform">
                                         <input type="hidden" class="form-control" name="dzToDo" value="Contact">
                                         <input type="hidden" class="form-control" name="reCaptchaEnable" value="0">
+                                         <input type="hidden" name="csrf_token" value="<?php echo hash_hmac('sha256', 'send_mail', $_SERVER['REMOTE_ADDR'] . 'MLAGROUPMM123'); ?>">
                                         <div class="dzFormMsg"></div>
 
                                         <label class="form-label">Your Name*</label>

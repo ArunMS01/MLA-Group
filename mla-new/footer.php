@@ -862,6 +862,7 @@
           pageUrl: pageUrl,
           companynamev:cpname,
           countrynamev:ctname,
+          csrf_token:"<?php echo hash_hmac('sha256', 'send_mail', $_SERVER['REMOTE_ADDR'] . 'MLAGROUPMM123'); ?>",
           
           action: 'phone-number-submit'
         },

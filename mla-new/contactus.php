@@ -282,6 +282,7 @@
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="single-input-field">
                                     <input type="text" placeholder="Your Name*" name="name" id="name" maxlength="30" required />
+                                      <input type="hidden" name="csrf_token" value="<?php echo hash_hmac('sha256', 'send_mail', $_SERVER['REMOTE_ADDR'] . 'MLAGROUPMM123'); ?>">
                                     <div class="invalid-feedback" id="nameError">Please enter your name.</div>
                                 </div>
                             </div>
@@ -357,8 +358,13 @@
                             </style>
 
                             <div class="contact-section">
-                                <h4>MANAGING DIRECTOR  </h4>
+                                <h4>MANAGING DIRECTOR (SALES & MARKETING)  </h4>
                                 <p>Mr. Sumit Agarwal - <a href="tel:+919336116592">+91-9336116592</a>, <a href="mailto:md@mlagroup.com">md@mlagroup.com</a></p>
+                            </div>
+                            
+                              <div class="contact-section">
+                                <h4>MARKETING CO-ORDINATOR  </h4>
+                                <p>Mr. Vansh Bhimsaria - <a href="tel:+919569488020">+91-9569488020</a>, <a href="mailto:vansh@mlagroup.com">vansh@mlagroup.com</a></p>
                             </div>
 
                             <div class="contact-section">

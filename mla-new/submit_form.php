@@ -13,6 +13,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message = $_POST['dzMessage'];
     $pageurl = $_POST['pageurl'];
     $dzcountry = $_POST['dzcountry'];
+    
+       $expected_token = hash_hmac('sha256', 'send_mail', $_SERVER['REMOTE_ADDR'] . 'MLAGROUPMM123');
+if ($_POST['csrf_token'] !== $expected_token) {
+    die('Invalid request');
+}
 
     // Validate form data
     $errors = array();
