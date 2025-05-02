@@ -1050,10 +1050,11 @@ overflow: hidden;
                         <div class="col-lg-6 col-md-7 col-sm-7">
                             <div class="about-content">
                                 <div class="section-head style-1 wow fadeInUp" data-wow-delay="0.5s">
-                                    <h3 class="title">About MLA Group</h3>
+                                    <h2 class="title">About MLA Group</h2>
                                     <p>Since its humble beginnings in 1975, when our first unit was established to manufacture aluminium silicate, MLA Group has continued to expand and thrive. Due to our steady growth and diversification, the business now includes four production facilities producing a wide range of additives. We are today India's largest manufacturers of Zinc Oxide Active and Metallic Stearates and amongst the top 3 in all our eight product verticals.</p>
 
-                                    <a class="btn btn-secondary " href="about.php">Know More</a>
+                                    <a class="btn btn-secondary" href="about" target="_blank">Know More</a>
+
 
                                 </div>
 
@@ -1582,12 +1583,20 @@ overflow: hidden;
             width: 100%;
             height: 100%;
         }
+
+        .application-tab h2 {
+
+            color: #000;
+            font-size: 2.25rem;
+            font-weight: 600;
+            line-height: 1.2;
+        }
     </style>
     <section class="content-inner application-tab overlay-black-light pbt-100" style="background-image:url(images/appit.jpg); background-repeat: no-repeat; background-size: cover;background-position: bottom;">
         <div class="container">
             <div class="row about-style2 align-items-xl-center align-items-start wow fadeInUp" data-wow-delay="0.2s">
                 <div class="col-lg-3 ">
-                    <h3 class="title">Applications</h3>
+                    <h2 class="title">Applications</h2>
                 </div>
                 <div class="col-lg-7 ">
                     <div class="about-content">
@@ -1694,6 +1703,15 @@ overflow: hidden;
                     .btn-prev img {
                         height: 25px;
                     }
+
+
+
+
+                    .contentindustry h3 {
+                        color: #fff;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                    }
                 </style>
 
                 <div class="col-lg-2">
@@ -1722,7 +1740,7 @@ overflow: hidden;
                                             <div class="dz-media">
                                                 <img src="images/plasticimg1.jpg" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>PVC Pipe Industries</p>
+                                                    <h3>PVC Pipe Industries</h3>
                                                 </div>
                                                 <div class="reveal-box">
                                                     <div>
@@ -1753,7 +1771,7 @@ overflow: hidden;
                                             <div class="dz-media">
                                                 <img src="images/rubber-transformed.jpeg" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>Rubber Industries</p>
+                                                    <h3>Rubber Industries</h3>
                                                 </div>
                                                 <div class="reveal-box">
                                                     <div>
@@ -1783,7 +1801,7 @@ overflow: hidden;
                                             <div class="dz-media">
                                                 <img src="images/paint-mlagroup.jpg" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>Paints Industries</p>
+                                                    <h3>Paints Industries</h3>
                                                 </div>
                                                 <div class="reveal-box">
                                                     <div>
@@ -1812,7 +1830,7 @@ overflow: hidden;
                                             <div class="dz-media">
                                                 <img src="images/masterbatch.jpg" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>Plastics Industries</p>
+                                                    <h3>Plastics Industries</h3>
                                                 </div>
                                                 <div class="reveal-box">
                                                     <div>
@@ -1844,7 +1862,7 @@ overflow: hidden;
                                             <div class="dz-media">
                                                 <img src="images/Cable.jpg" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>Cable compounding</p>
+                                                    <h3>Cable compounding</h3>
                                                 </div>
                                                 <div class="reveal-box">
                                                     <div>
@@ -1879,8 +1897,8 @@ overflow: hidden;
                                             <div class="dz-media">
                                                 <img src="images/formboard.jpeg" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>Foamboard /
-                                                        WPC</p>
+                                                    <h3>Foamboard /
+                                                        WPC</h3>
                                                 </div>
                                                 <div class="reveal-box">
                                                     <div>
@@ -1910,7 +1928,7 @@ overflow: hidden;
                                             <div class="dz-media">
                                                 <img src="images/SPCflooring.webp" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>SPC flooring</p>
+                                                    <h3>SPC flooring</h3>
                                                 </div>
                                                 <div class="reveal-box">
                                                     <div>
@@ -1937,11 +1955,11 @@ overflow: hidden;
                                             <div class="dz-media">
                                                 <img src="images/Wall-panels.webp" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>Wall panels /
+                                                    <h3>Wall panels /
                                                         Roofing
                                                         sheet/
                                                         Laminate /
-                                                        Edge bands</p>
+                                                        Edge bands</h3>
                                                 </div>
                                                 <div class="reveal-box">
                                                     <div>
@@ -1971,8 +1989,8 @@ overflow: hidden;
                                             <div class="dz-media">
                                                 <img src="images/cosmetics.jfif" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>Cosmetics/
-                                                        Toothpaste</p>
+                                                    <h3>Cosmetics/
+                                                        Toothpaste</h3>
                                                 </div>
                                                 <div class="reveal-box">
                                                     <div>
@@ -2004,7 +2022,7 @@ overflow: hidden;
                                             <div class="dz-media">
                                                 <img src="images/detpowder.jpg" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>Detergents</p>
+                                                    <h3>Detergents</h3>
                                                 </div>
                                                 <div class="reveal-box">
                                                     <div>
@@ -2033,8 +2051,8 @@ overflow: hidden;
                                             <div class="dz-media">
                                                 <img src="images/Pharmaceuticals-and-food.jfif" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>Pharmaceuticals and food
-                                                        products</p>
+                                                    <h3>Pharmaceuticals and food
+                                                        products</h3>
                                                 </div>
                                                 <div class="reveal-box">
                                                     <div>
@@ -2068,9 +2086,9 @@ overflow: hidden;
                                             <div class="dz-media">
                                                 <img src="images/Pesticides.jfif" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>Pesticides and
+                                                    <h3>Pesticides and
                                                         micronutrients
-                                                    </p>
+                                                    </h3>
                                                 </div>
                                                 <div class="reveal-box">
                                                     <div>
@@ -2105,7 +2123,7 @@ overflow: hidden;
                                             <div class="dz-media">
                                                 <img src="images/petrochemical.jpg" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>Chemicals</p>
+                                                    <h3>Chemicals</h3>
                                                 </div>
                                                 <div class="reveal-box">
                                                     <div>
@@ -2134,8 +2152,8 @@ overflow: hidden;
                                             <div class="dz-media">
                                                 <img src="images/chemcials.jpg" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>Construction
-                                                        chemicals</p>
+                                                    <h3>Construction
+                                                        chemicals</h3>
                                                 </div>
                                                 <div class="reveal-box">
                                                     <div>
@@ -2168,7 +2186,7 @@ overflow: hidden;
                                             <div class="dz-media">
                                                 <img src="images/tablesalt.jpg" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>Table salt</p>
+                                                    <h3>Table salt</h3>
                                                 </div>
                                                 <div class="reveal-box">
                                                     <div>
@@ -2196,7 +2214,7 @@ overflow: hidden;
                                             <div class="dz-media">
                                                 <img src="images/ceramics.jpg" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>Ceramics</p>
+                                                    <h3>Ceramics</h3>
                                                 </div>
                                                 <div class="reveal-box">
                                                     <div>
@@ -2224,7 +2242,7 @@ overflow: hidden;
                                             <div class="dz-media">
                                                 <img src="images/animalfeed.jpg" alt="image">
                                                 <div class="contentindustry">
-                                                    <p>Animal feed</p>
+                                                    <h3>Animal feed</h3>
                                                 </div>
                                                 <div class="reveal-box">
                                                     <div>

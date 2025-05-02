@@ -187,12 +187,12 @@ include('header.php');
     <div class="d-sm-flex justify-content-between container-fluid py-new">
         <nav aria-label="breadcrumb" class="breadcrumb-row">
             <ul class="breadcrumb mb-0">
-                <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="/mla-new">Home</a> </li>
-                <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="our-products.php">Products</a> </li>
+                <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="/">Home</a> </li>
+                <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="our-products">Products</a> </li>
                 <?php
                 if (isset($getbrand['name'])) {
                 ?>
-                    <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="brands.php?url=<?php echo $getbrand['url'] ?>"><?php echo $getbrand['name'] ? $getbrand['name'] : ''; ?></a> </li>
+                    <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="brands?url=<?php echo $getbrand['url'] ?>"><?php echo $getbrand['name'] ? $getbrand['name'] : ''; ?></a> </li>
                 <?php
                 }
                 ?>
