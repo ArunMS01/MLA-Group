@@ -1,16 +1,17 @@
 <?php
 include('head.php');
 ?>
-<title>MLA</title>
-<meta name="description" content="">
+<title>MLA Group – Trusted Chemical Manufacturer in India</title>
+<meta name="description" content="Experience advanced chemical manufacturing at MLA Group with top technology & high-tech facilities, delivering reliable results across 43+ countries worldwide.">
+
 </head>
 
 <body>
-	<?php
-	include('gtm.php')
-	?>
-	<div class="page-wraper">
-		<!-- <div id="loading-area" class="preloader-wrapper-1">
+  <?php
+  include('gtm.php')
+  ?>
+  <div class="page-wraper">
+    <!-- <div id="loading-area" class="preloader-wrapper-1">
 		<div>
 			<span class="loader-2"></span>
 			<img src="images/logo.png" alt="/">
@@ -18,10 +19,9 @@ include('head.php');
 		</div>
 	</div> -->
 
-		<?php
-		include('nav.php');
-		?>
-
+    <?php
+    include('nav.php');
+    ?>
 
 
 
