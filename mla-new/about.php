@@ -1,8 +1,8 @@
 <?php
 include('head.php');
 ?>
-<title>MLA</title>
-<meta name="description" content="">
+<title>India’s Leading Chemical Supplier | About MLA Group</title>
+<meta name="description" content="Get to know MLA Group India’s chemical industry expert with 44+ years of experience. Exporting to 43+ countries that are trusted for quality and innovation.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 

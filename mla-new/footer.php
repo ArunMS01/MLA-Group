@@ -153,11 +153,13 @@
       padding: 20px;
       text-align: center;
     }
-.form-controls{
-    margin-top:15px !important;
-}
+
+    .form-controls {
+      margin-top: 15px !important;
+    }
+
     input#chat-input,
-    .form-controls{
+    .form-controls {
       width: 100%;
       display: block;
       margin: auto;
@@ -565,8 +567,8 @@
         <small id="invalidno">Please fill correct number</small>
         <input class="form-controls" id="companynamev" placeholder="Company Name">
         <small style="color:red" id="companynameerr"></small>
-          <input class="form-controls" id="countrynamev" placeholder="Country Name">
-            <small style="color:red" id="countrynameerr"></small>
+        <input class="form-controls" id="countrynamev" placeholder="Country Name">
+        <small style="color:red" id="countrynameerr"></small>
         <input type="hidden" value="" id="contact-method">
         <button id="submit-whatsapp" class="btn-whatsapp">Connect On Whatsapp</button>
         <div>
@@ -628,7 +630,7 @@
               <li><a class="bleft" href="r-and-d">R & D</a></li>
               <li><a class="bleft" href="qc">Quality</a></li>
               <li><a class="bleft" href="manufacturing">Manufacturing</a></li>
-              <li><a href="contactus">Contact Us</a></li>
+              <li><a href="contact-us">Contact Us</a></li>
 
             </ul>
           </div>
@@ -803,54 +805,53 @@
 
 
   $('#submit-whatsapp').on('click', function() {
-        var isValid = true;
+    var isValid = true;
     const pageUrl = window.location.href;
-     var nameRegex = /^[A-Za-z\s]+$/;
-       var phone = document.getElementById("chat-input").value;
-              var regx = /^(\+?\d{1,3})?[6-9]\d{6,14}$/;
-     var companynamev = document.querySelector("#companynamev");
-     var companynameerr = document.querySelector("#companynameerr");
-     var countrynamev = document.querySelector("#countrynamev");
-     var countrynameerr = document.querySelector("#countrynameerr");
-     
-      if (!regx.test(phone)) {
-            $("#invalidno").show();
-      }
-      else{
-         $("#invalidno").hide(); 
-      }
-      
-        if (companynamev.value.trim() === '') {
-                companynameerr.textContent = 'Please enter company name';
-                isValid = false;
-            } else if (!nameRegex.test(companynamev.value.trim())) {
-                companynameerr.textContent = 'Please enter company name';
-                isValid = false;
-            } else {
-               companynameerr.textContent = ''; // Clear the error if validation passes
-            }
-     
-      if (countrynamev.value.trim() === '') {
-                countrynameerr.textContent = 'Please enter country name';
-                isValid = false;
-            } else if (!nameRegex.test(countrynamev.value.trim())) {
-                countrynameerr.textContent = 'Please enter country name';
-                isValid = false;
-            } else {
-               countrynameerr.textContent = ''; // Clear the error if validation passes
-            }
-            
-           
-    
- 
-  
+    var nameRegex = /^[A-Za-z\s]+$/;
+    var phone = document.getElementById("chat-input").value;
+    var regx = /^(\+?\d{1,3})?[6-9]\d{6,14}$/;
+    var companynamev = document.querySelector("#companynamev");
+    var companynameerr = document.querySelector("#companynameerr");
+    var countrynamev = document.querySelector("#countrynamev");
+    var countrynameerr = document.querySelector("#countrynameerr");
+
+    if (!regx.test(phone)) {
+      $("#invalidno").show();
+    } else {
+      $("#invalidno").hide();
+    }
+
+    if (companynamev.value.trim() === '') {
+      companynameerr.textContent = 'Please enter company name';
+      isValid = false;
+    } else if (!nameRegex.test(companynamev.value.trim())) {
+      companynameerr.textContent = 'Please enter company name';
+      isValid = false;
+    } else {
+      companynameerr.textContent = ''; // Clear the error if validation passes
+    }
+
+    if (countrynamev.value.trim() === '') {
+      countrynameerr.textContent = 'Please enter country name';
+      isValid = false;
+    } else if (!nameRegex.test(countrynamev.value.trim())) {
+      countrynameerr.textContent = 'Please enter country name';
+      isValid = false;
+    } else {
+      countrynameerr.textContent = ''; // Clear the error if validation passes
+    }
+
+
+
+
+
     if (regx.test(phone) && isValid) {
       $("#invalidno").hide();
       var contactmethod = $('#contact-method').val();
 
       // Ensure a product is selected
-    var ctname = countrynamev.value;
-     var cpname = companynamev.value;
+      var ctname = countrynamev.value;
+      var cpname = companynamev.value;
 
       //   alert(phone);
       $.ajax({
@@ -860,10 +861,10 @@
           phone: phone,
           contactmethod: contactmethod,
           pageUrl: pageUrl,
-          companynamev:cpname,
-          countrynamev:ctname,
-          csrf_token:"<?php echo hash_hmac('sha256', 'send_mail', $_SERVER['REMOTE_ADDR'] . 'MLAGROUPMM123'); ?>",
-          
+          companynamev: cpname,
+          countrynamev: ctname,
+          csrf_token: "<?php echo hash_hmac('sha256', 'send_mail', $_SERVER['REMOTE_ADDR'] . 'MLAGROUPMM123'); ?>",
+
           action: 'phone-number-submit'
         },
         beforeSend: function() {
@@ -902,7 +903,7 @@
         }
 
       });
-    } 
+    }
   });
 
 

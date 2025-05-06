@@ -1,8 +1,8 @@
 <?php
 include('head.php');
 ?>
-<title>MLA</title>
-<meta name="description" content="">
+<title>Research & Development Experts in Chemical – MLA Group</title>
+<meta name="description" content="From lab innovation to industry-ready solutions. Our R&D team ensures improvement in product performance, quality, & sustainability through accurate research.">
 </head>
 
 <body>

@@ -1,8 +1,8 @@
 <?php
 include('head.php');
 ?>
-<title>MLA</title>
-<meta name="description" content="">
+<title>MLA Group: Certified Quality Control Check System</title>
+<meta name="description" content="MLA Group ensures top-notch chemical quality with certified labs, advanced testing, & robust quality control. We deliver trusted chemical solutions worldwide.">
 </head>
 
 <body>
@@ -44,20 +44,20 @@ include('head.php');
             }
 
             @keyframes zoomInUp {
-				0% {
-					transform: translateY(100%);
-					opacity: 0;
-				}
+                0% {
+                    transform: translateY(100%);
+                    opacity: 0;
+                }
 
-				
 
-				100% {
-					transform: translateY(0);
-					opacity: 1;
-				}
-			}
 
-			.zoom-in-up {
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            .zoom-in-up {
                 animation: zoomInUp 2s ease forwards;
             }
         </style>
@@ -443,9 +443,10 @@ include('head.php');
             }
 
             @media only screen and (max-width: 768px) {
-                .radius img{
-                    margin-right:auto !important;
+                .radius img {
+                    margin-right: auto !important;
                 }
+
                 .about-style1 .section-head .title {
                     font-size: 29px !important;
                 }
