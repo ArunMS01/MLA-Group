@@ -356,7 +356,7 @@ include('head.php');
                             <div class="company-details">
                                 <h3>MLA GROUP OF INDUSTRIES</h3>
                                 <p>111/230, Harsh Nagar, Kanpur-208012 (INDIA)</p>
-                                <p><strong>OFFICIAL WEBSITE:</strong> <a href="https://www.mlagroup.com">www.mlagroup.com</a></p>
+                                <p><strong>OFFICIAL WEBSITE:</strong> <a href="www.mlagroup.com">www.mlagroup.com</a></p>
 
                                 <style>
                                     .contact-section a {
