@@ -1,11 +1,12 @@
-<?php 
+<?php
 include('db.php');
 
 // Function to handle file upload
-function uploadFile($file) {
+function uploadFile($file)
+{
     // Specify the directory where the file will be uploaded
     $uploadDirectory = 'uploads/'; // Change this to your desired upload directory
-    
+
     // Check if the file was uploaded without errors
     if ($file['error'] == UPLOAD_ERR_OK) {
         // Generate a unique filename to avoid overwriting existing files
@@ -33,6 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $url = $_POST['url'];
     $description = $_POST['description'];
     $longDescription = $_POST['longDescription'];
+    $metatitle = $_POST['metatitle'];
+    $metadescription = $_POST['metadescription'];
     $status = $_POST['status'];
     $brand_id = $_POST['brand_id'];
 
@@ -122,6 +125,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             url = '$url', 
             description = '$description', 
             longDescription = '$longDescription', 
+            metatitle = '$metatitle', 
+            metadescription = '$metadescription', 
             status = '$status'";
 
     // Add logo to the query if a new logo file is uploaded
@@ -169,4 +174,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Content-Type: application/json');
     echo json_encode($response);
 }
-?>

@@ -3,10 +3,11 @@
 include('db.php');
 
 // Function to handle file upload
-function uploadFile($file) {
+function uploadFile($file)
+{
     // Specify the directory where the file will be uploaded
     $uploadDirectory = 'uploads/'; // Change this to your desired upload directory
-    
+
     // Check if the file was uploaded without errors
     if ($file['error'] == UPLOAD_ERR_OK) {
         // Generate a unique filename to avoid overwriting existing files
@@ -34,6 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $url = $_POST['url'];
     $description = $_POST['description'];
     $longDescription = $_POST['longDescription'];
+    $metatitle = $_POST['metatitle'];
+    $metadescription = $_POST['metadescription'];
     $status = $_POST['status'];
 
     // Handle file uploads
@@ -104,8 +107,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Prepare and execute the SQL statement to insert data into the brand table
-    echo $sql = "INSERT INTO brand (name, url, description, longDescription, logo, featuredImage, descriptionImage, status, created_at, updated_at) 
-            VALUES ('$title', '$url', '$description', '$longDescription', '$logoPath', '$featuredImagePath', '$descriptionImagePath', '$status', NOW(), NOW())";
+    echo $sql = "INSERT INTO brand (name, url, description, longDescription, logo, featuredImage, descriptionImage, status, metatitle, metadescription, created_at, updated_at) 
+            VALUES ('$title', '$url', '$description', '$longDescription', '$logoPath', '$featuredImagePath', '$descriptionImagePath', '$status', '$metatitle', '$metadescription', NOW(), NOW())";
 
     if ($db->query($sql) === TRUE) {
         // If insertion is successful, return success message
@@ -135,4 +138,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Content-Type: application/json');
     echo json_encode($response);
 }
-?>

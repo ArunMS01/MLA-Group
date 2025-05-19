@@ -1,8 +1,33 @@
+    <?php
+      require('admin/codes/db.php');
+   
+      // Get the brand URL from the GET request
+      $brandurl = isset($_GET['url']) ? $_GET['url'] : '';
+      
+      if ($brandurl) {
+          // Query to get the image URL and description based on the brand URL
+          $sql = "SELECT * FROM brand WHERE url = '$brandurl'";
+          $result = mysqli_query($db, $sql);
+      
+          $description = '';
+        //   $imageUrl = 'https://cdn.pixabay.com/photo/2023/06/03/17/15/ai-generated-8038116_1280.jpg'; // Default image
+      $imageUrl = '';
+          if ($result) {
+              if ($row = mysqli_fetch_assoc($result)) {
+                  $description = $row['description'];
+                  $imageUrl = $row['featuredImage']; // Use the image URL from the database
+                  $metatitle = $row['metatitle']; // Use the image URL from the database
+                  $metadescription = $row['metadescription']; // Use the image URL from the database
+              }
+          }
+      
+      ?>
+
 <?php
 include('head.php');
 ?>
-<title>MLA</title>
-<meta name="description" content="">
+<title><?php echo $metatitle ?></title>
+<meta name="description" content="<?php echo $metadescription ?>">
 </head>
 
 <body>
@@ -54,28 +79,7 @@ include('head.php');
         include('nav.php');
         ?>
 
-    <?php
-      require('admin/codes/db.php');
-   
-      // Get the brand URL from the GET request
-      $brandurl = isset($_GET['url']) ? $_GET['url'] : '';
-      
-      if ($brandurl) {
-          // Query to get the image URL and description based on the brand URL
-          $sql = "SELECT * FROM brand WHERE url = '$brandurl'";
-          $result = mysqli_query($db, $sql);
-      
-          $description = '';
-        //   $imageUrl = 'https://cdn.pixabay.com/photo/2023/06/03/17/15/ai-generated-8038116_1280.jpg'; // Default image
-      $imageUrl = '';
-          if ($result) {
-              if ($row = mysqli_fetch_assoc($result)) {
-                  $description = $row['description'];
-                  $imageUrl = $row['featuredImage']; // Use the image URL from the database
-              }
-          }
-      
-      ?>
+
       
     
 
