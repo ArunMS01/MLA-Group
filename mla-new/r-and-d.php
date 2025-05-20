@@ -51,7 +51,7 @@ include('head.php');
                             <div class="about-thumb abtsyle-2">
 
                                 <div class="section-head">
-                                    <h2 class="title">Research & Development </h2>
+                                    <h1 class="title">Research & Development </h1>
                                 </div>
                                 <div class="content">
                                    <p>

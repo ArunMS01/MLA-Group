@@ -139,12 +139,12 @@ include('head.php');
                             <div class="about-thumb-1 ">
 
                                 <div class="section-head">
-                                    <h2 class="title">Our Products </h2>
+                                    <h1 class="title">Our Products </h1>
                                     <!--<p>Mla</p>-->
                                     <div class="d-sm-flex justify-content-center container-fluid py-new">
     <nav aria-label="breadcrumb" class="breadcrumb-row">
         <ul class="breadcrumb mb-0">
-            <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="/mla-new">Home</a> </li>
+            <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="/">Home</a> </li>
             <li class="breadcrumb-item col-or"> <a style="color:#000" href="#">Our Products </a> </li>
            
         </ul>
@@ -502,7 +502,7 @@ padding: 1px;
                                 </div>
                                 <div class="member-social">
                                     <p class="text-center" style="margin-bottom:0">
-                                        <a href="brands.php?url=<?php echo $brand['url']; ?>" class="badge  badge-primary  read-more-btn text-center">
+                                        <a href="brands?url=<?php echo $brand['url']; ?>" class="badge  badge-primary  read-more-btn text-center">
                                             Read More
                                         </a>
                                     </p>

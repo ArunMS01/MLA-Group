@@ -126,7 +126,9 @@ include('header.php');
     }
 
 
-
+    .dz-product-detail .dz-content .title {
+        font-weight: 600 !important;
+    }
 
     .check-tbl tbody tr td {
         padding: 0px !important;
@@ -216,16 +218,16 @@ include('header.php');
                                                 data-src="./admin/codes/<?php echo $product_data['main_image']; ?>">
                                                 <i class="feather icon-maximize dz-maximize top-left"></i>
                                             </a>
-                                        
+
                                             <?php
-                                            $image_alt ='Product image';
-                                            if(isset($product_data['main_image'])){
-$image_path = $product_data['main_image']; // Example: product-image/ethylene-glycol-di-sterate.webp
-$image_name = pathinfo($image_path, PATHINFO_FILENAME); // Removes extension
-$image_alt = ucwords(str_replace('-', ' ', $image_name)); // Replaces hyphens and capitalizes words
-}
-?>
-                                        
+                                            $image_alt = 'Product image';
+                                            if (isset($product_data['main_image'])) {
+                                                $image_path = $product_data['main_image']; // Example: product-image/ethylene-glycol-di-sterate.webp
+                                                $image_name = pathinfo($image_path, PATHINFO_FILENAME); // Removes extension
+                                                $image_alt = ucwords(str_replace('-', ' ', $image_name)); // Replaces hyphens and capitalizes words
+                                            }
+                                            ?>
+
                                             <img width="400px" height="400px" src="./admin/codes/<?php echo $product_data['main_image']; ?>" alt="<?php echo $image_alt; ?>">
                                         </div>
                                     </div>
@@ -237,7 +239,7 @@ $image_alt = ucwords(str_replace('-', ' ', $image_name)); // Replaces hyphens an
                                                     data-src="<?php echo $image_url; ?>">
                                                     <i class="feather icon-maximize dz-maximize top-left"></i>
                                                 </a>
-                                            <img src="./admin/codes/<?php echo $image_url; ?>" alt="<?php echo isset($image_url) ? ucwords(str_replace('-', ' ', pathinfo($image_url, PATHINFO_FILENAME))) : 'Gallery Image'; ?>">
+                                                <img src="./admin/codes/<?php echo $image_url; ?>" alt="<?php echo isset($image_url) ? ucwords(str_replace('-', ' ', pathinfo($image_url, PATHINFO_FILENAME))) : 'Gallery Image'; ?>">
 
                                             </div>
                                         </div>
@@ -447,21 +449,22 @@ $image_alt = ucwords(str_replace('-', ' ', $image_name)); // Replaces hyphens an
                             <div class=" style-1 m-r20 m-md-r0 wow fadeInUp" data-wow-delay="0.5s"
                                 bis_skin_checked="1"
                                 style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                               <?php
-function alttag($filename) {
-    // Step 1: Remove everything before and including the first underscore
-    $cleaned = preg_replace('/^[^_]*_/', '', $filename);
-    
-    // Step 2: Remove the file extension if present
-    $cleaned = pathinfo($cleaned, PATHINFO_FILENAME);
-    
-    // Step 3: Replace any hyphens or underscores with spaces
-    $cleaned = str_replace(['_', '-'], ' ', $cleaned);
-    
-    // Step 4: Capitalize the first letter of each word
-    return ucwords(trim($cleaned));
-}
-?>
+                                <?php
+                                function alttag($filename)
+                                {
+                                    // Step 1: Remove everything before and including the first underscore
+                                    $cleaned = preg_replace('/^[^_]*_/', '', $filename);
+
+                                    // Step 2: Remove the file extension if present
+                                    $cleaned = pathinfo($cleaned, PATHINFO_FILENAME);
+
+                                    // Step 3: Replace any hyphens or underscores with spaces
+                                    $cleaned = str_replace(['_', '-'], ' ', $cleaned);
+
+                                    // Step 4: Capitalize the first letter of each word
+                                    return ucwords(trim($cleaned));
+                                }
+                                ?>
 
 
                                 <?php
@@ -469,11 +472,11 @@ function alttag($filename) {
                                 ?>
                                     <div class="row">
                                         <div class="col-md-12">
-                                           <img class="brimg" 
-     style="display: block;"
-     src="admin/codes/<?php echo $getbrand['logo']; ?>"
-     class="mt-4 mb-4 margin-top mix-blend-mode" 
-     alt="<?php echo alttag($getbrand['logo']); ?>">
+                                            <img class="brimg"
+                                                style="display: block;"
+                                                src="admin/codes/<?php echo $getbrand['logo']; ?>"
+                                                class="mt-4 mb-4 margin-top mix-blend-mode"
+                                                alt="<?php echo alttag($getbrand['logo']); ?>">
 
 
                                         </div>
@@ -487,7 +490,7 @@ function alttag($filename) {
                                     <form class="" id="productform">
                                         <input type="hidden" class="form-control" name="dzToDo" value="Contact">
                                         <input type="hidden" class="form-control" name="reCaptchaEnable" value="0">
-                                         <input type="hidden" name="csrf_token" value="<?php echo hash_hmac('sha256', 'send_mail', $_SERVER['REMOTE_ADDR'] . 'MLAGROUPMM123'); ?>">
+                                        <input type="hidden" name="csrf_token" value="<?php echo hash_hmac('sha256', 'send_mail', $_SERVER['REMOTE_ADDR'] . 'MLAGROUPMM123'); ?>">
                                         <div class="dzFormMsg"></div>
 
                                         <label class="form-label">Your Name*</label>
@@ -522,8 +525,8 @@ function alttag($filename) {
                                             <input type="text" required class="form-control" name="dzCompanyName" id="company">
                                             <div class="error-msg" id="company-error"></div>
                                         </div>
-                                        
-                                         <label class="form-label">Country*</label>
+
+                                        <label class="form-label">Country*</label>
                                         <div class="input-groups">
                                             <input required type="text" class="form-control" name="dzcountry" id="country">
                                             <div class="error-msg" id="country-error"></div>
@@ -576,13 +579,13 @@ function alttag($filename) {
                         </li>
 
                         <?php
-                        if(!empty($product_data['specs'])){
+                        if (!empty($product_data['specs'])) {
                         ?>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="profile-tabs" data-bs-toggle="tab"
-                                data-bs-target="#profile-tab-panes" type="button" role="tab"
-                                aria-controls="profile-tab-panes" aria-selected="false">Specifications</button>
-                        </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tabs" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-panes" type="button" role="tab"
+                                    aria-controls="profile-tab-panes" aria-selected="false">Specifications</button>
+                            </li>
                         <?php
                         }
                         ?>
@@ -670,24 +673,24 @@ function alttag($filename) {
     </section>
     <?php
     // Step 1: Retrieve related product IDs
-    if(isset($product_data['related_products'])){
-    $related_product_ids = explode(',', $product_data['related_products']);
+    if (isset($product_data['related_products'])) {
+        $related_product_ids = explode(',', $product_data['related_products']);
 
-    // Step 2: Initialize an array to store related product details
-    $related_products = array();
+        // Step 2: Initialize an array to store related product details
+        $related_products = array();
 
-    // Step 3: Query the product table for each related product
-    foreach ($related_product_ids as $product_id) {
-        $query = "SELECT id, title, url FROM products WHERE id = '$product_id'";
-        $result = mysqli_query($db, $query);
+        // Step 3: Query the product table for each related product
+        foreach ($related_product_ids as $product_id) {
+            $query = "SELECT id, title, url FROM products WHERE id = '$product_id'";
+            $result = mysqli_query($db, $query);
 
-        // Check if the query was successful and fetch the product details
-        if ($result && mysqli_num_rows($result) > 0) {
-            $row = mysqli_fetch_assoc($result);
-            // Add the product details to the array
-            $related_products[] = $row;
+            // Check if the query was successful and fetch the product details
+            if ($result && mysqli_num_rows($result) > 0) {
+                $row = mysqli_fetch_assoc($result);
+                // Add the product details to the array
+                $related_products[] = $row;
+            }
         }
-    }
     }
 
     ?>
@@ -1013,7 +1016,7 @@ function alttag($filename) {
     ?>
 
     <!--Recommend Section Start-->
-    
+
     <style>
         .brandimg {
             mix-blend-mode: multiply;
@@ -1212,7 +1215,7 @@ function alttag($filename) {
             // Validate Name
             var country = document.querySelector("#country");
             var company = document.querySelector("#company");
-             var countryerr = document.querySelector("#country-error");
+            var countryerr = document.querySelector("#country-error");
             var companyerr = document.querySelector("#company-error");
             var nameInput = document.querySelector("input[name='dzName']");
             var nameError = document.getElementById('name-error');
@@ -1227,25 +1230,25 @@ function alttag($filename) {
             } else {
                 nameError.textContent = ''; // Clear the error if validation passes
             }
-            
-             if (country.value.trim() === '') {
+
+            if (country.value.trim() === '') {
                 countryerr.textContent = 'Country is required.';
                 isValid = false;
             } else if (!nameRegex.test(country.value.trim())) {
                 countryerr.textContent = 'Country name can only contain letters and spaces.';
                 isValid = false;
             } else {
-               countryerr.textContent = ''; // Clear the error if validation passes
+                countryerr.textContent = ''; // Clear the error if validation passes
             }
-            
-             if (company.value.trim() === '') {
+
+            if (company.value.trim() === '') {
                 companyerr.textContent = 'Company is required.';
                 isValid = false;
             } else if (!nameRegex.test(company.value.trim())) {
                 companyerr.textContent = 'Company name can only contain letters and spaces.';
                 isValid = false;
             } else {
-               companyerr.textContent = ''; // Clear the error if validation passes
+                companyerr.textContent = ''; // Clear the error if validation passes
             }
 
 

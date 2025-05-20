@@ -93,11 +93,11 @@
     .breadcrumb-list li:last-child:before {
         display: none
     }
-    
+
     .content-innerbanner {
-    padding-top: 40px;
-    padding-bottom: 30px;
-}
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
 </style>
 
 
@@ -277,7 +277,7 @@
 
                 </div>
             </div>
-          
+
         </div>
 </section>
 <style>
