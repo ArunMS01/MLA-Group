@@ -70,7 +70,7 @@ include('head.php');
                             <div class="about-thumb-1 ">
 
                                 <div class="section-head">
-                                    <h2 class="title">Quality Control </h2>
+                                    <h1 class="title">Quality Control </h1>
                                 </div>
                                 <div class="content">
                                     <p>

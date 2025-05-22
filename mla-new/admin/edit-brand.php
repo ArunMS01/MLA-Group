@@ -326,6 +326,7 @@ include('inc/header.php') ?>
                                         $brandData = $result->fetch_assoc();
                                     }
                                 }
+
                                 ?>
 
                                 <form id="brandForm" class="forms-sample">
@@ -420,7 +421,18 @@ include('inc/header.php') ?>
                                         </div>
                                     </div>
 
+                                    <div class="form-group">
+                                        <label for="exampleInputLongDescription">Meta Title</label>
+                                        <textarea class="form-control" id="metatitle" name="metatitle" val placeholder="Meta Title" required><?php echo isset($brandData['metatitle']) ? $brandData['metatitle'] : ''; ?></textarea>
 
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="exampleInputLongDescription">Meta Description </label>
+                                        <textarea class="form-control"id="metadescription" name="metadescription" placeholder="Meta Description" required><?php echo isset($brandData['metadescription']) ? $brandData['metadescription'] : ''; ?></textarea>
+
+                                    </div>
 
                                     <div>
                                         <button type="submit" class="btn btn-primary mr-2 mb-4">Submit</button>
@@ -475,7 +487,7 @@ include('inc/header.php') ?>
 
 
                 CKEDITOR.replace('editor2');
-                  CKEDITOR.replace('editor1');
+                CKEDITOR.replace('editor1');
 
                 function generateUrlAndMetaTitle() {
                     // Get the course name input field and its value
@@ -529,6 +541,8 @@ include('inc/header.php') ?>
                     var cancelButton = document.getElementById('cancelButton');
                     var titleError = document.getElementById('titleError');
                     var urlError = document.getElementById('urlError');
+                      var metatitle = document.getElementById('metatitle');
+                    var metadescription = document.getElementById('metadescription');
                     var descriptionError = document.getElementById('descriptionError');
                     var longDescriptionError = document.getElementById('longDescriptionError');
                     var fileInput = document.querySelector('input[type="file"]');
@@ -600,6 +614,10 @@ include('inc/header.php') ?>
                         formData.append('description', CKEDITOR.instances['editor1'].getData());
                         formData.append('status', statusInput.value);
                         formData.append('longDescription', CKEDITOR.instances['editor2'].getData());
+                        formData.append('metatitle', metatitle.value);
+                        formData.append('metadescription', metadescription.value);
+
+                        
 
                         // Append the files
                         formData.append('logo', fileInput.files[0] || null);
