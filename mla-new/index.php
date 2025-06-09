@@ -4,7 +4,7 @@ include('head.php');
 <title>MLA Group Of Industries </title>
 <link rel="canonical" href="https://www.mlagroup.com/" />
 <meta name="description"
-    content="Our product range consists of various precipitated chemicals and functional fillers, both synthetic and naturally occurring processed minerals including Precipitated Silica, Hydrated Calcium Silicate, Aluminium Silicate, Zinc Stearate, Calcium Stearate, Calcium Sulphate, Zinc-oxide active/transparent, Levigated / Surface treated China Clays, Micronized Calcite, Dolomite, Talc etc.">
+    content="MLA Group is India’s trusted source for high-quality industrial chemicals. Serving 44+ countries, a global leader with certified quality & reliable supply.">
 
 
 <script type="application/ld+json">
@@ -54,6 +54,34 @@ include('head.php');
         }
     }
 </script>
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "MLA Group",
+        "url": "https://www.mlagroup.com/",
+        "logo": "https://www.mlagroup.com/images/logo-MLA.png"
+    }
+</script>
+
+
+
+<meta property="og:url" content="https://www.mlagroup.com">
+<meta property="og:title" content="MLA Group Of Industries" />
+<meta property="og:description" content="MLA Group is India’s trusted source for high-quality industrial chemicals. Serving 44+ countries, a global leader with certified quality & reliable supply." />
+<meta property="og:image" content="https://www.mlagroup.com/images/logo-MLA.png" />
+<meta property="og:type" content="website">
+
+<meta name="twitter:url" content="https://www.mlagroup.com">
+<meta name="twitter:title" content="MLA Group Of Industries">
+<meta name="twitter:image" content="https://www.mlagroup.com/images/logo-MLA.png">
+<meta name="twitter:description" content="MLA Group is India’s trusted source for high-quality industrial chemicals. Serving 44+ countries, a global leader with certified quality & reliable supply." />
+<meta name="twitter:creator" content="MLA Group">
+
+
+
 </head>
 
 <body>
