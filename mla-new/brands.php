@@ -326,7 +326,7 @@
                             <div class="col-md-6 wow fadeInUp Description" data-wow-delay="0.1s">
                                 <!-- Output HTML content directly -->
                                 <p><?php echo isset($longDescription) ? $longDescription : ""; ?></p>
-                                <a class="btn btn-secondary mt-2" href="contactus">Know More</a>
+                                <a class="btn btn-secondary mt-2" href="contact-us">Know More</a>
                             </div>
                         </div>
                     </div>
