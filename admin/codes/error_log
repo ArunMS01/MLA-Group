@@ -1,0 +1,472 @@
+[24-Apr-2024 07:46:31 UTC] PHP Warning:  Undefined array key "galleryImages" in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[24-Apr-2024 07:46:31 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[24-Apr-2024 07:46:31 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[24-Apr-2024 07:46:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php:61) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 119
+[24-Apr-2024 08:02:56 UTC] PHP Warning:  Undefined array key "galleryImages" in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[24-Apr-2024 08:02:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[24-Apr-2024 08:02:56 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[24-Apr-2024 08:02:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php:61) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 119
+[30-Aug-2024 13:15:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/brand-process.php:107) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/brand-process.php on line 125
+[11-Sep-2024 14:23:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '67'' at line 13 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:107
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(107): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 107
+[11-Sep-2024 14:23:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id = '67'' at line 13 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:107
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(107): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 107
+[12-Sep-2024 10:38:58 UTC] PHP Warning:  Undefined array key "galleryImages" in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[12-Sep-2024 10:38:58 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[12-Sep-2024 10:38:58 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[12-Sep-2024 10:38:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php:61) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 119
+[27-Sep-2024 13:53:15 UTC] PHP Warning:  Undefined array key "galleryImages" in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[27-Sep-2024 13:53:15 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[27-Sep-2024 13:53:15 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[27-Sep-2024 13:53:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php:61) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 119
+[27-Sep-2024 13:59:16 UTC] PHP Warning:  Undefined array key "galleryImages" in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[27-Sep-2024 13:59:16 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[27-Sep-2024 13:59:16 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 61
+[27-Sep-2024 13:59:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php:61) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/add-product.php on line 119
+[03-Oct-2024 06:41:37 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:41:38 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:41:40 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:41:46 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:41:57 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:41:59 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:42:03 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:42:03 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:42:03 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:42:15 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:42:50 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:42:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:42:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:42:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:43:04 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:43:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:43:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:43:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:43:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:43:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:43:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:43:06 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:43:06 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:43:06 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:43:06 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:43:06 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage o...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:48:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:48:38 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:48:38 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:48:38 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:48:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:48:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:48:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:48:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:48:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:48:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:48:49 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:50:35 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 06:53:11 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 08:02:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 08:02:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 08:05:15 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 08:06:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 08:06:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 08:06:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market pr...' at line 6 in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 108
+[03-Oct-2024 08:07:36 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:91) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 133
+[03-Oct-2024 08:07:42 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php:91) in /home/ictdzfbe/maidenstride.in/mla-new/admin/codes/edit-product.php on line 133
+[02-Dec-2024 11:04:26 UTC] PHP Warning:  Undefined array key "galleryImages" in /home3/mlagroup/public_html/admin/codes/add-product.php on line 61
+[02-Dec-2024 11:04:26 UTC] PHP Warning:  Trying to access array offset on value of type null in /home3/mlagroup/public_html/admin/codes/add-product.php on line 61
+[02-Dec-2024 11:04:26 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home3/mlagroup/public_html/admin/codes/add-product.php on line 61
+[02-Dec-2024 11:04:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/mlagroup/public_html/admin/codes/add-product.php:61) in /home3/mlagroup/public_html/admin/codes/add-product.php on line 119
+[04-Dec-2024 08:19:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market price' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[04-Dec-2024 08:19:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market price' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[04-Dec-2024 08:19:38 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market price' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[04-Dec-2024 08:19:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market price' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[04-Dec-2024 08:19:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market price' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[04-Dec-2024 08:19:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market price' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[04-Dec-2024 08:19:40 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market price' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[04-Dec-2024 08:19:40 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market price' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[04-Dec-2024 08:19:41 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market price' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[04-Dec-2024 08:19:41 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market price' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[04-Dec-2024 08:19:41 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market price' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[04-Dec-2024 08:19:41 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market price' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[04-Dec-2024 08:19:41 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's needs and convenience, we ensure strict quality controls and fair market price' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[14-Jan-2025 16:09:20 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[14-Jan-2025 16:09:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[14-Jan-2025 16:09:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[14-Jan-2025 16:09:31 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[14-Jan-2025 16:09:45 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[14-Jan-2025 16:09:50 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[14-Jan-2025 16:09:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[14-Jan-2025 16:10:32 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[14-Jan-2025 16:10:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[14-Jan-2025 16:11:10 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[14-Jan-2025 16:11:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[14-Jan-2025 16:13:00 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[14-Jan-2025 16:13:01 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[14-Jan-2025 16:13:11 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[17-Jan-2025 11:46:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[17-Jan-2025 11:46:13 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[17-Jan-2025 11:46:19 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[17-Jan-2025 11:47:01 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[17-Jan-2025 11:48:40 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[17-Jan-2025 11:48:46 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[17-Jan-2025 11:48:49 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[17-Jan-2025 11:50:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[17-Jan-2025 11:50:17 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[17-Jan-2025 11:52:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[17-Jan-2025 11:56:19 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[17-Jan-2025 11:56:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's pharma division is selling in its group units. Hence we get the advantage of e' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[20-Jan-2025 12:13:22 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's of using our one pack PVC Heat Stabilizers that include: reduced labour cost, ' at line 6 in /home3/mlagroup/public_html/admin/codes/edit-product.php:108
+Stack trace:
+#0 /home3/mlagroup/public_html/admin/codes/edit-product.php(108): mysqli->query('UPDATE products...')
+#1 {main}
+  thrown in /home3/mlagroup/public_html/admin/codes/edit-product.php on line 108
+[20-May-2025 14:36:29 UTC] PHP Warning:  Undefined variable $metatitle in /home3/mlagroup/public_html/admin/codes/edit-brand-process.php on line 124
+[20-May-2025 14:36:29 UTC] PHP Warning:  Undefined variable $metadescription in /home3/mlagroup/public_html/admin/codes/edit-brand-process.php on line 125
+[20-May-2025 14:36:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/mlagroup/public_html/admin/codes/edit-brand-process.php:124) in /home3/mlagroup/public_html/admin/codes/edit-brand-process.php on line 163
+[20-May-2025 14:36:29 UTC] PHP Warning:  Undefined variable $metatitle in /home3/mlagroup/public_html/admin/codes/edit-brand-process.php on line 124
+[20-May-2025 14:36:29 UTC] PHP Warning:  Undefined variable $metadescription in /home3/mlagroup/public_html/admin/codes/edit-brand-process.php on line 125
+[20-May-2025 14:36:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/mlagroup/public_html/admin/codes/edit-brand-process.php:124) in /home3/mlagroup/public_html/admin/codes/edit-brand-process.php on line 163
+[20-Jun-2025 13:05:23 UTC] PHP Warning:  Undefined array key "galleryImages" in /home3/mlagroup/public_html/admin/codes/add-product.php on line 61
+[20-Jun-2025 13:05:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /home3/mlagroup/public_html/admin/codes/add-product.php on line 61
+[20-Jun-2025 13:05:23 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home3/mlagroup/public_html/admin/codes/add-product.php on line 61
+[20-Jun-2025 13:05:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/mlagroup/public_html/admin/codes/add-product.php:61) in /home3/mlagroup/public_html/admin/codes/add-product.php on line 119
