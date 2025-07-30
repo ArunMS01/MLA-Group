@@ -609,54 +609,70 @@ include('head.php');
             return isValid;
         }
 
-
         // Function to handle form submission
         function submitForm(event) {
             event.preventDefault();
 
+            // Form validation (make sure this function is defined elsewhere)
             if (!validateForm()) {
                 return;
             }
 
-            const submitButton = document.querySelector("input[type='submit']");
+            // Disable the submit button and change the text
+            var submitButton = document.querySelector("input[type='submit']");
             submitButton.value = "Submitting...";
             submitButton.disabled = true;
 
-            const loadingOverlay = document.getElementById("loadingOverlay");
-            if (loadingOverlay) loadingOverlay.style.display = "block";
+            // Show the loading overlay (if it exists)
+            var loadingOverlay = document.getElementById("loadingOverlay");
+            if (loadingOverlay) {
+                loadingOverlay.style.display = "block";
+            }
 
-            const contactForm = document.getElementById("contactForm");
-            const phpFormData = new FormData(contactForm);
-            sendToGoogleSheet();
-            // Send to PHP handler (contact-mail)
-            const xhr = new XMLHttpRequest();
-            xhr.open("POST", "contact-mail.php", true);
+            // Collect the form data
+            var formData = new FormData(document.getElementById("contactForm"));
+
+            // Create a new AJAX request
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "contact-mail", true);
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === XMLHttpRequest.DONE) {
-                    submitButton.value = "Send Now";
-                    submitButton.disabled = false;
-                    if (loadingOverlay) loadingOverlay.style.display = "none";
-
                     if (xhr.status === 200) {
                         try {
-                            const response = JSON.parse(xhr.responseText);
+                            var response = JSON.parse(xhr.responseText);
+
                             if (response.success) {
-                                // Send to Google Sheet AFTER PHP success
+                                // Success: show success message and reset form
+                                // showSuccessMessage(); // Define this function to show a success message
                                 location.href = "thank-you.php";
+                                document.getElementById("contactForm").reset();
                             } else {
+                                // Error returned from the server
                                 alert(response.error || "Error submitting the form.");
                             }
                         } catch (e) {
-                            alert("Unexpected error occurred.");
+                            // Handle non-JSON responses (like HTML)
+                            alert(e);
                         }
                     } else {
-                        alert("Error in PHP form submission. Status: " + xhr.status);
+                        // Handle server errors (status codes other than 200)
+                        alert("Error in AJAX request. Status: " + xhr.status);
+                    }
+
+                    // Re-enable the submit button
+                    submitButton.value = "Send Now";
+                    submitButton.disabled = false;
+
+                    // Hide the loading overlay
+                    if (loadingOverlay) {
+                        loadingOverlay.style.display = "none";
                     }
                 }
             };
-            xhr.send(phpFormData);
-        }
 
+            // Send the form data
+            xhr.send(formData);
+        }
         // Function to send data to Google Sheet
         function sendToGoogleSheet() {
             const scriptURL = 'https://script.google.com/macros/s/AKfycbyDXiwzM87ZSTG-Wa8993adTRmmpaOe9-AUxoC1ahAPD1ZEHEiex6vZy1xVOuwnhJ6MjQ/exec';
@@ -678,12 +694,6 @@ include('head.php');
             formData.append('Name', document.getElementById("name").value);
             formData.append('Email', document.getElementById("email").value);
             formData.append('Phone', document.getElementById("phone").value);
-            formData.append('CompanyName', document.getElementById("company").value);
-            formData.append('MailingAddress', document.getElementById("address").value);
-            formData.append('City', document.getElementById("city").value);
-            formData.append('Zipcode', document.getElementById("zip").value);
-            formData.append('Country', document.getElementById("country").value);
-            formData.append('Message', document.getElementById("message").value);
 
             formData.append('url', window.location.href);
             formData.append('source', 'SEO');

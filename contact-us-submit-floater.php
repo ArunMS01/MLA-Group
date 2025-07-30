@@ -23,6 +23,7 @@ if ($_POST['csrf_token'] !== $expected_token) {
           $companynamev = $_POST['companynamev'];
           $productid = $_POST['productid'];
           $msg = $_POST['msg'];
+          $addresscity = $_POST['address'];
     //     $check_customerexist = "SELECT * FROM customer_queries WHERE mobile_no = '$phonenumber'";
     //   $check_existance = mysqli_query($conn, $check_customerexist);
     //   if(mysqli_num_rows($check_existance) > 0){
@@ -43,6 +44,7 @@ Country : $countrynamev
 Company : $companynamev
 Product Name: $productid
 Message: $msg
+Address / City:$addresscity
 ---------------------------------------
 
 Kindly connect with them at your earliest convenience.
@@ -50,8 +52,8 @@ Kindly connect with them at your earliest convenience.
 Best regards,
 MLA Group
 ";
-    //  $recipient = 'shivam@maidenstride.com';
-     $recipient = 'md@mlagroup.com'; // Change this to the email address where you want to receive notifications
+    //   $recipient = 'shivam@maidenstride.com';
+      $recipient = 'md@mlagroup.com'; // Change this to the email address where you want to receive notifications
         $subject = 'New Query From The Website Floater';
         $sql = "INSERT INTO enqueries (name, email, phone_number, company, country, page_url) VALUES ('Inquery website floater', 'Inquery website floater', '$phonenumber','$companynamev', '$countrynamev', '$pageurl')";
         $result = mysqli_query($db, $sql);

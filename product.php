@@ -498,6 +498,7 @@ include('header.php');
                                             <input required type="text" class="form-control" name="dzName">
                                             <div class="error-msg" id="name-error"></div>
                                         </div>
+                                        <input type="hidden" name="pageurl" value="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
 
                                         <label class="form-label">Email Address*</label>
                                         <div class="input-groups">
@@ -1278,9 +1279,6 @@ include('header.php');
                 return;
             }
 
-
-            document.getElementById("contactForm").addEventListener("submit", submitForm);
-
             // Change submit button to "Please wait..."
             var submitBtn = document.querySelector("button[type='submit']");
             submitBtn.textContent = 'Please wait...';
@@ -1314,52 +1312,53 @@ include('header.php');
                 }
             };
             xhr.send(formData);
-
-            // Function to send data to Google Sheet
-            function sendToGoogleSheet() {
-                const scriptURL = 'https://script.google.com/macros/s/AKfycbyDXiwzM87ZSTG-Wa8993adTRmmpaOe9-AUxoC1ahAPD1ZEHEiex6vZy1xVOuwnhJ6MjQ/exec';
-                const formData = new FormData();
-
-                const currentDate = new Date();
-                const formattedDateTime = currentDate.toLocaleString('en-US', {
-                    weekday: 'short',
-                    year: 'numeric',
-                    month: 'short',
-                    day: 'numeric',
-                    hour: '2-digit',
-                    minute: '2-digit',
-                    second: '2-digit',
-                    hour12: true
-                });
-
-                // Form field values
-                formData.append('Name', document.querySelector("[name='dzName']").value);
-                formData.append('Email', document.querySelector("[name='dzEmail']").value);
-                formData.append('Phone', document.querySelector("[name='dzPhoneNumber']").value);
-                formData.append('CompanyName', document.querySelector("[name='dzCompanyName']").value);
-                formData.append('Country', document.querySelector("[name='dzcountry']").value);
-                formData.append('Message', document.querySelector("[name='dzMessage']").value);
-                formData.append('url', window.location.href);
-                formData.append('source', 'SEO');
-                formData.append('date', formattedDateTime);
-
-                fetch(scriptURL, {
-                        method: 'POST',
-                        body: formData
-                    })
-                    .then(response => response.text())
-                    .then(result => {
-                        console.log("✅ Google Sheet submission successful:", result);
-                    })
-                    .catch(error => {
-                        console.error("❌ Google Sheet submission failed:", error);
-                    });
-            }
-
         }
 
-        // Add event listener for form submission
-        document.querySelector("#productform").addEventListener("submit", submitForm);
+
+        // Function to send data to Google Sheet
+        function sendToGoogleSheet() {
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyDXiwzM87ZSTG-Wa8993adTRmmpaOe9-AUxoC1ahAPD1ZEHEiex6vZy1xVOuwnhJ6MjQ/exec';
+            const formData = new FormData();
+
+            const currentDate = new Date();
+            const formattedDateTime = currentDate.toLocaleString('en-US', {
+                weekday: 'short',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            });
+
+            // Form field values
+            formData.append('Name', document.querySelector("[name='dzName']").value);
+            formData.append('Email', document.querySelector("[name='dzEmail']").value);
+            formData.append('Phone', document.querySelector("[name='dzPhoneNumber']").value);
+            formData.append('url', window.location.href);
+            formData.append('source', 'SEO');
+            formData.append('date', formattedDateTime);
+
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(result => {
+                    console.log("✅ Google Sheet submission successful:", result);
+                })
+                .catch(error => {
+                    console.error("❌ Google Sheet submission failed:", error);
+                });
+        }
+
+    }
+
+
+
+    // Add event listener for form submission
+    document.querySelector("#productform").addEventListener("submit", submitForm);
     });
 </script>
 <script>

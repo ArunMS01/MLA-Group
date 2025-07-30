@@ -338,7 +338,7 @@
       width: 100%;
       z-index: 0;
       opacity: 0.08;
-      background-image: url("https://elfsight.com/assets/chats/patterns/whatsapp.png");
+      background-image: url("./images/whatsapp.webp");
     }
 
     .scroltop {
@@ -550,7 +550,7 @@
           <div style="opacity: 0;" class="WhatsappDots__Component-pks5bf-0 eJJEeC">
             <div class="WhatsappDots__ComponentInner-pks5bf-1 hFENyl">
               <div class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotOne-pks5bf-3 ixsrax"></div>
-              <div class="WhatsappDots__Component-pks5bf-2 WhatsappDots__DotTwo-pks5bf-4 dRvxoz"></div>
+              <div class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotTwo-pks5bf-4 dRvxoz"></div>
               <div class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotThree-pks5bf-5 kXBtNt"></div>
             </div>
           </div>
@@ -563,21 +563,12 @@
       </div>
 
       <div class='blanter-msg'>
-        <input id='chat-input' placeholder="Submit Your Number" maxlength='120' row='1'>
+        <input id='chat-input' type="number" placeholder="Submit Your Number">
         <small id="invalidno">Please fill correct number</small>
-        <input class="form-controls" id="companynamev" placeholder="Company Name">
+        <input type="text" class="form-controls" id="companynamev" placeholder="Company Name">
         <small style="color:red" id="companynameerr"></small>
-        <input class="form-controls" id="countrynamev" placeholder="Country Name">
+        <input type="text" class="form-controls" id="countrynamev" placeholder="Country Name">
         <small style="color:red" id="countrynameerr"></small>
-
-        <input class="form-controls" id="addressnamev" placeholder="Address">
-        <small style="color:red" id="addressnameerr"></small>
-
-        <input class="form-controls" id="Citynamev" placeholder="City">
-        <small style="color:red" id="citynameerr"></small>
-
-
-
         <input type="hidden" value="" id="contact-method">
 
         <select class="form-controls" id="productid">
@@ -597,7 +588,11 @@
           ?>
         </select>
         <small style="color:red" id="producterr"></small>
-        <textarea class="form-controls" id="msg" placeholder="Message"></textarea>
+        <input class="form-controls" type="text" id="addresscity" placeholder="Address/City">
+        <small style="color:red" id="addresscityerr"></small>
+
+        <textarea type="text" class="form-controls" id="msg" placeholder="Message"></textarea>
+
         <small style="color:red" id="msgerr"></small>
         <button id="submit-whatsapp" class="btn-whatsapp">Connect On Whatsapp</button>
         <div>
@@ -771,7 +766,7 @@
 
 
 <!-- JAVASCRIPT FILES ========================================= -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- JQUERY MIN JS -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script defer src="vendor/wow/wow.min.js"></script><!-- WOW JS -->
 <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script><!-- BOOTSTRAP MIN JS -->
 <!-- <script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>BOOTSTRAP SELECT MIN JS -->
@@ -847,10 +842,18 @@
     var msg = document.querySelector("#msg");
     var producterr = document.querySelector("#producterr");
     var msgerr = document.querySelector("#msgerr");
-    var addressnamev = document.querySelector("#addressnamev");
-    var addressnameerr = document.querySelector("#addressnameerr");
-    var citynamev = document.querySelector("#Citynamev");
-    var citynameerr = document.querySelector("#citynameerr");
+
+
+    var addresscity = document.querySelector("#addresscity");
+    var addresscityerr = document.querySelector("#addresscityerr");
+
+
+    if (addresscity.value.trim() === '') {
+      addresscityerr.textContent = 'Please Enter Address or City';
+      isValid = false;
+    } else {
+      addresscityerr.textContent = ''; // Clear the error if validation passes
+    }
 
     if (!regx.test(phone)) {
       $("#invalidno").show();
@@ -879,7 +882,7 @@
       companynameerr.textContent = 'Please enter company name';
       isValid = false;
     } else {
-      companynameerr.textContent = '';
+      companynameerr.textContent = ''; // Clear the error if validation passes
     }
 
     if (countrynamev.value.trim() === '') {
@@ -889,30 +892,12 @@
       countrynameerr.textContent = 'Please enter country name';
       isValid = false;
     } else {
-      countrynameerr.textContent = '';
+      countrynameerr.textContent = ''; // Clear the error if validation passes
     }
 
-    // Address validation
-    if (addressnamev.value.trim() === '') {
-      addressnameerr.textContent = 'Please enter address';
-      isValid = false;
-    } else if (!nameRegex.test(addressnamev.value.trim())) {
-      addressnameerr.textContent = 'Please enter a valid address';
-      isValid = false;
-    } else {
-      addressnameerr.textContent = '';
-    }
 
-    // City validation
-    if (citynamev.value.trim() === '') {
-      citynameerr.textContent = 'Please enter city name';
-      isValid = false;
-    } else if (!nameRegex.test(citynamev.value.trim())) {
-      citynameerr.textContent = 'Please enter a valid city name';
-      isValid = false;
-    } else {
-      citynameerr.textContent = '';
-    }
+
+
 
     if (regx.test(phone) && isValid) {
       $("#invalidno").hide();
@@ -921,28 +906,29 @@
       // Ensure a product is selected
       var ctname = countrynamev.value;
       var cpname = companynamev.value;
-
+      var address = addresscity.value;
 
       var productid = productid.value;
-      var msg = msg.value;
+      var msgv = msg.value;
 
+      console.log("Phone:", phone);
+      console.log("Contact Method:", contactmethod);
+      console.log("Page URL:", pageUrl);
+      console.log("Company Name:", cpname);
+      console.log("Country Name:", ctname);
+      console.log("Product ID/Title:", productid);
+      console.log("Address/City:", address);
+      console.log("Message:", msgv);
       // Google sheet insert data
 
       const scriptURL = 'https://script.google.com/macros/s/AKfycbyDXiwzM87ZSTG-Wa8993adTRmmpaOe9-AUxoC1ahAPD1ZEHEiex6vZy1xVOuwnhJ6MjQ/exec'
       const formData = new FormData();
 
+
       formData.append('Method', contactmethod);
       formData.append('Phone', phone);
-      formData.append('Name', productid);
-      formData.append('Email', "Test")
-      formData.append('Phone', phone);
-      formData.append('CompanyName', cpname);
-      formData.append('MailingAddress', phone);
-      formData.append('Product', phone);
-      formData.append('City', phone);
-      formData.append('Zipcode', "Test")
-      formData.append('Country ', ctname);
-      formData.append('Message', msg);
+      formData.append('Name', name);
+      formData.append('Product', productid);
 
 
       formData.append('url', window.location.href);
@@ -992,7 +978,10 @@
 
 
 
+
+
       //   alert(phone);
+
       $.ajax({
         url: "https://www.mlagroup.com/contact-us-submit-floater",
         method: "post",
@@ -1003,7 +992,8 @@
           companynamev: cpname,
           countrynamev: ctname,
           productid: productid,
-          msg: msg,
+          address: address,
+          msg: msgv,
           csrf_token: "<?php echo hash_hmac('sha256', 'send_mail', $_SERVER['REMOTE_ADDR'] . 'MLAGROUPMM123'); ?>",
 
           action: 'phone-number-submit'

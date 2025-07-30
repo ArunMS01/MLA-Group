@@ -8783,3 +8783,9 @@ Stack trace:
 [06-Jul-2025 06:35:59 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/mlagroup/public_html/admin/login.php on line 3
 [07-Jul-2025 07:24:49 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/mlagroup/public_html/admin/login.php on line 3
 [07-Jul-2025 11:50:32 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/mlagroup/public_html/admin/login.php on line 3
+[10-Jul-2025 16:08:12 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/mlagroup/public_html/admin/login.php on line 3
+[11-Jul-2025 00:34:33 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/mlagroup/public_html/admin/login.php on line 3
+[15-Jul-2025 07:41:35 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/mlagroup/public_html/admin/login.php on line 3
+[15-Jul-2025 22:08:16 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/mlagroup/public_html/admin/login.php on line 3
+[17-Jul-2025 11:02:15 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/mlagroup/public_html/admin/login.php on line 3
+[18-Jul-2025 23:21:05 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/mlagroup/public_html/admin/login.php on line 3
