@@ -4,6 +4,7 @@ require 'send_email_funtion.php'; // Include the file containing sendEmail funct
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sanitize and validate form input
     $name     = filter_var(trim($_POST["name"]), FILTER_SANITIZE_STRING);
+     $desig     = filter_var(trim($_POST["desig"]), FILTER_SANITIZE_STRING);
     $email    = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $phone    = filter_var(trim($_POST["phone"]), FILTER_SANITIZE_STRING);
     $company  = filter_var(trim($_POST["company"]), FILTER_SANITIZE_STRING);
@@ -12,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $zip      = filter_var(trim($_POST["zip"]), FILTER_SANITIZE_STRING);
     $country  = filter_var(trim($_POST["country"]), FILTER_SANITIZE_STRING);
     $message  = filter_var(trim($_POST["message"]), FILTER_SANITIZE_STRING);
+    $prod =  filter_var(trim($_POST["prod"]), FILTER_SANITIZE_STRING);
     $pageurl = 'https://www.mlagroup.com/contactus';
     
     
@@ -51,10 +53,12 @@ $stmt->execute();
     A new inquiry has been received. Please see the details below:
 
     ---------------------------------------
-    Name: $name
+    Name of person: $name
+    Designation:$desig
     Email: $email
     Phone: $phone
-    Company: $company
+    Name of company: $company
+    Product of interest: $prod
     Address: $address, $city, $zip, $country
     Message: $message
     ---------------------------------------

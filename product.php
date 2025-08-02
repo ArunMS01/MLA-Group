@@ -498,6 +498,13 @@ include('header.php');
                                             <input required type="text" class="form-control" name="dzName">
                                             <div class="error-msg" id="name-error"></div>
                                         </div>
+                                        
+                                        <label class="form-label">Designation*</label>
+                                        <div class="input-group">
+                                            <input required type="text" class="form-control" name="dzdesign">
+                                            
+                                            </div>
+                                        
                                         <input type="hidden" name="pageurl" value="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
 
                                         <label class="form-label">Email Address*</label>
@@ -525,6 +532,16 @@ include('header.php');
                                             <input type="text" required class="form-control" name="dzCompanyName" id="company">
                                             <div class="error-msg" id="company-error"></div>
                                         </div>
+                                        
+                                          <label class="form-label">City*</label>
+                                        <div class="input-group">
+                                            <input required type="text" class="form-control" name="city">
+                                            </div>
+                                            
+                                              <label class="form-label">Address*</label>
+                                        <div class="input-group">
+                                            <input required type="text" class="form-control" name="address">
+                                              </div>
 
                                         <label class="form-label">Country*</label>
                                         <div class="input-groups">
@@ -532,9 +549,9 @@ include('header.php');
                                             <div class="error-msg" id="country-error"></div>
                                         </div>
 
-                                        <label class="form-label">Message (Optional)</label>
+                                        <label class="form-label">Message*</label>
                                         <div class="input-groups m-b30">
-                                            <textarea name="dzMessage" rows="4" class="form-control m-b10"></textarea>
+                                            <textarea id="msg" required name="dzMessage" rows="4" class="form-control m-b10"></textarea>
                                             <div class="error-msg" id="message-error"></div>
                                         </div>
 
@@ -1010,7 +1027,7 @@ include('header.php');
     }
 
     // Close the database connectio
-    mysqli_close($db);
+    // mysqli_close($db);
 
     // Now $brands array contains all brands with their associated products
     ?>
@@ -1214,11 +1231,14 @@ include('header.php');
 
             // Validate Name
             var country = document.querySelector("#country");
+            
             var company = document.querySelector("#company");
             var countryerr = document.querySelector("#country-error");
             var companyerr = document.querySelector("#company-error");
             var nameInput = document.querySelector("input[name='dzName']");
+            var errormsg = document.getElementById('message-error');
             var nameError = document.getElementById('name-error');
+            var dzMessages  = document.querySelector("#msg");
             var nameRegex = /^[A-Za-z\s]+$/;
 
             if (nameInput.value.trim() === '') {
@@ -1249,6 +1269,14 @@ include('header.php');
                 isValid = false;
             } else {
                 companyerr.textContent = ''; // Clear the error if validation passes
+            }
+            
+            
+             if (dzMessages.value.trim() === '') {
+               errormsg.textContent = 'Message is required.';
+                isValid = false;
+            } else {
+                errormsg.textContent = ''; // Clear the error if validation passes
             }
 
 
@@ -1285,7 +1313,7 @@ include('header.php');
             submitBtn.disabled = true;
 
             var formData = new FormData(document.querySelector("#productform"));
-
+            sendToGoogleSheet();
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "https://www.mlagroup.com/submit_form", true);
             xhr.onreadystatechange = function() {
@@ -1353,9 +1381,9 @@ include('header.php');
                 });
         }
 
-    }
+    
 
-
+    
 
     // Add event listener for form submission
     document.querySelector("#productform").addEventListener("submit", submitForm);

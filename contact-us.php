@@ -293,6 +293,33 @@ include('head.php');
                                         <div class="invalid-feedback" id="nameError">Please enter your name.</div>
                                     </div>
                                 </div>
+                                   <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="single-input-field">
+                                        <input type="text" placeholder="Your designation*" name="desig" id="desig" maxlength="30" required />
+                                        
+                                        <div class="invalid-feedback" id="designError">Please enter your designation</div>
+                                    </div>
+                                </div>
+                                  <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="single-input-field">
+                                <select class="form-contr" placeholder="Select Product*" required name="prod" id="optionproduct">
+                                  <option value="">--Select Product--</option>
+                                  <?php
+                                  require('admin/codes/db.php');
+                                  $sqlp = "SELECT title FROM `products`";
+                                  $resutlp = mysqli_query($db, $sqlp);
+                                  if ($resutlp) {
+                                    while ($rowp = mysqli_fetch_assoc($resutlp)) {
+                                  ?>
+                                      <option value="<?php echo $rowp['title'] ?>"><?php echo $rowp['title'] ?></option>
+                        
+                                  <?php
+                                    }
+                                  }
+                                  ?>
+                                </select>
+                                </div>
+                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="single-input-field">
                                         <input type="email" placeholder="E-mail*" name="email" id="email" maxlength="100" required />
@@ -337,7 +364,7 @@ include('head.php');
                                 </div>
                                 <div class="col-md-12 message-input">
                                     <div class="single-input-field">
-                                        <textarea placeholder="Write Your Message*" name="message" id="message"></textarea>
+                                        <textarea required placeholder="Write Your Message*" name="message" id="message"></textarea>
                                     </div>
                                 </div>
                                 <div class="single-input-fieldsbtn">
@@ -546,6 +573,7 @@ include('head.php');
             var zip = document.getElementById("zip").value;
             var country = document.getElementById("country").value;
             var message = document.getElementById("message").value;
+            var desigs = document.getElementById("desig").value;
 
             var isValid = true;
 
@@ -604,6 +632,14 @@ include('head.php');
             } else {
                 document.getElementById("countryError").style.display = "none";
             }
+            
+              if (desigs.trim() === "") {
+                document.getElementById("designError").style.display = "block";
+                isValid = false;
+            } else {
+                document.getElementById("designError").style.display = "none";
+            }
+            
 
 
             return isValid;
@@ -617,6 +653,8 @@ include('head.php');
             if (!validateForm()) {
                 return;
             }
+            
+            
 
             // Disable the submit button and change the text
             var submitButton = document.querySelector("input[type='submit']");
@@ -631,7 +669,7 @@ include('head.php');
 
             // Collect the form data
             var formData = new FormData(document.getElementById("contactForm"));
-
+            sendToGoogleSheet();
             // Create a new AJAX request
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "contact-mail", true);

@@ -13,6 +13,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message = $_POST['dzMessage'];
     $pageurl = $_POST['pageurl'];
     $dzcountry = $_POST['dzcountry'];
+    $dzdesign = $_POST['dzdesign'];
+    $address = $_POST['address'];
+    $city = $_POST['city'];
+    
     
        $expected_token = hash_hmac('sha256', 'send_mail', $_SERVER['REMOTE_ADDR'] . 'MLAGROUPMM123');
 if ($_POST['csrf_token'] !== $expected_token) {
@@ -32,6 +36,10 @@ if ($_POST['csrf_token'] !== $expected_token) {
     
      if (empty($dzcountry)) {
         $errors[] = 'Country is required.';
+    }
+    
+    if(empty($dzdesign)){
+       $errors[] = 'Country is required.';  
     }
 
     if (empty($email)) {
@@ -85,13 +93,17 @@ Hello Admin,
 You have received a new inquiry. Please reach out to the contact person with the details below:
 
 ---------------------------------------
-Name: $name
+Name of person: $name
+Designation: $dzdesign
+Name of company: $company
+Address: $address
+City:$city
+Country: $dzcountry
+Product of interest:  $pageurl
 Email: $email
 Phone: $phone
-PageURL:  $pageurl
 Message: $message
-Company: $company
-Country: $dzcountry
+
 ---------------------------------------
 
 Kindly connect with them at your earliest convenience.

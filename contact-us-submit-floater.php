@@ -24,6 +24,10 @@ if ($_POST['csrf_token'] !== $expected_token) {
           $productid = $_POST['productid'];
           $msg = $_POST['msg'];
           $addresscity = $_POST['address'];
+          $nameinput = $_POST['nameinput'];
+    $deigninput = $_POST['deigninput'];
+    $ccity = $_POST['ccity'];
+    $cemail = $_POST['cemail'];
     //     $check_customerexist = "SELECT * FROM customer_queries WHERE mobile_no = '$phonenumber'";
     //   $check_existance = mysqli_query($conn, $check_customerexist);
     //   if(mysqli_num_rows($check_existance) > 0){
@@ -37,14 +41,18 @@ Hello Admin,
 You have received a new inquiry from website Floater. Please reach out to the contact person with the details below:
 
 ---------------------------------------
-
-Phone: $phonenumber
-PageURL:  $pageurl
+Name of person:$nameinput
+Designation:$deigninput
+Name of company : $companynamev
+Address:$addresscity
+City:$ccity
 Country : $countrynamev
-Company : $companynamev
-Product Name: $productid
+Product of interest: $productid
+Phone: $phonenumber
+Email: $cemail
+PageURL:  $pageurl
 Message: $msg
-Address / City:$addresscity
+
 ---------------------------------------
 
 Kindly connect with them at your earliest convenience.
