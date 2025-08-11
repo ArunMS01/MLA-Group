@@ -1,13 +1,50 @@
-
-
 RewriteEngine On
 
-ErrorDocument 404 /404.html
+RewriteCond %{REQUEST_URI} ^/download/(.*)[\s%\-\.](.*)\.pdf$ [NC]
+RewriteRule ^ /download/%1_%2.pdf [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^(?!www\.)(.+) [NC]
-RewriteRule ^(.*) https://www.%1/$1 [R=301,L]
-RewriteCond %{HTTPS} !=on
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+# 1. Redirect non-www to www
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# 2. Redirect HTTP to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+ErrorDocument 404 /404.php
+
+# 3. Redirect specific old static URLs to new static URLs
+RewriteRule ^rnd\.html$ /r-and-d [R=301,L]
+RewriteRule ^index_services\.html$ /about [R=301,L]
+RewriteRule ^index_facilities\.html$ /about [R=301,L]
+RewriteRule ^index_rnd\.html$ /r-and-d [R=301,L]
+
+RewriteRule ^pvc-heat-stabilizers-manufacturer\.html$ /pvc-heat-stabilizers-manufacturers.html [R=301,L]
+
+RewriteRule ^ethylene-glycol-distearate-manufacturers-in-india\.html$ /ethylene-glycol-di-stearate-manufacturers-in-india.html [R=301,L]
+RewriteRule ^ethylene-glycol-monostearate-manufacturers-in-india\.html$ /ethylene-glycol-mono-stearate-manufacturers-in-india.html [R=301,L]
+RewriteRule ^pvc-heat-stabilizers-manufacturer\.html$ /pvc-heat-stabilizers-manufacturers.html [R=301,L]
+
+
+
+
+# 4. General rewrite rule for dynamic pages (e.g. /example.html -> product.php?url=example)
+RewriteRule ^([^/]+)\.html$ product.php?url=$1 [L,QSA]
+
+Redirect 301 /contactus https://www.mlagroup.com/contact-us
+
+
+# 5. Redirect .php URLs to non-.php URLs (canonical URLs) without affecting dynamic URLs
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\s([^.]+)\.php [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# 6. Internally rewrite non-.php URLs to their corresponding .php files (for dynamic URLs)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)$ $1.php [L]
+
+# 7. Custom 404 page for non-existent pages
+ErrorDocument 404 /404.php
 
 # php -- BEGIN cPanel-generated handler, do not edit
 # Set the “ea-php82” package as the default “PHP” programming language.
