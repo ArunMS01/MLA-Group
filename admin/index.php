@@ -262,6 +262,10 @@ include('inc/header.php') ?>
                 align-items: center;
                 justify-content: space-between;
               }
+              
+              #kt_table_users_filter{
+                  display:none;
+              }
             </style>
 
             <div class="col-md-12 grid-margin transparent transparents">
@@ -376,6 +380,20 @@ include('inc/header.php') ?>
                 <div class="card-body">
                   <div class="d-flex justify-content-between">
                     <h4 class="card-title">Manage Inqueries</h4>
+                    <form action="download.php" method="GET">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input required type="date" name="start_date">
+                            </div>
+                             <div class="col-md-4">
+                                <input required type="date" type="enddate" name="end_date">
+                            </div>
+                       
+                         <div class="col-md-4">
+                        <button class="btn btn-info" type="submit">Download</button>
+                        </div>
+                         </div>
+                    </form>
                     <!--<button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"-->
                     <!--  class="btn btn-primary btn-icon-text">-->
                     <!--  <i class="mdi mdi-library-plus"></i>-->
@@ -388,7 +406,7 @@ include('inc/header.php') ?>
                     <!-- Add class <code>.table-striped</code> -->
                   </p>
                   <div class="table-responsive">
-                     <table class="enquirytable table table-striped table-borderless" id="kt_table_users">
+                     <table class="table table-striped table-borderless" id="kt_table_users">
                                             <thead>
                                                 <tr>
                                                     <th>Date</th>
@@ -545,6 +563,8 @@ include('inc/header.php') ?>
 
                 // Call the function to initialize the status change functionality
                 handleChangeStatus();
+                
+                
             </script>
 
 

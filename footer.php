@@ -944,8 +944,9 @@
       cemailerr.textContent = ''; // Clear the error if validation passes
     }
     
-     if (addresscity.value.trim() === '') {
+     if (ccity.value.trim() === '') {
         ccityerr.textContent = 'Please Enter City'; 
+         isValid = false;
      }
      else{
          ccityerr.textContent = '';
@@ -955,7 +956,12 @@
     if (addresscity.value.trim() === '') {
       addresscityerr.textContent = 'Please Enter Address or City';
       isValid = false;
-    } else {
+    }
+     else if (!/[A-Za-z]/.test(addresscity.value) || !/[0-9]/.test(addresscity.value)) {
+  addresscityerr.textContent = 'Address must contain both letters and numbers';
+  isValid = false;
+}
+    else {
       addresscityerr.textContent = ''; // Clear the error if validation passes
     }
     
@@ -1041,55 +1047,55 @@
       console.log("Message:", msgv);
       // Google sheet insert data
 
-    //   const scriptURL = 'https://script.google.com/macros/s/AKfycbyDXiwzM87ZSTG-Wa8993adTRmmpaOe9-AUxoC1ahAPD1ZEHEiex6vZy1xVOuwnhJ6MjQ/exec'
-    //   const formData = new FormData();
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyDXiwzM87ZSTG-Wa8993adTRmmpaOe9-AUxoC1ahAPD1ZEHEiex6vZy1xVOuwnhJ6MjQ/exec'
+      const formData = new FormData();
 
 
-    //   formData.append('Method', contactmethod);
-    //   formData.append('Phone', phone);
-    //   formData.append('Name', name);
-    //   formData.append('Product', productid);
+      formData.append('Method', contactmethod);
+      formData.append('Phone', phone);
+      formData.append('Name', nameinput.value);
+      formData.append('Product', productid);
 
 
-    //   formData.append('url', window.location.href);
-    //   formData.append('source', 'Seo');
+      formData.append('url', window.location.href);
+      formData.append('source', 'Seo');
 
-    //   const currentDate = new Date();
+      const currentDate = new Date();
 
-    //   const formattedDateTime = currentDate.toLocaleString('en-US', {
-    //     weekday: 'short', // Tue
-    //     year: 'numeric', // 2025
-    //     month: 'short', // Jul
-    //     day: 'numeric', // 8
-    //     hour: '2-digit', // 07
-    //     minute: '2-digit', // 29
-    //     second: '2-digit', // 19
-    //     hour12: true // Enforces 12-hour format with AM/PM
-    //   });
+      const formattedDateTime = currentDate.toLocaleString('en-US', {
+        weekday: 'short', // Tue
+        year: 'numeric', // 2025
+        month: 'short', // Jul
+        day: 'numeric', // 8
+        hour: '2-digit', // 07
+        minute: '2-digit', // 29
+        second: '2-digit', // 19
+        hour12: true // Enforces 12-hour format with AM/PM
+      });
 
-    //   console.log(formattedDateTime);
-    //   formData.append('date', formattedDateTime);
-
-
+      console.log(formattedDateTime);
+      formData.append('date', formattedDateTime);
 
 
-    //   fetch(scriptURL, {
-    //       method: 'POST',
-    //       body: formData,
-    //       headers: {
-    //         'Accept': 'application/json',
 
-    //       },
-    //     })
-    //     .then(response => response.json())
-    //     .then(data => {
-    //       if (data.result === 'success') {
-    //         console('Form submitted successfully!');
-    //       } else {
-    //         console('Error: ' + data.error);
-    //       }
-    //     })
-    //     .catch(error => console('Error: ' + error.message));
+
+      fetch(scriptURL, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json',
+
+          },
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.result === 'success') {
+            console('Form submitted successfully!');
+          } else {
+            console('Error: ' + data.error);
+          }
+        })
+        .catch(error => console('Error: ' + error.message));
 
 
       // Google sheet insert data end

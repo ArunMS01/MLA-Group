@@ -17,36 +17,79 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $address = $_POST['address'];
     $city = $_POST['city'];
     
-    
-       $expected_token = hash_hmac('sha256', 'send_mail', $_SERVER['REMOTE_ADDR'] . 'MLAGROUPMM123');
-if ($_POST['csrf_token'] !== $expected_token) {
-    die('Invalid request');
+    // === CSRF CHECK ===
+$expected_token = hash_hmac('sha256', 'send_mail', $_SERVER['REMOTE_ADDR'] . 'MLAGROUPMM123');
+// if (empty($_POST['csrf_token']) || $_POST['csrf_token'] !== $expected_token) {
+//     die('Invalid request');
+// }
+
+$errors = [];
+
+// === NAME ===
+if (empty($name) || !preg_match("/^[a-zA-Z\s'.-]{2,50}$/", $name)) {
+    $errors[] = "Valid name (2-50 characters, letters only) is required.";
 }
 
-    // Validate form data
-    $errors = array();
+// === EMAIL ===
+if (empty($email)) {
+    $errors[] = "Email is required.";
+} elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $errors[] = "Invalid email format.";
+}
 
-    if (empty($name)) {
-        $errors[] = 'Name is required.';
-    }
-    
-     if (empty($company)) {
-        $errors[] = 'Company is required.';
-    }
-    
-     if (empty($dzcountry)) {
-        $errors[] = 'Country is required.';
-    }
-    
-    if(empty($dzdesign)){
-       $errors[] = 'Country is required.';  
-    }
+// === PHONE ===
+if (empty($phone)) {
+    $errors[] = "Phone number is required.";
+} elseif (!preg_match('/^\+?[0-9]{7,15}$/', $phone)) {
+    $errors[] = "Invalid phone number format (7–15 digits, optional +).";
+}
 
-    if (empty($email)) {
-        $errors[] = 'Email is required.';
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = 'Invalid email format.';
-    }
+// === COMPANY ===
+if (empty($company) || strlen($company) < 2) {
+    $errors[] = "Company name is required.";
+}
+
+// === COUNTRY ===
+if (empty($dzcountry)) {
+    $errors[] = "Country is required.";
+} elseif (!preg_match("/^[a-zA-Z\s]{2,50}$/", $dzcountry)) {
+    $errors[] = "Invalid country name.";
+}
+
+// === DESIGN ===
+if (empty($dzdesign)) {
+    $errors[] = "Design input is required.";
+}
+
+// === ADDRESS ===
+if (!empty($address) && strlen($address) > 100) {
+    $errors[] = "Address too long (max 100 chars).";
+}
+
+// === CITY ===
+if (!empty($city) && !preg_match("/^[a-zA-Z\s]{2,50}$/", $city)) {
+    $errors[] = "Invalid city name.";
+}
+
+// === SUBJECT ===
+if (!empty($subject) && strlen($subject) > 150) {
+    $errors[] = "Subject too long (max 150 chars).";
+}
+
+// === MESSAGE ===
+if (empty($message) || strlen($message) < 5) {
+    $errors[] = "Message must be at least 5 characters.";
+}
+
+// === PAGE URL ===
+if (!empty($pageurl) && !filter_var($pageurl, FILTER_VALIDATE_URL)) {
+    $errors[] = "Invalid page URL.";
+}
+
+// === SPAM / BOT PREVENTION ===
+if (preg_match("/https?:\/\//i", $message)) {
+    $errors[] = "Links are not allowed in message.";
+}
 
     // You can add more validation rules for phone, subject, and message if needed
 
@@ -65,15 +108,31 @@ if ($_POST['csrf_token'] !== $expected_token) {
     // Establish a database connection
     include('./admin/codes/db.php'); // Include your database connection file
 
- $query = "INSERT INTO enqueries (name, email, phone_number, company, description, country, page_url) 
-          VALUES (?, ?, ?, ?, ?, ?, ?)";
+$query = "INSERT INTO enqueries 
+    (name, email, phone_number, company, description, country, page_url, city, desig, addr) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 // Prepare the SQL query
 $stmt = $db->prepare($query);
 
-// Bind parameters and execute the query
-$stmt->bind_param('sssssss', $name, $email, $phone, $company, $message, $dzcountry, $pageurl);
+// Bind parameters (10 strings = 'ssssssssss')
+$stmt->bind_param(
+    'ssssssssss',
+    $name,
+    $email,
+    $phone,
+    $company,
+    $message,
+    $dzcountry,
+    $pageurl,
+    $city,
+    $dzdesign,
+    $address
+);
+
+// Execute the query
 $stmt->execute();
+
 
     // Check if the query was successful
     if ($stmt->affected_rows > 0) {

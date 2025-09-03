@@ -624,6 +624,7 @@
 
     // Collect the form data
     var formData = new FormData(document.getElementById("contactForm"));
+       sendToGoogleSheet();
 
     // Create a new AJAX request
     var xhr = new XMLHttpRequest();
@@ -666,6 +667,45 @@
     // Send the form data
     xhr.send(formData);
 }
+
+
+ function sendToGoogleSheet() {
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyDXiwzM87ZSTG-Wa8993adTRmmpaOe9-AUxoC1ahAPD1ZEHEiex6vZy1xVOuwnhJ6MjQ/exec';
+            const formData = new FormData();
+
+            const currentDate = new Date();
+            const formattedDateTime = currentDate.toLocaleString('en-US', {
+                weekday: 'short',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            });
+
+            // Form field values
+            formData.append('Name', document.getElementById("name").value);
+            formData.append('Email', document.getElementById("email").value);
+            formData.append('Phone', document.getElementById("phone").value);
+
+            formData.append('url', window.location.href);
+            formData.append('source', 'SEO');
+            formData.append('date', formattedDateTime);
+
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(result => {
+                    console.log("✅ Google Sheet submission successful:", result);
+                })
+                .catch(error => {
+                    console.error("❌ Google Sheet submission failed:", error);
+                });
+        }
 
 
     document.getElementById("contactForm").addEventListener("submit", submitForm);

@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 include('head.php');
 ?>
 <title>Our Products</title>
@@ -201,7 +203,7 @@ $query = "SELECT id, title, url FROM products WHERE brand = $brandId";
 }
 
 // Close the database connectio
-mysqli_close($db);
+// mysqli_close($db);
 
 // Now $brands array contains all brands with their associated products
 ?>
