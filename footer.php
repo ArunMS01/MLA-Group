@@ -2,27 +2,33 @@
 
 
   <style>
-  @media only screen and (max-width:1399px){
-      #whatsapp-chat{
-          width:40% !important;
+    @media only screen and (max-width:1399px) {
+      #whatsapp-chat {
+        width: 40% !important;
       }
-      .whatsapp-chat-body{
-          display:none !important;
+
+      .whatsapp-chat-body {
+        display: none !important;
       }
-      .header-chat{
-          padding:9px !important;
+
+      .header-chat {
+        padding: 9px !important;
       }
-      input#chat-input, .form-controls{
-              height: 34px !important;
-              margin-top: 4px !important;
-   
-    font-size: 11px !important;
+
+      input#chat-input,
+      .form-controls {
+        height: 34px !important;
+        margin-top: 4px !important;
+
+        font-size: 11px !important;
       }
-      .btn-whatsapp{
-          font-size:9px !important;
-  
-  }
-  }
+
+      .btn-whatsapp {
+        font-size: 9px !important;
+
+      }
+    }
+
     @media only screen and (max-width:768px) {
       .textmbcenters {
         text-align: center;
@@ -295,13 +301,16 @@
     }
 
     @media screen and (max-width: 480px) {
-        .whatsapp-chat-body{
-            display:none !important;
-        }
-        input#chat-input, .form-controls{
-                    height: 34px !important;
-                margin: 5px auto 0 auto !important;
-        }
+      .whatsapp-chat-body {
+        display: none !important;
+      }
+
+      input#chat-input,
+      .form-controls {
+        height: 34px !important;
+        margin: 5px auto 0 auto !important;
+      }
+
       #whatsapp-chat {
         width: auto !important;
         left: 5%;
@@ -548,8 +557,9 @@
         font-size: 14px;
         line-height: 12px;
       }
-      .header-chat{
-          padding:12px;
+
+      .header-chat {
+        padding: 12px;
       }
     }
 
@@ -595,55 +605,55 @@
       </div>
 
       <div class='blanter-msg'>
-          <div class="row">
-            <div class="col-lg-6">
-        <input class="form-controls" id='name-input' type="text" placeholder="Please Enter Your Name">
-        <small id="invalidname" style="color:red" ></small>
-        </div>
-        <div class="col-lg-6">
-        <input class="form-controls" id='name-design'  type="text" placeholder="Please Enter Your Designation">
-        <small id="invalidesign" style="margin-bottom:15px; color:red;"></small>
-        </div>
-        </div>
-          
         <div class="row">
-             <div class="col-lg-6">
-                <input id='cemail' class="form-controls" type="text" placeholder="Please Enter Email">
-        <small id="cemailerr"></small>
-            </div>
-            <div class="col-lg-6">
-                <input id='chat-input' type="text" placeholder="Submit Your Number">
-        <small id="invalidno">Please fill correct number</small>
-            </div>
+          <div class="col-lg-6">
+            <input class="form-controls" id='name-input' type="text" placeholder="Please Enter Your Name">
+            <small id="invalidname" style="color:red"></small>
+          </div>
+          <div class="col-lg-6">
+            <input class="form-controls" id='name-design' type="text" placeholder="Please Enter Your Designation">
+            <small id="invalidesign" style="margin-bottom:15px; color:red;"></small>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <input id='cemail' class="form-controls" type="text" placeholder="Please Enter Email">
+            <small id="cemailerr"></small>
+          </div>
+          <div class="col-lg-6">
+            <input id="phone" class="form-controls" type="text" placeholder="Submit Your Number">
+            <small id="invalidno" style="display: none;">Please fill correct number</small>
+          </div>
         </div>
         <div class="row">
-            
-            <div class="col-lg-6">
-                 <input type="text" class="form-controls" id="companynamev" placeholder="Company Name">
-        <small style="color:red" id="companynameerr"></small>
-            </div>
-             <div class="col-lg-6">
-                 <input type="text" class="form-controls" id="countrynamev" placeholder="Country Name">
-        <small style="color:red" id="countrynameerr"></small>
-            </div>
+
+          <div class="col-lg-6">
+            <input type="text" class="form-controls" id="companynamev" placeholder="Company Name">
+            <small style="color:red" id="companynameerr"></small>
+          </div>
+          <div class="col-lg-6">
+            <input type="text" class="form-controls" id="countrynamev" placeholder="Country Name">
+            <small style="color:red" id="countrynameerr"></small>
+          </div>
         </div>
-       
-       
+
+
         <input type="hidden" value="" id="contact-method">
 
-       
+
         <div class="row">
-            <div class="col-lg-6">
-                <input class="form-controls" type="text" id="addresscity" placeholder="Address">
-        <small style="color:red" id="addresscityerr"></small>
-            </div>
-             <div class="col-lg-6">
-                <input class="form-controls" type="text" id="ccity" placeholder="City">
-        <small style="color:red" id="ccityerr"></small> 
-            </div>
+          <div class="col-lg-6">
+            <input class="form-controls" type="text" id="addresscity" placeholder="Address">
+            <small style="color:red" id="addresscityerr"></small>
+          </div>
+          <div class="col-lg-6">
+            <input class="form-controls" type="text" id="ccity" placeholder="City">
+            <small style="color:red" id="ccityerr"></small>
+          </div>
         </div>
-        
-         <select class="form-controls" id="productid">
+
+        <select class="form-controls" id="productid">
           <option value="">--Select Product--</option>
           <?php
           require('admin/codes/db.php');
@@ -660,9 +670,9 @@
           ?>
         </select>
         <small style="color:red" id="producterr"></small>
-        
-        
-        
+
+
+
 
         <textarea type="text" class="form-controls" id="msg" placeholder="Message"></textarea>
 
@@ -836,7 +846,15 @@
 
 
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
 
+<script>
+  const phoneInput = document.querySelector("#phone");
+  window.intlTelInput(phoneInput, {
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+  });
+</script>
 
 <!-- JAVASCRIPT FILES ========================================= -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -915,25 +933,25 @@
     var msg = document.querySelector("#msg");
     var producterr = document.querySelector("#producterr");
     var msgerr = document.querySelector("#msgerr");
-    
+
     var nameinput = document.querySelector("#name-input");
     var deigninput = document.querySelector("#name-design");
 
     var addresscity = document.querySelector("#addresscity");
     var addresscityerr = document.querySelector("#addresscityerr");
     var nameinputerr = document.querySelector("#invalidname");
-    var deigninputerr =document.querySelector("#invalidesign");
-    
-    
-    var cemail= document.querySelector("#cemail");
+    var deigninputerr = document.querySelector("#invalidesign");
+
+
+    var cemail = document.querySelector("#cemail");
     var cemailerr = document.querySelector("#cemailerr");
-    
-    
+
+
     var ccity = document.querySelector("#ccity");
     var ccityerr = document.querySelector("#ccityerr");
-    
-    
-    
+
+
+
     if (cemail.value.trim() === '') {
       cemailerr.textContent = 'Please enter email';
       isValid = false;
@@ -943,38 +961,35 @@
     } else {
       cemailerr.textContent = ''; // Clear the error if validation passes
     }
-    
-     if (ccity.value.trim() === '') {
-        ccityerr.textContent = 'Please Enter City'; 
-         isValid = false;
-     }
-     else{
-         ccityerr.textContent = '';
-     }
+
+    if (ccity.value.trim() === '') {
+      ccityerr.textContent = 'Please Enter City';
+      isValid = false;
+    } else {
+      ccityerr.textContent = '';
+    }
 
 
     if (addresscity.value.trim() === '') {
       addresscityerr.textContent = 'Please Enter Address or City';
       isValid = false;
-    }
-     else if (!/[A-Za-z]/.test(addresscity.value) || !/[0-9]/.test(addresscity.value)) {
-  addresscityerr.textContent = 'Address must contain both letters and numbers';
-  isValid = false;
-}
-    else {
+    } else if (!/[A-Za-z]/.test(addresscity.value) || !/[0-9]/.test(addresscity.value)) {
+      addresscityerr.textContent = 'Address must contain both letters and numbers';
+      isValid = false;
+    } else {
       addresscityerr.textContent = ''; // Clear the error if validation passes
     }
-    
-    
-     if (nameinput.value.trim() === '') {
+
+
+    if (nameinput.value.trim() === '') {
       nameinputerr.textContent = 'Please Enter Name';
       isValid = false;
     } else {
       nameinputerr.textContent = ''; // Clear the error if validation passes
     }
-    
-    
-     if (deigninput.value.trim() === '') {
+
+
+    if (deigninput.value.trim() === '') {
       deigninputerr.textContent = 'Please Enter Designation';
       isValid = false;
     } else {
@@ -1112,10 +1127,10 @@
         url: "https://www.mlagroup.com/contact-us-submit-floater",
         method: "post",
         data: {
-        nameinput:nameinput.value,
-        deigninput:deigninput.value,
-        ccity:ccity.value,
-        cemail:cemail.value,
+          nameinput: nameinput.value,
+          deigninput: deigninput.value,
+          ccity: ccity.value,
+          cemail: cemail.value,
           phone: phone,
           contactmethod: contactmethod,
           pageUrl: pageUrl,
