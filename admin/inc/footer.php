@@ -76,14 +76,24 @@ integrity="sha512-Xo0Jh8MsOn72LGV8kU5LsclG7SUzJsWGhXbWcYs2MAmChkQzwiW/yTQwdJ8w6U
   });
 </script>
 <script>
-  $(document).ready(function() {
-    // Initialize DataTables
-    $('.enquirytable').DataTable({
-      "searching": true,
-      "order": [[ 0, "desc" ]] 
-       // Enable search functionality
+//   $(document).ready(function() {
+//     // Initialize DataTables
+//     $('.enquirytable').DataTable({
+//       "searching": true,
+//       "order": [[ 0, "desc" ]] 
+//       // Enable search functionality
+//     });
+//   });
+  
+  $(document).ready(function () {
+    $('#kt_table_users').DataTable({
+        "order": [], // disables initial auto sorting
+        "pageLength": 25, // optional: set default rows per page
+        "columnDefs": [
+            { "orderable": false, "targets": [/* add column indexes you don't want sortable */] }
+        ]
     });
-  });
+});
 </script>
 
 

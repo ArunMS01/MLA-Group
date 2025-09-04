@@ -445,6 +445,9 @@ include('header.php');
                                     /*margin-bottom:4px;*/
                                     object-fit: contain;
                                 }
+                                .text-danger{
+                                    color:red;
+                                }
                             </style>
                             <div class=" style-1 m-r20 m-md-r0 wow fadeInUp" data-wow-delay="0.5s"
                                 bis_skin_checked="1"
@@ -488,6 +491,7 @@ include('header.php');
                                         class="fa fa-file-text" aria-hidden="true"></i> </p>
                                 <div class="div contact-area1new cart-detail">
                                     <form class="" id="productform">
+                                        <div id="formerror" class="text-danger"></div>
                                         <input type="hidden" class="form-control" name="dzToDo" value="Contact">
                                         <input type="hidden" class="form-control" name="reCaptchaEnable" value="0">
                                         <input type="hidden" name="csrf_token" value="<?php echo hash_hmac('sha256', 'send_mail', $_SERVER['REMOTE_ADDR'] . 'MLAGROUPMM123'); ?>">
@@ -540,8 +544,9 @@ include('header.php');
                                             
                                               <label class="form-label">Address*</label>
                                         <div class="input-group">
-                                            <input required type="text" class="form-control" name="address">
+                                            <input required type="text" class="form-control" id="addressmain" name="address">
                                               </div>
+                                               <div class="error-msg" id="addressmain-error"></div>
 
                                         <label class="form-label">Country*</label>
                                         <div class="input-groups">
@@ -1239,6 +1244,9 @@ include('header.php');
             var errormsg = document.getElementById('message-error');
             var nameError = document.getElementById('name-error');
             var dzMessages  = document.querySelector("#msg");
+            var addressmain= document.querySelector("#addressmain");
+            
+            var addressmainerror = document.querySelector("#addressmain-error")
             var nameRegex = /^[A-Za-z\s]+$/;
 
             if (nameInput.value.trim() === '') {
@@ -1249,6 +1257,16 @@ include('header.php');
                 isValid = false;
             } else {
                 nameError.textContent = ''; // Clear the error if validation passes
+            }
+            
+              if (addressmain.value.trim() === '') {
+                addressmainerror.textContent = 'Country is required.';
+                isValid = false;
+            } else if (!/[A-Za-z]/.test(addressmain.value) || !/[0-9]/.test(addressmain.value)) {
+                addressmainerror.textContent = 'Address must contain both letters and numbers';
+                isValid = false;
+            } else {
+                addressmainerror.textContent = ''; // Clear the error if validation passes
             }
 
             if (country.value.trim() === '') {
@@ -1326,12 +1344,30 @@ include('header.php');
                             location.href = "thank-you.php";
                             document.querySelector("#productform").reset();
                         } else {
-                            // Error submitting form
-                            alert("Error submitting the form.");
+                            if (response.errors) {
+                                document.querySelector("#formerror").textContent = response.errors.join(", ");
+                            } else {
+                                document.querySelector("#formerror").textContent = "Something went wrong.";
+                            }
+                             document.querySelector("#formerror").scrollIntoView({
+                            behavior: "smooth", // smooth scrolling
+                            block: "center"     // position in the middle of screen
+                        });
                         }
                     } else {
+                         var response = JSON.parse(xhr.responseText);
+                          if (response.errors) {
+                                document.querySelector("#formerror").textContent = response.errors.join(", ");
+                            } else {
+                                document.querySelector("#formerror").textContent = "Something went wrong.";
+                            }
+                            
+                             document.querySelector("#formerror").scrollIntoView({
+                                behavior: "smooth", // smooth scrolling
+                                block: "center"     // position in the middle of screen
+                            });
                         // Error in AJAX request
-                        alert("Error in AJAX request.");
+                        // alert("Error in AJAX request.");
                     }
 
                     // Reset button text after submission

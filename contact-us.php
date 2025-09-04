@@ -271,6 +271,10 @@ include('head.php');
         .contact-page-form form {
             padding: 20px 15px 0;
         }
+        
+        .text-danger{
+            color:red;
+        }
     </style>
     <section class="contact-page-sec content-inner">
         <div class="container">
@@ -285,6 +289,7 @@ include('head.php');
                     <div class="contact-page-form" style="position: sticky; top:6vw" method="post">
                         <h2>Get in Touch</h2>
                         <form id="contactForm" action="contact-mail" method="post">
+                               <div id="formerror" class="text-danger"></div>
                             <div class="row">
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="single-input-field">
@@ -608,7 +613,12 @@ include('head.php');
             if (address.trim() === "") {
                 document.getElementById("addressError").style.display = "block";
                 isValid = false;
-            } else {
+            } 
+             else if (!/[A-Za-z]/.test(address) || !/[0-9]/.test(address)) {
+   document.getElementById("addressError").style.display = "block";
+              isValid = false;
+            }
+            else {
                 document.getElementById("addressError").style.display = "none";
             }
 
@@ -686,15 +696,30 @@ include('head.php');
                                 document.getElementById("contactForm").reset();
                             } else {
                                 // Error returned from the server
-                                alert(response.error || "Error submitting the form.");
+                              
+                                 document.querySelector("#formerror").textContent = response.message;
+                                 document.querySelector("#formerror").scrollIntoView({
+                            behavior: "smooth", // smooth scrolling
+                            block: "center"     // position in the middle of screen
+                        });
                             }
                         } catch (e) {
                             // Handle non-JSON responses (like HTML)
-                            alert(e);
+                            document.querySelector("#formerror").textContent = "Please try again some error occured";
+                            // alert(e);
+                            document.querySelector("#formerror").scrollIntoView({
+                            behavior: "smooth", // smooth scrolling
+                            block: "center"     // position in the middle of screen
+                        });
                         }
                     } else {
                         // Handle server errors (status codes other than 200)
-                        alert("Error in AJAX request. Status: " + xhr.status);
+                        // alert("Error in AJAX request. Status: " + xhr.status);
+                        document.querySelector("#formerror").textContent = response.message;
+                        document.querySelector("#formerror").scrollIntoView({
+                            behavior: "smooth", // smooth scrolling
+                            block: "center"     // position in the middle of screen
+                        });
                     }
 
                     // Re-enable the submit button
@@ -732,6 +757,7 @@ include('head.php');
             formData.append('Name', document.getElementById("name").value);
             formData.append('Email', document.getElementById("email").value);
             formData.append('Phone', document.getElementById("phone").value);
+            formData.append('Product', document.getElementById("optionproduct").value)
 
             formData.append('url', window.location.href);
             formData.append('source', 'SEO');
