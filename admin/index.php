@@ -263,9 +263,26 @@ include('inc/header.php') ?>
                 justify-content: space-between;
               }
               
+              .dataTables_wrapper select {
+   
+    height: 30px;
+    width: 78px;
+   
+}
+              
               #kt_table_users_filter{
                   display:none;
               }
+              
+              
+              .status-New        { background-color: #d1ecf1 !important; color: #0c5460 !important; }
+.status-Qualified  { background-color: #cce5ff !important; color: #004085 !important; }
+.status-Contacted  { background-color: #fff3cd !important; color: #856404 !important; }
+.status-Converted  { background-color: #d4edda !important; color: #155724 !important; }
+.status-FollowUp   { background-color: #e2e3e5 !important; color: #383d41 !important; }
+.status-Junk       { background-color: #f8d7da !important; color: #721c24 !important; }
+.status-Not-Junk   { background-color: #d6d8d9 !important; color: #1b1e21 !important; }
+
             </style>
 
             <div class="col-md-12 grid-margin transparent transparents">
@@ -405,65 +422,140 @@ include('inc/header.php') ?>
                   <p class="card-description">
                     <!-- Add class <code>.table-striped</code> -->
                   </p>
+                  <!-- Note Modal -->
+<div class="modal fade" id="noteModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Edit Lead Note</h5>
+    
+      </div>
+      <div class="modal-body">
+        <form id="noteForm">
+          <input type="hidden" name="lead_id" id="lead_id">
+          <div class="mb-3">
+            <label class="form-label">Note</label>
+            <textarea class="form-control" name="note" id="note_text" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Note</button>
+          
+            <button type="button" class="btn btn-secondary closenow">Close</button>
+         
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<h4>Filter By Date:</h4>
+<form method="GET" class="mb-3">
+    <div class="row">
+        <div class="col-md-3">
+            <label for="start_date">Start Date</label>
+            <input type="date" name="start_date" id="start_date" 
+                   class="form-control" 
+                   value="<?php echo isset($_GET['start_date']) ? $_GET['start_date'] : ''; ?>">
+        </div>
+        <div class="col-md-3">
+            <label for="end_date">End Date</label>
+            <input type="date" name="end_date" id="end_date" 
+                   class="form-control" 
+                   value="<?php echo isset($_GET['end_date']) ? $_GET['end_date'] : ''; ?>">
+        </div>
+        <div class="col-md-3 align-self-end">
+            <button type="submit" class="btn btn-primary">Filter</button>
+            <a href="<?php echo basename($_SERVER['PHP_SELF']); ?>" class="btn btn-secondary">Reset</a>
+        </div>
+    </div>
+</form>
+
+
                   <div class="table-responsive">
-                     <table class="table table-striped table-borderless" id="kt_table_users">
-                                            <thead>
-                                                <tr>
-                                                    <th>Date</th>
-                                                    <th>Name</th>
-                                                    <th>Phone</th>
-                                                    <th>Email</th>
+                    <table class="table table-striped table-borderless" id="kt_table_users">
+    <thead>
+        <tr>
+            <th>Action</th>
+            <th>Date</th>
+            <th>Name</th>
+                 <th>Product Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Product URL</th>
+        </tr>
+    </thead>
+    <tbody class="fw-semibold text-gray-600">
+        <?php
+        include('./codes/db.php');
+       $start_date = isset($_GET['start_date']) ? $_GET['start_date'] : '';
+$end_date   = isset($_GET['end_date']) ? $_GET['end_date'] : '';
 
+$query = "SELECT id, name, product, email, phone_number, status, notes, page_url, created_at 
+          FROM enqueries";
 
-                                                    <th>Status</th>
-                                                    <th></th>
-                                                    <th>Product URL</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="fw-semibold text-gray-600">
-                                                <?php
-                                                include('./codes/db.php');
-                                                // Perform a query to fetch data from the property_requests table
-                                                $query = "SELECT id, name, email, phone_number,status,page_url, created_at FROM enqueries ORDER BY id DESC";
-                                                $result = $db->query($query);
-                                                if ($result->num_rows > 0) {
-                                                    while ($row = $result->fetch_assoc()) {
-                                                ?>
-                                                        <tr class="even">
+// If both dates are selected, add WHERE condition
+if (!empty($start_date) && !empty($end_date)) {
+    $query .= " WHERE DATE(created_at) BETWEEN '" . $db->real_escape_string($start_date) . "' 
+                                      AND '" . $db->real_escape_string($end_date) . "'";
+}
 
-                                                            <!-- Display data in table cells -->
-                                                            <td><?= date('d M Y', strtotime($row['created_at'])) ?></td>
-                                                            <td><?= $row['name'] ?></td>
-                                                            <td><?= $row['phone_number'] ?></td>
-                                                            <td><?= $row['email'] ?></td>
+$query .= " ORDER BY id DESC";
 
-                                                            <td>
-                                                                <select class="form-select form-control enqueries-status-select" name="enqueries_status" data-enqueries-id="<?php echo $row['id']; ?>">
-                                                                    <option value="New" <?php echo ($row['status'] == 'New') ? 'selected' : ''; ?>>New</option>
-                                                                    <option value="Qualified" <?php echo ($row['status'] == 'Qualified') ? 'selected' : ''; ?>>Qualified</option>
-                                                                    <option value="Contacted" <?php echo ($row['status'] == 'Contacted') ? 'selected' : ''; ?>>Contacted</option>
-                                                                    <option value="Converted" <?php echo ($row['status'] == 'Converted') ? 'selected' : ''; ?>>Converted</option>
-                                                                    <option value="FollowUp" <?php echo ($row['status'] == 'FollowUp') ? 'selected' : ''; ?>>Follow Up</option>
-                                                                </select>
-                                                            </td>
-                                                            <td></td>
-                                                            <td><?= $row['page_url'] ?></td>
+$result = $db->query($query);
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+        ?>
+                <tr data-enqueries-id='<?php echo $row['id']?>'>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="view-leads.php?id=<?php echo $row['id']; ?>">
+                            View Details <i class="ti ti-eye"></i>
+                        </a>
+                          <span class="note-preview" style="display:none;" id="note_preview_<?php echo $row['id']; ?>">
+        <?= $row['notes'] ? substr($row['notes'], 0, 30) . '...' : 'No notes'; ?>
+    </span>
+  <button class="btn btn-sm btn-outline-secondary ms-2 edit-note-btn" 
+        data-id="<?php echo $row['id']; ?>" 
+        data-note="<?php echo htmlspecialchars($row['notes'] ?? ''); ?>">
+    <i class="ti ti-notepad"></i> 
+    <?php echo !empty($row['notes']) ? 'View Note' : 'Add Note'; ?>
+</button>
 
-                                                        </tr>
-                                                <?php
-                                                    }
-                                                    // Free result set
-                                                    $result->free();
-                                                } else {
-                                                    // Handle the case where no data is found
-                                                    echo "<tr><td colspan='5'>No data found</td></tr>";
-                                                }
+                    </td>
+                    <td><?= date('d M Y', strtotime($row['created_at'])) ?></td>
+                    <td><?= htmlspecialchars($row['name']); ?></td>
+                      <td><?= $row['product']; ?></td>
+                    <td><?= htmlspecialchars($row['phone_number']); ?></td>
+                    <td><?= htmlspecialchars($row['email']); ?></td>
+                   
+                    <td>
+                   <?php
+$status = $row['status']; 
+$className = 'status-' . str_replace(' ', '-', $status);
+?>
+<select data-enqueries-id='<?php echo $row['id']?>' class="form-select form-control enqueries-status-select <?php echo $className; ?>" 
+        name="enqueries_status">
+    <option value="New" <?= ($status == 'New') ? 'selected' : ''; ?>>New</option>
+    <option value="Qualified" <?= ($status == 'Qualified') ? 'selected' : ''; ?>>Qualified</option>
+    <option value="Contacted" <?= ($status == 'Contacted') ? 'selected' : ''; ?>>Contacted</option>
+    <option value="Converted" <?= ($status == 'Converted') ? 'selected' : ''; ?>>Converted</option>
+    <option value="FollowUp" <?= ($status == 'FollowUp') ? 'selected' : ''; ?>>Follow Up</option>
+    <option value="Junk" <?= ($status == 'Junk') ? 'selected' : ''; ?>>Junk</option>
+    <option value="Not Junk" <?= ($status == 'Not Junk') ? 'selected' : ''; ?>>Not Junk</option>
+</select>
 
-                                                // Close the database connection
-                                                $db->close();
-                                                ?>
-                                            </tbody>
-                                        </table>
+                    </td>
+                    <td style="white-space: normal;"><?= htmlspecialchars($row['page_url']); ?></td>
+                </tr>
+        <?php
+            }
+            $result->free();
+        } else {
+            echo "<tr><td colspan='7' class='text-center'>No data found</td></tr>";
+        }
+        $db->close();
+        ?>
+    </tbody>
+</table>
+
                   </div>
                 </div>
               </div>
@@ -564,6 +656,63 @@ include('inc/header.php') ?>
                 // Call the function to initialize the status change functionality
                 handleChangeStatus();
                 
+                
+                document.querySelectorAll('.edit-note-btn').forEach(btn => {
+  btn.addEventListener('click', function () {
+    const id = this.getAttribute('data-id');
+    const note = this.getAttribute('data-note');
+
+    document.getElementById('lead_id').value = id;
+    document.getElementById('note_text').value = note;
+    new bootstrap.Modal(document.getElementById('noteModal')).show();
+  });
+});
+
+document.getElementById('noteForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  let formData = new FormData(this);
+
+  fetch('update_note.php', {
+    method: 'POST',
+    body: formData
+  }).then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        // Update preview in table
+        document.getElementById('note_preview_' + formData.get('lead_id')).innerText =
+            formData.get('note').substring(0, 30) + '...';
+      // Hide modal safely
+     $('#noteModal').removeClass('show').hide();
+$('.modal-backdrop').remove(); 
+$('body').removeClass('modal-open').css('padding-right', '');
+
+
+
+        // Show SweetAlert
+        Swal.fire({
+          text: "Note updated successfully!",
+          icon: "success",
+          buttonsStyling: false,
+          confirmButtonText: "Ok, got it!",
+          customClass: {
+            confirmButton: "btn fw-bold btn-primary",
+          }
+        });
+      } else {
+       Swal.fire({
+          text: "Error saving note!",
+          icon: "error",
+          confirmButtonText: "Try Again",
+          customClass: {
+            confirmButton: "btn fw-bold btn-danger",
+          }
+        });
+      }
+    });
+});
+
+  
+
                 
             </script>
 

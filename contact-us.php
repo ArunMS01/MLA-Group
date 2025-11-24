@@ -203,11 +203,11 @@ include('head.php');
             display: inline-block;
             width: 100%;
         }
-
+.contact-page-form select,
         .contact-page-form input {
             background: #f9f9f9 none repeat scroll 0 0;
             border: 1px solid #f9f9f9;
-            margin-bottom: 20px;
+            margin-bottom: 20px !important;
             padding: 12px 16px;
             width: 100%;
             border-radius: 4px;
@@ -272,6 +272,12 @@ include('head.php');
             padding: 20px 15px 0;
         }
         
+        @media only screen and (max-width:768px){
+            #company{
+                margin-top:20px;
+            }
+        }
+        
         .text-danger{
             color:red;
         }
@@ -333,7 +339,7 @@ include('head.php');
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="single-input-field">
-                                        <input type="text" placeholder="Phone Number*" name="phone" id="phone" />
+                                        <input type="text" placeholder="Phone Number*" class="phone-input" name="phone" id="phone" />
                                         <div class="invalid-feedback" id="phoneError">Please enter a valid phone number.</div>
                                     </div>
                                 </div>
@@ -345,7 +351,7 @@ include('head.php');
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="single-input-field">
-                                        <input type="text" placeholder="Mailing Address*" name="address" id="address" />
+                                        <input type="text" placeholder="Address* i.e 490, New Abel Road, Kanpur-208002" name="address" id="address" />
                                         <div class="invalid-feedback" id="addressError">Please enter your mailing address.</div>
                                     </div>
                                 </div>
@@ -361,6 +367,7 @@ include('head.php');
                                         <div class="invalid-feedback" id="zipError">Please enter your zip or postal code.</div>
                                     </div>
                                 </div>
+                                <input type="hidden" id="ccods" name="countrycode" class="countrycode" />
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="single-input-field">
                                         <input type="text" placeholder="Country*" name="country" id="country" />
@@ -398,33 +405,33 @@ include('head.php');
 
                                 <div class="contact-section">
                                     <h4>MANAGING DIRECTOR (SALES & MARKETING) </h4>
-                                    <p>Mr. Sumit Agarwal - <a href="tel:+919336116592">+91-9336116592</a>, <a href="mailto:md@mlagroup.com">md@mlagroup.com</a></p>
+                                    <p>Mr. Sumit Agarwal - <a class="call-open" href="javascript:void(0)">+91-9336116592</a>, <a class="wp-open" href="javascript:void(0)">md@mlagroup.com</a></p>
                                 </div>
 
                                 <div class="contact-section">
                                     <h4>MARKETING CO-ORDINATOR </h4>
-                                    <p>Mr. Vansh Bhimsaria - <a href="tel:+919569488020">+91-9569488020</a>, <a href="mailto:vansh@mlagroup.com">vansh@mlagroup.com</a></p>
+                                    <p>Mr. Vansh Bhimsaria - <a class="call-open" href="javascript:void(0)">+91-9569488020</a>, <a class="wp-open" href="javascript:void(0)">vansh@mlagroup.com</a></p>
                                 </div>
 
                                 <div class="contact-section">
                                     <h4>DIRECTOR (FACTORY)</h4>
-                                    <p>Mr. Abhishek Kanodia - <a href="tel:+917985284355">+91-7985284355</a>, <a href="mailto:ceo@mlagroup.com">ceo@mlagroup.com</a></p>
+                                    <p>Mr. Abhishek Kanodia - <a class="call-open" href="javascript:void(0)">+91-7985284355</a>, <a class="wp-open" href="javascript:void(0)">ceo@mlagroup.com</a></p>
                                 </div>
                                 <!--<p>9336849137</p>-->
                                 <div class="contact-section">
                                     <h4>DIRECTOR (ADMIN) </h4>
-                                    <p>Mr. Saurabh Agarwal - <a href="tel:+919369103080">+91-9369103080</a>, <a href="mailto:saurabh@mlagroup.com">saurabh@mlagroup.com</a></p>
+                                    <p>Mr. Saurabh Agarwal - <a class="call-open" href="javascript:void(0)">+91-9369103080</a>, <a class="wp-open" href="javascript:void(0)">saurabh@mlagroup.com</a></p>
                                 </div>
 
                                 <div class="contact-section">
                                     <h4>PURCHASE</h4>
-                                    <p>Mr. Suraj Agarwal - <a href="tel:+919335091069">+91-9335091069</a>, <a href="mailto:purchase@mlagroup.com">purchase@mlagroup.com</a></p>
+                                    <p>Mr. Suraj Agarwal - <a class="call-open" href="javascript:void(0)">+91-9335091069</a>, <a class="wp-open" href="javascript:void(0)">purchase@mlagroup.com</a></p>
                                 </div>
 
 
                                 <div class="contact-section">
                                     <h4>RECRUITMENTS</h4>
-                                    <p>Mr. Mayyur Makhija - <a href="tel:+919140908101">+91-9140908101</a>, <a href="mailto:mayur@mlagroup.com">mayur@mlagroup.com</a></p>
+                                    <p>Mr. Mayyur Makhija - <a class="call-open" href="javascript:void(0)">+91-9140908101</a>, <a class="wp-open" href="javascript:void(0)">mayur@mlagroup.com</a></p>
                                 </div>
                             </div>
                         </div>
@@ -679,7 +686,7 @@ include('head.php');
 
             // Collect the form data
             var formData = new FormData(document.getElementById("contactForm"));
-            sendToGoogleSheet();
+           // sendToGoogleSheet();
             // Create a new AJAX request
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "contact-mail", true);
@@ -690,6 +697,7 @@ include('head.php');
                             var response = JSON.parse(xhr.responseText);
 
                             if (response.success) {
+                                sendToGoogleSheet();
                                 // Success: show success message and reset form
                                 // showSuccessMessage(); // Define this function to show a success message
                                 location.href = "thank-you.php";
@@ -752,13 +760,24 @@ include('head.php');
                 second: '2-digit',
                 hour12: true
             });
+            
+            
+             const formattedDateTimemonth = currentDate.toLocaleString('en-US', {
+             
+                month: 'short',
+               
+            });
 
             // Form field values
             formData.append('Name', document.getElementById("name").value);
             formData.append('Email', document.getElementById("email").value);
-            formData.append('Phone', document.getElementById("phone").value);
+            formData.append('Phone', "+" + document.getElementById("ccods").value + document.getElementById("phone").value);
             formData.append('Product', document.getElementById("optionproduct").value)
-
+             formData.append('country', document.querySelector("#country").value)
+            
+            
+             formData.append('Countrycode', "+" + document.getElementById("ccods").value)
+            formData.append('month', formattedDateTimemonth)
             formData.append('url', window.location.href);
             formData.append('source', 'SEO');
             formData.append('date', formattedDateTime);

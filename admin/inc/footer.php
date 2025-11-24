@@ -67,13 +67,13 @@ integrity="sha512-Xo0Jh8MsOn72LGV8kU5LsclG7SUzJsWGhXbWcYs2MAmChkQzwiW/yTQwdJ8w6U
   });
 </script>
 <script>
-  $(document).ready(function() {
-    // Initialize DataTables
-    $('.brandtable').DataTable({
-      "searching": true ,
-      "order": [[ 3, "desc" ]] // Enable search functionality
-    });
-  });
+//   $(document).ready(function() {
+//     // Initialize DataTables
+//     $('.brandtable').DataTable({
+//       "searching": true ,
+//       "order": [[ 3, "desc" ]]
+//     });
+//   });
 </script>
 <script>
 //   $(document).ready(function() {
@@ -155,6 +155,16 @@ integrity="sha512-Xo0Jh8MsOn72LGV8kU5LsclG7SUzJsWGhXbWcYs2MAmChkQzwiW/yTQwdJ8w6U
             });
         });
     });
+    
+
+         $(".closenow").on("click", function(){
+            //  alert("f")
+    
+        $('#noteModal').removeClass('show').hide();
+        $('.modal-backdrop').remove(); 
+        $('body').removeClass('modal-open').css('padding-right', '');
+    
+});
 </script>
   <!-- End custom js for this page-->
 </body>

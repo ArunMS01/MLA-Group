@@ -508,7 +508,7 @@ include('header.php');
                                             <input required type="text" class="form-control" name="dzdesign">
                                             
                                             </div>
-                                        
+                                          <input type="hidden" id="prodccode" name="countrycode" class="countrycode" />
                                         <input type="hidden" name="pageurl" value="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
 
                                         <label class="form-label">Email Address*</label>
@@ -519,15 +519,15 @@ include('header.php');
 
                                         <label class="form-label">Phone Number*</label>
                                         <div class="input-group">
-                                            <div class="input-group-prepend">
+                                            <!-- <div class="input-group-prepend">
                                                 <select class="form-select inputuiriir">
                                                     <option value="+91">+91 (IND)</option>
                                                     <option value="+1">+1 (USA)</option>
                                                     <option value="+44">+44 (UK)</option>
                                                     <option value="Others">Others</option>
                                                 </select>
-                                            </div>
-                                            <input required type="text" class="form-control" name="dzPhoneNumber">
+                                            </div> -->
+                                            <input required type="text" class="form-control phone-input" name="dzPhoneNumber">
                                             <div class="error-msg" id="phone-error"></div>
                                         </div>
 
@@ -544,7 +544,7 @@ include('header.php');
                                             
                                               <label class="form-label">Address*</label>
                                         <div class="input-group">
-                                            <input required type="text" class="form-control" id="addressmain" name="address">
+                                            <input required type="text" class="form-control" id="addressmain" placeholder="i.e 490, New Abel Road, Kanpur-208002" name="address">
                                               </div>
                                                <div class="error-msg" id="addressmain-error"></div>
 
@@ -1331,7 +1331,7 @@ include('header.php');
             submitBtn.disabled = true;
 
             var formData = new FormData(document.querySelector("#productform"));
-            sendToGoogleSheet();
+           
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "https://www.mlagroup.com/submit_form", true);
             xhr.onreadystatechange = function() {
@@ -1339,13 +1339,14 @@ include('header.php');
                     if (xhr.status === 200) {
                         var response = JSON.parse(xhr.responseText);
                         if (response.success) {
+                             sendToGoogleSheet();
                             // Form submitted successfully
                             // alert("Form submitted successfully.");
                             location.href = "thank-you.php";
                             document.querySelector("#productform").reset();
                         } else {
                             if (response.errors) {
-                                document.querySelector("#formerror").textContent = response.errors.join(", ");
+                                document.querySelector("#formerror").textContent = response.errors;
                             } else {
                                 document.querySelector("#formerror").textContent = "Something went wrong.";
                             }
@@ -1395,14 +1396,24 @@ include('header.php');
                 second: '2-digit',
                 hour12: true
             });
+            
+              const formattedDateTimemonth = currentDate.toLocaleString('en-US', {
+             
+                month: 'short',
+               
+            });
+            
+            formData.append('month', formattedDateTimemonth)
 
             // Form field values
             formData.append('Name', document.querySelector("[name='dzName']").value);
             formData.append('Email', document.querySelector("[name='dzEmail']").value);
-            formData.append('Phone', document.querySelector("[name='dzPhoneNumber']").value);
+            formData.append('Phone', "+" + document.getElementById("prodccode").value + document.querySelector("[name='dzPhoneNumber']").value);
+            formData.append('Countrycode', "+" + document.getElementById("prodccode").value);
             formData.append('url', window.location.href);
             formData.append('source', 'SEO');
             formData.append('date', formattedDateTime);
+            formData.append('country', document.querySelector("#country").value)
 
             fetch(scriptURL, {
                     method: 'POST',
