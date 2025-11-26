@@ -1,7 +1,13 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 require 'vendor/autoload.php'; // Include autoload.php to load PHPMailer library
 require 'send_email_funtion.php'; // Include the file containing sendEmail function
 include('./admin/codes/db.php');
+use libphonenumber\PhoneNumberUtil;
+use libphonenumber\NumberParseException;
+
+$phoneUtil = PhoneNumberUtil::getInstance();
 
 session_start();
 
@@ -10,6 +16,72 @@ session_start();
 
 if(isset($_POST['action'])){
     if($_POST['action'] == 'phone-number-submit'){
+
+
+        
+try {
+    function sendError($msg) {
+        header('Content-Type: application/json');
+        echo json_encode(['success' => false, 'message' => $msg]);
+        exit;
+    }
+
+    $phone = isset($_POST["phone"]) ? trim($_POST["phone"]) : '';
+    $code  = isset($_POST["countrycode"]) ? trim($_POST["countrycode"]) : '';
+
+    if (empty($phone) || empty($code)) {
+        sendError("Phone number and country code required.");
+    }
+
+    $phone = preg_replace('/\s+/', '', $phone);
+    $fullNumber = '+' . $code . $phone;
+
+    $numberProto = $phoneUtil->parse($fullNumber, null);
+
+    // Region detected from number
+    $region = $phoneUtil->getRegionCodeForNumber($numberProto);
+
+    // 1. Check possible number
+    if (!$phoneUtil->isPossibleNumber($numberProto)) {
+        sendError("Number is not possible.");
+    }
+
+    // 2. Check valid number (global rules)
+    if (!$phoneUtil->isValidNumber($numberProto)) {
+        sendError("Number is not valid.");
+    }
+
+    // 3. Check valid number for region
+    if (!$phoneUtil->isValidNumberForRegion($numberProto, $region)) {
+        sendError("Number is not valid for region $region.");
+    }
+
+    // 4. Restrict to mobile numbers
+    $type = $phoneUtil->getNumberType($numberProto);
+    if (!in_array($type, [
+        \libphonenumber\PhoneNumberType::MOBILE,
+        \libphonenumber\PhoneNumberType::FIXED_LINE_OR_MOBILE
+    ])) {
+        sendError("Only mobile numbers are allowed.");
+    }
+
+    // 5. Format standardized
+    $formatted = $phoneUtil->format($numberProto, \libphonenumber\PhoneNumberFormat::E164);
+
+    // $response = [
+    //     'success' => true,
+    //     'message' => "Valid number.",
+    //     'region'  => $region,
+    //     'number'  => $formatted
+    // ];
+    // header('Content-Type: application/json');
+    // echo json_encode($response);
+    // exit;
+
+} catch (\libphonenumber\NumberParseException $e) {
+    sendError("Invalid phone number format.");
+}
+
         
           $expected_token = hash_hmac('sha256', 'send_mail', $_SERVER['REMOTE_ADDR'] . 'MLAGROUPMM123');
     // if ($_POST['csrf_token'] !== $expected_token) {
@@ -194,11 +266,15 @@ $stmt->execute();
 
         if (!$emailSent) {
             // If email sending fails, add a message to the response
-             echo "error";
+              header('Content-Type: application/json');
+        echo json_encode(['success' => false, 'message' => "Failed to send email notification."]);
+       
         }
      else {
         // Form submission failed
-        echo "success";
+         header('Content-Type: application/json');
+        echo json_encode(['success' => true, 'message' => "Sent Successfully"]);
+        exit;
     }
         
       

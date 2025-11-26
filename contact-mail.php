@@ -1,9 +1,79 @@
 <?php
 require 'vendor/autoload.php'; // Include autoload.php to load PHPMailer library
 require 'send_email_funtion.php'; // Include the file containing sendEmail function
+use libphonenumber\PhoneNumberUtil;
+use libphonenumber\NumberParseException;
+
+$phoneUtil = PhoneNumberUtil::getInstance();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-   
-      // --- CSRF Protection ---
+
+try {
+    function sendError($msg) {
+        header('Content-Type: application/json');
+        echo json_encode(['success' => false, 'message' => $msg]);
+        exit;
+    }
+
+    $phone = isset($_POST["phone"]) ? trim($_POST["phone"]) : '';
+    $code  = isset($_POST["countrycode"]) ? trim($_POST["countrycode"]) : '';
+
+    if (empty($phone) || empty($code)) {
+        sendError("Phone number and country code required.");
+    }
+
+    $phone = preg_replace('/\s+/', '', $phone);
+    $fullNumber = '+' . $code . $phone;
+
+    $numberProto = $phoneUtil->parse($fullNumber, null);
+
+    // Region detected from number
+    $region = $phoneUtil->getRegionCodeForNumber($numberProto);
+
+    // 1. Check possible number
+    if (!$phoneUtil->isPossibleNumber($numberProto)) {
+        sendError("Number is not possible.");
+    }
+
+    // 2. Check valid number (global rules)
+    if (!$phoneUtil->isValidNumber($numberProto)) {
+        sendError("Number is not valid.");
+    }
+
+    // 3. Check valid number for region
+    if (!$phoneUtil->isValidNumberForRegion($numberProto, $region)) {
+        sendError("Number is not valid for region $region.");
+    }
+
+    // 4. Restrict to mobile numbers
+    $type = $phoneUtil->getNumberType($numberProto);
+    if (!in_array($type, [
+        \libphonenumber\PhoneNumberType::MOBILE,
+        \libphonenumber\PhoneNumberType::FIXED_LINE_OR_MOBILE
+    ])) {
+        sendError("Only mobile numbers are allowed.");
+    }
+
+    // 5. Format standardized
+    $formatted = $phoneUtil->format($numberProto, \libphonenumber\PhoneNumberFormat::E164);
+
+    // $response = [
+    //     'success' => true,
+    //     'message' => "Valid number.",
+    //     'region'  => $region,
+    //     'number'  => $formatted
+    // ];
+    // header('Content-Type: application/json');
+    // echo json_encode($response);
+    // exit;
+
+} catch (\libphonenumber\NumberParseException $e) {
+    sendError("Invalid phone number format.");
+}
+
+
+
+
+    // --- CSRF Protection ---
     $expected_token = hash_hmac('sha256', 'send_mail', $_SERVER['REMOTE_ADDR'] . 'MLAGROUPMM123');
     // if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $expected_token) {
     //     die('Invalid request');
@@ -26,69 +96,69 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // --- Validation Rules ---
     $errors = [];
 
-  // 1. Name - Required, only letters/spaces, length 2-50
-if (empty($name) || !preg_match("/^[a-zA-Z\s'.-]{2,50}$/", $name)) {
-    $errors[] = "Name is required and must be 2-50 letters.";
-}
-
-// 2. Designation - Required, letters/spaces only, max 100
-if (empty($desig) || !preg_match("/^[a-zA-Z\s'.-]{2,100}$/", $desig)) {
-    $errors[] = "Designation is required and must be valid text.";
-}
-
-// 3. Email - Required, RFC validation + block disposable emails
-if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $errors[] = "Valid email address is required.";
-} else {
-    $domain = substr(strrchr($email, "@"), 1);
-    $disposable_domains = ["tempmail.com", "mailinator.com", "10minutemail.com"];
-    if (in_array(strtolower($domain), $disposable_domains)) {
-        $errors[] = "Disposable emails are not allowed.";
+    // 1. Name - Required, only letters/spaces, length 2-50
+    if (empty($name) || !preg_match("/^[a-zA-Z\s'.-]{2,50}$/", $name)) {
+        $errors[] = "Name is required and must be 2-50 letters.";
     }
-}
 
-// 4. Phone - Required, digits only, length 7–15
-if (empty($phone) || !preg_match("/^\+?[0-9]{7,15}$/", $phone)) {
-    $errors[] = "Valid phone number is required (7–15 digits).";
-}
+    // 2. Designation - Required, letters/spaces only, max 100
+    if (empty($desig) || !preg_match("/^[a-zA-Z\s'.-]{2,100}$/", $desig)) {
+        $errors[] = "Designation is required and must be valid text.";
+    }
 
-// 5. Company - Required, letters/numbers/spaces, max 150
-if (empty($company) || !preg_match("/^[a-zA-Z0-9\s'.&-]{2,150}$/", $company)) {
-    $errors[] = "Company is required and must be valid text.";
-}
+    // 3. Email - Required, RFC validation + block disposable emails
+    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "Valid email address is required.";
+    } else {
+        $domain = substr(strrchr($email, "@"), 1);
+        $disposable_domains = ["tempmail.com", "mailinator.com", "10minutemail.com"];
+        if (in_array(strtolower($domain), $disposable_domains)) {
+            $errors[] = "Disposable emails are not allowed.";
+        }
+    }
 
-// 6. Address fields - All required with format checks
-if (empty($address) || strlen($address) > 200) {
-    $errors[] = "Address is required (max 200 characters).";
-}
+    // 4. Phone - Required, digits only, length 7–15
+    if (empty($phone) || !preg_match("/^\+?[0-9]{7,15}$/", $phone)) {
+        $errors[] = "Valid phone number is required (7–15 digits).";
+    }
 
-if (empty($city) || !preg_match("/^[a-zA-Z\s'-]{2,100}$/", $city)) {
-    $errors[] = "City is required and must contain only letters.";
-}
+    // 5. Company - Required, letters/numbers/spaces, max 150
+    if (empty($company) || !preg_match("/^[a-zA-Z0-9\s'.&-]{2,150}$/", $company)) {
+        $errors[] = "Company is required and must be valid text.";
+    }
 
-if (empty($zip) || !preg_match("/^[0-9A-Za-z\-]{3,15}$/", $zip)) {
-    $errors[] = "Zip/Postal code is required and must be 3–15 characters.";
-}
+    // 6. Address fields - All required with format checks
+    if (empty($address) || strlen($address) > 200) {
+        $errors[] = "Address is required (max 200 characters).";
+    }
 
-if (empty($country) || !preg_match("/^[a-zA-Z\s'-]{2,100}$/", $country)) {
-    $errors[] = "Country is required and must contain only letters.";
-}
+    if (empty($city) || !preg_match("/^[a-zA-Z\s'-]{2,100}$/", $city)) {
+        $errors[] = "City is required and must contain only letters.";
+    }
 
-// 7. Message - Required, min length 10, strip HTML
-$message = strip_tags($message);
-if (empty($message) || strlen($message) < 10) {
-    $errors[] = "Message is required and must be at least 10 characters.";
-}
+    if (empty($zip) || !preg_match("/^[0-9A-Za-z\-]{3,15}$/", $zip)) {
+        $errors[] = "Zip/Postal code is required and must be 3–15 characters.";
+    }
 
-// 8. Product field - Required, safe format, max 100
-if (empty($prod) || !preg_match("/^[a-zA-Z0-9\s'.&-]{2,100}$/", $prod)) {
-    $errors[] = "Product is required and must be valid text.";
-}
+    if (empty($country) || !preg_match("/^[a-zA-Z\s'-]{2,100}$/", $country)) {
+        $errors[] = "Country is required and must contain only letters.";
+    }
+
+    // 7. Message - Required, min length 10, strip HTML
+    $message = strip_tags($message);
+    if (empty($message) || strlen($message) < 10) {
+        $errors[] = "Message is required and must be at least 10 characters.";
+    }
+
+    // 8. Product field - Required, safe format, max 100
+    if (empty($prod) || !preg_match("/^[a-zA-Z0-9\s'.&-]{2,100}$/", $prod)) {
+        $errors[] = "Product is required and must be valid text.";
+    }
 
 
     // --- Bot / Spam Protection ---
     // Honeypot field (hidden input in HTML, should remain empty)
-   
+
 
     // Rate limit (5 requests per IP per 10 minutes)
     session_start();
@@ -105,39 +175,40 @@ if (empty($prod) || !preg_match("/^[a-zA-Z0-9\s'.&-]{2,100}$/", $prod)) {
             'success' => false,
             'message' => implode(" ", $errors)
         ];
-         header('Content-Type: application/json');
-    echo json_encode($response);
-    exit;
-    } 
+        header('Content-Type: application/json');
+        echo json_encode($response);
+        exit;
+    }
 
-  include('./admin/codes/db.php'); // Include your database connection file
+    include('./admin/codes/db.php'); // Include your database connection file
 
- $query = "INSERT INTO enqueries 
+    $query = "INSERT INTO enqueries 
           (name, email, phone_number, company, description, page_url, city,country, desig, addr, product) 
           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
 
-$stmt = $db->prepare($query);
+    $stmt = $db->prepare($query);
 
-$stmt->bind_param('sssssssssss', 
-    $name, 
-    $email, 
-    $phone, 
-    $company, 
-    $message, 
-    $pageurl, 
-    $city, 
-    $country,
-    $desig, 
-    $address, 
-    $prod
-);
+    $stmt->bind_param(
+        'sssssssssss',
+        $name,
+        $email,
+        $formatted,
+        $company,
+        $message,
+        $pageurl,
+        $city,
+        $country,
+        $desig,
+        $address,
+        $prod
+    );
 
-$stmt->execute();
+    $stmt->execute();
 
 
     // Construct email content
     //   $recipient = 'shivam@maidenstride.com';
-      $recipient = 'md@mlagroup.com'; // Replace with your email address
+    $recipient = 'md@mlagroup.com'; // Replace with your email address
     $subject   = 'New Inquery Form Website Contact Page';
 
     $emailContent = "
@@ -149,7 +220,7 @@ $stmt->execute();
     Name of person: $name
     Designation:$desig
     Email: $email
-    Phone: $phone
+    Phone: $formatted
     Name of company: $company
     Product of interest: $prod
     Address: $address, $city, $zip, $country
@@ -162,27 +233,25 @@ $stmt->execute();
     Your Website Team
     ";
 
-  $emailSent = sendEmail($recipient, $subject, $emailContent);
+    $emailSent = sendEmail($recipient, $subject, $emailContent);
 
-        if ($emailSent) {
-            // If email sending fails, add a message to the response
-             $response = array(
+    if ($emailSent) {
+        // If email sending fails, add a message to the response
+        $response = array(
             'success' => true,
             'message' => 'SUccess'
         );
-        }
-    else {
+    } else {
         // Form submission failed
         $response = array(
             'success' => false,
             'message' => 'Error submitting the form.'
         );
     }
-    
-     header('Content-Type: application/json');
+
+    header('Content-Type: application/json');
     echo json_encode($response);
-}
- else {
+} else {
     // If the request method is not POST, return an error response
     $response = array(
         'success' => false,
@@ -192,4 +261,3 @@ $stmt->execute();
     header('Content-Type: application/json');
     echo json_encode($response);
 }
-?>

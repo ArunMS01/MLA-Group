@@ -5,11 +5,11 @@ if (!isset($db) || !($db instanceof mysqli)) {
     error_reporting(E_ALL);
     ini_set('display_errors', '1');
 
-    // Database configuration
-    define('DB_HOST', '127.0.0.1:3307'); // Replace with your database host
-    define('DB_USERNAME', 'root'); // Replace with your database username
-    define('DB_PASSWORD', ''); // Replace with your database password
-    define('DB_NAME', 'mla'); // Replace with your database name
+       // Database configuration
+    define('DB_HOST', 'localhost'); // Replace with your database host
+    define('DB_USERNAME', 'mlagroup_mlagroup'); // Replace with your database username
+    define('DB_PASSWORD', '3^c!p3dY(Z6k'); // Replace with your database password
+    define('DB_NAME', 'mlagroup_mlagroup'); // Replace with your database name
 
 
     // Establish database connection
@@ -22,5 +22,6 @@ if (!isset($db) || !($db instanceof mysqli)) {
 }
 
 if (!defined('Base_url')) {
-    define('Base_url', 'https://www.localhost/MLA/');
+   define('Base_url', 'https://mlagroup.com/admin/');
 }
+?>

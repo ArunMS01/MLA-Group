@@ -2,34 +2,35 @@
 
 
   <style>
-    @media only screen and (max-width:1399px) {
-      #whatsapp-chat {
-        width: 40% !important;
+  @media only screen and (max-width:1399px){
+      #whatsapp-chat{
+          width:40% !important;
       }
-
-      .whatsapp-chat-body {
-        display: none !important;
+      .whatsapp-chat-body{
+          display:none !important;
       }
-
-      .header-chat {
-        padding: 9px !important;
+      .header-chat{
+          padding:9px !important;
       }
-
-      input#chat-input,
-      .form-controls {
-        height: 34px !important;
-        margin-top: 4px !important;
-
-        font-size: 11px !important;
+      input#chat-input, .form-controls{
+              height: 34px !important;
+              margin-top: 4px !important;
+   
+    font-size: 11px !important;
       }
-
-      .btn-whatsapp {
-        font-size: 9px !important;
-
-      }
-    }
-
+      .btn-whatsapp{
+          font-size:9px !important;
+  
+  }
+  }
     @media only screen and (max-width:768px) {
+        .chatcol #chat-input {
+    padding-left: 42px !important;
+}
+        .chatcol .iti {
+    width: 100%;
+    margin-top: 0px  !important;
+}
       .textmbcenters {
         text-align: center;
       }
@@ -301,16 +302,13 @@
     }
 
     @media screen and (max-width: 480px) {
-      .whatsapp-chat-body {
-        display: none !important;
-      }
-
-      input#chat-input,
-      .form-controls {
-        height: 34px !important;
-        margin: 5px auto 0 auto !important;
-      }
-
+        .whatsapp-chat-body{
+            display:none !important;
+        }
+        input#chat-input, .form-controls{
+                    height: 34px !important;
+                margin: 5px auto 0 auto !important;
+        }
       #whatsapp-chat {
         width: auto !important;
         left: 5%;
@@ -365,18 +363,18 @@
       display: none !important;
     }
 
-    .whatsapp-chat-body::before {
-      display: block;
-      position: absolute;
-      content: "";
-      left: 0px;
-      top: 0px;
-      height: 100%;
-      width: 100%;
-      z-index: 0;
-      opacity: 0.08;
-      background-image: url("./images/whatsapp.webp");
-    }
+    /*.whatsapp-chat-body::before {*/
+    /*  display: block;*/
+    /*  position: absolute;*/
+    /*  content: "";*/
+    /*  left: 0px;*/
+    /*  top: 0px;*/
+    /*  height: 100%;*/
+    /*  width: 100%;*/
+    /*  z-index: 0;*/
+    /*  opacity: 0.08;*/
+    /*  background-image: url("./images/whatsapp.webp");*/
+    /*}*/
 
     .scroltop {
       display: none;
@@ -557,9 +555,8 @@
         font-size: 14px;
         line-height: 12px;
       }
-
-      .header-chat {
-        padding: 12px;
+      .header-chat{
+          padding:12px;
       }
     }
 
@@ -568,6 +565,16 @@
       color: red;
       text-align: center;
       /*font-size: 17px;*/
+    }
+    .chatcol .iti{
+        margin-top: 15px;
+    }
+    .chatcol #chat-input{
+            padding-left: 72px;
+    }
+    
+    .whatsapp-chat-body{
+        display:none;
     }
   </style>
 
@@ -587,74 +594,61 @@
 
     </div>
     <div class='start-chat'>
-      <div pattern="img\whatsapp.png " class="WhatsappChat__Component-sc-1wqac52-0 whatsapp-chat-body">
-        <div class="WhatsappChat__MessageContainer-sc-1wqac52-1 dAbFpq">
-          <div style="opacity: 0;" class="WhatsappDots__Component-pks5bf-0 eJJEeC">
-            <div class="WhatsappDots__ComponentInner-pks5bf-1 hFENyl">
-              <div class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotOne-pks5bf-3 ixsrax"></div>
-              <div class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotTwo-pks5bf-4 dRvxoz"></div>
-              <div class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotThree-pks5bf-5 kXBtNt"></div>
-            </div>
-          </div>
-          <div style="opacity: 1;" class="WhatsappChat__Message-sc-1wqac52-4 kAZgZq">
-            <div class="WhatsappChat__Author-sc-1wqac52-3 bMIBDo">MLA Group</div>
-            <div class="WhatsappChat__Text-sc-1wqac52-2 iSpIQi">Hi there<br><br>How can I help you?</div>
-            <!--<div class="WhatsappChat__Time-sc-1wqac52-5 cqCDVm">1:40</div>-->
-          </div>
-        </div>
-      </div>
+     
 
       <div class='blanter-msg'>
-        <div class="row">
-          <div class="col-lg-6">
-            <input class="form-controls" id='name-input' type="text" placeholder="Please Enter Your Name">
-            <small id="invalidname" style="color:red"></small>
-          </div>
-          <div class="col-lg-6">
-            <input class="form-controls" id='name-design' type="text" placeholder="Please Enter Your Designation">
-            <small id="invalidesign" style="margin-bottom:15px; color:red;"></small>
-          </div>
+          <div class="row">
+            <div class="col-lg-6">
+        <input class="form-controls" id='name-input' type="text" placeholder="Please Enter Your Name*">
+        <small id="invalidname" style="color:red" ></small>
         </div>
-
+        <div class="col-lg-6">
+        <input class="form-controls" id='name-design'  type="text" placeholder="Please Enter Your Designation*">
+        <small id="invalidesign" style="margin-bottom:15px; color:red;"></small>
+        </div>
+        </div>
+          
         <div class="row">
-          <div class="col-lg-6">
-            <input id='cemail' class="form-controls" type="text" placeholder="Please Enter Email">
-            <small id="cemailerr"></small>
-          </div>
-          <div class="col-lg-6">
-            <input id="phone" class="form-controls" type="text" placeholder="Submit Your Number">
-            <small id="invalidno" style="display: none;">Please fill correct number</small>
-          </div>
+             <div class="col-lg-6">
+                <input id='cemail' class="form-controls" type="text" placeholder="Please Enter Email*">
+        <small id="cemailerr"></small>
+            </div>
+            <div class="col-lg-6 chatcol">
+                <input id='chat-input' type="text" class="phone-input" placeholder="Submit Your Number*">
+        <small id="invalidno">Please fill correct number</small>
+            </div>
         </div>
         <div class="row">
 
-          <div class="col-lg-6">
-            <input type="text" class="form-controls" id="companynamev" placeholder="Company Name">
-            <small style="color:red" id="companynameerr"></small>
-          </div>
-          <div class="col-lg-6">
-            <input type="text" class="form-controls" id="countrynamev" placeholder="Country Name">
-            <small style="color:red" id="countrynameerr"></small>
-          </div>
+         <input type="hidden" name="countrycode" id="floatcountrycode" class="countrycode" />
+            
+            <div class="col-lg-6">
+                 <input type="text" class="form-controls" id="companynamev" placeholder="Company Name*">
+        <small style="color:red" id="companynameerr"></small>
+            </div>
+             <div class="col-lg-6">
+                 <input type="text" class="form-controls" id="countrynamev" placeholder="Country Name*">
+        <small style="color:red" id="countrynameerr"></small>
+            </div>
         </div>
-
-
+       
+       
         <input type="hidden" value="" id="contact-method">
 
-
+       
         <div class="row">
-          <div class="col-lg-6">
-            <input class="form-controls" type="text" id="addresscity" placeholder="Address">
-            <small style="color:red" id="addresscityerr"></small>
-          </div>
-          <div class="col-lg-6">
-            <input class="form-controls" type="text" id="ccity" placeholder="City">
-            <small style="color:red" id="ccityerr"></small>
-          </div>
+            <div class="col-lg-6">
+                <input class="form-controls" type="text" id="addresscity" placeholder="Address* i.e 490, New Abel Road, Kanpur-208002">
+        <small style="color:red" id="addresscityerr"></small>
+            </div>
+             <div class="col-lg-6">
+                <input class="form-controls" type="text" id="ccity" placeholder="City*">
+        <small style="color:red" id="ccityerr"></small> 
+            </div>
         </div>
-
-        <select class="form-controls" id="productid">
-          <option value="">--Select Product--</option>
+        
+         <select class="form-controls" id="productid">
+          <option value="">--Select Product*--</option>
           <?php
           require('admin/codes/db.php');
           $sqlp = "SELECT title FROM `products`";
@@ -670,11 +664,11 @@
           ?>
         </select>
         <small style="color:red" id="producterr"></small>
+        
+        
+        
 
-
-
-
-        <textarea type="text" class="form-controls" id="msg" placeholder="Message"></textarea>
+        <textarea type="text" class="form-controls" id="msgfloat" placeholder="Message*"></textarea>
 
         <small style="color:red" id="msgerr"></small>
         <button id="submit-whatsapp" class="btn-whatsapp">Connect On Whatsapp</button>
@@ -701,6 +695,7 @@
       font-size: 1.125rem;
       color: var(--title);
     }
+  
   </style>
   <!-- Footer Top -->
   <div class="footer-top">
@@ -717,11 +712,11 @@
                 <p><span>Address</span> : 111/230, Harsh Nagar, Kanpur-208012 (INDIA) </p>
               </li>
               <li>
-                <p><span>E-mail</span> :<a href="mailto:md@mlagroup.com"> md@mlagroup.com</a>
+                <p><span>E-mail</span> :<a class="wp-open" href="javascript:void(0)"> md@mlagroup.com</a>
                 </p>
               </li>
               <li>
-                <p><span>Phone</span> : <a href="tel:+91-9336116592">+91-9336116592 </a></p>
+                <p><span>Phone</span> : <a class="call-open" href="javascript:void(0)">+91-9336116592 </a></p>
               </li>
             </ul>
 
@@ -846,15 +841,7 @@
 
 
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
 
-<script>
-  const phoneInput = document.querySelector("#phone");
-  window.intlTelInput(phoneInput, {
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-  });
-</script>
 
 <!-- JAVASCRIPT FILES ========================================= -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -891,14 +878,43 @@
   //         document.getElementById('typing-text').style.animationPlayState = 'running';
   //     }, 1000); // Delaying animation start by 1 second
 
+document.querySelectorAll(".phone-input").forEach(function(input) {
+  let iti = window.intlTelInput(input, {
+    initialCountry: "auto",
+    geoIpLookup: function(callback) {
+      fetch("https://ipapi.co/json")
+        .then(res => res.json())
+        .then(data => callback(data.country_code))
+        .catch(() => callback("us"));
+    },
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
+  });
+
+  // function to update ALL hidden fields
+  function updateAllCountryCodes() {
+    let dialCode = iti.getSelectedCountryData().dialCode;
+    document.querySelectorAll(".countrycode").forEach(function(hiddenInput) {
+      hiddenInput.value = dialCode;
+    });
+  }
+
+  // Initial set
+  updateAllCountryCodes();
+
+  // Update whenever country changes
+  input.addEventListener("countrychange", updateAllCountryCodes);
+});
+
+
+
   $("#chat-input").on('keyup', function() {
 
     let phonnumber = $(this).val();
     console.log(phonnumber.length);
-    var regx = /^[6-9]\d{9}$/;
-    if (phonnumber.length == "10") {
+    // var regx = /^[6-9]\d{9}$/;
+    if (phonnumber) {
 
-      if (regx.test(phonnumber)) {
+     
         var contactmethod = $('#contact-method').val();
         if (contactmethod == 'call') {
           $("#submit-whatsapp").addClass("GAFloatCallButton")
@@ -911,10 +927,7 @@
           $("#submit-whatsapp").removeClass("GAFloatCallButton")
         }
       }
-    } else {
-      $("#submit-whatsapp").removeClass("GAFloatCallButton")
-      $("#submit-whatsapp").removeClass("GAFloatWAppButton")
-    }
+     
   })
 
 
@@ -930,28 +943,28 @@
     var countrynamev = document.querySelector("#countrynamev");
     var countrynameerr = document.querySelector("#countrynameerr");
     var productid = document.querySelector("#productid");
-    var msg = document.querySelector("#msg");
+    var msgfloat = document.querySelector("#msgfloat");
     var producterr = document.querySelector("#producterr");
     var msgerr = document.querySelector("#msgerr");
-
+    
     var nameinput = document.querySelector("#name-input");
     var deigninput = document.querySelector("#name-design");
 
     var addresscity = document.querySelector("#addresscity");
     var addresscityerr = document.querySelector("#addresscityerr");
     var nameinputerr = document.querySelector("#invalidname");
-    var deigninputerr = document.querySelector("#invalidesign");
-
-
-    var cemail = document.querySelector("#cemail");
+    var deigninputerr =document.querySelector("#invalidesign");
+    
+    
+    var cemail= document.querySelector("#cemail");
     var cemailerr = document.querySelector("#cemailerr");
-
-
+    
+    
     var ccity = document.querySelector("#ccity");
     var ccityerr = document.querySelector("#ccityerr");
-
-
-
+    
+    
+    
     if (cemail.value.trim() === '') {
       cemailerr.textContent = 'Please enter email';
       isValid = false;
@@ -961,35 +974,38 @@
     } else {
       cemailerr.textContent = ''; // Clear the error if validation passes
     }
-
-    if (ccity.value.trim() === '') {
-      ccityerr.textContent = 'Please Enter City';
-      isValid = false;
-    } else {
-      ccityerr.textContent = '';
-    }
+    
+     if (ccity.value.trim() === '') {
+        ccityerr.textContent = 'Please Enter City'; 
+         isValid = false;
+     }
+     else{
+         ccityerr.textContent = '';
+     }
 
 
     if (addresscity.value.trim() === '') {
       addresscityerr.textContent = 'Please Enter Address or City';
       isValid = false;
-    } else if (!/[A-Za-z]/.test(addresscity.value) || !/[0-9]/.test(addresscity.value)) {
-      addresscityerr.textContent = 'Address must contain both letters and numbers';
-      isValid = false;
-    } else {
+    }
+     else if (!/[A-Za-z]/.test(addresscity.value) || !/[0-9]/.test(addresscity.value)) {
+  addresscityerr.textContent = 'Address must contain both letters and numbers';
+  isValid = false;
+}
+    else {
       addresscityerr.textContent = ''; // Clear the error if validation passes
     }
-
-
-    if (nameinput.value.trim() === '') {
+    
+    
+     if (nameinput.value.trim() === '') {
       nameinputerr.textContent = 'Please Enter Name';
       isValid = false;
     } else {
       nameinputerr.textContent = ''; // Clear the error if validation passes
     }
-
-
-    if (deigninput.value.trim() === '') {
+    
+    
+     if (deigninput.value.trim() === '') {
       deigninputerr.textContent = 'Please Enter Designation';
       isValid = false;
     } else {
@@ -1009,7 +1025,7 @@
       producterr.textContent = ''; // Clear the error if validation passes
     }
 
-    if (msg.value.trim() === '') {
+    if (msgfloat.value.trim() === '') {
       msgerr.textContent = 'Please enter message';
       isValid = false;
     } else {
@@ -1050,7 +1066,7 @@
       var address = addresscity.value;
 
       var productid = productid.value;
-      var msgv = msg.value;
+      var msgv = msgfloat.value;
 
       console.log("Phone:", phone);
       console.log("Contact Method:", contactmethod);
@@ -1061,20 +1077,23 @@
       console.log("Address/City:", address);
       console.log("Message:", msgv);
       // Google sheet insert data
+      var countrycode = $("#floatcountrycode").val();
 
       const scriptURL = 'https://script.google.com/macros/s/AKfycbyDXiwzM87ZSTG-Wa8993adTRmmpaOe9-AUxoC1ahAPD1ZEHEiex6vZy1xVOuwnhJ6MjQ/exec'
-      const formData = new FormData();
+      var formData = new FormData();
 
 
       formData.append('Method', contactmethod);
-      formData.append('Phone', phone);
+      formData.append('Phone', "+" + countrycode + phone);
       formData.append('Name', nameinput.value);
       formData.append('Product', productid);
+      
 
 
       formData.append('url', window.location.href);
       formData.append('source', 'Seo');
-
+      formData.append('Countrycode', "+" + countrycode);
+      formData.append('country', $("#countrynamev").val());
       const currentDate = new Date();
 
       const formattedDateTime = currentDate.toLocaleString('en-US', {
@@ -1087,6 +1106,13 @@
         second: '2-digit', // 19
         hour12: true // Enforces 12-hour format with AM/PM
       });
+        const formattedDateTimemonth = currentDate.toLocaleString('en-US', {
+             
+                month: 'short',
+               
+            });
+      
+      formData.append('month', formattedDateTimemonth)
 
       console.log(formattedDateTime);
       formData.append('date', formattedDateTime);
@@ -1094,7 +1120,9 @@
 
 
 
-      fetch(scriptURL, {
+     function sendgdataSheet(){
+        //  alert("hfh")
+       fetch(scriptURL, {
           method: 'POST',
           body: formData,
           headers: {
@@ -1111,26 +1139,27 @@
           }
         })
         .catch(error => console('Error: ' + error.message));
+     }
 
 
       // Google sheet insert data end
 
 
 
+        
 
 
-
-
+        if(countrycode){
       //   alert(phone);
 
       $.ajax({
         url: "https://www.mlagroup.com/contact-us-submit-floater",
         method: "post",
         data: {
-          nameinput: nameinput.value,
-          deigninput: deigninput.value,
-          ccity: ccity.value,
-          cemail: cemail.value,
+        nameinput:nameinput.value,
+        deigninput:deigninput.value,
+        ccity:ccity.value,
+        cemail:cemail.value,
           phone: phone,
           contactmethod: contactmethod,
           pageUrl: pageUrl,
@@ -1138,6 +1167,7 @@
           countrynamev: ctname,
           productid: productid,
           address: address,
+          countrycode: countrycode,
           msg: msgv,
           csrf_token: "<?php echo hash_hmac('sha256', 'send_mail', $_SERVER['REMOTE_ADDR'] . 'MLAGROUPMM123'); ?>",
 
@@ -1149,9 +1179,11 @@
           $("#submit-whatsapp").text("Sending......")
         },
         success: function(data) {
-          if (data == 'success') {
-
-            $('#chat-input').hide();
+          if (data.success) {
+            sendgdataSheet();
+            // $('#chat-input').hide();
+            $("#submit-whatsapp").attr("disabled", false);
+          $("#submit-whatsapp").text("Submit")
             // $('#whtasappbtn').css('display', 'block');
             $('#submit-whatsapp').hide();
             var contactmethod = $('#contact-method').val();
@@ -1170,15 +1202,16 @@
               location.href = "https://api.whatsapp.com/send?phone=919140908101&amp;text=Hi";
             }
           }
-          if (data == 'error') {
-            alert("Some error occured");
+          else{
+            alert(data.message);
+            $("#submit-whatsapp").attr("disabled", false);
+          $("#submit-whatsapp").text("Submit")
           }
-          if (data == 'exist') {
-            alert("You already submitted a request! Soon we'll get in touch with you");
-          }
+       
         }
 
       });
+    }
     }
   });
 
@@ -1189,7 +1222,7 @@
         .removeClass("show");
     }),
 
-    $(document).on("click", ".blantershow-chat-1", function() {
+    $(document).on("click", ".blantershow-chat-1, .call-open", function() {
       $("#whatsapp-chat")
         .addClass("show")
         .removeClass("hide");
@@ -1219,7 +1252,7 @@
       }
 
     });
-  $(document).on("click", ".blantershow-chat", function() {
+  $(document).on("click", ".blantershow-chat, .wp-open", function() {
     $("#whatsapp-chat")
       .addClass("show")
       .removeClass("hide");
@@ -1549,6 +1582,9 @@
     }
 
   });
+  
+
+
 </script>
 
 
