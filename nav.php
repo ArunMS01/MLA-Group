@@ -100,7 +100,7 @@
             <div class="container-fluid clearfix">
                 <!-- Website Logo -->
                 <div class="logo-header logo-dark me-md-5">
-                    <a href="/"><img width="105px" height="64px" src="images/logo-MLA.png" alt="logo"></a>
+                    <a href="/"><img width="105px" height="64px" src="images/mla-logo.webp" alt="MLA logo"></a>
                 </div>
 
                 <!-- Nav Toggle Button -->
@@ -117,7 +117,7 @@
                 <!-- Main Nav -->
                 <div class="header-nav navbar-collapse collapse justify-content-end" id="navbarNavDropdown">
                     <div class="logo-header">
-                        <a href="/"><img src="images/logo-MLA.png" alt="/"></a>
+                        <a href="/"><img src="images/mla-logo.webp" alt="MLA logo"></a>
                     </div>
                     <ul class="nav navbar-nav dark-nav">
                         <li class="has-mega-menu ">

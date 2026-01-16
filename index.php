@@ -608,7 +608,7 @@ include('head.php');
 
                         <div class="s gallery-slider">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="images/bdhjdj.jpg" alt="Man sitting on a stone on the lake"></div>
+                                <div class="swiper-slide"><img src="images/mla-group.webp" alt="MLA Group"></div>
                                 <!-- <div class="swiper-slide"><img
                                         src="images/p1.jpeg"
                                         alt="Lake"></div> -->
@@ -1769,7 +1769,7 @@ overflow: hidden;
                                     <div class="swiper-slide">
                                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/plasticimg1.jpg" alt="image">
+                                                <img src="images/pvc-pipe-industries.webp" alt="PVC Pipe Industries">
                                                 <div class="contentindustry">
                                                     <h3>PVC Pipe Industries</h3>
                                                 </div>
@@ -1800,7 +1800,7 @@ overflow: hidden;
                                     <div class="swiper-slide">
                                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/rubber-transformed.jpeg" alt="image">
+                                                <img src="images/rubber-industries.webp" alt="Rubber Industries">
                                                 <div class="contentindustry">
                                                     <h3>Rubber Industries</h3>
                                                 </div>
@@ -1830,7 +1830,7 @@ overflow: hidden;
                                     <div class="swiper-slide">
                                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/paint-mlagroup.jpg" alt="image">
+                                                <img src="images/paint-industries.webp" alt="Paints Industries">
                                                 <div class="contentindustry">
                                                     <h3>Paints Industries</h3>
                                                 </div>
@@ -1859,7 +1859,7 @@ overflow: hidden;
                                     <div class="swiper-slide">
                                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/masterbatch.jpg" alt="image">
+                                                <img src="images/plastic-industries.webp" alt="Plastics Industries">
                                                 <div class="contentindustry">
                                                     <h3>Plastics Industries</h3>
                                                 </div>
@@ -1891,7 +1891,7 @@ overflow: hidden;
                                     <div class="swiper-slide">
                                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/Cable.jpg" alt="image">
+                                                <img src="images/cable-compounding.webp" alt="Cable compounding">
                                                 <div class="contentindustry">
                                                     <h3>Cable compounding</h3>
                                                 </div>
@@ -1926,7 +1926,7 @@ overflow: hidden;
                                     <div class="swiper-slide">
                                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/formboard.jpeg" alt="image">
+                                                <img src="images/formboard.webp" alt="Formboard">
                                                 <div class="contentindustry">
                                                     <h3>Foamboard /
                                                         WPC</h3>
@@ -1957,7 +1957,7 @@ overflow: hidden;
                                     <div class="swiper-slide">
                                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/SPCflooring.webp" alt="image">
+                                                <img src="images/spc-flooring.webp" alt="SPC Flooring">
                                                 <div class="contentindustry">
                                                     <h3>SPC flooring</h3>
                                                 </div>
@@ -1984,7 +1984,7 @@ overflow: hidden;
                                     <div class="swiper-slide">
                                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/Wall-panels.webp" alt="image">
+                                                <img src="images/wall-panels.webp" alt="Wall panels">
                                                 <div class="contentindustry">
                                                     <h3>Wall panels /
                                                         Roofing
@@ -2018,7 +2018,7 @@ overflow: hidden;
                                     <div class="swiper-slide">
                                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/cosmetics.jfif" alt="image">
+                                                <img src="images/cosmetics.webp" alt="Cosmetics/ Toothpaste">
                                                 <div class="contentindustry">
                                                     <h3>Cosmetics/
                                                         Toothpaste</h3>
@@ -2051,7 +2051,7 @@ overflow: hidden;
                                     <div class="swiper-slide">
                                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/detpowder.jpg" alt="image">
+                                                <img src="images/detergent-powder.webp" alt="Detergent Powder">
                                                 <div class="contentindustry">
                                                     <h3>Detergents</h3>
                                                 </div>
@@ -2080,7 +2080,7 @@ overflow: hidden;
                                     <div class="swiper-slide">
                                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/Pharmaceuticals-and-food.jfif" alt="image">
+                                                <img src="images/pharmaceuticals-and-food.webp" alt="Pharmaceuticals and food">
                                                 <div class="contentindustry">
                                                     <h3>Pharmaceuticals and food
                                                         products</h3>
@@ -2115,7 +2115,7 @@ overflow: hidden;
                                     <div class="swiper-slide">
                                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/Pesticides.jfif" alt="image">
+                                                <img src="images/pesticides.webp" alt="Pesticides">
                                                 <div class="contentindustry">
                                                     <h3>Pesticides and
                                                         micronutrients
@@ -2152,7 +2152,7 @@ overflow: hidden;
                                     <div class="swiper-slide">
                                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/petrochemical.jpg" alt="image">
+                                                <img src="images/chemicals.webp" alt="Chemicals">
                                                 <div class="contentindustry">
                                                     <h3>Chemicals</h3>
                                                 </div>
@@ -2181,7 +2181,7 @@ overflow: hidden;
                                     <div class="swiper-slide">
                                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/chemcials.jpg" alt="image">
+                                                <img src="images/construction-chemcials.webp" alt="Construction Chemicals">
                                                 <div class="contentindustry">
                                                     <h3>Construction
                                                         chemicals</h3>
@@ -2215,7 +2215,7 @@ overflow: hidden;
                                     <div class="swiper-slide">
                                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/tablesalt.jpg" alt="image">
+                                                <img src="images/table-salt.webp" alt="Table salt">
                                                 <div class="contentindustry">
                                                     <h3>Table salt</h3>
                                                 </div>
@@ -2243,7 +2243,7 @@ overflow: hidden;
                                     <div class="swiper-slide">
                                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/ceramics.jpg" alt="image">
+                                                <img src="images/ceramics.webp" alt="Ceramics">
                                                 <div class="contentindustry">
                                                     <h3>Ceramics</h3>
                                                 </div>
@@ -2271,7 +2271,7 @@ overflow: hidden;
                                     <div class="swiper-slide">
                                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/animalfeed.jpg" alt="image">
+                                                <img src="images/animal-feed.webp" alt="Animal feed">
                                                 <div class="contentindustry">
                                                     <h3>Animal feed</h3>
                                                 </div>
