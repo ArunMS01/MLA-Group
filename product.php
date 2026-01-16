@@ -80,6 +80,7 @@ if (isset($_GET['url'])) {
 $title = $product_data['meta_title'];
 $desc = $product_data['meta_description'];
 $markup = $product_data['additional_code'];
+$canonical = !empty($product_data['canonical']) ? $product_data['canonical'] : '';
 $urllink = $product_data['url'];
 include('header.php');
 ?>
@@ -161,6 +162,10 @@ include('header.php');
         margin-right: 10px;
         color: var(--primary);
     }
+    
+    .mfp-link.lg-item{
+        display:none;
+    }
 
     .bx-new {
         padding-left: 0px !important;
@@ -171,7 +176,7 @@ include('header.php');
     .mygalleryslider {
         position: relative !important;
         bottom: 0 !important;
-        display: none;
+        /*display: none;*/
     }
 
     .mygalleryslider .swiper-wrapper {
@@ -228,7 +233,7 @@ include('header.php');
                                             }
                                             ?>
 
-                                            <img width="400px" height="400px" src="./admin/codes/<?php echo $product_data['main_image']; ?>" alt="<?php echo $image_alt; ?>">
+                                            <img src="./admin/codes/<?php echo $product_data['main_image']; ?>" alt="<?php echo $image_alt; ?>">
                                         </div>
                                     </div>
                                     <!-- Display gallery images -->
@@ -503,11 +508,11 @@ include('header.php');
                                             <div class="error-msg" id="name-error"></div>
                                         </div>
                                         
-                                        <label class="form-label">Designation*</label>
-                                        <div class="input-group">
-                                            <input required type="text" class="form-control" name="dzdesign">
+                                        <!--<label class="form-label">Designation*</label>-->
+                                        <!--<div class="input-group">-->
+                                        <!--    <input required type="text" class="form-control" name="dzdesign">-->
                                             
-                                            </div>
+                                            <!--</div>-->
                                           <input type="hidden" id="prodccode" name="countrycode" class="countrycode" />
                                         <input type="hidden" name="pageurl" value="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
 
@@ -537,22 +542,22 @@ include('header.php');
                                             <div class="error-msg" id="company-error"></div>
                                         </div>
                                         
-                                          <label class="form-label">City*</label>
-                                        <div class="input-group">
-                                            <input required type="text" class="form-control" name="city">
-                                            </div>
+                                        <!--  <label class="form-label">City*</label>-->
+                                        <!--<div class="input-group">-->
+                                        <!--    <input required type="text" class="form-control" name="city">-->
+                                        <!--    </div>-->
                                             
-                                              <label class="form-label">Address*</label>
-                                        <div class="input-group">
-                                            <input required type="text" class="form-control" id="addressmain" placeholder="i.e 490, New Abel Road, Kanpur-208002" name="address">
-                                              </div>
-                                               <div class="error-msg" id="addressmain-error"></div>
+                                        <!--      <label class="form-label">Address*</label>-->
+                                        <!--<div class="input-group">-->
+                                        <!--    <input required type="text" class="form-control" id="addressmain" placeholder="i.e 490, New Abel Road, Kanpur-208002" name="address">-->
+                                        <!--      </div>-->
+                                        <!--       <div class="error-msg" id="addressmain-error"></div>-->
 
-                                        <label class="form-label">Country*</label>
-                                        <div class="input-groups">
-                                            <input required type="text" class="form-control" name="dzcountry" id="country">
-                                            <div class="error-msg" id="country-error"></div>
-                                        </div>
+                                        <!--<label class="form-label">Country*</label>-->
+                                        <!--<div class="input-groups">-->
+                                        <!--    <input required type="text" class="form-control" name="dzcountry" id="country">-->
+                                        <!--    <div class="error-msg" id="country-error"></div>-->
+                                        <!--</div>-->
 
                                         <label class="form-label">Message*</label>
                                         <div class="input-groups m-b30">
@@ -1225,6 +1230,7 @@ include('header.php');
 </style>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
+   
         // Function to validate form fields
         function validateForm() {
             var isValid = true;
@@ -1235,16 +1241,16 @@ include('header.php');
             });
 
             // Validate Name
-            var country = document.querySelector("#country");
+            // var country = document.querySelector("#country");
             
             var company = document.querySelector("#company");
-            var countryerr = document.querySelector("#country-error");
+            // var countryerr = document.querySelector("#country-error");
             var companyerr = document.querySelector("#company-error");
             var nameInput = document.querySelector("input[name='dzName']");
             var errormsg = document.getElementById('message-error');
             var nameError = document.getElementById('name-error');
             var dzMessages  = document.querySelector("#msg");
-            var addressmain= document.querySelector("#addressmain");
+            // var addressmain= document.querySelector("#addressmain");
             
             var addressmainerror = document.querySelector("#addressmain-error")
             var nameRegex = /^[A-Za-z\s]+$/;
@@ -1259,25 +1265,25 @@ include('header.php');
                 nameError.textContent = ''; // Clear the error if validation passes
             }
             
-              if (addressmain.value.trim() === '') {
-                addressmainerror.textContent = 'Country is required.';
-                isValid = false;
-            } else if (!/[A-Za-z]/.test(addressmain.value) || !/[0-9]/.test(addressmain.value)) {
-                addressmainerror.textContent = 'Address must contain both letters and numbers';
-                isValid = false;
-            } else {
-                addressmainerror.textContent = ''; // Clear the error if validation passes
-            }
+            //   if (addressmain.value.trim() === '') {
+            //     addressmainerror.textContent = 'Country is required.';
+            //     isValid = false;
+            // } else if (!/[A-Za-z]/.test(addressmain.value) || !/[0-9]/.test(addressmain.value)) {
+            //     addressmainerror.textContent = 'Address must contain both letters and numbers';
+            //     isValid = false;
+            // } else {
+            //     addressmainerror.textContent = ''; // Clear the error if validation passes
+            // }
 
-            if (country.value.trim() === '') {
-                countryerr.textContent = 'Country is required.';
-                isValid = false;
-            } else if (!nameRegex.test(country.value.trim())) {
-                countryerr.textContent = 'Country name can only contain letters and spaces.';
-                isValid = false;
-            } else {
-                countryerr.textContent = ''; // Clear the error if validation passes
-            }
+            // if (country.value.trim() === '') {
+            //     countryerr.textContent = 'Country is required.';
+            //     isValid = false;
+            // } else if (!nameRegex.test(country.value.trim())) {
+            //     countryerr.textContent = 'Country name can only contain letters and spaces.';
+            //     isValid = false;
+            // } else {
+            //     countryerr.textContent = ''; // Clear the error if validation passes
+            // }
 
             if (company.value.trim() === '') {
                 companyerr.textContent = 'Company is required.';
@@ -1331,6 +1337,13 @@ include('header.php');
             submitBtn.disabled = true;
 
             var formData = new FormData(document.querySelector("#productform"));
+            
+               var dzcountry = document.querySelector("#countrynamev").value;
+        var city = document.querySelector("#cityname").value;
+         var dial = document.querySelector("#countrycode").value;
+            formData.append("dzcountry", dzcountry);
+            formData.append("city", city);
+            formData.append("dial", dial);
            
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "https://www.mlagroup.com/submit_form", true);
@@ -1409,11 +1422,11 @@ include('header.php');
             formData.append('Name', document.querySelector("[name='dzName']").value);
             formData.append('Email', document.querySelector("[name='dzEmail']").value);
             formData.append('Phone', "+" + document.getElementById("prodccode").value + document.querySelector("[name='dzPhoneNumber']").value);
-            formData.append('Countrycode', "+" + document.getElementById("prodccode").value);
+            formData.append('Countrycode', "+" + document.querySelector("#countrycode").value);
             formData.append('url', window.location.href);
             formData.append('source', 'SEO');
             formData.append('date', formattedDateTime);
-            formData.append('country', document.querySelector("#country").value)
+            formData.append('country', document.querySelector("#countrynamev").value)
 
             fetch(scriptURL, {
                     method: 'POST',

@@ -16,10 +16,10 @@
               height: 34px !important;
               margin-top: 4px !important;
    
-    font-size: 11px !important;
+    font-size: 16px !important;
       }
       .btn-whatsapp{
-          font-size:9px !important;
+          font-size:16px !important;
   
   }
   }
@@ -57,7 +57,7 @@
       bottom: 73px;
       right: 30px;
       overflow: hidden;
-      z-index: 10000;
+      z-index: 100;
       animation-name: showchat;
       animation-duration: 1s;
       transform: scale(1);
@@ -306,7 +306,7 @@
             display:none !important;
         }
         input#chat-input, .form-controls{
-                    height: 34px !important;
+                    height: 46px !important;
                 margin: 5px auto 0 auto !important;
         }
       #whatsapp-chat {
@@ -577,6 +577,7 @@
         display:none;
     }
   </style>
+  
 
   <div id='whatsapp-chat' class='hide'>
     <div class='header-chat'>
@@ -590,6 +591,12 @@
         <div id='get-nama'></div>
       </div>
     </div>
+   
+   <input type="hidden" class="countrycode" id="countrycode">
+<input type="hidden" class="countrynamev" id="countrynamev">
+<input type="hidden" class="cityname" id="cityname">
+
+
     <div class='home-chat'>
 
     </div>
@@ -602,71 +609,42 @@
         <input class="form-controls" id='name-input' type="text" placeholder="Please Enter Your Name*">
         <small id="invalidname" style="color:red" ></small>
         </div>
+        
         <div class="col-lg-6">
-        <input class="form-controls" id='name-design'  type="text" placeholder="Please Enter Your Designation*">
-        <small id="invalidesign" style="margin-bottom:15px; color:red;"></small>
-        </div>
+                <input id='cemail' class="form-controls" type="text" placeholder="Please Enter Email*">
+        <small id="cemailerr" style="color:red"></small>
+            </div>
+      
         </div>
           
         <div class="row">
-             <div class="col-lg-6">
-                <input id='cemail' class="form-controls" type="text" placeholder="Please Enter Email*">
-        <small id="cemailerr"></small>
-            </div>
+             
             <div class="col-lg-6 chatcol">
                 <input id='chat-input' type="text" class="phone-input" placeholder="Submit Your Number*">
         <small id="invalidno">Please fill correct number</small>
             </div>
-        </div>
-        <div class="row">
-
-         <input type="hidden" name="countrycode" id="floatcountrycode" class="countrycode" />
-            
-            <div class="col-lg-6">
+             <div class="col-lg-6">
                  <input type="text" class="form-controls" id="companynamev" placeholder="Company Name*">
         <small style="color:red" id="companynameerr"></small>
             </div>
-             <div class="col-lg-6">
-                 <input type="text" class="form-controls" id="countrynamev" placeholder="Country Name*">
-        <small style="color:red" id="countrynameerr"></small>
-            </div>
+        </div>
+        <div class="row">
+
+      
+           
         </div>
        
        
         <input type="hidden" value="" id="contact-method">
 
        
-        <div class="row">
-            <div class="col-lg-6">
-                <input class="form-controls" type="text" id="addresscity" placeholder="Address* i.e 490, New Abel Road, Kanpur-208002">
-        <small style="color:red" id="addresscityerr"></small>
-            </div>
-             <div class="col-lg-6">
-                <input class="form-controls" type="text" id="ccity" placeholder="City*">
-        <small style="color:red" id="ccityerr"></small> 
-            </div>
-        </div>
-        
-         <select class="form-controls" id="productid">
-          <option value="">--Select Product*--</option>
-          <?php
-          require('admin/codes/db.php');
-          $sqlp = "SELECT title FROM `products`";
-          $resutlp = mysqli_query($db, $sqlp);
-          if ($resutlp) {
-            while ($rowp = mysqli_fetch_assoc($resutlp)) {
-          ?>
-              <option value="<?php echo $rowp['title'] ?>"><?php echo $rowp['title'] ?></option>
-
-          <?php
+    
+        <style>
+            #msgfloat{
+                height:100% !important;
             }
-          }
-          ?>
-        </select>
-        <small style="color:red" id="producterr"></small>
-        
-        
-        
+        </style>
+      
 
         <textarea type="text" class="form-controls" id="msgfloat" placeholder="Message*"></textarea>
 
@@ -884,7 +862,12 @@ document.querySelectorAll(".phone-input").forEach(function(input) {
     geoIpLookup: function(callback) {
       fetch("https://ipapi.co/json")
         .then(res => res.json())
-        .then(data => callback(data.country_code))
+        .then(data =>{
+        console.log("IP API Response:", data);
+         document.querySelectorAll("#cityname").forEach(el => el.value = data.city);
+      document.querySelectorAll("#countrynamev").forEach(el => el.value = data.country_name);
+
+        callback(data.country_code)})
         .catch(() => callback("us"));
     },
     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
@@ -892,11 +875,19 @@ document.querySelectorAll(".phone-input").forEach(function(input) {
 
   // function to update ALL hidden fields
   function updateAllCountryCodes() {
-    let dialCode = iti.getSelectedCountryData().dialCode;
-    document.querySelectorAll(".countrycode").forEach(function(hiddenInput) {
-      hiddenInput.value = dialCode;
+    let data = iti.getSelectedCountryData();
+
+    // Dial code with +
+    document.querySelectorAll("#countrycode").forEach(function(el) {
+        el.value = "+" + data.dialCode;
     });
-  }
+
+    // Country name from selected flag
+    document.querySelectorAll("#countrynamev").forEach(function(el) {
+        el.value = data.name;
+    });
+}
+
 
   // Initial set
   updateAllCountryCodes();
@@ -938,32 +929,23 @@ document.querySelectorAll(".phone-input").forEach(function(input) {
     var nameRegex = /^[A-Za-z\s]+$/;
     var phone = document.getElementById("chat-input").value;
     var regx = /^(\+?\d{1,3})?[6-9]\d{6,14}$/;
-    var companynamev = document.querySelector("#companynamev");
-    var companynameerr = document.querySelector("#companynameerr");
-    var countrynamev = document.querySelector("#countrynamev");
-    var countrynameerr = document.querySelector("#countrynameerr");
-    var productid = document.querySelector("#productid");
+   
     var msgfloat = document.querySelector("#msgfloat");
-    var producterr = document.querySelector("#producterr");
+    // var producterr = document.querySelector("#producterr");
     var msgerr = document.querySelector("#msgerr");
     
     var nameinput = document.querySelector("#name-input");
-    var deigninput = document.querySelector("#name-design");
-
-    var addresscity = document.querySelector("#addresscity");
-    var addresscityerr = document.querySelector("#addresscityerr");
+   
     var nameinputerr = document.querySelector("#invalidname");
-    var deigninputerr =document.querySelector("#invalidesign");
-    
+   
+      var companynamev = document.querySelector("#companynamev");
+    var companynameerr = document.querySelector("#companynameerr");
     
     var cemail= document.querySelector("#cemail");
     var cemailerr = document.querySelector("#cemailerr");
     
-    
-    var ccity = document.querySelector("#ccity");
-    var ccityerr = document.querySelector("#ccityerr");
-    
-    
+ 
+ 
     
     if (cemail.value.trim() === '') {
       cemailerr.textContent = 'Please enter email';
@@ -975,25 +957,16 @@ document.querySelectorAll(".phone-input").forEach(function(input) {
       cemailerr.textContent = ''; // Clear the error if validation passes
     }
     
-     if (ccity.value.trim() === '') {
-        ccityerr.textContent = 'Please Enter City'; 
-         isValid = false;
-     }
-     else{
-         ccityerr.textContent = '';
-     }
-
-
-    if (addresscity.value.trim() === '') {
-      addresscityerr.textContent = 'Please Enter Address or City';
+  
+  
+    if (companynamev.value.trim() === '') {
+      companynameerr.textContent = 'Please enter company name';
       isValid = false;
-    }
-     else if (!/[A-Za-z]/.test(addresscity.value) || !/[0-9]/.test(addresscity.value)) {
-  addresscityerr.textContent = 'Address must contain both letters and numbers';
-  isValid = false;
-}
-    else {
-      addresscityerr.textContent = ''; // Clear the error if validation passes
+    } else if (!nameRegex.test(companynamev.value.trim())) {
+      companynameerr.textContent = 'Please enter company name';
+      isValid = false;
+    } else {
+      companynameerr.textContent = ''; // Clear the error if validation passes
     }
     
     
@@ -1005,12 +978,7 @@ document.querySelectorAll(".phone-input").forEach(function(input) {
     }
     
     
-     if (deigninput.value.trim() === '') {
-      deigninputerr.textContent = 'Please Enter Designation';
-      isValid = false;
-    } else {
-      deigninputerr.textContent = ''; // Clear the error if validation passes
-    }
+    
 
     if (!regx.test(phone)) {
       $("#invalidno").show();
@@ -1018,12 +986,7 @@ document.querySelectorAll(".phone-input").forEach(function(input) {
       $("#invalidno").hide();
     }
 
-    if (productid.value.trim() === '') {
-      producterr.textContent = 'Please select product name';
-      isValid = false;
-    } else {
-      producterr.textContent = ''; // Clear the error if validation passes
-    }
+
 
     if (msgfloat.value.trim() === '') {
       msgerr.textContent = 'Please enter message';
@@ -1032,68 +995,43 @@ document.querySelectorAll(".phone-input").forEach(function(input) {
       msgerr.textContent = ''; // Clear the error if validation passes
     }
 
-    if (companynamev.value.trim() === '') {
-      companynameerr.textContent = 'Please enter company name';
-      isValid = false;
-    } else if (!nameRegex.test(companynamev.value.trim())) {
-      companynameerr.textContent = 'Please enter company name';
-      isValid = false;
-    } else {
-      companynameerr.textContent = ''; // Clear the error if validation passes
-    }
-
-    if (countrynamev.value.trim() === '') {
-      countrynameerr.textContent = 'Please enter country name';
-      isValid = false;
-    } else if (!nameRegex.test(countrynamev.value.trim())) {
-      countrynameerr.textContent = 'Please enter country name';
-      isValid = false;
-    } else {
-      countrynameerr.textContent = ''; // Clear the error if validation passes
-    }
+  
 
 
+    // alert("hey")
+    
+    
+    var countrynamev = $("#countrynamev").val();
+var cityname = $("#cityname").val();
+var dialcode = $("#countrycode").val();   // already includes "+"
 
 
 
     if (regx.test(phone) && isValid) {
+        // alert("hey2")
       $("#invalidno").hide();
+       var cpname = companynamev.value;
       var contactmethod = $('#contact-method').val();
 
-      // Ensure a product is selected
-      var ctname = countrynamev.value;
-      var cpname = companynamev.value;
-      var address = addresscity.value;
-
-      var productid = productid.value;
+    //   var productid = productid.value;
       var msgv = msgfloat.value;
 
-      console.log("Phone:", phone);
-      console.log("Contact Method:", contactmethod);
-      console.log("Page URL:", pageUrl);
-      console.log("Company Name:", cpname);
-      console.log("Country Name:", ctname);
-      console.log("Product ID/Title:", productid);
-      console.log("Address/City:", address);
-      console.log("Message:", msgv);
-      // Google sheet insert data
-      var countrycode = $("#floatcountrycode").val();
+    
+    //   var countrycode = $("#floatcountrycode").val();
 
       const scriptURL = 'https://script.google.com/macros/s/AKfycbyDXiwzM87ZSTG-Wa8993adTRmmpaOe9-AUxoC1ahAPD1ZEHEiex6vZy1xVOuwnhJ6MjQ/exec'
       var formData = new FormData();
 
 
       formData.append('Method', contactmethod);
-      formData.append('Phone', "+" + countrycode + phone);
+      formData.append('Phone', "+" + dialcode + phone);
       formData.append('Name', nameinput.value);
-      formData.append('Product', productid);
-      
 
 
       formData.append('url', window.location.href);
       formData.append('source', 'Seo');
-      formData.append('Countrycode', "+" + countrycode);
-      formData.append('country', $("#countrynamev").val());
+      formData.append('Countrycode', cityname);
+      formData.append('country', countrynamev);
       const currentDate = new Date();
 
       const formattedDateTime = currentDate.toLocaleString('en-US', {
@@ -1141,15 +1079,7 @@ document.querySelectorAll(".phone-input").forEach(function(input) {
         .catch(error => console('Error: ' + error.message));
      }
 
-
-      // Google sheet insert data end
-
-
-
-        
-
-
-        if(countrycode){
+        if(countrynamev){
       //   alert(phone);
 
       $.ajax({
@@ -1157,17 +1087,15 @@ document.querySelectorAll(".phone-input").forEach(function(input) {
         method: "post",
         data: {
         nameinput:nameinput.value,
-        deigninput:deigninput.value,
-        ccity:ccity.value,
+       
         cemail:cemail.value,
           phone: phone,
           contactmethod: contactmethod,
           pageUrl: pageUrl,
-          companynamev: cpname,
-          countrynamev: ctname,
-          productid: productid,
-          address: address,
-          countrycode: countrycode,
+          countrynamev: countrynamev,
+          countrycode: dialcode,
+          ccity:cityname,
+          companynamev:cpname,
           msg: msgv,
           csrf_token: "<?php echo hash_hmac('sha256', 'send_mail', $_SERVER['REMOTE_ADDR'] . 'MLAGROUPMM123'); ?>",
 
@@ -1189,17 +1117,17 @@ document.querySelectorAll(".phone-input").forEach(function(input) {
             var contactmethod = $('#contact-method').val();
             if (contactmethod == 'call') {
 
-              location.href = "tel:9140908101";
+              location.href = "tel:9336116592";
 
             }
             if (contactmethod == 'whatsapp') {
-              location.href = "https://api.whatsapp.com/send?phone=919140908101&amp;text=Hi";
+              location.href = "https://api.whatsapp.com/send?phone=919336116592&amp;text=Hi";
             }
             if (contactmethod == 'call2') {
-              location.href = "tel:9140908101";
+              location.href = "tel:9336116592";
             }
             if (contactmethod == 'whatsappfootercontact') {
-              location.href = "https://api.whatsapp.com/send?phone=919140908101&amp;text=Hi";
+              location.href = "https://api.whatsapp.com/send?phone=919336116592&amp;text=Hi";
             }
           }
           else{

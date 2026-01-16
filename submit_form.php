@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         $phone = isset($_POST["dzPhoneNumber"]) ? trim($_POST["dzPhoneNumber"]) : '';
-        $code  = isset($_POST["countrycode"]) ? trim($_POST["countrycode"]) : '';
+        $code  = isset($_POST["dial"]) ? trim($_POST["dial"]) : '';
 
         if (empty($phone) || empty($code)) {
             sendError("Phone number and country code required.");
@@ -78,13 +78,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['dzName'];
     $email = $_POST['dzEmail'];
     $phone = $_POST['dzPhoneNumber'];
-    $subject = $_POST['subject'];
+    // $subject = $_POST['subject'];
     $company = $_POST['dzCompanyName'];
     $message = $_POST['dzMessage'];
     $pageurl = $_POST['pageurl'];
     $dzcountry = $_POST['dzcountry'];
-    $dzdesign = $_POST['dzdesign'];
-    $address = $_POST['address'];
+    // $dzdesign = $_POST['dzdesign'];
+    // $address = $_POST['address'];
     $city = $_POST['city'];
 
 
@@ -122,31 +122,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // === COUNTRY ===
-    if (empty($dzcountry)) {
-        $errors[] = "Country is required.";
-    } elseif (!preg_match("/^[a-zA-Z\s]{2,50}$/", $dzcountry)) {
-        $errors[] = "Invalid country name.";
-    }
+    // if (empty($dzcountry)) {
+    //     $errors[] = "Country is required.";
+    // } elseif (!preg_match("/^[a-zA-Z\s]{2,50}$/", $dzcountry)) {
+    //     $errors[] = "Invalid country name.";
+    // }
 
     // === DESIGN ===
-    if (empty($dzdesign)) {
-        $errors[] = "Design input is required.";
-    }
+    // if (empty($dzdesign)) {
+    //     $errors[] = "Design input is required.";
+    // }
 
     // === ADDRESS ===
-    if (!empty($address) && strlen($address) > 100) {
-        $errors[] = "Address too long (max 100 chars).";
-    }
+    // if (!empty($address) && strlen($address) > 100) {
+    //     $errors[] = "Address too long (max 100 chars).";
+    // }
 
     // === CITY ===
-    if (!empty($city) && !preg_match("/^[a-zA-Z\s]{2,50}$/", $city)) {
-        $errors[] = "Invalid city name.";
-    }
+    // if (!empty($city) && !preg_match("/^[a-zA-Z\s]{2,50}$/", $city)) {
+    //     $errors[] = "Invalid city name.";
+    // }
 
     // === SUBJECT ===
-    if (!empty($subject) && strlen($subject) > 150) {
-        $errors[] = "Subject too long (max 150 chars).";
-    }
+    // if (!empty($subject) && strlen($subject) > 150) {
+    //     $errors[] = "Subject too long (max 150 chars).";
+    // }
 
     // === MESSAGE ===
     if (empty($message) || strlen($message) < 5) {
@@ -181,15 +181,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     include('./admin/codes/db.php'); // Include your database connection file
 
     $query = "INSERT INTO enqueries 
-    (name, email, phone_number, company, description, country, page_url, city, desig, addr) 
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    (name, email, phone_number, company, description, country, page_url, city) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
     // Prepare the SQL query
     $stmt = $db->prepare($query);
 
     // Bind parameters (10 strings = 'ssssssssss')
     $stmt->bind_param(
-        'ssssssssss',
+        'ssssssss',
         $name,
         $email,
         $phone,
@@ -197,9 +197,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $message,
         $dzcountry,
         $pageurl,
-        $city,
-        $dzdesign,
-        $address
+        $city
     );
 
     // Execute the query
@@ -225,9 +223,9 @@ You have received a new inquiry. Please reach out to the contact person with the
 
 ---------------------------------------
 Name of person: $name
-Designation: $dzdesign
+
 Name of company: $company
-Address: $address
+
 City:$city
 Country: $dzcountry
 Product of interest:  $pageurl

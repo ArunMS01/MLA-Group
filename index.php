@@ -1,8 +1,8 @@
 <?php
 include('head.php');
 ?>
-<title>MLA Group Of Industries </title>
-<link rel="canonical" href="https://www.mlagroup.com/" />
+<title>MLA Group: The Leading Chemical Additive Industry</title>
+<link rel="canonical" href="https://www.mlagroup.com" />
 <meta name="description"
     content="MLA Group is India’s trusted source for high-quality industrial chemicals. Serving 44+ countries, a global leader with certified quality & reliable supply.">
 
@@ -12,7 +12,7 @@ include('head.php');
         "@context": "https://schema.org/",
         "@type": "WebSite",
         "name": "MLA Group",
-        "url": "https://www.mlagroup.com/"
+        "url": "https://www.mlagroup.com"
 
     }
 </script>
@@ -23,7 +23,7 @@ include('head.php');
         "name": "MLA Group",
         "image": "https://www.mlagroup.com/img/mlagroup11.jpeg",
         "@id": "",
-        "url": "https://www.mlagroup.com/",
+        "url": "https://www.mlagroup.com",
         "telephone": "+915122555292",
         "priceRange": "Best Price",
         "address": {
@@ -61,24 +61,27 @@ include('head.php');
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "MLA Group",
-        "url": "https://www.mlagroup.com/",
-        "logo": "https://www.mlagroup.com/images/logo-MLA.png"
+        "url": "https://www.mlagroup.com",
+        "logo": "https://www.mlagroup.com/images/mla-group.webp"
     }
 </script>
 
 
 
-<meta property="og:url" content="https://www.mlagroup.com">
-<meta property="og:title" content="MLA Group Of Industries" />
-<meta property="og:description" content="MLA Group is India’s trusted source for high-quality industrial chemicals. Serving 44+ countries, a global leader with certified quality & reliable supply." />
-<meta property="og:image" content="https://www.mlagroup.com/images/logo-MLA.png" />
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://www.mlagroup.com/">
 <meta property="og:type" content="website">
+<meta property="og:title" content="MLA Group: The Leading Chemical Additive Industry">
+<meta property="og:description" content="MLA Group is India’s trusted source for high-quality industrial chemicals. Serving 44+ countries, a global leader with certified quality & reliable supply.">
+<meta property="og:image" content="https://www.mlagroup.com/images/mla-group.webp">
 
-<meta name="twitter:url" content="https://www.mlagroup.com">
-<meta name="twitter:title" content="MLA Group Of Industries">
-<meta name="twitter:image" content="https://www.mlagroup.com/images/logo-MLA.png">
-<meta name="twitter:description" content="MLA Group is India’s trusted source for high-quality industrial chemicals. Serving 44+ countries, a global leader with certified quality & reliable supply." />
-<meta name="twitter:creator" content="MLA Group">
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="mlagroup.com">
+<meta property="twitter:url" content="https://www.mlagroup.com/">
+<meta name="twitter:title" content="MLA Group: The Leading Chemical Additive Industry">
+<meta name="twitter:description" content="MLA Group is India’s trusted source for high-quality industrial chemicals. Serving 44+ countries, a global leader with certified quality & reliable supply.">
+<meta name="twitter:image" content="https://www.mlagroup.com/images/mla-group.webp">
 
 
 

@@ -20,8 +20,17 @@
 	<!-- PAGE TITLE HERE -->
 	<title><?php echo $title? $title: "MLA Group";?></title>
 	<meta name="description" content="<?php echo $desc? $desc: "MLA Group";?>"/>
+	
     <?php
-    if(isset($urllink)){
+    
+    if(!empty($canonical)){
+     ?>
+     
+      <link rel="canonical" href="<?php echo $canonical?>" />
+     <?php
+    }
+    
+    else{
     ?>
     <link rel="canonical" href="https://www.mlagroup.com/<?php echo $urllink.".html"?>" />
     
