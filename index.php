@@ -21,7 +21,7 @@ include('head.php');
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "MLA Group",
-        "image": "https://www.mlagroup.com/img/mlagroup11.jpeg",
+        "image": "https://www.mlagroup.com/images/mla-group.webp",
         "@id": "",
         "url": "https://www.mlagroup.com",
         "telephone": "+915122555292",
@@ -62,7 +62,7 @@ include('head.php');
         "@type": "Organization",
         "name": "MLA Group",
         "url": "https://www.mlagroup.com",
-        "logo": "https://www.mlagroup.com/images/mla-group.webp"
+        "logo": "https://www.mlagroup.com/images/mla-logo.webp"
     }
 </script>
 
