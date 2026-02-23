@@ -1074,7 +1074,12 @@ overflow: hidden;
                     <div class="row about-style2 align-items-xl-center align-items-start">
                         <div class="col-lg-6 col-lg-5 col-sm-5 m-b30 wow fadeInLeft" data-wow-delay="0.8s">
                             <div class="containervidoes">
-                                <iframe class="responsive-iframevids" src="https://www.youtube.com/embed/PISiZKQtq_E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe 
+class="responsive-iframevids"
+src="https://drive.google.com/file/d/1gtGIRzkmUr5wEe8ndzjlcXDNuGtFA9M_/preview"
+frameborder="0"
+allow="autoplay">
+</iframe>
                             </div>
                         </div>
 
@@ -1984,7 +1989,7 @@ overflow: hidden;
                                     <div class="swiper-slide">
                                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                                             <div class="dz-media">
-                                                <img src="images/wall-panels.webp" alt="Wall panels">
+                                                <img src="images/Wall-panels.webp" alt="Wall panels">
                                                 <div class="contentindustry">
                                                     <h3>Wall panels /
                                                         Roofing
