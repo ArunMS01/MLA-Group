@@ -117,18 +117,20 @@ try {
     $_SESSION['submissions'][$ip][] = $now;
 
     // === FORM VALUES ===
+    $countrycode = $_POST['countrycode'] ?? '';
     $phonenumber   = $_POST['phone'] ?? '';
     $contactmethod = $_POST['contactmethod'] ?? '';
     $pageurl       = $_POST['pageUrl'] ?? '';
     $countrynamev  = $_POST['countrynamev'] ?? '';
     $companynamev  = $_POST['companynamev'] ?? '';
-    $productid     = $_POST['productid'] ?? '';
+    // $productid     = $_POST['productid'] ?? '';
     $msg           = $_POST['msg'] ?? '';
-    $addresscity   = $_POST['address'] ?? '';
+    // $addresscity   = $_POST['address'] ?? '';
     $nameinput     = $_POST['nameinput'] ?? '';
-    $deigninput    = $_POST['deigninput'] ?? '';
+    // $deigninput    = $_POST['deigninput'] ?? '';
     $ccity         = $_POST['ccity'] ?? '';
     $cemail        = $_POST['cemail'] ?? '';
+    $phonenumber = $countrycode.$phonenumber;
 
    // === SERVER SIDE VALIDATION ===
 $errors = [];
@@ -168,9 +170,9 @@ if (empty($companynamev)) {
 }
 
 // Product ID: must be numeric
-if (empty($productid)) {
-    $errors[] = "Invalid product ID.";
-}
+// if (empty($productid)) {
+//     $errors[] = "Invalid product ID.";
+// }
 
 // Message: optional but max 1000 chars
 if (!empty($msg) && strlen($msg) > 1000) {
@@ -178,14 +180,14 @@ if (!empty($msg) && strlen($msg) > 1000) {
 }
 
 // Address: required
-if (empty($addresscity)) {
-    $errors[] = "Address is required.";
-}
+// if (empty($addresscity)) {
+//     $errors[] = "Address is required.";
+// }
 
 // Design input: optional but at least 2 chars if filled
-if (!empty($deigninput) && strlen($deigninput) < 2) {
-    $errors[] = "Design input must be at least 2 characters.";
-}
+// if (!empty($deigninput) && strlen($deigninput) < 2) {
+//     $errors[] = "Design input must be at least 2 characters.";
+// }
 
 // City: required
 if (empty($ccity)) {
@@ -214,12 +216,9 @@ You have received a new inquiry from website Floater. Please reach out to the co
 
 ---------------------------------------
 Name of person:$nameinput
-Designation:$deigninput
 Name of company : $companynamev
-Address:$addresscity
 City:$ccity
 Country : $countrynamev
-Product of interest: $productid
 Phone: $phonenumber
 Email: $cemail
 PageURL:  $pageurl
@@ -233,7 +232,7 @@ Best regards,
 MLA Group
 ";
     //   $recipient = 'shivam@maidenstride.com';
-      $recipient = 'md@mlagroup.com'; // Change this to the email address where you want to receive notifications
+       $recipient = 'md@mlagroup.com'; // Change this to the email address where you want to receive notifications
         $subject = 'New Query From The Website Floater';
       $sql = "INSERT INTO enqueries 
 (name, email, phone_number, company, country, description, page_url, city, desig, addr, product) 
@@ -242,8 +241,8 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 $stmt = $db->prepare($sql);
 $stmt->bind_param(
     "sssssssssss", 
-    $name, 
-    $email, 
+    $nameinput, 
+    $cemail, 
     $phonenumber, 
     $companynamev, 
     $countrynamev, 
@@ -256,8 +255,8 @@ $stmt->bind_param(
 );
 
 // Example values
-$name = "Inquery website floater";
-$email = "Inquery website floater";
+// $name = "Inquery website floater";
+// $email = "Inquery website floater";
 
 $stmt->execute();
 

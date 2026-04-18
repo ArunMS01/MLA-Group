@@ -11,6 +11,99 @@ RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
+# Use efficient cache lifetime Start
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Default fallback
+    ExpiresDefault                              "access plus 1 month"
+
+    # HTML
+    ExpiresByType text/html                     "access plus 1 hour"
+
+    # CSS
+    ExpiresByType text/css                      "access plus 1 year"
+
+    # JavaScript
+    ExpiresByType application/javascript        "access plus 1 year"
+    ExpiresByType text/javascript               "access plus 1 year"
+
+    # Fonts
+    ExpiresByType font/woff                     "access plus 1 year"
+    ExpiresByType font/woff2                    "access plus 1 year"
+    ExpiresByType application/font-woff         "access plus 1 year"
+    ExpiresByType application/font-woff2        "access plus 1 year"
+    ExpiresByType font/ttf                      "access plus 1 year"
+    ExpiresByType font/otf                      "access plus 1 year"
+    ExpiresByType font/eot                      "access plus 1 year"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+
+    # Images
+    ExpiresByType image/webp                    "access plus 1 year"
+    ExpiresByType image/jpeg                    "access plus 1 year"
+    ExpiresByType image/jpg                     "access plus 1 year"
+    ExpiresByType image/png                     "access plus 1 year"
+    ExpiresByType image/gif                     "access plus 1 year"
+    ExpiresByType image/svg+xml                 "access plus 1 year"
+    ExpiresByType image/ico                     "access plus 1 year"
+    ExpiresByType image/x-icon                  "access plus 1 year"
+    ExpiresByType image/vnd.microsoft.icon      "access plus 1 year"
+    ExpiresByType image/avif                    "access plus 1 year"
+
+    # PDF & Documents
+    ExpiresByType application/pdf               "access plus 1 month"
+
+    # Media
+    ExpiresByType video/mp4                     "access plus 1 month"
+    ExpiresByType video/webm                    "access plus 1 month"
+    ExpiresByType audio/mpeg                    "access plus 1 month"
+    ExpiresByType audio/ogg                     "access plus 1 month"
+
+    # Data / Feeds
+    ExpiresByType application/json              "access plus 0 seconds"
+    ExpiresByType application/xml               "access plus 0 seconds"
+    ExpiresByType text/xml                      "access plus 0 seconds"
+</IfModule>
+
+# Cache-Control Headers
+<IfModule mod_headers.c>
+
+    # 1 YEAR - Fonts & Static Assets (versioned)
+    <FilesMatch "\.(woff|woff2|ttf|otf|eot|webp|jpg|jpeg|png|gif|svg|ico|css|js)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # 1 MONTH - PDFs & Media
+    <FilesMatch "\.(pdf|mp4|webm|mp3|ogg)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+
+    # 1 HOUR - HTML
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "public, max-age=3600, must-revalidate"
+    </FilesMatch>
+
+    # NO CACHE - Dynamic/Data files
+    <FilesMatch "\.(json|xml)$">
+        Header set Cache-Control "no-store, no-cache, must-revalidate"
+    </FilesMatch>
+
+</IfModule>
+
+# Enable Compression (bonus: reduces transfer size)
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE font/woff
+    AddOutputFilterByType DEFLATE font/woff2
+</IfModule>
+
+# Use efficient cache lifetime End
+
 ErrorDocument 404 /404.php
 
 # 3. Redirect specific old static URLs to new static URLs
@@ -24,7 +117,11 @@ RewriteRule ^pvc-heat-stabilizers-manufacturer\.html$ /pvc-heat-stabilizers-manu
 RewriteRule ^ethylene-glycol-distearate-manufacturers-in-india\.html$ /ethylene-glycol-di-stearate-manufacturers-in-india.html [R=301,L]
 RewriteRule ^ethylene-glycol-monostearate-manufacturers-in-india\.html$ /ethylene-glycol-mono-stearate-manufacturers-in-india.html [R=301,L]
 RewriteRule ^pvc-heat-stabilizers-manufacturer\.html$ /pvc-heat-stabilizers-manufacturers.html [R=301,L]
+RewriteRule ^zinc-oxide\.html$ /zinc.html [R=301,L]
 
+
+RewriteRule ^talc\.html$ /micronized-talc-powder.html [R=301,L]
+RewriteRule ^dolomite\.html$ /micronized-calcite-powder.html [R=301,L]
 
 
 

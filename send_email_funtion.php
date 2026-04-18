@@ -14,6 +14,8 @@ function sendEmail($recipient,$subject,$body){
     $mail->Port = 587;
     $mail->setFrom('mlagroup@mlagroup.com', 'MLA GROUP');
     $mail->addAddress($recipient);
+    $mail->CharSet = 'UTF-8';
+$mail->Encoding = 'base64';
 
     $mail->Subject = $subject;
     $mail->Body = $body;
