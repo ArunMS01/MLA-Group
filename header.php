@@ -20,7 +20,13 @@
 	<!-- PAGE TITLE HERE -->
 	<title><?php echo $title? $title: "MLA Group";?></title>
 	<meta name="description" content="<?php echo $desc? $desc: "MLA Group";?>"/>
-	
+	<?php
+	if(!empty($fetchhigh_image)){
+	?>
+	<link rel="preload" href="./admin/codes/<?php echo $fetchhigh_image; ?>" fetchpriority="high">
+	<?php
+	}
+	?>
     <?php
     
     if(!empty($canonical)){
