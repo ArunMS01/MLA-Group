@@ -405,7 +405,7 @@ include('head.php');
 
                                 <div class="contact-section">
                                     <h4>MANAGING DIRECTOR (SALES & MARKETING) </h4>
-                                    <p>Mr. Sumit Agarwal - <a class="call-open" href="javascript:void(0)">+91-9336116592</a>, <a class="wp-open" href="javascript:void(0)">md@mlagroup.com</a></p>
+                                    <p>EA to Mr. Sumit Agarwal - <a class="call-open" href="javascript:void(0)">+91-6394281028</a>, <a class="wp-open" href="javascript:void(0)">md@mlagroup.com</a></p>
                                 </div>
 
                                 <div class="contact-section">
@@ -419,7 +419,7 @@ include('head.php');
                                 </div>
                                 <!--<p>9336849137</p>-->
                                 <div class="contact-section">
-                                    <h4>DIRECTOR (ADMIN) </h4>
+                                    <h4>DIRECTOR LOGISTICS (FOR TRANSPORT AND DISPATCH) </h4>
                                     <p>Mr. Saurabh Agarwal - <a class="call-open" href="javascript:void(0)">+91-9369103080</a>, <a class="wp-open" href="javascript:void(0)">saurabh@mlagroup.com</a></p>
                                 </div>
 
@@ -432,6 +432,11 @@ include('head.php');
                                 <div class="contact-section">
                                     <h4>RECRUITMENTS</h4>
                                     <p>Mr. Mayyur Makhija - <a class="call-open" href="javascript:void(0)">+91-9140908101</a>, <a class="wp-open" href="javascript:void(0)">mayur@mlagroup.com</a></p>
+                                </div>
+                                
+                                <div class="contact-section">
+                                    <h4>MANAGER - ADMIN (MANPOWER, MECHANICAL, PROJECTS & CIVIL)</h4>
+                                    <p>Mr. Narendra Bajpai - <a class="call-open" href="javascript:void(0)">+91-99194 02526</a>, <a class="wp-open" href="javascript:void(0)">admin@mlagroup.com</a></p>
                                 </div>
                             </div>
                         </div>
