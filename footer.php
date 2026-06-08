@@ -651,7 +651,7 @@
         <small style="color:red" id="msgerr"></small>
         <button id="submit-whatsapp" class="btn-whatsapp">Connect On Whatsapp</button>
         <div>
-          <a rel="noreferrer" id="whtasappbtn" href="https://api.whatsapp.com/send?phone=916394281208&amp;text=Hi" class="float" target="_blank">Start Chat</a>
+          <a rel="noreferrer" id="whtasappbtn" href="https://api.whatsapp.com/send?phone=916394281028&amp;text=Hi" class="float" target="_blank">Start Chat</a>
         </div>
       </div>
     </div>
@@ -694,7 +694,7 @@
                 </p>
               </li>
               <li>
-                <p><span>Phone</span> : <a class="call-open" href="javascript:void(0)">+91-6394281208 </a></p>
+                <p><span>Phone</span> : <a class="call-open" href="javascript:void(0)">+91-6394281028 </a></p>
               </li>
             </ul>
 
@@ -1117,17 +1117,17 @@ var dialcode = $("#countrycode").val();   // already includes "+"
             var contactmethod = $('#contact-method').val();
             if (contactmethod == 'call') {
 
-              location.href = "tel:6394281208";
+              location.href = "tel:6394281028";
 
             }
             if (contactmethod == 'whatsapp') {
-              location.href = "https://api.whatsapp.com/send?phone=916394281208&amp;text=Hi";
+              location.href = "https://api.whatsapp.com/send?phone=916394281028&amp;text=Hi";
             }
             if (contactmethod == 'call2') {
-              location.href = "tel:6394281208";
+              location.href = "tel:6394281028";
             }
             if (contactmethod == 'whatsappfootercontact') {
-              location.href = "https://api.whatsapp.com/send?phone=916394281208&amp;text=Hi";
+              location.href = "https://api.whatsapp.com/send?phone=916394281028&amp;text=Hi";
             }
           }
           else{

@@ -420,7 +420,7 @@
                             $sqls = "SELECT p.title, p.url, p.main_image, b.description
                          FROM products AS p
                          INNER JOIN brand AS b ON b.id = p.brand
-                         WHERE b.url = '$brandurl'";
+                         WHERE b.url = '$brandurl' AND p.status='Published'";
                             $results = mysqli_query($db, $sqls);
                             if ($results) {
                                 while ($rown = mysqli_fetch_assoc($results)) {
