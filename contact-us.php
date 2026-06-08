@@ -405,7 +405,7 @@ include('head.php');
 
                                 <div class="contact-section">
                                     <h4>MANAGING DIRECTOR (SALES & MARKETING) </h4>
-                                    <p>EA to Mr. Sumit Agarwal - <a class="call-open" href="javascript:void(0)">+91-6394281028</a>, <a class="wp-open" href="javascript:void(0)">md@mlagroup.com</a></p>
+                                    <p>EA to Mr. Sumit Agarwal - <a class="call-open" href="javascript:void(0)">+91-9076600122</a>, <a class="wp-open" href="javascript:void(0)">md@mlagroup.com</a></p>
                                 </div>
 
                                 <div class="contact-section">
