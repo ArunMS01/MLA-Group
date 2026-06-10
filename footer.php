@@ -878,6 +878,9 @@ document.querySelectorAll(".phone-input").forEach(function(input) {
     let data = iti.getSelectedCountryData();
 
     // Dial code with +
+    if(document.querySelector("#ccods")){
+    document.querySelector("#ccods").value = "+" + data.dialCode;
+    }
     document.querySelectorAll("#countrycode").forEach(function(el) {
         el.value = "+" + data.dialCode;
     });
