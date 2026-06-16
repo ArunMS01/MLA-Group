@@ -576,13 +576,17 @@
     .whatsapp-chat-body{
         display:none;
     }
+    .xzbleft {
+  text-decoration: underline;
+  padding-top:10px;
+}
   </style>
   
 
   <div id='whatsapp-chat' class='hide'>
     <div class='header-chat'>
       <div class='head-home'>
-        <div class='info-avatar'><img width="180px" height="109px" src='https://www.mlagroup.com/images/mla-logo.webp' alt="MLA Group" /></div>
+        <div class='info-avatar'><img width="180px" height="109px" loading="lazy" src='https://www.mlagroup.com/images/mla-logo.webp' alt="MLA Group" /></div>
         <p><span class="whatsapp-name">MLA Group</span><br></p>
 
       </div>
@@ -682,8 +686,7 @@
         <div class="col-xl-5 col-md-3 col-sm-6 textmbcenters">
           <div class="widget widget_about me-2">
             <div class="footer-logo logo-white">
-              <a href="/"><img src="images/mla-logo.webp" alt="Footer Logo
-"></a>
+              <a href="/"><img loading="lazy" src="images/mla-logo.webp" alt="Footer Logo"></a>
             </div>
             <ul class="widget-address">
               <li>
@@ -705,12 +708,12 @@
           <div class="widget widget_services">
             <p class="footer-title anu-hed">Quick Links</p>
             <ul>
-              <li><a class="bleft" href="/">Home</a></li>
-              <li><a class="bleft" href="about">About Us</a></li>
-              <li><a class="bleft" href="r-and-d">R & D</a></li>
-              <li><a class="bleft" href="qc">Quality</a></li>
-              <li><a class="bleft" href="manufacturing">Manufacturing</a></li>
-              <li><a href="contact-us">Contact Us</a></li>
+              <li><a class="bleft xzbleft" href="/">Home</a></li>
+              <li><a class="bleft xzbleft" href="about">About Us</a></li>
+              <li><a class="bleft xzbleft" href="r-and-d">R & D</a></li>
+              <li><a class="bleft xzbleft" href="qc">Quality</a></li>
+              <li><a class="bleft xzbleft" href="manufacturing">Manufacturing</a></li>
+              <li><a class="bleft xzbleft" href="contact-us">Contact Us</a></li>
 
             </ul>
           </div>
@@ -722,71 +725,69 @@
 
               <div class="row gx-3 companies-inner ">
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp " data-wow-delay="0.1s">
-                  <a href="javascript:void(0);" class="companies-wrapper">
+                 
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/veitnamplas.webp" alt="Vietnamplas
-" class="logo-foot">
+                      <img height="43" width="94" loading="lazy" src="images/veitnamplas.webp" alt="Vietnamplas" class="logo-foot">
                     </div>
-                  </a>
+                  
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.2s">
-                  <a href="javascript:void(0);" class="companies-wrapper">
+                 
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/chinaplas.webp" alt="Chinaplas" class="logo-foot">
+                      <img height="43" width="94" loading="lazy" src="images/chinaplas.webp" alt="Chinaplas" class="logo-foot">
                     </div>
-                  </a>
+                 
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.3s">
-                  <a href="javascript:void(0);" class="companies-wrapper">
+                
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/arab-plast.webp" alt="Arab Plast
+                      <img height="43" width="94" loading="lazy" src="images/arab-plast.webp" alt="Arab Plast
 " class="logo-foot">
                     </div>
-                  </a>
+                 
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.4s">
-                  <a href="javascript:void(0);" class="companies-wrapper">
+                
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/make-the-difference.webp" alt="Make the Difference
-" class="logo-foot">
+                      <img height="43" width="94" loading="lazy" src="images/make-the-difference.webp" alt="Make the Difference" class="logo-foot">
                     </div>
-                  </a>
+                 
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.5s">
-                  <a href="javascript:void(0);" class="companies-wrapper">
+                 
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/kenya-plast.webp" alt="Kenya Plast" class="logo-foot">
+                      <img height="43" width="94" loading="lazy" src="images/kenya-plast.webp" alt="Kenya Plast" class="logo-foot">
                     </div>
-                  </a>
+                 
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
-                  <a href="javascript:void(0);" class="companies-wrapper">
+                  
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/plast-india.webp" alt="Plast India" class="logo-foot">
+                      <img height="43" width="94" loading="lazy" src="images/plast-india.webp" alt="Plast India" class="logo-foot">
                     </div>
-                  </a>
+                  
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
-                  <a href="javascript:void(0);" class="companies-wrapper">
+                 
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/plastvision.webp" alt="Plast Vision" class="logo-foot">
+                      <img height="43" width="94" loading="lazy" src="images/plastvision.webp" alt="Plast Vision" class="logo-foot">
                     </div>
-                  </a>
+                 
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
-                  <a href="javascript:void(0);" class="companies-wrapper">
+                 
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/india-rubber-expo.webp" alt="India Rubber Expo" class="logo-foot">
+                      <img height="43" width="94" loading="lazy" src="images/india-rubber-expo.webp" alt="India Rubber Expo" class="logo-foot">
                     </div>
-                  </a>
+                  
                 </div>
 
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
-                  <a href="javascript:void(0);" class="companies-wrapper">
-                    <div class="companies-media">
-                      <img height="43" width="94" src="images/cphlindia.webp" alt="CPHL India" class="logo-foot">
+                  
+                    <div class="companies-media"> 
+                      <img height="43" width="94" loading="lazy" src="images/cphlindia.webp" alt="CPHL India" class="logo-foot">
                     </div>
-                  </a>
+                 
                 </div>
 
               </div>
