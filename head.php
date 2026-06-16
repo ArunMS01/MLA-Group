@@ -17,13 +17,16 @@
     <link rel="stylesheet" type="text/css" href="vendor/swiper/swiper-bundle.min.css">
  
     <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-    
+ 
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
     
 
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/img/flags.png" as="image">
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Roboto:wght@100;300;400;500;700;900&amp;display=swap"
         rel="stylesheet">
