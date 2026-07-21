@@ -6,13 +6,7 @@
 	<!-- Meta -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!--<meta name="keywords" content="">-->
-	<!--<meta name="author" content="HugeBinary">-->
-	<!--<meta name="robots" content="">-->
-	<!--<meta name="description" content="">-->
-	<!--<meta property="og:title" content="">-->
-	<!--<meta property="og:description" content="">-->
-	<!--<meta name="format-detection" content="telephone=no">-->
+
 
 	<!-- FAVICONS ICON -->
 	 <link rel="icon" type="image/x-icon" href="images/logo-MLA.png"> 
@@ -47,21 +41,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- STYLESHEETS -->
-	<!--<link rel="stylesheet" type="text/css" href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css">-->
+
 	<link rel="stylesheet" type="text/css" href="icons/fontawesome/css/all.min.css">
-	<!--<link rel="stylesheet" type="text/css" href="icons/themify/themify-icons.css">-->
-	<!--<link rel="stylesheet" type="text/css" href="icons/flaticon/flaticon_mooncart.css">-->
+	
 	<link rel="stylesheet" type="text/css" href="vendor/swiper/swiper-bundle.min.css">
-	<!--<link rel="stylesheet" type="text/css" href="vendor/nouislider/nouislider.min.css">-->
+	
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-	<!--<link rel="stylesheet" type="text/css" href="vendor/lightgallery/dist/css/lightgallery.css">-->
-	<!--<link rel="stylesheet" type="text/css" href="vendor/lightgallery/dist/css/lg-thumbnail.css">-->
-	<!--<link rel="stylesheet" type="text/css" href="vendor/lightgallery/dist/css/lg-zoom.css">-->
+
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-
-
-
-
 
 
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
@@ -114,13 +101,13 @@
   gtag('config', 'G-EPE0XJ0VB4');
 </script>
     
-    	<!-- Google Tag Manager -->
+    	<!-- Google Tag Manager 
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-NWVPLHV');</script>
-	<!-- End Google Tag Manager -->
+ End Google Tag Manager -->
 <?php
 if(isset($markup) && $markup != 'test' && $markup != 'code'){
     echo $markup;
@@ -129,9 +116,9 @@ if(isset($markup) && $markup != 'test' && $markup != 'code'){
 </head>
 
 <body>
-    	<!-- Google Tag Manager (noscript) -->
+    	<!-- Google Tag Manager (noscript) 
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWVPLHV"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>-->
 	<div class="page-wraper">
 		<!-- <div id="loading-area" class="preloader-wrapper-1">
 		<div>
