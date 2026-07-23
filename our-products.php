@@ -17,7 +17,7 @@ include('head.php');
         include('nav.php');
         ?>
         <style>
-            .tab-content {
+         .tab-content {
                 display: none;
             }
 
