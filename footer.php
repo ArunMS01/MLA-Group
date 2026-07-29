@@ -734,56 +734,56 @@
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp " data-wow-delay="0.1s">
                   <!--<a href="javascript:void(0);" class="companies-wrapper">-->
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/veitnamplas.webp" alt="Vietnamplas" class="logo-foot">
+                      <img loading="lazy" height="43" width="94" src="images/veitnamplas.webp" alt="Vietnamplas" class="logo-foot">
                     </div>
                   <!--</a>-->
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.2s">
                   <!--<a href="javascript:void(0);" class="companies-wrapper">-->
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/chinaplas.webp" alt="Chinaplas" class="logo-foot">
+                      <img loading="lazy" height="43" width="94" src="images/chinaplas.webp" alt="Chinaplas" class="logo-foot">
                     </div>
                   <!--</a>-->
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.3s">
                   <!--<a href="javascript:void(0);" class="companies-wrapper">-->
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/arab-plast.webp" alt="Arab Plast" class="logo-foot">
+                      <img loading="lazy" height="43" width="94" src="images/arab-plast.webp" alt="Arab Plast" class="logo-foot">
                     </div>
                   <!--</a>-->
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.4s">
                   <!--<a href="javascript:void(0);" class="companies-wrapper">-->
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/make-the-difference.webp" alt="Make the Difference" clas="logo-foot">
+                      <img loading="lazy" height="43" width="94" src="images/make-the-difference.webp" alt="Make the Difference" clas="logo-foot">
                     </div>
                   <!--</a>-->
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.5s">
                   <!--<a href="javascript:void(0);" class="companies-wrapper">-->
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/kenya-plast.webp" alt="Kenya Plast" class="logo-foot">
+                      <img loading="lazy" height="43" width="94" src="images/kenya-plast.webp" alt="Kenya Plast" class="logo-foot">
                     </div>
                   <!--</a>-->
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
                   <!--<a href="javascript:void(0);" class="companies-wrapper">-->
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/plast-india.webp" alt="Plast India" class="logo-foot">
+                      <img loading="lazy" height="43" width="94" src="images/plast-india.webp" alt="Plast India" class="logo-foot">
                     </div>
                   <!--</a>-->
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
                   <!--<a href="javascript:void(0);" class="companies-wrapper">-->
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/plastvision.webp" alt="Plast Vision" class="logo-foot">
+                      <img loading="lazy" height="43" width="94" src="images/plastvision.webp" alt="Plast Vision" class="logo-foot">
                     </div>
                   <!--</a>-->
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
                   <!--<a href="javascript:void(0);" class="companies-wrapper">-->
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/india-rubber-expo.webp" alt="India Rubber Expo" class="logo-foot">
+                      <img loading="lazy" height="43" width="94" src="images/india-rubber-expo.webp" alt="India Rubber Expo" class="logo-foot">
                     </div>
                   <!--</a>-->
                 </div>
@@ -791,7 +791,7 @@
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
                   <!--<a href="javascript:void(0);" class="companies-wrapper">-->
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/cphlindia.webp" alt="CPHL India" class="logo-foot">
+                      <img loading="lazy" height="43" width="94" src="images/cphlindia.webp" alt="CPHL India" class="logo-foot">
                     </div>
                   <!--</a>-->
                 </div>
