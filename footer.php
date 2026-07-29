@@ -576,6 +576,16 @@
     .whatsapp-chat-body{
         display:none;
     }
+    
+    .mlacvnm{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 30px;
+    min-width: 30px;
+    padding: 6px 6px;
+    box-sizing: border-box;
+}
   </style>
   
 
@@ -705,12 +715,12 @@
           <div class="widget widget_services">
             <p class="footer-title anu-hed">Quick Links</p>
             <ul>
-              <li><a class="bleft" href="/">Home</a></li>
-              <li><a class="bleft" href="about">About Us</a></li>
-              <li><a class="bleft" href="r-and-d">R & D</a></li>
-              <li><a class="bleft" href="qc">Quality</a></li>
-              <li><a class="bleft" href="manufacturing">Manufacturing</a></li>
-              <li><a href="contact-us">Contact Us</a></li>
+              <li><a class="bleft mlacvnm" href="/">Home</a></li>
+              <li><a class="bleft mlacvnm" href="about">About Us</a></li>
+              <li><a class="bleft mlacvnm" href="r-and-d">R & D</a></li>
+              <li><a class="bleft mlacvnm" href="qc">Quality</a></li>
+              <li><a class="bleft mlacvnm" href="manufacturing">Manufacturing</a></li>
+              <li><a class="bleft mlacvnm" href="contact-us">Contact Us</a></li>
 
             </ul>
           </div>
@@ -722,71 +732,68 @@
 
               <div class="row gx-3 companies-inner ">
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp " data-wow-delay="0.1s">
-                  <a href="javascript:void(0);" class="companies-wrapper">
+                  <!--<a href="javascript:void(0);" class="companies-wrapper">-->
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/veitnamplas.webp" alt="Vietnamplas
-" class="logo-foot">
+                      <img height="43" width="94" src="images/veitnamplas.webp" alt="Vietnamplas" class="logo-foot">
                     </div>
-                  </a>
+                  <!--</a>-->
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.2s">
-                  <a href="javascript:void(0);" class="companies-wrapper">
+                  <!--<a href="javascript:void(0);" class="companies-wrapper">-->
                     <div class="companies-media">
                       <img height="43" width="94" src="images/chinaplas.webp" alt="Chinaplas" class="logo-foot">
                     </div>
-                  </a>
+                  <!--</a>-->
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.3s">
-                  <a href="javascript:void(0);" class="companies-wrapper">
+                  <!--<a href="javascript:void(0);" class="companies-wrapper">-->
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/arab-plast.webp" alt="Arab Plast
-" class="logo-foot">
+                      <img height="43" width="94" src="images/arab-plast.webp" alt="Arab Plast" class="logo-foot">
                     </div>
-                  </a>
+                  <!--</a>-->
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.4s">
-                  <a href="javascript:void(0);" class="companies-wrapper">
+                  <!--<a href="javascript:void(0);" class="companies-wrapper">-->
                     <div class="companies-media">
-                      <img height="43" width="94" src="images/make-the-difference.webp" alt="Make the Difference
-" class="logo-foot">
+                      <img height="43" width="94" src="images/make-the-difference.webp" alt="Make the Difference" clas="logo-foot">
                     </div>
-                  </a>
+                  <!--</a>-->
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.5s">
-                  <a href="javascript:void(0);" class="companies-wrapper">
+                  <!--<a href="javascript:void(0);" class="companies-wrapper">-->
                     <div class="companies-media">
                       <img height="43" width="94" src="images/kenya-plast.webp" alt="Kenya Plast" class="logo-foot">
                     </div>
-                  </a>
+                  <!--</a>-->
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
-                  <a href="javascript:void(0);" class="companies-wrapper">
+                  <!--<a href="javascript:void(0);" class="companies-wrapper">-->
                     <div class="companies-media">
                       <img height="43" width="94" src="images/plast-india.webp" alt="Plast India" class="logo-foot">
                     </div>
-                  </a>
+                  <!--</a>-->
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
-                  <a href="javascript:void(0);" class="companies-wrapper">
+                  <!--<a href="javascript:void(0);" class="companies-wrapper">-->
                     <div class="companies-media">
                       <img height="43" width="94" src="images/plastvision.webp" alt="Plast Vision" class="logo-foot">
                     </div>
-                  </a>
+                  <!--</a>-->
                 </div>
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
-                  <a href="javascript:void(0);" class="companies-wrapper">
+                  <!--<a href="javascript:void(0);" class="companies-wrapper">-->
                     <div class="companies-media">
                       <img height="43" width="94" src="images/india-rubber-expo.webp" alt="India Rubber Expo" class="logo-foot">
                     </div>
-                  </a>
+                  <!--</a>-->
                 </div>
 
                 <div class="col-md-4 col-sm-4 col-6 p-lg-b30 p-b20 wow fadeInUp" data-wow-delay="0.6s">
-                  <a href="javascript:void(0);" class="companies-wrapper">
+                  <!--<a href="javascript:void(0);" class="companies-wrapper">-->
                     <div class="companies-media">
                       <img height="43" width="94" src="images/cphlindia.webp" alt="CPHL India" class="logo-foot">
                     </div>
-                  </a>
+                  <!--</a>-->
                 </div>
 
               </div>
@@ -855,6 +862,8 @@
   //     setTimeout(function () {
   //         document.getElementById('typing-text').style.animationPlayState = 'running';
   //     }, 1000); // Delaying animation start by 1 second
+  
+
 
 document.querySelectorAll(".phone-input").forEach(function(input) {
   let iti = window.intlTelInput(input, {
@@ -1425,6 +1434,7 @@ var dialcode = $("#countrycode").val();   // already includes "+"
 
 
 <script>
+document.addEventListener("DOMContentLoaded", () => {
   var slider = new Swiper(".gallery-slider", {
     slidesPerView: 1,
     loop: true,
@@ -1451,6 +1461,23 @@ var dialcode = $("#countrycode").val();   // already includes "+"
 
   slider.controller.control = thumbs;
   thumbs.controller.control = slider;
+  
+  
+  var mainalleyslider = new Swiper(".mainalleyslider", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    speed: 800,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".mainalleyslider .swiper-pagination",
+        clickable: true,
+    },
+});
+});
 </script>
 
 <script>
