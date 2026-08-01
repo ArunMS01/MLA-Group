@@ -126,8 +126,7 @@ include('header.php');
     .breadcrumb-item+.breadcrumb-item {
         padding-left: 0;
     }
-</style>
-<style>
+
     .dz-tabs .nav-tabs .nav-link.active {
         border-color: #FE8F34 !important;
         color: var(--secondary);
@@ -189,6 +188,9 @@ include('header.php');
     .mygalleryslider .swiper-wrapper {
         justify-content: center;
     }
+    .iti__flag {
+    background-image: url("/images/flags.webp") !important;
+}
 </style>
 
 
@@ -417,7 +419,7 @@ include('header.php');
                                     font-weight: 700;
                                     background-color: #FE8F34;
                                     text-align: center;
-                                    color: #fff;
+                                    color: #000;
                                     border: 1px solid;
                                     padding: 10px 0;
                                     text-transform: uppercase;
