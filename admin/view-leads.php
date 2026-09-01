@@ -425,68 +425,104 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 </style>
 <!-- Bootstrap Card Layout -->
 
+       <div class="row">
+    <div class="col-md-12 mb-3" style="border-bottom:1px solid #000; padding-bottom:10px">
         <div class="row">
-            <div class="col-md-12 mb-3" style="border-bottom:1px solid #000; padding-bottom:10px">
-                <div class="row">
-                    <div class="col-md-4">
-                        <strong class="fw-bold">Date   <span><?php echo date("d M Y, h:i A", strtotime($row['created_at'])); ?></span> </strong>
-          
-                    </div>
-                    <div class="col-md-4">
-                         <strong class="fw-bold">Status    <span class="badge bg-<?php echo $row['status']=='active'?'success':'secondary'; ?>">
-                    <?php echo ucfirst($row['status']); ?>
-                </span></strong>
-          
-                    </div>
+
+            <!-- Date -->
+            <?php if(isset($row['created_at']) && !empty($row['created_at'])): ?>
+                <div class="col-md-4">
+                    <strong class="fw-bold">
+                        Date <span><?php echo date("d M Y, h:i A", strtotime($row['created_at'])); ?></span>
+                    </strong>
                 </div>
-            </div>
-        <div class="col-md-6">
+            <?php endif; ?>
+
+            <!-- Status -->
+            <?php if(isset($row['status']) && !empty($row['status'])): ?>
+                <div class="col-md-4">
+                    <strong class="fw-bold">Status  
+                        <span class="badge bg-<?php echo $row['status']=='active'?'success':'secondary'; ?>">
+                            <?php echo ucfirst($row['status']); ?>
+                        </span>
+                    </strong>
+                </div>
+            <?php endif; ?>
+
+        </div>
+    </div>
+
+    <!-- LEFT SIDE -->
+    <div class="col-md-6">
+
+        <?php if(isset($row['name']) && $row['name']!=''): ?>
             <h5 class="fw-bold">Name</h5>
             <p><?php echo htmlspecialchars($row['name']); ?></p>
+        <?php endif; ?>
 
+        <?php if(isset($row['email']) && $row['email']!=''): ?>
             <h5 class="fw-bold">Email</h5>
             <p><a href="mailto:<?php echo $row['email']; ?>"><?php echo htmlspecialchars($row['email']); ?></a></p>
+        <?php endif; ?>
 
+        <?php if(isset($row['phone_number']) && $row['phone_number']!=''): ?>
             <h5 class="fw-bold">Phone</h5>
             <p><a href="tel:<?php echo $row['phone_number']; ?>"><?php echo htmlspecialchars($row['phone_number']); ?></a></p>
+        <?php endif; ?>
 
+        <?php if(isset($row['company']) && $row['company']!=''): ?>
             <h5 class="fw-bold">Company</h5>
             <p><?php echo htmlspecialchars($row['company']); ?></p>
+        <?php endif; ?>
 
+        <?php if(isset($row['desig']) && $row['desig']!=''): ?>
             <h5 class="fw-bold">Designation</h5>
             <p><?php echo htmlspecialchars($row['desig']); ?></p>
-            </div>
-            
-            <div class="col-md-6">
+        <?php endif; ?>
 
-            <h5 class="fw-bold">Address</h5>
-            <p><?php echo htmlspecialchars($row['addr']); ?>, 
-               <?php echo htmlspecialchars($row['city']); ?>, 
-               <?php echo htmlspecialchars($row['country']); ?></p>
+    </div>
 
+
+    <!-- RIGHT SIDE -->
+    <div class="col-md-6">
+
+        <?php if(isset($row['addr']) || isset($row['city']) || isset($row['country'])): ?>
+            <h5 class="fw-bold">City/Country</h5>
+            <p>
+                <?php echo isset($row['addr']) ? htmlspecialchars($row['addr']) : ''; ?>
+                <?php echo isset($row['city']) ? ' '.htmlspecialchars($row['city']) : ''; ?>
+                <?php echo isset($row['country']) ? ', '.htmlspecialchars($row['country']) : ''; ?>
+            </p>
+        <?php endif; ?>
+
+        <?php if(isset($row['product']) && $row['product']!=''): ?>
             <h5 class="fw-bold">Product</h5>
             <p><?php echo htmlspecialchars($row['product']); ?></p>
+        <?php endif; ?>
 
+        <?php if(isset($row['description']) && $row['description']!=''): ?>
             <h5 class="fw-bold">Description</h5>
             <p><?php echo nl2br(htmlspecialchars($row['description'])); ?></p>
+        <?php endif; ?>
 
-           
-
+        <?php if(isset($row['page_url']) && $row['page_url']!=''): ?>
             <h5 class="fw-bold">Page URL</h5>
-            <p><a href="<?php echo htmlspecialchars($row['page_url']); ?>" target="_blank">
-                <?php echo htmlspecialchars($row['page_url']); ?>
-            </a></p>
-            
-            <?php
-            if(isset($row['notes'])){
-                echo "<div class='card p-2 bg-gray nott'><strong>Notes:</strong>".$row['notes']."</div>";
-            }
-            ?>
+            <p>
+                <a href="<?php echo htmlspecialchars($row['page_url']); ?>" target="_blank">
+                    <?php echo htmlspecialchars($row['page_url']); ?>
+                </a>
+            </p>
+        <?php endif; ?>
 
-            
+        <?php if(isset($row['notes']) && $row['notes']!=''): ?>
+            <div class='card p-2 bg-gray nott'>
+                <strong>Notes:</strong> <?php echo htmlspecialchars($row['notes']); ?>
+            </div>
+        <?php endif; ?>
 
-        </div>
-        </div>
+    </div>
+</div>
+
    
 
 

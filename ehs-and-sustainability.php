@@ -124,13 +124,13 @@ include("header.php");
         /* background: #fafafa; */
     }
  .content-image-placeholder::before{
-        width: 369px;
-    height: 250px;
-    left: -10px;
-    z-index: -1;
-    top: -10px;
+           width: 100%;
+    height: 100%;
+    /* left: -10px; */
+    /* z-index: -1; */
+    /* top: -10px; */
     content: '';
-    border: 8px solid #f3791f;
+    border: 4px solid #f3791f;
     position: absolute;
     
  }
@@ -206,7 +206,13 @@ include("header.php");
 }
 
     @media only screen and (max-width:768px){
-        .ullist ul{
+        .filtersystem span{
+            margin-bottom:11px;
+        }
+        .filtersystem .min {
+    margin-bottom: 20px;
+        }
+        .ullist{
             margin: 0 !important;
         }
         body,
@@ -237,10 +243,10 @@ include("header.php");
     line-height: 1.9;
 }
 
-.ullist ul{
+.ullist {
     background-color: #fff;
     padding:20px;
-    margin:30px 0;
+    margin:30px 15px;
     border-radius: 8px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -309,8 +315,8 @@ include("header.php");
         <div class="row align-items-center g-5">
 
             <div class="col-lg-5">
-                <div class="content-image-placeholder">
-                    <img class=" wow fadeInUp" src="images/mlalab.png" />
+                <div class="content-image-placeholder wow fadeInUp">
+                    <img class=" " src="images/mlalab.png" />
                 </div>
             </div>
 
@@ -329,6 +335,20 @@ include("header.php");
             </div>
 
         </div>
+        
+        <style>
+            .vcol{
+                margin-top:50px;
+            }
+            
+            .fl{
+                display:flex;
+                align-items:baseline;
+            }
+             .fl span{
+                 flex:1;
+             }
+        </style>
 
         <div class="row">
             <div class="col-lg-12 mt-4 mb-4 ullist">
@@ -337,13 +357,13 @@ include("header.php");
 
     <li><i class="fa fa-check"></i> <span> We utilize <strong>zinc ash</strong>, a by-product of the galvanizing process, to manufacture <strong>Active Zinc Oxide</strong>, promoting resource efficiency and circular economy practices. </span></li>
 
-    <li><i class="fa fa-check"></i> <span> We have installed <strong>high-efficiency bag filters</strong> across our operations to minimize dust emissions and maintain cleaner air quality. </span></li>
+ 
 
-    <li><i class="fa fa-check"></i> <span> We use <strong>advanced filter press systems</strong> to ensure effective filtration of process batches, preventing the leakage of solid particles into the water discharge stream. </span></li>
+
 
     <li><i class="fa fa-check"></i> <span> We are <strong>100% compliant with the latest pollution control norms</strong>, with continuous online monitoring of effluent quality in accordance with <strong>CPCB</strong> guidelines. </span></li>
 
-    <li><i class="fa fa-check"></i> <span> All effluent gases generated from coal-based operations are treated through <strong>multi-cyclone separators and/or bag filters</strong> before discharge, ensuring full compliance with applicable environmental standards. </span></li>
+  
 
     <li><i class="fa fa-check"></i> <span> We maximize the recycling and reuse of our <strong>solid waste</strong>, while any remaining waste is safely disposed of through <strong>authorized waste management facilities</strong>. </span></li>
 
@@ -355,7 +375,61 @@ include("header.php");
     
      <li><i class="fa fa-check"></i> <span> The effluent discharge water is refiltered from filter press before discharge causing a crystal clear water discharge with TSS, BOD, COD within CPCB limits with online monitoring. </span></li>
 </ul>
+
+<div class="row filtersystem mbn  vcol">
+                <div class="col-lg-4">
+                      <div class="min wow fadeInUp">
+    <img style=" display:block" src="images/c656c707-da7c-4b79-9789-1e0f4159133b.jpg">
+    </div>
+                   <span class="wow fadeInUp fl"><i class="fa fa-check"></i><span> We have installed <strong>high-efficiency bag filters</strong> across our operations to minimize dust emissions and maintain cleaner air quality.</span> </span>
+                </div>
+                 <div class="col-lg-4">
+                    <div class="min wow fadeInUp">
+                    <img style=" display:block" src="images/filterpress.jpg">
+                    </div>
+                      <span class=" wow fadeInUp fl"><i class="fa fa-check"></i><span> We use <strong>advanced filter press systems</strong> to ensure effective filtration of process batches, preventing the leakage of solid particles into the water discharge stream.</span> </span>
+                </div>
+                 <div class="col-lg-4">
+                   <div class="min wow fadeInUp">
+                      <img style=" display:block" src="images/cycloneh.jpg">
+                      </div>
+                   <span class="wow fadeInUp fl" ><i class="fa fa-check"></i><span>All effluent gases generated from coal-based operations are treated through <strong>multi-cyclone separators and/or bag filters</strong> before discharge, ensuring full compliance with applicable environmental standards.</span>  </span>
+                </div>
+               
             </div>
+           
+            </div>
+            <style>
+            .filtersystem .min img{
+                  width:100%;
+                    object-fit:cover;
+                    height:100%;
+            }
+                .filtersystem .min{
+                    height:300px;
+                        border: 4px solid #f3791f;
+                  
+                }
+                .mbn{
+                    /*margin-bottom:40px;*/
+                }
+                .maindivs{
+                    background-color: #fff;
+        padding: 40px 20px;
+    margin: 0px 0 50px 0;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                }
+                .filtersystem span{
+                    color: #5E626F;
+                }
+                .filtersystem span{
+                    margin-top:11px;
+                        gap: 6px;
+                        /*display: inline-block;*/
+                }
+            </style>
+           
         </div>
 
         <div class="row align-items-center revcol g-5 mbtn-1">
@@ -374,8 +448,8 @@ include("header.php");
 
             </div>
               <div class="col-lg-5">
-                <div class="content-image-placeholder">
-                 <img class=" wow fadeInUp" src="images/safety.png" />
+                <div class="content-image-placeholder wow fadeInUp">
+                 <img class=" " src="images/safety.png" />
                 </div>
             </div>
 
@@ -384,8 +458,8 @@ include("header.php");
              <div class="row align-items-center g-5 mbtn-1">
 
             <div class="col-lg-5">
-                <div class="content-image-placeholder">
-                    <img class=" wow fadeInUp" src="images/performance.png" />
+                <div class="content-image-placeholder wow fadeInUp">
+                    <img class=" " src="images/performance.png" />
                 </div>
             </div>
 

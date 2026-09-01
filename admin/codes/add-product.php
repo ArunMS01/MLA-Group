@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errors = array();
 
     // Validate required fields
-    $requiredFields = array('title', 'url', 'metaTitle', 'metaDescription', 'additionalCode', 'status', 'longDescription', 'applications');
+    $requiredFields = array('title', 'url', 'metaTitle', 'metaDescription', 'status', 'longDescription', 'applications');
     foreach ($requiredFields as $field) {
         if (empty($_POST[$field])) {
             $errors[] = ucfirst($field) . ' is required.';
@@ -56,7 +56,7 @@ if ($result && $result->num_rows > 0) {
             $relatedProducts = null;
         }
         $galleryImages = array();
-
+        if(isset($_FILES['galleryImages'])){
         // Iterate over each uploaded file
         foreach ($_FILES['galleryImages']['name'] as $key => $file_name) {
             // Retrieve file details for the current iteration
@@ -77,34 +77,84 @@ if ($result && $result->num_rows > 0) {
                 $errors[] = 'Error uploading file: ' . $file_name;
             }
         }
+        }
 
         // Check if any validation errors occurred during file upload
         if (empty($errors)) {
-            // Prepare SQL statement for inserting product details
-            $sql = "INSERT INTO products (title, url, meta_title, meta_description, additional_code, main_image, brand, status, long_description, applications, related_products) 
-                    VALUES ('$title', '$url', '$metaTitle', '$metaDescription', '$additionalCode', '$mainImage', '$selectBrand', '$status', '$longDescription', '$applications', '$relatedProducts')";
 
-            // Execute the statement to insert product details
-            if ($db->query($sql) === TRUE) {
-                // Get the last inserted product ID
-                $lastProductId = $db->insert_id;
+    // Prepare main product insert
+    $stmt = $db->prepare("
+        INSERT INTO products 
+        (
+            title,
+            url,
+            meta_title,
+            meta_description,
+            additional_code,
+            main_image,
+            brand,
+            status,
+            long_description,
+            applications,
+            related_products
+        ) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ");
 
-                // Insert gallery images into the database
-                foreach ($galleryImages as $image) {
-                    $insertImageSql = "INSERT INTO gallery_images (product_id, image_url) VALUES ('$lastProductId', '$image')";
-                    $db->query($insertImageSql);
-                }
+    $stmt->bind_param(
+        "sssssssssss",
+        $title,
+        $url,
+        $metaTitle,
+        $metaDescription,
+        $additionalCode,
+        $mainImage,
+        $selectBrand,
+        $status,
+        $longDescription,
+        $applications,
+        $relatedProducts
+    );
 
-                // Success
-                $response = array(
-                    'success' => true,
-                    'message' => 'Product data received and saved to the database successfully.'
-                );
-            } else {
-                // Error
-                $errors[] = 'Error saving the product data to the database: ' . $db->error;
-            }
+    // Execute main insert
+    if ($stmt->execute()) {
+
+        // Get inserted product ID
+        $lastProductId = $db->insert_id;
+
+        // Prepare gallery image insert
+        $imageStmt = $db->prepare("
+            INSERT INTO gallery_images 
+            (product_id, image_url) 
+            VALUES (?, ?)
+        ");
+
+        // Insert gallery images
+        foreach ($galleryImages as $image) {
+
+            $imageStmt->bind_param(
+                "is",
+                $lastProductId,
+                $image
+            );
+
+            $imageStmt->execute();
         }
+
+        $imageStmt->close();
+        $stmt->close();
+
+        // Success response
+        $response = array(
+            'success' => true,
+            'message' => 'Product data received and saved successfully.'
+        );
+
+    } else {
+
+        $errors[] = 'Error saving product data: ' . $stmt->error;
+    }
+}
     }
 
     // If validation errors occurred, send an error response
