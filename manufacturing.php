@@ -3,7 +3,7 @@ include('head.php');
 ?>
 <title>MLA Group – Trusted Chemical Manufacturer in India</title>
 <meta name="description" content="Experience advanced chemical manufacturing at MLA Group with top technology & high-tech facilities, delivering reliable results across 43+ countries worldwide.">
-
+<link rel="canonical" href="https://www.mlagroup.com/manufacturing" />
 </head>
 
 <body>

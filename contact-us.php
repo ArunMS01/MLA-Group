@@ -3,6 +3,7 @@ include('head.php');
 ?>
 <title>Have a Query related to chemical Supply? Contact MLA Group</title>
 <meta name="description" content="Contact MLA Group for bulk chemical supply, expert consultation, or partnership queries.  We’re here to support your industrial needs with trusted solutions">
+<link rel="canonical" href="https://www.mlagroup.com/contact-us" />
 </head>
 
 <body>
@@ -488,7 +489,7 @@ include('head.php');
             <div class="row">
                 <div class="col-md-12">
                     <div class="contact-page-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.4163711398887!2d80.32400779999999!3d26.474535499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c388727bd6145%3A0x41ce7b980d8d7102!2s111%2F230%2C%20Brahm%20Nagar%2C%20Harsh%20Nagar%2C%20Kanpur%2C%20Uttar%20Pradesh%20208012!5e0!3m2!1sen!2sin!4v1716287526134!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.4196679526667!2d80.324061!3d26.474429299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c387d739f257d%3A0xf64519674aa52ed8!2sMLA%20Group%20Of%20Industries!5e0!3m2!1sen!2sin!4v1788273358967!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,10 @@
-<?php include('header.php') ?>
-
+<?php
+include('head.php');
+?>
+<title>404</title>
+<meta name="description" content="404 Page">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
 
 <style>
     .page-heading-sec {

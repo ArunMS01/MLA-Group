@@ -3,7 +3,9 @@ include('head.php');
 ?>
 <title>India’s Leading Chemical Supplier | About MLA Group</title>
 <meta name="description" content="Get to know MLA Group India’s chemical industry expert with 44+ years of experience. Exporting to 43+ countries that are trusted for quality and innovation.">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+<link rel="canonical" href="https://www.mlagroup.com/about" />
 </head>
 
 <body>
@@ -25,25 +27,30 @@ include('head.php');
 
     <div class="page-content">
       <style>
-      .counternew{
-          margin-top:40px;
-      }
-            @media only screen and (min-width:768px) and (max-width:1180px){
-                .main-timeline .timeline-icon{
-                    display:none !important;
-                }
-                .tabs li{
-                    width:35% !important;
-                }
-                .main-timeline .content {
-    margin-left: 34vw !important;
-    color: #909090;
-    width: 42vw !important;
-                }
-               .counternew .col-md-3{
-                   width:50% !important;
-               }
-            }
+        .counternew {
+          margin-top: 40px;
+        }
+
+        @media only screen and (min-width:768px) and (max-width:1180px) {
+          .main-timeline .timeline-icon {
+            display: none !important;
+          }
+
+          .tabs li {
+            width: 35% !important;
+          }
+
+          .main-timeline .content {
+            margin-left: 34vw !important;
+            color: #909090;
+            width: 42vw !important;
+          }
+
+          .counternew .col-md-3 {
+            width: 50% !important;
+          }
+        }
+
         /* Hero section styles */
         .hero {
           position: relative;
@@ -97,22 +104,22 @@ include('head.php');
         }
 
         @keyframes zoomInUp {
-				0% {
-					transform: translateY(100%);
-					opacity: 0;
-				}
+          0% {
+            transform: translateY(100%);
+            opacity: 0;
+          }
 
-				
 
-				100% {
-					transform: translateY(0);
-					opacity: 1;
-				}
-			}
 
-			.zoom-in-up {
-                animation: zoomInUp 2s ease forwards;
-            }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+
+        .zoom-in-up {
+          animation: zoomInUp 2s ease forwards;
+        }
       </style>
 
 
@@ -184,7 +191,7 @@ include('head.php');
           align-items: center;
           justify-content: center;
           color: #000;
-border: 1px solid #fff;
+          border: 1px solid #fff;
           transition: .5s;
           -webkit-transition: .5s;
           -moz-transition: .5s;
@@ -195,45 +202,47 @@ border: 1px solid #fff;
 
         .tabs li::before,
         .tabs li::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            background: none;
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          background: none;
         }
 
         .tabs li::before {
-            top: 0;
-            left: 0;
-            border-top: 2px solid black;
-            border-left: 2px solid black;
+          top: 0;
+          left: 0;
+          border-top: 2px solid black;
+          border-left: 2px solid black;
         }
 
         .tabs li::after {
-            bottom: 0;
-            right: 0;
-            border-bottom: 2px solid black;
-            border-right: 2px solid black;
+          bottom: 0;
+          right: 0;
+          border-bottom: 2px solid black;
+          border-right: 2px solid black;
         }
 
         .tabs li:hover::before,
         .tabs li:hover::after {
-            animation: borderAnimation 0.5s forwards;
+          animation: borderAnimation 0.5s forwards;
         }
 
         @keyframes borderAnimation {
-            0% {
-                width: 0;
-                height: 0;
-            }
-            50% {
-                width: 100%;
-                height: 0;
-            }
-            100% {
-                width: 100%;
-                height: 100%;
-            }
+          0% {
+            width: 0;
+            height: 0;
+          }
+
+          50% {
+            width: 100%;
+            height: 0;
+          }
+
+          100% {
+            width: 100%;
+            height: 100%;
+          }
         }
 
         .active {
@@ -270,18 +279,18 @@ border: 1px solid #fff;
           -webkit-animation: moving 1s ease;
 
         }
-        
-        @media only screen and (max-width:768px){
-               .mt-involement {
-    margin-top: 10px !important;
-}
+
+        @media only screen and (max-width:768px) {
+          .mt-involement {
+            margin-top: 10px !important;
+          }
         }
-        
-        @media only screen and (max-width:1300px){
-         
-            .teamcolinner{
-                min-height:37rem !important;
-            }
+
+        @media only screen and (max-width:1300px) {
+
+          .teamcolinner {
+            min-height: 37rem !important;
+          }
         }
 
         .box img {
@@ -300,18 +309,20 @@ border: 1px solid #fff;
           font-size: 2rem;
           margin-bottom: 20px;
         }
-.teamGrid p{
-    text-align:justify;
-}
+
+        .teamGrid p {
+          text-align: justify;
+        }
+
         .box p {
           color: #000;
           opacity: 1;
-            /*text-align:justify;*/
+          /*text-align:justify;*/
           font-size: 1rem;
         }
 
         .showboxes {
-            justify-content:center;
+          justify-content: center;
           align-items: center;
           /*display: flex;*/
         }
@@ -356,9 +367,9 @@ border: 1px solid #fff;
           .tabs li {
             padding: 10px !important;
             width: 30%;
-                    min-height: 62px;
+            min-height: 62px;
             font-size: 13px;
-            text-align:center;
+            text-align: center;
 
           }
 
@@ -460,30 +471,28 @@ border: 1px solid #fff;
           }
         }
 
-        .pluasymbolcounter{
+        .pluasymbolcounter {
           font-size: 2rem;
         }
-        
-        .mt-involement{
-            margin-top:100px;
+
+        .mt-involement {
+          margin-top: 100px;
         }
-        
-        .styleonew{
-            margin-bottom:15px;
+
+        .styleonew {
+          margin-bottom: 15px;
         }
-         .mapmy {
-            width: 100%;
-            height: 100%;
+
+        .mapmy {
+          width: 100%;
+          height: 100%;
         }
-        
-        .mapmy svg{
-            
-        }
-        
+
+        .mapmy svg {}
+
         .btn-next img,
-         .btn-prev img
-        {
-            height:25px;
+        .btn-prev img {
+          height: 25px;
         }
       </style>
       <ul class="tabs">
@@ -502,11 +511,11 @@ border: 1px solid #fff;
 
               <p>
               <p>
-              Our product line includes Metallic Stearates , PVC Heat Stabilizers , Precipitated Silica , Aluminium Silicates , ADC ( Blowing Agents ) , Ester Lubricants , Active Zinc Oxide , Snow white China Clay , PE waxes, One pack Lubricants and Pharmaceutical Excipients. These products are used in a wide range of industries, including plastic ,paints, rubber, detergents, pharma etc
+                Our product line includes Metallic Stearates , PVC Heat Stabilizers , Precipitated Silica , Aluminium Silicates , ADC ( Blowing Agents ) , Ester Lubricants , Active Zinc Oxide , Snow white China Clay , PE waxes, One pack Lubricants and Pharmaceutical Excipients. These products are used in a wide range of industries, including plastic ,paints, rubber, detergents, pharma etc
               </p>
 
               <p>
-              Our products' quality is defined by our customers' perception. Our success stems from a customer-centric approach and an uncompromising commitment to quality. Every MLA Group employee is responsible for ensuring product and service quality through our stringent Quality Assurance Systems , both of the product and services. 
+                Our products' quality is defined by our customers' perception. Our success stems from a customer-centric approach and an uncompromising commitment to quality. Every MLA Group employee is responsible for ensuring product and service quality through our stringent Quality Assurance Systems , both of the product and services.
               </p>
 
               <p>To emerge as global leaders and innovators, we prioritise Research, Improvement, and Invention. Our R&D Division, with advanced application labs and testing equipment, conducts intensive research on precipitation, surface treatment and activation and application testing, developing cutting-edge technologies.</p>
@@ -518,7 +527,7 @@ border: 1px solid #fff;
             <div>
               <div class="row align-items-center">
                 <div class="col-md-6 map-container">
-                      <div class="mapmy"></div>
+                  <div class="mapmy"></div>
                   <!-- Image side -->
                   <!--<img src="./images/aboutus/map-mla.png" alt="Image"> <!-- Replace with your image path -->
                 </div>
@@ -527,9 +536,9 @@ border: 1px solid #fff;
                   <div class="section-head styleonew style-1 ">
                     <h2>Our Footprint</h2>
                   </div>
-                 <p>
-                 We have an extensive marketing network with head office at Kanpur and marketing associates in almost all industrial cities/hubs in India. Our sales and technical services personnel visit customers regularly to provide excellent before and after sales services. The exports have been increasing sharply and we now cater to 55+ countries including Sri Lanka, Nepal, Bangladesh, and also to Africa, Middle East, South East Asia ,USA and Europe.
-                 </p>
+                  <p>
+                    We have an extensive marketing network with head office at Kanpur and marketing associates in almost all industrial cities/hubs in India. Our sales and technical services personnel visit customers regularly to provide excellent before and after sales services. The exports have been increasing sharply and we now cater to 55+ countries including Sri Lanka, Nepal, Bangladesh, and also to Africa, Middle East, South East Asia ,USA and Europe.
+                  </p>
                 </div>
               </div>
             </div>
@@ -540,28 +549,28 @@ border: 1px solid #fff;
                 <div class="row">
                   <div class="col-md-3 col-sm-6">
                     <div class="counter-product wow fadeInRight" data-wow-delay="0.6s">
-                   <span><span class="counter-value">55 </span> <span class="pluasymbolcounter">+</span> </span>    
+                      <span><span class="counter-value">55 </span> <span class="pluasymbolcounter">+</span> </span>
                       <h3>Countries Catered</h3>
                       <div class="counter-icon"><i class="fa fa-check"></i></div>
                     </div>
                   </div>
                   <div class="col-md-3 col-sm-6">
                     <div class="counter-product wow fadeInRight" data-wow-delay="0.6s">
-                    <span> <span class="counter-value">3000 </span> <span class="pluasymbolcounter">+</span> </span>
+                      <span> <span class="counter-value">3000 </span> <span class="pluasymbolcounter">+</span> </span>
                       <h3>Total Customer</h3>
                       <div class="counter-icon"><i class="fa fa-check"></i></div>
                     </div>
                   </div>
                   <div class="col-md-3 col-sm-6">
                     <div class="counter-product wow fadeInRight" data-wow-delay="0.6s">
-                    <span> <span class="counter-value">120000 </span> <span class="pluasymbolcounter">+</span> </span>
+                      <span> <span class="counter-value">120000 </span> <span class="pluasymbolcounter">+</span> </span>
                       <h3>Manufacturing Capacity in MT</h3>
                       <div class="counter-icon"><i class="fa fa-check"></i></div>
                     </div>
                   </div>
                   <div class="col-md-3 col-sm-6">
                     <div class="counter-product wow fadeInRight" data-wow-delay="0.6s">
-                    <span><span class="counter-value">100 </span>  <span class="pluasymbolcounter">+</span> </span>
+                      <span><span class="counter-value">100 </span> <span class="pluasymbolcounter">+</span> </span>
                       <h3>Products Manufactured</h3>
                       <div class="counter-icon"><i class="fa fa-check"></i></div>
                     </div>
@@ -570,149 +579,149 @@ border: 1px solid #fff;
 
               </div>
             </div>
-             <div class="row about-style2 align-items-xl-center mt-involement align-items-start">
-            <div class="col-lg-3">
-              <h2 class="title">Community Involvement</h2>
-            </div>
-            <div class="col-lg-7">
-              <div class="about-content">
-                <div class="style-1">
-                  <p>
-                    The MLA Group itself is a well-established industrial entity with a significant economic footprint, boasting a turnover of INR 400 crores and operating several ISO-certified manufacturing facilities. Their broad CSR strategy reflects their holistic approach to business, which integrates economic success with social and environmental responsibility.
-                  </p>
+            <div class="row about-style2 align-items-xl-center mt-involement align-items-start">
+              <div class="col-lg-3">
+                <h2 class="title">Community Involvement</h2>
+              </div>
+              <div class="col-lg-7">
+                <div class="about-content">
+                  <div class="style-1">
+                    <p>
+                      The MLA Group itself is a well-established industrial entity with a significant economic footprint, boasting a turnover of INR 400 crores and operating several ISO-certified manufacturing facilities. Their broad CSR strategy reflects their holistic approach to business, which integrates economic success with social and environmental responsibility.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="col-lg-2">
-              <div class="pagination-align justify-content-end">
-                <div class="tranding-button-prev btn-prev">
-               <img src="icons/left-chevron.png" alt="">
-                </div>
-                <div class="tranding-button-next btn-next">
-                  <img src="icons/chevron.png" alt="">
+              <div class="col-lg-2">
+                <div class="pagination-align justify-content-end">
+                  <div class="tranding-button-prev btn-prev">
+                    <img src="icons/left-chevron.png" alt="">
+                  </div>
+                  <div class="tranding-button-next btn-next">
+                    <img src="icons/chevron.png" alt="">
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="col-lg-12 mbuiti-6" style="overflow: hidden">
-              <div class="outside-box-right-25">
-                <div class="swiper-btn-center-lr appslider">
-                  <div class="swiper swiper-blog-post">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <div class="wow fadeInUp" data-wow-delay="0.4s">
-                          <div class="dz-media gradient-overlay1">
-                            <img src="./images/aboutus/mla-green.jpg" alt="image" />
-                            <div class="contentindustry">
-                              <div>
-                                <h4 class="text-whote">MLA Green Kanpur</h4>
-                                <p>We have 2 dedicated vehicles with a target to carry out 30-40 subsidized plantations everyday along roadsides outside people’s homes and they are entrusted the responsbility to take care of these plants, hence ensuring community involvement</p>
+              <div class="col-lg-12 mbuiti-6" style="overflow: hidden">
+                <div class="outside-box-right-25">
+                  <div class="swiper-btn-center-lr appslider">
+                    <div class="swiper swiper-blog-post">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="dz-media gradient-overlay1">
+                              <img src="./images/aboutus/mla-green.jpg" alt="image" />
+                              <div class="contentindustry">
+                                <div>
+                                  <h4 class="text-whote">MLA Green Kanpur</h4>
+                                  <p>We have 2 dedicated vehicles with a target to carry out 30-40 subsidized plantations everyday along roadsides outside people’s homes and they are entrusted the responsbility to take care of these plants, hence ensuring community involvement</p>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
 
-                      <div class="swiper-slide">
-                        <div class="wow fadeInUp" data-wow-delay="0.4s">
-                          <div class="dz-media gradient-overlay1">
-                            <img src="./images/aboutus/satvik-roti.jpg" alt="image" />
-                            <div class="contentindustry">
-                              <div>
-                                <h4 class="text-whote">Satvik Roti Rolls</h4>
-                                <p> We have one e rickshaw and 7 e bikes with a target to distribute 3000-4000 roti rolls / burgers / kadi chawal bowls to the poor every day, at a subsidized price </p>
+                        <div class="swiper-slide">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="dz-media gradient-overlay1">
+                              <img src="./images/aboutus/satvik-roti.jpg" alt="image" />
+                              <div class="contentindustry">
+                                <div>
+                                  <h4 class="text-whote">Satvik Roti Rolls</h4>
+                                  <p> We have one e rickshaw and 7 e bikes with a target to distribute 3000-4000 roti rolls / burgers / kadi chawal bowls to the poor every day, at a subsidized price </p>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
 
-                      <div class="swiper-slide">
-                        <div class="wow fadeInUp" data-wow-delay="0.4s">
-                          <div class="dz-media gradient-overlay1">
-                            <img src="./images/scholarship.jpg" alt="image" />
-                            <div class="contentindustry">
-                              <div>
-                                <h4 class="text-whote">Scholarships</h4>
-                                <p>Scholarship programme for meritorious staff wards </p>
+                        <div class="swiper-slide">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="dz-media gradient-overlay1">
+                              <img src="./images/scholarship.jpg" alt="image" />
+                              <div class="contentindustry">
+                                <div>
+                                  <h4 class="text-whote">Scholarships</h4>
+                                  <p>Scholarship programme for meritorious staff wards </p>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
 
 
 
 
-                      <div class="swiper-slide">
-                        <div class="wow fadeInUp" data-wow-delay="0.4s">
-                          <div class="dz-media gradient-overlay1">
-                            <img src="./images/food.webp" alt="image" />
-                            <div class="contentindustry">
-                              <div>
-                                <h4 class="text-whote">Food parcels distribution</h4>
-                                <p>Food parcels distribution to 20 old aged helpless people everyday totally free of cost </p>
+                        <div class="swiper-slide">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="dz-media gradient-overlay1">
+                              <img src="./images/food.webp" alt="image" />
+                              <div class="contentindustry">
+                                <div>
+                                  <h4 class="text-whote">Food parcels distribution</h4>
+                                  <p>Food parcels distribution to 20 old aged helpless people everyday totally free of cost </p>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
 
 
 
 
 
-                      <div class="swiper-slide">
-                        <div class="wow fadeInUp" data-wow-delay="0.4s">
-                          <div class="dz-media gradient-overlay1">
-                            <img src="./images/reconstructionimages.jpg" alt="image" />
-                            <div class="contentindustry">
-                              <div>
-                                <h4 class="text-whote">Reconsruction of temples</h4>
-                                <p>Reconsruction of temples in kanpur and nearby areas </p>
+                        <div class="swiper-slide">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="dz-media gradient-overlay1">
+                              <img src="./images/reconstructionimages.jpg" alt="image" />
+                              <div class="contentindustry">
+                                <div>
+                                  <h4 class="text-whote">Reconsruction of temples</h4>
+                                  <p>Reconsruction of temples in kanpur and nearby areas </p>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
 
-                      <div class="swiper-slide">
-                        <div class="wow fadeInUp" data-wow-delay="0.4s">
-                          <div class="dz-media gradient-overlay1">
-                            <img src="./images/cultural.jpg" alt="image" />
-                            <div class="contentindustry">
-                              <div>
-                                <h4 class="text-whote">Programmes</h4>
-                                <p>Organization of religious and cultural programmes on a regular basis </p>
+                        <div class="swiper-slide">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="dz-media gradient-overlay1">
+                              <img src="./images/cultural.jpg" alt="image" />
+                              <div class="contentindustry">
+                                <div>
+                                  <h4 class="text-whote">Programmes</h4>
+                                  <p>Organization of religious and cultural programmes on a regular basis </p>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
 
 
-                      <div class="swiper-slide">
-                        <div class="wow fadeInUp" data-wow-delay="0.4s">
-                          <div class="dz-media gradient-overlay1">
-                            <img src="./images/blanket.webp" alt="image" />
-                            <div class="contentindustry">
-                              <div>
-                                <h4 class="text-whote">Distribution Programmes</h4>
-                                <p>Distributor of blankets, food and sweets to the poor totally free of cost from time to time in co-ordination with various ngos and administration. </p>
+                        <div class="swiper-slide">
+                          <div class="wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="dz-media gradient-overlay1">
+                              <img src="./images/blanket.webp" alt="image" />
+                              <div class="contentindustry">
+                                <div>
+                                  <h4 class="text-whote">Distribution Programmes</h4>
+                                  <p>Distributor of blankets, food and sweets to the poor totally free of cost from time to time in co-ordination with various ngos and administration. </p>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
+
+
                       </div>
-
-
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
           </div>
 
         </div>
@@ -729,10 +738,10 @@ border: 1px solid #fff;
 
               .teamGrid {
                 display: grid;
-    grid-template-columns: 42% 42%;
-    column-gap: 1.5%;
-    justify-content: space-around;
-    margin-top: 100px;
+                grid-template-columns: 42% 42%;
+                column-gap: 1.5%;
+                justify-content: space-around;
+                margin-top: 100px;
               }
 
               .avatar {
@@ -743,13 +752,13 @@ border: 1px solid #fff;
                 text-align: center;
               }
 
-           
+
 
               .avatar>img {
                 width: 150px;
                 margin: auto;
                 height: 150px;
-                object-fit:contain;
+                object-fit: contain;
                 border-radius: 50%;
                 border: 1px solid rgb(170 170 173/ 1);
                 box-shadow: 0px 3px 10px 3px rgb(170 170 173 / 0.5);
@@ -761,7 +770,7 @@ border: 1px solid #fff;
                 min-height: 100px;
                 background: #fff;
                 z-index: 9;
-                min-height:30rem;
+                min-height: 30rem;
               }
 
               .teamcol {
@@ -807,10 +816,10 @@ border: 1px solid #fff;
                 width: 100%;
                 transition: width 1s ease-in-out;
               }
-              
-              
-              
-               .teamcolss {
+
+
+
+              .teamcolss {
                 padding: 15px;
                 background: #fff;
                 border-radius: 10px;
@@ -818,7 +827,7 @@ border: 1px solid #fff;
                 transition: transform 1s ease-in-out;
               }
 
-              
+
 
               .teamcolss:before {
                 content: "";
@@ -844,7 +853,7 @@ border: 1px solid #fff;
                 transition: width 1s ease-in-out;
               }
 
-             
+
 
               .member-name {
                 margin-top: 80px;
@@ -872,107 +881,108 @@ border: 1px solid #fff;
                 border-radius: 50%;
                 margin: 5px;
               }
-              
-              .hideerm{
-                  display:none;
+
+              .hideerm {
+                display: none;
               }
-              
-              #showmore{
-                  text-align: center;
-    display: inline-block;
-    color: #fff;
-    background: rgba(247, 134, 49, 1);
-    padding: 10px;
-    border-radius: 5px;
-    cursor:pointer;
+
+              #showmore {
+                text-align: center;
+                display: inline-block;
+                color: #fff;
+                background: rgba(247, 134, 49, 1);
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
               }
-              
-              .mt-2222{
-                  margin-top:120px;
+
+              .mt-2222 {
+                margin-top: 120px;
               }
             </style>
             <div>
-            <div class="teamWrapper">
-              <div class="containerssss">
-              
-                <div class="teamGrid">
-                
-                  <div class="colmun mbcolteam">
-                    <div class="teamcol">
-                      <div class="teamcolinner">
-                        <div class="avatar"><img src="images/Mr_Murari_Lal_Agarwal_-removebg-preview.png" alt="Member"></div>
-                        <div class="member-name">
-                          <h2 align="center">Mr. Murari Lal Agarwal
-                          </h2>
-                        </div>
-                        <div class="member-info">
-                          <p align="center">Mr. Murari Lal Agarwal, the visionary behind M.L.A. Group of Industries, established a global enterprise in 1975, MLA Group , which is currently exporting to 55+ countries. A chemistry graduate, he expanded his business through innovation, dedication, and hard work. Known for his cheerful personality and philanthropy, He holds key positions in organizations such as PIA, FITA, and the Kanpur Merchants Association. He is a patron of various community organizations, actively supporting social initiatives and contributing to numerous charitable causes, making a significant impact on both industry and society.</p>
-                        </div>
-                        <!--<div class="member-mail">-->
-                        <!--  <p align="center"> <a href="mailto:@gmail.com">mailto:@gmail.com</a> </p>-->
-                        <!--</div>-->
-                        <div class="member-social">
-                          
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="colmun">
-                    <div class="teamcol">
-                      <div class="teamcolinner">
-                        <div class="avatar"><img src="images/Mr._Sumit_Agarwal-removebg-preview.png" alt="Member"></div>
-                        <div class="member-name">
-                          <h2 align="center">Mr. Sumit Agarwal
-                          </h2>
-                        </div>
-                        <div class="member-info">
-                          <p align="center">Mr. Sumit Agarwal, the Managing Director of MLA Group, with Masters in Chemistry from IIT Kanpur , brings extensive expertise in leading strategic initiatives and fostering innovation and R&D. With a proven track record in business development and operational excellence, he spearheads the company's growth across diverse sectors, ensuring a commitment to quality and customer satisfaction. His visionary leadership and dedication drive MLA Group towards sustained success and global prominence.</p>
-                        </div>
-                        <!--<div class="member-mail">-->
-                        <!--  <p align="center"> <a href="mailto:@gmail.com">mailto:@gmail.com</a> </p>-->
-                        <!--</div>-->
-                        <div class="member-social">
-                         
+              <div class="teamWrapper">
+                <div class="containerssss">
+
+                  <div class="teamGrid">
+
+                    <div class="colmun mbcolteam">
+                      <div class="teamcol">
+                        <div class="teamcolinner">
+                          <div class="avatar"><img src="images/Mr_Murari_Lal_Agarwal_-removebg-preview.png" alt="Member"></div>
+                          <div class="member-name">
+                            <h2 align="center">Mr. Murari Lal Agarwal
+                            </h2>
+                          </div>
+                          <div class="member-info">
+                            <p align="center">Mr. Murari Lal Agarwal, the visionary behind M.L.A. Group of Industries, established a global enterprise in 1975, MLA Group , which is currently exporting to 55+ countries. A chemistry graduate, he expanded his business through innovation, dedication, and hard work. Known for his cheerful personality and philanthropy, He holds key positions in organizations such as PIA, FITA, and the Kanpur Merchants Association. He is a patron of various community organizations, actively supporting social initiatives and contributing to numerous charitable causes, making a significant impact on both industry and society.</p>
+                          </div>
+                          <!--<div class="member-mail">-->
+                          <!--  <p align="center"> <a href="mailto:@gmail.com">mailto:@gmail.com</a> </p>-->
+                          <!--</div>-->
+                          <div class="member-social">
+
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                       <div class="colmun mt-2222">
-                    <div class="teamcol">
-                      <div class="teamcolinner">
-                        <div class="avatar"><img src="images/Mr_Saurabh_Agarwal_-removebg-preview.png" alt="Member"></div>
-                        <div class="member-name">
-                          <h2 align="center">Mr. Saurabh Agarwal
-                          </h2>
-                        </div>
-                        <div class="member-info">
-                          <p align="center">Mr. Saurabh Agarwal, Director – Admin at MLA Industries Pvt Ltd, boasts over 34 years of extensive experience in chemical industry. His expertise spans operations management, process optimization, and safety compliance.Mr. Saurabh currently spearheads logistics, ensuring seamless operations at MLA Industries Pvt Ltd. His profound knowledge of industry regulations and unwavering dedication to operational excellence uphold the company's high standards of quality and reliability in product delivery.</p>
-                        </div>
-                        <!--<div class="member-mail">-->
-                        <!--  <p align="center"> <a href="mailto:@gmail.com">mailto:@gmail.com</a> </p>-->
-                        <!--</div>-->
-                        <div class="member-social">
-                         
+                    <div class="colmun">
+                      <div class="teamcol">
+                        <div class="teamcolinner">
+                          <div class="avatar"><img src="images/Mr._Sumit_Agarwal-removebg-preview.png" alt="Member"></div>
+                          <div class="member-name">
+                            <h2 align="center">Mr. Sumit Agarwal
+                            </h2>
+                          </div>
+                          <div class="member-info">
+                            <p align="center">Mr. Sumit Agarwal, the Managing Director of MLA Group, with Masters in Chemistry from IIT Kanpur , brings extensive expertise in leading strategic initiatives and fostering innovation and R&D. With a proven track record in business development and operational excellence, he spearheads the company's growth across diverse sectors, ensuring a commitment to quality and customer satisfaction. His visionary leadership and dedication drive MLA Group towards sustained success and global prominence.</p>
+                          </div>
+                          <!--<div class="member-mail">-->
+                          <!--  <p align="center"> <a href="mailto:@gmail.com">mailto:@gmail.com</a> </p>-->
+                          <!--</div>-->
+                          <div class="member-social">
+
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                       <div class="colmun mt-2222">
-                    <div class="teamcol">
-                      <div class="teamcolinner">
-                        <div class="avatar"><img src="images/Mr_Abhishek_Kanodia-removebg-preview.png" alt="Member"></div>
-                        <div class="member-name">
-                          <h2 align="center">Mr. Abhishek Kanodia
-                          </h2>
+                    <div class="colmun mt-2222">
+                      <div class="teamcol">
+                        <div class="teamcolinner">
+                          <div class="avatar"><img src="images/Mr_Saurabh_Agarwal_-removebg-preview.png" alt="Member"></div>
+                          <div class="member-name">
+                            <h2 align="center">Mr. Saurabh Agarwal
+                            </h2>
+                          </div>
+                          <div class="member-info">
+                            <p align="center">Mr. Saurabh Agarwal, Director – Admin at MLA Industries Pvt Ltd, boasts over 34 years of extensive experience in chemical industry. His expertise spans operations management, process optimization, and safety compliance.Mr. Saurabh currently spearheads logistics, ensuring seamless operations at MLA Industries Pvt Ltd. His profound knowledge of industry regulations and unwavering dedication to operational excellence uphold the company's high standards of quality and reliability in product delivery.</p>
+                          </div>
+                          <!--<div class="member-mail">-->
+                          <!--  <p align="center"> <a href="mailto:@gmail.com">mailto:@gmail.com</a> </p>-->
+                          <!--</div>-->
+                          <div class="member-social">
+
+                          </div>
                         </div>
-                        <div class="member-info">
-                          <p align="center">Mr. Abhishek Kanodia, Director at MLA Group of Industries, brings over 13 years of expertise in Supply Chain Management and advanced manufacturing standards. With a B.Tech in Chemical Engineering from IIT Kanpur, his career highlights include pivotal roles at Hindustan Unilever Limited, where he excelled as Factory Manager and Senior Innovation & Technology Manager. Mr. Abhishek integrates cutting-edge manufacturing practices into MLA Group, ensuring operational excellence across various sectors. His strategic leadership drives innovation and efficiency in manufacturing , setting benchmarks in quality and reliability.</p>
-                        </div>
-                        <!--<div class="member-mail">-->
-                        <!--  <p align="center"> <a href="mailto:@gmail.com">mailto:@gmail.com</a> </p>-->
-                        <!--</div>-->
-                        <div class="member-social">
-                         
+                      </div>
+                    </div>
+                    <div class="colmun mt-2222">
+                      <div class="teamcol">
+                        <div class="teamcolinner">
+                          <div class="avatar"><img src="images/Mr_Abhishek_Kanodia-removebg-preview.png" alt="Member"></div>
+                          <div class="member-name">
+                            <h2 align="center">Mr. Abhishek Kanodia
+                            </h2>
+                          </div>
+                          <div class="member-info">
+                            <p align="center">Mr. Abhishek Kanodia, Director at MLA Group of Industries, brings over 13 years of expertise in Supply Chain Management and advanced manufacturing standards. With a B.Tech in Chemical Engineering from IIT Kanpur, his career highlights include pivotal roles at Hindustan Unilever Limited, where he excelled as Factory Manager and Senior Innovation & Technology Manager. Mr. Abhishek integrates cutting-edge manufacturing practices into MLA Group, ensuring operational excellence across various sectors. His strategic leadership drives innovation and efficiency in manufacturing , setting benchmarks in quality and reliability.</p>
+                          </div>
+                          <!--<div class="member-mail">-->
+                          <!--  <p align="center"> <a href="mailto:@gmail.com">mailto:@gmail.com</a> </p>-->
+                          <!--</div>-->
+                          <div class="member-social">
+
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -980,165 +990,169 @@ border: 1px solid #fff;
                 </div>
               </div>
             </div>
-            </div>
-          
+
             <style>
-                .ytupper{
-                    margin-top:50px;
+              .ytupper {
+                margin-top: 50px;
+              }
+
+              .ytupper .dz-yte {
+                z-index: 10;
+                text-align: center;
+                position: relative;
+              }
+
+              .ytupper .dz-yte img {
+                margin: auto;
+              }
+
+              .mainshow {
+                display: none;
+              }
+
+              @media only screen and (max-width:768px) {
+                .mbbhide {
+                  display: none;
                 }
-                .ytupper .dz-yte{
-                    z-index:10;
-                    text-align:center;
-                    position:relative;
+
+                .mainshow {
+                  display: block !important;
                 }
-                 .ytupper .dz-yte img{
-                     margin:auto;
-                 }
-                 
-                 .mainshow{
-                     display:none;
-                 }
-                 
-                 @media only screen and (max-width:768px){
-                     .mbbhide{
-                         display:none;
-                     }
-                      .mainshow{
-                         display:block !important;
-                     }
-                 }
-                 .ytupper .btn-prev:hover i{
-                     color:#000;
-                 }
-                  .ytupper .btn-next:hover i{
-                     color:#000;
-                 }
-                  .ytupper .btn-next{
-                      right: 58px;
-                  }
-                   .ytupper .btn-prev{
-                       left: 58px;
-                   }
-                   
-                 .ytupper .btn-next,
-                 .ytupper .btn-prev{
-                     background:#ffffff;
-                     width:40px;
-                     height:40px;
-                     z-index:10;
-                     font-size:10px
-                 }
-                 
-                 .frame {
-  background-color: #ddc;
-  border: solid 20px #333;
-  border-bottom-color: #333;
-  border-left-color: #333;
-  border-radius: 2px;
-  border-right-color: #333;
-  border-top-color: #333;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
-  box-sizing: border-box;
-  display: inline-block;
-  /*margin: 100px 100px;*/
-  /*height: 600px;*/
-  padding: 12px;
-  position: relative;
-  text-align: center;
-}
+              }
 
-.frame:before {
-  border-radius: 2px;
-  bottom: -8px;
-  box-shadow: 0 2px 5px 0 #FF9800 inset;
-  content: "";
-  left: -8px;
-  position: absolute;
-  right: -8px;
-  top: -8px;
-}
+              .ytupper .btn-prev:hover i {
+                color: #000;
+              }
 
-.frame:after {
-  border-radius: 2px;
-  bottom: -10px;
-  box-shadow: 0 2px 5px 0 #FF9800;
-  content: "";
-  left: -10px;
-  position: absolute;
-  right: -10px;
-  top: -10px;
-}
+              .ytupper .btn-next:hover i {
+                color: #000;
+              }
 
-                 
+              .ytupper .btn-next {
+                right: 58px;
+              }
+
+              .ytupper .btn-prev {
+                left: 58px;
+              }
+
+              .ytupper .btn-next,
+              .ytupper .btn-prev {
+                background: #ffffff;
+                width: 40px;
+                height: 40px;
+                z-index: 10;
+                font-size: 10px
+              }
+
+              .frame {
+                background-color: #ddc;
+                border: solid 20px #333;
+                border-bottom-color: #333;
+                border-left-color: #333;
+                border-radius: 2px;
+                border-right-color: #333;
+                border-top-color: #333;
+                box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
+                box-sizing: border-box;
+                display: inline-block;
+                /*margin: 100px 100px;*/
+                /*height: 600px;*/
+                padding: 12px;
+                position: relative;
+                text-align: center;
+              }
+
+              .frame:before {
+                border-radius: 2px;
+                bottom: -8px;
+                box-shadow: 0 2px 5px 0 #FF9800 inset;
+                content: "";
+                left: -8px;
+                position: absolute;
+                right: -8px;
+                top: -8px;
+              }
+
+              .frame:after {
+                border-radius: 2px;
+                bottom: -10px;
+                box-shadow: 0 2px 5px 0 #FF9800;
+                content: "";
+                left: -10px;
+                position: absolute;
+                right: -10px;
+                top: -10px;
+              }
             </style>
             <div class="ytupper">
-                <div class="section-head styleonew style-1 text-center">
-                    <h2>Meet Our Team</h2>
-                  </div>
-                  <div class="row align-items-center">
-                      <div class="col-md-2 mbbhide">
-                          <div class="pagination-align justify-content-end">
-                <div class="tranding-button-prev btn-prev">
-                  <i class="flaticon flaticon-left-chevron"></i>
-                </div>
-            
+              <div class="section-head styleonew style-1 text-center">
+                <h2>Meet Our Team</h2>
               </div>
-                      </div>
-                      <div class="col-md-8">
-                            <div class="swiper-btn-center-lr">
-                  <div class="swiper swiper-blog-post-sliderss">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <div class="teamcolss">
-                          <div class="dz-yte ">
-                            <img src="images/team23.webp">
+              <div class="row align-items-center">
+                <div class="col-md-2 mbbhide">
+                  <div class="pagination-align justify-content-end">
+                    <div class="tranding-button-prev btn-prev">
+                      <i class="flaticon flaticon-left-chevron"></i>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="swiper-btn-center-lr">
+                    <div class="swiper swiper-blog-post-sliderss">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="teamcolss">
+                            <div class="dz-yte ">
+                              <img src="images/team23.webp">
+                            </div>
                           </div>
                         </div>
-                      </div>
 
-                      <div class="swiper-slide">
-                        <div class="teamcolss">
-                          <div class="dz-yte ">
-                             <img src="images/ourteam3 (1).webp">
+                        <div class="swiper-slide">
+                          <div class="teamcolss">
+                            <div class="dz-yte ">
+                              <img src="images/ourteam3 (1).webp">
+                            </div>
                           </div>
                         </div>
+
+
                       </div>
-
-
                     </div>
                   </div>
-                  </div>
-                      </div>
-                      <div class="col-md-2 mbbhide">
-                           <div class="pagination-align justify-content-start">
+                </div>
+                <div class="col-md-2 mbbhide">
+                  <div class="pagination-align justify-content-start">
 
-                <div class="tranding-button-next btn-next">
-                  <i class="flaticon flaticon-chevron"></i>
-                </div>
-              </div>
-                      </div>
+                    <div class="tranding-button-next btn-next">
+                      <i class="flaticon flaticon-chevron"></i>
+                    </div>
                   </div>
-                  
-          
-                 
-                </div>
-                <div class="row mt-3 mainshow">
-            <div class="col-lg-12">
-              <div class="pagination-align justify-content-center">
-                <div class="tranding-button-prev btn-prev">
-                  <i class="flaticon flaticon-left-chevron"></i>
-                </div>
-                <div class="tranding-button-next btn-next">
-                  <i class="flaticon flaticon-chevron"></i>
                 </div>
               </div>
+
+
+
             </div>
+            <div class="row mt-3 mainshow">
+              <div class="col-lg-12">
+                <div class="pagination-align justify-content-center">
+                  <div class="tranding-button-prev btn-prev">
+                    <i class="flaticon flaticon-left-chevron"></i>
+                  </div>
+                  <div class="tranding-button-next btn-next">
+                    <i class="flaticon flaticon-chevron"></i>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          
-          
-          
-          
+
+
+
+
         </div>
 
         <div class="box hide" data-content="2">
@@ -1204,7 +1218,7 @@ border: 1px solid #fff;
                       </div>
                     </a>
                   </div>
-                
+
                   <div class="timeline hideerm">
                     <a href="#" class="timeline-content">
                       <span class="timeline-year">1997</span>
@@ -1390,7 +1404,7 @@ border: 1px solid #fff;
                   </div>
                 </div>
               </div>
-               <div class="col-md-12 text-center"> <a id="showmore">Show More</a></div>
+              <div class="col-md-12 text-center"> <a id="showmore">Show More</a></div>
             </div>
           </div>
         </div>
@@ -1416,15 +1430,14 @@ border: 1px solid #fff;
             });
           });
         });
-        
-        document.getElementById('showmore').addEventListener('click', function() {
-    var elements = document.querySelectorAll('.hideerm');
-    elements.forEach(function(element) {
-        element.style.display = (element.style.display === 'none' || element.style.display === '') ? 'block' : 'none';
-    });
-    this.textContent = (this.textContent === 'Show More') ? 'Show Less' : 'Show More';
-});
 
+        document.getElementById('showmore').addEventListener('click', function() {
+          var elements = document.querySelectorAll('.hideerm');
+          elements.forEach(function(element) {
+            element.style.display = (element.style.display === 'none' || element.style.display === '') ? 'block' : 'none';
+          });
+          this.textContent = (this.textContent === 'Show More') ? 'Show Less' : 'Show More';
+        });
       </script>
       </section>
 
@@ -1563,19 +1576,23 @@ overflow: hidden;
         }
 
         @media only screen and (max-width: 768px) {
-            .mt-2222 {
-    margin-top: 85px !important;
-}
-          .hero h1{
+          .mt-2222 {
+            margin-top: 85px !important;
+          }
+
+          .hero h1 {
             font-size: 2rem;
           }
-          .mbcolteam{
+
+          .mbcolteam {
             margin-bottom: 5rem;
           }
-          .teamGrid{
+
+          .teamGrid {
             grid-template-columns: auto !important;
 
           }
+
           .big-box {
             min-height: 369px !important;
           }
@@ -2154,7 +2171,7 @@ overflow: hidden;
       <!--  <div class="container234">-->
       <!--    <div class="row">-->
       <!--      <div class="col-md-12">-->
-              <!-- Quotation box -->
+      <!-- Quotation box -->
       <!--        <div class="quotation-box">-->
       <!--          <p class="quotation-text">"Our group's philosophy regarding human-resource can be summarized in Mr. Lester Thurow's words - "The comparative advantage is now human-made. Anybody having brain power can compete in the future market." We have a flexible and adaptive culture and impart continuous on-the-job learning-by-doing trainings and organizing seminars, workshops and lectures by experts."</p>-->
       <!--        </div>-->
@@ -2618,105 +2635,104 @@ overflow: hidden;
         </div>
       </section> -->
     </div>
-    
-     <script src="https://d3js.org/d3.v6.min.js"></script>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://d3js.org/topojson.v3.min.js"></script>
     <script>
-    const container = d3.select(".map-container");
+      const container = d3.select(".map-container");
 
-// Set dimensions based on the container size
-const width = container.node().getBoundingClientRect().width;
-const height = width / 2; // Adjust the height proportionally
-const svg = d3.select(".mapmy")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+      // Set dimensions based on the container size
+      const width = container.node().getBoundingClientRect().width;
+      const height = width / 2; // Adjust the height proportionally
+      const svg = d3.select(".mapmy")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height);
 
-const projection = d3.geoNaturalEarth1()
-    .scale(width / 6.5)
-    .translate([width / 2, height / 2]);
+      const projection = d3.geoNaturalEarth1()
+        .scale(width / 6.5)
+        .translate([width / 2, height / 2]);
 
-const path = d3.geoPath().projection(projection);
+      const path = d3.geoPath().projection(projection);
 
-const indiaCoords = [78.9629, 20.5937];
+      const indiaCoords = [78.9629, 20.5937];
 
-const destinations = [
-    [-0.1278, 51.5074], // London, UK
-    [-74.0060, 40.7128], // New York, USA
-    [139.6917, 35.6895], // Tokyo, Japan
-    [37.6173, 55.7558], // Moscow, Russia
-    [2.3522, 48.8566], // Paris, France
-    [18.4241, -33.9249], // Cape Town, South Africa
-    [-43.1729, -22.9068], // Rio de Janeiro, Brazil
-    [-99.1332, 19.4326], // Mexico City, Mexico
-    [-58.3816, -34.6037], // Buenos Aires, Argentina
-    [31.2357, 30.0444] // Cairo, Egypt
-];
+      const destinations = [
+        [-0.1278, 51.5074], // London, UK
+        [-74.0060, 40.7128], // New York, USA
+        [139.6917, 35.6895], // Tokyo, Japan
+        [37.6173, 55.7558], // Moscow, Russia
+        [2.3522, 48.8566], // Paris, France
+        [18.4241, -33.9249], // Cape Town, South Africa
+        [-43.1729, -22.9068], // Rio de Janeiro, Brazil
+        [-99.1332, 19.4326], // Mexico City, Mexico
+        [-58.3816, -34.6037], // Buenos Aires, Argentina
+        [31.2357, 30.0444] // Cairo, Egypt
+      ];
 
-d3.json("https://d3js.org/world-110m.v1.json").then(world => {
-    svg.append("path")
-        .datum(topojson.feature(world, world.objects.land))
-        .attr("class", "land")
-        .attr("d", path);
+      d3.json("https://d3js.org/world-110m.v1.json").then(world => {
+        svg.append("path")
+          .datum(topojson.feature(world, world.objects.land))
+          .attr("class", "land")
+          .attr("d", path);
 
-    svg.append("path")
-        .datum(topojson.mesh(world, world.objects.countries, (a, b) => a !== b))
-        .attr("class", "boundary")
-        .attr("d", path);
+        svg.append("path")
+          .datum(topojson.mesh(world, world.objects.countries, (a, b) => a !== b))
+          .attr("class", "boundary")
+          .attr("d", path);
 
-    // Start the animation sequence
-    animateArcs();
-});
-
-function animateArcs() {
-    // Draw all arcs at once
-    destinations.forEach(destination => {
-        const coordinates = [indiaCoords, destination];
-        drawArc(coordinates);
-    });
-
-    // Restart animation after a delay
-    setTimeout(() => {
+        // Start the animation sequence
         animateArcs();
-    }, 4000); // Adjust the delay as needed
-}
+      });
 
-function drawArc(coords) {
-    const source = projection(coords[0]);
-    const target = projection(coords[1]);
-    const midPointHeightOffset = width < 768 ? -50 : -100; // Adjust midpoint height offset based on screen width
-    const midPoint = [(source[0] + target[0]) / 2, (source[1] + target[1]) / 2 + midPointHeightOffset];
+      function animateArcs() {
+        // Draw all arcs at once
+        destinations.forEach(destination => {
+          const coordinates = [indiaCoords, destination];
+          drawArc(coordinates);
+        });
 
-    const lineData = [source, midPoint, target];
+        // Restart animation after a delay
+        setTimeout(() => {
+          animateArcs();
+        }, 4000); // Adjust the delay as needed
+      }
 
-    const lineFunction = d3.line()
-        .curve(d3.curveBasis)
-        .x(d => d[0])
-        .y(d => d[1]);
+      function drawArc(coords) {
+        const source = projection(coords[0]);
+        const target = projection(coords[1]);
+        const midPointHeightOffset = width < 768 ? -50 : -100; // Adjust midpoint height offset based on screen width
+        const midPoint = [(source[0] + target[0]) / 2, (source[1] + target[1]) / 2 + midPointHeightOffset];
 
-    const path = svg.append("path")
-        .datum(lineData)
-        .attr("class", "arc")
-        .attr("d", lineFunction)
-        .style("fill", "none")
-        .style("stroke", "red")
-        .style("stroke-width", 3)
-        .style("stroke-dasharray", function() {
+        const lineData = [source, midPoint, target];
+
+        const lineFunction = d3.line()
+          .curve(d3.curveBasis)
+          .x(d => d[0])
+          .y(d => d[1]);
+
+        const path = svg.append("path")
+          .datum(lineData)
+          .attr("class", "arc")
+          .attr("d", lineFunction)
+          .style("fill", "none")
+          .style("stroke", "red")
+          .style("stroke-width", 3)
+          .style("stroke-dasharray", function() {
             const length = this.getTotalLength();
             return length + " " + length;
-        })
-        .style("stroke-dashoffset", function() {
+          })
+          .style("stroke-dashoffset", function() {
             return this.getTotalLength();
-        })
-        .transition()
-        .duration(3000)
-        .ease(d3.easeLinear)
-        .style("stroke-dashoffset", 0)
-        .on("end", function() {
+          })
+          .transition()
+          .duration(3000)
+          .ease(d3.easeLinear)
+          .style("stroke-dashoffset", 0)
+          .on("end", function() {
             d3.select(this).remove();
-        });
-}
-
+          });
+      }
     </script>
-    
+
     <?php include('footer.php'); ?>

@@ -11,7 +11,7 @@ RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-ErrorDocument 404 /404.php
+ErrorDocument 404 /404
 
 # 3. Redirect specific old static URLs to new static URLs
 RewriteRule ^rnd\.html$ /r-and-d [R=301,L]

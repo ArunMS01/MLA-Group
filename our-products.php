@@ -1,11 +1,13 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
 include('head.php');
 ?>
 <title>Our Products</title>
-<meta name="description" content="">
+<meta name="description" content="Our Products">
+<link rel="canonical" href="https://www.mlagroup.com/our-products" />
 </head>
+
+
+
 
 <body>
     <?php
