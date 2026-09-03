@@ -4,6 +4,22 @@ include('head.php');
 <title>Have a Query related to chemical Supply? Contact MLA Group</title>
 <meta name="description" content="Contact MLA Group for bulk chemical supply, expert consultation, or partnership queries.  We’re here to support your industrial needs with trusted solutions">
 <link rel="canonical" href="https://www.mlagroup.com/contact-us" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Have a Query related to chemical Supply? Contact MLA Group" />
+<meta property="og:description" content="Contact MLA Group for bulk chemical supply, expert consultation, or partnership queries.  We’re here to support your industrial needs with trusted solutions" />
+<meta property="og:image" content="https://www.mlagroup.com/images/mla-logo.webp" />
+<meta property="og:url" content="https://www.mlagroup.com/contact-us" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="MLA Group" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Have a Query related to chemical Supply? Contact MLA Group" />
+<meta name="twitter:description" content="Contact MLA Group for bulk chemical supply, expert consultation, or partnership queries.  We’re here to support your industrial needs with trusted solutions" />
+<meta name="twitter:image" content="https://www.mlagroup.com/images/mla-logo.webp" />
+
+
 </head>
 
 <body>

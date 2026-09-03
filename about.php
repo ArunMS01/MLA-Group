@@ -6,6 +6,22 @@ include('head.php');
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
 <link rel="canonical" href="https://www.mlagroup.com/about" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="India’s Leading Chemical Supplier | About MLA Group" />
+<meta property="og:description" content="Get to know MLA Group India’s chemical industry expert with 44+ years of experience. Exporting to 43+ countries that are trusted for quality and innovation." />
+<meta property="og:image" content="https://www.mlagroup.com/images/mla-logo.webp" />
+<meta property="og:url" content="https://www.mlagroup.com/about" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="MLA Group" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="India’s Leading Chemical Supplier | About MLA Group" />
+<meta name="twitter:description" content="Get to know MLA Group India’s chemical industry expert with 44+ years of experience. Exporting to 43+ countries that are trusted for quality and innovation." />
+<meta name="twitter:image" content="https://www.mlagroup.com/images/mla-logo.webp" />
+
+
 </head>
 
 <body>
