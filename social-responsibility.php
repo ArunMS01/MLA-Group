@@ -401,7 +401,7 @@ include("header.php");
 .initiative-card img{
     width:100%;
     height:320px;
-    object-fit:cover;
+    object-fit:contain;
 }
 
 .initiative-label{
@@ -550,7 +550,9 @@ include("header.php");
     }
 
     .initiative-card img{
-        height:auto;
+        height:300px;
+        border:1px solid #cacaca;
+        border-radius:10px;
         margin-top:20px;
         margin-bottom:20px;
     }
@@ -705,24 +707,24 @@ include("header.php");
 
     <div class="container">
 
-        <div class="row text-center">
+       <div class="row text-center counter-section">
 
-            <div class="col-md-4 wow fadeInUp">
-                <h3>35+</h3>
-                <p>Scholarships Supported</p>
-            </div>
+    <div class="col-md-4 wow fadeInUp">
+        <h3 class="counter" data-count="35">0</h3>
+        <p>Scholarships Supported</p>
+    </div>
 
-            <div class="col-md-4 wow fadeInUp">
-                <h3>3000+</h3>
-                <p>Meals Distributed Daily</p>
-            </div>
+    <div class="col-md-4 wow fadeInUp">
+        <h3 class="counter" data-count="3000">0</h3>
+        <p>Meals Distributed Daily</p>
+    </div>
 
-            <div class="col-md-4 wow fadeInUp">
-                <h3>Ongoing</h3>
-                <p>Environmental Initiatives</p>
-            </div>
+    <div class="col-md-4 wow fadeInUp">
+        <h3>Ongoing</h3>
+        <p>Environmental Initiatives</p>
+    </div>
 
-        </div>
+</div>
 
     </div>
 
@@ -771,12 +773,27 @@ include("header.php");
             <div class="row align-items-center">
 
                 <div class="col-lg-5">
-                      <div class="sv-reel-video-wrapper">
-    <video class="sv-reel-video" controls playsinline poster="images/increase.png">
-        <source src="images/video.mp4" type="video/mp4">
-    </video>
-</div>
-                    <!--<img src="img/increase.png" class="img-fluid">-->
+<!--                      <div class="sv-reel-video-wrapper">-->
+<!--    <video class="sv-reel-video" controls playsinline poster="images/increase.png">-->
+<!--        <source src="images/video.mp4" type="video/mp4">-->
+<!--    </video>-->
+<!--</div>-->
+                    <div class="swiper mainalleyslider">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                                <img src="images/increase.png" class="img-fluid">
+                           </div> 
+                             <div class="swiper-slide">
+                                <img src="images/fst.jpg" class="img-fluid">
+                           </div>
+                             <div class="swiper-slide">
+                                <img src="images/try.jpg" class="img-fluid">
+                           </div>
+                         
+                        </div>
+                           <div class="swiper-pagination"></div>
+                    </div>
+                   
                 </div>
 
                 <div class="col-lg-7">
@@ -790,7 +807,7 @@ include("header.php");
                     </h3>
 
                     <p class=" wow fadeInUp">
-                      The Sumit Agarwal Foundation (SAF) was established with the vision of empowering individuals through education, skill development, and long-term career opportunities. Through the Sumit Agarwal Foundation Institute , the foundation equips young individuals with industry-relevant skills through structured training programs focused on employer expectations, workplace readiness, communication, professional etiquette, and personality development.
+                      The Sumit Agarwal Foundation (SAF Institute) was established with the vision of empowering individuals through education, skill development, and long-term career opportunities. Through the Sumit Agarwal Foundation Institute , the foundation equips young individuals with industry-relevant skills through structured training programs focused on employer expectations, workplace readiness, communication, professional etiquette, and personality development.
                     </p>
 
                     <p class=" wow fadeInUp">
@@ -807,7 +824,24 @@ include("header.php");
 
             <div class="row align-items-center">
   <div class="col-lg-5">
-                    <img src="img/sumitedu.png" class="img-fluid">
+      
+        <div class="swiper mainalleyslider">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                                <img src="img/sumitedu.png" class="img-fluid">
+                           </div> 
+                             <div class="swiper-slide">
+                                <img src="images/ytut.png" class="img-fluid">
+                           </div>
+                           <!--  <div class="swiper-slide">-->
+                           <!--     <img src="images/utiyi.png" class="img-fluid">-->
+                           <!--</div>-->
+                         
+                        </div>
+                           <div class="swiper-pagination"></div>
+                    </div>
+      
+                  
                 </div>
                
 
@@ -848,7 +882,23 @@ include("header.php");
 <!--    </video>-->
 <!--</div>-->
 
-<img src="images/eduty.png">
+ <div class="swiper mainalleyslider">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                             <img src="images/eduty.png">
+                           </div> 
+                           <!--  <div class="swiper-slide">-->
+                           <!--     <img src="images/ytut.png" class="img-fluid">-->
+                           <!--</div>-->
+                             <div class="swiper-slide">
+                                <img src="images/utiyi.png" class="img-fluid">
+                           </div>
+                         
+                        </div>
+                           <div class="swiper-pagination"></div>
+                    </div>
+
+
                 </div>
                 <div class="col-lg-7">
                           <img class="gloatimg" style="width: 90px; display:block; height:auto;" src="img/1w.jpg" alt="">
@@ -886,11 +936,26 @@ include("header.php");
 
             <div class="row align-items-center">
   <div class="col-lg-5">
-      <div class="sv-reel-video-wrapper">
-    <video class="sv-reel-video" controls playsinline poster="images/roti.png">
-        <source src="images/rotitollvideo.mp4" type="video/mp4">
-    </video>
-</div>
+<!--      <div class="sv-reel-video-wrapper">-->
+<!--    <video class="sv-reel-video" controls playsinline poster="images/roti.png">-->
+<!--        <source src="images/rotitollvideo.mp4" type="video/mp4">-->
+<!--    </video>-->
+<!--</div>-->
+<div class="swiper mainalleyslider">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                                <img src="images/image (4).png" class="img-fluid">
+                           </div> 
+                             <div class="swiper-slide">
+                                <img src="images/image (5).png" class="img-fluid">
+                           </div>
+                             <div class="swiper-slide">
+                                <img src="images/roasi.jpg" class="img-fluid">
+                           </div>
+                         
+                        </div>
+                           <div class="swiper-pagination"></div>
+                    </div>
         
                     <!--<img src="images/roti.png" class="img-fluid">-->
                 </div>
@@ -959,12 +1024,14 @@ include("header.php");
 }
 
 .sv-reel-video2 {
+    border:1px solid #cacaca;
     width: 100%;
+    background:#fff;
     height: 390px;      /* Adjust as needed */
     object-fit: contain; /* Shows the full video */
-    background: #000;    /* Black bars if needed */
+      /* Black bars if needed */
     display: block;
-    /*border-radius: 10px;*/
+    border-radius: 10px;
 }
 
 @media (max-width: 768px) {
@@ -1056,7 +1123,28 @@ include("header.php");
 
             <div class="row align-items-center">
   <div class="col-lg-5">
-                    <img src="images/sumitlogo.png" class="img-fluid">
+      
+      <div class="swiper mainalleyslider">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                                <img src="images/sumitlogo.png" class="img-fluid">
+                           </div> 
+                             <div class="swiper-slide">
+                                <img src="images/kithtn.jpg" class="img-fluid">
+                           </div>
+                             <div class="swiper-slide">
+                                <img src="images/yuruyre.png" class="img-fluid">
+                           </div>
+                            <div class="swiper-slide">
+                                <img src="images/yutriior.png" class="img-fluid">
+                           </div>
+                         
+                        </div>
+                           <div class="swiper-pagination"></div>
+                    </div>
+      
+                    <!--<img src="images/sumitlogo.png" class="img-fluid">-->
+                    <!--<img src="kithtn.jpg">-->
                 </div>
                 <div class="col-lg-7">
                           <img class="gloatimg" style="width: 90px; display:block; height:auto;" src="img/2w.jpg" alt="">
@@ -1096,11 +1184,30 @@ include("header.php");
             <div class="row align-items-center">
 
                 <div class="col-lg-5">
-                    <img src="img/greensmla.png" class="img-fluid">
+                    
+                      <div class="swiper mainalleyslider">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                                <img src="img/greensmla.png" class="img-fluid">
+                           </div> 
+                             <div class="swiper-slide">
+                                <img src="images/uyiyr.jpg" class="img-fluid">
+                           </div>
+                             <div class="swiper-slide">
+                                <img src="images/1afa4178-5f39-4038-bd0a-647bc947a34b.jpg" class="img-fluid">
+                           </div>
+                           <!-- <div class="swiper-slide">-->
+                           <!--     <img src="images/yutriior.png" class="img-fluid">-->
+                           <!--</div>-->
+                         
+                        </div>
+                           <div class="swiper-pagination"></div>
+                    </div>
+                    <!--<img src="img/greensmla.png" class="img-fluid">-->
                 </div>
 
                 <div class="col-lg-7">
-                    <img class="gloatimg" style="width: 90px; display:block; height:auto;" src="img/3w.jpg" alt="">
+                    <img class="gloatimg" style="width: 120px; display:block; height:auto;" src="img/3w.jpg" alt="">
 
                     <span class="initiative-label wow fadeInUp">
                        Environmental Sustainability Initiative
@@ -1165,15 +1272,17 @@ include("header.php");
 
 .mySwipers1 .swiper-slide img {
     width: 100%;
-    background:#ff9f5736;
+    background:#fff;
     border:1px solid #cacaca;
     height: 390px;      /* Equal height for all images */
     object-fit: contain;  /* Crop while maintaining aspect ratio */
     display: block;
-    /*border-radius: 10px;*/
+    border-radius: 10px;
 }
 
 /* Navigation */
+.mainalleyslider .swiper-button-next,
+.mainalleyslider .swiper-button-prev,
 .mySwipers1 .swiper-button-next,
 .mySwipers1 .swiper-button-prev {
    color: #f3791f;
@@ -1183,12 +1292,13 @@ include("header.php");
     width: 49px;
     font-size: 11px;
 }
-
+.mainalleyslider .swiper-button-next:after, .mainalleyslider .swiper-button-prev:after,
 .mySwipers1 .swiper-button-next:after, .mySwipers1 .swiper-button-prev:after{
     font-size:18px !important;
 }
 
 /* Pagination */
+.mainalleyslider .swiper-pagination-bullet-active,
 .mySwipers1 .swiper-pagination-bullet-active {
     background: #000;
 }
@@ -1199,9 +1309,22 @@ include("header.php");
         height: 400px;
     }
 }
+/*.mySwipers1 .swiper-slide{*/
+/*    width: clamp(280px, 40vw, 450px);*/
+/*}*/
+
+    .mainbg{
+        background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    background-image: linear-gradient(45deg, #82828212, #82828212), url(images/chemicalbg.webp);
+    }
+
 </style>
 
-<section class="contact-section py-5">
+
+
+<section class="contact-section py-5 mainbg">
       <div class="container">
           
           <div class="row">
@@ -1215,15 +1338,30 @@ include("header.php");
 
             <div class="swiper-slide">
                       <div class="sv-reel-video-wrapper2">
+                          
     <video class="sv-reel-video2" controls playsinline >
         <source src="images/video33.mp4" type="video/mp4">
     </video>
 </div>
             </div>
+            
+              <div class="swiper-slide">
+                      <div class="sv-reel-video-wrapper2">
+    <video class="sv-reel-video2" controls playsinline >
+        <source src="images/rotitollvideo.mp4" type="video/mp4">
+    </video>
+</div>
+            </div>
+            
+               <div class="swiper-slide">
+                      <div class="sv-reel-video-wrapper2">
+    <video class="sv-reel-video2" controls playsinline poster="images/increase.png">
+        <source src="images/video.mp4" type="video/mp4">
+    </video>
+</div>
+            </div>
 
-            <!--<div class="swiper-slide">-->
-            <!--    <img src="images/image23.jpg" alt="Image 2">-->
-            <!--</div>-->
+           
 
             <div class="swiper-slide">
                     <div class="sv-reel-video-wrapper2">
@@ -1232,22 +1370,36 @@ include("header.php");
     </video>
 </div>
             </div>
+            
+             <div class="swiper-slide">
+                <img src="images/1afa4178-5f39-4038-bd0a-647bc947a34b.jpg" alt="Image 2">
+            </div>
 
             <div class="swiper-slide">
                 <img src="images/image11.jpg" alt="Image 4">
             </div>
 
             <div class="swiper-slide">
-                <img src="images/image2.jpg" alt="Image 5">
+                <img src="images/kithtn.jpg" alt="Image 5">
             </div>
 
             <div class="swiper-slide">
-                <img src="images/image20.jpg" alt="Image 6">
+                <img src="images/yuruyre.png" alt="Image 6">
             </div>
             
             <div class="swiper-slide">
-                <img src="images/image8.jpg" alt="Image 6">
+                <img src="images/yutriior.png" alt="Image 6">
             </div>
+            
+               <div class="swiper-slide">
+                                <img src="images/image (4).png" class="">
+                           </div> 
+                             <div class="swiper-slide">
+                                <img src="images/image (5).png" class="img-f">
+                           </div>
+                             <div class="swiper-slide">
+                                <img src="images/roasi.jpg" class="img-fl">
+                           </div>
 
         </div>
 
@@ -1263,7 +1415,7 @@ include("header.php");
       </div>
     </section>
 
-<section class="contact-section py-5">
+<section class="contact-section py">
     <div class="containe">
 
         <div class="contact-card">
@@ -1301,6 +1453,68 @@ include("header.php");
 
     </div>
 </section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+    const counters = document.querySelectorAll(".counter");
+    const section = document.querySelector(".counter-section");
+
+    function animateCounter(counter) {
+
+        const target = parseInt(counter.dataset.count);
+        const duration = 2000;
+        const start = 0;
+        const startTime = performance.now();
+
+        function update(currentTime) {
+
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+
+            const value = Math.floor(progress * (target - start) + start);
+            counter.textContent = value;
+
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            } else {
+                counter.textContent = target + "+";
+            }
+        }
+
+        requestAnimationFrame(update);
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                counters.forEach(counter => {
+                    counter.textContent = "0"; // Reset
+                    animateCounter(counter);
+                });
+
+            } else {
+
+                // Reset when leaving the viewport
+                counters.forEach(counter => {
+                    counter.textContent = "0";
+                });
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.4
+    });
+
+    observer.observe(section);
+
+});
+</script>
 <?php
 include("footer.php");
 ?>

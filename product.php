@@ -126,8 +126,7 @@ include('header.php');
     .breadcrumb-item+.breadcrumb-item {
         padding-left: 0;
     }
-</style>
-<style>
+
     .dz-tabs .nav-tabs .nav-link.active {
         border-color: #FE8F34 !important;
         color: var(--secondary);
@@ -189,6 +188,9 @@ include('header.php');
     .mygalleryslider .swiper-wrapper {
         justify-content: center;
     }
+    .iti__flag {
+    background-image: url("/images/flags.webp") !important;
+}
 </style>
 
 
@@ -201,12 +203,12 @@ include('header.php');
     <div class="d-sm-flex justify-content-between container-fluid py-new">
         <nav aria-label="breadcrumb" class="breadcrumb-row">
             <ul class="breadcrumb mb-0">
-                <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="/">Home</a> </li>
-                <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="our-products">Products</a> </li>
+                <li class="breadcrumb-item col-or"> <a href="/">Home</a> </li>
+                <li class="breadcrumb-item col-or"> <a href="our-products">Products</a> </li>
                 <?php
                 if (isset($getbrand['name'])) {
                 ?>
-                    <li class="breadcrumb-item col-or"> <a style="color:#FE8F34" href="brands?url=<?php echo $getbrand['url'] ?>"><?php echo $getbrand['name'] ? $getbrand['name'] : ''; ?></a> </li>
+                    <li class="breadcrumb-item col-or"> <a href="brands?url=<?php echo $getbrand['url'] ?>"><?php echo $getbrand['name'] ? $getbrand['name'] : ''; ?></a> </li>
                 <?php
                 }
                 ?>
@@ -417,7 +419,7 @@ include('header.php');
                                     font-weight: 700;
                                     background-color: #FE8F34;
                                     text-align: center;
-                                    color: #fff;
+                                    color: #000;
                                     border: 1px solid;
                                     padding: 10px 0;
                                     text-transform: uppercase;

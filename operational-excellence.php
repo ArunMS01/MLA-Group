@@ -72,7 +72,7 @@ include("header.php");
         border-radius: 8px;
         padding: 50px;
         box-shadow: 0 15px 50px rgba(0, 0, 0, .06);
-        margin-top: -40px;
+        /*margin-top: -40px;*/
         position: relative;
         z-index: 2;
     }
@@ -129,13 +129,13 @@ include("header.php");
         /* background: #fafafa; */
     }
  .content-image-placeholder::before{
-        width: 369px;
-    height: 250px;
-    left: -10px;
-    z-index: -1;
-    top: -10px;
+      width: 100%;
+    height: 100%;
+    /* left: -10px; */
+    /* z-index: -1; */
+    /* top: -10px; */
     content: '';
-    border: 8px solid #f3791f;
+    border: 4px solid #f3791f;
     position: absolute;
     
  }
@@ -290,9 +290,16 @@ include("header.php");
     </div>
 </section>
 
+<style>
+    /*.mainbg{*/
+    /*    background-position: center;*/
+    /*background-size: cover;*/
+    /*background-repeat: repeat;*/
+    /*background-image: linear-gradient(45deg, #ffffff, #dadada4d), url(images/chemicalbg.webp);*/
+    /*}*/
+</style>
 
-
-<section class="content-section py-5">
+<section class="content-section py-5 mainbg">
     <div class="container">
 
         <!-- Manufacturing Systems -->
@@ -300,7 +307,7 @@ include("header.php");
         <div class="row align-items-center g-5">
 
             <div class="col-lg-5">
-                <div class="content-image-placeholder">
+                <div class="content-image-placeholder wow fadeInUp">
                     <img src="images/imglab.png" />
                 </div>
             </div>
@@ -334,7 +341,7 @@ include("header.php");
             </div>
 
             <div class="col-lg-5">
-                <div class="content-image-placeholder">
+                <div class="content-image-placeholder  wow fadeInUp">
                     <img src="images/labsy1.png" />
                 </div>
             </div>
@@ -348,7 +355,7 @@ include("header.php");
         <div class="row align-items-center g-5 mbtn-1">
 
             <div class="col-lg-5">
-                <div class="content-image-placeholder">
+                <div class="content-image-placeholder  wow fadeInUp">
                     <img src="images/labtest1.png" />
                 </div>
             </div>
@@ -379,7 +386,7 @@ include("header.php");
 
             </div>
               <div class="col-lg-5">
-                <div class="content-image-placeholder">
+                <div class="content-image-placeholder  wow fadeInUp">
                     <img src="images/test5.png" />
                 </div>
             </div>
@@ -389,7 +396,7 @@ include("header.php");
          <div class="row align-items-center g-5 mbtn-1">
 
             <div class="col-lg-5">
-                <div class="content-image-placeholder">
+                <div class="content-image-placeholder  wow fadeInUp">
                     <img src="images/handshake.avif" />
                 </div>
             </div>
@@ -409,7 +416,14 @@ include("header.php");
     </div>
 </section>
 
-
+<style>
+    .certification-section{
+         background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    background-image: linear-gradient(45deg, #82828212, #82828212), url(images/chemicalbg.webp);
+    }
+</style>
 
 <section class="certification-section py-5">
     <div class="container">
@@ -452,7 +466,7 @@ include("header.php");
 
 
 
-<section class="contact-section py-5">
+<section class="contact-section p5">
     <div class="containe">
 
         <div class="contact-card">

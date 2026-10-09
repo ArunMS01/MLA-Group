@@ -1,11 +1,25 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
 include('head.php');
 ?>
 <title>Our Products</title>
-<meta name="description" content="">
+<meta name="description" content="Our Products">
+<link rel="canonical" href="https://www.mlagroup.com/our-products" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Our Products" />
+<meta property="og:image" content="https://www.mlagroup.com/images/mla-logo.webp" />
+<meta property="og:url" content="https://www.mlagroup.com/our-products" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="MLA Group" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Our Products" />
+<meta name="twitter:image" content="https://www.mlagroup.com/images/mla-logo.webp" />
 </head>
+
+
+
 
 <body>
     <?php

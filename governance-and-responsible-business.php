@@ -124,13 +124,13 @@ include("header.php");
         /* background: #fafafa; */
     }
  .content-image-placeholder::before{
-        width: 369px;
-    height: 250px;
-    left: -10px;
-    z-index: -1;
-    top: -10px;
+        width: 100%;
+    height: 100%;
+    /*left: -10px;*/
+    /*z-index: -1;*/
+    /*top: -10px;*/
     content: '';
-    border: 8px solid #f3791f;
+    border: 4px solid #f3791f;
     position: absolute;
     
  }
@@ -292,8 +292,8 @@ include("header.php");
      <div class="row align-items-center g-5">
 
     <div class="col-lg-5">
-        <div class="content-image-placeholder ">
-            <img class=" wow fadeInUp" src="https://img.magnific.com/free-photo/close-up-hand-business-man-busy-office-desk-notebook-documents-working_1150-15424.jpg?semt=ais_hybrid&w=740&q=80" />
+        <div class="content-image-placeholder wow fadeInUp">
+            <img class=" " src="https://img.magnific.com/free-photo/close-up-hand-business-man-busy-office-desk-notebook-documents-working_1150-15424.jpg?semt=ais_hybrid&w=740&q=80" />
         </div>
     </div>
 
@@ -326,8 +326,8 @@ include("header.php");
     </div>
 
     <div class="col-lg-5">
-        <div class="content-image-placeholder">
-            <img class=" wow fadeInUp" src="https://img.magnific.com/free-photo/teamwork-support-friendship-gesture_1262-20464.jpg?semt=ais_hybrid&w=740&q=80" />
+        <div class="content-image-placeholder wow fadeInUp">
+            <img class=" " src="https://img.magnific.com/free-photo/teamwork-support-friendship-gesture_1262-20464.jpg?semt=ais_hybrid&w=740&q=80" />
         </div>
     </div>
 
@@ -340,8 +340,8 @@ include("header.php");
       <div class="row align-items-center g-5 mbtn-1">
 
     <div class="col-lg-5">
-        <div class="content-image-placeholder">
-            <img class=" wow fadeInUp" src="https://media.istockphoto.com/id/1572436997/photo/diversity-and-inclusion-at-workplace-lgbt-leadership.jpg?s=612x612&w=0&k=20&c=Vz3X2zI-QSfqqL3nHSOko9g75gIVmTG9jbe5WNSavRU=" />
+        <div class="content-image-placeholder wow fadeInUp">
+            <img class=" " src="https://media.istockphoto.com/id/1572436997/photo/diversity-and-inclusion-at-workplace-lgbt-leadership.jpg?s=612x612&w=0&k=20&c=Vz3X2zI-QSfqqL3nHSOko9g75gIVmTG9jbe5WNSavRU=" />
         </div>
     </div>
 
@@ -371,8 +371,8 @@ include("header.php");
 
     </div>
      <div class="col-lg-5">
-        <div class="content-image-placeholder">
-            <img class=" wow fadeInUp" src="images/trainin.png" />
+        <div class="content-image-placeholder wow fadeInUp">
+            <img class=" " src="images/trainin.png" />
         </div>
     </div>
 
@@ -381,8 +381,8 @@ include("header.php");
 <div class="row align-items-center g-5 mbtn-1">
 
     <div class="col-lg-5">
-        <div class="content-image-placeholder">
-            <img class=" wow fadeInUp" src="images/mett.jpg" />
+        <div class="content-image-placeholder wow fadeInUp">
+            <img class=" " src="images/mett.jpg" />
         </div>
     </div>
 
@@ -412,8 +412,8 @@ include("header.php");
 
     </div>
         <div class="col-lg-5">
-        <div class="content-image-placeholder">
-            <img class=" wow fadeInUp" src="images/mlag.jpg" />
+        <div class="content-image-placeholder wow fadeInUp">
+            <img class=" " src="images/mlag.jpg" />
         </div>
     </div>
 
@@ -421,7 +421,15 @@ include("header.php");
 
     </div>
 </section>
-<section class="contact-section py-5">
+<style>
+       .mainbg{
+          background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    background-image: linear-gradient(45deg, #82828212, #82828212), url(images/chemicalbg.webp);
+    }
+</style>
+<section class="contact-section py-5 mainbg">
       <div class="container">
           
           <div class="row">
@@ -453,9 +461,9 @@ include("header.php");
                 <img src="images/image9.jpg" alt="Image 5">
             </div>
 
-            <!--<div class="swiper-slide">-->
-            <!--    <img src="images/image6.jpg" alt="Image 6">-->
-            <!--</div>-->
+            <div class="swiper-slide">
+                <img src="images/train.jpg" alt="Image 6">
+            </div>
 
         </div>
 
@@ -470,7 +478,7 @@ include("header.php");
           </div>
       </div>
     </section>
-<section class="contact-section py-5">
+<section class="contact-section p">
     <div class="containe">
 
         <div class="contact-card">

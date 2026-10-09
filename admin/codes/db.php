@@ -6,10 +6,10 @@ if (!isset($db) || !($db instanceof mysqli)) {
     ini_set('display_errors', '1');
 
     // Database configuration
-    define('DB_HOST', '127.0.0.1:3307'); // Replace with your database host
+    define('DB_HOST', 'localhost'); // Replace with your database host
     define('DB_USERNAME', 'root'); // Replace with your database username
     define('DB_PASSWORD', ''); // Replace with your database password
-    define('DB_NAME', 'mla'); // Replace with your database name
+    define('DB_NAME', 'mlagroup'); // Replace with your database name
 
 
     // Establish database connection

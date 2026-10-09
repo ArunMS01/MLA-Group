@@ -3,6 +3,21 @@ include('head.php');
 ?>
 <title>MLA Group – Trusted Chemical Manufacturer in India</title>
 <meta name="description" content="Experience advanced chemical manufacturing at MLA Group with top technology & high-tech facilities, delivering reliable results across 43+ countries worldwide.">
+<link rel="canonical" href="https://www.mlagroup.com/manufacturing" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="MLA Group – Trusted Chemical Manufacturer in India" />
+<meta property="og:description" content="Experience advanced chemical manufacturing at MLA Group with top technology &amp; high-tech facilities, delivering reliable results across 43+ countries worldwide." />
+<meta property="og:image" content="https://www.mlagroup.com/images/mla-logo.webp" />
+<meta property="og:url" content="https://www.mlagroup.com/manufacturing" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="MLA Group" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="MLA Group – Trusted Chemical Manufacturer in India" />
+<meta name="twitter:description" content="Experience advanced chemical manufacturing at MLA Group with top technology &amp; high-tech facilities, delivering reliable results across 43+ countries worldwide." />
+<meta name="twitter:image" content="https://www.mlagroup.com/images/mla-logo.webp" />
 
 </head>
 
