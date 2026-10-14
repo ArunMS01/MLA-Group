@@ -160,7 +160,11 @@
                                 if ($resutl) {
                                     while ($row = mysqli_fetch_assoc($resutl)) {
                                 ?>
-                                        <li><a class="cpappp" href="brands?url=<?php echo $row['url'] ?>">
+                                        <li>     <a class="cpappp" href="<?php
+        echo ($row['name'] == 'Unistab: PVC Heat Stabilizers')
+            ? 'pvc-heat-stabilizers-manufacturers'
+            : 'brands?url=' . htmlspecialchars($row['url'], ENT_QUOTES, 'UTF-8');
+    ?>">
 
                                                 <?php
 
