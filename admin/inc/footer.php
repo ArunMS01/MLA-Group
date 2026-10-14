@@ -88,7 +88,7 @@ integrity="sha512-Xo0Jh8MsOn72LGV8kU5LsclG7SUzJsWGhXbWcYs2MAmChkQzwiW/yTQwdJ8w6U
   $(document).ready(function () {
     $('#kt_table_users').DataTable({
         "order": [], // disables initial auto sorting
-        "pageLength": 25, // optional: set default rows per page
+        "pageLength": 5, // optional: set default rows per page
         "columnDefs": [
             { "orderable": false, "targets": [/* add column indexes you don't want sortable */] }
         ]
