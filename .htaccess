@@ -4,12 +4,12 @@ RewriteCond %{REQUEST_URI} ^/download/(.*)[\s%\-\.](.*)\.pdf$ [NC]
 RewriteRule ^ /download/%1_%2.pdf [R=301,L]
 
 # 1. Redirect non-www to www
-RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+#RewriteCond %{HTTP_HOST} !^www\. [NC]
+#RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 # 2. Redirect HTTP to HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+#RewriteCond %{HTTPS} off
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 ErrorDocument 404 /404.php
 
@@ -31,8 +31,14 @@ RewriteRule ^calcium-carbonate-pharma-grade-manufacturers\.html$ /calcium-carbon
 
 
 
-# 4. General rewrite rule for dynamic pages (e.g. /example.html -> product.php?url=example)
+RewriteRule ^pvc-heat-stabilizers-manufacturers\.html$ pvc-heat-stabilizers-manufacturers.php [L]
+
+# 4. General rewrite rule for dynamic product pages
+# Skip rewriting if the requested file or directory already exists
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^/]+)\.html$ product.php?url=$1 [L,QSA]
+
 
 Redirect 301 /contactus https://www.mlagroup.com/contact-us
 

@@ -1,7 +1,164 @@
 <?php
 include('head.php');
 ?>
+	<!-- PAGE TITLE HERE -->
+	<title>PVC Stabilizer Manufacturer in India | Heat Stabilizer Supplier</title>
+	<meta name="description" content="Leading PVC stabilizer manufacturer in India supplying high-performance heat stabilizers for pipes, cables & fittings. Bulk supply and global export." />
+	<meta property="og:url" content="https://www.mlagroup.com/pvc-heat-stabilizers-manufacturers.html">
+<meta property="og:title" content="PVC Stabilizer Manufacturer in India | Heat Stabilizer Supplier" />
+<meta property="og:description" content="Leading PVC stabilizer manufacturer in India supplying high-performance heat stabilizers for pipes, cables & fittings. Bulk supply and global export." />
+<meta property="og:image" content="https://www.mlagroup.com/admin/codes/product-image/pvc-heat-stablizer.webp" />
+<meta property="og:type" content="website">
 
+<meta name="twitter:url" content="https://www.mlagroup.com/pvc-heat-stabilizers-manufacturers.html">
+<meta name="twitter:title" content="PVC Stabilizer Manufacturer in India | Heat Stabilizer Supplier">
+<meta name="twitter:image" content="https://www.mlagroup.com/admin/codes/product-image/pvc-heat-stablizer.webp">
+<meta name="twitter:description" content="Leading PVC stabilizer manufacturer in India supplying high-performance heat stabilizers for pipes, cables & fittings. Bulk supply and global export." />
+<meta name="twitter:creator" content="MLA Group">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "MLA Group of Industries",
+      "url": "https://www.mlagroup.com/",
+      "logo": "https://www.mlagroup.com/images/mla-logo.webp",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9076600122",
+        "contactType": "sales",
+        "areaServed": ["IN", "Worldwide"],
+        "availableLanguage": ["English"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/mlagroupindia/",
+        "https://in.linkedin.com/in/mla-group-of-industries-b5901b248"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "111/230, Brahm Nagar, Harsh Nagar",
+        "addressLocality": "Kanpur",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "208012",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "PVC Stabilizer",
+      "image": [
+        "https://www.mlagroup.com/admin/codes/product-image/pvc-heat-stablizer.webp"
+      ],
+      "description": "Leading PVC stabilizer manufacturer in India supplying high-performance heat stabilizers for pipes, cables & fittings. Bulk supply and global export. We have established ourselves as a trusted PVC stabilizer supplier for industries across India and global markets. Our advanced production capabilities, with a capacity of 3000 tons per month, enable us to meet both bulk and customized requirements efficiently.",
+      "brand": {
+        "@type": "Brand",
+        "name": "MLA Group"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "MLA Group of Industries"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.mlagroup.com/pvc-heat-stabilizers-manufacturers.html",
+        "priceCurrency": "INR",
+        "price": "0",
+        "availability": "https://schema.org/InStock",
+        "priceValidUntil": "2026-12-31",
+        "description": "Price available on request based on quantity and specifications for bulk PVC Stabilizer supply."
+      }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "PVC Stabilizer Manufacturing and Supply",
+      "provider": {
+        "@type": "Organization",
+        "name": "MLA Group of Industries"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "Place",
+          "name": "Worldwide"
+        }
+      ],
+      "description": "Bulk supply and export of PVC Stabilizer for industrial applications."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.mlagroup.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://www.mlagroup.com/our-products"
+        },
+ {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Unistab: PVC Heat Stabilizers",
+          "item": "https://www.mlagroup.com/brands?url=unistab"
+        },
+         {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "PVC Stabilizer Manufacturer in India",
+          "item": "https://www.mlagroup.com/pvc-heat-stabilizers-manufacturers.html"
+        }
+      ]
+    },
+    {
+        "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "What are the benefits of using One pack PVC Heat Stabilizers?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "There are several benefits of using our one pack PVC Heat Stabilizers that include: reduced labour cost, reduced handling losses, reduced inventory, a better homogenous mixture from processing. We provide PVC Heat Stabilizers (one pack- lead-based) in powder and flakes form, that can be modified as per the needs and requirements of the customers."
+    }
+  },{
+    "@type": "Question",
+    "name": "What is the preferred dosage of PVC Heat Stabilizers?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The dosage of stabilizers per hundred parts of resin ( PVC ) is 2.5-3.5 phr in pipes and 3.0 to 12.0 phr in different types of cables, but it depends on lead content in stabilizer and the filler used by PVC product manufacturer. If the filler is more, the dosage required is more. Detailed application knowledge and formula/recipe for any customer can be provided by our technical services managers."
+    }
+  },{
+    "@type": "Question",
+    "name": "Why should I purchase PVC Heat Stabilizers From MLA Group?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "At MLA Group, we manufacture products under a controlled environment and with high precision, strict quality controls, and standardized procedures to bring you a premium product every single time. Due to our huge capacity and aggressive approach, our prices are most economical. We are a leading PVC heat stabilizers suppliers in India who is committed to continuous improvement through R&D, to serve the customers with quality products at lower costs through higher productivity and unmatched customer service."
+    }
+  },{
+    "@type": "Question",
+    "name": "Are there eco-friendly PVC stabilizers available?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Any ideal service provider must offer sustainability. Thus, being among the top PVC stabilizer manufacturers in India, we offer eco-friendly options like calcium-zinc and organic-based stabilizers. These comply with environmental standards while maintaining high performance."
+    }
+  },{
+    "@type": "Question",
+    "name": "How is the quality of PVC stabilizers ensured?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Being among the leading PVC stabilizers exporters, we conduct rigorous testing of raw materials and products, adhering to international standards to ensure consistency and safety."
+    }
+  }]
+}
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -18,6 +175,9 @@ include('head.php');
 	</div> -->
 
   <style>
+    .blantershow-chat,.blantershow-chat-1{
+        display:none !important;
+    }
                     @media only screen and (max-width:768px) {
                         .FM6uVc {
                             padding-bottom: 121% !important;
@@ -102,7 +262,7 @@ include('head.php');
                     .postion-and img {
                         width: 100%;
                         position: relative;
-                        max-height: 100vh;
+                        height: 100vh;
                     }
 
                     .postion-and::after {
@@ -136,6 +296,9 @@ include('head.php');
                     }
 
                     @media (max-width: 768px) {
+                        .postion-and img{
+                            height:auto !important;
+                        }
 
                         .postion-and::before,
                         .postion-and::after {
@@ -307,20 +470,24 @@ include('head.php');
 
                                 <div class="col-md-6 p-0 zoom-in-up visible" bis_skin_checked="1">
                                     <div class="text-content" bis_skin_checked="1">
-                                        <div style="font-size:2rem; font-weight:bold">
-
-
-                                            UNISTAB                                        </div>
+                                            <img style="width:100px; margin-bottom:20px" src="https://www.mlagroup.com/admin/codes/uploads/6750056062833_unistab-heat-stablizers.webp" alt="">
                                             <h1 class="title" style="line-height: 1;">PVC Stabilizer Manufacturer in India</h1>
                                         <div class="Descriptionnew" bis_skin_checked="1">
-                                            <p>Stabilizers are chemical mixtures that are essential for the processing of PVCs and play a critical role in the development of the finished product to ensure the desired quality and durability. MLA Group portfolio of stabilizers, together with lubricants and other additives, offers tailored solutions for the performance requirements of finished products. With a vast experience in the field we implement best class in-house practices which drives our R&amp;D and ensure that our product our best in quality as well as consistency.&nbsp;We manufacture various types of PVC Heat Stabilizers :-&nbsp;</p>
-
-                                            <ul>
+                              <p>
+                                Tribasic lead sulphate, Dibasic lead stearate, Lead stearate are used as heat stabilizers while processing PVC items so that they do not get burnt/degraded due to high temperatures used in processing.
+  </p>
+These compounds are widely used to ensure consistent processing performance and product durability, which is why industries rely on experienced PVC heat stabilizer manufacturers for consistent quality.
+<p>
+Our one packs are a combination of above and other additives such as anti-oxidants etc., all put together in one product which provides ease of handling while its function is the same as above: to provide heat stability to PVC.
+  </p><p>
+Many industries prefer sourcing from an experienced PVC stabilizer supplier for reliable one-pack solutions and consistent quality.
+                              </p>
+                                            <!-- <ul>
                                                 <li>Lead Based</li>
                                                 <li>Hybrid Low Lead Based</li>
                                                 <li>Calcium Zinc Based ( Non Toxic , Eco Friendly )</li>
                                                 <li>Mixed Metals ( Ba-Zn , Ba-Cd , Ba-Pb etc )</li>
-                                            </ul>
+                                            </ul> -->
 
                                         </div>
                                     </div>
@@ -347,20 +514,85 @@ include('head.php');
                                 <!-- Output HTML content directly -->
                                 <p></p><h2>Application :-</h2>
 
-<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">PVC (Polyvinyl Chloride) heat stabilizers are essential additives used in the production and processing of PVC materials. Their primary purpose is to prevent the degradation of PVC when exposed to high temperatures during manufacturing and throughout its service life. Here are some key applications of PVC heat stabilizers:</span></span></p>
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">At MLA Group, we have developed a full range of PVC Stabilizers to be used in various industries with different applications that include:</span></span></p>
 
 <ul>
-	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">PVC Pipes &amp; Fittings</span></span></li>
-	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">PVC Profile</span></span></li>
-	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">Wire &amp; Cables </span></span></li>
-	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">Edgebands </span></span></li>
-	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">WPC </span></span></li>
-	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">SPC </span></span></li>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">PVC Rigid Pipes & Conduits</span></span></li>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">PVC Fittings</span></span></li>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"> PVC Wires and Cables </span></span></li>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"> PVC Floor covering </span></span></li>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">PVC Soil Pipes for gases and liquids </span></span></li>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">Other products such as shoe compounds, suction hoses, gasket sheets, etc. </span></span></li>
 </ul>
 <p></p>
                                 <a class="btn btn-secondary mt-2" href="contact-us" bis_skin_checked="1">Know More</a>
                             </div>
                         </div>
+                    </div>
+                </section>
+
+                
+      <section class="content-inner-1">
+                    <div class="container" bis_skin_checked="1">
+                        <!-- Big Heading -->
+                        <div class="row justify-content-center" bis_skin_checked="1">
+                            <div class="col-12 text-center" bis_skin_checked="1">
+                                <div class="section-head style-1" bis_skin_checked="1">
+                                    <h2 class="title">Our Products</h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row gx-xl-4 g-3 mb-xl-0 mb-md-0 mb-3" bis_skin_checked="1">
+                                                                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 m-sm-b0 " bis_skin_checked="1">
+                                        <div class="shop-card" bis_skin_checked="1">
+                                            <div class="dz-media" bis_skin_checked="1">
+                                                <div class="FM6uVc" bis_skin_checked="1">
+                                                    <div class="ArOc1c" bis_skin_checked="1">
+                                                        <img src="admin/codes/product-image/unistab.webp" alt="image">
+                                                    </div>
+                                                </div>
+
+                                                <div class="shop-meta" bis_skin_checked="1">
+                                                    <a href="lead-based-heat-stabilizers.html" class="btn btn-secondary btn-icon" bis_skin_checked="1">
+                                                        <i class="fa-solid fa-eye d-md-none d-block"></i>
+                                                        <span class="d-md-block d-none"> View</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="dz-content" bis_skin_checked="1">
+                                                <h5 class="title">
+                                                    <a href="lead-based-heat-stabilizers.html" bis_skin_checked="1">
+                                                        Lead Based Heat Stabilizers                                                    </a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 m-sm-b0 " bis_skin_checked="1">
+                                        <div class="shop-card" bis_skin_checked="1">
+                                            <div class="dz-media" bis_skin_checked="1">
+                                                <div class="FM6uVc" bis_skin_checked="1">
+                                                    <div class="ArOc1c" bis_skin_checked="1">
+                                                        <img src="admin/codes/product-image/calcium-zinc-stabilizer-manufacturer.webp" alt="image">
+                                                    </div>
+                                                </div>
+
+                                                <div class="shop-meta" bis_skin_checked="1">
+                                                    <a href="calcium-zinc-stabilizer-manufacturers.html" class="btn btn-secondary btn-icon" bis_skin_checked="1">
+                                                        <i class="fa-solid fa-eye d-md-none d-block"></i>
+                                                        <span class="d-md-block d-none"> View</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="dz-content" bis_skin_checked="1">
+                                                <h5 class="title">
+                                                    <a href="calcium-zinc-stabilizer-manufacturers.html" bis_skin_checked="1">
+                                                        Calcium Zinc Stabilizer Manufacturer in India                                                    </a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                    </div>
                     </div>
                 </section>
 
@@ -374,9 +606,9 @@ include('head.php');
                             <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="true">Description</button>
                         </li>
 
-                                                    <li class="nav-item" role="presentation">
+                                                    <!-- <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="profile-tabs" data-bs-toggle="tab" data-bs-target="#profile-tab-panes" type="button" role="tab" aria-controls="profile-tab-panes" aria-selected="false" tabindex="-1">Specifications</button>
-                            </li>
+                            </li> -->
                                             </ul>
                     <div class="tab-content" id="myTabContent" bis_skin_checked="1">
 
@@ -539,70 +771,6 @@ Being among the leading PVC stabilizers exporters, we conduct rigorous testing o
         </div>
     </section>
 
-
-                <section class="content-inner-1">
-                    <div class="container" bis_skin_checked="1">
-                        <!-- Big Heading -->
-                        <div class="row justify-content-center" bis_skin_checked="1">
-                            <div class="col-12 text-center" bis_skin_checked="1">
-                                <div class="section-head style-1" bis_skin_checked="1">
-                                    <h2 class="title">Our Products</h2>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row gx-xl-4 g-3 mb-xl-0 mb-md-0 mb-3" bis_skin_checked="1">
-                                                                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 m-sm-b0 " bis_skin_checked="1">
-                                        <div class="shop-card" bis_skin_checked="1">
-                                            <div class="dz-media" bis_skin_checked="1">
-                                                <div class="FM6uVc" bis_skin_checked="1">
-                                                    <div class="ArOc1c" bis_skin_checked="1">
-                                                        <img src="admin/codes/product-image/calcium-zinc-stabilizer-manufacturer.webp" alt="image">
-                                                    </div>
-                                                </div>
-
-                                                <div class="shop-meta" bis_skin_checked="1">
-                                                    <a href="calcium-zinc-stabilizer-manufacturers.html" class="btn btn-secondary btn-icon" bis_skin_checked="1">
-                                                        <i class="fa-solid fa-eye d-md-none d-block"></i>
-                                                        <span class="d-md-block d-none"> View</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="dz-content" bis_skin_checked="1">
-                                                <h5 class="title">
-                                                    <a href="calcium-zinc-stabilizer-manufacturers.html" bis_skin_checked="1">
-                                                        Calcium Zinc Stabilizer Manufacturer in India                                                    </a>
-                                                </h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                                                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 m-sm-b0 " bis_skin_checked="1">
-                                        <div class="shop-card" bis_skin_checked="1">
-                                            <div class="dz-media" bis_skin_checked="1">
-                                                <div class="FM6uVc" bis_skin_checked="1">
-                                                    <div class="ArOc1c" bis_skin_checked="1">
-                                                        <img src="admin/codes/product-image/pvc-heat-stablizer.webp" alt="image">
-                                                    </div>
-                                                </div>
-
-                                                <div class="shop-meta" bis_skin_checked="1">
-                                                    <a href="pvc-heat-stabilizers-manufacturers.html" class="btn btn-secondary btn-icon" bis_skin_checked="1">
-                                                        <i class="fa-solid fa-eye d-md-none d-block"></i>
-                                                        <span class="d-md-block d-none"> View</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="dz-content" bis_skin_checked="1">
-                                                <h5 class="title">
-                                                    <a href="pvc-heat-stabilizers-manufacturers.html" bis_skin_checked="1">
-                                                        PVC Stabilizer Manufacturer in India                                                    </a>
-                                                </h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                                    </div>
-                    </div>
-                </section>
 
 
 		<?php include('footer.php') ?>
