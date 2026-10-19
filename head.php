@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-IN">
-
 <head>
     <!-- Meta -->
     <meta charset="utf-8">
@@ -10,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="https://www.mlagroup.com/images/logo-MLA.png">
 
     <!-- PAGE TITLE HERE -->
-
+   
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,134 +35,51 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Roboto:wght@100;300;400;500;700;900&amp;display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
 
 
     <style>
-        .header-nav .nav>li .mega-menu,
-        .header-nav .nav>li .sub-menu {
-            width: 268px !important;
-            padding: 0px !important;
-        }
-
-        @media only screen and (max-width:768px) {
-            .dz-social-icon {
-                display: none !important;
-            }
-
-            .borderlfyfyr::after {
-                display: none !important;
-            }
-        }
-
+     .header-nav .nav > li .mega-menu, .header-nav .nav > li .sub-menu{
+	    width:268px !important;
+	    padding:0px !important;
+	}
+    	@media only screen and (max-width:768px){
+    	    .dz-social-icon{
+    	        display:none !important;
+    	    }
+		    .borderlfyfyr::after{
+		        display:none !important;
+		    }
+		}
         /* .inquiry-modal  {
 			display: none !important;
 		} */
     </style>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178404512-1"></script>
-    <!-- <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-178404512-1');
-    </script> -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EPE0XJ0VB4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-EPE0XJ0VB4');
-    </script>
-
-   
-    <!-- <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-NWVPLHV');
-    </script> -->
     
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178404512-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-178404512-1');
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EPE0XJ0VB4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": ["Organization", "LocalBusiness"],
-            "@id": "https://www.mlagroup.com/#organization",
-            "name": "MLA Group of Industries",
-            "url": "https://www.mlagroup.com/",
-            "logo": "https://www.mlagroup.com/assets/images/logo.png",
-            "image": "https://www.mlagroup.com/assets/images/logo.png",
-            "telephone": "+91-9076600122",
-            "email": "md@mlagroup.com",
-
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "111/230, Harsh Nagar",
-                "addressLocality": "Kanpur",
-                "addressRegion": "Uttar Pradesh",
-                "postalCode": "208012",
-                "addressCountry": "IN"
-            },
-
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 26.4804848,
-                "longitude": 80.3175254
-            },
-
-            "openingHoursSpecification": [{
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": [
-                        "Monday",
-                        "Tuesday",
-                        "Wednesday",
-                        "Thursday",
-                        "Friday",
-                        "Saturday"
-                    ],
-                    "opens": "09:00",
-                    "closes": "18:00"
-                },
-                {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": "Sunday",
-                    "opens": "09:00",
-                    "closes": "18:00"
-                }
-            ],
-
-            "priceRange": "Best Price",
-            "areaServed": {
-                "@type": "Country",
-                "name": "India"
-            },
-
-            "sameAs": [
-                "https://maps.app.goo.gl/CfDae9pffoVwuqAn8"
-            ]
-        }
-    </script>
+  gtag('config', 'G-EPE0XJ0VB4');
+</script>
+    
+    	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NWVPLHV');</script>
+	<!-- End Google Tag Manager -->

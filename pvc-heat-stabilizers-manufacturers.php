@@ -175,9 +175,7 @@ include('head.php');
 	</div> -->
 
   <style>
-    .blantershow-chat,.blantershow-chat-1{
-        display:none !important;
-    }
+  
                     @media only screen and (max-width:768px) {
                         .FM6uVc {
                             padding-bottom: 121% !important;
@@ -470,7 +468,7 @@ include('head.php');
 
                                 <div class="col-md-6 p-0 zoom-in-up visible" bis_skin_checked="1">
                                     <div class="text-content" bis_skin_checked="1">
-                                            <img style="width:100px; margin-bottom:20px" src="https://www.mlagroup.com/admin/codes/uploads/6750056062833_unistab-heat-stablizers.webp" alt="">
+                                            <img style="width:160px; margin-bottom:20px; border-radius:8px" src="assets/unistab1.png" alt="">
                                             <h1 class="title" style="line-height: 1;">PVC Stabilizer Manufacturer in India</h1>
                                         <div class="Descriptionnew" bis_skin_checked="1">
                               <p>
