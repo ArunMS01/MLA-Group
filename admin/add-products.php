@@ -201,60 +201,9 @@ include('inc/header.php') ?>
     </div>
     <!-- partial -->
     <!-- partial:partials/_sidebar.html -->
-    <nav class="sidebar sidebar-offcanvas" id="sidebar">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.php">
-            <i class="icon-grid menu-icon"></i>
-            <span class="menu-title">Dashboard</span>
-          </a>
-        </li>
-
-
-
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-            <i class="icon-layout menu-icon"></i>
-            <span class="menu-title">Brands</span>
-            <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="ui-basic">
-            <ul class="nav flex-column sub-menu">
-              <li class="nav-item"> <a class="nav-link" href="add-brand.php">Add A Brand</a></li>
-              <li class="nav-item"> <a class="nav-link" href="manage-brands.php">Manage Brands</a></li>
-
-            </ul>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-            <i class="icon-columns menu-icon"></i>
-            <span class="menu-title">Products</span>
-            <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="form-elements">
-            <ul class="nav flex-column sub-menu">
-              <li class="nav-item"><a class="nav-link" href="add-products.php">Add A Product</a></li>
-              <li class="nav-item"><a class="nav-link" href="manage-products.php">Manage Products</a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-              <i class="icon-bar-graph menu-icon"></i>
-              <span class="menu-title">Enqueries</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="charts">
-              <ul class="nav flex-column sub-menu">
-
-              <li class="nav-item"> <a class="nav-link" href="enqueries.php">Manage Enqueries</a></li>
-              </ul>
-            </div>
-          </li>
-
-      </ul>
-    </nav>
+   <?php
+      include("side.php");
+      ?>
     <!-- partial -->
     <div class="main-panel">
       <div class="content-wrapper">
@@ -453,8 +402,9 @@ include('inc/header.php') ?>
                 <div class="form-group">
                   <label for="exampleFormControlSelect2">Status</label>
                   <select class="form-control form-control-lg" id="exampleFormControlSelect2">
-                    <option>Unpublished</option>
-                    <option>Published</option>
+                        <option value="Published">Published</option>
+                    <option value="Unpublished">Unpublished</option>
+                  
                   </select>
                   <div id="statusError" class="error-message"></div> <!-- Error div -->
                 </div>
@@ -494,17 +444,40 @@ include('inc/header.php') ?>
   }
 </style>
       <script>
-        //   ClassicEditor.create(document.querySelector('#editor1'));
-        CKEDITOR.replace('editor1',{
-               height: 300,
-            allowedContent: true,
-            filebrowserUploadUrl: "https://mlagroup.com/admin/uploadns.php"
-        });
-        CKEDITOR.replace('editor2',{
-               height: 300,
-            allowedContent: true,
-            filebrowserUploadUrl: "https://mlagroup.com/admin/uploadns.php"
-        });
+ const commonConfig = {
+    askBeforePasteHTML: false,
+    askBeforePasteFromWord: false,
+
+    defaultActionOnPaste: 'insert_clear_html',
+
+    cleanHTML: {
+        removeStyles: true,
+        removeClasses: true,
+        replaceNBSP: true,
+        fillEmptyParagraph: false
+    },
+
+    pasteExcludeStripTags: ['br', 'p'],
+
+    events: {
+        afterPaste: function () {
+
+            const editor = this;
+
+            // Remove unwanted tags
+            editor.value = editor.value
+                .replace(/<(\/)?(strong|b)>/gi, '')
+                .replace(/<(\/)?font[^>]*>/gi, '')
+                .replace(/style="[^"]*"/gi, '')
+                .replace(/class="[^"]*"/gi, '');
+
+        }
+    }
+};
+
+const editor1 = new Jodit('#editor1', commonConfig);
+const editor2 = new Jodit('#editor2', commonConfig);
+// const editor1specs = new Jodit('#editor1specs', commonConfig);
 
         function generateUrlAndMetaTitle() {
           // Get the course name input field and its value
@@ -709,8 +682,9 @@ include('inc/header.php') ?>
             }
             formData.append('brandId', document.getElementById('brandSelect').value);
             formData.append('status', document.getElementById('exampleFormControlSelect2').value);
-            formData.append('longDescription', CKEDITOR.instances['editor1'].getData());
-            formData.append('applications', CKEDITOR.instances['editor1'].getData());
+       formData.append('longDescription', editor1.value);
+formData.append('applications', editor2.value);
+// formData.append('specs', editor1specs.value);
 
        // Append selected values from the dropdown to form data
 // Get the selected values from the Semantic UI dropdown
